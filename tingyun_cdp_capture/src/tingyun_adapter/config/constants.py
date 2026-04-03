@@ -1,0 +1,7 @@
+DEFAULT_BASE_URL = "http://169.169.173.25:8080"
+DEFAULT_LANG = "zh_CN"
+DEFAULT_TIMEZONE = "Asia/Shanghai"
+DEFAULT_TIMEOUT_SECONDS = 30
+DEFAULT_SCHEMA_VERSION = "v1"
+
+TRACE_FILTER_LIST = "Service,Exception,External,Database,NoSQL,Pool,MQ,Code,Dataitem"

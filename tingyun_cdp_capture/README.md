@@ -9,6 +9,22 @@ The folder also contains `replay_action_trace_flow.py`, a standalone HTTP replay
 - query the trace list for that action
 - pick one trace row and print key fields from `action/trace/detail`
 
+The folder now also contains an initial `tingyun_adapter` project skeleton under `src/`, covering stage 1 and stage 2 of the adapter plan:
+
+- core schema / ref / pack envelope models
+- raw source clients for the main API families
+- field normalizers and key resolvers
+- offline captured-api repository for sample replay
+- basic SDK / CLI scaffolding
+- unit tests for the core normalization logic
+
+Stage 3 is now scaffolded too:
+
+- `system_snapshot`
+- `action_hotspot_pack`
+- `trace_case_pack`
+- `report_fact_pack`
+
 ## What it does
 
 - Connects to one or more Chrome tabs through the remote debugging port
@@ -24,6 +40,10 @@ The folder also contains `replay_action_trace_flow.py`, a standalone HTTP replay
 tingyun_cdp_capture/
   capture_tingyun_api.py
   replay_action_trace_flow.py
+  pyproject.toml
+  src/
+    tingyun_adapter/
+  tests/
   requirements.txt
   README.md
   captured_api/
@@ -172,3 +192,53 @@ The script prints:
 - the action overview
 - the trace candidates returned by `trace_current_overview`
 - a summary of the selected trace detail
+
+## Adapter Skeleton
+
+You can run the current stage 1 / stage 2 unit tests with:
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
+PYTHONPATH=./src python3 -m unittest discover -s tests/unit -p 'test_*.py'
+```
+
+You can also inspect the initial CLI scaffold with:
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli --help
+```
+
+You can point the adapter bootstrap at your captured samples:
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli --captured-api-dir ./captured_api
+```
+
+If you want the project import path and script metadata locally, you can also install it in editable mode:
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
+python3 -m pip install -e .
+tingyun-adapter --captured-api-dir ./captured_api
+```
+
+Build a stage 3 pack from captured samples:
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --captured-api-dir ./captured_api \
+  --build-pack system_snapshot \
+  --biz-system-id 1059 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+You can swap `system_snapshot` for:
+
+- `action_hotspot_pack`
+- `trace_case_pack`
+- `report_fact_pack`

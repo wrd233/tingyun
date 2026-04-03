@@ -1,0 +1,939 @@
+from __future__ import annotations
+
+import json
+from dataclasses import asdict, is_dataclass
+from typing import Any, Iterable, Optional
+
+from tingyun_adapter.domain.enums import PackType, TraceSelectionStrategy
+from tingyun_adapter.domain.models.common import (
+    ActionRef,
+    AnalysisContext,
+    Evidence,
+    HotspotPolicy,
+    PackEnvelope,
+    PackMeta,
+    TimeWindow,
+    TraceRef,
+    TraceSelectionPolicy,
+    WarningMessage,
+    dataclass_to_dict,
+)
+from tingyun_adapter.domain.models.entities import Action, ActionHotspot, BizSystem, Trace
+from tingyun_adapter.domain.models.packs import (
+    ActionHotspotPackPayload,
+    ReportFactPackPayload,
+    SystemSnapshotPayload,
+    TraceCasePackPayload,
+)
+from tingyun_adapter.normalizers.field_normalizer import unwrap_data
+from tingyun_adapter.normalizers.metric_normalizer import normalize_metric_fields
+from tingyun_adapter.normalizers.trace_key_resolver import resolve_trace_keys
+
+
+def build_system_snapshot(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
+    warnings: list[WarningMessage] = []
+    evidence: list[Evidence] = []
+
+    overview_payload = _load_business_overview(adapter, context, source_mode=source_mode)
+    health_payload = _load_health_statistics(adapter, context, source_mode=source_mode)
+    trends_payload = _load_trends(adapter, context, source_mode=source_mode)
+
+    overview = unwrap_data(overview_payload) or {}
+    health = unwrap_data(health_payload) or {}
+    trends = {name: _summarize_chart(chart_payload) for name, chart_payload in trends_payload.items()}
+
+    if not overview:
+        warnings.append(WarningMessage(code="missing_business_overview", message="Business overview is empty for the requested context.", source_api="application/business/overview"))
+    if not health:
+        warnings.append(WarningMessage(code="missing_health_statistics", message="Health statistics are empty for the requested context.", source_api="health/healthLevelStatistics"))
+
+    biz_system = BizSystem(
+        id=context.biz_system_id,
+        name=overview.get("bizSystemName"),
+        overview=overview,
+        health=health,
+        applications=_ensure_int_list(overview.get("applicationIds")),
+        instances=_ensure_int_list(overview.get("instanceIds")),
+        actions=_ensure_int_list(overview.get("actionIds")),
+        evidence=[],
+    )
+
+    evidence.extend(
+        [
+            _evidence(
+                evidence_id="system_overview",
+                source_api="application/business/overview",
+                source_path=f"/server-api/application/business/overview/{context.biz_system_id}",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "timeWindow": dataclass_to_dict(context.time_window)},
+                response_excerpt=_excerpt(overview, ["bizSystemName", "applicationIds", "instanceIds", "response", "throught", "apdex", "slowCount"]),
+            ),
+            _evidence(
+                evidence_id="health_level_statistics",
+                source_api="health/healthLevelStatistics",
+                source_path="/server-api/health/healthLevelStatistics",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "timeWindow": dataclass_to_dict(context.time_window)},
+                response_excerpt=health,
+            ),
+            _evidence(
+                evidence_id="application_trends",
+                source_api="application/charts/*",
+                source_path="/server-api/application/charts/{response,throught,error}",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "timeWindow": dataclass_to_dict(context.time_window)},
+                response_excerpt=trends,
+            ),
+        ]
+    )
+
+    payload = SystemSnapshotPayload(
+        biz_system=dataclass_to_dict(biz_system),
+        overview=overview,
+        health=health,
+        trends=trends,
+        evidence=[dataclass_to_dict(item) for item in evidence],
+    )
+    return _pack(PackType.SYSTEM_SNAPSHOT.value, context, payload, evidence=evidence, warnings=warnings)
+
+
+def build_action_hotspot_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    policy: Optional[HotspotPolicy] = None,
+    application_id: int = 0,
+) -> PackEnvelope:
+    policy = policy or HotspotPolicy()
+    warnings: list[WarningMessage] = []
+    evidence: list[Evidence] = []
+
+    actions_payload = _load_action_list(adapter, context, source_mode=source_mode, application_id=application_id)
+    action_rows = _extract_action_rows(actions_payload)
+    normalized_rows = [normalize_metric_fields(dict(row)) for row in action_rows]
+    sorted_rows = sorted(
+        normalized_rows,
+        key=lambda item: (_numeric(item.get(policy.sort_by)), _numeric(item.get(policy.secondary_sort_by))),
+        reverse=True,
+    )
+    selected_rows = sorted_rows[: policy.limit]
+
+    hotspots: list[dict[str, Any]] = []
+    for rank, row in enumerate(selected_rows, start=1):
+        action = Action(
+            id=_int_or_zero(row.get("actionId")),
+            biz_system_id=context.biz_system_id,
+            application_id=_int_or_zero(row.get("applicationId")),
+            type=str(row.get("actionType") or "TX"),
+            name=row.get("actionName"),
+            alias=row.get("actionAlias") or row.get("alias"),
+            metrics={
+                "response_time_ms": row.get("response_time_ms"),
+                "total_response_time_ms": row.get("total_response_time_ms"),
+                "throughput": row.get("throughput"),
+                "error_count": row.get("error_count"),
+                "slow_count": row.get("slowCount"),
+                "count": row.get("count"),
+            },
+        )
+        hotspot = ActionHotspot(
+            action_id=action.id,
+            application_id=action.application_id,
+            biz_system_id=context.biz_system_id,
+            ranking_basis=[policy.sort_by, policy.secondary_sort_by],
+            severity_score=_severity_from_action(row),
+            why_selected=_why_action_selected(row),
+        )
+        hotspots.append(
+            {
+                "rank": rank,
+                "action": dataclass_to_dict(action),
+                "hotspot": dataclass_to_dict(hotspot),
+                "raw": row,
+            }
+        )
+
+    top_overview: dict[str, Any] | None = None
+    if hotspots:
+        top_action = hotspots[0]["action"]
+        top_overview = _load_matching_action_overview(
+            adapter,
+            context,
+            source_mode=source_mode,
+            action_id=int(top_action["id"]),
+            application_id=int(top_action["application_id"]),
+            action_type=str(top_action["type"]),
+        )
+        if top_overview:
+            hotspots[0]["overview"] = unwrap_data(top_overview) or {}
+        else:
+            warnings.append(WarningMessage(code="missing_action_overview", message="No matching action overview was found for the selected hottest action.", source_api="webaction/overview"))
+
+    evidence.append(
+        _evidence(
+            evidence_id="action_list",
+            source_api="webaction/list/actionList",
+            source_path="/server-api/webaction/list/actionList",
+            source_method="POST",
+            request_params={"bizSystemId": context.biz_system_id, "timeWindow": dataclass_to_dict(context.time_window)},
+            response_excerpt={"top_rows": hotspots[:3]},
+        )
+    )
+    if top_overview:
+        evidence.append(
+            _evidence(
+                evidence_id="action_overview",
+                source_api="webaction/overview",
+                source_path="/server-api/webaction/overview",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "timeWindow": dataclass_to_dict(context.time_window)},
+                response_excerpt=unwrap_data(top_overview) or {},
+            )
+        )
+
+    payload = ActionHotspotPackPayload(
+        ranking_policy=dataclass_to_dict(policy),
+        hotspots=hotspots,
+        evidence=[dataclass_to_dict(item) for item in evidence],
+    )
+    return _pack(PackType.ACTION_HOTSPOT.value, context, payload, evidence=evidence, warnings=warnings)
+
+
+def build_trace_case_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    action_ref: Optional[ActionRef] = None,
+    trace_policy: Optional[TraceSelectionPolicy] = None,
+) -> PackEnvelope:
+    trace_policy = trace_policy or TraceSelectionPolicy()
+    warnings: list[WarningMessage] = []
+    evidence: list[Evidence] = []
+
+    selector: dict[str, Any]
+    trace_detail_payload: dict[str, Any] | None = None
+    call_tree_payload: dict[str, Any] | None = None
+    exceptions_payload: Any = None
+
+    if _should_use_sample(adapter, source_mode):
+        sample = _load_trace_case_from_samples(adapter, context)
+        selector = sample["selector"]
+        trace_detail_payload = sample["detail"]
+        call_tree_payload = sample.get("call_tree")
+        exceptions_payload = sample.get("exceptions")
+        if sample.get("warning"):
+            warnings.append(sample["warning"])
+    else:
+        selector, trace_detail_payload, call_tree_payload, exceptions_payload, live_warnings = _load_trace_case_live(
+            adapter,
+            context,
+            action_ref=action_ref,
+            trace_policy=trace_policy,
+        )
+        warnings.extend(live_warnings)
+
+    detail = unwrap_data(trace_detail_payload) or {}
+    call_tree = unwrap_data(call_tree_payload) or {}
+    exceptions = unwrap_data(exceptions_payload) or []
+
+    if not detail:
+        warnings.append(WarningMessage(code="missing_trace_detail", message="Trace detail is empty for the selected trace case.", source_api="action/trace/detail"))
+
+    trace = _trace_from_detail(detail, context.biz_system_id)
+    trace.exceptions = exceptions if isinstance(exceptions, list) else []
+    trace.timeline_summary = _timeline_summary(detail.get("timeLine") or {})
+    trace.service_flow_summary = _service_flow_summary(detail.get("serviceFlow") or {})
+    trace.topology_summary = _topology_summary(detail.get("topology") or {})
+
+    trace_case = {
+        "trace": dataclass_to_dict(trace),
+        "detail_summary": _trace_detail_summary(detail),
+        "call_tree_summary": _call_tree_summary(call_tree),
+        "exception_summary": _exception_summary(exceptions),
+    }
+    drilldown_path = [
+        "webaction/list/actionList",
+        "graph/query/overview?trace_current_overview",
+        "action/trace/detail",
+        "action/trace/callTree",
+        "action/trace/detail/exceptions",
+    ]
+
+    evidence.extend(
+        [
+            _evidence(
+                evidence_id="trace_selector",
+                source_api="trace_selection",
+                source_path="graph/query/overview?trace_current_overview|sample",
+                source_method="POST",
+                request_params=selector,
+                response_excerpt={"selected_trace_id": selector.get("trace_id_numeric"), "action_id": selector.get("action_id")},
+            ),
+            _evidence(
+                evidence_id="trace_detail",
+                source_api="action/trace/detail",
+                source_path="/server-api/action/trace/detail",
+                source_method="POST",
+                request_params=selector,
+                response_excerpt=_trace_detail_summary(detail),
+            ),
+        ]
+    )
+    if call_tree:
+        evidence.append(
+            _evidence(
+                evidence_id="trace_call_tree",
+                source_api="action/trace/callTree",
+                source_path="/server-api/action/trace/callTree",
+                source_method="POST",
+                request_params=selector,
+                response_excerpt=_call_tree_summary(call_tree),
+            )
+        )
+    if exceptions:
+        evidence.append(
+            _evidence(
+                evidence_id="trace_exceptions",
+                source_api="action/trace/detail/exceptions",
+                source_path="/server-api/action/trace/detail/exceptions",
+                source_method="POST",
+                request_params=selector,
+                response_excerpt=_exception_summary(exceptions),
+            )
+        )
+
+    payload = TraceCasePackPayload(
+        selector=selector,
+        trace_case=trace_case,
+        drilldown_path=drilldown_path,
+        evidence=[dataclass_to_dict(item) for item in evidence],
+    )
+    return _pack(PackType.TRACE_CASE.value, context, payload, evidence=evidence, warnings=warnings)
+
+
+def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
+    warnings: list[WarningMessage] = []
+    system_snapshot = build_system_snapshot(adapter, context, source_mode=source_mode)
+    action_hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
+    trace_case = build_trace_case_pack(adapter, context, source_mode=source_mode)
+
+    warnings.extend(system_snapshot.meta.warnings)
+    warnings.extend(action_hotspots.meta.warnings)
+    warnings.extend(trace_case.meta.warnings)
+
+    snapshot_payload = system_snapshot.to_dict()["payload"]
+    hotspot_payload = action_hotspots.to_dict()["payload"]
+    trace_payload = trace_case.to_dict()["payload"]
+
+    top_hotspot = (hotspot_payload.get("hotspots") or [{}])[0]
+    summary = {
+        "biz_system_name": snapshot_payload.get("biz_system", {}).get("name"),
+        "avg_response_time_ms": snapshot_payload.get("overview", {}).get("response"),
+        "avg_throughput": snapshot_payload.get("overview", {}).get("throught"),
+        "apdex": snapshot_payload.get("overview", {}).get("apdex"),
+        "health_overview": snapshot_payload.get("health", {}),
+        "top_action_name": top_hotspot.get("action", {}).get("name"),
+        "top_action_response_time_ms": top_hotspot.get("action", {}).get("metrics", {}).get("response_time_ms"),
+        "trace_case_action_name": trace_payload.get("trace_case", {}).get("detail_summary", {}).get("actionName"),
+        "trace_case_duration_ms": trace_payload.get("trace_case", {}).get("trace", {}).get("duration_ms"),
+    }
+
+    issues: list[dict[str, Any]] = []
+    action_health = snapshot_payload.get("health", {}).get("action", {}) or {}
+    if _numeric(action_health.get("warn")) > 0:
+        issues.append(
+            {
+                "priority": "high",
+                "category": "health",
+                "title": "Action health contains warning objects",
+                "evidence_ref": "health_level_statistics",
+                "details": action_health,
+            }
+        )
+    if _numeric(summary.get("top_action_response_time_ms")) >= 1000:
+        issues.append(
+            {
+                "priority": "high",
+                "category": "hotspot",
+                "title": "Top action response time is elevated",
+                "evidence_ref": "action_list",
+                "details": top_hotspot,
+            }
+        )
+    suspected = trace_payload.get("trace_case", {}).get("trace", {}).get("suspected_problems") or []
+    if suspected:
+        issues.append(
+            {
+                "priority": "high",
+                "category": "trace",
+                "title": "Trace case contains suspected problem nodes",
+                "evidence_ref": "trace_detail",
+                "details": suspected[:5],
+            }
+        )
+
+    payload = ReportFactPackPayload(
+        report_scope={
+            "bizSystemId": context.biz_system_id,
+            "endTime": context.time_window.end_time,
+            "periodMinutes": context.time_window.period_minutes,
+            "sourceMode": source_mode,
+        },
+        summary=summary,
+        hotspots={
+            "actions": hotspot_payload.get("hotspots", []),
+        },
+        components={
+            "action_component_summary": top_hotspot.get("overview", {}).get("components", {}),
+        },
+        trace_case=trace_payload.get("trace_case", {}),
+        issues=issues,
+        drilldown_paths=trace_payload.get("drilldown_path", []),
+        evidence=system_snapshot.to_dict()["payload"].get("evidence", [])
+        + hotspot_payload.get("evidence", [])
+        + trace_payload.get("evidence", []),
+    )
+    all_evidence = [
+        *(_coerce_evidence_list(system_snapshot.to_dict()["payload"].get("evidence", []))),
+        *(_coerce_evidence_list(hotspot_payload.get("evidence", []))),
+        *(_coerce_evidence_list(trace_payload.get("evidence", []))),
+    ]
+    return _pack(PackType.REPORT_FACT.value, context, payload, evidence=all_evidence, warnings=warnings)
+
+
+def _load_business_overview(adapter: Any, context: AnalysisContext, *, source_mode: str) -> Any:
+    if _should_use_sample(adapter, source_mode):
+        repo = _require_repo(adapter)
+        try:
+            return repo.load_first_sample_response(f"application/business/overview/{context.biz_system_id}") or {}
+        except FileNotFoundError:
+            return {}
+    return adapter.application.business_overview(
+        biz_system_id=context.biz_system_id,
+        end_time=context.time_window.end_time,
+        time_period=context.time_window.period_minutes,
+    )
+
+
+def _load_health_statistics(adapter: Any, context: AnalysisContext, *, source_mode: str) -> Any:
+    if _should_use_sample(adapter, source_mode):
+        return _require_repo(adapter).load_first_sample_response("health/healthLevelStatistics") or {}
+    return adapter.health.health_level_statistics(
+        biz_system_id=context.biz_system_id,
+        end_time=context.time_window.end_time,
+        time_period=context.time_window.period_minutes,
+    )
+
+
+def _load_trends(adapter: Any, context: AnalysisContext, *, source_mode: str) -> dict[str, Any]:
+    if _should_use_sample(adapter, source_mode):
+        repo = _require_repo(adapter)
+        return {
+            "response": repo.load_first_sample_response("application/charts/response") or {},
+            "throughput": repo.load_first_sample_response("application/charts/throught") or {},
+            "error": repo.load_first_sample_response("application/charts/error") or {},
+        }
+    return {
+        "response": adapter.application.response_chart(
+            biz_system_id=context.biz_system_id,
+            end_time=context.time_window.end_time,
+            time_period=context.time_window.period_minutes,
+        ),
+        "throughput": adapter.application.throughput_chart(
+            biz_system_id=context.biz_system_id,
+            end_time=context.time_window.end_time,
+            time_period=context.time_window.period_minutes,
+        ),
+        "error": adapter.application.error_chart(
+            biz_system_id=context.biz_system_id,
+            end_time=context.time_window.end_time,
+            time_period=context.time_window.period_minutes,
+        ),
+    }
+
+
+def _load_action_list(adapter: Any, context: AnalysisContext, *, source_mode: str, application_id: int) -> Any:
+    if _should_use_sample(adapter, source_mode):
+        return _require_repo(adapter).load_first_sample_response("webaction/list/actionList") or {}
+    return adapter.webaction.list_actions(
+        biz_system_id=context.biz_system_id,
+        end_time=context.time_window.end_time,
+        time_period=context.time_window.period_minutes,
+        application_id=application_id,
+    )
+
+
+def _load_matching_action_overview(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str,
+    action_id: int,
+    application_id: int,
+    action_type: str,
+) -> Optional[dict[str, Any]]:
+    if _should_use_sample(adapter, source_mode):
+        repo = _require_repo(adapter)
+        request = repo.load_first_sample_request("webaction/overview")
+        if not request:
+            return None
+        request_body = request.get("body") or {}
+        if str(request_body.get("actionId")) != str(action_id):
+            return None
+        return repo.load_first_sample_response("webaction/overview")
+    return adapter.webaction.action_overview(
+        biz_system_id=context.biz_system_id,
+        application_id=application_id,
+        action_id=action_id,
+        action_type=action_type,
+        end_time=context.time_window.end_time,
+        time_period=context.time_window.period_minutes,
+    )
+
+
+def _load_trace_case_live(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    action_ref: Optional[ActionRef],
+    trace_policy: TraceSelectionPolicy,
+) -> tuple[dict[str, Any], Optional[dict[str, Any]], Optional[dict[str, Any]], Any, list[WarningMessage]]:
+    warnings: list[WarningMessage] = []
+    if action_ref is None:
+        actions_payload = adapter.webaction.list_actions(
+            biz_system_id=context.biz_system_id,
+            end_time=context.time_window.end_time,
+            time_period=context.time_window.period_minutes,
+        )
+        rows = _extract_action_rows(actions_payload)
+        if not rows:
+            warnings.append(WarningMessage(code="missing_actions_for_trace", message="No actions returned while selecting a trace case.", source_api="webaction/list/actionList"))
+            return ({}, None, None, None, warnings)
+        top = max([normalize_metric_fields(dict(row)) for row in rows], key=lambda row: _numeric(row.get("response_time_ms")))
+        action_ref = ActionRef(
+            biz_system_id=context.biz_system_id,
+            application_id=_int_or_zero(top.get("applicationId")),
+            action_id=_int_or_zero(top.get("actionId")),
+            action_type=str(top.get("actionType") or "TX"),
+        )
+
+    trace_overview = adapter.graph.query_overview(
+        metric="trace_current_overview",
+        payload={
+            "endTime": context.time_window.end_time,
+            "labels": {
+                "actionIds": [str(action_ref.action_id)],
+                "actionTypes": [action_ref.action_type],
+                "applicationIds": [str(action_ref.application_id)],
+                "systemIds": [str(context.biz_system_id)],
+            },
+            "lang": context.lang,
+            "metric": "trace_current_overview",
+            "order": {"fields": ["timestamp"], "type": "desc"},
+            "page": {"number": 1, "size": trace_policy.limit},
+            "timePeriod": context.time_window.period_minutes,
+        },
+    )
+    trace_rows = _find_trace_rows(trace_overview)
+    if not trace_rows:
+        warnings.append(WarningMessage(code="missing_trace_rows", message="trace_current_overview returned no usable rows.", source_api="graph/query/overview"))
+        return (
+            {
+                "biz_system_id": context.biz_system_id,
+                "action_id": action_ref.action_id,
+                "application_id": action_ref.application_id,
+            },
+            None,
+            None,
+            None,
+            warnings,
+        )
+
+    trace_row = _choose_trace_row(trace_rows, trace_policy.strategy)
+    keys = resolve_trace_keys(trace_row)
+    selector = {
+        "biz_system_id": context.biz_system_id,
+        "application_id": action_ref.application_id,
+        "action_id": action_ref.action_id,
+        "trace_id_numeric": keys.trace_id_numeric,
+        "query_timestamp": keys.query_timestamp,
+        "trace_guid": keys.trace_guid,
+        "action_guid": keys.action_guid,
+    }
+    if not keys.trace_id_numeric or not keys.query_timestamp:
+        warnings.append(WarningMessage(code="trace_keys_incomplete", message="Selected trace row is missing traceId or queryTimestamp.", source_api="graph/query/overview"))
+        return (selector, None, None, None, warnings)
+
+    detail = adapter.trace.trace_detail(
+        biz_system_id=context.biz_system_id,
+        trace_id=keys.trace_id_numeric,
+        query_timestamp=keys.query_timestamp,
+        end_time=context.time_window.end_time,
+        time_period=context.time_window.period_minutes,
+    )
+    call_tree = None
+    if keys.action_guid:
+        call_tree = adapter.trace.call_tree(
+            biz_system_id=context.biz_system_id,
+            trace_id=keys.trace_id_numeric,
+            action_guid=keys.action_guid,
+            query_timestamp=keys.query_timestamp,
+            end_time=context.time_window.end_time,
+            time_period=context.time_window.period_minutes,
+        )
+    else:
+        warnings.append(WarningMessage(code="missing_action_guid", message="Selected trace row is missing actionGuid; call tree was skipped.", source_api="action/trace/callTree"))
+    return selector, detail, call_tree, None, warnings
+
+
+def _load_trace_case_from_samples(adapter: Any, context: AnalysisContext) -> dict[str, Any]:
+    repo = _require_repo(adapter)
+    warning = None
+    try:
+        detail_request = repo.load_first_sample_request("action/trace/detail") or {}
+        detail_response = repo.load_first_sample_response("action/trace/detail") or {}
+    except FileNotFoundError:
+        return {
+            "selector": {"biz_system_id": context.biz_system_id},
+            "detail": {},
+            "call_tree": {},
+            "exceptions": [],
+            "warning": WarningMessage(code="missing_trace_detail_sample", message="No captured trace detail sample exists.", source_api="action/trace/detail"),
+        }
+
+    request_body = detail_request.get("body") or {}
+    sample_biz_system_id = _int_or_zero(request_body.get("bizSystemId") or unwrap_data(detail_response).get("bizSystemId"))
+    if sample_biz_system_id != context.biz_system_id:
+        warning = WarningMessage(
+            code="trace_sample_biz_system_mismatch",
+            message=f"Sample trace detail belongs to bizSystemId={sample_biz_system_id}, not the requested bizSystemId={context.biz_system_id}. Using representative sample.",
+            source_api="action/trace/detail",
+        )
+    selector = {
+        "biz_system_id": sample_biz_system_id or context.biz_system_id,
+        "trace_id_numeric": str(request_body.get("traceId") or ""),
+        "query_timestamp": str(request_body.get("queryTimestamp") or ""),
+        "action_id": unwrap_data(detail_response).get("actionId"),
+        "application_id": unwrap_data(detail_response).get("applicationId"),
+        "action_guid": unwrap_data(detail_response).get("actionGuid"),
+        "trace_guid": unwrap_data(detail_response).get("traceGuid"),
+    }
+    call_tree = repo.load_first_sample_response("action/trace/callTree") or {}
+    exceptions = repo.load_first_sample_response("action/trace/detail/exceptions") or []
+    return {
+        "selector": selector,
+        "detail": detail_response,
+        "call_tree": call_tree,
+        "exceptions": exceptions,
+        "warning": warning,
+    }
+
+
+def _trace_from_detail(detail: dict[str, Any], fallback_biz_system_id: int) -> Trace:
+    keys = resolve_trace_keys(detail)
+    return Trace(
+        biz_system_id=_int_or_zero(detail.get("bizSystemId")) or fallback_biz_system_id,
+        trace_id_numeric=keys.trace_id_numeric,
+        trace_guid=keys.trace_guid,
+        action_guid=keys.action_guid,
+        request_id=keys.request_id,
+        timestamp=detail.get("timestamp"),
+        application_id=detail.get("applicationId"),
+        instance_id=detail.get("instanceId"),
+        action_id=detail.get("actionId"),
+        status=str(detail.get("status")) if detail.get("status") is not None else None,
+        duration_ms=_numeric(detail.get("duration") or detail.get("respTime") or detail.get("actionDuration")),
+        error_count=_int_or_none(detail.get("errorCount")),
+        is_slow_trace=bool(detail.get("isSlowTrace")) if detail.get("isSlowTrace") is not None else None,
+        suspected_problems=detail.get("suspectedProblemList") or [],
+        topology_summary=_topology_summary(detail.get("topology") or {}),
+        service_flow_summary=_service_flow_summary(detail.get("serviceFlow") or {}),
+        timeline_summary=_timeline_summary(detail.get("timeLine") or {}),
+    )
+
+
+def _trace_detail_summary(detail: dict[str, Any]) -> dict[str, Any]:
+    if not detail:
+        return {}
+    return {
+        "requestId": detail.get("requestId"),
+        "traceGuid": detail.get("traceGuid"),
+        "actionGuid": detail.get("actionGuid"),
+        "bizSystemId": detail.get("bizSystemId"),
+        "bizSystemName": detail.get("bizSystemName"),
+        "applicationId": detail.get("applicationId"),
+        "applicationName": detail.get("applicationName"),
+        "actionId": detail.get("actionId"),
+        "actionName": detail.get("actionName"),
+        "instanceId": detail.get("instanceId"),
+        "instanceName": detail.get("instanceName"),
+        "timestamp": detail.get("timestamp"),
+        "respTime": detail.get("respTime"),
+        "duration": detail.get("duration"),
+        "status": detail.get("status"),
+        "method": detail.get("method"),
+        "uri": detail.get("uri"),
+        "url": detail.get("url"),
+        "threadName": detail.get("threadName"),
+        "suspectedProblemList": detail.get("suspectedProblemList") or [],
+        "topologySummary": _topology_summary(detail.get("topology") or {}),
+        "serviceFlowSummary": _service_flow_summary(detail.get("serviceFlow") or {}),
+        "timeLineSummary": _timeline_summary(detail.get("timeLine") or {}),
+    }
+
+
+def _call_tree_summary(call_tree: dict[str, Any]) -> dict[str, Any]:
+    if not call_tree:
+        return {}
+    data = unwrap_data(call_tree) or {}
+    node_map = data.get("nodeMap") if isinstance(data, dict) else {}
+    return {
+        "node_count": len(node_map) if isinstance(node_map, dict) else 0,
+        "action_count": len(data.get("actions", [])) if isinstance(data.get("actions"), list) else 0,
+        "application_count": len(data.get("applications", [])) if isinstance(data.get("applications"), list) else 0,
+        "instance_count": len(data.get("instances", [])) if isinstance(data.get("instances"), list) else 0,
+    }
+
+
+def _exception_summary(exceptions: Any) -> dict[str, Any]:
+    if not isinstance(exceptions, list):
+        return {}
+    return {
+        "count": len(exceptions),
+        "top_exception": exceptions[0] if exceptions else None,
+    }
+
+
+def _timeline_summary(timeline: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "metricType": timeline.get("metricType"),
+        "metricName": timeline.get("metricName"),
+        "exclusiveTime": timeline.get("exclusiveTime"),
+        "method": timeline.get("method"),
+        "methodStack": timeline.get("methodStack"),
+    }
+
+
+def _service_flow_summary(flow: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "serviceName": flow.get("serviceName"),
+        "serviceType": flow.get("serviceType"),
+        "durationTotal": flow.get("durationTotal"),
+        "requestTotalCount": flow.get("requestTotalCount"),
+    }
+
+
+def _topology_summary(topology: dict[str, Any]) -> dict[str, Any]:
+    nodes = topology.get("nodes")
+    lines = topology.get("lines")
+    return {
+        "nodeCount": len(nodes) if isinstance(nodes, list) else 0,
+        "lineCount": len(lines) if isinstance(lines, list) else 0,
+    }
+
+
+def _summarize_chart(chart_payload: Any) -> dict[str, Any]:
+    data = unwrap_data(chart_payload) or {}
+    overview = data.get("overviews") if isinstance(data, dict) else {}
+    series = data.get("series") if isinstance(data, dict) else []
+    points: list[dict[str, Any]] = []
+    if isinstance(series, list):
+        for series_item in series:
+            if isinstance(series_item, dict) and isinstance(series_item.get("data"), list):
+                points.extend([item for item in series_item["data"] if isinstance(item, dict)])
+    ys = [_numeric(point.get("y")) for point in points if point.get("y") is not None]
+    valid_ys = [value for value in ys if value is not None]
+    latest = points[-1] if points else None
+    return {
+        "overview": overview,
+        "point_count": len(points),
+        "min_y": min(valid_ys) if valid_ys else None,
+        "max_y": max(valid_ys) if valid_ys else None,
+        "avg_y": (sum(valid_ys) / len(valid_ys)) if valid_ys else None,
+        "latest_point": latest,
+    }
+
+
+def _extract_action_rows(actions_payload: Any) -> list[dict[str, Any]]:
+    data = unwrap_data(actions_payload) or {}
+    if isinstance(data, dict) and isinstance(data.get("content"), list):
+        return [item for item in data["content"] if isinstance(item, dict)]
+    if isinstance(data, list):
+        return [item for item in data if isinstance(item, dict)]
+    return []
+
+
+def _find_trace_rows(node: Any) -> list[dict[str, Any]]:
+    found: list[list[dict[str, Any]]] = []
+
+    def visit(value: Any) -> None:
+        if isinstance(value, list):
+            if value and all(isinstance(item, dict) for item in value):
+                candidates = [item for item in value if _looks_like_trace_row(item)]
+                if candidates:
+                    found.append(candidates)
+            for item in value:
+                visit(item)
+        elif isinstance(value, dict):
+            for child in value.values():
+                visit(child)
+
+    visit(unwrap_data(node))
+    if not found:
+        return []
+    return max(found, key=len)
+
+
+def _choose_trace_row(rows: list[dict[str, Any]], strategy: str) -> dict[str, Any]:
+    if strategy == TraceSelectionStrategy.NEWEST.value:
+        key_func = lambda row: _numeric(row.get("timestamp")) or float("-inf")
+    elif strategy == TraceSelectionStrategy.HIGHEST_ERROR.value:
+        key_func = lambda row: _numeric(row.get("errorCount")) or float("-inf")
+    else:
+        key_func = lambda row: _first_metric_value(row, ["respTime", "response", "responseTime", "duration", "totalTime"])
+    return max(rows, key=key_func)
+
+
+def _looks_like_trace_row(item: Any) -> bool:
+    if not isinstance(item, dict):
+        return False
+    has_identity = any(key in item for key in ("id", "traceId", "requestId", "traceGuid"))
+    has_context = any(key in item for key in ("actionId", "applicationId", "bizSystemId", "timestamp"))
+    return has_identity and has_context
+
+
+def _why_action_selected(row: dict[str, Any]) -> list[str]:
+    reasons: list[str] = []
+    response_time = _numeric(row.get("response_time_ms"))
+    if response_time and response_time >= 1000:
+        reasons.append(f"response_time_ms={response_time}")
+    slow_count = _numeric(row.get("slowCount"))
+    if slow_count and slow_count > 0:
+        reasons.append(f"slowCount={int(slow_count)}")
+    error_count = _numeric(row.get("errorCount"))
+    if error_count and error_count > 0:
+        reasons.append(f"errorCount={int(error_count)}")
+    if not reasons:
+        reasons.append("ranked_by_response_time")
+    return reasons
+
+
+def _severity_from_action(row: dict[str, Any]) -> float:
+    response = _numeric(row.get("response_time_ms")) or 0.0
+    slow = _numeric(row.get("slowCount")) or 0.0
+    errors = _numeric(row.get("errorCount")) or 0.0
+    return round(response + slow * 100 + errors * 200, 3)
+
+
+def _first_metric_value(record: dict[str, Any], keys: Iterable[str]) -> float:
+    for key in keys:
+        value = _numeric(record.get(key))
+        if value is not None:
+            return value
+    return float("-inf")
+
+
+def _excerpt(value: dict[str, Any], keys: list[str]) -> dict[str, Any]:
+    return {key: value.get(key) for key in keys if key in value}
+
+
+def _evidence(
+    *,
+    evidence_id: str,
+    source_api: str,
+    source_path: str,
+    source_method: str,
+    request_params: dict[str, Any],
+    response_excerpt: Any,
+) -> Evidence:
+    return Evidence(
+        id=evidence_id,
+        source_api=source_api,
+        source_path=source_path,
+        source_method=source_method,
+        request_signature={"source_api": source_api, "request_params": request_params},
+        request_params=request_params,
+        response_excerpt=response_excerpt,
+    )
+
+
+def _pack(pack_type: str, context: AnalysisContext, payload: Any, *, evidence: list[Evidence], warnings: list[WarningMessage]) -> PackEnvelope:
+    meta = PackMeta(source_count=len(evidence), evidence_count=len(evidence), warnings=warnings)
+    return PackEnvelope(pack_type=pack_type, context=context, payload=payload, meta=meta)
+
+
+def _coerce_evidence_list(items: list[Any]) -> list[Evidence]:
+    coerced: list[Evidence] = []
+    for item in items:
+        if isinstance(item, Evidence):
+            coerced.append(item)
+        elif isinstance(item, dict):
+            coerced.append(
+                Evidence(
+                    id=str(item.get("id") or "evidence"),
+                    source_api=str(item.get("source_api") or item.get("sourceApi") or "unknown"),
+                    source_path=str(item.get("source_path") or item.get("sourcePath") or "unknown"),
+                    source_method=str(item.get("source_method") or item.get("sourceMethod") or "POST"),
+                    request_signature=item.get("request_signature") or {},
+                    request_params=item.get("request_params") or {},
+                    response_excerpt=item.get("response_excerpt"),
+                    extracted_fields=item.get("extracted_fields") or {},
+                    captured_at=item.get("captured_at"),
+                    confidence=float(item.get("confidence", 1.0)),
+                )
+            )
+    return coerced
+
+
+def _should_use_sample(adapter: Any, source_mode: str) -> bool:
+    if source_mode == "sample":
+        return True
+    if source_mode == "live":
+        return False
+    return bool(getattr(adapter, "captured_api", None))
+
+
+def _require_repo(adapter: Any) -> Any:
+    repo = getattr(adapter, "captured_api", None)
+    if repo is None:
+        raise RuntimeError("CapturedApiRepository is not attached. Pass --captured-api-dir or set TINGYUN_CAPTURED_API_DIR.")
+    return repo
+
+
+def _ensure_int_list(value: Any) -> list[int]:
+    if not isinstance(value, list):
+        return []
+    result: list[int] = []
+    for item in value:
+        converted = _int_or_none(item)
+        if converted is not None:
+            result.append(converted)
+    return result
+
+
+def _int_or_none(value: Any) -> Optional[int]:
+    if value is None:
+        return None
+    try:
+        return int(str(value))
+    except (TypeError, ValueError):
+        return None
+
+
+def _int_or_zero(value: Any) -> int:
+    return _int_or_none(value) or 0
+
+
+def _numeric(value: Any) -> Optional[float]:
+    if value is None:
+        return None
+    if isinstance(value, bool):
+        return 1.0 if value else 0.0
+    if isinstance(value, (int, float)):
+        return float(value)
+    try:
+        return float(str(value))
+    except (TypeError, ValueError):
+        return None
