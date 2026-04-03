@@ -1,0 +1,1072 @@
+{
+  "count_seen": 48,
+  "first_seen": "2026-04-03T15:39:50+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 48
+  },
+  "last_seen": "2026-04-03T20:02:14+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "key": "application_health_summary",
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"key\":\"application_health_summary\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "key": "application_health_summary",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "key": "application_technology_summary",
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"key\":\"application_technology_summary\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "key": "application_technology_summary",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "actionIds",
+            "lang": "zh_CN",
+            "timePeriod": 30,
+            "type": "request"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"actionIds\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"type\":\"request\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod",
+              "type"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "actionIds",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "type": "request"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "actionTypes",
+            "lang": "zh_CN",
+            "timePeriod": 30,
+            "type": "common"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"actionTypes\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"type\":\"common\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod",
+              "type"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "actionTypes",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "type": "common"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "applicationIds",
+            "lang": "zh_CN",
+            "timePeriod": 30,
+            "type": "common",
+            "value": "a"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"applicationIds\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"type\":\"common\",\"value\":\"a\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod",
+              "type",
+              "value"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "applicationIds",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "type": "common",
+            "value": "a"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "applicationIds",
+            "lang": "zh_CN",
+            "timePeriod": 30,
+            "type": "common",
+            "value": "asdf"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"applicationIds\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"type\":\"common\",\"value\":\"asdf\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod",
+              "type",
+              "value"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "applicationIds",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "type": "common",
+            "value": "asdf"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "applicationIds",
+            "lang": "zh_CN",
+            "timePeriod": 30,
+            "type": "common"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"applicationIds\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"type\":\"common\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod",
+              "type"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "applicationIds",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "type": "common"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "diagnose_task_summary",
+            "labels": {
+              "suggestIds": []
+            },
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"diagnose_task_summary\",\"labels\":{\"suggestIds\":[]},\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "labels",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "diagnose_task_summary",
+            "labels": {
+              "suggestIds": []
+            },
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 11,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "request_overview",
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"request_overview\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "request_overview",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "systemIds",
+            "lang": "zh_CN",
+            "timePeriod": 30,
+            "type": "common"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"systemIds\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"type\":\"common\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod",
+              "type"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "systemIds",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "type": "common"
+          }
+        },
+        {
+          "count_seen": 6,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "key": "tags",
+            "lang": "zh_CN",
+            "timePeriod": 30,
+            "type": "request"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"tags\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"type\":\"request\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod",
+              "type"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "tags",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "type": "request"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.labels.actionIds[0]"
+          ],
+          "example": {
+            "key": "actionIds",
+            "labels": {
+              "actionIds": [
+                "20441"
+              ]
+            },
+            "lang": "zh_CN"
+          },
+          "key": "{\"key\":\"actionIds\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "key",
+              "labels",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "key": "actionIds",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 7,
+          "dynamic_fields": [
+            "body.labels.applicationIds[0]"
+          ],
+          "example": {
+            "key": "applicationIds",
+            "labels": {
+              "applicationIds": [
+                "1606"
+              ]
+            },
+            "lang": "zh_CN"
+          },
+          "key": "{\"key\":\"applicationIds\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "key",
+              "labels",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "key": "applicationIds",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 6,
+          "dynamic_fields": [
+            "body.labels.systemIds[0]"
+          ],
+          "example": {
+            "key": "systemIds",
+            "labels": {
+              "systemIds": [
+                "1059"
+              ]
+            },
+            "lang": "zh_CN"
+          },
+          "key": "{\"key\":\"systemIds\",\"labels\":{\"systemIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "key",
+              "labels",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "key": "systemIds",
+            "labels": {
+              "systemIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "count_seen": 48,
+      "first_seen": "2026-04-03T15:39:50+08:00",
+      "inference_basis": [
+        "path=graph/suggestions",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T20:02:14+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 48
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "query.actionIds"
+          ],
+          "example": {
+            "actionIds": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"actionIds\":\"<DYNAMIC>\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "actionIds",
+              "lang"
+            ],
+            "signature": [
+              "actionIds",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "actionIds": "<DYNAMIC>",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 7,
+          "dynamic_fields": [
+            "query.applicationIds"
+          ],
+          "example": {
+            "applicationIds": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"applicationIds\":\"<DYNAMIC>\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "applicationIds",
+              "lang"
+            ],
+            "signature": [
+              "applicationIds",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "applicationIds": "<DYNAMIC>",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [],
+          "example": {
+            "application_health_summary": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"application_health_summary\":\"\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "application_health_summary",
+              "lang"
+            ],
+            "signature": [
+              "application_health_summary",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "application_health_summary": "",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [],
+          "example": {
+            "application_technology_summary": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"application_technology_summary\":\"\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "application_technology_summary",
+              "lang"
+            ],
+            "signature": [
+              "application_technology_summary",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "application_technology_summary": "",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "diagnose_task_summary": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"diagnose_task_summary\":\"\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "diagnose_task_summary",
+              "lang"
+            ],
+            "signature": [
+              "diagnose_task_summary",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "diagnose_task_summary": "",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 4,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "request_overview": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_overview\":\"\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_overview"
+            ],
+            "signature": [
+              "lang",
+              "request_overview"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_overview": ""
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "query.request_overview?actionIds"
+          ],
+          "example": {
+            "lang": "zh_CN",
+            "request_overview?actionIds": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_overview?actionIds\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_overview?actionIds"
+            ],
+            "signature": [
+              "lang",
+              "request_overview?actionIds"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_overview?actionIds": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "request_overview?actionTypes": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_overview?actionTypes\":\"\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_overview?actionTypes"
+            ],
+            "signature": [
+              "lang",
+              "request_overview?actionTypes"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_overview?actionTypes": ""
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "query.request_overview?applicationIds"
+          ],
+          "example": {
+            "lang": "zh_CN",
+            "request_overview?applicationIds": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_overview?applicationIds\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_overview?applicationIds"
+            ],
+            "signature": [
+              "lang",
+              "request_overview?applicationIds"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_overview?applicationIds": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 11,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "request_overview?request_overview": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_overview?request_overview\":\"\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_overview?request_overview"
+            ],
+            "signature": [
+              "lang",
+              "request_overview?request_overview"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_overview?request_overview": ""
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "query.request_overview?systemIds"
+          ],
+          "example": {
+            "lang": "zh_CN",
+            "request_overview?systemIds": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_overview?systemIds\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_overview?systemIds"
+            ],
+            "signature": [
+              "lang",
+              "request_overview?systemIds"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_overview?systemIds": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "request_overview?tags": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_overview?tags\":\"\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_overview?tags"
+            ],
+            "signature": [
+              "lang",
+              "request_overview?tags"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_overview?tags": ""
+          }
+        },
+        {
+          "count_seen": 6,
+          "dynamic_fields": [
+            "query.systemIds"
+          ],
+          "example": {
+            "lang": "zh_CN",
+            "systemIds": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"systemIds\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "systemIds"
+            ],
+            "signature": [
+              "lang",
+              "systemIds"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "systemIds": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "tags": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"tags\":\"\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "tags"
+            ],
+            "signature": [
+              "lang",
+              "tags"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "tags": ""
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "key": "applicationIds",
+          "labels": {
+            "applicationIds": [
+              "1606"
+            ]
+          },
+          "lang": "zh_CN"
+        },
+        "dynamic_fields": [
+          "body.labels.applicationIds[0]",
+          "query.applicationIds"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/suggestions?applicationIds&lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"key\":\"applicationIds\",\"labels\":{\"applicationIds\":[\"1606\"]},\"lang\":\"zh_CN\"}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/suggestions?applicationIds&lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 48
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "key": "applicationIds",
+            "labels": {
+              "applicationIds": [
+                "1606"
+              ]
+            },
+            "lang": "zh_CN"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "applicationIds": "",
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:39:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/suggestions?applicationIds&lang=zh_CN"
+        },
+        {
+          "body": {
+            "key": "systemIds",
+            "labels": {
+              "systemIds": [
+                "1059"
+              ]
+            },
+            "lang": "zh_CN"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "systemIds": ""
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:43+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/suggestions?systemIds&lang=zh_CN"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "key": "application_technology_summary",
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "application_technology_summary": "",
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:57+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/suggestions?application_technology_summary&lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": [
+              {
+                "key": "applicationIds",
+                "suggestId": "1606",
+                "type": "common",
+                "value": "com.alibaba.nacos.Nacos"
+              }
+            ],
+            "requestId": "c9770e66-3441-f5a4-c119-2ee8d672275a",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:39:41 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": [
+              {
+                "key": "systemIds",
+                "suggestId": "1059",
+                "type": "common",
+                "value": "铃与堆场"
+              }
+            ],
+            "requestId": "60c39d1f-d138-9b91-fdf6-5e034bd414db",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:35 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": [
+              {
+                "key": "technology",
+                "suggestId": "application_technology_Java",
+                "type": "application",
+                "value": "Java"
+              },
+              {
+                "key": "technology",
+                "suggestId": "application_technology_TongWeb",
+                "type": "application",
+                "value": "TongWeb"
+              },
+              {
+                "key": "technology",
+                "suggestId": "application_technology_Netty",
+                "type": "application",
+                "value": "Netty"
+              },
+              {
+                "key": "technology",
+                "suggestId": "application_technology_Apache Tomcat",
+                "type": "application",
+                "value": "Apache Tomcat"
+              },
+              {
+                "key": "technology",
+                "suggestId": "application_technology_Jetty",
+                "type": "application",
+                "value": "Jetty"
+              },
+              {
+                "key": "technology",
+                "suggestId": "application_technology_Undertow",
+                "type": "application",
+                "value": "Undertow"
+              }
+            ],
+            "requestId": "fab27590-a101-2731-dc48-0ae9a6d16774",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:48 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 48
+      }
+    }
+  },
+  "path": "/server-api/graph/suggestions",
+  "relative_path": "graph/suggestions"
+}

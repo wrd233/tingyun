@@ -1,0 +1,195 @@
+{
+  "count_seen": 2,
+  "first_seen": "2026-04-03T15:41:36+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 2
+  },
+  "last_seen": "2026-04-03T15:42:12+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "type": 2
+          },
+          "key": "{\"lang\":\"zh_CN\",\"type\":2}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "lang",
+              "type"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "type": 2
+          }
+        }
+      ],
+      "count_seen": 2,
+      "first_seen": "2026-04-03T15:41:36+08:00",
+      "inference_basis": [
+        "path=settings/search_filter/read",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to settings/search_filter/read",
+      "last_seen": "2026-04-03T15:42:12+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 2
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN"
+          },
+          "key": "{\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "lang"
+            ],
+            "signature": [
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "lang": "zh_CN",
+          "type": 2
+        },
+        "dynamic_fields": [],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/settings/search_filter/read?lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"lang\":\"zh_CN\",\"type\":2}'",
+        "url": "http://169.169.173.25:8080/server-api/settings/search_filter/read?lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 2
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "lang": "zh_CN",
+            "type": 2
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:41:36+08:00",
+          "url": "http://169.169.173.25:8080/server-api/settings/search_filter/read?lang=zh_CN"
+        },
+        {
+          "body": {
+            "lang": "zh_CN",
+            "type": 2
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:12+08:00",
+          "url": "http://169.169.173.25:8080/server-api/settings/search_filter/read?lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": [],
+            "requestId": "02bb507e-f56d-00bf-4c7e-5caecc4fd6ee",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:41:27 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": [],
+            "requestId": "16104168-c788-25f9-f040-f64274305f71",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:03 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 2
+      }
+    }
+  },
+  "path": "/server-api/settings/search_filter/read",
+  "relative_path": "settings/search_filter/read"
+}

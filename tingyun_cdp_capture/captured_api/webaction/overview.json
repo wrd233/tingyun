@@ -1,0 +1,373 @@
+{
+  "count_seen": 4,
+  "first_seen": "2026-04-03T15:42:34+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 4
+  },
+  "last_seen": "2026-04-03T15:42:50+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "20441",
+            "actionType": "TX",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"TX\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "TX",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 4,
+      "first_seen": "2026-04-03T15:42:34+08:00",
+      "inference_basis": [
+        "path=webaction/overview"
+      ],
+      "inferred_purpose": "Likely related to overview",
+      "last_seen": "2026-04-03T15:42:50+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 4
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionId": "20441",
+          "actionType": "TX",
+          "applicationId": "1648",
+          "bizSystemId": "1059",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.actionId",
+          "body.applicationId",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/webaction/overview -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&bizSystemId=1059&applicationId=1648&actionId=20441&actionType=TX&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/webaction/overview"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 4
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionId": "20441",
+            "actionType": "TX",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:34+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/overview"
+        },
+        {
+          "body": {
+            "actionId": "20441",
+            "actionType": "TX",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/overview"
+        },
+        {
+          "body": {
+            "actionId": "20441",
+            "actionType": "TX",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:45+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/overview"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "actionAlias": "DubboProvider/com.eporttech.stos.intelligent.service.IntelligentInOutLogService/findIntelligentInOutLogTopGate",
+              "actionCalls": 180,
+              "actionName": "DubboProvider/com.eporttech.stos.intelligent.service.IntelligentInOutLogService/findIntelligentInOutLogTopGate",
+              "affectUserCount": 0,
+              "applicationCount": 0,
+              "bizSystemCount": 0,
+              "components": {
+                "Database": [
+                  {
+                    "componentNameSize": 1,
+                    "componentSubtype": "",
+                    "componentType": "Database",
+                    "consumerAvgTime": 0.0,
+                    "consumerCount": 0,
+                    "count": 214,
+                    "producerAvgTime": 0.0,
+                    "producerCount": 0,
+                    "respTime": 955.42993,
+                    "topiceSize": 0
+                  }
+                ]
+              },
+              "errorCount": 0,
+              "errorRate": 0.0,
+              "instanceCount": 2,
+              "language": "Java",
+              "maxTps": 0.0,
+              "metricNames": [],
+              "responseTime": 1209.8556,
+              "technology": "Jetty",
+              "totalResponseTime": 217774,
+              "tps": 0.10000000149011612,
+              "txCount": 0
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:26 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "actionAlias": "DubboProvider/com.eporttech.stos.intelligent.service.IntelligentInOutLogService/findIntelligentInOutLogTopGate",
+              "actionCalls": 180,
+              "actionName": "DubboProvider/com.eporttech.stos.intelligent.service.IntelligentInOutLogService/findIntelligentInOutLogTopGate",
+              "affectUserCount": 0,
+              "applicationCount": 0,
+              "bizSystemCount": 0,
+              "components": {
+                "Database": [
+                  {
+                    "componentNameSize": 1,
+                    "componentSubtype": "",
+                    "componentType": "Database",
+                    "consumerAvgTime": 0.0,
+                    "consumerCount": 0,
+                    "count": 214,
+                    "producerAvgTime": 0.0,
+                    "producerCount": 0,
+                    "respTime": 955.42993,
+                    "topiceSize": 0
+                  }
+                ]
+              },
+              "errorCount": 0,
+              "errorRate": 0.0,
+              "instanceCount": 2,
+              "language": "Java",
+              "maxTps": 0.0,
+              "metricNames": [],
+              "responseTime": 1209.8556,
+              "technology": "Jetty",
+              "totalResponseTime": 217774,
+              "tps": 0.10000000149011612,
+              "txCount": 0
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "actionAlias": "DubboProvider/com.eporttech.stos.intelligent.service.IntelligentInOutLogService/findIntelligentInOutLogTopGate",
+              "actionCalls": 180,
+              "actionName": "DubboProvider/com.eporttech.stos.intelligent.service.IntelligentInOutLogService/findIntelligentInOutLogTopGate",
+              "affectUserCount": 0,
+              "applicationCount": 0,
+              "bizSystemCount": 0,
+              "components": {
+                "Database": [
+                  {
+                    "componentNameSize": 1,
+                    "componentSubtype": "",
+                    "componentType": "Database",
+                    "consumerAvgTime": 0.0,
+                    "consumerCount": 0,
+                    "count": 214,
+                    "producerAvgTime": 0.0,
+                    "producerCount": 0,
+                    "respTime": 955.42993,
+                    "topiceSize": 0
+                  }
+                ]
+              },
+              "errorCount": 0,
+              "errorRate": 0.0,
+              "instanceCount": 2,
+              "language": "Java",
+              "maxTps": 0.0,
+              "metricNames": [],
+              "responseTime": 1209.8556,
+              "technology": "Jetty",
+              "totalResponseTime": 217774,
+              "tps": 0.10000000149011612,
+              "txCount": 0
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:36 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 4
+      }
+    }
+  },
+  "path": "/server-api/webaction/overview",
+  "relative_path": "webaction/overview"
+}

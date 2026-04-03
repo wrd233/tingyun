@@ -1,0 +1,204 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T15:42:53+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T15:42:53+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionName": "",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "30"
+          },
+          "key": "{\"actionName\":\"\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"sortDirection\":\"DESC\",\"sortField\":\"response\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionName",
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionName": "",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T15:42:53+08:00",
+      "inference_basis": [
+        "path=webaction/list/interfaceList"
+      ],
+      "inferred_purpose": "Likely related to list",
+      "last_seen": "2026-04-03T15:42:53+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionName": "",
+          "applicationId": "1648",
+          "bizSystemId": "1059",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "sortDirection": "DESC",
+          "sortField": "response",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.applicationId",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/webaction/list/interfaceList -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&bizSystemId=1059&sortField=response&sortDirection=DESC&actionName=&applicationId=1648&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionName": "",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:53+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": "DubboProvider/com.nbport.framework.security.SaasSecurityService/login",
+                  "actionId": 20386,
+                  "actionName": "DubboProvider/com.nbport.framework.security.SaasSecurityService/login",
+                  "actionType": "IF",
+                  "alias": null,
+                  "applicationId": 1648,
+                  "applicationName": "com.alibaba.dubbo.container.Main",
+                  "count": 16,
+                  "error": 0.0,
+                  "errorCount": 0,
+                  "favorite": false,
+                  "health": -1,
+                  "healthInfo": null,
+                  "healthOrder": 0,
+                  "maxThrought": 0.0,
+                  "pureAlias": null,
+                  "response": 5,
+                  "slowCount": 0,
+                  "throught": 0.01,
+                  "timePercentage": 100.0,
+                  "totalResponse": 79
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 1
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:45 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/webaction/list/interfaceList",
+  "relative_path": "webaction/list/interfaceList"
+}

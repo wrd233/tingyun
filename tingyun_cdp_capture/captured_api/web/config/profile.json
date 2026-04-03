@@ -1,0 +1,167 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T20:02:03+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T20:02:03+08:00",
+  "methods": {
+    "GET": {
+      "body_variants": [],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T20:02:03+08:00",
+      "inference_basis": [
+        "path=web/config/profile",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to web/config/profile",
+      "last_seen": "2026-04-03T20:02:03+08:00",
+      "method": "GET",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "query.random"
+          ],
+          "example": {
+            "random": "17752177230001319"
+          },
+          "key": "{\"random\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "random"
+            ],
+            "signature": [
+              "random"
+            ]
+          },
+          "normalized_example": {
+            "random": "<DYNAMIC>"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": null,
+        "dynamic_fields": [
+          "query.random"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/web/config/profile?random=17752177230001319' -X GET -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}'",
+        "url": "http://169.169.173.25:8080/server-api/web/config/profile?random=17752177230001319"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": null,
+          "body_kind": "none",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}"
+          },
+          "query": {
+            "random": "17752177230001319"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:03+08:00",
+          "url": "http://169.169.173.25:8080/server-api/web/config/profile?random=17752177230001319"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "AllocatedSpeed": "Allocated Speed: 描述了JVM中每秒钟分配的对象数量，它是衡量应用程序内存管理和性能优化的重要指标。",
+            "ClassCount": "Class Count: 描述了JVM已加载和已卸载的类的数量，它可以帮助我们监控和诊断类加载器的行为和元空间（MetaSpace）的使用情况。",
+            "G1OldGeneration": "G1 Old Generation: G1垃圾收集器在老年代执行垃圾回收所耗费的总时间和次数。通常GC时间越短越好。",
+            "G1YoungGeneration": "Young Generation: 在JVM中，Young Generation 区域用于存放生命周期较短的新生对象，并通过Minor GC进行垃圾回收。",
+            "HeapCMSOldGen": "Heap Old Gen: 描述了JVM堆中老年代的内存使用情况，它主要用于存放生命周期较长的对象。",
+            "HeapEdenSpace": "Heap Eden Space: 描述了JVM堆中年轻代Eden区的内存使用情况，包括当前使用的内存（Used）、已申请的内存（Committed）和最大可用内存（Max），它主要用于存放新创建的对象。",
+            "HeapG1EdenSpace": "Heap Eden Space: 描述了JVM堆中年轻代Eden区的内存使用情况，包括当前使用的内存（Used）、已申请的内存（Committed）和最大可用内存（Max），它主要用于存放新创建的对象。",
+            "HeapG1OldGen": "Heap Old Gen: 描述了JVM堆中老年代的内存使用情况，它主要用于存放生命周期较长的对象。",
+            "HeapG1SurvivorSpace": "Heap Survivor Space: 描述了JVM堆中年轻代Survivor区的内存使用情况，它主要用于存放经过年轻代垃圾回收后仍然存活的对象。",
+            "HeapPSEdenSpace": "Heap Eden Space: 描述了JVM堆中年轻代Eden区的内存使用情况，包括当前使用的内存（Used）、已申请的内存（Committed）和最大可用内存（Max），它主要用于存放新创建的对象。",
+            "HeapPSOldGen": "Heap Old Gen: 描述了JVM堆中老年代的内存使用情况，它主要用于存放生命周期较长的对象。",
+            "HeapPSSurvivorSpace": "Heap Survivor Space: 描述了JVM堆中年轻代Survivor区的内存使用情况，它主要用于存放经过年轻代垃圾回收后仍然存活的对象。",
+            "HeapParEdenSpace": "Heap Eden Space: 描述了JVM堆中年轻代Eden区的内存使用情况，包括当前使用的内存（Used）、已申请的内存（Committed）和最大可用内存（Max），它主要用于存放新创建的对象。",
+            "HeapParSurvivorSpace": "Heap Survivor Space: 描述了JVM堆中年轻代Survivor区的内存使用情况，它主要用于存放经过年轻代垃圾回收后仍然存活的对象。",
+            "HeapSurvivorSpace": "Heap Survivor Space: 描述了JVM堆中年轻代Survivor区的内存使用情况，它主要用于存放经过年轻代垃圾回收后仍然存活的对象。",
+            "HeapmemoryUsage": "Heap Memory Usage: 描述了JVM堆内存的使用情况，包括当前使用的内存（Used）、已申请的内存（Commited）和最大可用内存（Max），它是Java运行时数据区域，用于存储所有的对象实例和数组，由垃圾回收器自动管理。",
+            "NonHeapCMSPermGen": "PermGen:（永久代）是早期JVM版本中用于存储类元数据、常量池和静态变量等信息的内存区域，从Java 8开始被Metaspace（元空间）替代。",
+            "NonHeapCodeHeapnonnmethods": "CodeHeap non-nmethods: 区域用于存储即时编译器生成的非方法代码（如JVM运行时辅助代码），以及其他与方法执行无关的代码段。",
+            "NonHeapCodeHeapnonprofiledcodeheap": "CodeHeap non-profiled code heap: 描述了JVM中用于存放不需要进行性能分析的JIT编译后的代码的内存区域。",
+            "NonHeapCodeHeapnonprofilednmethods": "CodeHeap non-profiled nmethods: 区域用于存储即时编译器生成的未经过性能分析工具收集性能数据的方法代码。",
+            "NonHeapCompressedClassSpace": "Compressed Class Space: 描述了JVM中Metaspace的一部分，主要用于存储压缩后的类元数据信息，其监测和分析可以优化类加载性能和元数据处理效率。",
+            "NonHeapMetaspace": "Metaspace: 是 JVM 中用于存储类元数据信息的区域，其内存占用情况可以通过观察 Used 和 Committed 大小来了解，如果值过大，可能需要进行内存dump分析。",
+            "NonHeapPSPermGen": "PermGen:（永久代）是早期JVM版本中用于存储类元数据、常量池和静态变量等信息的内存区域，从Java 8开始被Metaspace（元空间）替代。",
+            "NonHeapPermGen": "PermGen:（永久代）是早期JVM版本中用于存储类元数据、常量池和静态变量等信息的内存区域，从Java 8开始被Metaspace（元空间）替代。",
+            "NonHeapdirect": "Non-Heap/direct: 在JVM中，Non-Heap/direct 区域用于存储直接分配在内存中的缓冲区，不受垃圾回收管理。",
+            "NonHeapmapped": "Non-Heap/mapped: 在JVM中，Non-Heap/mapped 区域用于存储通过内存映射文件（Memory-mapped files）分配的内存，提高文件I/O操作的效率。",
+            "PSMarkSweep": "PS MarkSweep: Java虚拟机（JVM）中Parallel Scavenge收集器的一部分，专门负责老年代的垃圾收集。通常GC时间越短越好。",
+            "PSScavenge": "PS Scavenge: Java虚拟机（JVM）中Parallel Scavenge收集器的一部分，专门负责年轻代的垃圾收集。通常，GC时间越短越好，因为较短的GC时间可以减少应用程序的停顿时间，提高响应速度。",
+            "ParNew": "ParNew: 新生代执行垃圾回收所耗费的总时间和次数。通常GC时间越短越好。",
+            "PromotedSpeed": "Promoted Speed: 描述了在JVM中从年轻代到老年代晋升的对象数量的速度，它是衡量垃圾回收效率和内存使用情况的重要指标。",
+            "SafePointSync": "SafePoint Sync: 指JVM在执行垃圾收集或其他需要一致性状态的操作前，暂停所有线程并达到安全点（SafePoint）所需时间的指标。",
+            "SafePointTime": "SafePoint Time: 指JVM在执行垃圾收集或其他需要线程暂停的操作时，所有线程在安全点（SafePoint）的总暂停时间的指标",
+            "Scavenge": "Scavenge: 年轻代执行垃圾回收所耗费的总时间和次数。通常GC时间越短越好。",
+            "ThreadCount": "Threads（总线程数）:表示当前系统中的总线程数量。 <br> Blocked （阻塞中的线程数）:表示当前处于阻塞状态的线程数量。 <br> Runnable （运行中的线程数）:表示当前正在运行的线程数量。 <br> Timed Waiting（计时等待的线程数）:表示当前处于计时等待状态的线程数量。 <br> Waiting （等待的线程数）:表示当前处于等待状态的线程数量。",
+            "isAllShowServiceFlow": "true",
+            "isSaas": false,
+            "log_tracing_doc_release_url": "doc/apm/userguide/config/global.html#%E6%97%A5%E5%BF%97%E6%BA%AF%E6%BA%90",
+            "log_tracing_doc_release_url_en": "doc/en/apm/userguide/config/global.html#%E6%97%A5%E5%BF%97%E6%BA%AF%E6%BA%90",
+            "log_tracing_doc_saas_url": "https://wukongdoc.tingyun.com/apm/userguide/config/global.html#%E6%97%A5%E5%BF%97%E6%BA%AF%E6%BA%90",
+            "log_tracing_doc_saas_url_en": "https://wukongdoc.tingyun.com/en/apm/userguide/config/global.html#%E6%97%A5%E5%BF%97%E6%BA%AF%E6%BA%90",
+            "otel_doc_release_url": "doc/apm/userguide/deploy_manage/opentelemetry.html",
+            "otel_doc_release_url_en": "doc/en/apm/userguide/deploy_manage/opentelemetry.html",
+            "otel_doc_saas_url": "https://wukongdoc.tingyun.com/apm/userguide/deploy_manage/opentelemetry.html",
+            "otel_doc_saas_url_en": "https://wukongdoc.tingyun.com/en/apm/userguide/deploy_manage/opentelemetry.html",
+            "remove_instance_enabled": true,
+            "serviceFlow": true,
+            "serviceFlowAgreementIds": "",
+            "skywalking_doc_release_url": "doc/apm/userguide/deploy_manage/skywalking.html",
+            "skywalking_doc_release_url_en": "doc/en/apm/userguide/deploy_manage/skywalking.html",
+            "skywalking_doc_saas_url": "https://wukongdoc.tingyun.com/apm/userguide/deploy_manage/skywalking.html",
+            "skywalking_doc_saas_url_en": "https://wukongdoc.tingyun.com/en/apm/userguide/deploy_manage/skywalking.html"
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:01:54 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/web/config/profile",
+  "relative_path": "web/config/profile"
+}

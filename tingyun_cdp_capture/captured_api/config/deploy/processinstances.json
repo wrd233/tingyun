@@ -1,0 +1,350 @@
+{
+  "count_seen": 2,
+  "first_seen": "2026-04-03T15:43:12+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 2
+  },
+  "last_seen": "2026-04-03T20:02:15+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.hostId"
+          ],
+          "example": {
+            "hostId": 190
+          },
+          "key": "{\"hostId\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "hostId"
+            ]
+          },
+          "normalized_example": {
+            "hostId": "<DYNAMIC_NUMBER>"
+          }
+        }
+      ],
+      "count_seen": 2,
+      "first_seen": "2026-04-03T15:43:12+08:00",
+      "inference_basis": [
+        "path=config/deploy/processinstances"
+      ],
+      "inferred_purpose": "Likely related to config/deploy/processinstances",
+      "last_seen": "2026-04-03T20:02:15+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 2
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "hostId": 190
+        },
+        "dynamic_fields": [
+          "body.hostId"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/config/deploy/processinstances -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'Content-Type: application/json' --data-raw '{\"hostId\":190}'",
+        "url": "http://169.169.173.25:8080/server-api/config/deploy/processinstances"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 2
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "hostId": 190
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "Content-Type": "application/json"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:43:12+08:00",
+          "url": "http://169.169.173.25:8080/server-api/config/deploy/processinstances"
+        },
+        {
+          "body": {
+            "hostId": 184
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "Content-Type": "application/json"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:15+08:00",
+          "url": "http://169.169.173.25:8080/server-api/config/deploy/processinstances"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 0,
+            "data": {
+              "content": [
+                {
+                  "agentVersion": null,
+                  "appName": null,
+                  "applicationId": 0,
+                  "bizSystemId": 0,
+                  "bootType": "Python",
+                  "commandLine": "/usr/bin/python3 -Es /usr/sbin/tuned -l -P",
+                  "containerId": "",
+                  "containerName": "",
+                  "ctime": 1775118209000,
+                  "cuser": 0,
+                  "deleteFlag": 0,
+                  "descreption": "",
+                  "hostId": 190,
+                  "hostPid": 975,
+                  "id": 48900,
+                  "imageName": "",
+                  "instanceId": 0,
+                  "instanceName": null,
+                  "mtime": 1775202146000,
+                  "muser": 0,
+                  "pid": 975,
+                  "podId": "",
+                  "processName": "Python tuned ",
+                  "runFlag": 1,
+                  "serverPorts": null,
+                  "status": 0
+                },
+                {
+                  "agentVersion": null,
+                  "appName": null,
+                  "applicationId": 0,
+                  "bizSystemId": 0,
+                  "bootType": "Python",
+                  "commandLine": "/usr/bin/python3 /usr/sbin/lvmdbusd",
+                  "containerId": "",
+                  "containerName": "",
+                  "ctime": 1775118209000,
+                  "cuser": 0,
+                  "deleteFlag": 0,
+                  "descreption": "",
+                  "hostId": 190,
+                  "hostPid": 4923,
+                  "id": 48901,
+                  "imageName": "",
+                  "instanceId": 0,
+                  "instanceName": null,
+                  "mtime": 1775202146000,
+                  "muser": 0,
+                  "pid": 4923,
+                  "podId": "",
+                  "processName": "Python lvmdbusd ",
+                  "runFlag": 1,
+                  "serverPorts": null,
+                  "status": 0
+                },
+                {
+                  "agentVersion": null,
+                  "appName": null,
+                  "applicationId": 0,
+                  "bizSystemId": 0,
+                  "bootType": "SpringBoot",
+                  "commandLine": "/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.402.b06-0.p01.ky10.p01.aarch64/bin/java -Djava.ext.dirs=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.402.b06-0.p01.ky10.p01.aarch64/jre/lib/ext:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.402.b06-0.p01.ky10.p01.aarch64/lib/ext -Xms10240m -Xmx10240m -Xmn5120m -Dnacos.standalone=true -Dnacos.member.list= -Xloggc:/zgb/nacos/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M -Dloader.path=/zgb/nacos/plugins,/zgb/nacos/plugins/health,/zgb/nacos/plugins/cmdb,/zgb/nacos/plugins/selector -Dnacos.home=/zgb/nacos -jar /zgb/nacos/target/nacos-server.jar --spring.config.additional-location=file:/zgb/nacos/conf/ --logging.config=/zgb/nacos/conf/nacos-logback.xml --server.max-http-header-size=524288 nacos.nacos",
+                  "containerId": "",
+                  "containerName": "",
+                  "ctime": 1775118209000,
+                  "cuser": 0,
+                  "deleteFlag": 0,
+                  "descreption": "",
+                  "hostId": 190,
+                  "hostPid": 96150,
+                  "id": 48902,
+                  "imageName": "",
+                  "instanceId": 0,
+                  "instanceName": null,
+                  "mtime": 1775202146000,
+                  "muser": 0,
+                  "pid": 96150,
+                  "podId": "",
+                  "processName": "SpringBoot com.alibaba.nacos.Nacos ",
+                  "runFlag": 1,
+                  "serverPorts": "8848,9848,9849,7848",
+                  "status": 0
+                }
+              ],
+              "totalElements": 3
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:43:04 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 0,
+            "data": {
+              "content": [
+                {
+                  "agentVersion": null,
+                  "appName": null,
+                  "applicationId": 0,
+                  "bizSystemId": 0,
+                  "bootType": "Python",
+                  "commandLine": "/usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers",
+                  "containerId": "",
+                  "containerName": "",
+                  "ctime": 1775199036000,
+                  "cuser": 0,
+                  "deleteFlag": 0,
+                  "descreption": "",
+                  "hostId": 184,
+                  "hostPid": 699,
+                  "id": 49092,
+                  "imageName": "",
+                  "instanceId": 0,
+                  "instanceName": null,
+                  "mtime": 1775217695000,
+                  "muser": 0,
+                  "pid": 699,
+                  "podId": "",
+                  "processName": "Python /usr/bin/python3 ",
+                  "runFlag": 1,
+                  "serverPorts": null,
+                  "status": 0
+                },
+                {
+                  "agentVersion": null,
+                  "appName": null,
+                  "applicationId": 0,
+                  "bizSystemId": 0,
+                  "bootType": "Python",
+                  "commandLine": "/usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal",
+                  "containerId": "",
+                  "containerName": "",
+                  "ctime": 1775199036000,
+                  "cuser": 0,
+                  "deleteFlag": 0,
+                  "descreption": "",
+                  "hostId": 184,
+                  "hostPid": 747,
+                  "id": 49093,
+                  "imageName": "",
+                  "instanceId": 0,
+                  "instanceName": null,
+                  "mtime": 1775217695000,
+                  "muser": 0,
+                  "pid": 747,
+                  "podId": "",
+                  "processName": "Python /usr/bin/python3 ",
+                  "runFlag": 1,
+                  "serverPorts": null,
+                  "status": 0
+                },
+                {
+                  "agentVersion": "3.7.1.3",
+                  "appName": "org.springframework.boot.loader.WarLauncher",
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "bootType": "Java",
+                  "commandLine": "/usr/bin/java -Dfastjson.parser.safeMode=true -cp grcv5 org.springframework.boot.loader.WarLauncher",
+                  "containerId": "",
+                  "containerName": "",
+                  "ctime": 1775199036000,
+                  "cuser": 0,
+                  "deleteFlag": 0,
+                  "descreption": "",
+                  "hostId": 184,
+                  "hostPid": 840170,
+                  "id": 49094,
+                  "imageName": "",
+                  "instanceId": 2745,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "mtime": 1775217695000,
+                  "muser": 0,
+                  "pid": 840170,
+                  "podId": "",
+                  "processName": "Java org.springframework.boot.loader.WarLauncher ",
+                  "runFlag": 1,
+                  "serverPorts": "8888",
+                  "status": 1
+                }
+              ],
+              "totalElements": 3
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:06 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 2
+      }
+    }
+  },
+  "path": "/server-api/config/deploy/processinstances",
+  "relative_path": "config/deploy/processinstances"
+}

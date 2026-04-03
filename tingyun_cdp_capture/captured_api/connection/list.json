@@ -1,0 +1,838 @@
+{
+  "count_seen": 8,
+  "first_seen": "2026-04-03T15:43:04+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 8
+  },
+  "last_seen": "2026-04-03T20:02:08+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2637",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"共用应用\",\"curP\":\"1775202187085\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"serviceGroupId\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "serviceGroupId": "<DYNAMIC>",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "0",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"共用应用\",\"curP\":\"1775202187085\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"serviceGroupId\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "lang",
+              "localeOptionContent",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "serviceGroupId": "<DYNAMIC>",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"铃与堆场\",\"curP\":\"1775202183695\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "0",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"limit\":\"true\",\"pageNumber\":\"1\",\"pageSize\":\"1000\",\"sortDirection\":\"DESC\",\"sortField\":\"respTime\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "limit",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 8,
+      "first_seen": "2026-04-03T15:43:04+08:00",
+      "inference_basis": [
+        "path=connection/list"
+      ],
+      "inferred_purpose": "Likely related to list",
+      "last_seen": "2026-04-03T20:02:08+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 8
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 8,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "applicationId": "1648",
+          "beginTime": "2026-04-03 11:50",
+          "bizSystemId": "1059",
+          "bizSystemName": "铃与堆场",
+          "curP": "1775202183695",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "localeOptionContent": "undefined",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.applicationId",
+          "body.beginTime",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/connection/list -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'curP=1775202183695&bizSystemId=1059&bizSystemName=%E9%93%83%E4%B8%8E%E5%A0%86%E5%9C%BA&timePeriod=30&endTime=2026-04-03+12%3A20&beginTime=2026-04-03+11%3A50&localeOptionContent=undefined&applicationId=1648&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/connection/list"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 8
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:43:04+08:00",
+          "url": "http://169.169.173.25:8080/server-api/connection/list"
+        },
+        {
+          "body": {
+            "applicationId": "0",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:43:07+08:00",
+          "url": "http://169.169.173.25:8080/server-api/connection/list"
+        },
+        {
+          "body": {
+            "applicationId": "1606",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:43:08+08:00",
+          "url": "http://169.169.173.25:8080/server-api/connection/list"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "address": "169.169.4.41:1521%2Fedidb1",
+                  "addressSplit": "169.169.4.41:1521",
+                  "addressWithSchema": "169.169.4.41:1521%2Fedidb12%Fedidb1Oracle",
+                  "applicationId": 1648,
+                  "avgTime": 0.29,
+                  "bizSystemId": 1059,
+                  "ctime": 1775118134000,
+                  "currentIdle": 55,
+                  "currentUsed": 5,
+                  "databaseName": "edidb1",
+                  "databaseType": "Oracle",
+                  "framework": "Druid",
+                  "id": 2752,
+                  "initActive": 3,
+                  "instanceId": 2754,
+                  "maxActive": 60,
+                  "maxIdle": 24,
+                  "mertricScope": "Pool",
+                  "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-1dca1be1f5aaae369560473d420e30d6",
+                  "metricName": "Register",
+                  "metricTag": "Database-1dca1be1f5aaae369560473d420e30d6",
+                  "minIdle": 3,
+                  "mtime": 1775118134000,
+                  "other": null,
+                  "pools": [
+                    {
+                      "applicationId": 1648,
+                      "bizSystemId": 1059,
+                      "frameworkName": "Druid-1dca1be1f5aaae369560473d420e30d6",
+                      "idle": 17,
+                      "initActive": 1,
+                      "instanceId": 2754,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 8,
+                      "minIdle": 1,
+                      "name": "Database-1dca1be1f5aaae369560473d420e30d6",
+                      "time": 0.0,
+                      "used": 3,
+                      "waitCount": 0
+                    },
+                    {
+                      "applicationId": 1648,
+                      "bizSystemId": 1059,
+                      "frameworkName": "Druid-0edfbd4bdb21ebd8cc3e3d718960297c",
+                      "idle": 19,
+                      "initActive": 1,
+                      "instanceId": 2755,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 8,
+                      "minIdle": 1,
+                      "name": "Database-0edfbd4bdb21ebd8cc3e3d718960297c",
+                      "time": 0.0,
+                      "used": 1,
+                      "waitCount": 0
+                    },
+                    {
+                      "applicationId": 1648,
+                      "bizSystemId": 1059,
+                      "frameworkName": "Druid-058c34b871509e53d60f394f91614234",
+                      "idle": 19,
+                      "initActive": 1,
+                      "instanceId": 2756,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 8,
+                      "minIdle": 1,
+                      "name": "Database-058c34b871509e53d60f394f91614234",
+                      "time": 0.87,
+                      "used": 1,
+                      "waitCount": 0
+                    }
+                  ],
+                  "rawUrl": null,
+                  "serviceGroupId": 0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 1
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:55 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "address": "UnknownHost:0%2F/root/nacos/data/derby-data",
+                  "addressSplit": "UnknownHost:0",
+                  "addressWithSchema": "UnknownHost:0%2F/root/nacos/data/derby-data2%F/root/nacos/data/derby-dataApache Derby",
+                  "applicationId": 1606,
+                  "avgTime": 0.0,
+                  "bizSystemId": 1062,
+                  "ctime": 1760080958000,
+                  "currentIdle": 2,
+                  "currentUsed": 1,
+                  "databaseName": "/root/nacos/data/derby-data",
+                  "databaseType": "Apache Derby",
+                  "framework": "HikariCP",
+                  "id": 63,
+                  "initActive": 2,
+                  "instanceId": 2625,
+                  "maxActive": 20,
+                  "maxIdle": 20,
+                  "mertricScope": "Pool",
+                  "metricCategory": "UnknownHost:0%2F/root/nacos/data/derby-data/Database-2f77ed42d37a0bf7de8049fea971fcf5",
+                  "metricName": "Register",
+                  "metricTag": "Database-2f77ed42d37a0bf7de8049fea971fcf5",
+                  "minIdle": 2,
+                  "mtime": 1760080958000,
+                  "other": null,
+                  "pools": [
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-2f77ed42d37a0bf7de8049fea971fcf5",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2625,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "root/nacos/data/derby-data/Database-2f77ed42d37a0bf7de8049fea971fcf5",
+                      "time": 0.0,
+                      "used": 1,
+                      "waitCount": 0
+                    }
+                  ],
+                  "rawUrl": null,
+                  "serviceGroupId": 0
+                },
+                {
+                  "address": "169.169.173.148:3306%2Ftbosnacos",
+                  "addressSplit": "169.169.173.148:3306",
+                  "addressWithSchema": "169.169.173.148:3306%2Ftbosnacos2%FtbosnacosMySQL",
+                  "applicationId": 1606,
+                  "avgTime": 0.07,
+                  "bizSystemId": 1062,
+                  "ctime": 1774313415000,
+                  "currentIdle": 6,
+                  "currentUsed": 0,
+                  "databaseName": "tbosnacos",
+                  "databaseType": "MySQL",
+                  "framework": "HikariCP",
+                  "id": 2563,
+                  "initActive": 6,
+                  "instanceId": 2635,
+                  "maxActive": 60,
+                  "maxIdle": 60,
+                  "mertricScope": "Pool",
+                  "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-cee33ba1b5257e412a1d7aae3c01f78e",
+                  "metricName": "Register",
+                  "metricTag": "Database-cee33ba1b5257e412a1d7aae3c01f78e",
+                  "minIdle": 6,
+                  "mtime": 1774313415000,
+                  "other": null,
+                  "pools": [
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-cee33ba1b5257e412a1d7aae3c01f78e",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2635,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "Database-cee33ba1b5257e412a1d7aae3c01f78e",
+                      "time": 0.16,
+                      "used": 0,
+                      "waitCount": 0
+                    },
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-b4fca66dea93a4f7c53d1684ef2cc53c",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2637,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "Database-b4fca66dea93a4f7c53d1684ef2cc53c",
+                      "time": 0.03,
+                      "used": 0,
+                      "waitCount": 0
+                    },
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-e6f2505ff3b7d3bc665e117900d89e85",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2641,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "Database-e6f2505ff3b7d3bc665e117900d89e85",
+                      "time": 0.03,
+                      "used": 0,
+                      "waitCount": 0
+                    }
+                  ],
+                  "rawUrl": null,
+                  "serviceGroupId": 0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 2
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:58 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "address": "UnknownHost:0%2F/root/nacos/data/derby-data",
+                  "addressSplit": "UnknownHost:0",
+                  "addressWithSchema": "UnknownHost:0%2F/root/nacos/data/derby-data2%F/root/nacos/data/derby-dataApache Derby",
+                  "applicationId": 1606,
+                  "avgTime": 0.0,
+                  "bizSystemId": 1062,
+                  "ctime": 1760080958000,
+                  "currentIdle": 2,
+                  "currentUsed": 1,
+                  "databaseName": "/root/nacos/data/derby-data",
+                  "databaseType": "Apache Derby",
+                  "framework": "HikariCP",
+                  "id": 63,
+                  "initActive": 2,
+                  "instanceId": 2625,
+                  "maxActive": 20,
+                  "maxIdle": 20,
+                  "mertricScope": "Pool",
+                  "metricCategory": "UnknownHost:0%2F/root/nacos/data/derby-data/Database-2f77ed42d37a0bf7de8049fea971fcf5",
+                  "metricName": "Register",
+                  "metricTag": "Database-2f77ed42d37a0bf7de8049fea971fcf5",
+                  "minIdle": 2,
+                  "mtime": 1760080958000,
+                  "other": null,
+                  "pools": [
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-2f77ed42d37a0bf7de8049fea971fcf5",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2625,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "root/nacos/data/derby-data/Database-2f77ed42d37a0bf7de8049fea971fcf5",
+                      "time": 0.0,
+                      "used": 1,
+                      "waitCount": 0
+                    }
+                  ],
+                  "rawUrl": null,
+                  "serviceGroupId": 0
+                },
+                {
+                  "address": "169.169.173.148:3306%2Ftbosnacos",
+                  "addressSplit": "169.169.173.148:3306",
+                  "addressWithSchema": "169.169.173.148:3306%2Ftbosnacos2%FtbosnacosMySQL",
+                  "applicationId": 1606,
+                  "avgTime": 0.07,
+                  "bizSystemId": 1062,
+                  "ctime": 1774313415000,
+                  "currentIdle": 6,
+                  "currentUsed": 0,
+                  "databaseName": "tbosnacos",
+                  "databaseType": "MySQL",
+                  "framework": "HikariCP",
+                  "id": 2563,
+                  "initActive": 6,
+                  "instanceId": 2635,
+                  "maxActive": 60,
+                  "maxIdle": 60,
+                  "mertricScope": "Pool",
+                  "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-cee33ba1b5257e412a1d7aae3c01f78e",
+                  "metricName": "Register",
+                  "metricTag": "Database-cee33ba1b5257e412a1d7aae3c01f78e",
+                  "minIdle": 6,
+                  "mtime": 1774313415000,
+                  "other": null,
+                  "pools": [
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-cee33ba1b5257e412a1d7aae3c01f78e",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2635,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "Database-cee33ba1b5257e412a1d7aae3c01f78e",
+                      "time": 0.16,
+                      "used": 0,
+                      "waitCount": 0
+                    },
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-b4fca66dea93a4f7c53d1684ef2cc53c",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2637,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "Database-b4fca66dea93a4f7c53d1684ef2cc53c",
+                      "time": 0.03,
+                      "used": 0,
+                      "waitCount": 0
+                    },
+                    {
+                      "applicationId": 1606,
+                      "bizSystemId": 1062,
+                      "frameworkName": "HikariCP-e6f2505ff3b7d3bc665e117900d89e85",
+                      "idle": 2,
+                      "initActive": 2,
+                      "instanceId": 2641,
+                      "max": 20,
+                      "maxActive": 0,
+                      "maxIdle": 20,
+                      "minIdle": 2,
+                      "name": "Database-e6f2505ff3b7d3bc665e117900d89e85",
+                      "time": 0.03,
+                      "used": 0,
+                      "waitCount": 0
+                    }
+                  ],
+                  "rawUrl": null,
+                  "serviceGroupId": 0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 2
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:43:00 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 8
+      }
+    }
+  },
+  "path": "/server-api/connection/list",
+  "relative_path": "connection/list"
+}

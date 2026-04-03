@@ -1,0 +1,519 @@
+{
+  "count_seen": 4,
+  "first_seen": "2026-04-03T15:42:39+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 4
+  },
+  "last_seen": "2026-04-03T20:02:46+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionIds",
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionIds": "20441",
+            "actionTypes": "TX",
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "endTime": "2026-04-03 12:20",
+            "errorFilter": "0",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"actionIds\":\"<DYNAMIC>\",\"actionTypes\":\"TX\",\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"铃与堆场\",\"endTime\":\"<DATETIME>\",\"errorFilter\":\"0\",\"errorLevel\":\"ER\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionIds",
+              "actionTypes",
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorFilter",
+              "errorLevel",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionIds": "<DYNAMIC>",
+            "actionTypes": "TX",
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "铃与堆场",
+            "endTime": "<DATETIME>",
+            "errorFilter": "0",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 4,
+      "first_seen": "2026-04-03T15:42:39+08:00",
+      "inference_basis": [
+        "path=error/smart/errorDecompose/chart"
+      ],
+      "inferred_purpose": "Likely related to error",
+      "last_seen": "2026-04-03T20:02:46+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 4
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionIds": "20441",
+          "actionTypes": "TX",
+          "applicationId": "1648",
+          "beginTime": "2026-04-03 11:50",
+          "bizSystemId": "1059",
+          "bizSystemName": "铃与堆场",
+          "endTime": "2026-04-03 12:20",
+          "errorFilter": "0",
+          "errorLevel": "ER",
+          "lang": "zh_CN",
+          "localeOptionContent": "undefined",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.actionIds",
+          "body.applicationId",
+          "body.beginTime",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/error/smart/errorDecompose/chart -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'bizSystemId=1059&bizSystemName=%E9%93%83%E4%B8%8E%E5%A0%86%E5%9C%BA&timePeriod=30&endTime=2026-04-03+12%3A20&beginTime=2026-04-03+11%3A50&localeOptionContent=undefined&applicationId=1648&errorLevel=ER&errorFilter=0&actionIds=20441&actionTypes=TX&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/error/smart/errorDecompose/chart"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 4
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionIds": "20441",
+            "actionTypes": "TX",
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "endTime": "2026-04-03 12:20",
+            "errorFilter": "0",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:39+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorDecompose/chart"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:20+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorDecompose/chart"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:38+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorDecompose/chart"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 0.0,
+                "count": 0.0
+              },
+              "series": [],
+              "totals": [],
+              "xAxis": {
+                "categories": []
+              },
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:31 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 0.9,
+                "count": 27.0
+              },
+              "series": [
+                {
+                  "data": [
+                    5.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    2.0,
+                    2.0,
+                    1.0,
+                    2.0,
+                    1.0,
+                    2.0,
+                    2.0,
+                    1.0,
+                    2.0,
+                    1.0
+                  ],
+                  "name": "HTTP Error Code",
+                  "type": "column",
+                  "yAxis": 0
+                },
+                {
+                  "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  "name": "Uncaught Exception",
+                  "type": "column",
+                  "yAxis": 0
+                }
+              ],
+              "totals": [],
+              "xAxis": {
+                "categories": [
+                  1775188260000,
+                  1775188380000,
+                  1775188440000,
+                  1775188500000,
+                  1775188620000,
+                  1775188740000,
+                  1775188800000,
+                  1775188980000,
+                  1775189040000,
+                  1775189100000,
+                  1775189220000,
+                  1775189280000,
+                  1775189400000,
+                  1775189580000,
+                  1775189760000,
+                  1775189880000
+                ]
+              },
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:11 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 0.9,
+                "count": 27.0
+              },
+              "series": [
+                {
+                  "data": [
+                    5.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    2.0,
+                    2.0,
+                    1.0,
+                    2.0,
+                    1.0,
+                    2.0,
+                    2.0,
+                    1.0,
+                    2.0,
+                    1.0
+                  ],
+                  "name": "HTTP Error Code",
+                  "type": "column",
+                  "yAxis": 0
+                },
+                {
+                  "data": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                  ],
+                  "name": "Uncaught Exception",
+                  "type": "column",
+                  "yAxis": 0
+                }
+              ],
+              "totals": [],
+              "xAxis": {
+                "categories": [
+                  1775188260000,
+                  1775188380000,
+                  1775188440000,
+                  1775188500000,
+                  1775188620000,
+                  1775188740000,
+                  1775188800000,
+                  1775188980000,
+                  1775189040000,
+                  1775189100000,
+                  1775189220000,
+                  1775189280000,
+                  1775189400000,
+                  1775189580000,
+                  1775189760000,
+                  1775189880000
+                ]
+              },
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:29 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 4
+      }
+    }
+  },
+  "path": "/server-api/error/smart/errorDecompose/chart",
+  "relative_path": "error/smart/errorDecompose/chart"
+}

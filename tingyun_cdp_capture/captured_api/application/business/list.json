@@ -1,0 +1,392 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T15:40:39+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T15:40:39+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T15:40:39+08:00",
+      "inference_basis": [
+        "path=application/business/list"
+      ],
+      "inferred_purpose": "Likely related to application / list",
+      "last_seen": "2026-04-03T15:40:39+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/application/business/list -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/application/business/list"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:39+08:00",
+          "url": "http://169.169.173.25:8080/server-api/application/business/list"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionIds": [],
+                  "apdex": 0.979,
+                  "applicationCount": 1,
+                  "applicationIds": [],
+                  "bizSystemId": 1059,
+                  "bizSystemName": "铃与堆场",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 0.0,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1059",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 2,
+                  "instanceCount": 3,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 122,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 52,
+                  "successCount": 0,
+                  "throught": 8.39
+                },
+                {
+                  "actionIds": [],
+                  "apdex": 1.0,
+                  "applicationCount": 7,
+                  "applicationIds": [],
+                  "bizSystemId": 1060,
+                  "bizSystemName": "外理理货",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 0.0,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1060",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 3,
+                  "instanceCount": 13,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 1,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 0,
+                  "successCount": 0,
+                  "throught": 0.03
+                },
+                {
+                  "actionIds": [],
+                  "apdex": 0.0,
+                  "applicationCount": 7,
+                  "applicationIds": [],
+                  "bizSystemId": 1061,
+                  "bizSystemName": "浙港办",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 0.0,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1061",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 3,
+                  "instanceCount": 21,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 0,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 0,
+                  "successCount": 0,
+                  "throught": 0.0
+                },
+                {
+                  "actionIds": [],
+                  "apdex": 0.975,
+                  "applicationCount": 1,
+                  "applicationIds": [],
+                  "bizSystemId": 1062,
+                  "bizSystemName": "共用应用",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 2.17,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1062",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 4,
+                  "instanceCount": 4,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 90,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 204,
+                  "successCount": 0,
+                  "throught": 38.28
+                },
+                {
+                  "actionIds": [],
+                  "apdex": 1.0,
+                  "applicationCount": 9,
+                  "applicationIds": [],
+                  "bizSystemId": 1063,
+                  "bizSystemName": "default",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 0.0,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1063",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 4,
+                  "instanceCount": 10,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 29,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 0,
+                  "successCount": 0,
+                  "throught": 0.17
+                },
+                {
+                  "actionIds": [],
+                  "apdex": 0.999,
+                  "applicationCount": 9,
+                  "applicationIds": [],
+                  "bizSystemId": 1064,
+                  "bizSystemName": "信创-浙港通",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 0.01,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1064",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 4,
+                  "instanceCount": 18,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 22,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 15,
+                  "successCount": 0,
+                  "throught": 75.84
+                },
+                {
+                  "actionIds": [],
+                  "apdex": 0.864,
+                  "applicationCount": 3,
+                  "applicationIds": [],
+                  "bizSystemId": 1065,
+                  "bizSystemName": "集团法务",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 0.3,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1065",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 3,
+                  "instanceCount": 3,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 86,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 73,
+                  "successCount": 0,
+                  "throught": 5.03
+                },
+                {
+                  "actionIds": [],
+                  "apdex": 1.0,
+                  "applicationCount": 1,
+                  "applicationIds": [],
+                  "bizSystemId": 1066,
+                  "bizSystemName": "信创OA",
+                  "containerCount": 0,
+                  "dataCenterCount": 1,
+                  "error": 0.0,
+                  "hasData": true,
+                  "health": 0,
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1066",
+                    "targetValue": null
+                  },
+                  "healthOrder": 0,
+                  "hostCount": 1,
+                  "instanceCount": 1,
+                  "instanceIds": [],
+                  "maxThrought": 0.0,
+                  "response": 29,
+                  "rightOprt": 1,
+                  "showDelete": false,
+                  "slowCount": 0,
+                  "successCount": 0,
+                  "throught": 0.1
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 8
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:30 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/application/business/list",
+  "relative_path": "application/business/list"
+}

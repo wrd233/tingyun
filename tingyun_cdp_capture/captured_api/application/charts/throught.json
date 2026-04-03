@@ -1,0 +1,1609 @@
+{
+  "count_seen": 3,
+  "first_seen": "2026-04-03T15:40:41+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 3
+  },
+  "last_seen": "2026-04-03T15:40:52+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1059",
+            "businessType": "BIZ_SYSTEM",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"businessType\":\"BIZ_SYSTEM\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "businessType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "businessType": "BIZ_SYSTEM",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 3,
+      "first_seen": "2026-04-03T15:40:41+08:00",
+      "inference_basis": [
+        "path=application/charts/throught"
+      ],
+      "inferred_purpose": "Likely related to application",
+      "last_seen": "2026-04-03T15:40:52+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 3
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1059",
+          "businessType": "BIZ_SYSTEM",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/application/charts/throught -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&businessType=BIZ_SYSTEM&bizSystemId=1059&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/application/charts/throught"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 3
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "businessType": "BIZ_SYSTEM",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/application/charts/throught"
+        },
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "businessType": "BIZ_SYSTEM",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:46+08:00",
+          "url": "http://169.169.173.25:8080/server-api/application/charts/throught"
+        },
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "businessType": "BIZ_SYSTEM",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:52+08:00",
+          "url": "http://169.169.173.25:8080/server-api/application/charts/throught"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 8.39,
+                "count": 15104
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "endTime": "2026-04-03 11:51",
+                      "startTime": "2026-04-03 11:50",
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.38,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":503.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 8.38
+                    },
+                    {
+                      "endTime": "2026-04-03 11:52",
+                      "startTime": "2026-04-03 11:51",
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 6.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:53",
+                      "startTime": "2026-04-03 11:52",
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 6.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:54",
+                      "startTime": "2026-04-03 11:53",
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 5.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:55",
+                      "startTime": "2026-04-03 11:54",
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 7.8
+                    },
+                    {
+                      "endTime": "2026-04-03 11:56",
+                      "startTime": "2026-04-03 11:55",
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.43,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":326.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 5.43
+                    },
+                    {
+                      "endTime": "2026-04-03 11:57",
+                      "startTime": "2026-04-03 11:56",
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.83,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":590.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 9.83
+                    },
+                    {
+                      "endTime": "2026-04-03 11:58",
+                      "startTime": "2026-04-03 11:57",
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 7.8
+                    },
+                    {
+                      "endTime": "2026-04-03 11:59",
+                      "startTime": "2026-04-03 11:58",
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.23,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":554.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 9.23
+                    },
+                    {
+                      "endTime": "2026-04-03 12:00",
+                      "startTime": "2026-04-03 11:59",
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 8.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:01",
+                      "startTime": "2026-04-03 12:00",
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":366.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 6.1
+                    },
+                    {
+                      "endTime": "2026-04-03 12:02",
+                      "startTime": "2026-04-03 12:01",
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 6.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:03",
+                      "startTime": "2026-04-03 12:02",
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 8.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:04",
+                      "startTime": "2026-04-03 12:03",
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":497.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 8.28
+                    },
+                    {
+                      "endTime": "2026-04-03 12:05",
+                      "startTime": "2026-04-03 12:04",
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.93,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":476.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 7.93
+                    },
+                    {
+                      "endTime": "2026-04-03 12:06",
+                      "startTime": "2026-04-03 12:05",
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.65,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":519.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 8.65
+                    },
+                    {
+                      "endTime": "2026-04-03 12:07",
+                      "startTime": "2026-04-03 12:06",
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.12,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":427.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 7.12
+                    },
+                    {
+                      "endTime": "2026-04-03 12:08",
+                      "startTime": "2026-04-03 12:07",
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 6.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:09",
+                      "startTime": "2026-04-03 12:08",
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":617.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 10.28
+                    },
+                    {
+                      "endTime": "2026-04-03 12:10",
+                      "startTime": "2026-04-03 12:09",
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.75,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 9.75
+                    },
+                    {
+                      "endTime": "2026-04-03 12:11",
+                      "startTime": "2026-04-03 12:10",
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":514.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 8.57
+                    },
+                    {
+                      "endTime": "2026-04-03 12:12",
+                      "startTime": "2026-04-03 12:11",
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.47,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":628.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 10.47
+                    },
+                    {
+                      "endTime": "2026-04-03 12:13",
+                      "startTime": "2026-04-03 12:12",
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.25,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":615.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 10.25
+                    },
+                    {
+                      "endTime": "2026-04-03 12:14",
+                      "startTime": "2026-04-03 12:13",
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":574.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 9.57
+                    },
+                    {
+                      "endTime": "2026-04-03 12:15",
+                      "startTime": "2026-04-03 12:14",
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.42,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":505.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 8.42
+                    },
+                    {
+                      "endTime": "2026-04-03 12:16",
+                      "startTime": "2026-04-03 12:15",
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.22,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":553.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 9.22
+                    },
+                    {
+                      "endTime": "2026-04-03 12:17",
+                      "startTime": "2026-04-03 12:16",
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.85,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":531.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 8.85
+                    },
+                    {
+                      "endTime": "2026-04-03 12:18",
+                      "startTime": "2026-04-03 12:17",
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.95,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":657.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 10.95
+                    },
+                    {
+                      "endTime": "2026-04-03 12:19",
+                      "startTime": "2026-04-03 12:18",
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.58,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":515.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 8.58
+                    },
+                    {
+                      "endTime": "2026-04-03 12:20",
+                      "startTime": "2026-04-03 12:19",
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":11.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":666.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 11.1
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "endTime": "2026-04-03 11:51",
+                      "startTime": "2026-04-03 11:50",
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.38,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":503.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 503.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:52",
+                      "startTime": "2026-04-03 11:51",
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 414.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:53",
+                      "startTime": "2026-04-03 11:52",
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 414.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:54",
+                      "startTime": "2026-04-03 11:53",
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 354.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:55",
+                      "startTime": "2026-04-03 11:54",
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 468.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:56",
+                      "startTime": "2026-04-03 11:55",
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.43,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":326.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 326.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:57",
+                      "startTime": "2026-04-03 11:56",
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.83,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":590.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 590.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:58",
+                      "startTime": "2026-04-03 11:57",
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 468.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:59",
+                      "startTime": "2026-04-03 11:58",
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.23,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":554.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 554.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:00",
+                      "startTime": "2026-04-03 11:59",
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 502.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:01",
+                      "startTime": "2026-04-03 12:00",
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":366.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 366.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:02",
+                      "startTime": "2026-04-03 12:01",
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 382.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:03",
+                      "startTime": "2026-04-03 12:02",
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 502.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:04",
+                      "startTime": "2026-04-03 12:03",
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":497.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 497.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:05",
+                      "startTime": "2026-04-03 12:04",
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.93,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":476.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 476.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:06",
+                      "startTime": "2026-04-03 12:05",
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.65,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":519.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 519.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:07",
+                      "startTime": "2026-04-03 12:06",
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.12,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":427.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 427.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:08",
+                      "startTime": "2026-04-03 12:07",
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 382.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:09",
+                      "startTime": "2026-04-03 12:08",
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":617.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 617.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:10",
+                      "startTime": "2026-04-03 12:09",
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.75,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 585.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:11",
+                      "startTime": "2026-04-03 12:10",
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":514.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 514.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:12",
+                      "startTime": "2026-04-03 12:11",
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.47,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":628.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 628.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:13",
+                      "startTime": "2026-04-03 12:12",
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.25,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":615.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 615.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:14",
+                      "startTime": "2026-04-03 12:13",
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":574.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 574.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:15",
+                      "startTime": "2026-04-03 12:14",
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.42,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":505.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 505.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:16",
+                      "startTime": "2026-04-03 12:15",
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.22,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":553.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 553.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:17",
+                      "startTime": "2026-04-03 12:16",
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.85,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":531.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 531.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:18",
+                      "startTime": "2026-04-03 12:17",
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.95,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":657.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 657.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:19",
+                      "startTime": "2026-04-03 12:18",
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.58,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":515.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 515.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:20",
+                      "startTime": "2026-04-03 12:19",
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":11.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":666.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 666.0
+                    }
+                  ],
+                  "name": "请求数",
+                  "type": "column",
+                  "yAxis": 1,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "tps"
+                },
+                {
+                  "opposite": true
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 8.39,
+                "count": 15104
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "endTime": "2026-04-03 11:51",
+                      "startTime": "2026-04-03 11:50",
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.38,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":503.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 8.38
+                    },
+                    {
+                      "endTime": "2026-04-03 11:52",
+                      "startTime": "2026-04-03 11:51",
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 6.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:53",
+                      "startTime": "2026-04-03 11:52",
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 6.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:54",
+                      "startTime": "2026-04-03 11:53",
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 5.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:55",
+                      "startTime": "2026-04-03 11:54",
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 7.8
+                    },
+                    {
+                      "endTime": "2026-04-03 11:56",
+                      "startTime": "2026-04-03 11:55",
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.43,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":326.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 5.43
+                    },
+                    {
+                      "endTime": "2026-04-03 11:57",
+                      "startTime": "2026-04-03 11:56",
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.83,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":590.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 9.83
+                    },
+                    {
+                      "endTime": "2026-04-03 11:58",
+                      "startTime": "2026-04-03 11:57",
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 7.8
+                    },
+                    {
+                      "endTime": "2026-04-03 11:59",
+                      "startTime": "2026-04-03 11:58",
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.23,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":554.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 9.23
+                    },
+                    {
+                      "endTime": "2026-04-03 12:00",
+                      "startTime": "2026-04-03 11:59",
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 8.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:01",
+                      "startTime": "2026-04-03 12:00",
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":366.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 6.1
+                    },
+                    {
+                      "endTime": "2026-04-03 12:02",
+                      "startTime": "2026-04-03 12:01",
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 6.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:03",
+                      "startTime": "2026-04-03 12:02",
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 8.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:04",
+                      "startTime": "2026-04-03 12:03",
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":497.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 8.28
+                    },
+                    {
+                      "endTime": "2026-04-03 12:05",
+                      "startTime": "2026-04-03 12:04",
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.93,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":476.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 7.93
+                    },
+                    {
+                      "endTime": "2026-04-03 12:06",
+                      "startTime": "2026-04-03 12:05",
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.65,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":519.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 8.65
+                    },
+                    {
+                      "endTime": "2026-04-03 12:07",
+                      "startTime": "2026-04-03 12:06",
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.12,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":427.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 7.12
+                    },
+                    {
+                      "endTime": "2026-04-03 12:08",
+                      "startTime": "2026-04-03 12:07",
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 6.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:09",
+                      "startTime": "2026-04-03 12:08",
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":617.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 10.28
+                    },
+                    {
+                      "endTime": "2026-04-03 12:10",
+                      "startTime": "2026-04-03 12:09",
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.75,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 9.75
+                    },
+                    {
+                      "endTime": "2026-04-03 12:11",
+                      "startTime": "2026-04-03 12:10",
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":514.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 8.57
+                    },
+                    {
+                      "endTime": "2026-04-03 12:12",
+                      "startTime": "2026-04-03 12:11",
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.47,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":628.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 10.47
+                    },
+                    {
+                      "endTime": "2026-04-03 12:13",
+                      "startTime": "2026-04-03 12:12",
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.25,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":615.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 10.25
+                    },
+                    {
+                      "endTime": "2026-04-03 12:14",
+                      "startTime": "2026-04-03 12:13",
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":574.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 9.57
+                    },
+                    {
+                      "endTime": "2026-04-03 12:15",
+                      "startTime": "2026-04-03 12:14",
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.42,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":505.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 8.42
+                    },
+                    {
+                      "endTime": "2026-04-03 12:16",
+                      "startTime": "2026-04-03 12:15",
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.22,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":553.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 9.22
+                    },
+                    {
+                      "endTime": "2026-04-03 12:17",
+                      "startTime": "2026-04-03 12:16",
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.85,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":531.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 8.85
+                    },
+                    {
+                      "endTime": "2026-04-03 12:18",
+                      "startTime": "2026-04-03 12:17",
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.95,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":657.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 10.95
+                    },
+                    {
+                      "endTime": "2026-04-03 12:19",
+                      "startTime": "2026-04-03 12:18",
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.58,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":515.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 8.58
+                    },
+                    {
+                      "endTime": "2026-04-03 12:20",
+                      "startTime": "2026-04-03 12:19",
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":11.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":666.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 11.1
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "endTime": "2026-04-03 11:51",
+                      "startTime": "2026-04-03 11:50",
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.38,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":503.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 503.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:52",
+                      "startTime": "2026-04-03 11:51",
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 414.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:53",
+                      "startTime": "2026-04-03 11:52",
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 414.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:54",
+                      "startTime": "2026-04-03 11:53",
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 354.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:55",
+                      "startTime": "2026-04-03 11:54",
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 468.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:56",
+                      "startTime": "2026-04-03 11:55",
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.43,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":326.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 326.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:57",
+                      "startTime": "2026-04-03 11:56",
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.83,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":590.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 590.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:58",
+                      "startTime": "2026-04-03 11:57",
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 468.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:59",
+                      "startTime": "2026-04-03 11:58",
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.23,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":554.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 554.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:00",
+                      "startTime": "2026-04-03 11:59",
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 502.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:01",
+                      "startTime": "2026-04-03 12:00",
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":366.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 366.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:02",
+                      "startTime": "2026-04-03 12:01",
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 382.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:03",
+                      "startTime": "2026-04-03 12:02",
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 502.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:04",
+                      "startTime": "2026-04-03 12:03",
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":497.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 497.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:05",
+                      "startTime": "2026-04-03 12:04",
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.93,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":476.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 476.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:06",
+                      "startTime": "2026-04-03 12:05",
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.65,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":519.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 519.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:07",
+                      "startTime": "2026-04-03 12:06",
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.12,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":427.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 427.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:08",
+                      "startTime": "2026-04-03 12:07",
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 382.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:09",
+                      "startTime": "2026-04-03 12:08",
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":617.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 617.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:10",
+                      "startTime": "2026-04-03 12:09",
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.75,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 585.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:11",
+                      "startTime": "2026-04-03 12:10",
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":514.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 514.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:12",
+                      "startTime": "2026-04-03 12:11",
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.47,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":628.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 628.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:13",
+                      "startTime": "2026-04-03 12:12",
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.25,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":615.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 615.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:14",
+                      "startTime": "2026-04-03 12:13",
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":574.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 574.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:15",
+                      "startTime": "2026-04-03 12:14",
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.42,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":505.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 505.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:16",
+                      "startTime": "2026-04-03 12:15",
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.22,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":553.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 553.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:17",
+                      "startTime": "2026-04-03 12:16",
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.85,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":531.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 531.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:18",
+                      "startTime": "2026-04-03 12:17",
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.95,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":657.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 657.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:19",
+                      "startTime": "2026-04-03 12:18",
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.58,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":515.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 515.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:20",
+                      "startTime": "2026-04-03 12:19",
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":11.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":666.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 666.0
+                    }
+                  ],
+                  "name": "请求数",
+                  "type": "column",
+                  "yAxis": 1,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "tps"
+                },
+                {
+                  "opposite": true
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:37 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 8.39,
+                "count": 15104
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "endTime": "2026-04-03 11:51",
+                      "startTime": "2026-04-03 11:50",
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.38,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":503.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 8.38
+                    },
+                    {
+                      "endTime": "2026-04-03 11:52",
+                      "startTime": "2026-04-03 11:51",
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 6.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:53",
+                      "startTime": "2026-04-03 11:52",
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 6.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:54",
+                      "startTime": "2026-04-03 11:53",
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 5.9
+                    },
+                    {
+                      "endTime": "2026-04-03 11:55",
+                      "startTime": "2026-04-03 11:54",
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 7.8
+                    },
+                    {
+                      "endTime": "2026-04-03 11:56",
+                      "startTime": "2026-04-03 11:55",
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.43,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":326.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 5.43
+                    },
+                    {
+                      "endTime": "2026-04-03 11:57",
+                      "startTime": "2026-04-03 11:56",
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.83,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":590.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 9.83
+                    },
+                    {
+                      "endTime": "2026-04-03 11:58",
+                      "startTime": "2026-04-03 11:57",
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 7.8
+                    },
+                    {
+                      "endTime": "2026-04-03 11:59",
+                      "startTime": "2026-04-03 11:58",
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.23,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":554.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 9.23
+                    },
+                    {
+                      "endTime": "2026-04-03 12:00",
+                      "startTime": "2026-04-03 11:59",
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 8.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:01",
+                      "startTime": "2026-04-03 12:00",
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":366.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 6.1
+                    },
+                    {
+                      "endTime": "2026-04-03 12:02",
+                      "startTime": "2026-04-03 12:01",
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 6.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:03",
+                      "startTime": "2026-04-03 12:02",
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 8.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:04",
+                      "startTime": "2026-04-03 12:03",
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":497.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 8.28
+                    },
+                    {
+                      "endTime": "2026-04-03 12:05",
+                      "startTime": "2026-04-03 12:04",
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.93,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":476.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 7.93
+                    },
+                    {
+                      "endTime": "2026-04-03 12:06",
+                      "startTime": "2026-04-03 12:05",
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.65,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":519.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 8.65
+                    },
+                    {
+                      "endTime": "2026-04-03 12:07",
+                      "startTime": "2026-04-03 12:06",
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.12,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":427.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 7.12
+                    },
+                    {
+                      "endTime": "2026-04-03 12:08",
+                      "startTime": "2026-04-03 12:07",
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 6.37
+                    },
+                    {
+                      "endTime": "2026-04-03 12:09",
+                      "startTime": "2026-04-03 12:08",
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":617.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 10.28
+                    },
+                    {
+                      "endTime": "2026-04-03 12:10",
+                      "startTime": "2026-04-03 12:09",
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.75,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 9.75
+                    },
+                    {
+                      "endTime": "2026-04-03 12:11",
+                      "startTime": "2026-04-03 12:10",
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":514.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 8.57
+                    },
+                    {
+                      "endTime": "2026-04-03 12:12",
+                      "startTime": "2026-04-03 12:11",
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.47,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":628.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 10.47
+                    },
+                    {
+                      "endTime": "2026-04-03 12:13",
+                      "startTime": "2026-04-03 12:12",
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.25,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":615.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 10.25
+                    },
+                    {
+                      "endTime": "2026-04-03 12:14",
+                      "startTime": "2026-04-03 12:13",
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":574.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 9.57
+                    },
+                    {
+                      "endTime": "2026-04-03 12:15",
+                      "startTime": "2026-04-03 12:14",
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.42,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":505.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 8.42
+                    },
+                    {
+                      "endTime": "2026-04-03 12:16",
+                      "startTime": "2026-04-03 12:15",
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.22,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":553.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 9.22
+                    },
+                    {
+                      "endTime": "2026-04-03 12:17",
+                      "startTime": "2026-04-03 12:16",
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.85,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":531.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 8.85
+                    },
+                    {
+                      "endTime": "2026-04-03 12:18",
+                      "startTime": "2026-04-03 12:17",
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.95,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":657.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 10.95
+                    },
+                    {
+                      "endTime": "2026-04-03 12:19",
+                      "startTime": "2026-04-03 12:18",
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.58,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":515.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 8.58
+                    },
+                    {
+                      "endTime": "2026-04-03 12:20",
+                      "startTime": "2026-04-03 12:19",
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":11.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":666.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 11.1
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "endTime": "2026-04-03 11:51",
+                      "startTime": "2026-04-03 11:50",
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.38,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":503.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 503.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:52",
+                      "startTime": "2026-04-03 11:51",
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 414.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:53",
+                      "startTime": "2026-04-03 11:52",
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":414.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 414.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:54",
+                      "startTime": "2026-04-03 11:53",
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.90,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 354.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:55",
+                      "startTime": "2026-04-03 11:54",
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 468.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:56",
+                      "startTime": "2026-04-03 11:55",
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":5.43,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":326.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 326.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:57",
+                      "startTime": "2026-04-03 11:56",
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.83,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":590.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 590.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:58",
+                      "startTime": "2026-04-03 11:57",
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.80,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":468.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 468.0
+                    },
+                    {
+                      "endTime": "2026-04-03 11:59",
+                      "startTime": "2026-04-03 11:58",
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.23,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":554.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 554.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:00",
+                      "startTime": "2026-04-03 11:59",
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 502.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:01",
+                      "startTime": "2026-04-03 12:00",
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":366.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 366.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:02",
+                      "startTime": "2026-04-03 12:01",
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 382.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:03",
+                      "startTime": "2026-04-03 12:02",
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":502.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 502.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:04",
+                      "startTime": "2026-04-03 12:03",
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":497.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 497.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:05",
+                      "startTime": "2026-04-03 12:04",
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.93,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":476.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 476.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:06",
+                      "startTime": "2026-04-03 12:05",
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.65,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":519.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 519.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:07",
+                      "startTime": "2026-04-03 12:06",
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":7.12,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":427.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 427.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:08",
+                      "startTime": "2026-04-03 12:07",
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":6.37,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":382.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 382.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:09",
+                      "startTime": "2026-04-03 12:08",
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.28,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":617.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 617.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:10",
+                      "startTime": "2026-04-03 12:09",
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.75,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 585.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:11",
+                      "startTime": "2026-04-03 12:10",
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":514.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 514.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:12",
+                      "startTime": "2026-04-03 12:11",
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.47,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":628.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 628.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:13",
+                      "startTime": "2026-04-03 12:12",
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.25,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":615.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 615.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:14",
+                      "startTime": "2026-04-03 12:13",
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.57,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":574.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 574.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:15",
+                      "startTime": "2026-04-03 12:14",
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.42,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":505.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 505.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:16",
+                      "startTime": "2026-04-03 12:15",
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.22,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":553.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 553.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:17",
+                      "startTime": "2026-04-03 12:16",
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.85,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":531.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 531.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:18",
+                      "startTime": "2026-04-03 12:17",
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.95,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":657.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 657.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:19",
+                      "startTime": "2026-04-03 12:18",
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.58,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":515.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 515.0
+                    },
+                    {
+                      "endTime": "2026-04-03 12:20",
+                      "startTime": "2026-04-03 12:19",
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":11.10,\"unit\":\"tps\",\"scale\":2},{\"title\":\"请求数\",\"value\":666.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 666.0
+                    }
+                  ],
+                  "name": "请求数",
+                  "type": "column",
+                  "yAxis": 1,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "tps"
+                },
+                {
+                  "opposite": true
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:44 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 3
+      }
+    }
+  },
+  "path": "/server-api/application/charts/throught",
+  "relative_path": "application/charts/throught"
+}

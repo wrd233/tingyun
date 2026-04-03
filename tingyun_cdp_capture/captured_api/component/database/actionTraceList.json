@@ -1,0 +1,572 @@
+{
+  "count_seen": 2,
+  "first_seen": "2026-04-03T20:00:16+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 2
+  },
+  "last_seen": "2026-04-03T20:00:42+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod",
+            "body.txActionId"
+          ],
+          "example": {
+            "actionId": "13691",
+            "actionType": "TX",
+            "applicationId": "",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "",
+            "lang": "zh_CN",
+            "opName": "tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd",
+            "timePeriod": "30",
+            "txActionId": ""
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"TX\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"opName\":\"tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd\",\"timePeriod\":\"<DYNAMIC>\",\"txActionId\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "applicationId",
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "instanceId",
+              "lang",
+              "opName",
+              "timePeriod",
+              "txActionId"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "TX",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "opName": "tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd",
+            "timePeriod": "<DYNAMIC>",
+            "txActionId": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "13238",
+            "actionType": "TX",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"TX\",\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "TX",
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 2,
+      "first_seen": "2026-04-03T20:00:16+08:00",
+      "inference_basis": [
+        "path=component/database/actionTraceList"
+      ],
+      "inferred_purpose": "Likely related to component/database/actionTraceList",
+      "last_seen": "2026-04-03T20:00:42+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 2
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionId": "13238",
+          "actionType": "TX",
+          "bizSystemId": "1065",
+          "componentName": "10.190.22.21:3306",
+          "componentSubtype": "MySQL",
+          "componentType": "Database",
+          "dataType": "COMP",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.actionId",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/component/database/actionTraceList -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'componentType=Database&bizSystemId=1065&endTime=2026-04-03+12%3A20&timePeriod=30&dataType=COMP&componentName=10.190.22.21%3A3306&componentSubtype=MySQL&actionId=13238&actionType=TX&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/component/database/actionTraceList"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 2
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionId": "13238",
+            "actionType": "TX",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/database/actionTraceList"
+        },
+        {
+          "body": {
+            "actionId": "13691",
+            "actionType": "TX",
+            "applicationId": "",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "",
+            "lang": "zh_CN",
+            "opName": "tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd",
+            "timePeriod": "30",
+            "txActionId": ""
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:42+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/database/actionTraceList"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "7101fff31a80619e",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189172000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2522.765
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "f2f2317177c504b8",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189990000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2518.315
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "745d0b033d3ca6d0",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189336000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2516.648
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "b8482dc47ee1bf12",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189833000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2501.916
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "2979f8ce7e28c71b",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189532000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2498.411
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "c27e12b6a1991e31",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189336000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2491.256
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "c84dc881854488e7",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775188660000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2489.85
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "bffca79c42983665",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189656000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2489.603
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "c8c87b61d9c1d014",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775188467000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2486.259
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "a2ae20d15defa6c0",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775188660000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2485.901
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "95fffa6b9349cd63",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189172000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2485.78
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "ca6a5b6126ee6308",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189339000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2482.448
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "b3e97c755cd0ea25",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189990000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2481.975
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "16004ad8df88532f",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189656000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2463.645
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "b3da852d324f94c8",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189532000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2462.632
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "95c6413e6bae7c4d",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189339000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2461.926
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "94efe3294744a8a8",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775189833000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2458.37
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "92231352a5466bb2",
+                  "actionId": 13238,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+                  "actionTimestamp": 1775188467000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 2454.817
+                }
+              ],
+              "fastQuery": false,
+              "pageNumber": 1,
+              "pageSize": 100,
+              "totalElements": 18
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:00:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": "URI/grcv5/ReportServer",
+                  "actionCount": 1,
+                  "actionGuid": "912db9c5d0510811",
+                  "actionId": 13691,
+                  "actionName": "URI/grcv5/ReportServer",
+                  "actionTimestamp": 1775189480000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 1655.267
+                },
+                {
+                  "actionAlias": "URI/grcv5/ReportServer",
+                  "actionCount": 1,
+                  "actionGuid": "ca0eecea40fe5872",
+                  "actionId": 13691,
+                  "actionName": "URI/grcv5/ReportServer",
+                  "actionTimestamp": 1775189789000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 1652.985
+                },
+                {
+                  "actionAlias": "URI/grcv5/ReportServer",
+                  "actionCount": 1,
+                  "actionGuid": "b09674b14c3db48c",
+                  "actionId": 13691,
+                  "actionName": "URI/grcv5/ReportServer",
+                  "actionTimestamp": 1775189784000,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 1624.596
+                }
+              ],
+              "fastQuery": false,
+              "pageNumber": 1,
+              "pageSize": 100,
+              "totalElements": 3
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:00:34 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 2
+      }
+    }
+  },
+  "path": "/server-api/component/database/actionTraceList",
+  "relative_path": "component/database/actionTraceList"
+}

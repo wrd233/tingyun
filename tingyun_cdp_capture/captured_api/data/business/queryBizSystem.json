@@ -1,0 +1,237 @@
+{
+  "count_seen": 4,
+  "first_seen": "2026-04-03T15:40:31+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 4
+  },
+  "last_seen": "2026-04-03T15:40:52+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "body.bizSystemId"
+          ],
+          "example": {
+            "bizSystemId": "1059",
+            "lang": "zh_CN"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "count_seen": 4,
+      "first_seen": "2026-04-03T15:40:31+08:00",
+      "inference_basis": [
+        "path=data/business/queryBizSystem"
+      ],
+      "inferred_purpose": "Likely related to data/business/queryBizSystem",
+      "last_seen": "2026-04-03T15:40:52+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 4
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1059",
+          "lang": "zh_CN"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/data/business/queryBizSystem -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'bizSystemId=1059&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/data/business/queryBizSystem"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 4
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:31+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/queryBizSystem"
+        },
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/queryBizSystem"
+        },
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:46+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/queryBizSystem"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "id": 1059,
+              "name": "铃与堆场"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:19 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "id": 1059,
+              "name": "铃与堆场"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "id": 1059,
+              "name": "铃与堆场"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:37 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 4
+      }
+    }
+  },
+  "path": "/server-api/data/business/queryBizSystem",
+  "relative_path": "data/business/queryBizSystem"
+}

@@ -1,0 +1,386 @@
+{
+  "count_seen": 8,
+  "first_seen": "2026-04-03T15:40:08+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 8
+  },
+  "last_seen": "2026-04-03T20:03:01+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 8,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN"
+          },
+          "key": "{\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "count_seen": 8,
+      "first_seen": "2026-04-03T15:40:08+08:00",
+      "inference_basis": [
+        "path=data/business/queryGlobalSetting"
+      ],
+      "inferred_purpose": "Likely related to data/business/queryGlobalSetting",
+      "last_seen": "2026-04-03T20:03:01+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 8
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN"
+          },
+          "key": "{\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "lang"
+            ],
+            "signature": [
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 6,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "lang": "zh_CN"
+        },
+        "dynamic_fields": [],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/data/business/queryGlobalSetting -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw lang=zh_CN",
+        "url": "http://169.169.173.25:8080/server-api/data/business/queryGlobalSetting"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 8
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:08+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/queryGlobalSetting"
+        },
+        {
+          "body": {
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:25+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/queryGlobalSetting"
+        },
+        {
+          "body": {
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:28+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/queryGlobalSetting"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "actionThreshold": 2000,
+              "apdexThreshold": 500,
+              "captureParams": 1,
+              "checkTimeoutEnabled": 2,
+              "checkTimeoutExternalThreshold": 2000,
+              "checkTimeoutRequestThreshold": 2000,
+              "cpuUsageOff": 90,
+              "cpuUsageOn": 80,
+              "customHeaders": null,
+              "errorCollectorEnabled": 1,
+              "exceptionStackEnabled": 0,
+              "gcTimeRatioOff": 20,
+              "gcTimeRatioOn": 10,
+              "id": 20,
+              "ignoredExceptionClasses": "",
+              "ignoredParams": "",
+              "ignoredStatusCodes": "401",
+              "logAk": null,
+              "logApiUrl": null,
+              "logSk": null,
+              "logTraceEnabled": 1,
+              "memoryDumpEnabled": 0,
+              "memoryDumpFileAutoDel": 1,
+              "memoryUseOff": 80,
+              "memoryUseOn": 70,
+              "obfuscatedSqlEnabled": 0,
+              "platformId": 1,
+              "platformName": null,
+              "quantile": "50,80,95,99",
+              "readOnly": false,
+              "requestSampleCount": 0,
+              "requestSampleMode": 0,
+              "requestSampleRatio": 0,
+              "resourceEnabled": 1,
+              "safetyObservationEnabled": 0,
+              "samplingRate": 50,
+              "showSourceCode": 0,
+              "slowCalltreeEnabled": 0,
+              "slowCalltreeThreshold": 2000,
+              "slowMethod": 1,
+              "slowMethodThreshold": 1000,
+              "sourceCodeEnabled": 1,
+              "thirdPartLink": "",
+              "traceEnabled": 1,
+              "traceExternalEnabled": 0,
+              "traceExternalType": 2,
+              "traceSampleEnabled": 0,
+              "traceSampleRatio": 500.0,
+              "transactionTracerEnabled": 1
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:00 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "actionThreshold": 2000,
+              "apdexThreshold": 500,
+              "captureParams": 1,
+              "checkTimeoutEnabled": 2,
+              "checkTimeoutExternalThreshold": 2000,
+              "checkTimeoutRequestThreshold": 2000,
+              "cpuUsageOff": 90,
+              "cpuUsageOn": 80,
+              "customHeaders": null,
+              "errorCollectorEnabled": 1,
+              "exceptionStackEnabled": 0,
+              "gcTimeRatioOff": 20,
+              "gcTimeRatioOn": 10,
+              "id": 20,
+              "ignoredExceptionClasses": "",
+              "ignoredParams": "",
+              "ignoredStatusCodes": "401",
+              "logAk": null,
+              "logApiUrl": null,
+              "logSk": null,
+              "logTraceEnabled": 1,
+              "memoryDumpEnabled": 0,
+              "memoryDumpFileAutoDel": 1,
+              "memoryUseOff": 80,
+              "memoryUseOn": 70,
+              "obfuscatedSqlEnabled": 0,
+              "platformId": 1,
+              "platformName": null,
+              "quantile": "50,80,95,99",
+              "readOnly": false,
+              "requestSampleCount": 0,
+              "requestSampleMode": 0,
+              "requestSampleRatio": 0,
+              "resourceEnabled": 1,
+              "safetyObservationEnabled": 0,
+              "samplingRate": 50,
+              "showSourceCode": 0,
+              "slowCalltreeEnabled": 0,
+              "slowCalltreeThreshold": 2000,
+              "slowMethod": 1,
+              "slowMethodThreshold": 1000,
+              "sourceCodeEnabled": 1,
+              "thirdPartLink": "",
+              "traceEnabled": 1,
+              "traceExternalEnabled": 0,
+              "traceExternalType": 2,
+              "traceSampleEnabled": 0,
+              "traceSampleRatio": 500.0,
+              "transactionTracerEnabled": 1
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:16 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "actionThreshold": 2000,
+              "apdexThreshold": 500,
+              "captureParams": 1,
+              "checkTimeoutEnabled": 2,
+              "checkTimeoutExternalThreshold": 2000,
+              "checkTimeoutRequestThreshold": 2000,
+              "cpuUsageOff": 90,
+              "cpuUsageOn": 80,
+              "customHeaders": null,
+              "errorCollectorEnabled": 1,
+              "exceptionStackEnabled": 0,
+              "gcTimeRatioOff": 20,
+              "gcTimeRatioOn": 10,
+              "id": 20,
+              "ignoredExceptionClasses": "",
+              "ignoredParams": "",
+              "ignoredStatusCodes": "401",
+              "logAk": null,
+              "logApiUrl": null,
+              "logSk": null,
+              "logTraceEnabled": 1,
+              "memoryDumpEnabled": 0,
+              "memoryDumpFileAutoDel": 1,
+              "memoryUseOff": 80,
+              "memoryUseOn": 70,
+              "obfuscatedSqlEnabled": 0,
+              "platformId": 1,
+              "platformName": null,
+              "quantile": "50,80,95,99",
+              "readOnly": false,
+              "requestSampleCount": 0,
+              "requestSampleMode": 0,
+              "requestSampleRatio": 0,
+              "resourceEnabled": 1,
+              "safetyObservationEnabled": 0,
+              "samplingRate": 50,
+              "showSourceCode": 0,
+              "slowCalltreeEnabled": 0,
+              "slowCalltreeThreshold": 2000,
+              "slowMethod": 1,
+              "slowMethodThreshold": 1000,
+              "sourceCodeEnabled": 1,
+              "thirdPartLink": "",
+              "traceEnabled": 1,
+              "traceExternalEnabled": 0,
+              "traceExternalType": 2,
+              "traceSampleEnabled": 0,
+              "traceSampleRatio": 500.0,
+              "transactionTracerEnabled": 1
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:19 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 8
+      }
+    }
+  },
+  "path": "/server-api/data/business/queryGlobalSetting",
+  "relative_path": "data/business/queryGlobalSetting"
+}

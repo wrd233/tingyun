@@ -1,0 +1,491 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T19:59:57+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T19:59:57+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "limit": "true",
+            "opName": "tyBase64_RVZBTA",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.20:6379/5\",\"componentSubtype\":\"Redis\",\"componentType\":\"NoSQL\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"limit\":\"true\",\"opName\":\"tyBase64_RVZBTA\",\"pageNumber\":\"1\",\"pageSize\":\"1000\",\"sortDirection\":\"DESC\",\"sortField\":\"respTime\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "limit",
+              "opName",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "limit": "true",
+            "opName": "tyBase64_RVZBTA",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T19:59:57+08:00",
+      "inference_basis": [
+        "path=component/chart/time-consuming-percentage"
+      ],
+      "inferred_purpose": "Likely related to component/chart/time-consuming-percentage",
+      "last_seen": "2026-04-03T19:59:57+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1065",
+          "componentName": "10.190.22.20:6379/5",
+          "componentSubtype": "Redis",
+          "componentType": "NoSQL",
+          "dataType": "OP",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "limit": "true",
+          "opName": "tyBase64_RVZBTA",
+          "pageNumber": "1",
+          "pageSize": "1000",
+          "sortDirection": "DESC",
+          "sortField": "respTime",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/component/chart/time-consuming-percentage -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'componentType=NoSQL&bizSystemId=1065&endTime=2026-04-03+12%3A20&timePeriod=30&dataType=OP&componentName=10.190.22.20%3A6379%2F5&componentSubtype=Redis&pageSize=1000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC&opName=tyBase64_RVZBTA&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/component/chart/time-consuming-percentage"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "limit": "true",
+            "opName": "tyBase64_RVZBTA",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T19:59:57+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/chart/time-consuming-percentage"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "chart": {
+                "type": "bar"
+              },
+              "legend": {
+                "align": "center",
+                "verticalAlign": "bottom"
+              },
+              "plotOption": {
+                "series": {
+                  "stacking": "normal"
+                }
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "id": 0,
+                      "name": "调用者耗时百分比",
+                      "params": null,
+                      "tooltip": {
+                        "data": [
+                          {
+                            "title": "调用者耗时百分比",
+                            "unit": "%",
+                            "value": "25.45"
+                          },
+                          {
+                            "title": "调用者耗时",
+                            "unit": "ms",
+                            "value": "85.0"
+                          },
+                          {
+                            "title": "平均耗时",
+                            "unit": "ms",
+                            "value": "1.0"
+                          },
+                          {
+                            "title": "执行次数",
+                            "unit": "",
+                            "value": "98"
+                          }
+                        ],
+                        "title": ""
+                      },
+                      "y": 25.45
+                    }
+                  ],
+                  "name": "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractView/G_1_complianceApp.htm",
+                  "type": "bar"
+                },
+                {
+                  "data": [
+                    {
+                      "id": 0,
+                      "name": "调用者耗时百分比",
+                      "params": null,
+                      "tooltip": {
+                        "data": [
+                          {
+                            "title": "调用者耗时百分比",
+                            "unit": "%",
+                            "value": "14.37"
+                          },
+                          {
+                            "title": "调用者耗时",
+                            "unit": "ms",
+                            "value": "48.0"
+                          },
+                          {
+                            "title": "平均耗时",
+                            "unit": "ms",
+                            "value": "1.0"
+                          },
+                          {
+                            "title": "执行次数",
+                            "unit": "",
+                            "value": "84"
+                          }
+                        ],
+                        "title": ""
+                      },
+                      "y": 14.37
+                    }
+                  ],
+                  "name": "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractView/G_1_secondContractApp.htm",
+                  "type": "bar"
+                },
+                {
+                  "data": [
+                    {
+                      "id": 0,
+                      "name": "调用者耗时百分比",
+                      "params": null,
+                      "tooltip": {
+                        "data": [
+                          {
+                            "title": "调用者耗时百分比",
+                            "unit": "%",
+                            "value": "21.26"
+                          },
+                          {
+                            "title": "调用者耗时",
+                            "unit": "ms",
+                            "value": "71.0"
+                          },
+                          {
+                            "title": "平均耗时",
+                            "unit": "ms",
+                            "value": "1.0"
+                          },
+                          {
+                            "title": "执行次数",
+                            "unit": "",
+                            "value": "82"
+                          }
+                        ],
+                        "title": ""
+                      },
+                      "y": 21.26
+                    }
+                  ],
+                  "name": "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractView/viewContract.htm",
+                  "type": "bar"
+                },
+                {
+                  "data": [
+                    {
+                      "id": 0,
+                      "name": "调用者耗时百分比",
+                      "params": null,
+                      "tooltip": {
+                        "data": [
+                          {
+                            "title": "调用者耗时百分比",
+                            "unit": "%",
+                            "value": "18.26"
+                          },
+                          {
+                            "title": "调用者耗时",
+                            "unit": "ms",
+                            "value": "61.0"
+                          },
+                          {
+                            "title": "平均耗时",
+                            "unit": "ms",
+                            "value": "1.0"
+                          },
+                          {
+                            "title": "执行次数",
+                            "unit": "",
+                            "value": "68"
+                          }
+                        ],
+                        "title": ""
+                      },
+                      "y": 18.26
+                    }
+                  ],
+                  "name": "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractPerf/G_1_paymentFeedback.htm",
+                  "type": "bar"
+                },
+                {
+                  "data": [
+                    {
+                      "id": 0,
+                      "name": "调用者耗时百分比",
+                      "params": null,
+                      "tooltip": {
+                        "data": [
+                          {
+                            "title": "调用者耗时百分比",
+                            "unit": "%",
+                            "value": "6.59"
+                          },
+                          {
+                            "title": "调用者耗时",
+                            "unit": "ms",
+                            "value": "22.0"
+                          },
+                          {
+                            "title": "平均耗时",
+                            "unit": "ms",
+                            "value": "1.0"
+                          },
+                          {
+                            "title": "执行次数",
+                            "unit": "",
+                            "value": "32"
+                          }
+                        ],
+                        "title": ""
+                      },
+                      "y": 6.59
+                    }
+                  ],
+                  "name": "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/lasContractSign/editLasContractSign.htm",
+                  "type": "bar"
+                },
+                {
+                  "data": [
+                    {
+                      "id": 0,
+                      "name": "调用者耗时百分比",
+                      "params": null,
+                      "tooltip": {
+                        "data": [
+                          {
+                            "title": "调用者耗时百分比",
+                            "unit": "%",
+                            "value": "14.07"
+                          },
+                          {
+                            "title": "调用者耗时",
+                            "unit": "ms",
+                            "value": "47.0"
+                          },
+                          {
+                            "title": "平均耗时",
+                            "unit": "ms",
+                            "value": "11.0"
+                          },
+                          {
+                            "title": "执行次数",
+                            "unit": "",
+                            "value": "108"
+                          }
+                        ],
+                        "title": ""
+                      },
+                      "y": 14.07
+                    }
+                  ],
+                  "name": "Others",
+                  "type": "bar"
+                }
+              ],
+              "xAxis": [
+                {
+                  "categories": [
+                    "调用者耗时百分比"
+                  ],
+                  "labels": {
+                    "enabled": false
+                  },
+                  "type": "category",
+                  "visible": false
+                }
+              ],
+              "yAxis": [
+                {
+                  "max": "100",
+                  "tickUnit": ""
+                }
+              ]
+            },
+            "otherInfo": {
+              "Others": {
+                "actionId": 14164,
+                "actionType": "TX",
+                "applicationId": 1645
+              },
+              "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractPerf/G_1_paymentFeedback.htm": {
+                "actionId": 13790,
+                "actionType": "TX",
+                "applicationId": 1644
+              },
+              "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractView/G_1_complianceApp.htm": {
+                "actionId": 13258,
+                "actionType": "TX",
+                "applicationId": 1644
+              },
+              "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractView/G_1_secondContractApp.htm": {
+                "actionId": 13407,
+                "actionType": "TX",
+                "applicationId": 1644
+              },
+              "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/contractView/viewContract.htm": {
+                "actionId": 13566,
+                "actionType": "TX",
+                "applicationId": 1644
+              },
+              "org.springframework.boot.loader.WarLauncher/URI/grcv5/wp/lasContractSign/editLasContractSign.htm": {
+                "actionId": 13558,
+                "actionType": "TX",
+                "applicationId": 1644
+              }
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:48 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/component/chart/time-consuming-percentage",
+  "relative_path": "component/chart/time-consuming-percentage"
+}

@@ -1,0 +1,234 @@
+{
+  "count_seen": 4,
+  "first_seen": "2026-04-03T15:42:34+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 4
+  },
+  "last_seen": "2026-04-03T15:42:50+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "body.applicationId"
+          ],
+          "example": {
+            "applicationId": "1648",
+            "lang": "zh_CN"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "count_seen": 4,
+      "first_seen": "2026-04-03T15:42:34+08:00",
+      "inference_basis": [
+        "path=data/instance/isTingYunAgent"
+      ],
+      "inferred_purpose": "Likely related to data/instance/isTingYunAgent",
+      "last_seen": "2026-04-03T15:42:50+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 4
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "applicationId": "1648",
+          "lang": "zh_CN"
+        },
+        "dynamic_fields": [
+          "body.applicationId"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/data/instance/isTingYunAgent -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'applicationId=1648&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/data/instance/isTingYunAgent"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 4
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "applicationId": "1648",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:34+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/instance/isTingYunAgent"
+        },
+        {
+          "body": {
+            "applicationId": "1648",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:40+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/instance/isTingYunAgent"
+        },
+        {
+          "body": {
+            "applicationId": "1648",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:44+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/instance/isTingYunAgent"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "message": "true"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:25 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "message": "true"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "message": "true"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:36 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 4
+      }
+    }
+  },
+  "path": "/server-api/data/instance/isTingYunAgent",
+  "relative_path": "data/instance/isTingYunAgent"
+}

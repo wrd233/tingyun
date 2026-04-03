@@ -1,0 +1,712 @@
+{
+  "count_seen": 6,
+  "first_seen": "2026-04-03T15:42:39+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 6
+  },
+  "last_seen": "2026-04-03T20:02:46+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionIds",
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.groupByActionId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionIds": "20441",
+            "actionTypes": "TX",
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "endTime": "2026-04-03 12:20",
+            "errorFilter": "0",
+            "errorLevel": "ER",
+            "groupByActionId": "false",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"actionIds\":\"<DYNAMIC>\",\"actionTypes\":\"TX\",\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"铃与堆场\",\"endTime\":\"<DATETIME>\",\"errorFilter\":\"0\",\"errorLevel\":\"ER\",\"groupByActionId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionIds",
+              "actionTypes",
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorFilter",
+              "errorLevel",
+              "groupByActionId",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionIds": "<DYNAMIC>",
+            "actionTypes": "TX",
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "铃与堆场",
+            "endTime": "<DATETIME>",
+            "errorFilter": "0",
+            "errorLevel": "ER",
+            "groupByActionId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.groupByActionId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "groupByActionId": "false",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"groupByActionId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "groupByActionId",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "groupByActionId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.groupByActionId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "EX",
+            "groupByActionId": "false",
+            "groupByIF": "false",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"EX\",\"groupByActionId\":\"<DYNAMIC>\",\"groupByIF\":\"false\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "groupByActionId",
+              "groupByIF",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "EX",
+            "groupByActionId": "<DYNAMIC>",
+            "groupByIF": "false",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 6,
+      "first_seen": "2026-04-03T15:42:39+08:00",
+      "inference_basis": [
+        "path=error/smart/errorAndException/list"
+      ],
+      "inferred_purpose": "Likely related to error / list",
+      "last_seen": "2026-04-03T20:02:46+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 6
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 6,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionIds": "20441",
+          "actionTypes": "TX",
+          "applicationId": "1648",
+          "beginTime": "2026-04-03 11:50",
+          "bizSystemId": "1059",
+          "bizSystemName": "铃与堆场",
+          "endTime": "2026-04-03 12:20",
+          "errorFilter": "0",
+          "errorLevel": "ER",
+          "groupByActionId": "false",
+          "lang": "zh_CN",
+          "localeOptionContent": "undefined",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.actionIds",
+          "body.applicationId",
+          "body.beginTime",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.groupByActionId",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/error/smart/errorAndException/list -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'bizSystemId=1059&bizSystemName=%E9%93%83%E4%B8%8E%E5%A0%86%E5%9C%BA&timePeriod=30&endTime=2026-04-03+12%3A20&beginTime=2026-04-03+11%3A50&localeOptionContent=undefined&applicationId=1648&errorLevel=ER&errorFilter=0&actionIds=20441&actionTypes=TX&groupByActionId=false&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/error/smart/errorAndException/list"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 6
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionIds": "20441",
+            "actionTypes": "TX",
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "endTime": "2026-04-03 12:20",
+            "errorFilter": "0",
+            "errorLevel": "ER",
+            "groupByActionId": "false",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:39+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorAndException/list"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "groupByActionId": "false",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:20+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorAndException/list"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "EX",
+            "groupByActionId": "false",
+            "groupByIF": "false",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:24+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorAndException/list"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [],
+              "fastQuery": false,
+              "overviews": {},
+              "totalElements": 0
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:31 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionCount": 1,
+                  "aggregationId": "2089817781=2120111069=1513317=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1644,
+                  "applications": [
+                    {
+                      "applicationId": 1644,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "org.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775188260000,
+                  "count": 19,
+                  "duration": 27,
+                  "endTime": 1775189880000,
+                  "errorLevel": "ER",
+                  "errorMode": "HTTP Error Code",
+                  "errorName": "HTTP ERROR CODE: 404",
+                  "happenRate": 0.63,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 19,
+                  "tracePercent": 0.7037,
+                  "userCount": 0
+                },
+                {
+                  "actionCount": 1,
+                  "aggregationId": "2089817781=2120111069=1513318=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1645,
+                  "applications": [
+                    {
+                      "applicationId": 1645,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775188260000,
+                  "count": 7,
+                  "duration": 19,
+                  "endTime": 1775189400000,
+                  "errorLevel": "ER",
+                  "errorMode": "HTTP Error Code",
+                  "errorName": "HTTP ERROR CODE: 404",
+                  "happenRate": 0.23,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 7,
+                  "tracePercent": 0.2593,
+                  "userCount": 0
+                },
+                {
+                  "actionCount": 1,
+                  "aggregationId": "1023049772=1456115268=1513318=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1645,
+                  "applications": [
+                    {
+                      "applicationId": 1645,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775189580000,
+                  "count": 1,
+                  "duration": 0,
+                  "endTime": 1775189580000,
+                  "errorLevel": "ER",
+                  "errorMode": "Uncaught Exception",
+                  "errorName": "org.springframework.web.util.NestedServletException",
+                  "happenRate": 0.03,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 1,
+                  "tracePercent": 0.037,
+                  "userCount": 0
+                }
+              ],
+              "fastQuery": false,
+              "overviews": {},
+              "totalElements": 3
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:11 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionCount": 1,
+                  "aggregationId": "1023049772=-1603614244=1513318=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1645,
+                  "applications": [
+                    {
+                      "applicationId": 1645,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775189580000,
+                  "count": 1,
+                  "duration": 0,
+                  "endTime": 1775189580000,
+                  "errorLevel": "EX",
+                  "errorMode": "Code Exception",
+                  "errorName": "org.springframework.web.util.NestedServletException",
+                  "happenRate": 0.03,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 1,
+                  "tracePercent": 0.0008,
+                  "userCount": 0
+                },
+                {
+                  "actionCount": 1,
+                  "aggregationId": "-2144239322=-1603614244=1513318=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1645,
+                  "applications": [
+                    {
+                      "applicationId": 1645,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775188260000,
+                  "count": 2,
+                  "duration": 0,
+                  "endTime": 1775188260000,
+                  "errorLevel": "EX",
+                  "errorMode": "Code Exception",
+                  "errorName": "com.hd.rcugrc.web.exception.rest.NotFoundResourceException",
+                  "happenRate": 0.07,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 2,
+                  "tracePercent": 0.0016,
+                  "userCount": 0
+                },
+                {
+                  "actionCount": 1,
+                  "aggregationId": "1879291277=-1603614244=1513318=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1645,
+                  "applications": [
+                    {
+                      "applicationId": 1645,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775189580000,
+                  "count": 1,
+                  "duration": 0,
+                  "endTime": 1775189580000,
+                  "errorLevel": "EX",
+                  "errorMode": "Code Exception",
+                  "errorName": "<REDACTED>",
+                  "happenRate": 0.03,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 1,
+                  "tracePercent": 0.0008,
+                  "userCount": 0
+                },
+                {
+                  "actionCount": 1,
+                  "aggregationId": "-2144239322=-1603614244=1513317=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1644,
+                  "applications": [
+                    {
+                      "applicationId": 1644,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "org.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775188260000,
+                  "count": 6,
+                  "duration": 14,
+                  "endTime": 1775189100000,
+                  "errorLevel": "EX",
+                  "errorMode": "Code Exception",
+                  "errorName": "com.hd.rcugrc.web.exception.rest.NotFoundResourceException",
+                  "happenRate": 0.2,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 6,
+                  "tracePercent": 0.0048,
+                  "userCount": 0
+                },
+                {
+                  "actionCount": 1,
+                  "aggregationId": "-1869972270=1590706097=1513318=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1645,
+                  "applications": [
+                    {
+                      "applicationId": 1645,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775188260000,
+                  "count": 364,
+                  "duration": 28,
+                  "endTime": 1775189940000,
+                  "errorLevel": "EX",
+                  "errorMode": "Logged Error Message",
+                  "errorName": "Slf4j Error Message",
+                  "happenRate": 12.13,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 364,
+                  "tracePercent": 0.2924,
+                  "userCount": 0
+                },
+                {
+                  "actionCount": 1,
+                  "aggregationId": "-1869972270=1590706097=1513317=48=48",
+                  "applicationCount": 1,
+                  "applicationId": 1644,
+                  "applications": [
+                    {
+                      "applicationId": 1644,
+                      "applicationInstanceId": null,
+                      "className": null,
+                      "id": null,
+                      "inspectType": null,
+                      "methodName": null,
+                      "name": "org.springframework.boot.loader.WarLauncher",
+                      "type": null,
+                      "version": null
+                    }
+                  ],
+                  "beginTime": 1775188260000,
+                  "count": 871,
+                  "duration": 28,
+                  "endTime": 1775189940000,
+                  "errorLevel": "EX",
+                  "errorMode": "Logged Error Message",
+                  "errorName": "Slf4j Error Message",
+                  "happenRate": 29.03,
+                  "instanceCount": 1,
+                  "instanceName": "NULL",
+                  "traceCount": 871,
+                  "tracePercent": 0.6996,
+                  "userCount": 0
+                }
+              ],
+              "fastQuery": false,
+              "overviews": {},
+              "totalElements": 6
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:15 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 6
+      }
+    }
+  },
+  "path": "/server-api/error/smart/errorAndException/list",
+  "relative_path": "error/smart/errorAndException/list"
+}

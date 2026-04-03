@@ -1,0 +1,1554 @@
+{
+  "endpoints": [
+    {
+      "count_seen": 3,
+      "file": "Database/actionName/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/actionName/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "Database/actionName/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "Database/analysis.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/analysis",
+      "purposes": {
+        "POST": "Likely related to Database/analysis"
+      },
+      "relative_path": "Database/analysis"
+    },
+    {
+      "count_seen": 2,
+      "file": "Database/applicationName/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/applicationName/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "Database/applicationName/list"
+    },
+    {
+      "count_seen": 7,
+      "file": "Database/componentName/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/componentName/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "Database/componentName/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "Database/info.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/info",
+      "purposes": {
+        "POST": "Likely related to Database/info"
+      },
+      "relative_path": "Database/info"
+    },
+    {
+      "count_seen": 2,
+      "file": "Database/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "Database/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "Database/list/health.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/list/health",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "Database/list/health"
+    },
+    {
+      "count_seen": 1,
+      "file": "Database/operate/analysisList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/Database/operate/analysisList",
+      "purposes": {
+        "POST": "Likely related to Database/operate/analysisList"
+      },
+      "relative_path": "Database/operate/analysisList"
+    },
+    {
+      "count_seen": 1,
+      "file": "MQ/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/MQ/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "MQ/list"
+    },
+    {
+      "count_seen": 1,
+      "file": "NoSQL/actionName/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/actionName/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "NoSQL/actionName/list"
+    },
+    {
+      "count_seen": 1,
+      "file": "NoSQL/analysis.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/analysis",
+      "purposes": {
+        "POST": "Likely related to NoSQL/analysis"
+      },
+      "relative_path": "NoSQL/analysis"
+    },
+    {
+      "count_seen": 2,
+      "file": "NoSQL/applicationName/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/applicationName/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "NoSQL/applicationName/list"
+    },
+    {
+      "count_seen": 6,
+      "file": "NoSQL/componentName/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/componentName/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "NoSQL/componentName/list"
+    },
+    {
+      "count_seen": 1,
+      "file": "NoSQL/errorTypeAmount.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/errorTypeAmount",
+      "purposes": {
+        "POST": "Likely related to NoSQL/errorTypeAmount"
+      },
+      "relative_path": "NoSQL/errorTypeAmount"
+    },
+    {
+      "count_seen": 2,
+      "file": "NoSQL/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "NoSQL/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "NoSQL/list/health.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/list/health",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "NoSQL/list/health"
+    },
+    {
+      "count_seen": 3,
+      "file": "NoSQL/overview.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/overview",
+      "purposes": {
+        "POST": "Likely related to overview"
+      },
+      "relative_path": "NoSQL/overview"
+    },
+    {
+      "count_seen": 1,
+      "file": "NoSQL/trace.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/NoSQL/trace",
+      "purposes": {
+        "POST": "Likely related to trace"
+      },
+      "relative_path": "NoSQL/trace"
+    },
+    {
+      "count_seen": 6,
+      "file": "action/affectUsers.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/action/affectUsers",
+      "purposes": {
+        "POST": "Likely related to action/affectUsers"
+      },
+      "relative_path": "action/affectUsers"
+    },
+    {
+      "count_seen": 1,
+      "file": "action/alias/20377.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/action/alias/20377",
+      "purposes": {
+        "GET": "Likely related to action/alias/20377"
+      },
+      "relative_path": "action/alias/20377"
+    },
+    {
+      "count_seen": 3,
+      "file": "action/alias/20441.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/action/alias/20441",
+      "purposes": {
+        "GET": "Likely related to action/alias/20441"
+      },
+      "relative_path": "action/alias/20441"
+    },
+    {
+      "count_seen": 1,
+      "file": "action/get/20377.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/action/get/20377",
+      "purposes": {
+        "GET": "Likely related to action/get/20377"
+      },
+      "relative_path": "action/get/20377"
+    },
+    {
+      "count_seen": 3,
+      "file": "action/get/20441.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/action/get/20441",
+      "purposes": {
+        "GET": "Likely related to action/get/20441"
+      },
+      "relative_path": "action/get/20441"
+    },
+    {
+      "count_seen": 4,
+      "file": "action/trace/callTree.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/action/trace/callTree",
+      "purposes": {
+        "POST": "Likely related to trace"
+      },
+      "relative_path": "action/trace/callTree"
+    },
+    {
+      "count_seen": 1,
+      "file": "action/trace/detail.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/action/trace/detail",
+      "purposes": {
+        "POST": "Likely related to trace / detail"
+      },
+      "relative_path": "action/trace/detail"
+    },
+    {
+      "count_seen": 2,
+      "file": "action/trace/detail/exceptions.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/action/trace/detail/exceptions",
+      "purposes": {
+        "POST": "Likely related to trace / detail"
+      },
+      "relative_path": "action/trace/detail/exceptions"
+    },
+    {
+      "count_seen": 4,
+      "file": "action/trace/detail/queryAgentVersionInfo.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/action/trace/detail/queryAgentVersionInfo",
+      "purposes": {
+        "POST": "Likely related to trace / detail"
+      },
+      "relative_path": "action/trace/detail/queryAgentVersionInfo"
+    },
+    {
+      "count_seen": 2,
+      "file": "action/trace/detail/snapshotTimeInfo.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/action/trace/detail/snapshotTimeInfo",
+      "purposes": {
+        "POST": "Likely related to trace / detail"
+      },
+      "relative_path": "action/trace/detail/snapshotTimeInfo"
+    },
+    {
+      "count_seen": 6,
+      "file": "apm/profile/search.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/apm/profile/search",
+      "purposes": {
+        "POST": "Likely related to apm/profile/search"
+      },
+      "relative_path": "apm/profile/search"
+    },
+    {
+      "count_seen": 2,
+      "file": "application/app/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/app/list",
+      "purposes": {
+        "POST": "Likely related to application / list"
+      },
+      "relative_path": "application/app/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "application/app/list/score.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/app/list/score",
+      "purposes": {
+        "POST": "Likely related to application / list"
+      },
+      "relative_path": "application/app/list/score"
+    },
+    {
+      "count_seen": 13,
+      "file": "application/app/select.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/app/select",
+      "purposes": {
+        "POST": "Likely related to application"
+      },
+      "relative_path": "application/app/select"
+    },
+    {
+      "count_seen": 1,
+      "file": "application/business/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/business/list",
+      "purposes": {
+        "POST": "Likely related to application / list"
+      },
+      "relative_path": "application/business/list"
+    },
+    {
+      "count_seen": 3,
+      "file": "application/business/overview/1059.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/business/overview/1059",
+      "purposes": {
+        "POST": "Likely related to application / overview"
+      },
+      "relative_path": "application/business/overview/1059"
+    },
+    {
+      "count_seen": 27,
+      "file": "application/business/systemConfList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/business/systemConfList",
+      "purposes": {
+        "POST": "Likely related to application"
+      },
+      "relative_path": "application/business/systemConfList"
+    },
+    {
+      "count_seen": 3,
+      "file": "application/charts/apdex.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/charts/apdex",
+      "purposes": {
+        "POST": "Likely related to application"
+      },
+      "relative_path": "application/charts/apdex"
+    },
+    {
+      "count_seen": 3,
+      "file": "application/charts/error.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/charts/error",
+      "purposes": {
+        "POST": "Likely related to application / error"
+      },
+      "relative_path": "application/charts/error"
+    },
+    {
+      "count_seen": 3,
+      "file": "application/charts/response.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/charts/response",
+      "purposes": {
+        "POST": "Likely related to application"
+      },
+      "relative_path": "application/charts/response"
+    },
+    {
+      "count_seen": 3,
+      "file": "application/charts/throught.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/charts/throught",
+      "purposes": {
+        "POST": "Likely related to application"
+      },
+      "relative_path": "application/charts/throught"
+    },
+    {
+      "count_seen": 1,
+      "file": "application/get/1648.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/application/get/1648",
+      "purposes": {
+        "GET": "Likely related to application"
+      },
+      "relative_path": "application/get/1648"
+    },
+    {
+      "count_seen": 12,
+      "file": "application/instance/select.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/application/instance/select",
+      "purposes": {
+        "POST": "Likely related to application"
+      },
+      "relative_path": "application/instance/select"
+    },
+    {
+      "count_seen": 1,
+      "file": "component/chart/errorRate-errorCount-count.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/errorRate-errorCount-count",
+      "purposes": {
+        "POST": "Likely related to component/chart/errorRate-errorCount-count"
+      },
+      "relative_path": "component/chart/errorRate-errorCount-count"
+    },
+    {
+      "count_seen": 3,
+      "file": "component/chart/exceptionCount.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/exceptionCount",
+      "purposes": {
+        "POST": "Likely related to component/chart/exceptionCount"
+      },
+      "relative_path": "component/chart/exceptionCount"
+    },
+    {
+      "count_seen": 1,
+      "file": "component/chart/performanceDecompose.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/performanceDecompose",
+      "purposes": {
+        "POST": "Likely related to component/chart/performanceDecompose"
+      },
+      "relative_path": "component/chart/performanceDecompose"
+    },
+    {
+      "count_seen": 3,
+      "file": "component/chart/respTime.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/respTime",
+      "purposes": {
+        "POST": "Likely related to component/chart/respTime"
+      },
+      "relative_path": "component/chart/respTime"
+    },
+    {
+      "count_seen": 1,
+      "file": "component/chart/respTime-throughput.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/respTime-throughput",
+      "purposes": {
+        "POST": "Likely related to component/chart/respTime-throughput"
+      },
+      "relative_path": "component/chart/respTime-throughput"
+    },
+    {
+      "count_seen": 2,
+      "file": "component/chart/respTime-throughput-database.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/respTime-throughput-database",
+      "purposes": {
+        "POST": "Likely related to component/chart/respTime-throughput-database"
+      },
+      "relative_path": "component/chart/respTime-throughput-database"
+    },
+    {
+      "count_seen": 3,
+      "file": "component/chart/throughput.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/throughput",
+      "purposes": {
+        "POST": "Likely related to component/chart/throughput"
+      },
+      "relative_path": "component/chart/throughput"
+    },
+    {
+      "count_seen": 1,
+      "file": "component/chart/time-consuming-percentage.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/chart/time-consuming-percentage",
+      "purposes": {
+        "POST": "Likely related to component/chart/time-consuming-percentage"
+      },
+      "relative_path": "component/chart/time-consuming-percentage"
+    },
+    {
+      "count_seen": 2,
+      "file": "component/database/actionList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/database/actionList",
+      "purposes": {
+        "POST": "Likely related to component/database/actionList"
+      },
+      "relative_path": "component/database/actionList"
+    },
+    {
+      "count_seen": 2,
+      "file": "component/database/actionTraceList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/database/actionTraceList",
+      "purposes": {
+        "POST": "Likely related to component/database/actionTraceList"
+      },
+      "relative_path": "component/database/actionTraceList"
+    },
+    {
+      "count_seen": 2,
+      "file": "component/database/action_item_list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/database/action_item_list",
+      "purposes": {
+        "POST": "Likely related to component/database/action_item_list"
+      },
+      "relative_path": "component/database/action_item_list"
+    },
+    {
+      "count_seen": 1,
+      "file": "component/database/errorList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/database/errorList",
+      "purposes": {
+        "POST": "Likely related to component/database/errorList"
+      },
+      "relative_path": "component/database/errorList"
+    },
+    {
+      "count_seen": 1,
+      "file": "component/performanceDecompose/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/component/performanceDecompose/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "component/performanceDecompose/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "config/deploy/hosts.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/config/deploy/hosts",
+      "purposes": {
+        "POST": "Likely related to config/deploy/hosts"
+      },
+      "relative_path": "config/deploy/hosts"
+    },
+    {
+      "count_seen": 2,
+      "file": "config/deploy/processinstances.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/config/deploy/processinstances",
+      "purposes": {
+        "POST": "Likely related to config/deploy/processinstances"
+      },
+      "relative_path": "config/deploy/processinstances"
+    },
+    {
+      "count_seen": 1,
+      "file": "conifg/table/svrExtTable/action_resp_time_list.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/conifg/table/svrExtTable/action_resp_time_list",
+      "purposes": {
+        "GET": "Likely related to conifg/table/svrExtTable/action_resp_time_list"
+      },
+      "relative_path": "conifg/table/svrExtTable/action_resp_time_list"
+    },
+    {
+      "count_seen": 1,
+      "file": "conifg/table/svrExtTable/app-server-thread-list-two.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/conifg/table/svrExtTable/app-server-thread-list-two",
+      "purposes": {
+        "GET": "Likely related to conifg/table/svrExtTable/app-server-thread-list-two"
+      },
+      "relative_path": "conifg/table/svrExtTable/app-server-thread-list-two"
+    },
+    {
+      "count_seen": 4,
+      "file": "conifg/table/svrExtTable/server-new-error.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/conifg/table/svrExtTable/server-new-error",
+      "purposes": {
+        "GET": "Likely related to conifg/table/svrExtTable/server-new-error"
+      },
+      "relative_path": "conifg/table/svrExtTable/server-new-error"
+    },
+    {
+      "count_seen": 2,
+      "file": "conifg/table/svrExtTable/server-new-except.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/conifg/table/svrExtTable/server-new-except",
+      "purposes": {
+        "GET": "Likely related to conifg/table/svrExtTable/server-new-except"
+      },
+      "relative_path": "conifg/table/svrExtTable/server-new-except"
+    },
+    {
+      "count_seen": 33,
+      "file": "connection/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/connection/chart",
+      "purposes": {
+        "POST": "Likely related to connection/chart"
+      },
+      "relative_path": "connection/chart"
+    },
+    {
+      "count_seen": 1,
+      "file": "connection/database/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/connection/database/chart",
+      "purposes": {
+        "POST": "Likely related to connection/database/chart"
+      },
+      "relative_path": "connection/database/chart"
+    },
+    {
+      "count_seen": 8,
+      "file": "connection/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/connection/list",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "connection/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "data/business/appendSubBusinessAppList.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/data/business/appendSubBusinessAppList",
+      "purposes": {
+        "GET": "Likely related to data/business/appendSubBusinessAppList"
+      },
+      "relative_path": "data/business/appendSubBusinessAppList"
+    },
+    {
+      "count_seen": 2,
+      "file": "data/business/getBusinessTree.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/data/business/getBusinessTree",
+      "purposes": {
+        "GET": "Likely related to data/business/getBusinessTree"
+      },
+      "relative_path": "data/business/getBusinessTree"
+    },
+    {
+      "count_seen": 7,
+      "file": "data/business/graph/graphList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/data/business/graph/graphList",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "data/business/graph/graphList"
+    },
+    {
+      "count_seen": 9,
+      "file": "data/business/graph/updateGraphSettingList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/data/business/graph/updateGraphSettingList",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "data/business/graph/updateGraphSettingList"
+    },
+    {
+      "count_seen": 3,
+      "file": "data/business/queryApplicationSetting.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/data/business/queryApplicationSetting",
+      "purposes": {
+        "POST": "Likely related to data/business/queryApplicationSetting"
+      },
+      "relative_path": "data/business/queryApplicationSetting"
+    },
+    {
+      "count_seen": 4,
+      "file": "data/business/queryBizSystem.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/data/business/queryBizSystem",
+      "purposes": {
+        "POST": "Likely related to data/business/queryBizSystem"
+      },
+      "relative_path": "data/business/queryBizSystem"
+    },
+    {
+      "count_seen": 8,
+      "file": "data/business/queryGlobalSetting.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/data/business/queryGlobalSetting",
+      "purposes": {
+        "POST": "Likely related to data/business/queryGlobalSetting"
+      },
+      "relative_path": "data/business/queryGlobalSetting"
+    },
+    {
+      "count_seen": 4,
+      "file": "data/instance/isTingYunAgent.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/data/instance/isTingYunAgent",
+      "purposes": {
+        "POST": "Likely related to data/instance/isTingYunAgent"
+      },
+      "relative_path": "data/instance/isTingYunAgent"
+    },
+    {
+      "count_seen": 7,
+      "file": "data/logTrace/searchLogTrace.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/data/logTrace/searchLogTrace",
+      "purposes": {
+        "POST": "Likely related to data/logTrace/searchLogTrace"
+      },
+      "relative_path": "data/logTrace/searchLogTrace"
+    },
+    {
+      "count_seen": 6,
+      "file": "error/smart/action/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/action/list",
+      "purposes": {
+        "POST": "Likely related to error / list"
+      },
+      "relative_path": "error/smart/action/list"
+    },
+    {
+      "count_seen": 5,
+      "file": "error/smart/errorAPMData/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorAPMData/list",
+      "purposes": {
+        "POST": "Likely related to error / list"
+      },
+      "relative_path": "error/smart/errorAPMData/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "error/smart/errorAndException/detail.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorAndException/detail",
+      "purposes": {
+        "POST": "Likely related to error / detail"
+      },
+      "relative_path": "error/smart/errorAndException/detail"
+    },
+    {
+      "count_seen": 6,
+      "file": "error/smart/errorAndException/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorAndException/list",
+      "purposes": {
+        "POST": "Likely related to error / list"
+      },
+      "relative_path": "error/smart/errorAndException/list"
+    },
+    {
+      "count_seen": 4,
+      "file": "error/smart/errorDecompose/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorDecompose/chart",
+      "purposes": {
+        "POST": "Likely related to error"
+      },
+      "relative_path": "error/smart/errorDecompose/chart"
+    },
+    {
+      "count_seen": 8,
+      "file": "error/smart/errorFilter/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorFilter/list",
+      "purposes": {
+        "POST": "Likely related to error / list"
+      },
+      "relative_path": "error/smart/errorFilter/list"
+    },
+    {
+      "count_seen": 4,
+      "file": "error/smart/errorRate/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorRate/chart",
+      "purposes": {
+        "POST": "Likely related to error"
+      },
+      "relative_path": "error/smart/errorRate/chart"
+    },
+    {
+      "count_seen": 5,
+      "file": "error/smart/errorUserData/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorUserData/list",
+      "purposes": {
+        "POST": "Likely related to error / list"
+      },
+      "relative_path": "error/smart/errorUserData/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "error/smart/exceptionDecompose/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/exceptionDecompose/chart",
+      "purposes": {
+        "POST": "Likely related to error"
+      },
+      "relative_path": "error/smart/exceptionDecompose/chart"
+    },
+    {
+      "count_seen": 2,
+      "file": "error/smart/exceptionMessages/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/exceptionMessages/list",
+      "purposes": {
+        "POST": "Likely related to error / list"
+      },
+      "relative_path": "error/smart/exceptionMessages/list"
+    },
+    {
+      "count_seen": 8,
+      "file": "error/smart/exceptionStatistics/list.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/exceptionStatistics/list",
+      "purposes": {
+        "POST": "Likely related to error / list"
+      },
+      "relative_path": "error/smart/exceptionStatistics/list"
+    },
+    {
+      "count_seen": 2,
+      "file": "error/smart/exceptionTrend/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/exceptionTrend/chart",
+      "purposes": {
+        "POST": "Likely related to error"
+      },
+      "relative_path": "error/smart/exceptionTrend/chart"
+    },
+    {
+      "count_seen": 2,
+      "file": "errorList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/errorList",
+      "purposes": {
+        "POST": "Likely related to errorList"
+      },
+      "relative_path": "errorList"
+    },
+    {
+      "count_seen": 2,
+      "file": "errorTop10.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/errorTop10",
+      "purposes": {
+        "POST": "Likely related to errorTop10"
+      },
+      "relative_path": "errorTop10"
+    },
+    {
+      "count_seen": 5,
+      "file": "graph/application/receive.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/application/receive",
+      "purposes": {
+        "POST": "Likely related to graph / application"
+      },
+      "relative_path": "graph/application/receive"
+    },
+    {
+      "count_seen": 2,
+      "file": "graph/component/queryDataBaseGraph.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/component/queryDataBaseGraph",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/component/queryDataBaseGraph"
+    },
+    {
+      "count_seen": 3,
+      "file": "graph/component/queryNosqlGraph.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/component/queryNosqlGraph",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/component/queryNosqlGraph"
+    },
+    {
+      "count_seen": 21,
+      "file": "graph/event.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/event",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/event"
+    },
+    {
+      "count_seen": 9,
+      "file": "graph/information.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/information",
+      "purposes": {
+        "POST": "Likely used to query request info related data"
+      },
+      "relative_path": "graph/information"
+    },
+    {
+      "count_seen": 36,
+      "file": "graph/query/diagram.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/query/diagram",
+      "purposes": {
+        "POST": "Likely used to query request trace type related data"
+      },
+      "relative_path": "graph/query/diagram"
+    },
+    {
+      "count_seen": 98,
+      "file": "graph/query/overview.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/query/overview",
+      "purposes": {
+        "POST": "Likely used to query request up down overview related data"
+      },
+      "relative_path": "graph/query/overview"
+    },
+    {
+      "count_seen": 1,
+      "file": "graph/queryActionGraph.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/queryActionGraph",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/queryActionGraph"
+    },
+    {
+      "count_seen": 4,
+      "file": "graph/queryBizDetailGraph.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/queryBizDetailGraph",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/queryBizDetailGraph"
+    },
+    {
+      "count_seen": 1,
+      "file": "graph/queryBizSystenGraph.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/queryBizSystenGraph",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/queryBizSystenGraph"
+    },
+    {
+      "count_seen": 6,
+      "file": "graph/queryGraphHealth.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/queryGraphHealth",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/queryGraphHealth"
+    },
+    {
+      "count_seen": 9,
+      "file": "graph/saveTopoLayout.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/saveTopoLayout",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/saveTopoLayout"
+    },
+    {
+      "count_seen": 8,
+      "file": "graph/saveTopoScale.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/saveTopoScale",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/saveTopoScale"
+    },
+    {
+      "count_seen": 48,
+      "file": "graph/suggestions.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/suggestions",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/suggestions"
+    },
+    {
+      "count_seen": 5,
+      "file": "graph/tag/receive.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/graph/tag/receive",
+      "purposes": {
+        "POST": "Likely related to graph"
+      },
+      "relative_path": "graph/tag/receive"
+    },
+    {
+      "count_seen": 3,
+      "file": "health/healthLevelStatistics.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/health/healthLevelStatistics",
+      "purposes": {
+        "POST": "Likely related to health/healthLevelStatistics"
+      },
+      "relative_path": "health/healthLevelStatistics"
+    },
+    {
+      "count_seen": 11,
+      "file": "health/simpleTrace.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/health/simpleTrace",
+      "purposes": {
+        "POST": "Likely related to health/simpleTrace"
+      },
+      "relative_path": "health/simpleTrace"
+    },
+    {
+      "count_seen": 2,
+      "file": "instance/cpu/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/instance/cpu/chart",
+      "purposes": {
+        "POST": "Likely related to instance/cpu/chart"
+      },
+      "relative_path": "instance/cpu/chart"
+    },
+    {
+      "count_seen": 8,
+      "file": "instance/jvm/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/instance/jvm/chart",
+      "purposes": {
+        "POST": "Likely related to instance/jvm/chart"
+      },
+      "relative_path": "instance/jvm/chart"
+    },
+    {
+      "count_seen": 1,
+      "file": "setting/action/is/followed/20377.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/setting/action/is/followed/20377",
+      "purposes": {
+        "GET": "Likely related to setting/action/is/followed/20377"
+      },
+      "relative_path": "setting/action/is/followed/20377"
+    },
+    {
+      "count_seen": 3,
+      "file": "setting/action/is/followed/20441.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/setting/action/is/followed/20441",
+      "purposes": {
+        "GET": "Likely related to setting/action/is/followed/20441"
+      },
+      "relative_path": "setting/action/is/followed/20441"
+    },
+    {
+      "count_seen": 2,
+      "file": "settings/search_filter/read.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/settings/search_filter/read",
+      "purposes": {
+        "POST": "Likely related to settings/search_filter/read"
+      },
+      "relative_path": "settings/search_filter/read"
+    },
+    {
+      "count_seen": 1,
+      "file": "web/config/profile.json",
+      "methods": [
+        "GET"
+      ],
+      "path": "/server-api/web/config/profile",
+      "purposes": {
+        "GET": "Likely related to web/config/profile"
+      },
+      "relative_path": "web/config/profile"
+    },
+    {
+      "count_seen": 1,
+      "file": "webaction/actionChart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/actionChart",
+      "purposes": {
+        "POST": "Likely related to webaction/actionChart"
+      },
+      "relative_path": "webaction/actionChart"
+    },
+    {
+      "count_seen": 4,
+      "file": "webaction/charts/apdex.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/charts/apdex",
+      "purposes": {
+        "POST": "Likely related to webaction/charts/apdex"
+      },
+      "relative_path": "webaction/charts/apdex"
+    },
+    {
+      "count_seen": 7,
+      "file": "webaction/charts/error.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/charts/error",
+      "purposes": {
+        "POST": "Likely related to error"
+      },
+      "relative_path": "webaction/charts/error"
+    },
+    {
+      "count_seen": 6,
+      "file": "webaction/charts/response-quantlie.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/charts/response-quantlie",
+      "purposes": {
+        "POST": "Likely related to webaction/charts/response-quantlie"
+      },
+      "relative_path": "webaction/charts/response-quantlie"
+    },
+    {
+      "count_seen": 6,
+      "file": "webaction/charts/throught.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/charts/throught",
+      "purposes": {
+        "POST": "Likely related to webaction/charts/throught"
+      },
+      "relative_path": "webaction/charts/throught"
+    },
+    {
+      "count_seen": 2,
+      "file": "webaction/charts/top-error.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/charts/top-error",
+      "purposes": {
+        "POST": "Likely related to webaction/charts/top-error"
+      },
+      "relative_path": "webaction/charts/top-error"
+    },
+    {
+      "count_seen": 2,
+      "file": "webaction/charts/top-response.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/charts/top-response",
+      "purposes": {
+        "POST": "Likely related to webaction/charts/top-response"
+      },
+      "relative_path": "webaction/charts/top-response"
+    },
+    {
+      "count_seen": 2,
+      "file": "webaction/charts/top-throught.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/charts/top-throught",
+      "purposes": {
+        "POST": "Likely related to webaction/charts/top-throught"
+      },
+      "relative_path": "webaction/charts/top-throught"
+    },
+    {
+      "count_seen": 4,
+      "file": "webaction/list/actionFavoriteOverview.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/list/actionFavoriteOverview",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "webaction/list/actionFavoriteOverview"
+    },
+    {
+      "count_seen": 4,
+      "file": "webaction/list/actionItemList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/list/actionItemList",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "webaction/list/actionItemList"
+    },
+    {
+      "count_seen": 8,
+      "file": "webaction/list/actionItemLists.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/list/actionItemLists",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "webaction/list/actionItemLists"
+    },
+    {
+      "count_seen": 8,
+      "file": "webaction/list/actionList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/list/actionList",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "webaction/list/actionList"
+    },
+    {
+      "count_seen": 9,
+      "file": "webaction/list/actionList/health.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/list/actionList/health",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "webaction/list/actionList/health"
+    },
+    {
+      "count_seen": 1,
+      "file": "webaction/list/interfaceList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/list/interfaceList",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "webaction/list/interfaceList"
+    },
+    {
+      "count_seen": 1,
+      "file": "webaction/list/interfaceMiniList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/list/interfaceMiniList",
+      "purposes": {
+        "POST": "Likely related to list"
+      },
+      "relative_path": "webaction/list/interfaceMiniList"
+    },
+    {
+      "count_seen": 4,
+      "file": "webaction/overview.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/overview",
+      "purposes": {
+        "POST": "Likely related to overview"
+      },
+      "relative_path": "webaction/overview"
+    },
+    {
+      "count_seen": 1,
+      "file": "webaction/performance/breakdown.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/performance/breakdown",
+      "purposes": {
+        "POST": "Likely related to webaction/performance/breakdown"
+      },
+      "relative_path": "webaction/performance/breakdown"
+    },
+    {
+      "count_seen": 1,
+      "file": "webaction/performance/breakdown/chart.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/performance/breakdown/chart",
+      "purposes": {
+        "POST": "Likely related to webaction/performance/breakdown/chart"
+      },
+      "relative_path": "webaction/performance/breakdown/chart"
+    },
+    {
+      "count_seen": 1,
+      "file": "webaction/performance/breakdown/table.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/performance/breakdown/table",
+      "purposes": {
+        "POST": "Likely related to webaction/performance/breakdown/table"
+      },
+      "relative_path": "webaction/performance/breakdown/table"
+    },
+    {
+      "count_seen": 1,
+      "file": "webaction/threadAnalysisList.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/webaction/threadAnalysisList",
+      "purposes": {
+        "POST": "Likely related to webaction/threadAnalysisList"
+      },
+      "relative_path": "webaction/threadAnalysisList"
+    }
+  ],
+  "generated_at": "2026-04-03T20:03:11+08:00",
+  "total_endpoint_paths": 129
+}

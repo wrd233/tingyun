@@ -1,0 +1,771 @@
+{
+  "count_seen": 8,
+  "first_seen": "2026-04-03T20:02:29+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 8
+  },
+  "last_seen": "2026-04-03T20:02:58+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "application",
+            "timePeriod": "5"
+          },
+          "key": "{\"actionType\":\"\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorMode\":\"HTTP Error Code\",\"errorName\":\"SFRUUCBFUlJPUiBDT0RFOiA0MDQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"messageLose\":\"status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js\",\"queryType\":\"application\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionType",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "messageLose",
+              "queryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionType": "",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "application",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "clientIp",
+            "timePeriod": "5"
+          },
+          "key": "{\"actionType\":\"\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorMode\":\"HTTP Error Code\",\"errorName\":\"SFRUUCBFUlJPUiBDT0RFOiA0MDQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"messageLose\":\"status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js\",\"queryType\":\"clientIp\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionType",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "messageLose",
+              "queryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionType": "",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "clientIp",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "errorTrace",
+            "timePeriod": "5"
+          },
+          "key": "{\"actionType\":\"\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorMode\":\"HTTP Error Code\",\"errorName\":\"SFRUUCBFUlJPUiBDT0RFOiA0MDQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"messageLose\":\"status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js\",\"queryType\":\"errorTrace\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionType",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "messageLose",
+              "queryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionType": "",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "errorTrace",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "referingPages",
+            "timePeriod": "5"
+          },
+          "key": "{\"actionType\":\"\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorMode\":\"HTTP Error Code\",\"errorName\":\"SFRUUCBFUlJPUiBDT0RFOiA0MDQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"messageLose\":\"status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js\",\"queryType\":\"referingPages\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionType",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "messageLose",
+              "queryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionType": "",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "referingPages",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "rootCause",
+            "timePeriod": "5"
+          },
+          "key": "{\"actionType\":\"\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorMode\":\"HTTP Error Code\",\"errorName\":\"SFRUUCBFUlJPUiBDT0RFOiA0MDQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"messageLose\":\"status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js\",\"queryType\":\"rootCause\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionType",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "messageLose",
+              "queryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionType": "",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "rootCause",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "stackTrace",
+            "timePeriod": "5"
+          },
+          "key": "{\"actionType\":\"\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorMode\":\"HTTP Error Code\",\"errorName\":\"SFRUUCBFUlJPUiBDT0RFOiA0MDQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"messageLose\":\"status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js\",\"queryType\":\"stackTrace\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionType",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "messageLose",
+              "queryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionType": "",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "stackTrace",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:15:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20:00",
+            "errorLevel": "EX",
+            "errorMode": "Logged Error Message",
+            "errorName": "U2xmNGogRXJyb3IgTWVzc2FnZQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "%E6%89%A7%E8%A1%8CXSS%E6%94%BB%E5%87%BB%E5%92%8CSQL%E6%B3%A8%E5%85%A5%E8%BF%87%E6%BB%A4%E6%93%8D%E4%BD%9C",
+            "queryType": "stackTrace",
+            "timePeriod": "5"
+          },
+          "key": "{\"actionType\":\"\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"EX\",\"errorMode\":\"Logged Error Message\",\"errorName\":\"U2xmNGogRXJyb3IgTWVzc2FnZQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"messageLose\":\"%E6%89%A7%E8%A1%8CXSS%E6%94%BB%E5%87%BB%E5%92%8CSQL%E6%B3%A8%E5%85%A5%E8%BF%87%E6%BB%A4%E6%93%8D%E4%BD%9C\",\"queryType\":\"stackTrace\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionType",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "messageLose",
+              "queryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionType": "",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "EX",
+            "errorMode": "Logged Error Message",
+            "errorName": "U2xmNGogRXJyb3IgTWVzc2FnZQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "%E6%89%A7%E8%A1%8CXSS%E6%94%BB%E5%87%BB%E5%92%8CSQL%E6%B3%A8%E5%85%A5%E8%BF%87%E6%BB%A4%E6%93%8D%E4%BD%9C",
+            "queryType": "stackTrace",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 8,
+      "first_seen": "2026-04-03T20:02:29+08:00",
+      "inference_basis": [
+        "path=error/smart/exceptionStatistics/list"
+      ],
+      "inferred_purpose": "Likely related to error / list",
+      "last_seen": "2026-04-03T20:02:58+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 8
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 8,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionType": "",
+          "beginTime": "2026-04-03 12:15:00",
+          "bizSystemId": "1065",
+          "bizSystemName": "集团法务",
+          "endTime": "2026-04-03 12:20:00",
+          "errorLevel": "EX",
+          "errorMode": "Logged Error Message",
+          "errorName": "U2xmNGogRXJyb3IgTWVzc2FnZQ",
+          "lang": "zh_CN",
+          "localeOptionContent": "undefined",
+          "messageLose": "%E6%89%A7%E8%A1%8CXSS%E6%94%BB%E5%87%BB%E5%92%8CSQL%E6%B3%A8%E5%85%A5%E8%BF%87%E6%BB%A4%E6%93%8D%E4%BD%9C",
+          "queryType": "stackTrace",
+          "timePeriod": "5"
+        },
+        "dynamic_fields": [
+          "body.beginTime",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/error/smart/exceptionStatistics/list -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'bizSystemId=1065&bizSystemName=%E9%9B%86%E5%9B%A2%E6%B3%95%E5%8A%A1&timePeriod=5&endTime=2026-04-03+12%3A20%3A00&beginTime=2026-04-03+12%3A15%3A00&localeOptionContent=undefined&errorLevel=EX&errorMode=Logged+Error+Message&errorName=U2xmNGogRXJyb3IgTWVzc2FnZQ&messageLose=%25E6%2589%25A7%25E8%25A1%258CXSS%25E6%2594%25BB%25E5%2587%25BB%25E5%2592%258CSQL%25E6%25B3%25A8%25E5%2585%25A5%25E8%25BF%2587%25E6%25BB%25A4%25E6%2593%258D%25E4%25BD%259C&actionType=&queryType=stackTrace&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/error/smart/exceptionStatistics/list"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 8
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:15:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20:00",
+            "errorLevel": "EX",
+            "errorMode": "Logged Error Message",
+            "errorName": "U2xmNGogRXJyb3IgTWVzc2FnZQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "%E6%89%A7%E8%A1%8CXSS%E6%94%BB%E5%87%BB%E5%92%8CSQL%E6%B3%A8%E5%85%A5%E8%BF%87%E6%BB%A4%E6%93%8D%E4%BD%9C",
+            "queryType": "stackTrace",
+            "timePeriod": "5"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:29+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/exceptionStatistics/list"
+        },
+        {
+          "body": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "stackTrace",
+            "timePeriod": "5"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:48+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/exceptionStatistics/list"
+        },
+        {
+          "body": {
+            "actionType": "",
+            "beginTime": "2026-04-03 12:14:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:19:00",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "messageLose": "status%3A%20404%2C%20url%3A%20http%3A%2F%2Fjtfw.nbport.com.cn%2Fresources%2Fplugins%2Fjquery.seniorSelector.user%2Flocale%2Fjquery.seniorSelector.user-lang-zh_CN.js",
+            "queryType": "rootCause",
+            "timePeriod": "5"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:52+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/exceptionStatistics/list"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [],
+              "fastQuery": false,
+              "overviews": {
+                "content": {
+                  "actionAlias": "SpringController/${url.workflow.edit}",
+                  "actionGuid": "3d8f183a47ca48b9",
+                  "actionId": 13356,
+                  "actionName": "SpringController/${url.workflow.edit}",
+                  "actionType": "TX",
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "bizSystemId": 1065,
+                  "causeByMessage": "",
+                  "clientIp": "10.85.100.50",
+                  "componentName": "com.hd.rcugrc.security.web.filter.XssFilter/doFilter",
+                  "componentNameSecondary": "UNKNOWN",
+                  "componentSubtype": "java",
+                  "componentType": 5,
+                  "count": 0,
+                  "dataItem": "",
+                  "errorFilter": 1,
+                  "errorLevel": "EX",
+                  "errorMode": "LoggedErrorMessage",
+                  "errorName": "Slf4j Error Message",
+                  "existCauseByMessage": false,
+                  "existStacktrace": true,
+                  "fnNo": "37",
+                  "id": "359246731",
+                  "instanceId": 2745,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "message": "执行XSS攻击和SQL注入过滤操作",
+                  "messageLose": "执行XSS攻击和SQL注入过滤操作",
+                  "operation": "",
+                  "ratio": 0.0,
+                  "referer": "https://jtfw.nbport.com.cn/grcv5/user/todolistNew/unifyToDo.jsp",
+                  "refererLose": "https://jtfw.nbport.com.cn/grcv5/user/todolistNew/unifyToDo.jsp",
+                  "stacktrace": "nbfs3://0858ac25e5040840382d840302",
+                  "stacktraceMd5": "d751713988987e9331980363e24189ce",
+                  "timestamp": 1775189721419,
+                  "timestampTrace": 1775189721419,
+                  "traceGuid": "3d8f183a47ca48b9",
+                  "txActionAlias": "SpringController/${url.workflow.edit}",
+                  "txActionId": 13356,
+                  "txActionName": "SpringController/${url.workflow.edit}",
+                  "txActionType": "TX",
+                  "txApplicationId": 1644,
+                  "txBizSystemId": 1065
+                }
+              },
+              "pageNumber": 1,
+              "pageSize": 1000,
+              "totalElements": 35
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:20 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [],
+              "fastQuery": false,
+              "overviews": {
+                "content": {
+                  "actionAlias": "URI/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js",
+                  "actionGuid": "f6d6c8e5b6647343",
+                  "actionId": 13557,
+                  "actionName": "URI/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js",
+                  "actionType": "TX",
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "bizSystemId": 1065,
+                  "causeByMessage": "",
+                  "clientIp": "10.85.100.49",
+                  "componentName": "",
+                  "componentNameSecondary": "",
+                  "componentSubtype": "",
+                  "componentType": 0,
+                  "count": 0,
+                  "dataItem": "",
+                  "errorFilter": 0,
+                  "errorLevel": "ER",
+                  "errorMode": "HttpErrorCode",
+                  "errorName": "HTTP ERROR CODE: 404",
+                  "existCauseByMessage": false,
+                  "existStacktrace": true,
+                  "fnNo": "0",
+                  "id": "359247466",
+                  "instanceId": 2745,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "message": "status: 404, url: http://jtfw.nbport.com.cn/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js",
+                  "messageLose": "status: 404, url: http://jtfw.nbport.com.cn/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js",
+                  "operation": "",
+                  "ratio": 0.0,
+                  "referer": "https://jtfw.nbport.com.cn/grcv5/wp/lasContractSign/editLasContractSign.htm?id=93761&contractId=116859",
+                  "refererLose": "https://jtfw.nbport.com.cn/grcv5/wp/lasContractSign/editLasContractSign.htm",
+                  "stacktrace": "nbfs3://0858ac25e504084010a5a40102",
+                  "stacktraceMd5": "d751713988987e9331980363e24189ce",
+                  "timestamp": 1775189787073,
+                  "timestampTrace": 1775189787073,
+                  "traceGuid": "f6d6c8e5b6647343",
+                  "txActionAlias": "URI/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js",
+                  "txActionId": 13557,
+                  "txActionName": "URI/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js",
+                  "txActionType": "TX",
+                  "txApplicationId": 1644,
+                  "txBizSystemId": 1065
+                }
+              },
+              "pageNumber": 1,
+              "pageSize": 1000,
+              "totalElements": 2
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:40 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [],
+              "fastQuery": false,
+              "pageNumber": 1,
+              "pageSize": 1000,
+              "totalElements": 0
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:43 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 8
+      }
+    }
+  },
+  "path": "/server-api/error/smart/exceptionStatistics/list",
+  "relative_path": "error/smart/exceptionStatistics/list"
+}

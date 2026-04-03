@@ -1,0 +1,796 @@
+{
+  "count_seen": 3,
+  "first_seen": "2026-04-03T19:59:49+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 3
+  },
+  "last_seen": "2026-04-03T20:00:14+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.20:6379/5\",\"componentSubtype\":\"Redis\",\"componentType\":\"NoSQL\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 3,
+      "first_seen": "2026-04-03T19:59:49+08:00",
+      "inference_basis": [
+        "path=component/chart/throughput"
+      ],
+      "inferred_purpose": "Likely related to component/chart/throughput",
+      "last_seen": "2026-04-03T20:00:14+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 3
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1065",
+          "componentName": "10.190.22.20:6379/5",
+          "componentSubtype": "Redis",
+          "componentType": "NoSQL",
+          "dataType": "COMP",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/component/chart/throughput -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'componentType=NoSQL&bizSystemId=1065&endTime=2026-04-03+12%3A20&timePeriod=30&dataType=COMP&componentName=10.190.22.20%3A6379%2F5&componentSubtype=Redis&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/component/chart/throughput"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 3
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T19:59:49+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/chart/throughput"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:04+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/chart/throughput"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:14+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/chart/throughput"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 0.26
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.07,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 0.07
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.03,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 0.03
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.43,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 0.43
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.57,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 0.57
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.07,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 0.07
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.37,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 0.37
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.40,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 0.4
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.37,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 0.37
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:00-04/03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.13,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 0.13
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.17,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 0.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.27,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 0.27
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.03,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 0.03
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.10,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 0.1
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.47,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 0.47
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.03,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 0.03
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.87,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 0.87
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:10-04/03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.17,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 0.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.53,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 0.53
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.53,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 0.53
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.17,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 0.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.57,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 0.57
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.13,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 0.13
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.47,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 0.47
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "qps"
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:41 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 0.26
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.07,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 0.07
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.03,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 0.03
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.43,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 0.43
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.57,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 0.57
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.07,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 0.07
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.37,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 0.37
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.40,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 0.4
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.37,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 0.37
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:00-04/03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.13,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 0.13
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.17,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 0.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.27,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 0.27
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.03,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 0.03
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.10,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 0.1
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.47,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 0.47
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.03,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 0.03
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.87,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 0.87
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:10-04/03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.17,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 0.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.53,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 0.53
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.53,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 0.53
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.17,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 0.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.23,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 0.23
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.57,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 0.57
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.13,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 0.13
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.47,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 0.47
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "qps"
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:55 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "overviews": {
+                "avg": 33.41
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:50-04/03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.72,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 0.72
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":86.53,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 86.53
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":14.82,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 14.82
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:53-04/03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.70,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 8.7
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":45.42,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 45.42
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":43.75,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 43.75
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":18.48,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 18.48
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":32.08,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 32.08
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":25.68,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 25.68
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":25.70,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 25.7
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:00-04/03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.35,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 8.35
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":12.00,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.62,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 10.62
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":16.98,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 16.98
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":78.22,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 78.22
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:05-04/03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":48.60,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 48.6
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":45.42,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 45.42
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":142.42,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 142.42
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":47.33,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 47.33
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":42.10,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 42.1
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:10-04/03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":12.95,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 12.95
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":37.45,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 37.45
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":30.37,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 30.37
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":17.13,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 17.13
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":25.93,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 25.93
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":12.00,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":47.75,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 47.75
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":24.83,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 24.83
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.78,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 9.78
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":30.43,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 30.43
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "qps"
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:00:05 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 3
+      }
+    }
+  },
+  "path": "/server-api/component/chart/throughput",
+  "relative_path": "component/chart/throughput"
+}

@@ -1,0 +1,422 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T15:42:36+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T15:42:36+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "20441",
+            "actionType": "TX",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "timePeriod": "30"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"TX\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"mergeGraph\":\"1\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "mergeGraph",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "TX",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T15:42:36+08:00",
+      "inference_basis": [
+        "path=graph/queryActionGraph"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T15:42:36+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionId": "20441",
+          "actionType": "TX",
+          "applicationId": "1648",
+          "bizSystemId": "1059",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "mergeGraph": "1",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.actionId",
+          "body.applicationId",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/graph/queryActionGraph -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&bizSystemId=1059&applicationId=1648&actionId=20441&mergeGraph=1&actionType=TX&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionId": "20441",
+            "actionType": "TX",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:36+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "layout": "tree",
+              "linkeDataArray": [
+                {
+                  "error": 0.0,
+                  "from": "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]",
+                  "lineType": 3,
+                  "response": 955.0,
+                  "slowError": 74.77,
+                  "throught": 0.12,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "applicationId": 1648,
+                        "bizSystemId": 1059,
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "Oracle",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30,
+                        "txActionId": 20441,
+                        "txActionType": "TX",
+                        "txApplicationId": 1648,
+                        "txBizSystemId": 1059
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "applicationId": 1648,
+                        "bizSystemId": 1059,
+                        "chartName": "响应时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "Oracle",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30,
+                        "txActionId": 20441,
+                        "txActionType": "TX",
+                        "txApplicationId": 1648,
+                        "txBizSystemId": 1059
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 955.0,
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "applicationId": 1648,
+                        "bizSystemId": 1059,
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "Oracle",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30,
+                        "txActionId": 20441,
+                        "txActionType": "TX",
+                        "txApplicationId": 1648,
+                        "txBizSystemId": 1059
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.12,
+                      "showTotal": false
+                    }
+                  },
+                  "to": "1059_0_0_Database_Oracle_[-1]"
+                }
+              ],
+              "merge": "1",
+              "nodeDataArray": [
+                {
+                  "figure": "Circle",
+                  "fill": "#43AA93",
+                  "id": "1059_0_0_Database_Oracle_[-1]",
+                  "info": {
+                    "error": 0.0,
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "",
+                      "targetValue": null
+                    },
+                    "name": "Oracle",
+                    "response": 955.0,
+                    "subType": 1,
+                    "throught": 0.12
+                  },
+                  "isShowName": false,
+                  "settingKey": "TX20441@1059_0_0_Database_Oracle_[-1]@2",
+                  "show": 1,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "Oracle",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30,
+                        "txActionId": 20441,
+                        "txActionType": "TX",
+                        "txApplicationId": 1648,
+                        "txBizSystemId": 1059
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "name": "-1",
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "chartName": "平均查询时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "Oracle",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30,
+                        "txActionId": 20441,
+                        "txActionType": "TX",
+                        "txApplicationId": 1648,
+                        "txBizSystemId": 1059
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 955.0,
+                      "showTotal": false
+                    },
+                    "subType": 1,
+                    "throughChart": {
+                      "chartParams": {
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "Oracle",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30,
+                        "txActionId": 20441,
+                        "txActionType": "TX",
+                        "txApplicationId": 1648,
+                        "txBizSystemId": 1059
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.12,
+                      "showTotal": false
+                    }
+                  },
+                  "type": 14,
+                  "x": "0",
+                  "y": "0"
+                },
+                {
+                  "fill": "#43AA93",
+                  "id": "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]",
+                  "info": {
+                    "error": 0.0,
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "",
+                      "targetValue": null
+                    },
+                    "instanceCount": 3,
+                    "name": "[入口]com.alibaba.dubbo.container.Main",
+                    "originName": "com.alibaba.dubbo.container.Main",
+                    "response": 1210.0,
+                    "subType": 1,
+                    "throught": 0.1
+                  },
+                  "settingKey": "TX20441@1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]@2",
+                  "show": 1,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "actionId": 20441,
+                        "actionType": "TX",
+                        "applicationId": 1648,
+                        "bizSystemId": 1059,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/webaction/charts/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "instanceCount": 3,
+                    "name": "com.alibaba.dubbo.container.Main",
+                    "responseChart": {
+                      "chartParams": {
+                        "actionId": 20441,
+                        "actionType": "TX",
+                        "applicationId": 1648,
+                        "bizSystemId": 1059,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/webaction/charts/response",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 1210.0,
+                      "showTotal": false
+                    },
+                    "subType": 1,
+                    "throughChart": {
+                      "chartParams": {
+                        "actionId": 20441,
+                        "actionType": "TX",
+                        "applicationId": 1648,
+                        "bizSystemId": 1059,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/webaction/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.1,
+                      "showTotal": false
+                    }
+                  },
+                  "type": 12,
+                  "x": "0",
+                  "y": "0"
+                }
+              ],
+              "scale": "0.85",
+              "topoNodeLimitInfos": []
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:28 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/graph/queryActionGraph",
+  "relative_path": "graph/queryActionGraph"
+}

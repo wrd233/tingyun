@@ -1,0 +1,1136 @@
+{
+  "count_seen": 21,
+  "first_seen": "2026-04-03T15:39:50+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 21
+  },
+  "last_seen": "2026-04-03T15:42:15+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "chart",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"chart\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1606\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "chart",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "chart",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1631",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"chart\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1631\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "chart",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1631",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "chart",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1646",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"chart\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1646\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "chart",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1646",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "chart",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1648",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"chart\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1648\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "chart",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1648",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "count",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"count\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1606\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "count",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "count",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1631",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"count\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1631\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "count",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1631",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "count",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1646",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"count\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1646\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "count",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1646",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "count",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1648",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"count\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1648\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "count",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1648",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "list",
+            "endTime": "2026-04-03 12:20",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"list\",\"endTime\":\"<DATETIME>\",\"eventType\":\"\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1606\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "eventType",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "list",
+            "endTime": "<DATETIME>",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "list",
+            "endTime": "2026-04-03 12:20",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1631",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"list\",\"endTime\":\"<DATETIME>\",\"eventType\":\"\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1631\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "eventType",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "list",
+            "endTime": "<DATETIME>",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1631",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "list",
+            "endTime": "2026-04-03 12:20",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1646",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"list\",\"endTime\":\"<DATETIME>\",\"eventType\":\"\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1646\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "eventType",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "list",
+            "endTime": "<DATETIME>",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1646",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "list",
+            "endTime": "2026-04-03 12:20",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1648",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"list\",\"endTime\":\"<DATETIME>\",\"eventType\":\"\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1648\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "eventType",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "list",
+            "endTime": "<DATETIME>",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1648",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        }
+      ],
+      "count_seen": 21,
+      "first_seen": "2026-04-03T15:39:50+08:00",
+      "inference_basis": [
+        "path=graph/event",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T15:42:15+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 21
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 7,
+          "dynamic_fields": [],
+          "example": {
+            "chart": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"chart\":\"\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "chart",
+              "lang"
+            ],
+            "signature": [
+              "chart",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "chart": "",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 7,
+          "dynamic_fields": [],
+          "example": {
+            "count": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"count\":\"\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "count",
+              "lang"
+            ],
+            "signature": [
+              "count",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "count": "",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 7,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "list": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"list\":\"\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "list"
+            ],
+            "signature": [
+              "lang",
+              "list"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "list": ""
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "action": "list",
+          "endTime": "2026-04-03 12:20",
+          "eventType": "",
+          "lang": "zh_CN",
+          "targetType": "$app",
+          "targetValue": "1606",
+          "timePeriod": 30
+        },
+        "dynamic_fields": [
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"action\":\"list\",\"endTime\":\"2026-04-03 12:20\",\"eventType\":\"\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1606\",\"timePeriod\":30}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 21
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "action": "list",
+            "endTime": "2026-04-03 12:20",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "list": ""
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:39:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN"
+        },
+        {
+          "body": {
+            "action": "count",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "count": "",
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:39:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/event?count&lang=zh_CN"
+        },
+        {
+          "body": {
+            "action": "chart",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1606",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "chart": "",
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:39:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "eventList": [
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 77.45, GC CPU使用率(%): 0.0, CPU平均负载: 0.49",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189900000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 68.17, GC CPU使用率(%): 0.0, CPU平均负载: 0.53",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189897000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 76.61, GC CPU使用率(%): 0.0, CPU平均负载: 0.18",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189786000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 66.13, GC CPU使用率(%): 0.0, CPU平均负载: 0.11",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189780000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 76.4, GC CPU使用率(%): 0.0, CPU平均负载: 0.07",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189582000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 67.02, GC CPU使用率(%): 0.0, CPU平均负载: 0.07",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189576000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 0, 当前内存使用率(%): 80.19, GC CPU使用率(%): 0.0, CPU平均负载: 0.11",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189405000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 69.72, GC CPU使用率(%): 0.0, CPU平均负载: 0.12",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189399000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 77.31, GC CPU使用率(%): 0.0, CPU平均负载: 0.46",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189261000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 67.95, GC CPU使用率(%): 0.0, CPU平均负载: 0.5",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189255000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 76.75, GC CPU使用率(%): 0.0, CPU平均负载: 0.23",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189084000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 66.28, GC CPU使用率(%): 0.0, CPU平均负载: 0.26",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775189081000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 78.59, GC CPU使用率(%): 0.0, CPU平均负载: 0.26",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188883000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 48.44, GC CPU使用率(%): 0.0, CPU平均负载: 0.34",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188871000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 76.21, GC CPU使用率(%): 0.0, CPU平均负载: 0.07",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188772000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 66.9, GC CPU使用率(%): 0.0, CPU平均负载: 0.08",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188766000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 77.24, GC CPU使用率(%): 0.0, CPU平均负载: 0.23",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188598000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 67.96, GC CPU使用率(%): 0.0, CPU平均负载: 0.07",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188595000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 78.66, GC CPU使用率(%): 0.0, CPU平均负载: 0.24",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188487000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 68.26, GC CPU使用率(%): 0.0, CPU平均负载: 0.26",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188478000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 77.6, GC CPU使用率(%): 0.0, CPU平均负载: 0.13",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188370000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 68.31, GC CPU使用率(%): 0.0, CPU平均负载: 0.14",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188367000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 50, 当前内存使用率(%): 71.98, GC CPU使用率(%): 0.0, CPU平均负载: 0.27",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188250000
+                },
+                {
+                  "applicationId": 1606,
+                  "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : com.alibaba.nacos.Nacos，实例名称 : localhost.localdomain:8848， 请求采样率(%): 100, 当前内存使用率(%): 43.14, GC CPU使用率(%): 0.12, CPU平均负载: 0.34",
+                  "eventDisplayName": "探针熔断",
+                  "eventObject": "产品线: APM,com.alibaba.nacos.Nacos",
+                  "eventParams": {},
+                  "eventType": "agent_fuse",
+                  "eventUri": "",
+                  "timestamp": 1775188235000
+                }
+              ],
+              "total": 24
+            },
+            "requestId": "d28eb164-906d-2776-7ae0-4303aff7fd43",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:39:42 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "eventTotalCount": 24,
+              "eventTypeCountList": [
+                {
+                  "eventDisplayName": "探针熔断",
+                  "eventType": "agent_fuse",
+                  "totalCount": 24
+                }
+              ]
+            },
+            "requestId": "92ea29c0-783e-cd6f-88b0-74d1c91d9bd9",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:39:42 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "overviews": {
+                "timeHorizon": "04-03 11:50 ~ 04-03 12:20"
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775188200000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775188320000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775188440000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775188560000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775188740000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775188860000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775189040000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775189220000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775189340000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775189400000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775189520000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775189580000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775189760000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775189880000,
+                      "y": 2.0
+                    }
+                  ],
+                  "name": "探针熔断",
+                  "type": "column",
+                  "xAxis": 0,
+                  "yAxis": 0,
+                  "zIndex": 2
+                }
+              ],
+              "xAxis": {
+                "categories": [
+                  "1775188200000",
+                  "1775188260000",
+                  "1775188320000",
+                  "1775188380000",
+                  "1775188440000",
+                  "1775188500000",
+                  "1775188560000",
+                  "1775188620000",
+                  "1775188680000",
+                  "1775188740000",
+                  "1775188800000",
+                  "1775188860000",
+                  "1775188920000",
+                  "1775188980000",
+                  "1775189040000",
+                  "1775189100000",
+                  "1775189160000",
+                  "1775189220000",
+                  "1775189280000",
+                  "1775189340000",
+                  "1775189400000",
+                  "1775189460000",
+                  "1775189520000",
+                  "1775189580000",
+                  "1775189640000",
+                  "1775189700000",
+                  "1775189760000",
+                  "1775189820000",
+                  "1775189880000",
+                  "1775189940000"
+                ],
+                "max": 1775189940000,
+                "min": 1775188200000
+              },
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "个"
+                }
+              ]
+            },
+            "requestId": "e6248e0a-fcf1-ee42-3529-27029b267c23",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:39:42 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 21
+      }
+    }
+  },
+  "path": "/server-api/graph/event",
+  "relative_path": "graph/event"
+}

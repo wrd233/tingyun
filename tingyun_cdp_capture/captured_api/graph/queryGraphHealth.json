@@ -1,0 +1,722 @@
+{
+  "count_seen": 6,
+  "first_seen": "2026-04-03T15:40:25+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 6
+  },
+  "last_seen": "2026-04-03T15:42:36+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_0_0_[铃与堆场]": 13,
+              "1060_0_0_0_0_[外理理货]": 13,
+              "1061_0_0_0_0_[浙港办]": 13,
+              "1062_0_0_0_0_[共用应用]": 13,
+              "1063_0_0_0_0_[default]": 13,
+              "1064_0_0_0_0_[信创-浙港通]": 13,
+              "1065_0_0_0_0_[集团法务]": 13,
+              "1066_0_0_0_0_[信创OA]": 13
+            },
+            "timePeriod": 30
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1059_0_0_0_0_[铃与堆场]\":13,\"1060_0_0_0_0_[外理理货]\":13,\"1061_0_0_0_0_[浙港办]\":13,\"1062_0_0_0_0_[共用应用]\":13,\"1063_0_0_0_0_[default]\":13,\"1064_0_0_0_0_[信创-浙港通]\":13,\"1065_0_0_0_0_[集团法务]\":13,\"1066_0_0_0_0_[信创OA]\":13},\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "nodeIds",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_0_0_[铃与堆场]": 13,
+              "1060_0_0_0_0_[外理理货]": 13,
+              "1061_0_0_0_0_[浙港办]": 13,
+              "1062_0_0_0_0_[共用应用]": 13,
+              "1063_0_0_0_0_[default]": 13,
+              "1064_0_0_0_0_[信创-浙港通]": 13,
+              "1065_0_0_0_0_[集团法务]": 13,
+              "1066_0_0_0_0_[信创OA]": 13
+            },
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_Database_Oracle_[-1]": 14,
+              "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]": 12
+            },
+            "timePeriod": 30
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1059_0_0_Database_Oracle_[-1]\":14,\"1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]\":12},\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "nodeIds",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_Database_Oracle_[-1]": 14,
+              "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]": 12
+            },
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_Database_Oracle_[Oracle]": 14,
+              "1059_0_0_External_http_[http]": 17,
+              "1059_0_0_External_https_[https]": 17,
+              "1059_0_0_External_jsonrpc_[jsonrpc]": 17,
+              "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]": 12,
+              "1059_[0-User]_0_0_0_[User]": 11
+            },
+            "timePeriod": 30
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1059_0_0_Database_Oracle_[Oracle]\":14,\"1059_0_0_External_http_[http]\":17,\"1059_0_0_External_https_[https]\":17,\"1059_0_0_External_jsonrpc_[jsonrpc]\":17,\"1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]\":12,\"1059_[0-User]_0_0_0_[User]\":11},\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "nodeIds",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_Database_Oracle_[Oracle]": 14,
+              "1059_0_0_External_http_[http]": 17,
+              "1059_0_0_External_https_[https]": 17,
+              "1059_0_0_External_jsonrpc_[jsonrpc]": 17,
+              "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]": 12,
+              "1059_[0-User]_0_0_0_[User]": 11
+            },
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        }
+      ],
+      "count_seen": 6,
+      "first_seen": "2026-04-03T15:40:25+08:00",
+      "inference_basis": [
+        "path=graph/queryGraphHealth",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T15:42:36+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 6
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 6,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN"
+          },
+          "key": "{\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "lang"
+            ],
+            "signature": [
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "nodeIds": {
+            "1059_0_0_0_0_[铃与堆场]": 13,
+            "1060_0_0_0_0_[外理理货]": 13,
+            "1061_0_0_0_0_[浙港办]": 13,
+            "1062_0_0_0_0_[共用应用]": 13,
+            "1063_0_0_0_0_[default]": 13,
+            "1064_0_0_0_0_[信创-浙港通]": 13,
+            "1065_0_0_0_0_[集团法务]": 13,
+            "1066_0_0_0_0_[信创OA]": 13
+          },
+          "timePeriod": 30
+        },
+        "dynamic_fields": [
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"endTime\":\"2026-04-03 12:20\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1059_0_0_0_0_[铃与堆场]\":13,\"1060_0_0_0_0_[外理理货]\":13,\"1061_0_0_0_0_[浙港办]\":13,\"1062_0_0_0_0_[共用应用]\":13,\"1063_0_0_0_0_[default]\":13,\"1064_0_0_0_0_[信创-浙港通]\":13,\"1065_0_0_0_0_[集团法务]\":13,\"1066_0_0_0_0_[信创OA]\":13},\"timePeriod\":30}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 6
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_0_0_[铃与堆场]": 13,
+              "1060_0_0_0_0_[外理理货]": 13,
+              "1061_0_0_0_0_[浙港办]": 13,
+              "1062_0_0_0_0_[共用应用]": 13,
+              "1063_0_0_0_0_[default]": 13,
+              "1064_0_0_0_0_[信创-浙港通]": 13,
+              "1065_0_0_0_0_[集团法务]": 13,
+              "1066_0_0_0_0_[信创OA]": 13
+            },
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:25+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN"
+        },
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_Database_Oracle_[Oracle]": 14,
+              "1059_0_0_External_http_[http]": 17,
+              "1059_0_0_External_https_[https]": 17,
+              "1059_0_0_External_jsonrpc_[jsonrpc]": 17,
+              "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]": 12,
+              "1059_[0-User]_0_0_0_[User]": 11
+            },
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:31+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN"
+        },
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_Database_Oracle_[Oracle]": 14,
+              "1059_0_0_External_http_[http]": 17,
+              "1059_0_0_External_https_[https]": 17,
+              "1059_0_0_External_jsonrpc_[jsonrpc]": 17,
+              "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]": 12,
+              "1059_[0-User]_0_0_0_[User]": 11
+            },
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1059",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_0_0_[铃与堆场]",
+                  "nodeType": 13,
+                  "targetName": "1059",
+                  "targetType": "SBZ"
+                },
+                {
+                  "bizSystemId": "1062",
+                  "bizSystemIdAndTargetType": "1062_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1062",
+                    "targetValue": null
+                  },
+                  "id": "1062_0_0_0_0_[共用应用]",
+                  "nodeType": 13,
+                  "targetName": "1062",
+                  "targetType": "SBZ"
+                },
+                {
+                  "bizSystemId": "1064",
+                  "bizSystemIdAndTargetType": "1064_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1064",
+                    "targetValue": null
+                  },
+                  "id": "1064_0_0_0_0_[信创-浙港通]",
+                  "nodeType": 13,
+                  "targetName": "1064",
+                  "targetType": "SBZ"
+                },
+                {
+                  "bizSystemId": "1065",
+                  "bizSystemIdAndTargetType": "1065_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1065",
+                    "targetValue": null
+                  },
+                  "id": "1065_0_0_0_0_[集团法务]",
+                  "nodeType": 13,
+                  "targetName": "1065",
+                  "targetType": "SBZ"
+                },
+                {
+                  "bizSystemId": "1066",
+                  "bizSystemIdAndTargetType": "1066_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1066",
+                    "targetValue": null
+                  },
+                  "id": "1066_0_0_0_0_[信创OA]",
+                  "nodeType": 13,
+                  "targetName": "1066",
+                  "targetType": "SBZ"
+                },
+                {
+                  "bizSystemId": "1061",
+                  "bizSystemIdAndTargetType": "1061_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1061",
+                    "targetValue": null
+                  },
+                  "id": "1061_0_0_0_0_[浙港办]",
+                  "nodeType": 13,
+                  "targetName": "1061",
+                  "targetType": "SBZ"
+                },
+                {
+                  "bizSystemId": "1060",
+                  "bizSystemIdAndTargetType": "1060_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1060",
+                    "targetValue": null
+                  },
+                  "id": "1060_0_0_0_0_[外理理货]",
+                  "nodeType": 13,
+                  "targetName": "1060",
+                  "targetType": "SBZ"
+                },
+                {
+                  "bizSystemId": "1063",
+                  "bizSystemIdAndTargetType": "1063_SBZ",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1063",
+                    "targetValue": null
+                  },
+                  "id": "1063_0_0_0_0_[default]",
+                  "nodeType": 13,
+                  "targetName": "1063",
+                  "targetType": "SBZ"
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 8
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:17 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_SAPP",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1648",
+                    "targetValue": null
+                  },
+                  "id": "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]",
+                  "nodeType": 12,
+                  "targetName": "1648",
+                  "targetType": "SAPP"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_SAPP",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "[0-User]",
+                    "targetValue": null
+                  },
+                  "id": "1059_[0-User]_0_0_0_[User]",
+                  "nodeType": 11,
+                  "targetName": "[0-User]",
+                  "targetType": "SAPP"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_DB",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "Oracle/Oracle",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_Database_Oracle_[Oracle]",
+                  "nodeType": 14,
+                  "targetName": "Oracle/Oracle",
+                  "targetType": "DB"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_EXT",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "jsonrpc/jsonrpc",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_External_jsonrpc_[jsonrpc]",
+                  "nodeType": 17,
+                  "targetName": "jsonrpc/jsonrpc",
+                  "targetType": "EXT"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_EXT",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "http/http",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_External_http_[http]",
+                  "nodeType": 17,
+                  "targetName": "http/http",
+                  "targetType": "EXT"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_EXT",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "https/https",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_External_https_[https]",
+                  "nodeType": 17,
+                  "targetName": "https/https",
+                  "targetType": "EXT"
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 6
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:19 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_SAPP",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "1648",
+                    "targetValue": null
+                  },
+                  "id": "1059_1648_0_0_0_[com.alibaba.dubbo.container.Main]",
+                  "nodeType": 12,
+                  "targetName": "1648",
+                  "targetType": "SAPP"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_SAPP",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "[0-User]",
+                    "targetValue": null
+                  },
+                  "id": "1059_[0-User]_0_0_0_[User]",
+                  "nodeType": 11,
+                  "targetName": "[0-User]",
+                  "targetType": "SAPP"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_DB",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "Oracle/Oracle",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_Database_Oracle_[Oracle]",
+                  "nodeType": 14,
+                  "targetName": "Oracle/Oracle",
+                  "targetType": "DB"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_EXT",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "jsonrpc/jsonrpc",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_External_jsonrpc_[jsonrpc]",
+                  "nodeType": 17,
+                  "targetName": "jsonrpc/jsonrpc",
+                  "targetType": "EXT"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_EXT",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "http/http",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_External_http_[http]",
+                  "nodeType": 17,
+                  "targetName": "http/http",
+                  "targetType": "EXT"
+                },
+                {
+                  "bizSystemId": "1059",
+                  "bizSystemIdAndTargetType": "1059_EXT",
+                  "health": 0,
+                  "healthFill": "#43AA93",
+                  "healthInfo": {
+                    "eventLevel": 0,
+                    "healthStartTime": null,
+                    "targetName": "https/https",
+                    "targetValue": null
+                  },
+                  "id": "1059_0_0_External_https_[https]",
+                  "nodeType": 17,
+                  "targetName": "https/https",
+                  "targetType": "EXT"
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 6
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 6
+      }
+    }
+  },
+  "path": "/server-api/graph/queryGraphHealth",
+  "relative_path": "graph/queryGraphHealth"
+}

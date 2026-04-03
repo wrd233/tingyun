@@ -1,0 +1,1345 @@
+{
+  "count_seen": 9,
+  "first_seen": "2026-04-03T15:40:25+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 9
+  },
+  "last_seen": "2026-04-03T20:00:14+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[2].id",
+            "body.graphSettings[3].id",
+            "body.graphSettings[4].id",
+            "body.graphSettings[5].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9601,
+                "xaxes": "-32",
+                "yaxes": "-32"
+              },
+              {
+                "id": 8954,
+                "xaxes": "-32.00000000000003",
+                "yaxes": "-175.23944878270422"
+              },
+              {
+                "id": 9040,
+                "xaxes": "116.23944878270422",
+                "yaxes": "-26.99999999999747"
+              },
+              {
+                "id": 9765,
+                "xaxes": "-27.00000000000503",
+                "yaxes": "116.23944878270422"
+              },
+              {
+                "id": 9038,
+                "xaxes": "-170.23944878270422",
+                "yaxes": "-27.00000000000759"
+              },
+              {
+                "id": 9028,
+                "xaxes": "1693.8916897308168",
+                "yaxes": "682"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-32\",\"yaxes\":\"-32\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-32.00000000000003\",\"yaxes\":\"-175.23944878270422\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"116.23944878270422\",\"yaxes\":\"-26.99999999999747\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-27.00000000000503\",\"yaxes\":\"116.23944878270422\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-170.23944878270422\",\"yaxes\":\"-27.00000000000759\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"1693.8916897308168\",\"yaxes\":\"682\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-32",
+                "yaxes": "-32"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-32.00000000000003",
+                "yaxes": "-175.23944878270422"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "116.23944878270422",
+                "yaxes": "-26.99999999999747"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-27.00000000000503",
+                "yaxes": "116.23944878270422"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-170.23944878270422",
+                "yaxes": "-27.00000000000759"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "1693.8916897308168",
+                "yaxes": "682"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[2].id",
+            "body.graphSettings[3].id",
+            "body.graphSettings[4].id",
+            "body.graphSettings[5].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9763,
+                "xaxes": "278",
+                "yaxes": "230"
+              },
+              {
+                "id": 8956,
+                "xaxes": "68",
+                "yaxes": "4"
+              },
+              {
+                "id": 8970,
+                "xaxes": "81.4134657150178",
+                "yaxes": "230"
+              },
+              {
+                "id": 9764,
+                "xaxes": "213",
+                "yaxes": "456"
+              },
+              {
+                "id": 8976,
+                "xaxes": "713.8916897308168",
+                "yaxes": "908"
+              },
+              {
+                "id": 8971,
+                "xaxes": "353",
+                "yaxes": "682"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"278\",\"yaxes\":\"230\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"68\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"81.4134657150178\",\"yaxes\":\"230\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"213\",\"yaxes\":\"456\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"713.8916897308168\",\"yaxes\":\"908\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"353\",\"yaxes\":\"682\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "278",
+                "yaxes": "230"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "68",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "81.4134657150178",
+                "yaxes": "230"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "213",
+                "yaxes": "456"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "713.8916897308168",
+                "yaxes": "908"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "353",
+                "yaxes": "682"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[2].id",
+            "body.graphSettings[3].id",
+            "body.graphSettings[4].id",
+            "body.graphSettings[5].id",
+            "body.graphSettings[6].id",
+            "body.graphSettings[7].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9767,
+                "xaxes": "34.532332715372235",
+                "yaxes": "331.63671704721395"
+              },
+              {
+                "id": 9072,
+                "xaxes": "393.169049762599",
+                "yaxes": "183.0845248813032"
+              },
+              {
+                "id": 9400,
+                "xaxes": "34.53233271538744",
+                "yaxes": "34.532332715369876"
+              },
+              {
+                "id": 9415,
+                "xaxes": "331.63671704721645",
+                "yaxes": "331.63671704722424"
+              },
+              {
+                "id": 9567,
+                "xaxes": "183.0845248812921",
+                "yaxes": "393.169049762599"
+              },
+              {
+                "id": 9049,
+                "xaxes": "331.6367170472216",
+                "yaxes": "34.532332715379965"
+              },
+              {
+                "id": 9041,
+                "xaxes": "183.08452488129944",
+                "yaxes": "-27"
+              },
+              {
+                "id": 9345,
+                "xaxes": "-27",
+                "yaxes": "183.08452488128876"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"34.532332715372235\",\"yaxes\":\"331.63671704721395\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"393.169049762599\",\"yaxes\":\"183.0845248813032\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"34.53233271538744\",\"yaxes\":\"34.532332715369876\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"331.63671704721645\",\"yaxes\":\"331.63671704722424\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"183.0845248812921\",\"yaxes\":\"393.169049762599\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"331.6367170472216\",\"yaxes\":\"34.532332715379965\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"183.08452488129944\",\"yaxes\":\"-27\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-27\",\"yaxes\":\"183.08452488128876\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "34.532332715372235",
+                "yaxes": "331.63671704721395"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "393.169049762599",
+                "yaxes": "183.0845248813032"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "34.53233271538744",
+                "yaxes": "34.532332715369876"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "331.63671704721645",
+                "yaxes": "331.63671704722424"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "183.0845248812921",
+                "yaxes": "393.169049762599"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "331.6367170472216",
+                "yaxes": "34.532332715379965"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "183.08452488129944",
+                "yaxes": "-27"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-27",
+                "yaxes": "183.08452488128876"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[10].id",
+            "body.graphSettings[11].id",
+            "body.graphSettings[12].id",
+            "body.graphSettings[13].id",
+            "body.graphSettings[14].id",
+            "body.graphSettings[15].id",
+            "body.graphSettings[16].id",
+            "body.graphSettings[17].id",
+            "body.graphSettings[18].id",
+            "body.graphSettings[19].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[20].id",
+            "body.graphSettings[21].id",
+            "body.graphSettings[22].id",
+            "body.graphSettings[23].id",
+            "body.graphSettings[24].id",
+            "body.graphSettings[25].id",
+            "body.graphSettings[26].id",
+            "body.graphSettings[27].id",
+            "body.graphSettings[28].id",
+            "body.graphSettings[29].id",
+            "body.graphSettings[2].id",
+            "body.graphSettings[30].id",
+            "body.graphSettings[31].id",
+            "body.graphSettings[32].id",
+            "body.graphSettings[33].id",
+            "body.graphSettings[34].id",
+            "body.graphSettings[35].id",
+            "body.graphSettings[36].id",
+            "body.graphSettings[37].id",
+            "body.graphSettings[38].id",
+            "body.graphSettings[39].id",
+            "body.graphSettings[3].id",
+            "body.graphSettings[40].id",
+            "body.graphSettings[41].id",
+            "body.graphSettings[42].id",
+            "body.graphSettings[43].id",
+            "body.graphSettings[44].id",
+            "body.graphSettings[45].id",
+            "body.graphSettings[46].id",
+            "body.graphSettings[47].id",
+            "body.graphSettings[48].id",
+            "body.graphSettings[49].id",
+            "body.graphSettings[4].id",
+            "body.graphSettings[50].id",
+            "body.graphSettings[5].id",
+            "body.graphSettings[6].id",
+            "body.graphSettings[7].id",
+            "body.graphSettings[8].id",
+            "body.graphSettings[9].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9517,
+                "xaxes": "73",
+                "yaxes": "230"
+              },
+              {
+                "id": 9790,
+                "xaxes": "68",
+                "yaxes": "4"
+              },
+              {
+                "id": 9519,
+                "xaxes": "278",
+                "yaxes": "4"
+              },
+              {
+                "id": 9791,
+                "xaxes": "488",
+                "yaxes": "4"
+              },
+              {
+                "id": 9792,
+                "xaxes": "698",
+                "yaxes": "4"
+              },
+              {
+                "id": 9793,
+                "xaxes": "908",
+                "yaxes": "4"
+              },
+              {
+                "id": 9520,
+                "xaxes": "1118",
+                "yaxes": "4"
+              },
+              {
+                "id": 9794,
+                "xaxes": "1328",
+                "yaxes": "4"
+              },
+              {
+                "id": 9795,
+                "xaxes": "1538",
+                "yaxes": "4"
+              },
+              {
+                "id": 9796,
+                "xaxes": "1748",
+                "yaxes": "4"
+              },
+              {
+                "id": 9798,
+                "xaxes": "1961.369840837088",
+                "yaxes": "4"
+              },
+              {
+                "id": 9801,
+                "xaxes": "2174.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": 9803,
+                "xaxes": "2384.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": 9799,
+                "xaxes": "2594.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": 9523,
+                "xaxes": "2804.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": 9797,
+                "xaxes": "3014.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": 9800,
+                "xaxes": "3224.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": 9804,
+                "xaxes": "3434.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": 9802,
+                "xaxes": "3652.0815302627293",
+                "yaxes": "4"
+              },
+              {
+                "id": 9805,
+                "xaxes": "3869.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9807,
+                "xaxes": "4079.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9806,
+                "xaxes": "4289.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9527,
+                "xaxes": "4499.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9808,
+                "xaxes": "4709.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9815,
+                "xaxes": "4919.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9809,
+                "xaxes": "5129.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9810,
+                "xaxes": "5339.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9818,
+                "xaxes": "5549.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9816,
+                "xaxes": "5759.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9811,
+                "xaxes": "5969.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9813,
+                "xaxes": "6179.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9812,
+                "xaxes": "6389.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9529,
+                "xaxes": "6599.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9814,
+                "xaxes": "6809.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9530,
+                "xaxes": "7019.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9819,
+                "xaxes": "7229.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": 9820,
+                "xaxes": "7444.0712119369055",
+                "yaxes": "4"
+              },
+              {
+                "id": 9532,
+                "xaxes": "7658.719045022529",
+                "yaxes": "4"
+              },
+              {
+                "id": 9817,
+                "xaxes": "7870.222888545164",
+                "yaxes": "4"
+              },
+              {
+                "id": 9821,
+                "xaxes": "8081.726732067799",
+                "yaxes": "4"
+              },
+              {
+                "id": 9825,
+                "xaxes": "8293.89656832725",
+                "yaxes": "4"
+              },
+              {
+                "id": 9823,
+                "xaxes": "8506.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9824,
+                "xaxes": "8716.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9828,
+                "xaxes": "8926.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9822,
+                "xaxes": "9136.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9829,
+                "xaxes": "9346.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9535,
+                "xaxes": "9556.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9533,
+                "xaxes": "9766.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9827,
+                "xaxes": "9976.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9826,
+                "xaxes": "10186.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": 9830,
+                "xaxes": "10402.700245362756",
+                "yaxes": "4"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"73\",\"yaxes\":\"230\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"68\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"278\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"488\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"698\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"908\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"1118\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"1328\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"1538\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"1748\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"1961.369840837088\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"2174.739681674176\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"2384.739681674176\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"2594.739681674176\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"2804.739681674176\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"3014.739681674176\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"3224.739681674176\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"3434.739681674176\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"3652.0815302627293\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"3869.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"4079.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"4289.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"4499.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"4709.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"4919.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"5129.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"5339.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"5549.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"5759.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"5969.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"6179.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"6389.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"6599.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"6809.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"7019.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"7229.423378851282\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"7444.0712119369055\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"7658.719045022529\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"7870.222888545164\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"8081.726732067799\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"8293.89656832725\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"8506.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"8716.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"8926.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"9136.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"9346.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"9556.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"9766.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"9976.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"10186.066404586703\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"10402.700245362756\",\"yaxes\":\"4\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "73",
+                "yaxes": "230"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "68",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "278",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "488",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "698",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "908",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "1118",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "1328",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "1538",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "1748",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "1961.369840837088",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "2174.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "2384.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "2594.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "2804.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "3014.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "3224.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "3434.739681674176",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "3652.0815302627293",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "3869.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "4079.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "4289.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "4499.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "4709.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "4919.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "5129.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "5339.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "5549.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "5759.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "5969.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "6179.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "6389.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "6599.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "6809.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "7019.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "7229.423378851282",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "7444.0712119369055",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "7658.719045022529",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "7870.222888545164",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "8081.726732067799",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "8293.89656832725",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "8506.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "8716.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "8926.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "9136.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "9346.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "9556.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "9766.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "9976.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "10186.066404586703",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "10402.700245362756",
+                "yaxes": "4"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[2].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9831,
+                "xaxes": "74.65982649382639",
+                "yaxes": "230"
+              },
+              {
+                "id": 9832,
+                "xaxes": "69.65982649382639",
+                "yaxes": "4"
+              },
+              {
+                "id": 9833,
+                "xaxes": "282.17548625638153",
+                "yaxes": "4"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"74.65982649382639\",\"yaxes\":\"230\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"69.65982649382639\",\"yaxes\":\"4\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"282.17548625638153\",\"yaxes\":\"4\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "74.65982649382639",
+                "yaxes": "230"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "69.65982649382639",
+                "yaxes": "4"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "282.17548625638153",
+                "yaxes": "4"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "graphSettings": [
+              {
+                "xaxes": "78.8718397384553",
+                "yaxes": "230"
+              },
+              {
+                "xaxes": "73.8718397384553",
+                "yaxes": "4"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"xaxes\":\"78.8718397384553\",\"yaxes\":\"230\"},{\"xaxes\":\"73.8718397384553\",\"yaxes\":\"4\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "xaxes": "78.8718397384553",
+                "yaxes": "230"
+              },
+              {
+                "xaxes": "73.8718397384553",
+                "yaxes": "4"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "count_seen": 9,
+      "first_seen": "2026-04-03T15:40:25+08:00",
+      "inference_basis": [
+        "path=data/business/graph/updateGraphSettingList",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T20:00:14+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 9
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 9,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN"
+          },
+          "key": "{\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "lang"
+            ],
+            "signature": [
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "graphSettings": [
+            {
+              "id": 9767,
+              "xaxes": "34.532332715372235",
+              "yaxes": "331.63671704721395"
+            },
+            {
+              "id": 9072,
+              "xaxes": "393.169049762599",
+              "yaxes": "183.0845248813032"
+            },
+            {
+              "id": 9400,
+              "xaxes": "34.53233271538744",
+              "yaxes": "34.532332715369876"
+            },
+            {
+              "id": 9415,
+              "xaxes": "331.63671704721645",
+              "yaxes": "331.63671704722424"
+            },
+            {
+              "id": 9567,
+              "xaxes": "183.0845248812921",
+              "yaxes": "393.169049762599"
+            },
+            {
+              "id": 9049,
+              "xaxes": "331.6367170472216",
+              "yaxes": "34.532332715379965"
+            },
+            {
+              "id": 9041,
+              "xaxes": "183.08452488129944",
+              "yaxes": "-27"
+            },
+            {
+              "id": 9345,
+              "xaxes": "-27",
+              "yaxes": "183.08452488128876"
+            }
+          ],
+          "lang": "zh_CN"
+        },
+        "dynamic_fields": [
+          "body.graphSettings[0].id",
+          "body.graphSettings[1].id",
+          "body.graphSettings[2].id",
+          "body.graphSettings[3].id",
+          "body.graphSettings[4].id",
+          "body.graphSettings[5].id",
+          "body.graphSettings[6].id",
+          "body.graphSettings[7].id"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"graphSettings\":[{\"id\":9767,\"xaxes\":\"34.532332715372235\",\"yaxes\":\"331.63671704721395\"},{\"id\":9072,\"xaxes\":\"393.169049762599\",\"yaxes\":\"183.0845248813032\"},{\"id\":9400,\"xaxes\":\"34.53233271538744\",\"yaxes\":\"34.532332715369876\"},{\"id\":9415,\"xaxes\":\"331.63671704721645\",\"yaxes\":\"331.63671704722424\"},{\"id\":9567,\"xaxes\":\"183.0845248812921\",\"yaxes\":\"393.169049762599\"},{\"id\":9049,\"xaxes\":\"331.6367170472216\",\"yaxes\":\"34.532332715379965\"},{\"id\":9041,\"xaxes\":\"183.08452488129944\",\"yaxes\":\"-27\"},{\"id\":9345,\"xaxes\":\"-27\",\"yaxes\":\"183.08452488128876\"}],\"lang\":\"zh_CN\"}'",
+        "url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 9
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "graphSettings": [
+              {
+                "id": 9767,
+                "xaxes": "34.532332715372235",
+                "yaxes": "331.63671704721395"
+              },
+              {
+                "id": 9072,
+                "xaxes": "393.169049762599",
+                "yaxes": "183.0845248813032"
+              },
+              {
+                "id": 9400,
+                "xaxes": "34.53233271538744",
+                "yaxes": "34.532332715369876"
+              },
+              {
+                "id": 9415,
+                "xaxes": "331.63671704721645",
+                "yaxes": "331.63671704722424"
+              },
+              {
+                "id": 9567,
+                "xaxes": "183.0845248812921",
+                "yaxes": "393.169049762599"
+              },
+              {
+                "id": 9049,
+                "xaxes": "331.6367170472216",
+                "yaxes": "34.532332715379965"
+              },
+              {
+                "id": 9041,
+                "xaxes": "183.08452488129944",
+                "yaxes": "-27"
+              },
+              {
+                "id": 9345,
+                "xaxes": "-27",
+                "yaxes": "183.08452488128876"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:25+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN"
+        },
+        {
+          "body": {
+            "graphSettings": [
+              {
+                "id": 9601,
+                "xaxes": "-32",
+                "yaxes": "-32"
+              },
+              {
+                "id": 8954,
+                "xaxes": "-32.00000000000003",
+                "yaxes": "-175.23944878270422"
+              },
+              {
+                "id": 9040,
+                "xaxes": "116.23944878270422",
+                "yaxes": "-26.99999999999747"
+              },
+              {
+                "id": 9765,
+                "xaxes": "-27.00000000000503",
+                "yaxes": "116.23944878270422"
+              },
+              {
+                "id": 9038,
+                "xaxes": "-170.23944878270422",
+                "yaxes": "-27.00000000000759"
+              },
+              {
+                "id": 9028,
+                "xaxes": "1693.8916897308168",
+                "yaxes": "682"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:31+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN"
+        },
+        {
+          "body": {
+            "graphSettings": [
+              {
+                "id": 9763,
+                "xaxes": "278",
+                "yaxes": "230"
+              },
+              {
+                "id": 8956,
+                "xaxes": "68",
+                "yaxes": "4"
+              },
+              {
+                "id": 8970,
+                "xaxes": "81.4134657150178",
+                "yaxes": "230"
+              },
+              {
+                "id": 9764,
+                "xaxes": "213",
+                "yaxes": "456"
+              },
+              {
+                "id": 8976,
+                "xaxes": "713.8916897308168",
+                "yaxes": "908"
+              },
+              {
+                "id": 8971,
+                "xaxes": "353",
+                "yaxes": "682"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "message": "ok"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:17 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "message": "ok"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:20 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "message": "ok"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:33 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 9
+      }
+    }
+  },
+  "path": "/server-api/data/business/graph/updateGraphSettingList",
+  "relative_path": "data/business/graph/updateGraphSettingList"
+}

@@ -1,0 +1,641 @@
+{
+  "count_seen": 8,
+  "first_seen": "2026-04-03T15:42:39+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 8
+  },
+  "last_seen": "2026-04-03T20:02:48+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"铃与堆场\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "铃与堆场",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorMode\":\"HTTP Error Code\",\"errorName\":\"SFRUUCBFUlJPUiBDT0RFOiA0MDQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorMode": "HTTP Error Code",
+            "errorName": "SFRUUCBFUlJPUiBDT0RFOiA0MDQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "EX",
+            "errorMode": "Logged Error Message",
+            "errorName": "U2xmNGogRXJyb3IgTWVzc2FnZQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"EX\",\"errorMode\":\"Logged Error Message\",\"errorName\":\"U2xmNGogRXJyb3IgTWVzc2FnZQ\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorMode",
+              "errorName",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "EX",
+            "errorMode": "Logged Error Message",
+            "errorName": "U2xmNGogRXJyb3IgTWVzc2FnZQ",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "EX",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"EX\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "EX",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 8,
+      "first_seen": "2026-04-03T15:42:39+08:00",
+      "inference_basis": [
+        "path=error/smart/errorFilter/list"
+      ],
+      "inferred_purpose": "Likely related to error / list",
+      "last_seen": "2026-04-03T20:02:48+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 8
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 8,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "applicationId": "1648",
+          "beginTime": "2026-04-03 11:50",
+          "bizSystemId": "1059",
+          "bizSystemName": "铃与堆场",
+          "endTime": "2026-04-03 12:20",
+          "errorLevel": "ER",
+          "lang": "zh_CN",
+          "localeOptionContent": "undefined",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.applicationId",
+          "body.beginTime",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/error/smart/errorFilter/list -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'bizSystemId=1059&bizSystemName=%E9%93%83%E4%B8%8E%E5%A0%86%E5%9C%BA&timePeriod=30&endTime=2026-04-03+12%3A20&beginTime=2026-04-03+11%3A50&localeOptionContent=undefined&applicationId=1648&errorLevel=ER&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 8
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:39+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:20+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-03 12:20",
+            "errorLevel": "EX",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:02:24+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "apmDataInfos": {},
+            "bgActions": null,
+            "errorErMode": [],
+            "errorErName": [],
+            "errorExMode": [],
+            "errorExName": [],
+            "ifActions": {},
+            "txActions": {}
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:31 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "apmDataInfos": {},
+            "bgActions": null,
+            "errorErMode": [
+              "HTTP Error Code",
+              "Uncaught Exception"
+            ],
+            "errorErName": [
+              "HTTP ERROR CODE: 404",
+              "org.springframework.web.util.NestedServletException"
+            ],
+            "errorExMode": [],
+            "errorExName": [],
+            "ifActions": {},
+            "txActions": {
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/todo-pages/{id}": [
+                13185,
+                13166
+              ],
+              "URI/favicon.ico": [
+                13333,
+                13291
+              ],
+              "URI/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js": [
+                13557,
+                13305
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:11 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "apmDataInfos": {},
+            "bgActions": {},
+            "errorErMode": [],
+            "errorErName": [],
+            "errorExMode": [
+              "Logged Error Message",
+              "Code Exception"
+            ],
+            "errorExName": [
+              "Slf4j Error Message",
+              "com.hd.rcugrc.web.exception.rest.NotFoundResourceException",
+              "org.springframework.web.util.NestedServletException",
+              "<REDACTED>"
+            ],
+            "ifActions": {},
+            "txActions": {
+              "SpringController/${url.attachment}/${url.attachment.download}": [
+                13266,
+                13348
+              ],
+              "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf": [
+                13491,
+                13516
+              ],
+              "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexWord": [
+                13488,
+                13695
+              ],
+              "SpringController/${url.attachment}/${url.attachment.frmIndiDocs}": [
+                13220,
+                13436
+              ],
+              "SpringController/${url.attachment}/${url.attachment.upload} (POST)": [
+                13513
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidate-infos (POST)": [
+                13202,
+                13350
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidate-roots (POST)": [
+                13210
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidates (POST)": [
+                13352
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/dispatch (POST)": [
+                13203,
+                13353
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/done-pages/{instId}": [
+                13237,
+                13225
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/inst-logs/{id}": [
+                13354
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/todo-pages/{id}": [
+                13185,
+                13166
+              ],
+              "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/todo (POST)": [
+                13204,
+                13205
+              ],
+              "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getCommonOpinion/{account}": [
+                13164,
+                13183
+              ],
+              "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getMyRemindList (POST)": [
+                13541,
+                13542
+              ],
+              "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getPreviewAttachConfig": [
+                13168
+              ],
+              "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/userInfos (POST)": [
+                13159,
+                13160
+              ],
+              "SpringController/${url.rest.prefix.mobileapi.v1}/user-manager/users/switch/trustors": [
+                13222,
+                13388
+              ],
+              "SpringController/${url.rest.token.creation}": [
+                13318,
+                13241
+              ],
+              "SpringController/${url.rest.token.verification} (POST)": [
+                13317,
+                13242
+              ],
+              "SpringController/${url.workflow.create}": [
+                13476
+              ],
+              "SpringController/${url.workflow.edit}": [
+                13335,
+                13356
+              ],
+              "SpringController/${url.workflow.logs2}": [
+                13858,
+                13395
+              ],
+              "SpringController/${url.workflow.state2}": [
+                13863,
+                13401
+              ],
+              "SpringController/${url.workflow.view}": [
+                13608,
+                13406
+              ],
+              "SpringController/serverapi/cw/acquire/contractInfo (POST)": [
+                13551
+              ],
+              "SpringController/serverapi/v1/zg-tasks/getTaskForUias": [
+                13156,
+                13226
+              ],
+              "URI/grcv5/admin/home.jsp": [
+                13189,
+                14525
+              ],
+              "URI/grcv5/admin/user_new/manager.jsp": [
+                14277,
+                13191
+              ],
+              "URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.updateContractInfo.dwr": [
+                13830,
+                13334
+              ],
+              "URI/grcv5/dwr/call/plaincall/dwrPerformFeedbackService.changeElementFinish.dwr": [
+                13833
+              ],
+              "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr": [
+                13238,
+                13302
+              ],
+              "URI/grcv5/rest/mobile/thirdpartylogin.json": [
+                13184,
+                13209
+              ],
+              "URI/grcv5/user/home.jsp": [
+                13201,
+                13170
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:15 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 8
+      }
+    }
+  },
+  "path": "/server-api/error/smart/errorFilter/list",
+  "relative_path": "error/smart/errorFilter/list"
+}

@@ -1,0 +1,341 @@
+{
+  "count_seen": 5,
+  "first_seen": "2026-04-03T15:40:49+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 5
+  },
+  "last_seen": "2026-04-03T15:41:32+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 5,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "appMetaInfo",
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1648"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "key": "{\"action\":\"appMetaInfo\",\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "appMetaInfo",
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        }
+      ],
+      "count_seen": 5,
+      "first_seen": "2026-04-03T15:40:49+08:00",
+      "inference_basis": [
+        "path=graph/application/receive",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to graph / application",
+      "last_seen": "2026-04-03T15:41:32+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 5
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 5,
+          "dynamic_fields": [],
+          "example": {
+            "appMetaInfo": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"appMetaInfo\":\"\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "appMetaInfo",
+              "lang"
+            ],
+            "signature": [
+              "appMetaInfo",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "appMetaInfo": "",
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "action": "appMetaInfo",
+          "beginTime": "2026-04-03 11:50",
+          "endTime": "2026-04-03 12:20",
+          "labels": {
+            "applicationIds": [
+              "1648"
+            ]
+          },
+          "lang": "zh_CN",
+          "timePeriod": 30
+        },
+        "dynamic_fields": [
+          "body.beginTime",
+          "body.endTime",
+          "body.labels.applicationIds[0]",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"action\":\"appMetaInfo\",\"beginTime\":\"2026-04-03 11:50\",\"endTime\":\"2026-04-03 12:20\",\"labels\":{\"applicationIds\":[\"1648\"]},\"lang\":\"zh_CN\",\"timePeriod\":30}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 5
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "action": "appMetaInfo",
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1648"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "appMetaInfo": "",
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:49+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN"
+        },
+        {
+          "body": {
+            "action": "appMetaInfo",
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1646"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "appMetaInfo": "",
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:41:10+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN"
+        },
+        {
+          "body": {
+            "action": "appMetaInfo",
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1631"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "appMetaInfo": "",
+            "lang": "zh_CN"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:41:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "appAliasName": "com.alibaba.dubbo.container.Main",
+              "appId": 1648,
+              "appName": "com.alibaba.dubbo.container.Main",
+              "bizId": 1059,
+              "bizName": "铃与堆场",
+              "k8sId": null,
+              "k8sNamespace": null,
+              "k8sWorkload": null,
+              "serviceGroup": null
+            },
+            "requestId": "1ea03398-ce64-4e2e-5535-130757995df4",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:40 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "appAliasName": "<REDACTED>",
+              "appId": 1646,
+              "appName": "<REDACTED>",
+              "bizId": 1065,
+              "bizName": "集团法务",
+              "k8sId": null,
+              "k8sNamespace": null,
+              "k8sWorkload": null,
+              "serviceGroup": null
+            },
+            "requestId": "5c43252a-20a2-dd50-4d8d-3407542a0225",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:41:02 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "appAliasName": "com.nbport.tt.message.MessageServiceApplication",
+              "appId": 1631,
+              "appName": "com.nbport.tt.message.MessageServiceApplication",
+              "bizId": 1064,
+              "bizName": "信创-浙港通",
+              "k8sId": null,
+              "k8sNamespace": null,
+              "k8sWorkload": null,
+              "serviceGroup": null
+            },
+            "requestId": "5537ccab-de8f-16e5-a9d8-df44f68611ad",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:41:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 5
+      }
+    }
+  },
+  "path": "/server-api/graph/application/receive",
+  "relative_path": "graph/application/receive"
+}

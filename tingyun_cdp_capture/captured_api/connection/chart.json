@@ -1,0 +1,2952 @@
+{
+  "count_seen": 33,
+  "first_seen": "2026-04-03T15:43:04+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 33
+  },
+  "last_seen": "2026-04-03T20:02:13+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2637",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-b4fca66dea93a4f7c53d1684ef2cc53c",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"共用应用\",\"curP\":\"1775202187085\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"169.169.173.148:3306%2Ftbosnacos/Database-b4fca66dea93a4f7c53d1684ef2cc53c\",\"serviceGroupId\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-b4fca66dea93a4f7c53d1684ef2cc53c",
+            "serviceGroupId": "<DYNAMIC>",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2635",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-cee33ba1b5257e412a1d7aae3c01f78e",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"共用应用\",\"curP\":\"1775202187085\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"169.169.173.148:3306%2Ftbosnacos/Database-cee33ba1b5257e412a1d7aae3c01f78e\",\"serviceGroupId\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-cee33ba1b5257e412a1d7aae3c01f78e",
+            "serviceGroupId": "<DYNAMIC>",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2641",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-e6f2505ff3b7d3bc665e117900d89e85",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"共用应用\",\"curP\":\"1775202187085\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"169.169.173.148:3306%2Ftbosnacos/Database-e6f2505ff3b7d3bc665e117900d89e85\",\"serviceGroupId\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.173.148:3306%2Ftbosnacos/Database-e6f2505ff3b7d3bc665e117900d89e85",
+            "serviceGroupId": "<DYNAMIC>",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1062",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "UnknownHost:0%2F/root/nacos/data/derby-data/root/nacos/data/derby-data/Database-2f77ed42d37a0bf7de8049fea971fcf5",
+            "serviceGroupId": "0",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"共用应用\",\"curP\":\"1775202187085\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"UnknownHost:0%2F/root/nacos/data/derby-data/root/nacos/data/derby-data/Database-2f77ed42d37a0bf7de8049fea971fcf5\",\"serviceGroupId\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "共用应用",
+            "curP": "1775202187085",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "UnknownHost:0%2F/root/nacos/data/derby-data/root/nacos/data/derby-data/Database-2f77ed42d37a0bf7de8049fea971fcf5",
+            "serviceGroupId": "<DYNAMIC>",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2756",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-058c34b871509e53d60f394f91614234",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"铃与堆场\",\"curP\":\"1775202183695\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"169.169.4.41:1521%2Fedidb1/Database-058c34b871509e53d60f394f91614234\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-058c34b871509e53d60f394f91614234",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2755",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-0edfbd4bdb21ebd8cc3e3d718960297c",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"铃与堆场\",\"curP\":\"1775202183695\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"169.169.4.41:1521%2Fedidb1/Database-0edfbd4bdb21ebd8cc3e3d718960297c\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-0edfbd4bdb21ebd8cc3e3d718960297c",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2754",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-1dca1be1f5aaae369560473d420e30d6",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"铃与堆场\",\"curP\":\"1775202183695\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"169.169.4.41:1521%2Fedidb1/Database-1dca1be1f5aaae369560473d420e30d6\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-1dca1be1f5aaae369560473d420e30d6",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-3216b980fbe6680d42c8335256e20b3e",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F0/Redis-3216b980fbe6680d42c8335256e20b3e\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-3216b980fbe6680d42c8335256e20b3e",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-374ab722004f06b9c54497b5a15023df",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F0/Redis-374ab722004f06b9c54497b5a15023df\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-374ab722004f06b9c54497b5a15023df",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-3e84278aa8b31f5602985b6f56773167",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F0/Redis-3e84278aa8b31f5602985b6f56773167\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-3e84278aa8b31f5602985b6f56773167",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-4ffeeacc38cd0e0ef6b85aa454846b05",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F0/Redis-4ffeeacc38cd0e0ef6b85aa454846b05\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-4ffeeacc38cd0e0ef6b85aa454846b05",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-9c507b1093284b91b08eb8bcdda7b842",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F0/Redis-9c507b1093284b91b08eb8bcdda7b842\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-9c507b1093284b91b08eb8bcdda7b842",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-d6223d660957402d67978866d4728cc1",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F0/Redis-d6223d660957402d67978866d4728cc1\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F0/Redis-d6223d660957402d67978866d4728cc1",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F2/Redis-66426c3414f50fba52409baca7cc6f55",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F2/Redis-66426c3414f50fba52409baca7cc6f55\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F2/Redis-66426c3414f50fba52409baca7cc6f55",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F2/Redis-c1993e4f710a9b106ddb47b01a12155a",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F2/Redis-c1993e4f710a9b106ddb47b01a12155a\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F2/Redis-c1993e4f710a9b106ddb47b01a12155a",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F2/Redis-d47a55b20f0c4bf828e4b5f5e17aff9f",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F2/Redis-d47a55b20f0c4bf828e4b5f5e17aff9f\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F2/Redis-d47a55b20f0c4bf828e4b5f5e17aff9f",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-01803bc832bffeeea536ede5a82143f9",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F5/Redis-01803bc832bffeeea536ede5a82143f9\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-01803bc832bffeeea536ede5a82143f9",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-7a0654c66fdf29468caaef6adbc25d25",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F5/Redis-7a0654c66fdf29468caaef6adbc25d25\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-7a0654c66fdf29468caaef6adbc25d25",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775217723620\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775217723620",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "limit": "true",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"limit\":\"true\",\"metricCategory\":\"10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d\",\"pageNumber\":\"1\",\"pageSize\":\"1000\",\"sortDirection\":\"DESC\",\"sortField\":\"respTime\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "instanceId",
+              "lang",
+              "limit",
+              "metricCategory",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "limit": "true",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "limit": "true",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "30"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"limit\":\"true\",\"metricCategory\":\"10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2\",\"pageNumber\":\"1\",\"pageSize\":\"1000\",\"sortDirection\":\"DESC\",\"sortField\":\"respTime\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "instanceId",
+              "lang",
+              "limit",
+              "metricCategory",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "limit": "true",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 33,
+      "first_seen": "2026-04-03T15:43:04+08:00",
+      "inference_basis": [
+        "path=connection/chart"
+      ],
+      "inferred_purpose": "Likely related to connection/chart",
+      "last_seen": "2026-04-03T20:02:13+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 33
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 33,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "applicationId": "1648",
+          "beginTime": "2026-04-03 11:50",
+          "bizSystemId": "1059",
+          "bizSystemName": "铃与堆场",
+          "curP": "1775202183695",
+          "endTime": "2026-04-03 12:20",
+          "instanceId": "2756",
+          "lang": "zh_CN",
+          "localeOptionContent": "undefined",
+          "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-058c34b871509e53d60f394f91614234",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.applicationId",
+          "body.beginTime",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.instanceId",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/connection/chart -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'curP=1775202183695&bizSystemId=1059&bizSystemName=%E9%93%83%E4%B8%8E%E5%A0%86%E5%9C%BA&timePeriod=30&endTime=2026-04-03+12%3A20&beginTime=2026-04-03+11%3A50&localeOptionContent=undefined&metricCategory=169.169.4.41%3A1521%252Fedidb1%2FDatabase-058c34b871509e53d60f394f91614234&applicationId=1648&instanceId=2756&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/connection/chart"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 33
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2756",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-058c34b871509e53d60f394f91614234",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:43:04+08:00",
+          "url": "http://169.169.173.25:8080/server-api/connection/chart"
+        },
+        {
+          "body": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2754",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-1dca1be1f5aaae369560473d420e30d6",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:43:04+08:00",
+          "url": "http://169.169.173.25:8080/server-api/connection/chart"
+        },
+        {
+          "body": {
+            "applicationId": "1648",
+            "beginTime": "2026-04-03 11:50",
+            "bizSystemId": "1059",
+            "bizSystemName": "铃与堆场",
+            "curP": "1775202183695",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "2755",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "169.169.4.41:1521%2Fedidb1/Database-0edfbd4bdb21ebd8cc3e3d718960297c",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:43:04+08:00",
+          "url": "http://169.169.173.25:8080/server-api/connection/chart"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":7,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 1.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Connection time\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Connection time\",\"value\":7,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 7.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Connection time\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 1,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":2,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":7,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":4,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                },
+                {
+                  "opposite": true,
+                  "tickUnit": "ms"
+                },
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:55 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Used connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":0.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 3.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":0.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 1,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":0.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                },
+                {
+                  "opposite": true,
+                  "tickUnit": "ms"
+                },
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:55 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Used connections\",\"value\":6,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":30.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 6.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 1.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":6,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":30.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 1,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:50--04-03 11:51\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:51--04-03 11:52\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188260000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:52--04-03 11:53\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:53--04-03 11:54\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:54--04-03 11:55\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:55--04-03 11:56\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:56--04-03 11:57\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:57--04-03 11:58\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:58--04-03 11:59\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188680000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 11:59--04-03 12:00\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:00--04-03 12:01\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:01--04-03 12:02\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:02--04-03 12:03\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:03--04-03 12:04\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:04--04-03 12:05\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:05--04-03 12:06\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:06--04-03 12:07\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:07--04-03 12:08\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":20.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:08--04-03 12:09\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:09--04-03 12:10\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:10--04-03 12:11\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:11--04-03 12:12\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:12--04-03 12:13\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":6,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":30.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:13--04-03 12:14\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:14--04-03 12:15\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":2,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":10.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:15--04-03 12:16\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":15.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:16--04-03 12:17\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189760000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:17--04-03 12:18\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:18--04-03 12:19\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-03 12:19--04-03 12:20\",\"data\":[{\"title\":\"Waiter connections\",\"value\":0,\"unit\":\"\",\"scale\":0},{\"title\":\"Used connections\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"使用率(%)\",\"value\":5.00,\"unit\":\"\",\"scale\":2},{\"title\":\"Connection time\",\"value\":0,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                },
+                {
+                  "opposite": true,
+                  "tickUnit": "ms"
+                },
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:55 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 33
+      }
+    }
+  },
+  "path": "/server-api/connection/chart",
+  "relative_path": "connection/chart"
+}

@@ -1,0 +1,1805 @@
+{
+  "count_seen": 8,
+  "first_seen": "2026-04-03T15:42:12+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 8
+  },
+  "last_seen": "2026-04-03T15:42:52+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 8,
+          "dynamic_fields": [
+            "body.actionIds",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionIds": "31376,20425,20380,20376,20464,20417,20457,31422,20378,20839,20477,20493,20753,20441,31374,20390,20399,20754,20394,20415,20512,20377,20762,20850,20553,31379,20552,20511,20385,20375,31381,20458,31378,20503,20396,20381,20473,20404,20475,20424,20520,20476,20490,20760,31373,31375,20533,20384,20401,20405,20421,20551,20440,20467,20514,20452,20382,20852,20416,20450,20406,20412,20547,20510,20534,20474,20470,20472,20372,20392,20395,20454,31377,20461,20379,20487,20407,20455,20408,20383,20400,20463,20442,20488,20469,20465,20388,20462,20752,29911,20391,20751,20374,20410,20430,20494,20389,20418,20761,20449,20851,20536,20507,20393,20456,20471,20402,20398,20397,20509,29882,20453,20849,20447,20468,20403,20448,20411,20386,20446,20444,20535,31380,20413,20451,20466",
+            "applicationId": "0",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "30"
+          },
+          "key": "{\"actionIds\":\"<DYNAMIC>\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"sortDirection\":\"DESC\",\"sortField\":\"response\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionIds",
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionIds": "<DYNAMIC>",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 8,
+      "first_seen": "2026-04-03T15:42:12+08:00",
+      "inference_basis": [
+        "path=webaction/list/actionItemLists"
+      ],
+      "inferred_purpose": "Likely related to list",
+      "last_seen": "2026-04-03T15:42:52+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 8
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 8,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "actionIds": "31376,20425,20380,20376,20464,20417,20457,31422,20378,20839,20477,20493,20753,20441,31374,20390,20399,20754,20394,20415,20512,20377,20762,20850,20553,31379,20552,20511,20385,20375,31381,20458,31378,20503,20396,20381,20473,20404,20475,20424,20520,20476,20490,20760,31373,31375,20533,20384,20401,20405,20421,20551,20440,20467,20514,20452,20382,20852,20416,20450,20406,20412,20547,20510,20534,20474,20470,20472,20372,20392,20395,20454,31377,20461,20379,20487,20407,20455,20408,20383,20400,20463,20442,20488,20469,20465,20388,20462,20752,29911,20391,20751,20374,20410,20430,20494,20389,20418,20761,20449,20851,20536,20507,20393,20456,20471,20402,20398,20397,20509,29882,20453,20849,20447,20468,20403,20448,20411,20386,20446,20444,20535,31380,20413,20451,20466",
+          "applicationId": "0",
+          "bizSystemId": "1059",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "sortDirection": "DESC",
+          "sortField": "response",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.actionIds",
+          "body.applicationId",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/webaction/list/actionItemLists -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&bizSystemId=1059&sortField=response&sortDirection=DESC&applicationId=0&actionIds=31376%2C20425%2C20380%2C20376%2C20464%2C20417%2C20457%2C31422%2C20378%2C20839%2C20477%2C20493%2C20753%2C20441%2C31374%2C20390%2C20399%2C20754%2C20394%2C20415%2C20512%2C20377%2C20762%2C20850%2C20553%2C31379%2C20552%2C20511%2C20385%2C20375%2C31381%2C20458%2C31378%2C20503%2C20396%2C20381%2C20473%2C20404%2C20475%2C20424%2C20520%2C20476%2C20490%2C20760%2C31373%2C31375%2C20533%2C20384%2C20401%2C20405%2C20421%2C20551%2C20440%2C20467%2C20514%2C20452%2C20382%2C20852%2C20416%2C20450%2C20406%2C20412%2C20547%2C20510%2C20534%2C20474%2C20470%2C20472%2C20372%2C20392%2C20395%2C20454%2C31377%2C20461%2C20379%2C20487%2C20407%2C20455%2C20408%2C20383%2C20400%2C20463%2C20442%2C20488%2C20469%2C20465%2C20388%2C20462%2C20752%2C29911%2C20391%2C20751%2C20374%2C20410%2C20430%2C20494%2C20389%2C20418%2C20761%2C20449%2C20851%2C20536%2C20507%2C20393%2C20456%2C20471%2C20402%2C20398%2C20397%2C20509%2C29882%2C20453%2C20849%2C20447%2C20468%2C20403%2C20448%2C20411%2C20386%2C20446%2C20444%2C20535%2C31380%2C20413%2C20451%2C20466&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/webaction/list/actionItemLists"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 8
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "actionIds": "31376,20425,20380,20376,20464,20417,20457,31422,20378,20839,20477,20493,20753,20441,31374,20390,20399,20754,20394,20415,20512,20377,20762,20850,20553,31379,20552,20511,20385,20375,31381,20458,31378,20503,20396,20381,20473,20404,20475,20424,20520,20476,20490,20760,31373,31375,20533,20384,20401,20405,20421,20551,20440,20467,20514,20452,20382,20852,20416,20450,20406,20412,20547,20510,20534,20474,20470,20472,20372,20392,20395,20454,31377,20461,20379,20487,20407,20455,20408,20383,20400,20463,20442,20488,20469,20465,20388,20462,20752,29911,20391,20751,20374,20410,20430,20494,20389,20418,20761,20449,20851,20536,20507,20393,20456,20471,20402,20398,20397,20509,29882,20453,20849,20447,20468,20403,20448,20411,20386,20446,20444,20535,31380,20413,20451,20466",
+            "applicationId": "0",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:12+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/actionItemLists"
+        },
+        {
+          "body": {
+            "actionIds": "31376,20425,20380,20376,20464,20417,20457,31422,20378,20839,20477,20493,20753,20441,31374,20390,20399,20754,20394,20415,20512,20377,20762,20850,20553,31379,20552,20511,20385,20375,31381,20458,31378,20503,20396,20381,20473,20404,20475,20424,20520,20476,20490,20760,31373,31375,20533,20384,20401,20405,20421,20551,20440,20467,20514,20452,20382,20852,20416,20450,20406,20412,20547,20510,20534,20474,20470,20472,20372,20392,20395,20454,31377,20461,20379,20487,20407,20455,20408,20383,20400,20463,20442,20488,20469,20465,20388,20462,20752,29911,20391,20751,20374,20410,20430,20494,20389,20418,20761,20449,20851,20536,20507,20393,20456,20471,20402,20398,20397,20509,29882,20453,20849,20447,20468,20403,20448,20411,20386,20446,20444,20535,31380,20413,20451,20466",
+            "applicationId": "0",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:31+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/actionItemLists"
+        },
+        {
+          "body": {
+            "actionIds": "31376,20425,20380,20376,20464,20417,20457,31422,20378,20839,20477,20493,20753,20441,31374,20390,20399,20754,20394,20415,20512,20377,20762,20850,20553,31379,20552,20511,20385,20375,31381,20458,31378,20503,20396,20381,20473,20404,20475,20424,20520,20476,20490,20760,31373,31375,20533,20384,20401,20405,20421,20551,20440,20467,20514,20452,20382,20852,20416,20450,20406,20412,20547,20510,20534,20474,20470,20472,20372,20392,20395,20454,31377,20461,20379,20487,20407,20455,20408,20383,20400,20463,20442,20488,20469,20465,20388,20462,20752,29911,20391,20751,20374,20410,20430,20494,20389,20418,20761,20449,20851,20536,20507,20393,20456,20471,20402,20398,20397,20509,29882,20453,20849,20447,20468,20403,20448,20411,20386,20446,20444,20535,31380,20413,20451,20466",
+            "applicationId": "1648",
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:42:48+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/actionItemLists"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionId": 20421,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20372,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20441,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31376,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20375,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20374,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20377,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20394,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20425,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20399,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31374,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31375,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31373,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20417,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31381,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20424,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20404,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20396,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20511,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31378,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31379,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20512,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20390,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20475,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20458,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31422,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20760,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20405,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20440,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20457,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20464,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20762,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20553,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20753,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20552,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20415,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20380,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20378,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20839,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20493,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20520,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20376,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20507,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20754,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20385,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20551,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20401,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20477,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20476,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20850,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20514,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20416,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20395,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20412,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20461,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20407,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20450,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20503,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20381,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20473,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20406,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20382,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20467,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20490,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20392,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20761,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20452,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20398,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20533,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20384,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20852,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20474,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31377,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20510,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20487,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20408,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20454,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20389,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20488,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20402,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20547,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20442,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20397,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20470,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20472,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20400,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20388,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31380,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20393,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20411,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20534,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20455,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20391,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20410,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20446,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20462,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20448,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20456,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20379,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20465,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20751,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20536,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20463,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20418,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20849,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20449,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20453,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20469,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20403,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20535,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20494,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20444,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20383,
+                  "apmData": []
+                },
+                {
+                  "actionId": 29911,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20509,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20413,
+                  "apmData": []
+                },
+                {
+                  "actionId": 29882,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20430,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20851,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20451,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20468,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20447,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20471,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20752,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20466,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20386,
+                  "apmData": []
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 126
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:03 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionId": 20421,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20372,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20441,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31376,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20375,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20374,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20377,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20394,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20425,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20399,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31374,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31375,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31373,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20417,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31381,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20424,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20404,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20396,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20511,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31378,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31379,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20512,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20390,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20475,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20458,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31422,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20760,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20405,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20440,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20457,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20464,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20762,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20553,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20753,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20552,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20415,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20380,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20378,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20839,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20493,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20520,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20376,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20507,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20754,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20385,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20551,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20401,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20477,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20476,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20850,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20514,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20416,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20395,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20412,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20461,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20407,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20450,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20503,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20381,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20473,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20406,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20382,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20467,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20490,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20392,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20761,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20452,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20398,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20533,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20384,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20852,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20474,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31377,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20510,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20487,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20408,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20454,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20389,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20488,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20402,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20547,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20442,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20397,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20470,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20472,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20400,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20388,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31380,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20393,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20411,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20534,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20455,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20391,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20410,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20446,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20462,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20448,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20456,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20379,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20465,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20751,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20536,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20463,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20418,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20849,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20449,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20453,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20469,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20403,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20535,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20494,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20444,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20383,
+                  "apmData": []
+                },
+                {
+                  "actionId": 29911,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20509,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20413,
+                  "apmData": []
+                },
+                {
+                  "actionId": 29882,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20430,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20851,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20451,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20468,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20447,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20471,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20752,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20466,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20386,
+                  "apmData": []
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 126
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:22 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionId": 20421,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20372,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20441,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31376,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20375,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20374,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20377,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20394,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20425,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20399,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31374,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31375,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31373,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20417,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31381,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20424,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20404,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20396,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20511,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31378,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31379,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20512,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20390,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20475,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20458,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31422,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20760,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20405,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20440,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20457,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20464,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20762,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20553,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20753,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20552,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20415,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20380,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20378,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20839,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20493,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20520,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20376,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20507,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20754,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20385,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20551,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20401,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20477,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20476,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20850,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20514,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20416,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20395,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20412,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20461,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20407,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20450,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20503,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20381,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20473,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20406,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20382,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20467,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20490,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20392,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20761,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20452,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20398,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20533,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20384,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20852,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20474,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31377,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20510,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20487,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20408,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20454,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20389,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20488,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20402,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20547,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20442,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20397,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20470,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20472,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20400,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20388,
+                  "apmData": []
+                },
+                {
+                  "actionId": 31380,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20393,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20411,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20534,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20455,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20391,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20410,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20446,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20462,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20448,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20456,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20379,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20465,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20751,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20536,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20463,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20418,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20849,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20449,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20453,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20469,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20403,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20535,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20494,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20444,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20383,
+                  "apmData": []
+                },
+                {
+                  "actionId": 29911,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20509,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20413,
+                  "apmData": []
+                },
+                {
+                  "actionId": 29882,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20430,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20851,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20451,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20468,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20447,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20471,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20752,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20466,
+                  "apmData": []
+                },
+                {
+                  "actionId": 20386,
+                  "apmData": []
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 126
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:42:39 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 8
+      }
+    }
+  },
+  "path": "/server-api/webaction/list/actionItemLists",
+  "relative_path": "webaction/list/actionItemLists"
+}

@@ -1,0 +1,525 @@
+{
+  "count_seen": 3,
+  "first_seen": "2026-04-03T19:59:50+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 3
+  },
+  "last_seen": "2026-04-03T20:00:04+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.20:6379/5\",\"componentSubtype\":\"Redis\",\"componentType\":\"NoSQL\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 3,
+      "first_seen": "2026-04-03T19:59:50+08:00",
+      "inference_basis": [
+        "path=graph/component/queryNosqlGraph"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T20:00:04+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 3
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1065",
+          "componentName": "10.190.22.20:6379/5",
+          "componentSubtype": "Redis",
+          "componentType": "NoSQL",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/graph/component/queryNosqlGraph -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&bizSystemId=1065&componentSubtype=Redis&componentType=NoSQL&componentName=10.190.22.20%3A6379%2F5&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/graph/component/queryNosqlGraph"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 3
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T19:59:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/component/queryNosqlGraph"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T19:59:51+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/component/queryNosqlGraph"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:04+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/component/queryNosqlGraph"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "layout": "tree",
+              "linkeDataArray": [
+                {
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "response": 0.0,
+                  "throught": 0.04,
+                  "to": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]"
+                },
+                {
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+                  "response": 1.0,
+                  "throught": 0.22,
+                  "to": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]"
+                }
+              ],
+              "nodeDataArray": [
+                {
+                  "figure": "Circle",
+                  "fill": "#43AA93",
+                  "graphId": 9831,
+                  "id": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "Redis/10.190.22.20:6379/5",
+                      "targetValue": null
+                    },
+                    "name": "10.190.22.20:6379/5",
+                    "subType": 21
+                  },
+                  "show": 1,
+                  "type": 15,
+                  "x": "0",
+                  "y": "0"
+                },
+                {
+                  "fill": "#43AA93",
+                  "graphId": 9832,
+                  "id": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "1645",
+                      "targetValue": null
+                    },
+                    "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "subType": 1
+                  },
+                  "show": 1,
+                  "type": 12,
+                  "x": "0",
+                  "y": "0"
+                },
+                {
+                  "fill": "#43AA93",
+                  "graphId": 9833,
+                  "id": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "1644",
+                      "targetValue": null
+                    },
+                    "name": "org.springframework.boot.loader.WarLauncher",
+                    "subType": 1
+                  },
+                  "show": 1,
+                  "type": 12,
+                  "x": "0",
+                  "y": "0"
+                }
+              ],
+              "scale": "0.85"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:41 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "layout": "tree",
+              "linkeDataArray": [
+                {
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "response": 0.0,
+                  "throught": 0.04,
+                  "to": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]"
+                },
+                {
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+                  "response": 1.0,
+                  "throught": 0.22,
+                  "to": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]"
+                }
+              ],
+              "nodeDataArray": [
+                {
+                  "figure": "Circle",
+                  "fill": "#43AA93",
+                  "graphId": 9831,
+                  "id": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "Redis/10.190.22.20:6379/5",
+                      "targetValue": null
+                    },
+                    "name": "10.190.22.20:6379/5",
+                    "subType": 21
+                  },
+                  "loc": "74.65982649382639 230",
+                  "show": 1,
+                  "type": 15,
+                  "x": "74.65982649382639",
+                  "y": "230"
+                },
+                {
+                  "fill": "#43AA93",
+                  "graphId": 9832,
+                  "id": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "1645",
+                      "targetValue": null
+                    },
+                    "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "subType": 1
+                  },
+                  "loc": "69.65982649382639 4",
+                  "show": 1,
+                  "type": 12,
+                  "x": "69.65982649382639",
+                  "y": "4"
+                },
+                {
+                  "fill": "#43AA93",
+                  "graphId": 9833,
+                  "id": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "1644",
+                      "targetValue": null
+                    },
+                    "name": "org.springframework.boot.loader.WarLauncher",
+                    "subType": 1
+                  },
+                  "loc": "282.17548625638153 4",
+                  "show": 1,
+                  "type": 12,
+                  "x": "282.17548625638153",
+                  "y": "4"
+                }
+              ],
+              "scale": "0.92203"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:42 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "layout": "tree",
+              "linkeDataArray": [
+                {
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "response": 0.0,
+                  "throught": 0.04,
+                  "to": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]"
+                },
+                {
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+                  "response": 1.0,
+                  "throught": 0.22,
+                  "to": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]"
+                }
+              ],
+              "nodeDataArray": [
+                {
+                  "figure": "Circle",
+                  "fill": "#43AA93",
+                  "graphId": 9831,
+                  "id": "1065_0_0_NoSQL_Redis_[10.190.22.20:6379/5]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "Redis/10.190.22.20:6379/5",
+                      "targetValue": null
+                    },
+                    "name": "10.190.22.20:6379/5",
+                    "subType": 21
+                  },
+                  "loc": "74.65982649382639 230",
+                  "show": 1,
+                  "type": 15,
+                  "x": "74.65982649382639",
+                  "y": "230"
+                },
+                {
+                  "fill": "#43AA93",
+                  "graphId": 9832,
+                  "id": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "1645",
+                      "targetValue": null
+                    },
+                    "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "subType": 1
+                  },
+                  "loc": "69.65982649382639 4",
+                  "show": 1,
+                  "type": 12,
+                  "x": "69.65982649382639",
+                  "y": "4"
+                },
+                {
+                  "fill": "#43AA93",
+                  "graphId": 9833,
+                  "id": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "1644",
+                      "targetValue": null
+                    },
+                    "name": "org.springframework.boot.loader.WarLauncher",
+                    "subType": 1
+                  },
+                  "loc": "282.17548625638153 4",
+                  "show": 1,
+                  "type": 12,
+                  "x": "282.17548625638153",
+                  "y": "4"
+                }
+              ],
+              "scale": "0.92203"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:55 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 3
+      }
+    }
+  },
+  "path": "/server-api/graph/component/queryNosqlGraph",
+  "relative_path": "graph/component/queryNosqlGraph"
+}

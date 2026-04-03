@@ -1,0 +1,415 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T15:40:09+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T15:40:09+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.queryTimestamp",
+            "body.timePeriod",
+            "body.traceId"
+          ],
+          "example": {
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:20",
+            "filterList": "Service,Exception,External,Database,NoSQL,Pool,MQ,Code,Dataitem",
+            "lang": "zh_CN",
+            "queryTimestamp": "1775189880922",
+            "timePeriod": "30",
+            "traceId": "1746761396"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"filterList\":\"Service,Exception,External,Database,NoSQL,Pool,MQ,Code,Dataitem\",\"lang\":\"zh_CN\",\"queryTimestamp\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\",\"traceId\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "filterList",
+              "lang",
+              "queryTimestamp",
+              "timePeriod",
+              "traceId"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "filterList": "Service,Exception,External,Database,NoSQL,Pool,MQ,Code,Dataitem",
+            "lang": "zh_CN",
+            "queryTimestamp": "<DYNAMIC>",
+            "timePeriod": "<DYNAMIC>",
+            "traceId": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T15:40:09+08:00",
+      "inference_basis": [
+        "path=action/trace/detail"
+      ],
+      "inferred_purpose": "Likely related to trace / detail",
+      "last_seen": "2026-04-03T15:40:09+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1062",
+          "endTime": "2026-04-03 12:20",
+          "filterList": "Service,Exception,External,Database,NoSQL,Pool,MQ,Code,Dataitem",
+          "lang": "zh_CN",
+          "queryTimestamp": "1775189880922",
+          "timePeriod": "30",
+          "traceId": "1746761396"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.queryTimestamp",
+          "body.timePeriod",
+          "body.traceId"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/action/trace/detail -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&traceId=1746761396&bizSystemId=1062&queryTimestamp=1775189880922&filterList=Service%2CException%2CExternal%2CDatabase%2CNoSQL%2CPool%2CMQ%2CCode%2CDataitem&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/action/trace/detail"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:20",
+            "filterList": "Service,Exception,External,Database,NoSQL,Pool,MQ,Code,Dataitem",
+            "lang": "zh_CN",
+            "queryTimestamp": "1775189880922",
+            "timePeriod": "30",
+            "traceId": "1746761396"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:09+08:00",
+          "url": "http://169.169.173.25:8080/server-api/action/trace/detail"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "actionAlias": "SpringController/v1/cs/configs/listener (POST)",
+              "actionDuration": 29501.392,
+              "actionGuid": "5cb5d500ea2740e9",
+              "actionId": 10860,
+              "actionName": "SpringController/v1/cs/configs/listener (POST)",
+              "actionTraceFlag": 65,
+              "actionType": "TX",
+              "applicationId": 1606,
+              "applicationName": "com.alibaba.nacos.Nacos",
+              "bizSystemId": 1062,
+              "bizSystemName": "共用应用",
+              "businessId": "",
+              "duration": 29501.392,
+              "errorCount": 0,
+              "errorFnNo": 0,
+              "errorName": "",
+              "header": {
+                "threadId": "201"
+              },
+              "id": "1746761396",
+              "instanceId": 2625,
+              "instanceName": "localhost.localdomain:8848",
+              "ip": "169.169.173.192",
+              "language": "JAVA",
+              "method": "POST",
+              "methodTotalParam": {
+                "filterMethodTotal": 7,
+                "methodTotal": 6
+              },
+              "percentileTime": 0.0,
+              "refId": "",
+              "requestHeader": {
+                "User-Agent": "Java/1.8.0_382"
+              },
+              "requestId": "5cb5d500ea2740e9",
+              "requestServiceFlow": {
+                "actionGuid": "5cb5d500ea2740e9",
+                "actionGuids": [],
+                "applicationId": 1606,
+                "bizSystemId": 1062,
+                "callTotalCount": 1.0,
+                "children": [],
+                "cross": "U|0,1606",
+                "crossAndActionId": "U|0,1606-10860",
+                "crossList": [],
+                "currentCross": "1606",
+                "currentCrossAndActionId": "1606-10860",
+                "currentCrossItems": [
+                  {
+                    "displayName": "com.alibaba.nacos.Nacos",
+                    "icon": "Java",
+                    "value": "1606"
+                  }
+                ],
+                "durationAvg": 29501.392,
+                "durationTotal": 29501.392,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "request",
+                "id": 1,
+                "level": 1,
+                "nodeKey": "nodeKey-1-1",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 0,
+                "request": {
+                  "id": 10860,
+                  "name": "SpringController/v1/cs/configs/listener (POST)"
+                },
+                "requestTime": 1775189880922000,
+                "requestTotalCount": 1,
+                "seq": -1,
+                "serviceId": "10860",
+                "serviceName": "SpringController/v1/cs/configs/listener (POST)",
+                "serviceType": "$$request",
+                "serviceVendor": "Java",
+                "traceGuid": "5cb5d500ea2740e9",
+                "txNode": true
+              },
+              "respTime": 29501.392,
+              "serviceFlow": {
+                "actionGuid": "5cb5d500ea2740e9",
+                "actionGuids": [],
+                "applicationId": 1606,
+                "bizSystemId": 1062,
+                "callTotalCount": 1.0,
+                "children": [],
+                "cross": "U|0,1606",
+                "crossAndActionId": "U|0,1606-10860",
+                "crossList": [
+                  "U|0,1606"
+                ],
+                "currentCross": "1606",
+                "currentCrossAndActionId": "1606-10860",
+                "currentCrossItems": [
+                  {
+                    "displayName": "com.alibaba.nacos.Nacos",
+                    "icon": "Java",
+                    "value": "1606"
+                  }
+                ],
+                "durationAvg": 29501.392,
+                "durationTotal": 29501.392,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Java",
+                "id": 1,
+                "level": 1,
+                "nodeKey": "nodeKey-1-1",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 0,
+                "request": {
+                  "id": 10860,
+                  "name": "SpringController/v1/cs/configs/listener (POST)"
+                },
+                "requestTime": 1775189880922000,
+                "requestTotalCount": 1,
+                "seq": -1,
+                "serviceId": "1606",
+                "serviceName": "com.alibaba.nacos.Nacos",
+                "serviceType": "$$application",
+                "serviceVendor": "Java",
+                "traceGuid": "5cb5d500ea2740e9",
+                "txNode": true
+              },
+              "showSourceCode": 0,
+              "snapshotTraceIds": [],
+              "status": "200",
+              "suspectedProblemList": [
+                {
+                  "actionGuid": "5cb5d500ea2740e9",
+                  "count": 0,
+                  "exclusiveTime": 0.776,
+                  "metricName": "com.alibaba.nacos.config.server.controller.ConfigController.listener",
+                  "metricType": "CODE",
+                  "seq": 5,
+                  "type": "maxExclusiveTime"
+                }
+              ],
+              "third": false,
+              "threadName": "http-nio-8848-exec-7",
+              "timeLine": {
+                "actionGuid": "5cb5d500ea2740e9",
+                "callerApplication": {
+                  "id": 1606,
+                  "name": "com.alibaba.nacos.Nacos"
+                },
+                "callerBizSystem": {
+                  "id": 1062,
+                  "name": "共用应用"
+                },
+                "callerInstance": {
+                  "id": 2625,
+                  "name": "localhost.localdomain:8848"
+                },
+                "clasz": "<REDACTED>",
+                "entry": 0.0,
+                "env": {
+                  "threadId": "201",
+                  "threadName": "http-nio-8848-exec-7"
+                },
+                "exclusiveRatio": 0.0,
+                "exclusiveTime": 1.106,
+                "exit": 1.106,
+                "isfold": true,
+                "method": "6个折叠的 Span",
+                "methodStack": [
+                  "javax.servlet.ServletRequestListener.requestInitialized",
+                  "com.alibaba.nacos.config.server.filter.NacosWebFilter.doFilter",
+                  "com.alibaba.nacos.core.auth.AuthFilter.doFilter",
+                  "com.alibaba.nacos.console.filter.XssFilter.doFilter",
+                  "javax.servlet.http.HttpServlet.service",
+                  "com.alibaba.nacos.config.server.controller.ConfigController.listener"
+                ],
+                "metricName": "javax.servlet.ServletRequestListener.requestInitialized",
+                "metricType": "CODE",
+                "netStartTime": 1775189880922.0,
+                "offset": 0.0,
+                "repeatTimes": 1,
+                "request": {
+                  "id": 10860,
+                  "name": "SpringController/v1/cs/configs/listener (POST)"
+                },
+                "seq": 0,
+                "startTime": 1775189880922,
+                "subTimeLines": [],
+                "timeLineLength": 1.106,
+                "totalTime": 1.106
+              },
+              "timestamp": 1775189880922,
+              "topology": {
+                "lines": [],
+                "nodes": [
+                  {
+                    "actions": [
+                      {
+                        "action": {
+                          "id": 10860,
+                          "name": "SpringController/v1/cs/configs/listener (POST)"
+                        },
+                        "actionType": "TX",
+                        "averageTime": 29501.392,
+                        "count": 1,
+                        "errorCount": 0,
+                        "totalTime": 29501.392
+                      }
+                    ],
+                    "application": {
+                      "id": 1606,
+                      "name": "com.alibaba.nacos.Nacos"
+                    },
+                    "beginNode": true,
+                    "errors": [],
+                    "figure": null,
+                    "hasDeleted": false,
+                    "id": "1606",
+                    "info": {
+                      "imgType": null,
+                      "subType": 1
+                    },
+                    "instances": [
+                      {
+                        "id": 2625,
+                        "name": "localhost.localdomain:8848"
+                      }
+                    ],
+                    "language": "JAVA",
+                    "name": "com.alibaba.nacos.Nacos",
+                    "type": 12
+                  }
+                ]
+              },
+              "totalTime": 1.03,
+              "traceGuid": "5cb5d500ea2740e9",
+              "traceStatus": true,
+              "uri": "/nacos/v1/cs/configs/listener",
+              "url": "http://169.169.173.192:8848/nacos/v1/cs/configs/listener",
+              "userId": ""
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:00 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/action/trace/detail",
+  "relative_path": "action/trace/detail"
+}

@@ -1,0 +1,500 @@
+{
+  "count_seen": 11,
+  "first_seen": "2026-04-03T15:40:49+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 11
+  },
+  "last_seen": "2026-04-03T20:00:14+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1064",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "1631",
+            "targetType": "SAPP",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetName\":\"1631\",\"targetType\":\"SAPP\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "targetName",
+              "targetType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetName": "1631",
+            "targetType": "SAPP",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "1646",
+            "targetType": "SAPP",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetName\":\"1646\",\"targetType\":\"SAPP\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "targetName",
+              "targetType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetName": "1646",
+            "targetType": "SAPP",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "1648",
+            "targetType": "SAPP",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetName\":\"1648\",\"targetType\":\"SAPP\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "targetName",
+              "targetType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetName": "1648",
+            "targetType": "SAPP",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "20386",
+            "targetType": "IF",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetName\":\"20386\",\"targetType\":\"IF\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "targetName",
+              "targetType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetName": "20386",
+            "targetType": "IF",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "20441",
+            "targetType": "TX",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetName\":\"20441\",\"targetType\":\"TX\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "targetName",
+              "targetType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetName": "20441",
+            "targetType": "TX",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "MySQL/10.190.22.21:3306",
+            "targetType": "DB",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetName\":\"MySQL/10.190.22.21:3306\",\"targetType\":\"DB\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "targetName",
+              "targetType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetName": "MySQL/10.190.22.21:3306",
+            "targetType": "DB",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "Redis/10.190.22.20:6379/5",
+            "targetType": "NOSQL",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetName\":\"Redis/10.190.22.20:6379/5\",\"targetType\":\"NOSQL\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "targetName",
+              "targetType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetName": "Redis/10.190.22.20:6379/5",
+            "targetType": "NOSQL",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 11,
+      "first_seen": "2026-04-03T15:40:49+08:00",
+      "inference_basis": [
+        "path=health/simpleTrace"
+      ],
+      "inferred_purpose": "Likely related to health/simpleTrace",
+      "last_seen": "2026-04-03T20:00:14+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 11
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 11,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1059",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "targetName": "1648",
+          "targetType": "SAPP",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/health/simpleTrace -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'endTime=2026-04-03+12%3A20&timePeriod=30&targetName=1648&targetType=SAPP&bizSystemId=1059&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/health/simpleTrace"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 11
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "1648",
+            "targetType": "SAPP",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:49+08:00",
+          "url": "http://169.169.173.25:8080/server-api/health/simpleTrace"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "1646",
+            "targetType": "SAPP",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:41:10+08:00",
+          "url": "http://169.169.173.25:8080/server-api/health/simpleTrace"
+        },
+        {
+          "body": {
+            "bizSystemId": "1064",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "targetName": "1631",
+            "targetType": "SAPP",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:41:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/health/simpleTrace"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": [
+              {
+                "actualBeginTime": null,
+                "beginTime": 1775188200000,
+                "endTime": 1775190000000,
+                "eventLevel": 0,
+                "eventType": 0
+              }
+            ]
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:40 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": [
+              {
+                "actualBeginTime": null,
+                "beginTime": 1775188200000,
+                "endTime": 1775190000000,
+                "eventLevel": 0,
+                "eventType": 0
+              }
+            ]
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:41:02 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": [
+              {
+                "actualBeginTime": null,
+                "beginTime": 1775188200000,
+                "endTime": 1775190000000,
+                "eventLevel": 0,
+                "eventType": 0
+              }
+            ]
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:41:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 11
+      }
+    }
+  },
+  "path": "/server-api/health/simpleTrace",
+  "relative_path": "health/simpleTrace"
+}

@@ -1,0 +1,267 @@
+{
+  "count_seen": 5,
+  "first_seen": "2026-04-03T15:40:49+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 5
+  },
+  "last_seen": "2026-04-03T15:41:32+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 5,
+          "dynamic_fields": [
+            "body.targetId"
+          ],
+          "example": {
+            "action": "getTagByTargetId",
+            "lang": "zh_CN",
+            "targetId": "1648",
+            "targetSource": "application"
+          },
+          "key": "{\"action\":\"getTagByTargetId\",\"lang\":\"zh_CN\",\"targetId\":\"<DYNAMIC>\",\"targetSource\":\"application\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "lang",
+              "targetId",
+              "targetSource"
+            ]
+          },
+          "normalized_example": {
+            "action": "getTagByTargetId",
+            "lang": "zh_CN",
+            "targetId": "<DYNAMIC>",
+            "targetSource": "application"
+          }
+        }
+      ],
+      "count_seen": 5,
+      "first_seen": "2026-04-03T15:40:49+08:00",
+      "inference_basis": [
+        "path=graph/tag/receive",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T15:41:32+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 5
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 5,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "getTagByTargetId"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"getTagByTargetId\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "getTagByTargetId"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "action": "getTagByTargetId",
+          "lang": "zh_CN",
+          "targetId": "1648",
+          "targetSource": "application"
+        },
+        "dynamic_fields": [
+          "body.targetId"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/tag/receive?metric=getTagByTargetId&lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"action\":\"getTagByTargetId\",\"lang\":\"zh_CN\",\"targetId\":\"1648\",\"targetSource\":\"application\"}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/tag/receive?metric=getTagByTargetId&lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 5
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "action": "getTagByTargetId",
+            "lang": "zh_CN",
+            "targetId": "1648",
+            "targetSource": "application"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "metric": "getTagByTargetId"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:49+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/tag/receive?metric=getTagByTargetId&lang=zh_CN"
+        },
+        {
+          "body": {
+            "action": "getTagByTargetId",
+            "lang": "zh_CN",
+            "targetId": "1646",
+            "targetSource": "application"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "metric": "getTagByTargetId"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:41:10+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/tag/receive?metric=getTagByTargetId&lang=zh_CN"
+        },
+        {
+          "body": {
+            "action": "getTagByTargetId",
+            "lang": "zh_CN",
+            "targetId": "1631",
+            "targetSource": "application"
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "metric": "getTagByTargetId"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:41:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/tag/receive?metric=getTagByTargetId&lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": [],
+            "requestId": "fa533d77-84a8-397f-b6f1-acfe55029c3e",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:40 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": [],
+            "requestId": "0f586cf8-5717-e4c3-eb6e-0c60dde01b75",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:41:02 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": [],
+            "requestId": "2dc84e2b-66a7-0ea0-6ae4-d397f756b207",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:41:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 5
+      }
+    }
+  },
+  "path": "/server-api/graph/tag/receive",
+  "relative_path": "graph/tag/receive"
+}

@@ -1,0 +1,304 @@
+{
+  "count_seen": 2,
+  "first_seen": "2026-04-03T19:59:41+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 2
+  },
+  "last_seen": "2026-04-03T20:00:09+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "schema": "false",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentType\":\"Database\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"schema\":\"false\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "schema",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "schema": "false",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 2,
+      "first_seen": "2026-04-03T19:59:41+08:00",
+      "inference_basis": [
+        "path=Database/list"
+      ],
+      "inferred_purpose": "Likely related to list",
+      "last_seen": "2026-04-03T20:00:09+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 2
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1065",
+          "componentType": "Database",
+          "dataType": "COMP",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "schema": "false",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/Database/list -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'componentType=Database&bizSystemId=1065&endTime=2026-04-03+12%3A20&timePeriod=30&dataType=COMP&schema=false&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/Database/list"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 2
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "schema": "false",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T19:59:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/Database/list"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "schema": "false",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:09+08:00",
+          "url": "http://169.169.173.25:8080/server-api/Database/list"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": null,
+                  "actionId": 0,
+                  "actionName": null,
+                  "appName": null,
+                  "applicationId": -1,
+                  "bizSystemId": 1065,
+                  "bizSystemName": "集团法务",
+                  "callMode": -1,
+                  "callModeStr": "消费者",
+                  "componentName": "10.190.22.21:3306",
+                  "componentNameSecondary": null,
+                  "componentSubtype": "MySQL",
+                  "connTime": 0.0,
+                  "connUsed": 1,
+                  "count": 60153,
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "exclusiveRespTime": 0,
+                  "health": 0,
+                  "healthInfo": null,
+                  "instanceId": -1,
+                  "instanceName": null,
+                  "maxExecTime": 0.0,
+                  "maxThrought": 0.0,
+                  "opName": null,
+                  "opType": null,
+                  "payload": 0.0,
+                  "payloadUnit": null,
+                  "productCount": 0,
+                  "productPayload": 0.0,
+                  "productthrought": 0.0,
+                  "respTime": 8.0,
+                  "schemas": null,
+                  "throught": 33.42,
+                  "totalResptime": 863355,
+                  "traceCount": 36
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 1
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": null,
+                  "actionId": 0,
+                  "actionName": null,
+                  "appName": null,
+                  "applicationId": -1,
+                  "bizSystemId": 1065,
+                  "bizSystemName": "集团法务",
+                  "callMode": -1,
+                  "callModeStr": "消费者",
+                  "componentName": "10.190.22.21:3306",
+                  "componentNameSecondary": null,
+                  "componentSubtype": "MySQL",
+                  "connTime": 0.0,
+                  "connUsed": 1,
+                  "count": 60153,
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "exclusiveRespTime": 0,
+                  "health": 0,
+                  "healthInfo": null,
+                  "instanceId": -1,
+                  "instanceName": null,
+                  "maxExecTime": 0.0,
+                  "maxThrought": 0.0,
+                  "opName": null,
+                  "opType": null,
+                  "payload": 0.0,
+                  "payloadUnit": null,
+                  "productCount": 0,
+                  "productPayload": 0.0,
+                  "productthrought": 0.0,
+                  "respTime": 8.0,
+                  "schemas": null,
+                  "throught": 33.42,
+                  "totalResptime": 863355,
+                  "traceCount": 36
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 1
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:00:00 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 2
+      }
+    }
+  },
+  "path": "/server-api/Database/list",
+  "relative_path": "Database/list"
+}

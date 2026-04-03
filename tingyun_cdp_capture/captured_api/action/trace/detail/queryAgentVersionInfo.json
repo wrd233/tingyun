@@ -1,0 +1,249 @@
+{
+  "count_seen": 4,
+  "first_seen": "2026-04-03T15:40:10+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 4
+  },
+  "last_seen": "2026-04-03T20:03:01+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "body.instanceId"
+          ],
+          "example": {
+            "instanceId": "2625",
+            "lang": "zh_CN"
+          },
+          "key": "{\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "instanceId",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "count_seen": 4,
+      "first_seen": "2026-04-03T15:40:10+08:00",
+      "inference_basis": [
+        "path=action/trace/detail/queryAgentVersionInfo"
+      ],
+      "inferred_purpose": "Likely related to trace / detail",
+      "last_seen": "2026-04-03T20:03:01+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 4
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 4,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "instanceId": "2625",
+          "lang": "zh_CN"
+        },
+        "dynamic_fields": [
+          "body.instanceId"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/action/trace/detail/queryAgentVersionInfo -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'instanceId=2625&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/action/trace/detail/queryAgentVersionInfo"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 4
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "instanceId": "2625",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:10+08:00",
+          "url": "http://169.169.173.25:8080/server-api/action/trace/detail/queryAgentVersionInfo"
+        },
+        {
+          "body": {
+            "instanceId": "2745",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:01:15+08:00",
+          "url": "http://169.169.173.25:8080/server-api/action/trace/detail/queryAgentVersionInfo"
+        },
+        {
+          "body": {
+            "instanceId": "2745",
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:03:01+08:00",
+          "url": "http://169.169.173.25:8080/server-api/action/trace/detail/queryAgentVersionInfo"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "agentVersion": "3.7.1.3",
+            "hostIp": "169.169.173.192",
+            "hostName": "localhost.localdomain",
+            "idc": "default",
+            "instanceId": 2625,
+            "instanceName": "localhost.localdomain:8848",
+            "oneAgentVersion": "2.6.3.0",
+            "os": "linux",
+            "stackSnapshotEnabled": false
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:01 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "agentVersion": "3.7.1.3",
+            "hostIp": "10.190.22.18",
+            "hostName": "nbyd-jtfw-server1",
+            "idc": "default",
+            "instanceId": 2745,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "oneAgentVersion": "2.6.3.0",
+            "os": "linux",
+            "stackSnapshotEnabled": false
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:01:06 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "agentVersion": "3.7.1.3",
+            "hostIp": "10.190.22.18",
+            "hostName": "nbyd-jtfw-server1",
+            "idc": "default",
+            "instanceId": 2745,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "oneAgentVersion": "2.6.3.0",
+            "os": "linux",
+            "stackSnapshotEnabled": false
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:02:52 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 4
+      }
+    }
+  },
+  "path": "/server-api/action/trace/detail/queryAgentVersionInfo",
+  "relative_path": "action/trace/detail/queryAgentVersionInfo"
+}

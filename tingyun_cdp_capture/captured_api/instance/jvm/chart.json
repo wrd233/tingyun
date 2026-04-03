@@ -1,0 +1,1590 @@
+{
+  "count_seen": 8,
+  "first_seen": "2026-04-03T15:40:16+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 8
+  },
+  "last_seen": "2026-04-03T15:40:17+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:48:00",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "metricCategory": "Heap",
+            "metricName": "Used,Committed,Max",
+            "metricScope": "Memory",
+            "name": "Heap Usage",
+            "onlyQueryType": "false",
+            "timePeriod": "60"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"metricCategory\":\"Heap\",\"metricName\":\"Used,Committed,Max\",\"metricScope\":\"Memory\",\"name\":\"Heap Usage\",\"onlyQueryType\":\"false\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "instanceId",
+              "lang",
+              "metricCategory",
+              "metricName",
+              "metricScope",
+              "name",
+              "onlyQueryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "metricCategory": "Heap",
+            "metricName": "Used,Committed,Max",
+            "metricScope": "Memory",
+            "name": "Heap Usage",
+            "onlyQueryType": "false",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:48:00",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "metricCategory": "NULL",
+            "metricName": "Count",
+            "metricScope": "Thread",
+            "name": "Threads",
+            "onlyQueryType": "false",
+            "timePeriod": "60"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"metricCategory\":\"NULL\",\"metricName\":\"Count\",\"metricScope\":\"Thread\",\"name\":\"Threads\",\"onlyQueryType\":\"false\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "instanceId",
+              "lang",
+              "metricCategory",
+              "metricName",
+              "metricScope",
+              "name",
+              "onlyQueryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "metricCategory": "NULL",
+            "metricName": "Count",
+            "metricScope": "Thread",
+            "name": "Threads",
+            "onlyQueryType": "false",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:48:00",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "metricName": "ActiveSessions,ExpiredSessions,RejectedSessions,AverageAliveTime",
+            "metricScope": "Session",
+            "name": "Session",
+            "onlyQueryType": "false",
+            "timePeriod": "60"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"metricName\":\"ActiveSessions,ExpiredSessions,RejectedSessions,AverageAliveTime\",\"metricScope\":\"Session\",\"name\":\"Session\",\"onlyQueryType\":\"false\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "instanceId",
+              "lang",
+              "metricName",
+              "metricScope",
+              "name",
+              "onlyQueryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "metricName": "ActiveSessions,ExpiredSessions,RejectedSessions,AverageAliveTime",
+            "metricScope": "Session",
+            "name": "Session",
+            "onlyQueryType": "false",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1606",
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:48:00",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "metricName": "Count,Time",
+            "metricScope": "GC",
+            "name": "GC",
+            "onlyQueryType": "false",
+            "timePeriod": "60"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"metricName\":\"Count,Time\",\"metricScope\":\"GC\",\"name\":\"GC\",\"onlyQueryType\":\"false\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "instanceId",
+              "lang",
+              "metricName",
+              "metricScope",
+              "name",
+              "onlyQueryType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "metricName": "Count,Time",
+            "metricScope": "GC",
+            "name": "GC",
+            "onlyQueryType": "false",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 8,
+      "first_seen": "2026-04-03T15:40:16+08:00",
+      "inference_basis": [
+        "path=instance/jvm/chart"
+      ],
+      "inferred_purpose": "Likely related to instance/jvm/chart",
+      "last_seen": "2026-04-03T15:40:17+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 8
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 8,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "applicationId": "1606",
+          "bizSystemId": "1062",
+          "endTime": "2026-04-03 12:48:00",
+          "instanceId": "2625",
+          "lang": "zh_CN",
+          "metricName": "ActiveSessions,ExpiredSessions,RejectedSessions,AverageAliveTime",
+          "metricScope": "Session",
+          "name": "Session",
+          "onlyQueryType": "false",
+          "timePeriod": "60"
+        },
+        "dynamic_fields": [
+          "body.applicationId",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.instanceId",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/instance/jvm/chart -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'name=Session&metricScope=Session&metricName=ActiveSessions%2CExpiredSessions%2CRejectedSessions%2CAverageAliveTime&onlyQueryType=false&timePeriod=60&endTime=2026-04-03+12%3A48%3A00&bizSystemId=1062&applicationId=1606&instanceId=2625&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/instance/jvm/chart"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 8
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "applicationId": "1606",
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:48:00",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "metricName": "ActiveSessions,ExpiredSessions,RejectedSessions,AverageAliveTime",
+            "metricScope": "Session",
+            "name": "Session",
+            "onlyQueryType": "false",
+            "timePeriod": "60"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/instance/jvm/chart"
+        },
+        {
+          "body": {
+            "applicationId": "1606",
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:48:00",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "metricCategory": "NULL",
+            "metricName": "Count",
+            "metricScope": "Thread",
+            "name": "Threads",
+            "onlyQueryType": "false",
+            "timePeriod": "60"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/instance/jvm/chart"
+        },
+        {
+          "body": {
+            "applicationId": "1606",
+            "bizSystemId": "1062",
+            "endTime": "2026-04-03 12:48:00",
+            "instanceId": "2625",
+            "lang": "zh_CN",
+            "metricCategory": "Heap",
+            "metricName": "Used,Committed,Max",
+            "metricScope": "Memory",
+            "name": "Heap Usage",
+            "onlyQueryType": "false",
+            "timePeriod": "60"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/instance/jvm/chart"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {}
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "NULL": {
+                "code": 200,
+                "data": {
+                  "series": [
+                    {
+                      "data": [
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:48-04/03 11:49\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188080000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:49-04/03 11:50\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188140000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188260000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188320000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:53-04/03 11:54\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188380000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188440000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188500000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188560000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188620000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188680000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188740000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188860000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188920000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775188980000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189040000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:05-04/03 12:06\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189100000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189160000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189220000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189280000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189340000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189460000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189520000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189580000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189640000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189700000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189760000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189820000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189880000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775189940000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:21-04/03 12:22\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190060000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:22-04/03 12:23\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190120000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:23-04/03 12:24\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190180000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:24-04/03 12:25\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190240000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:25-04/03 12:26\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190300000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:26-04/03 12:27\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190360000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:27-04/03 12:28\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190420000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:28-04/03 12:29\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190480000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:29-04/03 12:30\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190540000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:31-04/03 12:32\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190660000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:32-04/03 12:33\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190720000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:33-04/03 12:34\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190780000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:34-04/03 12:35\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190840000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:35-04/03 12:36\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190900000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:36-04/03 12:37\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775190960000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:37-04/03 12:38\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191020000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:38-04/03 12:39\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191080000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:39-04/03 12:40\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191140000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:41-04/03 12:42\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191260000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:42-04/03 12:43\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191320000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:43-04/03 12:44\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191380000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:44-04/03 12:45\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191440000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:45-04/03 12:46\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191500000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:46-04/03 12:47\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191560000,
+                          "y": 349.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:47-04/03 12:48\",\"data\":[{\"title\":\"平均值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最大值\",\"value\":349.00,\"unit\":\"\",\"scale\":2},{\"title\":\"最小值\",\"value\":349.00,\"unit\":\"\",\"scale\":2}]}",
+                          "x": 1775191620000,
+                          "y": 349.0
+                        }
+                      ],
+                      "name": "线程数",
+                      "type": "line",
+                      "yAxis": 0,
+                      "zIndex": 0
+                    }
+                  ],
+                  "yAxis": [
+                    {
+                      "opposite": false,
+                      "tickUnit": ""
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "Heap": {
+                "code": 200,
+                "data": {
+                  "series": [
+                    {
+                      "data": [
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:48-04/03 11:49\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188080000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:49-04/03 11:50\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188140000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188260000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188320000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:53-04/03 11:54\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188380000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188440000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188500000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188560000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188620000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188680000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188740000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188860000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188920000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188980000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189040000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:05-04/03 12:06\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189100000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189160000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189220000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189280000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189340000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189460000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189520000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189580000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189640000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189700000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189760000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189820000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189880000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189940000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:21-04/03 12:22\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190060000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:22-04/03 12:23\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190120000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:23-04/03 12:24\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190180000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:24-04/03 12:25\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190240000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:25-04/03 12:26\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190300000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:26-04/03 12:27\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190360000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:27-04/03 12:28\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190420000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:28-04/03 12:29\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190480000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:29-04/03 12:30\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190540000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:31-04/03 12:32\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190660000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:32-04/03 12:33\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190720000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:33-04/03 12:34\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190780000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:34-04/03 12:35\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190840000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:35-04/03 12:36\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190900000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:36-04/03 12:37\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190960000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:37-04/03 12:38\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191020000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:38-04/03 12:39\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191080000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:39-04/03 12:40\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191140000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:41-04/03 12:42\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191260000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:42-04/03 12:43\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191320000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:43-04/03 12:44\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191380000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:44-04/03 12:45\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191440000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:45-04/03 12:46\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191500000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:46-04/03 12:47\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191560000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:47-04/03 12:48\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191620000,
+                          "y": 511.0
+                        }
+                      ],
+                      "name": "Committed Heap",
+                      "type": "line",
+                      "yAxis": 0,
+                      "zIndex": 0
+                    },
+                    {
+                      "data": [
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:48-04/03 11:49\",\"data\":[{\"title\":\"平均值\",\"value\":307.57,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":414.01,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":194.69,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188080000,
+                          "y": 307.57
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:49-04/03 11:50\",\"data\":[{\"title\":\"平均值\",\"value\":312.62,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":436.99,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":194.58,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188140000,
+                          "y": 312.62
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"平均值\",\"value\":316.84,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":439.63,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":194.71,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188260000,
+                          "y": 316.84
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"平均值\",\"value\":314.60,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":444.60,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":202.84,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188320000,
+                          "y": 314.6
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:53-04/03 11:54\",\"data\":[{\"title\":\"平均值\",\"value\":331.09,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":444.40,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":221.23,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188380000,
+                          "y": 331.09
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"平均值\",\"value\":296.63,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":406.98,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":194.78,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188440000,
+                          "y": 296.63
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"平均值\",\"value\":331.57,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":445.20,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":221.44,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188500000,
+                          "y": 331.57
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"平均值\",\"value\":318.76,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":442.15,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":200.81,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188560000,
+                          "y": 318.76
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"平均值\",\"value\":330.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":445.24,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":217.77,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188620000,
+                          "y": 330.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"平均值\",\"value\":325.62,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":442.49,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":208.67,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188680000,
+                          "y": 325.62
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"平均值\",\"value\":309.97,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":423.12,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":197.76,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188740000,
+                          "y": 309.97
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"平均值\",\"value\":329.77,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":445.01,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":205.41,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188860000,
+                          "y": 329.77
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"平均值\",\"value\":334.84,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":444.39,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":226.79,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188920000,
+                          "y": 334.84
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"平均值\",\"value\":293.43,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":412.46,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":197.17,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188980000,
+                          "y": 293.43
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"平均值\",\"value\":305.30,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":419.48,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":201.34,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189040000,
+                          "y": 305.3
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:05-04/03 12:06\",\"data\":[{\"title\":\"平均值\",\"value\":323.29,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":436.39,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":213.71,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189100000,
+                          "y": 323.29
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"平均值\",\"value\":330.71,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":447.69,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":220.22,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189160000,
+                          "y": 330.71
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"平均值\",\"value\":307.01,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":423.81,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":196.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189220000,
+                          "y": 307.01
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"平均值\",\"value\":316.18,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":444.48,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":200.18,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189280000,
+                          "y": 316.18
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"平均值\",\"value\":303.01,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":405.31,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":198.40,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189340000,
+                          "y": 303.01
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"平均值\",\"value\":340.89,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":448.17,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":228.29,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189460000,
+                          "y": 340.89
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"平均值\",\"value\":322.50,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":447.80,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":196.55,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189520000,
+                          "y": 322.5
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"平均值\",\"value\":321.64,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":437.98,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":203.75,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189580000,
+                          "y": 321.64
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"平均值\",\"value\":327.70,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":439.41,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":216.43,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189640000,
+                          "y": 327.7
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"平均值\",\"value\":322.41,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":449.66,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":199.74,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189700000,
+                          "y": 322.41
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"平均值\",\"value\":312.06,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":434.62,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":200.30,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189760000,
+                          "y": 312.06
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"平均值\",\"value\":323.99,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":434.16,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":216.24,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189820000,
+                          "y": 323.99
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"平均值\",\"value\":309.51,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":442.64,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":200.81,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189880000,
+                          "y": 309.51
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"平均值\",\"value\":329.92,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":444.76,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":219.92,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189940000,
+                          "y": 329.92
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:21-04/03 12:22\",\"data\":[{\"title\":\"平均值\",\"value\":333.77,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":442.61,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":220.94,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190060000,
+                          "y": 333.77
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:22-04/03 12:23\",\"data\":[{\"title\":\"平均值\",\"value\":334.37,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":450.06,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":225.16,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190120000,
+                          "y": 334.37
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:23-04/03 12:24\",\"data\":[{\"title\":\"平均值\",\"value\":306.92,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":422.80,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":198.95,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190180000,
+                          "y": 306.92
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:24-04/03 12:25\",\"data\":[{\"title\":\"平均值\",\"value\":325.54,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":439.36,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":215.08,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190240000,
+                          "y": 325.54
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:25-04/03 12:26\",\"data\":[{\"title\":\"平均值\",\"value\":332.27,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":449.45,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":218.88,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190300000,
+                          "y": 332.27
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:26-04/03 12:27\",\"data\":[{\"title\":\"平均值\",\"value\":342.64,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":449.90,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":228.10,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190360000,
+                          "y": 342.64
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:27-04/03 12:28\",\"data\":[{\"title\":\"平均值\",\"value\":318.30,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":434.58,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":201.75,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190420000,
+                          "y": 318.3
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:28-04/03 12:29\",\"data\":[{\"title\":\"平均值\",\"value\":331.50,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":445.05,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":217.86,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190480000,
+                          "y": 331.5
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:29-04/03 12:30\",\"data\":[{\"title\":\"平均值\",\"value\":324.81,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":443.73,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":202.13,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190540000,
+                          "y": 324.81
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:31-04/03 12:32\",\"data\":[{\"title\":\"平均值\",\"value\":329.46,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":444.92,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":202.87,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190660000,
+                          "y": 329.46
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:32-04/03 12:33\",\"data\":[{\"title\":\"平均值\",\"value\":333.90,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":450.03,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":224.91,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190720000,
+                          "y": 333.9
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:33-04/03 12:34\",\"data\":[{\"title\":\"平均值\",\"value\":346.26,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":452.15,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":234.30,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190780000,
+                          "y": 346.26
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:34-04/03 12:35\",\"data\":[{\"title\":\"平均值\",\"value\":317.16,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":441.45,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":206.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190840000,
+                          "y": 317.16
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:35-04/03 12:36\",\"data\":[{\"title\":\"平均值\",\"value\":327.25,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":438.64,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":217.29,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190900000,
+                          "y": 327.25
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:36-04/03 12:37\",\"data\":[{\"title\":\"平均值\",\"value\":338.50,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":450.78,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":229.55,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190960000,
+                          "y": 338.5
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:37-04/03 12:38\",\"data\":[{\"title\":\"平均值\",\"value\":325.84,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":453.82,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":201.26,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191020000,
+                          "y": 325.84
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:38-04/03 12:39\",\"data\":[{\"title\":\"平均值\",\"value\":324.36,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":447.12,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":217.80,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191080000,
+                          "y": 324.36
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:39-04/03 12:40\",\"data\":[{\"title\":\"平均值\",\"value\":333.10,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":443.18,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":224.95,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191140000,
+                          "y": 333.1
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:41-04/03 12:42\",\"data\":[{\"title\":\"平均值\",\"value\":330.82,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":440.92,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":217.34,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191260000,
+                          "y": 330.82
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:42-04/03 12:43\",\"data\":[{\"title\":\"平均值\",\"value\":330.02,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":444.10,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":220.76,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191320000,
+                          "y": 330.02
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:43-04/03 12:44\",\"data\":[{\"title\":\"平均值\",\"value\":340.72,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":446.52,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":228.68,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191380000,
+                          "y": 340.72
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:44-04/03 12:45\",\"data\":[{\"title\":\"平均值\",\"value\":346.31,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":453.08,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":233.92,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191440000,
+                          "y": 346.31
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:45-04/03 12:46\",\"data\":[{\"title\":\"平均值\",\"value\":323.24,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":443.45,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":207.33,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191500000,
+                          "y": 323.24
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:46-04/03 12:47\",\"data\":[{\"title\":\"平均值\",\"value\":329.88,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":442.53,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":220.15,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191560000,
+                          "y": 329.88
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:47-04/03 12:48\",\"data\":[{\"title\":\"平均值\",\"value\":327.12,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":451.42,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":206.23,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191620000,
+                          "y": 327.12
+                        }
+                      ],
+                      "name": "Used Heap",
+                      "type": "line",
+                      "yAxis": 0,
+                      "zIndex": 0
+                    },
+                    {
+                      "data": [
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:48-04/03 11:49\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188080000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:49-04/03 11:50\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188140000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188260000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188320000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:53-04/03 11:54\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188380000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188440000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188500000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188560000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188620000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188680000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188740000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188860000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188920000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775188980000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189040000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:05-04/03 12:06\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189100000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189160000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189220000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189280000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189340000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189460000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189520000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189580000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189640000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189700000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189760000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189820000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189880000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775189940000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:21-04/03 12:22\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190060000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:22-04/03 12:23\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190120000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:23-04/03 12:24\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190180000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:24-04/03 12:25\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190240000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:25-04/03 12:26\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190300000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:26-04/03 12:27\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190360000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:27-04/03 12:28\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190420000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:28-04/03 12:29\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190480000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:29-04/03 12:30\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190540000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:31-04/03 12:32\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190660000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:32-04/03 12:33\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190720000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:33-04/03 12:34\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190780000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:34-04/03 12:35\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190840000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:35-04/03 12:36\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190900000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:36-04/03 12:37\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775190960000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:37-04/03 12:38\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191020000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:38-04/03 12:39\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191080000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:39-04/03 12:40\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191140000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:41-04/03 12:42\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191260000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:42-04/03 12:43\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191320000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:43-04/03 12:44\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191380000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:44-04/03 12:45\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191440000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:45-04/03 12:46\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191500000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:46-04/03 12:47\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191560000,
+                          "y": 511.0
+                        },
+                        {
+                          "tooltip": "{\"title\":\"04/03 12:47-04/03 12:48\",\"data\":[{\"title\":\"平均值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最大值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2},{\"title\":\"最小值\",\"value\":511.00,\"unit\":\"MB\",\"scale\":2}]}",
+                          "x": 1775191620000,
+                          "y": 511.0
+                        }
+                      ],
+                      "name": "Max Heap",
+                      "type": "line",
+                      "yAxis": 0,
+                      "zIndex": 0
+                    }
+                  ],
+                  "yAxis": [
+                    {
+                      "opposite": false,
+                      "tickUnit": "MB"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 8
+      }
+    }
+  },
+  "path": "/server-api/instance/jvm/chart",
+  "relative_path": "instance/jvm/chart"
+}

@@ -1,0 +1,2125 @@
+{
+  "count_seen": 36,
+  "first_seen": "2026-04-03T15:39:50+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 36
+  },
+  "last_seen": "2026-04-03T15:42:15+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "request_error_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"actionTypes\":[\"TX,IF\"]},\"lang\":\"zh_CN\",\"metric\":\"request_error_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "request_error_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "request_response_ms_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"actionTypes\":[\"TX,IF\"]},\"lang\":\"zh_CN\",\"metric\":\"request_response_ms_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "request_response_ms_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "throughput_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"actionTypes\":[\"TX,IF\"]},\"lang\":\"zh_CN\",\"metric\":\"throughput_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "throughput_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionDataItem": [],
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [],
+              "traceStatus": []
+            },
+            "lang": "zh_CN",
+            "metric": "request_trace_type",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"actionDataItem\":[],\"actionIds\":[\"<DYNAMIC>\"],\"actionTypes\":[],\"traceStatus\":[]},\"lang\":\"zh_CN\",\"metric\":\"request_trace_type\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionDataItem": [],
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "actionTypes": [],
+              "traceStatus": []
+            },
+            "lang": "zh_CN",
+            "metric": "request_trace_type",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                "1606"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown",
+            "seriesType": "pie",
+            "timePeriod": 30
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"actionTypes\":[\"TX,IF\"],\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"response_time_breakdown\",\"seriesType\":\"pie\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "seriesType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown",
+            "seriesType": "pie",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "throughput_mini_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"actionTypes\":[\"TX,IF\"]},\"lang\":\"zh_CN\",\"metric\":\"throughput_mini_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "throughput_mini_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1648"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "active_instance_count_total_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"active_instance_count_total_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "active_instance_count_total_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1648"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "apdex_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"apdex_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "apdex_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1648"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "application_response_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"application_response_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "application_response_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1648"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "application_task_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"application_task_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "application_task_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "applicationIds": [
+                "1606"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "infra_log_count_total_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"infra_log_count_total_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "infra_log_count_total_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.labels.actionIds[0]"
+          ],
+          "example": {
+            "labels": {
+              "actionDataItem": [],
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [],
+              "traceStatus": []
+            },
+            "lang": "zh_CN",
+            "metric": "request_trace_type",
+            "zoomTime": true
+          },
+          "key": "{\"labels\":{\"actionDataItem\":[],\"actionIds\":[\"<DYNAMIC>\"],\"actionTypes\":[],\"traceStatus\":[]},\"lang\":\"zh_CN\",\"metric\":\"request_trace_type\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "labels",
+              "lang",
+              "metric",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "labels": {
+              "actionDataItem": [],
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "actionTypes": [],
+              "traceStatus": []
+            },
+            "lang": "zh_CN",
+            "metric": "request_trace_type",
+            "zoomTime": true
+          }
+        }
+      ],
+      "count_seen": 36,
+      "first_seen": "2026-04-03T15:39:50+08:00",
+      "inference_basis": [
+        "body.metric=request_trace_type",
+        "body.labels present"
+      ],
+      "inferred_purpose": "Likely used to query request trace type related data",
+      "last_seen": "2026-04-03T15:42:15+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 36
+      },
+      "observed_metrics": [
+        "active_instance_count_total_diagram",
+        "apdex_diagram",
+        "application_response_diagram",
+        "application_task_diagram",
+        "infra_log_count_total_diagram",
+        "request_error_diagram",
+        "request_response_ms_diagram",
+        "request_trace_type",
+        "response_time_breakdown",
+        "throughput_diagram",
+        "throughput_mini_diagram"
+      ],
+      "query_variants": [
+        {
+          "count_seen": 5,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "active_instance_count_total_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"active_instance_count_total_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "active_instance_count_total_diagram"
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "apdex_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"apdex_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "apdex_diagram"
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "application_response_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"application_response_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "application_response_diagram"
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "application_task_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"application_task_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "application_task_diagram"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "infra_log_count_total_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"infra_log_count_total_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "infra_log_count_total_diagram"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "request_error_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"request_error_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "request_error_diagram"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "request_response_ms_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"request_response_ms_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "request_response_ms_diagram"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "throughput_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"throughput_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "throughput_diagram"
+          }
+        },
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "query.request_trace_type"
+          ],
+          "example": {
+            "lang": "zh_CN",
+            "request_trace_type": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"request_trace_type\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "request_trace_type"
+            ],
+            "signature": [
+              "lang",
+              "request_trace_type"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "request_trace_type": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "query.response_time_breakdown"
+          ],
+          "example": {
+            "lang": "zh_CN",
+            "response_time_breakdown": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"response_time_breakdown\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "response_time_breakdown"
+            ],
+            "signature": [
+              "lang",
+              "response_time_breakdown"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "response_time_breakdown": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "query.throughput_mini_diagram"
+          ],
+          "example": {
+            "lang": "zh_CN",
+            "throughput_mini_diagram": ""
+          },
+          "key": "{\"lang\":\"zh_CN\",\"throughput_mini_diagram\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "throughput_mini_diagram"
+            ],
+            "signature": [
+              "lang",
+              "throughput_mini_diagram"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "throughput_mini_diagram": "<DYNAMIC>"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "labels": {
+            "actionDataItem": [],
+            "actionIds": [
+              "10860"
+            ],
+            "actionTypes": [],
+            "traceStatus": []
+          },
+          "lang": "zh_CN",
+          "metric": "request_trace_type",
+          "zoomTime": true
+        },
+        "dynamic_fields": [
+          "body.labels.actionIds[0]",
+          "query.request_trace_type"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/query/diagram?request_trace_type&lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"labels\":{\"actionDataItem\":[],\"actionIds\":[\"10860\"],\"actionTypes\":[],\"traceStatus\":[]},\"lang\":\"zh_CN\",\"metric\":\"request_trace_type\",\"zoomTime\":true}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/query/diagram?request_trace_type&lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 36
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "labels": {
+              "actionDataItem": [],
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [],
+              "traceStatus": []
+            },
+            "lang": "zh_CN",
+            "metric": "request_trace_type",
+            "zoomTime": true
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "request_trace_type": ""
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:39:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/query/diagram?request_trace_type&lang=zh_CN"
+        },
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                "1606"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown",
+            "seriesType": "pie",
+            "timePeriod": 30
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "response_time_breakdown": ""
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:39:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/query/diagram?response_time_breakdown&lang=zh_CN"
+        },
+        {
+          "body": {
+            "beginTime": "2026-04-03 11:50",
+            "endTime": "2026-04-03 12:20",
+            "labels": {
+              "actionIds": [
+                "10860"
+              ],
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "request_error_diagram",
+            "timePeriod": 30,
+            "zoomTime": true
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "metric": "request_error_diagram"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:39:50+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=request_error_diagram&lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "overviews": {
+                "timeHorizon": "04-03 15:09 ~ 04-03 15:39"
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "display": "12.00",
+                      "tooltip": "{\"title\":\"04-03 15:09--04-03 15:10\",\"data\":[{\"title\":\"成功次数\",\"value\":12.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 12.0,
+                      "x": 1775200140000,
+                      "y": 12.0
+                    },
+                    {
+                      "display": "12.00",
+                      "tooltip": "{\"title\":\"04-03 15:10--04-03 15:11\",\"data\":[{\"title\":\"成功次数\",\"value\":12.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 12.0,
+                      "x": 1775200200000,
+                      "y": 12.0
+                    },
+                    {
+                      "display": "4.00",
+                      "tooltip": "{\"title\":\"04-03 15:11--04-03 15:12\",\"data\":[{\"title\":\"成功次数\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 4.0,
+                      "x": 1775200260000,
+                      "y": 4.0
+                    },
+                    {
+                      "display": "6.00",
+                      "tooltip": "{\"title\":\"04-03 15:12--04-03 15:13\",\"data\":[{\"title\":\"成功次数\",\"value\":6.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 6.0,
+                      "x": 1775200320000,
+                      "y": 6.0
+                    },
+                    {
+                      "display": "3.00",
+                      "tooltip": "{\"title\":\"04-03 15:13--04-03 15:14\",\"data\":[{\"title\":\"成功次数\",\"value\":3.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 3.0,
+                      "x": 1775200380000,
+                      "y": 3.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 15:14--04-03 15:15\",\"data\":[{\"title\":\"成功次数\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775200440000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "4.00",
+                      "tooltip": "{\"title\":\"04-03 15:15--04-03 15:16\",\"data\":[{\"title\":\"成功次数\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 4.0,
+                      "x": 1775200500000,
+                      "y": 4.0
+                    },
+                    {
+                      "display": "5.00",
+                      "tooltip": "{\"title\":\"04-03 15:16--04-03 15:17\",\"data\":[{\"title\":\"成功次数\",\"value\":5.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 5.0,
+                      "x": 1775200560000,
+                      "y": 5.0
+                    },
+                    {
+                      "display": "9.00",
+                      "tooltip": "{\"title\":\"04-03 15:17--04-03 15:18\",\"data\":[{\"title\":\"成功次数\",\"value\":9.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 9.0,
+                      "x": 1775200620000,
+                      "y": 9.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 15:18--04-03 15:19\",\"data\":[{\"title\":\"成功次数\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775200680000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04-03 15:19--04-03 15:20\",\"data\":[{\"title\":\"成功次数\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775200740000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "4.00",
+                      "tooltip": "{\"title\":\"04-03 15:20--04-03 15:21\",\"data\":[{\"title\":\"成功次数\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 4.0,
+                      "x": 1775200800000,
+                      "y": 4.0
+                    },
+                    {
+                      "display": "3.00",
+                      "tooltip": "{\"title\":\"04-03 15:21--04-03 15:22\",\"data\":[{\"title\":\"成功次数\",\"value\":3.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 3.0,
+                      "x": 1775200860000,
+                      "y": 3.0
+                    },
+                    {
+                      "display": "10.00",
+                      "tooltip": "{\"title\":\"04-03 15:22--04-03 15:23\",\"data\":[{\"title\":\"成功次数\",\"value\":10.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 10.0,
+                      "x": 1775200920000,
+                      "y": 10.0
+                    },
+                    {
+                      "display": "8.00",
+                      "tooltip": "{\"title\":\"04-03 15:23--04-03 15:24\",\"data\":[{\"title\":\"成功次数\",\"value\":8.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 8.0,
+                      "x": 1775200980000,
+                      "y": 8.0
+                    },
+                    {
+                      "display": "9.00",
+                      "tooltip": "{\"title\":\"04-03 15:24--04-03 15:25\",\"data\":[{\"title\":\"成功次数\",\"value\":9.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 9.0,
+                      "x": 1775201040000,
+                      "y": 9.0
+                    },
+                    {
+                      "display": "12.00",
+                      "tooltip": "{\"title\":\"04-03 15:25--04-03 15:26\",\"data\":[{\"title\":\"成功次数\",\"value\":12.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 12.0,
+                      "x": 1775201100000,
+                      "y": 12.0
+                    },
+                    {
+                      "display": "11.00",
+                      "tooltip": "{\"title\":\"04-03 15:26--04-03 15:27\",\"data\":[{\"title\":\"成功次数\",\"value\":11.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 11.0,
+                      "x": 1775201160000,
+                      "y": 11.0
+                    },
+                    {
+                      "display": "6.00",
+                      "tooltip": "{\"title\":\"04-03 15:27--04-03 15:28\",\"data\":[{\"title\":\"成功次数\",\"value\":6.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 6.0,
+                      "x": 1775201220000,
+                      "y": 6.0
+                    },
+                    {
+                      "display": "7.00",
+                      "tooltip": "{\"title\":\"04-03 15:28--04-03 15:29\",\"data\":[{\"title\":\"成功次数\",\"value\":7.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 7.0,
+                      "x": 1775201280000,
+                      "y": 7.0
+                    },
+                    {
+                      "display": "7.00",
+                      "tooltip": "{\"title\":\"04-03 15:29--04-03 15:30\",\"data\":[{\"title\":\"成功次数\",\"value\":7.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 7.0,
+                      "x": 1775201340000,
+                      "y": 7.0
+                    },
+                    {
+                      "display": "7.00",
+                      "tooltip": "{\"title\":\"04-03 15:30--04-03 15:31\",\"data\":[{\"title\":\"成功次数\",\"value\":7.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 7.0,
+                      "x": 1775201400000,
+                      "y": 7.0
+                    },
+                    {
+                      "display": "4.00",
+                      "tooltip": "{\"title\":\"04-03 15:31--04-03 15:32\",\"data\":[{\"title\":\"成功次数\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 4.0,
+                      "x": 1775201460000,
+                      "y": 4.0
+                    },
+                    {
+                      "display": "4.00",
+                      "tooltip": "{\"title\":\"04-03 15:32--04-03 15:33\",\"data\":[{\"title\":\"成功次数\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 4.0,
+                      "x": 1775201520000,
+                      "y": 4.0
+                    },
+                    {
+                      "display": "3.00",
+                      "tooltip": "{\"title\":\"04-03 15:33--04-03 15:34\",\"data\":[{\"title\":\"成功次数\",\"value\":3.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 3.0,
+                      "x": 1775201580000,
+                      "y": 3.0
+                    },
+                    {
+                      "display": "3.00",
+                      "tooltip": "{\"title\":\"04-03 15:34--04-03 15:35\",\"data\":[{\"title\":\"成功次数\",\"value\":3.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 3.0,
+                      "x": 1775201640000,
+                      "y": 3.0
+                    },
+                    {
+                      "display": "4.00",
+                      "tooltip": "{\"title\":\"04-03 15:35--04-03 15:36\",\"data\":[{\"title\":\"成功次数\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 4.0,
+                      "x": 1775201700000,
+                      "y": 4.0
+                    },
+                    {
+                      "display": "4.00",
+                      "tooltip": "{\"title\":\"04-03 15:36--04-03 15:37\",\"data\":[{\"title\":\"成功次数\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 4.0,
+                      "x": 1775201760000,
+                      "y": 4.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 15:37--04-03 15:38\",\"data\":[{\"title\":\"成功次数\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775201820000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04-03 15:38--04-03 15:39\",\"data\":[{\"title\":\"成功次数\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775201880000,
+                      "y": 2.0
+                    }
+                  ],
+                  "name": "成功次数",
+                  "type": "column",
+                  "xAxis": 0,
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:09--04-03 15:10\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200140000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:10--04-03 15:11\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:11--04-03 15:12\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200260000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:12--04-03 15:13\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200320000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:13--04-03 15:14\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200380000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:14--04-03 15:15\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200440000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:15--04-03 15:16\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200500000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:16--04-03 15:17\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200560000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:17--04-03 15:18\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200620000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:18--04-03 15:19\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200680000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:19--04-03 15:20\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200740000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:20--04-03 15:21\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:21--04-03 15:22\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200860000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:22--04-03 15:23\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200920000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:23--04-03 15:24\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775200980000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:24--04-03 15:25\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201040000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:25--04-03 15:26\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201100000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:26--04-03 15:27\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201160000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:27--04-03 15:28\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201220000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:28--04-03 15:29\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201280000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:29--04-03 15:30\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201340000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:30--04-03 15:31\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:31--04-03 15:32\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201460000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:32--04-03 15:33\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201520000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:33--04-03 15:34\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201580000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:34--04-03 15:35\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201640000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:35--04-03 15:36\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201700000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:36--04-03 15:37\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201760000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:37--04-03 15:38\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201820000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04-03 15:38--04-03 15:39\",\"data\":[{\"title\":\"错误次数\",\"value\":0.00,\"unit\":\"个\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775201880000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "错误次数",
+                  "type": "column",
+                  "xAxis": 0,
+                  "yAxis": 0,
+                  "zIndex": 1
+                }
+              ],
+              "xAxis": {
+                "categories": [
+                  "1775200140913",
+                  "1775200200913",
+                  "1775200260913",
+                  "1775200320913",
+                  "1775200380913",
+                  "1775200440913",
+                  "1775200500913",
+                  "1775200560913",
+                  "1775200620913",
+                  "1775200680913",
+                  "1775200740913",
+                  "1775200800913",
+                  "1775200860913",
+                  "1775200920913",
+                  "1775200980913",
+                  "1775201040913",
+                  "1775201100913",
+                  "1775201160913",
+                  "1775201220913",
+                  "1775201280913",
+                  "1775201340913",
+                  "1775201400913",
+                  "1775201460913",
+                  "1775201520913",
+                  "1775201580913",
+                  "1775201640913",
+                  "1775201700913",
+                  "1775201760913",
+                  "1775201820913",
+                  "1775201880913"
+                ],
+                "max": 1775201880913,
+                "min": 1775200140913
+              },
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": ""
+                }
+              ]
+            },
+            "requestId": "598d434a-ad0a-fb43-90fc-e5e4dee2feac",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:39:41 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "display": "100.00",
+                      "name": "Code",
+                      "value": 100.0,
+                      "y": 100.0
+                    }
+                  ],
+                  "name": "总耗时占比",
+                  "type": "pie",
+                  "xAxis": 0,
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "tooltip": "{\"backgroundColor\":null,\"borderColor\":null,\"borderWidth\":0,\"followPointer\":true,\"footerFormat\":\"</ul></div></div></div>\",\"headerFormat\":\"<div class='bubble-box'><div class='bubble-wrap pad-10'><div class='bubble-time'>{point.point.options.header}</div><div><ul>\",\"padding\":0,\"pointFormat\":\"<li><span class='bubble-main-left pull-left'>{series.name}:</span><span class='bubble-main-right pull-right'>{point.display} {point.series.userOptions.tooltip.valueSuffix}</span></li>\",\"shadow\":false,\"shared\":true,\"useHTML\":true}",
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": " ms"
+                }
+              ]
+            },
+            "requestId": "75858cf6-3a44-3bea-170f-9a2ee0dab819",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:39:42 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "overviews": {
+                "contrast": 0.0,
+                "contrastRatio": null,
+                "errorCountTotal": 0.0,
+                "granularitySeconds": 60,
+                "granularityTick": 60
+              },
+              "series": [
+                {
+                  "data": [
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:50--04-03 11:51",
+                      "value": 0.0,
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:51--04-03 11:52",
+                      "value": 0.0,
+                      "x": 1775188260000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:52--04-03 11:53",
+                      "value": 0.0,
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:53--04-03 11:54",
+                      "value": 0.0,
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:54--04-03 11:55",
+                      "value": 0.0,
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:55--04-03 11:56",
+                      "value": 0.0,
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:56--04-03 11:57",
+                      "value": 0.0,
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:57--04-03 11:58",
+                      "value": 0.0,
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:58--04-03 11:59",
+                      "value": 0.0,
+                      "x": 1775188680000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:59--04-03 12:00",
+                      "value": 0.0,
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:00--04-03 12:01",
+                      "value": 0.0,
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:01--04-03 12:02",
+                      "value": 0.0,
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:02--04-03 12:03",
+                      "value": 0.0,
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:03--04-03 12:04",
+                      "value": 0.0,
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:04--04-03 12:05",
+                      "value": 0.0,
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:05--04-03 12:06",
+                      "value": 0.0,
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:06--04-03 12:07",
+                      "value": 0.0,
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:07--04-03 12:08",
+                      "value": 0.0,
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:08--04-03 12:09",
+                      "value": 0.0,
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:09--04-03 12:10",
+                      "value": 0.0,
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:10--04-03 12:11",
+                      "value": 0.0,
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:11--04-03 12:12",
+                      "value": 0.0,
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:12--04-03 12:13",
+                      "value": 0.0,
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:13--04-03 12:14",
+                      "value": 0.0,
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:14--04-03 12:15",
+                      "value": 0.0,
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:15--04-03 12:16",
+                      "value": 0.0,
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:16--04-03 12:17",
+                      "value": 0.0,
+                      "x": 1775189760000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:17--04-03 12:18",
+                      "value": 0.0,
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:18--04-03 12:19",
+                      "value": 0.0,
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:19--04-03 12:20",
+                      "value": 0.0,
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "错误次数",
+                  "tooltip": {
+                    "valueSuffix": ""
+                  },
+                  "type": "column",
+                  "xAxis": 0,
+                  "yAxis": 1,
+                  "yaxisProperties": {
+                    "opposite": true,
+                    "tickUnit": ""
+                  },
+                  "zIndex": 2
+                },
+                {
+                  "data": [
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:50--04-03 11:51",
+                      "value": 0.0,
+                      "x": 1775188200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:51--04-03 11:52",
+                      "value": 0.0,
+                      "x": 1775188260000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:52--04-03 11:53",
+                      "value": 0.0,
+                      "x": 1775188320000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:53--04-03 11:54",
+                      "value": 0.0,
+                      "x": 1775188380000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:54--04-03 11:55",
+                      "value": 0.0,
+                      "x": 1775188440000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:55--04-03 11:56",
+                      "value": 0.0,
+                      "x": 1775188500000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:56--04-03 11:57",
+                      "value": 0.0,
+                      "x": 1775188560000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:57--04-03 11:58",
+                      "value": 0.0,
+                      "x": 1775188620000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:58--04-03 11:59",
+                      "value": 0.0,
+                      "x": 1775188680000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 11:59--04-03 12:00",
+                      "value": 0.0,
+                      "x": 1775188740000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:00--04-03 12:01",
+                      "value": 0.0,
+                      "x": 1775188800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:01--04-03 12:02",
+                      "value": 0.0,
+                      "x": 1775188860000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:02--04-03 12:03",
+                      "value": 0.0,
+                      "x": 1775188920000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:03--04-03 12:04",
+                      "value": 0.0,
+                      "x": 1775188980000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:04--04-03 12:05",
+                      "value": 0.0,
+                      "x": 1775189040000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:05--04-03 12:06",
+                      "value": 0.0,
+                      "x": 1775189100000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:06--04-03 12:07",
+                      "value": 0.0,
+                      "x": 1775189160000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:07--04-03 12:08",
+                      "value": 0.0,
+                      "x": 1775189220000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:08--04-03 12:09",
+                      "value": 0.0,
+                      "x": 1775189280000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:09--04-03 12:10",
+                      "value": 0.0,
+                      "x": 1775189340000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:10--04-03 12:11",
+                      "value": 0.0,
+                      "x": 1775189400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:11--04-03 12:12",
+                      "value": 0.0,
+                      "x": 1775189460000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:12--04-03 12:13",
+                      "value": 0.0,
+                      "x": 1775189520000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:13--04-03 12:14",
+                      "value": 0.0,
+                      "x": 1775189580000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:14--04-03 12:15",
+                      "value": 0.0,
+                      "x": 1775189640000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:15--04-03 12:16",
+                      "value": 0.0,
+                      "x": 1775189700000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:16--04-03 12:17",
+                      "value": 0.0,
+                      "x": 1775189760000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:17--04-03 12:18",
+                      "value": 0.0,
+                      "x": 1775189820000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:18--04-03 12:19",
+                      "value": 0.0,
+                      "x": 1775189880000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "header": "04-03 12:19--04-03 12:20",
+                      "value": 0.0,
+                      "x": 1775189940000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "错误率",
+                  "tooltip": {
+                    "valueSuffix": " %"
+                  },
+                  "type": "line",
+                  "xAxis": 0,
+                  "yAxis": 0,
+                  "yaxisProperties": {
+                    "opposite": false,
+                    "tickUnit": "%"
+                  },
+                  "zIndex": 4
+                }
+              ],
+              "tooltip": "{\"backgroundColor\":null,\"borderColor\":null,\"borderWidth\":0,\"followPointer\":true,\"footerFormat\":\"</ul></div></div></div>\",\"headerFormat\":\"<div class='bubble-box'><div class='bubble-wrap pad-10'><div class='bubble-time'>{point.point.options.header}</div><div><ul>\",\"padding\":0,\"pointFormat\":\"<li><span class='bubble-main-left pull-left'>{series.name}:</span><span class='bubble-main-right pull-right'>{point.display} {point.series.userOptions.tooltip.valueSuffix}</span></li>\",\"shadow\":false,\"shared\":true,\"useHTML\":true}",
+              "xAxis": {
+                "categories": [
+                  "1775188200000",
+                  "1775188260000",
+                  "1775188320000",
+                  "1775188380000",
+                  "1775188440000",
+                  "1775188500000",
+                  "1775188560000",
+                  "1775188620000",
+                  "1775188680000",
+                  "1775188740000",
+                  "1775188800000",
+                  "1775188860000",
+                  "1775188920000",
+                  "1775188980000",
+                  "1775189040000",
+                  "1775189100000",
+                  "1775189160000",
+                  "1775189220000",
+                  "1775189280000",
+                  "1775189340000",
+                  "1775189400000",
+                  "1775189460000",
+                  "1775189520000",
+                  "1775189580000",
+                  "1775189640000",
+                  "1775189700000",
+                  "1775189760000",
+                  "1775189820000",
+                  "1775189880000",
+                  "1775189940000"
+                ],
+                "max": 1775190000000,
+                "min": 1775188200000
+              },
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "%"
+                },
+                {
+                  "opposite": true,
+                  "tickUnit": ""
+                }
+              ]
+            },
+            "requestId": "fa8daf19-4d45-b784-5e53-b492c1f1c6a0",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:39:42 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 36
+      }
+    }
+  },
+  "path": "/server-api/graph/query/diagram",
+  "relative_path": "graph/query/diagram"
+}

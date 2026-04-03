@@ -1,0 +1,663 @@
+{
+  "count_seen": 2,
+  "first_seen": "2026-04-03T20:00:16+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 2
+  },
+  "last_seen": "2026-04-03T20:00:42+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod",
+            "body.txActionId"
+          ],
+          "example": {
+            "applicationId": "",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "",
+            "lang": "zh_CN",
+            "opName": "tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd",
+            "timePeriod": "30",
+            "txActionId": ""
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"opName\":\"tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd\",\"timePeriod\":\"<DYNAMIC>\",\"txActionId\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "instanceId",
+              "lang",
+              "opName",
+              "timePeriod",
+              "txActionId"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "opName": "tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd",
+            "timePeriod": "<DYNAMIC>",
+            "txActionId": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 2,
+      "first_seen": "2026-04-03T20:00:16+08:00",
+      "inference_basis": [
+        "path=component/chart/respTime-throughput-database"
+      ],
+      "inferred_purpose": "Likely related to component/chart/respTime-throughput-database",
+      "last_seen": "2026-04-03T20:00:42+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 2
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1065",
+          "componentName": "10.190.22.21:3306",
+          "componentSubtype": "MySQL",
+          "componentType": "Database",
+          "dataType": "COMP",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/component/chart/respTime-throughput-database -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'componentType=Database&bizSystemId=1065&endTime=2026-04-03+12%3A20&timePeriod=30&dataType=COMP&componentName=10.190.22.21%3A3306&componentSubtype=MySQL&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/component/chart/respTime-throughput-database"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 2
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:16+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/chart/respTime-throughput-database"
+        },
+        {
+          "body": {
+            "applicationId": "",
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "instanceId": "",
+            "lang": "zh_CN",
+            "opName": "tyBase64_c2VsZWN0IERJU1RJTkNUIGluZm8uSUQsIENBU0UgV0hFTiBpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSBJUyBOT1QgTlVMTCBBTkQgaW5mby5DUkVBVEVfVU5JVF9JRD0_IEFORCBpbmZvLlNFTEZfQ09ERSBJUyBOT1QgTlVMTCBUSEVOIENPTkNBVChpbmZvLkNPTlRSQUNUX1NFTEZfQ09ERSw/LGluZm8uU0VMRl9DT0RFKSBFTFNFIGluZm8uQ09OVFJBQ1RfU0VMRl9DT0RFIEVORCBDT05UUkFDVF9TRUxGX0NPREUsIGluZm8uU1RBTVBfRFVUWSwgaW5mby5jb250cmFjdF9uYW1lLCBpbmZvLkNPTlRSQUNUX1RZUEVfTkFNRSwgaW5mby5TSUdOSU5HX1NVQkpFQ1RfTkFNRSwgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVF9GT1JTSE9XKSBBUyBDT05UUkFDVF9BTU9VTlRfRk9SU0hPVywgSUYoaW5mby5DT05UUkFDVF9TT1VSQ0UgPT8sRk9STUFUKChTRUxFQ1QgQUZURVJfQU1PVU5UIEZST00gTEFTX0NPTlRSQUNUX1VQREFURSBXSEVSRSBUQVJHRVRfQ09OVFJBQ1RfSUQgPSBpbmZvLklEKSw/KSxpbmZvLkNPTlRSQUNUX0FNT1VOVCkgQVMgQ09OVFJBQ1RfQU1PVU5ULCBJRihpbmZvLkNPTlRSQUNUX1NPVVJDRSA9PywoU0VMRUNUIEFGVEVSX0FNT1VOVCBGUk9NIExBU19DT05UUkFDVF9VUERBVEUgV0hFUkUgVEFSR0VUX0NPTlRSQUNUX0lEID0gaW5mby5JRCksaW5mby5STUJfQU1PVU5UKSBBUyBSTUJfQU1PVU5ULCBpbmZvLkJaSl9BTU9VTlQgQVMgQlpKX0FNT1VOVCwgREFURV9GT1JNQVQoaW5mby5CWkpfREFURSwgPyApIGFzIEJaSl9EQVRFLCBpbmZvLkNVUlJFTkNZX05BTUUsIGluZm8uUEFZTUVOVF9ESVJFQ1RJT04sIGluZm8uVkFMVUFUSU9OX01PREUsIGluZm8uQ09OVFJBQ1RfUEUuLlszNTYxIG1vcmUgY2hhcnNd",
+            "timePeriod": "30",
+            "txActionId": ""
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T20:00:42+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/chart/respTime-throughput-database"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:50-04/03 11:51\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.72,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 0.72
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"吞吐率\",\"value\":86.53,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 86.53
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"吞吐率\",\"value\":14.82,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 14.82
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:53-04/03 11:54\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.70,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 8.7
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"吞吐率\",\"value\":45.42,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 45.42
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"吞吐率\",\"value\":43.75,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 43.75
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"吞吐率\",\"value\":18.48,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 18.48
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"吞吐率\",\"value\":32.08,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 32.08
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"吞吐率\",\"value\":25.68,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 25.68
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"吞吐率\",\"value\":25.70,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 25.7
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:00-04/03 12:01\",\"data\":[{\"title\":\"吞吐率\",\"value\":8.35,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 8.35
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"吞吐率\",\"value\":12.00,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"吞吐率\",\"value\":10.62,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 10.62
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"吞吐率\",\"value\":16.98,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 16.98
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"吞吐率\",\"value\":78.22,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 78.22
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:05-04/03 12:06\",\"data\":[{\"title\":\"吞吐率\",\"value\":48.60,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 48.6
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"吞吐率\",\"value\":45.42,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 45.42
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"吞吐率\",\"value\":142.42,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 142.42
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"吞吐率\",\"value\":47.33,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 47.33
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"吞吐率\",\"value\":42.10,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 42.1
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:10-04/03 12:11\",\"data\":[{\"title\":\"吞吐率\",\"value\":12.95,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 12.95
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":37.45,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 37.45
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"吞吐率\",\"value\":30.37,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 30.37
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"吞吐率\",\"value\":17.13,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 17.13
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"吞吐率\",\"value\":25.93,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 25.93
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"吞吐率\",\"value\":12.00,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":47.75,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 47.75
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"吞吐率\",\"value\":24.83,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 24.83
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"吞吐率\",\"value\":9.78,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 9.78
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"吞吐率\",\"value\":30.43,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 30.43
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "column",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:50-04/03 11:51\",\"data\":[{\"title\":\"平均响应时间\",\"value\":22.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":43.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188200000,
+                      "y": 22.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:51-04/03 11:52\",\"data\":[{\"title\":\"平均响应时间\",\"value\":2.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":5192.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188260000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:52-04/03 11:53\",\"data\":[{\"title\":\"平均响应时间\",\"value\":3.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":889.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188320000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:53-04/03 11:54\",\"data\":[{\"title\":\"平均响应时间\",\"value\":8.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":522.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188380000,
+                      "y": 8.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:54-04/03 11:55\",\"data\":[{\"title\":\"平均响应时间\",\"value\":12.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2725.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188440000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:55-04/03 11:56\",\"data\":[{\"title\":\"平均响应时间\",\"value\":12.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2625.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188500000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:56-04/03 11:57\",\"data\":[{\"title\":\"平均响应时间\",\"value\":5.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1109.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188560000,
+                      "y": 5.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:57-04/03 11:58\",\"data\":[{\"title\":\"平均响应时间\",\"value\":17.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1925.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188620000,
+                      "y": 17.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:58-04/03 11:59\",\"data\":[{\"title\":\"平均响应时间\",\"value\":16.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1541.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188680000,
+                      "y": 16.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 11:59-04/03 12:00\",\"data\":[{\"title\":\"平均响应时间\",\"value\":8.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1542.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188740000,
+                      "y": 8.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:00-04/03 12:01\",\"data\":[{\"title\":\"平均响应时间\",\"value\":7.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":501.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188800000,
+                      "y": 7.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:01-04/03 12:02\",\"data\":[{\"title\":\"平均响应时间\",\"value\":13.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":720.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188860000,
+                      "y": 13.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:02-04/03 12:03\",\"data\":[{\"title\":\"平均响应时间\",\"value\":13.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":637.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188920000,
+                      "y": 13.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:03-04/03 12:04\",\"data\":[{\"title\":\"平均响应时间\",\"value\":3.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1019.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775188980000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:04-04/03 12:05\",\"data\":[{\"title\":\"平均响应时间\",\"value\":2.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":4693.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189040000,
+                      "y": 2.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:05-04/03 12:06\",\"data\":[{\"title\":\"平均响应时间\",\"value\":4.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2916.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189100000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:06-04/03 12:07\",\"data\":[{\"title\":\"平均响应时间\",\"value\":11.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2725.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189160000,
+                      "y": 11.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:07-04/03 12:08\",\"data\":[{\"title\":\"平均响应时间\",\"value\":1.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":8545.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189220000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:08-04/03 12:09\",\"data\":[{\"title\":\"平均响应时间\",\"value\":13.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2840.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189280000,
+                      "y": 13.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:09-04/03 12:10\",\"data\":[{\"title\":\"平均响应时间\",\"value\":12.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2526.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189340000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:10-04/03 12:11\",\"data\":[{\"title\":\"平均响应时间\",\"value\":8.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":777.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189400000,
+                      "y": 8.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"平均响应时间\",\"value\":4.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2247.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:12-04/03 12:13\",\"data\":[{\"title\":\"平均响应时间\",\"value\":16.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1822.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189520000,
+                      "y": 16.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:13-04/03 12:14\",\"data\":[{\"title\":\"平均响应时间\",\"value\":12.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1028.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189580000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:14-04/03 12:15\",\"data\":[{\"title\":\"平均响应时间\",\"value\":19.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1556.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189640000,
+                      "y": 19.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:15-04/03 12:16\",\"data\":[{\"title\":\"平均响应时间\",\"value\":14.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":720.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189700000,
+                      "y": 14.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"平均响应时间\",\"value\":4.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2865.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:17-04/03 12:18\",\"data\":[{\"title\":\"平均响应时间\",\"value\":20.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1490.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189820000,
+                      "y": 20.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:18-04/03 12:19\",\"data\":[{\"title\":\"平均响应时间\",\"value\":9.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":587.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189880000,
+                      "y": 9.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:19-04/03 12:20\",\"data\":[{\"title\":\"平均响应时间\",\"value\":16.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1826.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189940000,
+                      "y": 16.0
+                    }
+                  ],
+                  "name": "平均响应时间",
+                  "type": "line",
+                  "yAxis": 1,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "qps"
+                },
+                {
+                  "opposite": true,
+                  "tickUnit": "ms"
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:00:07 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.02,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 0.02
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"吞吐率\",\"value\":0.03,\"unit\":\"qps\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 0.03
+                    }
+                  ],
+                  "name": "吞吐率",
+                  "type": "column",
+                  "yAxis": 0,
+                  "zIndex": 0
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:11-04/03 12:12\",\"data\":[{\"title\":\"平均响应时间\",\"value\":1655.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":1.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189460000,
+                      "y": 1655.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04/03 12:16-04/03 12:17\",\"data\":[{\"title\":\"平均响应时间\",\"value\":1639.00,\"unit\":\"ms\",\"scale\":2},{\"title\":\"操作次数\",\"value\":2.00,\"unit\":\"\",\"scale\":2}]}",
+                      "x": 1775189760000,
+                      "y": 1639.0
+                    }
+                  ],
+                  "name": "平均响应时间",
+                  "type": "line",
+                  "yAxis": 1,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "qps"
+                },
+                {
+                  "opposite": true,
+                  "tickUnit": "ms"
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 12:00:34 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 2
+      }
+    }
+  },
+  "path": "/server-api/component/chart/respTime-throughput-database",
+  "relative_path": "component/chart/respTime-throughput-database"
+}

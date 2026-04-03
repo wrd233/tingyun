@@ -1,0 +1,242 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T19:59:51+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T19:59:51+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "30"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.20:6379/5\",\"componentSubtype\":\"Redis\",\"componentType\":\"NoSQL\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"limit\":\"true\",\"pageNumber\":\"1\",\"pageSize\":\"1000\",\"sortDirection\":\"DESC\",\"sortField\":\"respTime\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "lang",
+              "limit",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T19:59:51+08:00",
+      "inference_basis": [
+        "path=NoSQL/analysis"
+      ],
+      "inferred_purpose": "Likely related to NoSQL/analysis",
+      "last_seen": "2026-04-03T19:59:51+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizSystemId": "1065",
+          "componentName": "10.190.22.20:6379/5",
+          "componentSubtype": "Redis",
+          "componentType": "NoSQL",
+          "dataType": "OP",
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "limit": "true",
+          "pageNumber": "1",
+          "pageSize": "1000",
+          "sortDirection": "DESC",
+          "sortField": "respTime",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/NoSQL/analysis -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'componentType=NoSQL&bizSystemId=1065&endTime=2026-04-03+12%3A20&timePeriod=30&dataType=OP&componentName=10.190.22.20%3A6379%2F5&componentSubtype=Redis&pageSize=1000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/NoSQL/analysis"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T19:59:51+08:00",
+          "url": "http://169.169.173.25:8080/server-api/NoSQL/analysis"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": null,
+                  "actionId": 0,
+                  "actionName": null,
+                  "appName": null,
+                  "applicationId": -1,
+                  "bizSystemId": 1065,
+                  "bizSystemName": "集团法务",
+                  "callMode": -1,
+                  "callModeStr": "消费者",
+                  "componentName": "10.190.22.20:6379/5",
+                  "componentNameSecondary": null,
+                  "componentSubtype": "Redis",
+                  "connTime": 1.0,
+                  "connUsed": 0,
+                  "count": 472,
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "exclusiveRespTime": 0,
+                  "health": 0,
+                  "healthInfo": null,
+                  "instanceId": -1,
+                  "instanceName": null,
+                  "maxExecTime": 0.0,
+                  "maxThrought": 0.0,
+                  "opName": "EVAL",
+                  "opType": null,
+                  "payload": 0.0,
+                  "payloadUnit": null,
+                  "productCount": 0,
+                  "productPayload": 0.0,
+                  "productthrought": 0.0,
+                  "respTime": 1.0,
+                  "schemas": null,
+                  "throught": 0.26,
+                  "totalResptime": 334,
+                  "traceCount": 0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 1
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 11:59:42 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/NoSQL/analysis",
+  "relative_path": "NoSQL/analysis"
+}

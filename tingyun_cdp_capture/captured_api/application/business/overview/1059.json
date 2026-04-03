@@ -1,0 +1,360 @@
+{
+  "count_seen": 3,
+  "first_seen": "2026-04-03T15:40:41+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 3
+  },
+  "last_seen": "2026-04-03T15:40:52+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 3,
+      "first_seen": "2026-04-03T15:40:41+08:00",
+      "inference_basis": [
+        "path=application/business/overview/1059"
+      ],
+      "inferred_purpose": "Likely related to application / overview",
+      "last_seen": "2026-04-03T15:40:52+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 3
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 3,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/application/business/overview/1059 -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=30&endTime=2026-04-03+12%3A20&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/application/business/overview/1059"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 3
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/application/business/overview/1059"
+        },
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:46+08:00",
+          "url": "http://169.169.173.25:8080/server-api/application/business/overview/1059"
+        },
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:52+08:00",
+          "url": "http://169.169.173.25:8080/server-api/application/business/overview/1059"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "actionIds": [],
+              "apdex": 0.979,
+              "applicationCount": 1,
+              "applicationIds": [
+                1648
+              ],
+              "bizSystemId": 1059,
+              "bizSystemName": "铃与堆场",
+              "containerCount": 0,
+              "dataCenterCount": 1,
+              "error": 0.0,
+              "hasData": false,
+              "health": 0,
+              "healthOrder": 0,
+              "hostCount": 2,
+              "instanceCount": 3,
+              "instanceIds": [
+                2754,
+                2755,
+                2756
+              ],
+              "maxThrought": 0.0,
+              "respTimeHis": [
+                34.592575,
+                184.60283,
+                419.94992,
+                1317.9165
+              ],
+              "respTimeHisText": [
+                0.5,
+                0.8,
+                0.95,
+                0.99
+              ],
+              "response": 122,
+              "rightOprt": 0,
+              "showDelete": true,
+              "slowCount": 0,
+              "successCount": 15104,
+              "throught": 8.39
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "actionIds": [],
+              "apdex": 0.979,
+              "applicationCount": 1,
+              "applicationIds": [
+                1648
+              ],
+              "bizSystemId": 1059,
+              "bizSystemName": "铃与堆场",
+              "containerCount": 0,
+              "dataCenterCount": 1,
+              "error": 0.0,
+              "hasData": false,
+              "health": 0,
+              "healthOrder": 0,
+              "hostCount": 2,
+              "instanceCount": 3,
+              "instanceIds": [
+                2754,
+                2755,
+                2756
+              ],
+              "maxThrought": 0.0,
+              "respTimeHis": [
+                34.592575,
+                184.60283,
+                419.94992,
+                1317.9165
+              ],
+              "respTimeHisText": [
+                0.5,
+                0.8,
+                0.95,
+                0.99
+              ],
+              "response": 122,
+              "rightOprt": 0,
+              "showDelete": true,
+              "slowCount": 0,
+              "successCount": 15104,
+              "throught": 8.39
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:37 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "actionIds": [],
+              "apdex": 0.979,
+              "applicationCount": 1,
+              "applicationIds": [
+                1648
+              ],
+              "bizSystemId": 1059,
+              "bizSystemName": "铃与堆场",
+              "containerCount": 0,
+              "dataCenterCount": 1,
+              "error": 0.0,
+              "hasData": false,
+              "health": 0,
+              "healthOrder": 0,
+              "hostCount": 2,
+              "instanceCount": 3,
+              "instanceIds": [
+                2754,
+                2755,
+                2756
+              ],
+              "maxThrought": 0.0,
+              "respTimeHis": [
+                34.592575,
+                184.60283,
+                419.94992,
+                1317.9165
+              ],
+              "respTimeHisText": [
+                0.5,
+                0.8,
+                0.95,
+                0.99
+              ],
+              "response": 122,
+              "rightOprt": 0,
+              "showDelete": true,
+              "slowCount": 0,
+              "successCount": 15104,
+              "throught": 8.39
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:44 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 3
+      }
+    }
+  },
+  "path": "/server-api/application/business/overview/1059",
+  "relative_path": "application/business/overview/1059"
+}

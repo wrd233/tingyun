@@ -1,0 +1,1949 @@
+{
+  "count_seen": 7,
+  "first_seen": "2026-04-03T15:40:31+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 7
+  },
+  "last_seen": "2026-04-03T15:40:54+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.bizId",
+            "body.bizSystemId",
+            "body.groupId"
+          ],
+          "example": {
+            "bizId": "1059",
+            "bizSystemId": "1059",
+            "groupId": "0",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "serviceType": "0"
+          },
+          "key": "{\"bizId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"groupId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"mergeGraph\":\"1\",\"serviceType\":\"0\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizId",
+              "bizSystemId",
+              "groupId",
+              "lang",
+              "mergeGraph",
+              "serviceType"
+            ]
+          },
+          "normalized_example": {
+            "bizId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "groupId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "serviceType": "0"
+          }
+        },
+        {
+          "count_seen": 5,
+          "dynamic_fields": [
+            "body.bizSystemId"
+          ],
+          "example": {
+            "bizSystemId": "1059",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "serviceType": "0"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"mergeGraph\":\"1\",\"serviceType\":\"0\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "bizSystemId",
+              "lang",
+              "mergeGraph",
+              "serviceType"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "serviceType": "0"
+          }
+        }
+      ],
+      "count_seen": 7,
+      "first_seen": "2026-04-03T15:40:31+08:00",
+      "inference_basis": [
+        "path=data/business/graph/graphList"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T15:40:54+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 7
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 7,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "bizId": "1059",
+          "bizSystemId": "1059",
+          "groupId": "0",
+          "lang": "zh_CN",
+          "mergeGraph": "1",
+          "serviceType": "0"
+        },
+        "dynamic_fields": [
+          "body.bizId",
+          "body.bizSystemId",
+          "body.groupId"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/data/business/graph/graphList -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'bizSystemId=1059&serviceType=0&mergeGraph=1&bizId=1059&groupId=0&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/data/business/graph/graphList"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 7
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "bizId": "1059",
+            "bizSystemId": "1059",
+            "groupId": "0",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "serviceType": "0"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:31+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/graph/graphList"
+        },
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "serviceType": "0"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/graph/graphList"
+        },
+        {
+          "body": {
+            "bizSystemId": "1059",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "serviceType": "0"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:42+08:00",
+          "url": "http://169.169.173.25:8080/server-api/data/business/graph/graphList"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "hiddenGraphList": [
+                {
+                  "label": "default",
+                  "value": 8952
+                },
+                {
+                  "label": "外理理货",
+                  "value": 9041
+                },
+                {
+                  "label": "浙港办",
+                  "value": 9049
+                },
+                {
+                  "label": "共用应用",
+                  "value": 9072
+                },
+                {
+                  "label": "信创浙港办",
+                  "value": 9270
+                },
+                {
+                  "label": "信创-浙港办",
+                  "value": 9342
+                },
+                {
+                  "label": "信创-浙港办",
+                  "value": 9343
+                },
+                {
+                  "label": "default",
+                  "value": 9345
+                },
+                {
+                  "label": "信创-浙港通",
+                  "value": 9400
+                },
+                {
+                  "label": "集团法务",
+                  "value": 9415
+                },
+                {
+                  "label": "信创OA",
+                  "value": 9567
+                },
+                {
+                  "label": "铃与堆场",
+                  "value": 9766
+                },
+                {
+                  "label": "铃与堆场",
+                  "value": 9767
+                },
+                {
+                  "label": "Apache Derby",
+                  "value": 8955
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9024
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9032
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9036
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9039
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9040
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9059
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9060
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9061
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9070
+                },
+                {
+                  "label": "Apache Derby",
+                  "value": 9156
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9157
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9257
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9281
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9286
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9287
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9334
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9335
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9363
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9422
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9424
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9483
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9485
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9495
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9506
+                },
+                {
+                  "label": "Unknown",
+                  "value": 9595
+                },
+                {
+                  "label": "Unknown",
+                  "value": 9596
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9600
+                },
+                {
+                  "label": "Redis",
+                  "value": 9026
+                },
+                {
+                  "label": "Redis",
+                  "value": 9027
+                },
+                {
+                  "label": "Redis",
+                  "value": 9033
+                },
+                {
+                  "label": "Redis",
+                  "value": 9034
+                },
+                {
+                  "label": "Redis",
+                  "value": 9037
+                },
+                {
+                  "label": "Redis",
+                  "value": 9071
+                },
+                {
+                  "label": "Redis",
+                  "value": 9098
+                },
+                {
+                  "label": "Redis",
+                  "value": 9280
+                },
+                {
+                  "label": "Redis",
+                  "value": 9282
+                },
+                {
+                  "label": "Redis",
+                  "value": 9284
+                },
+                {
+                  "label": "Redis",
+                  "value": 9288
+                },
+                {
+                  "label": "Redis",
+                  "value": 9420
+                },
+                {
+                  "label": "Redis",
+                  "value": 9423
+                },
+                {
+                  "label": "Redis",
+                  "value": 9484
+                },
+                {
+                  "label": "Redis",
+                  "value": 9490
+                },
+                {
+                  "label": "Redis",
+                  "value": 9493
+                },
+                {
+                  "label": "Redis",
+                  "value": 9497
+                },
+                {
+                  "label": "Redis",
+                  "value": 9501
+                },
+                {
+                  "label": "Redis",
+                  "value": 9504
+                },
+                {
+                  "label": "Redis",
+                  "value": 9507
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9025
+                },
+                {
+                  "label": "https",
+                  "value": 9028
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9029
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9030
+                },
+                {
+                  "label": "http",
+                  "value": 9031
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9035
+                },
+                {
+                  "label": "http",
+                  "value": 9038
+                },
+                {
+                  "label": "http",
+                  "value": 9069
+                },
+                {
+                  "label": "http",
+                  "value": 9099
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9127
+                },
+                {
+                  "label": "https",
+                  "value": 9128
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9129
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9130
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9131
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9279
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9283
+                },
+                {
+                  "label": "http",
+                  "value": 9285
+                },
+                {
+                  "label": "https",
+                  "value": 9362
+                },
+                {
+                  "label": "https",
+                  "value": 9364
+                },
+                {
+                  "label": "https",
+                  "value": 9365
+                },
+                {
+                  "label": "https",
+                  "value": 9366
+                },
+                {
+                  "label": "https",
+                  "value": 9421
+                },
+                {
+                  "label": "http",
+                  "value": 9431
+                },
+                {
+                  "label": "http",
+                  "value": 9432
+                },
+                {
+                  "label": "http",
+                  "value": 9433
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9486
+                },
+                {
+                  "label": "http",
+                  "value": 9487
+                },
+                {
+                  "label": "https",
+                  "value": 9488
+                },
+                {
+                  "label": "http",
+                  "value": 9489
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9491
+                },
+                {
+                  "label": "https",
+                  "value": 9492
+                },
+                {
+                  "label": "http",
+                  "value": 9494
+                },
+                {
+                  "label": "https",
+                  "value": 9496
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9498
+                },
+                {
+                  "label": "https",
+                  "value": 9499
+                },
+                {
+                  "label": "http",
+                  "value": 9500
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9502
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9503
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9505
+                },
+                {
+                  "label": "http",
+                  "value": 9599
+                },
+                {
+                  "label": "jsonrpc",
+                  "value": 9765
+                },
+                {
+                  "label": "https",
+                  "value": 9768
+                },
+                {
+                  "label": "User",
+                  "value": 8956
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalServiceApplication",
+                  "value": 9228
+                },
+                {
+                  "label": "executable.Main",
+                  "value": 8975
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTServiceApplication",
+                  "value": 9341
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageServiceApplication",
+                  "value": 9132
+                },
+                {
+                  "label": "com.nbport.gbm.manage.ManageWebApplication",
+                  "value": 9133
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalWebApplication",
+                  "value": 9224
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageWebApplication",
+                  "value": 9225
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageServiceApplication",
+                  "value": 9226
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageServiceApplication",
+                  "value": 9227
+                },
+                {
+                  "label": "com.alibaba.nacos.Nacos",
+                  "value": 8957
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalServiceApplication",
+                  "value": 9229
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageWebApplication",
+                  "value": 9230
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalWebApplication",
+                  "value": 9231
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTWebApplication",
+                  "value": 9336
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageServiceApplication",
+                  "value": 9337
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayWebApplication",
+                  "value": 9338
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayServiceApplication",
+                  "value": 9339
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageWebApplication",
+                  "value": 9340
+                },
+                {
+                  "label": "com.alibaba.dubbo.container.Main",
+                  "value": 9763
+                },
+                {
+                  "label": "@classpath.txt",
+                  "value": 8959
+                },
+                {
+                  "label": "eportAppServ",
+                  "value": 8960
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageServiceApplication",
+                  "value": 8961
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageWebApplication",
+                  "value": 8966
+                },
+                {
+                  "label": "com.nbport.zgb.login.LoginWebApplication",
+                  "value": 8965
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalServiceApplication",
+                  "value": 8964
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalWebApplication",
+                  "value": 8963
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageWebApplication",
+                  "value": 8962
+                },
+                {
+                  "label": "default",
+                  "value": 9368
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 8973
+                },
+                {
+                  "label": "Apache Derby",
+                  "value": 8958
+                },
+                {
+                  "label": "MySQL",
+                  "value": 8968
+                },
+                {
+                  "label": "Oracle",
+                  "value": 8969
+                },
+                {
+                  "label": "Oracle",
+                  "value": 8970
+                },
+                {
+                  "label": "Redis",
+                  "value": 8967
+                },
+                {
+                  "label": "jsonrpc",
+                  "value": 9764
+                },
+                {
+                  "label": "http",
+                  "value": 8976
+                },
+                {
+                  "label": "dubbo",
+                  "value": 8974
+                },
+                {
+                  "label": "dubbo",
+                  "value": 8972
+                },
+                {
+                  "label": "https",
+                  "value": 8971
+                },
+                {
+                  "label": "com.alibaba.nacos.Nacos",
+                  "value": 8953
+                },
+                {
+                  "label": "User",
+                  "value": 8954
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageWebApplication",
+                  "value": 9011
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageServiceApplication",
+                  "value": 9012
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalServiceApplication",
+                  "value": 9013
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalWebApplication",
+                  "value": 9014
+                },
+                {
+                  "label": "@classpath.txt",
+                  "value": 9015
+                },
+                {
+                  "label": "eportAppServ",
+                  "value": 9016
+                },
+                {
+                  "label": "executable.Main",
+                  "value": 9017
+                },
+                {
+                  "label": "com.eport.myofficeinterface.MyOfficeInterfaceServApplication",
+                  "value": 9018
+                },
+                {
+                  "label": "com.xxl.job.executor.XxlJobExecutorApplication",
+                  "value": 9019
+                },
+                {
+                  "label": "com.xxl.job.admin.XxlJobAdminApplication",
+                  "value": 9020
+                },
+                {
+                  "label": "com.nbport.zgb.login.LoginWebApplication",
+                  "value": 9021
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageWebApplication",
+                  "value": 9022
+                },
+                {
+                  "label": "kg.apc.cmd.UniversalRunner",
+                  "value": 9023
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageServiceApplication",
+                  "value": 9158
+                },
+                {
+                  "label": "com.nbport.gbm.manage.ManageWebApplication",
+                  "value": 9159
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalWebApplication",
+                  "value": 9233
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageWebApplication",
+                  "value": 9234
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageServiceApplication",
+                  "value": 9235
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageServiceApplication",
+                  "value": 9236
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalServiceApplication",
+                  "value": 9237
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalServiceApplication",
+                  "value": 9238
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageWebApplication",
+                  "value": 9239
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalWebApplication",
+                  "value": 9240
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTWebApplication",
+                  "value": 9241
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageServiceApplication",
+                  "value": 9242
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayWebApplication",
+                  "value": 9243
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayServiceApplication",
+                  "value": 9244
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageWebApplication",
+                  "value": 9245
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTServiceApplication",
+                  "value": 9246
+                },
+                {
+                  "label": "testcom.nbport.zgb.portal.PortalServiceApplication",
+                  "value": 9327
+                },
+                {
+                  "label": "testcom.nbport.zgb.manage.ManageServiceApplication",
+                  "value": 9328
+                },
+                {
+                  "label": "testcom.nbport.zgb.message.MessageServiceApplication",
+                  "value": 9329
+                },
+                {
+                  "label": "testcom.nbport.zgb.message.MessageWebApplication",
+                  "value": 9330
+                },
+                {
+                  "label": "testcom.nbport.zgb.portal.PortalWebApplication",
+                  "value": 9331
+                },
+                {
+                  "label": "testcom.nbport.zgb.manage.ManageWebApplication",
+                  "value": 9332
+                },
+                {
+                  "label": "testcom.nbport.zgb.login.LoginWebApplication",
+                  "value": 9333
+                },
+                {
+                  "label": "default",
+                  "value": 9367
+                },
+                {
+                  "label": "org.springframework.boot.loader.WarLauncher",
+                  "value": 9589
+                },
+                {
+                  "label": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "value": 9590
+                },
+                {
+                  "label": "<REDACTED>",
+                  "value": 9591
+                },
+                {
+                  "label": "[xinchuangOA]-ycplatform_鏅烘収宸ヤ綔鍙板厷鏀垮姙鍏郴缁焈Archetype Created Web Application",
+                  "value": 9592
+                },
+                {
+                  "label": "com.alibaba.dubbo.container.Main",
+                  "value": 9601
+                }
+              ]
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:19 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "hiddenGraphList": [
+                {
+                  "label": "default",
+                  "value": 8952
+                },
+                {
+                  "label": "外理理货",
+                  "value": 9041
+                },
+                {
+                  "label": "浙港办",
+                  "value": 9049
+                },
+                {
+                  "label": "共用应用",
+                  "value": 9072
+                },
+                {
+                  "label": "信创浙港办",
+                  "value": 9270
+                },
+                {
+                  "label": "信创-浙港办",
+                  "value": 9342
+                },
+                {
+                  "label": "信创-浙港办",
+                  "value": 9343
+                },
+                {
+                  "label": "default",
+                  "value": 9345
+                },
+                {
+                  "label": "信创-浙港通",
+                  "value": 9400
+                },
+                {
+                  "label": "集团法务",
+                  "value": 9415
+                },
+                {
+                  "label": "信创OA",
+                  "value": 9567
+                },
+                {
+                  "label": "铃与堆场",
+                  "value": 9766
+                },
+                {
+                  "label": "铃与堆场",
+                  "value": 9767
+                },
+                {
+                  "label": "Apache Derby",
+                  "value": 8955
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9024
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9032
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9036
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9039
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9040
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9059
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9060
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9061
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9070
+                },
+                {
+                  "label": "Apache Derby",
+                  "value": 9156
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9157
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9257
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9281
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9286
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9287
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9334
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9335
+                },
+                {
+                  "label": "Oracle",
+                  "value": 9363
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9422
+                },
+                {
+                  "label": "MySQL",
+                  "value": 9424
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9483
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9485
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9495
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 9506
+                },
+                {
+                  "label": "Unknown",
+                  "value": 9595
+                },
+                {
+                  "label": "Unknown",
+                  "value": 9596
+                },
+                {
+                  "label": "Kingbase",
+                  "value": 9600
+                },
+                {
+                  "label": "Redis",
+                  "value": 9026
+                },
+                {
+                  "label": "Redis",
+                  "value": 9027
+                },
+                {
+                  "label": "Redis",
+                  "value": 9033
+                },
+                {
+                  "label": "Redis",
+                  "value": 9034
+                },
+                {
+                  "label": "Redis",
+                  "value": 9037
+                },
+                {
+                  "label": "Redis",
+                  "value": 9071
+                },
+                {
+                  "label": "Redis",
+                  "value": 9098
+                },
+                {
+                  "label": "Redis",
+                  "value": 9280
+                },
+                {
+                  "label": "Redis",
+                  "value": 9282
+                },
+                {
+                  "label": "Redis",
+                  "value": 9284
+                },
+                {
+                  "label": "Redis",
+                  "value": 9288
+                },
+                {
+                  "label": "Redis",
+                  "value": 9420
+                },
+                {
+                  "label": "Redis",
+                  "value": 9423
+                },
+                {
+                  "label": "Redis",
+                  "value": 9484
+                },
+                {
+                  "label": "Redis",
+                  "value": 9490
+                },
+                {
+                  "label": "Redis",
+                  "value": 9493
+                },
+                {
+                  "label": "Redis",
+                  "value": 9497
+                },
+                {
+                  "label": "Redis",
+                  "value": 9501
+                },
+                {
+                  "label": "Redis",
+                  "value": 9504
+                },
+                {
+                  "label": "Redis",
+                  "value": 9507
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9025
+                },
+                {
+                  "label": "https",
+                  "value": 9028
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9029
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9030
+                },
+                {
+                  "label": "http",
+                  "value": 9031
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9035
+                },
+                {
+                  "label": "http",
+                  "value": 9038
+                },
+                {
+                  "label": "http",
+                  "value": 9069
+                },
+                {
+                  "label": "http",
+                  "value": 9099
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9127
+                },
+                {
+                  "label": "https",
+                  "value": 9128
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9129
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9130
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9131
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9279
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9283
+                },
+                {
+                  "label": "http",
+                  "value": 9285
+                },
+                {
+                  "label": "https",
+                  "value": 9362
+                },
+                {
+                  "label": "https",
+                  "value": 9364
+                },
+                {
+                  "label": "https",
+                  "value": 9365
+                },
+                {
+                  "label": "https",
+                  "value": 9366
+                },
+                {
+                  "label": "https",
+                  "value": 9421
+                },
+                {
+                  "label": "http",
+                  "value": 9431
+                },
+                {
+                  "label": "http",
+                  "value": 9432
+                },
+                {
+                  "label": "http",
+                  "value": 9433
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9486
+                },
+                {
+                  "label": "http",
+                  "value": 9487
+                },
+                {
+                  "label": "https",
+                  "value": 9488
+                },
+                {
+                  "label": "http",
+                  "value": 9489
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9491
+                },
+                {
+                  "label": "https",
+                  "value": 9492
+                },
+                {
+                  "label": "http",
+                  "value": 9494
+                },
+                {
+                  "label": "https",
+                  "value": 9496
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9498
+                },
+                {
+                  "label": "https",
+                  "value": 9499
+                },
+                {
+                  "label": "http",
+                  "value": 9500
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9502
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9503
+                },
+                {
+                  "label": "dubbo",
+                  "value": 9505
+                },
+                {
+                  "label": "http",
+                  "value": 9599
+                },
+                {
+                  "label": "jsonrpc",
+                  "value": 9765
+                },
+                {
+                  "label": "https",
+                  "value": 9768
+                },
+                {
+                  "label": "User",
+                  "value": 8956
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalServiceApplication",
+                  "value": 9228
+                },
+                {
+                  "label": "executable.Main",
+                  "value": 8975
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTServiceApplication",
+                  "value": 9341
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageServiceApplication",
+                  "value": 9132
+                },
+                {
+                  "label": "com.nbport.gbm.manage.ManageWebApplication",
+                  "value": 9133
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalWebApplication",
+                  "value": 9224
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageWebApplication",
+                  "value": 9225
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageServiceApplication",
+                  "value": 9226
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageServiceApplication",
+                  "value": 9227
+                },
+                {
+                  "label": "com.alibaba.nacos.Nacos",
+                  "value": 8957
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalServiceApplication",
+                  "value": 9229
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageWebApplication",
+                  "value": 9230
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalWebApplication",
+                  "value": 9231
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTWebApplication",
+                  "value": 9336
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageServiceApplication",
+                  "value": 9337
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayWebApplication",
+                  "value": 9338
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayServiceApplication",
+                  "value": 9339
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageWebApplication",
+                  "value": 9340
+                },
+                {
+                  "label": "com.alibaba.dubbo.container.Main",
+                  "value": 9763
+                },
+                {
+                  "label": "@classpath.txt",
+                  "value": 8959
+                },
+                {
+                  "label": "eportAppServ",
+                  "value": 8960
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageServiceApplication",
+                  "value": 8961
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageWebApplication",
+                  "value": 8966
+                },
+                {
+                  "label": "com.nbport.zgb.login.LoginWebApplication",
+                  "value": 8965
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalServiceApplication",
+                  "value": 8964
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalWebApplication",
+                  "value": 8963
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageWebApplication",
+                  "value": 8962
+                },
+                {
+                  "label": "default",
+                  "value": 9368
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 8973
+                },
+                {
+                  "label": "Apache Derby",
+                  "value": 8958
+                },
+                {
+                  "label": "MySQL",
+                  "value": 8968
+                },
+                {
+                  "label": "Oracle",
+                  "value": 8969
+                },
+                {
+                  "label": "Oracle",
+                  "value": 8970
+                },
+                {
+                  "label": "Redis",
+                  "value": 8967
+                },
+                {
+                  "label": "jsonrpc",
+                  "value": 9764
+                },
+                {
+                  "label": "http",
+                  "value": 8976
+                },
+                {
+                  "label": "dubbo",
+                  "value": 8974
+                },
+                {
+                  "label": "dubbo",
+                  "value": 8972
+                },
+                {
+                  "label": "https",
+                  "value": 8971
+                },
+                {
+                  "label": "com.alibaba.nacos.Nacos",
+                  "value": 8953
+                },
+                {
+                  "label": "User",
+                  "value": 8954
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageWebApplication",
+                  "value": 9011
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageServiceApplication",
+                  "value": 9012
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalServiceApplication",
+                  "value": 9013
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalWebApplication",
+                  "value": 9014
+                },
+                {
+                  "label": "@classpath.txt",
+                  "value": 9015
+                },
+                {
+                  "label": "eportAppServ",
+                  "value": 9016
+                },
+                {
+                  "label": "executable.Main",
+                  "value": 9017
+                },
+                {
+                  "label": "com.eport.myofficeinterface.MyOfficeInterfaceServApplication",
+                  "value": 9018
+                },
+                {
+                  "label": "com.xxl.job.executor.XxlJobExecutorApplication",
+                  "value": 9019
+                },
+                {
+                  "label": "com.xxl.job.admin.XxlJobAdminApplication",
+                  "value": 9020
+                },
+                {
+                  "label": "com.nbport.zgb.login.LoginWebApplication",
+                  "value": 9021
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageWebApplication",
+                  "value": 9022
+                },
+                {
+                  "label": "kg.apc.cmd.UniversalRunner",
+                  "value": 9023
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageServiceApplication",
+                  "value": 9158
+                },
+                {
+                  "label": "com.nbport.gbm.manage.ManageWebApplication",
+                  "value": 9159
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalWebApplication",
+                  "value": 9233
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageWebApplication",
+                  "value": 9234
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageServiceApplication",
+                  "value": 9235
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageServiceApplication",
+                  "value": 9236
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalServiceApplication",
+                  "value": 9237
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalServiceApplication",
+                  "value": 9238
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageWebApplication",
+                  "value": 9239
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalWebApplication",
+                  "value": 9240
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTWebApplication",
+                  "value": 9241
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageServiceApplication",
+                  "value": 9242
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayWebApplication",
+                  "value": 9243
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayServiceApplication",
+                  "value": 9244
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageWebApplication",
+                  "value": 9245
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTServiceApplication",
+                  "value": 9246
+                },
+                {
+                  "label": "testcom.nbport.zgb.portal.PortalServiceApplication",
+                  "value": 9327
+                },
+                {
+                  "label": "testcom.nbport.zgb.manage.ManageServiceApplication",
+                  "value": 9328
+                },
+                {
+                  "label": "testcom.nbport.zgb.message.MessageServiceApplication",
+                  "value": 9329
+                },
+                {
+                  "label": "testcom.nbport.zgb.message.MessageWebApplication",
+                  "value": 9330
+                },
+                {
+                  "label": "testcom.nbport.zgb.portal.PortalWebApplication",
+                  "value": 9331
+                },
+                {
+                  "label": "testcom.nbport.zgb.manage.ManageWebApplication",
+                  "value": 9332
+                },
+                {
+                  "label": "testcom.nbport.zgb.login.LoginWebApplication",
+                  "value": 9333
+                },
+                {
+                  "label": "default",
+                  "value": 9367
+                },
+                {
+                  "label": "org.springframework.boot.loader.WarLauncher",
+                  "value": 9589
+                },
+                {
+                  "label": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "value": 9590
+                },
+                {
+                  "label": "<REDACTED>",
+                  "value": 9591
+                },
+                {
+                  "label": "[xinchuangOA]-ycplatform_鏅烘収宸ヤ綔鍙板厷鏀垮姙鍏郴缁焈Archetype Created Web Application",
+                  "value": 9592
+                },
+                {
+                  "label": "com.alibaba.dubbo.container.Main",
+                  "value": 9601
+                }
+              ]
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:21 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "hiddenGraphList": [
+                {
+                  "label": "User",
+                  "value": 8956
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalServiceApplication",
+                  "value": 9228
+                },
+                {
+                  "label": "executable.Main",
+                  "value": 8975
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTServiceApplication",
+                  "value": 9341
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageServiceApplication",
+                  "value": 9132
+                },
+                {
+                  "label": "com.nbport.gbm.manage.ManageWebApplication",
+                  "value": 9133
+                },
+                {
+                  "label": "com.nbport.tt.portal.PortalWebApplication",
+                  "value": 9224
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageWebApplication",
+                  "value": 9225
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageServiceApplication",
+                  "value": 9226
+                },
+                {
+                  "label": "com.nbport.tt.manage.ManageServiceApplication",
+                  "value": 9227
+                },
+                {
+                  "label": "com.alibaba.nacos.Nacos",
+                  "value": 8957
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalServiceApplication",
+                  "value": 9229
+                },
+                {
+                  "label": "com.nbport.tt.wmanage.WebManageWebApplication",
+                  "value": 9230
+                },
+                {
+                  "label": "com.nbport.tt.wportal.WebPortalWebApplication",
+                  "value": 9231
+                },
+                {
+                  "label": "com.nbport.tt.ybt.YBTWebApplication",
+                  "value": 9336
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageServiceApplication",
+                  "value": 9337
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayWebApplication",
+                  "value": 9338
+                },
+                {
+                  "label": "com.nbport.tt.pay.PayServiceApplication",
+                  "value": 9339
+                },
+                {
+                  "label": "com.nbport.tt.message.MessageWebApplication",
+                  "value": 9340
+                },
+                {
+                  "label": "com.alibaba.dubbo.container.Main",
+                  "value": 9763
+                },
+                {
+                  "label": "@classpath.txt",
+                  "value": 8959
+                },
+                {
+                  "label": "eportAppServ",
+                  "value": 8960
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageServiceApplication",
+                  "value": 8961
+                },
+                {
+                  "label": "com.nbport.zgb.manage.ManageWebApplication",
+                  "value": 8966
+                },
+                {
+                  "label": "com.nbport.zgb.login.LoginWebApplication",
+                  "value": 8965
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalServiceApplication",
+                  "value": 8964
+                },
+                {
+                  "label": "com.nbport.zgb.portal.PortalWebApplication",
+                  "value": 8963
+                },
+                {
+                  "label": "com.nbport.zgb.message.MessageWebApplication",
+                  "value": 8962
+                },
+                {
+                  "label": "default",
+                  "value": 9368
+                },
+                {
+                  "label": "PostgreSQL",
+                  "value": 8973
+                },
+                {
+                  "label": "Apache Derby",
+                  "value": 8958
+                },
+                {
+                  "label": "MySQL",
+                  "value": 8968
+                },
+                {
+                  "label": "Oracle",
+                  "value": 8969
+                },
+                {
+                  "label": "Oracle",
+                  "value": 8970
+                },
+                {
+                  "label": "Redis",
+                  "value": 8967
+                },
+                {
+                  "label": "jsonrpc",
+                  "value": 9764
+                },
+                {
+                  "label": "http",
+                  "value": 8976
+                },
+                {
+                  "label": "dubbo",
+                  "value": 8974
+                },
+                {
+                  "label": "dubbo",
+                  "value": 8972
+                },
+                {
+                  "label": "https",
+                  "value": 8971
+                }
+              ]
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:32 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 7
+      }
+    }
+  },
+  "path": "/server-api/data/business/graph/graphList",
+  "relative_path": "data/business/graph/graphList"
+}

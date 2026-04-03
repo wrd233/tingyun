@@ -1,0 +1,770 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-03T15:40:25+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-03T15:40:25+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-03T15:40:25+08:00",
+      "inference_basis": [
+        "path=graph/queryBizSystenGraph"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-03T15:40:25+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "endTime": "2026-04-03 12:20",
+          "lang": "zh_CN",
+          "timePeriod": "30"
+        },
+        "dynamic_fields": [
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/graph/queryBizSystenGraph -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'endTime=2026-04-03+12%3A20&timePeriod=30&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/graph/queryBizSystenGraph"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "endTime": "2026-04-03 12:20",
+            "lang": "zh_CN",
+            "timePeriod": "30"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-03T15:40:25+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/queryBizSystenGraph"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "layout": "circle",
+              "linkeDataArray": [
+                {
+                  "error": 0.0,
+                  "from": "1065_0_0_0_0_[集团法务]",
+                  "lineType": 9,
+                  "respTime": 1047.0,
+                  "throught": 0.01,
+                  "tips": {
+                    "apexThrought": null,
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": "1065",
+                        "calleeBizSystemId": "1065",
+                        "callerBizSystemId": "1065",
+                        "chartQueryType": "errorChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/error"
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "bizSystemId": "1065",
+                        "calleeBizSystemId": "1065",
+                        "callerBizSystemId": "1065",
+                        "chartQueryType": "queryTimeChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/response"
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": "1065",
+                        "calleeBizSystemId": "1065",
+                        "callerBizSystemId": "1065",
+                        "chartQueryType": "throughChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/throught"
+                    }
+                  },
+                  "to": "1065_0_0_0_0_[集团法务]"
+                },
+                {
+                  "error": 0.01,
+                  "from": "1064_0_0_0_0_[信创-浙港通]",
+                  "lineType": 9,
+                  "respTime": 21.0,
+                  "throught": 39.12,
+                  "tips": {
+                    "apexThrought": null,
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": "1064",
+                        "calleeBizSystemId": "1064",
+                        "callerBizSystemId": "1064",
+                        "chartQueryType": "errorChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/error"
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "bizSystemId": "1064",
+                        "calleeBizSystemId": "1064",
+                        "callerBizSystemId": "1064",
+                        "chartQueryType": "queryTimeChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/response"
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": "1064",
+                        "calleeBizSystemId": "1064",
+                        "callerBizSystemId": "1064",
+                        "chartQueryType": "throughChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/throught"
+                    }
+                  },
+                  "to": "1064_0_0_0_0_[信创-浙港通]"
+                },
+                {
+                  "error": 0.0,
+                  "from": "1064_0_0_0_0_[信创-浙港通]",
+                  "lineType": 9,
+                  "respTime": 29.0,
+                  "throught": 0.17,
+                  "tips": {
+                    "apexThrought": null,
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": "1064",
+                        "calleeBizSystemId": "1063",
+                        "callerBizSystemId": "1064",
+                        "chartQueryType": "errorChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/error"
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "bizSystemId": "1064",
+                        "calleeBizSystemId": "1063",
+                        "callerBizSystemId": "1064",
+                        "chartQueryType": "queryTimeChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/response"
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": "1064",
+                        "calleeBizSystemId": "1063",
+                        "callerBizSystemId": "1064",
+                        "chartQueryType": "throughChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/throught"
+                    }
+                  },
+                  "to": "1063_0_0_0_0_[default]"
+                },
+                {
+                  "error": 0.0,
+                  "from": "1059_0_0_0_0_[铃与堆场]",
+                  "lineType": 9,
+                  "respTime": 6.0,
+                  "throught": 0.01,
+                  "tips": {
+                    "apexThrought": null,
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": "1059",
+                        "calleeBizSystemId": "1059",
+                        "callerBizSystemId": "1059",
+                        "chartQueryType": "errorChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/error"
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "bizSystemId": "1059",
+                        "calleeBizSystemId": "1059",
+                        "callerBizSystemId": "1059",
+                        "chartQueryType": "queryTimeChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/response"
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": "1059",
+                        "calleeBizSystemId": "1059",
+                        "callerBizSystemId": "1059",
+                        "chartQueryType": "throughChart",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/topo/line/application/chart/up-response-throught-error/throught"
+                    }
+                  },
+                  "to": "1059_0_0_0_0_[铃与堆场]"
+                }
+              ],
+              "nodeDataArray": [
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9767,
+                  "hidId": 9767,
+                  "id": "1059_0_0_0_0_[铃与堆场]",
+                  "info": {
+                    "bizId": 1059,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "铃与堆场"
+                  },
+                  "loc": "34.532332715372235 331.63671704721395",
+                  "settingKey": "GLB@1059_0_0_0_0_[铃与堆场]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1059,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1059,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1059,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "34.532332715372235",
+                  "y": "331.63671704721395"
+                },
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9072,
+                  "hidId": 9072,
+                  "id": "1062_0_0_0_0_[共用应用]",
+                  "info": {
+                    "bizId": 1062,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "共用应用"
+                  },
+                  "loc": "393.169049762599 183.0845248813032",
+                  "settingKey": "GLB@1062_0_0_0_0_[共用应用]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1062,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1062,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1062,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "393.169049762599",
+                  "y": "183.0845248813032"
+                },
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9400,
+                  "hidId": 9400,
+                  "id": "1064_0_0_0_0_[信创-浙港通]",
+                  "info": {
+                    "bizId": 1064,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "信创-浙港通"
+                  },
+                  "loc": "34.53233271538744 34.532332715369876",
+                  "settingKey": "GLB@1064_0_0_0_0_[信创-浙港通]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1064,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1064,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1064,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "34.53233271538744",
+                  "y": "34.532332715369876"
+                },
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9415,
+                  "hidId": 9415,
+                  "id": "1065_0_0_0_0_[集团法务]",
+                  "info": {
+                    "bizId": 1065,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "集团法务"
+                  },
+                  "loc": "331.63671704721645 331.63671704722424",
+                  "settingKey": "GLB@1065_0_0_0_0_[集团法务]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1065,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1065,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1065,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "331.63671704721645",
+                  "y": "331.63671704722424"
+                },
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9567,
+                  "hidId": 9567,
+                  "id": "1066_0_0_0_0_[信创OA]",
+                  "info": {
+                    "bizId": 1066,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "信创OA"
+                  },
+                  "loc": "183.0845248812921 393.169049762599",
+                  "settingKey": "GLB@1066_0_0_0_0_[信创OA]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1066,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1066,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1066,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "183.0845248812921",
+                  "y": "393.169049762599"
+                },
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9049,
+                  "hidId": 9049,
+                  "id": "1061_0_0_0_0_[浙港办]",
+                  "info": {
+                    "bizId": 1061,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "浙港办"
+                  },
+                  "loc": "331.6367170472216 34.532332715379965",
+                  "settingKey": "GLB@1061_0_0_0_0_[浙港办]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1061,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1061,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1061,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "331.6367170472216",
+                  "y": "34.532332715379965"
+                },
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9041,
+                  "hidId": 9041,
+                  "id": "1060_0_0_0_0_[外理理货]",
+                  "info": {
+                    "bizId": 1060,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "外理理货"
+                  },
+                  "loc": "183.08452488129944 -27",
+                  "settingKey": "GLB@1060_0_0_0_0_[外理理货]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1060,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1060,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1060,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "183.08452488129944",
+                  "y": "-27"
+                },
+                {
+                  "alarmShow": false,
+                  "deleteClickShow": true,
+                  "graphId": 9345,
+                  "hidId": 9345,
+                  "id": "1063_0_0_0_0_[default]",
+                  "info": {
+                    "bizId": 1063,
+                    "health": 0,
+                    "healthInfo": null,
+                    "name": "default"
+                  },
+                  "loc": "-27 183.08452488128876",
+                  "settingKey": "GLB@1063_0_0_0_0_[default]@2",
+                  "show": 1,
+                  "tip": {
+                    "errorChart": {
+                      "chartParams": {
+                        "bizSystemId": 1063,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/error",
+                      "indexKey": "ERROR",
+                      "showTotal": false
+                    },
+                    "responseChart": {
+                      "chartParams": {
+                        "bizSystemId": 1063,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "responseAndQuantile": false,
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/response",
+                      "indexKey": "RESPONSE",
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "bizSystemId": 1063,
+                        "businessType": "BIZ_SYSTEM",
+                        "endTime": "2026-04-03 12:20:00",
+                        "timePeriod": 30
+                      },
+                      "chartUrl": "/application/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "showTotal": false
+                    }
+                  },
+                  "type": 13,
+                  "x": "-27",
+                  "y": "183.08452488128876"
+                }
+              ],
+              "scale": "1"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Fri, 03 Apr 2026 07:40:17 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/graph/queryBizSystenGraph",
+  "relative_path": "graph/queryBizSystenGraph"
+}
