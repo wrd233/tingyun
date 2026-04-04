@@ -1,0 +1,8 @@
+{
+  "base_url": "http://169.169.173.25:8080",
+  "token": "",
+  "lang": "zh_CN",
+  "timezone": "Asia/Shanghai",
+  "timeout_seconds": 30,
+  "captured_api_dir": "../tingyun_cdp_capture/captured_api"
+}

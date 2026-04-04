@@ -1,0 +1,6 @@
+{
+  "base_url": "http://169.169.173.25:8080",
+  "token": "",
+  "timeout": 30,
+  "default_biz_system_id": 1065
+}

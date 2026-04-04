@@ -9,6 +9,7 @@ import sys
 import time
 import uuid
 from datetime import datetime
+from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -16,6 +17,7 @@ from urllib.request import Request, urlopen
 
 DEFAULT_BASE_URL = "http://169.169.173.25:8080"
 DEFAULT_FILTER_LIST = "Service,Exception,External,Database,NoSQL,Pool,MQ,Code,Dataitem"
+DEFAULT_CONFIG_PATH = Path(__file__).resolve().with_name("config.local.json")
 
 
 def now_minute_string() -> str:
@@ -24,6 +26,17 @@ def now_minute_string() -> str:
 
 def pretty_json(value: Any) -> str:
     return json.dumps(value, ensure_ascii=False, indent=2, sort_keys=False)
+
+
+def load_local_config(config_path: str | None) -> tuple[Path, dict[str, Any]]:
+    resolved = Path(config_path).expanduser() if config_path else DEFAULT_CONFIG_PATH
+    if not resolved.exists():
+        return resolved, {}
+    with resolved.open("r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+    if not isinstance(payload, dict):
+        raise SystemExit(f"Invalid config file, expected a JSON object: {resolved}")
+    return resolved, payload
 
 
 def unwrap_data(payload: Any) -> Any:
@@ -326,22 +339,35 @@ def require_token(token: str | None) -> str:
     if token:
         return token
     raise SystemExit(
-        "Missing token. Set --token or export TINGYUN_TOKEN / TOKEN before running this script."
+        "Missing token. Set --token, put token in config.local.json, or export TINGYUN_TOKEN / TOKEN before running."
     )
 
 
 def main() -> int:
+    bootstrap = argparse.ArgumentParser(add_help=False)
+    bootstrap.add_argument("--config")
+    bootstrap_args, _ = bootstrap.parse_known_args()
+    config_path, file_config = load_local_config(bootstrap_args.config)
+    token_env = file_config.get("token_env", "TINGYUN_TOKEN")
+    token_default = (
+        os.environ.get(token_env)
+        or os.environ.get("TINGYUN_TOKEN")
+        or os.environ.get("TOKEN")
+        or file_config.get("token")
+    )
+
     parser = argparse.ArgumentParser(
         description="Replay the action -> overview -> trace list -> trace detail workflow against Tingyun."
     )
-    parser.add_argument("--base-url", default=os.environ.get("TINGYUN_BASE_URL", DEFAULT_BASE_URL))
-    parser.add_argument("--token", default=os.environ.get("TINGYUN_TOKEN") or os.environ.get("TOKEN"))
-    parser.add_argument("--biz-system-id", type=int, default=1065)
+    parser.add_argument("--config", default=str(config_path))
+    parser.add_argument("--base-url", default=os.environ.get("TINGYUN_BASE_URL", file_config.get("base_url", DEFAULT_BASE_URL)))
+    parser.add_argument("--token", default=token_default)
+    parser.add_argument("--biz-system-id", type=int, default=int(file_config.get("default_biz_system_id", 1065)))
     parser.add_argument("--application-id", type=int, default=0, help="0 means all applications under the business system")
     parser.add_argument("--end-time", default=now_minute_string())
     parser.add_argument("--time-period", type=int, default=30, help="Minutes")
     parser.add_argument("--page-size", type=int, default=15)
-    parser.add_argument("--timeout", type=int, default=30)
+    parser.add_argument("--timeout", type=int, default=int(file_config.get("timeout", 30)))
     args = parser.parse_args()
 
     token = require_token(args.token)

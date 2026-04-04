@@ -1,102 +1,79 @@
-# Tingyun CDP Capture
+# Tingyun CDP 抓取项目
 
-This tool listens to Chrome DevTools Protocol (CDP), keeps only requests under a target `/server-api/` prefix, writes one JSON file per endpoint path plus a top-level `index.json`, and also stores one best raw request/response sample per request signature under `raw_logs/`.
+这个项目负责两件事：
 
-The folder also contains `replay_action_trace_flow.py`, a standalone HTTP replay script that can:
+- 抓取听云页面里的 `/server-api/` 请求，沉淀接口样本
+- 回放关键诊断链路，验证接口能否独立模拟调用
 
-- find the slowest action inside one `bizSystemId`
-- fetch that action's overview
-- query the trace list for that action
-- pick one trace row and print key fields from `action/trace/detail`
+它不再承载 `adapter` 源码；`adapter` 已经拆到同级目录 [tingyun_adapter](/Users/wangrundong/work/mywork/tingyun_adapter)。
 
-The folder now also contains an initial `tingyun_adapter` project skeleton under `src/`, covering stage 1 and stage 2 of the adapter plan:
+## 主要内容
 
-- core schema / ref / pack envelope models
-- raw source clients for the main API families
-- field normalizers and key resolvers
-- offline captured-api repository for sample replay
-- basic SDK / CLI scaffolding
-- unit tests for the core normalization logic
+- `capture_tingyun_api.py`
+  - 监听 Chrome CDP，按接口路径归档请求样本
+- `replay_action_trace_flow.py`
+  - 回放 `bizSystem -> action -> trace -> detail` 诊断链路
+- `captured_api/`
+  - 聚合后的接口样本
+- `raw_logs/`
+  - 更细粒度的请求 / 响应样本
+- `api_analysis_priority.md`
+- `api_report_shortlist.md`
+- `tingyun_manual_context_and_component_mapping.md`
+- `tingyun_system_skeleton_diagnostic_playbook.md`
 
-Stage 3 is now scaffolded too:
+## 本地配置
 
-- `system_snapshot`
-- `action_hotspot_pack`
-- `trace_case_pack`
-- `report_fact_pack`
+优先使用本地配置文件：
 
-## What it does
+- `config.local.json`
 
-- Connects to one or more Chrome tabs through the remote debugging port
-- Captures `XHR` and `Fetch` requests whose URL starts with a chosen API prefix
-- Groups requests by the path after `/server-api/`
-- Writes endpoint samples such as `graph/query/overview.json`
-- Stores method variants, query examples, body examples, response metadata, a basic inferred purpose, and a replayable sample `curl`
-- Stores one best raw request/response JSON per request signature so you can inspect full payloads later
+先复制示例：
 
-## Folder layout
-
-```text
-tingyun_cdp_capture/
-  capture_tingyun_api.py
-  replay_action_trace_flow.py
-  pyproject.toml
-  src/
-    tingyun_adapter/
-  tests/
-  requirements.txt
-  README.md
-  captured_api/
-    index.json
-    graph/
-      query/
-        overview.json
-  raw_logs/
-    graph/
-      query/
-        overview/
-          POST__request_overview__xxxxxxxxxxxx.json
+```bash
+cp /Users/wangrundong/work/mywork/tingyun_cdp_capture/config.local.json.example /Users/wangrundong/work/mywork/tingyun_cdp_capture/config.local.json
 ```
 
-## 1. Start Chrome with CDP enabled
+示例结构：
 
-Use a separate Chrome instance so the debugging port is predictable:
+```json
+{
+  "base_url": "http://169.169.173.25:8080",
+  "token": "paste-your-token-here",
+  "timeout": 30,
+  "default_biz_system_id": 1065
+}
+```
+
+`replay_action_trace_flow.py` 会按下面顺序取 token：
+
+1. `--token`
+2. `config.local.json` 中的 `token`
+3. 环境变量 `TINGYUN_TOKEN`
+4. 环境变量 `TOKEN`
+
+## 抓取
+
+### 1. 启动 Chrome 调试端口
 
 ```bash
 open -na "Google Chrome" --args --remote-debugging-port=9222 --user-data-dir=/tmp/tingyun-cdp-profile
 ```
 
-Then open your Tingyun page in that Chrome window and log in normally.
-
-## 2. Install dependency
+### 2. 安装依赖
 
 ```bash
 cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
 python3 -m pip install -r requirements.txt
 ```
 
-## 3. Optional: list available targets
+### 3. 查看可连接目标
 
 ```bash
 python3 capture_tingyun_api.py --list-targets
 ```
 
-If you have multiple tabs:
-
-- `--target-id` attaches to one exact tab
-- `--target-url-contains` now attaches to every matching page tab
-- with no target filter, the tool attaches to all page tabs whose URL matches the API host
-- while running, it can keep polling Chrome and attach newly opened matching tabs automatically
-
-## 4. Start capturing
-
-Basic run:
-
-```bash
-python3 capture_tingyun_api.py --verbose
-```
-
-A more explicit run:
+### 4. 开始抓取
 
 ```bash
 python3 capture_tingyun_api.py \
@@ -110,135 +87,15 @@ python3 capture_tingyun_api.py \
   --verbose
 ```
 
-Now use the page normally. Each matching request will update:
-
-- `captured_api/index.json`
-- `captured_api/<path>.json`
-- `raw_logs/<path>/<METHOD>__<variant>__<hash>.json`
-
-Press `Ctrl+C` when you want to stop.
-
-## Output shape
-
-Each endpoint file contains:
-
-- `relative_path`
-- `path`
-- `count_seen`
-- `methods`
-- per-method query variants
-- per-method body variants
-- sample requests
-- sample responses
-- inferred purpose
-- replay info including a sample `curl`
-
-Each raw log file contains:
-
-- the request signature used for deduplication
-- the full request URL, query, headers, and parsed body
-- the full response status, headers, encoded size, and parsed body when available
-- capture metadata and a completeness score
-
-Raw logs are deduplicated by normalized request signature:
-
-- same method
-- same endpoint path
-- same normalized query
-- same normalized request body
-
-If the same request kind is captured many times, the tool keeps only one raw log file and updates it only when a new capture is more complete.
-
-If you see errors like `Request content was evicted from inspector cache`, raise:
-
-- `--network-total-buffer-bytes`
-- `--network-resource-buffer-bytes`
-
-These options enlarge Chrome's CDP network buffer so response bodies are less likely to be evicted before capture.
-
-## Notes
-
-- Existing JSON files in `captured_api/` are loaded on startup, so repeated runs keep accumulating observations.
-- The tool keeps request headers small on purpose and redacts `Authorization`.
-- Raw logs keep a fuller request/response sample, but still only try to capture response bodies for small text or JSON responses.
-- For trace-heavy pages, prefer a larger CDP buffer such as `--network-total-buffer-bytes 50000000`.
-
-## Replay one full workflow
-
-Export a valid bearer token first:
-
-```bash
-export TINGYUN_TOKEN='your bearer token here'
-```
-
-Then run:
+## 回放 action -> trace 链路
 
 ```bash
 cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
 python3 replay_action_trace_flow.py --biz-system-id 1065 --time-period 30
 ```
 
-Useful options:
-
-- `--end-time '2026-04-03 12:20'`
-- `--application-id 0`
-- `--page-size 15`
-- `--base-url http://169.169.173.25:8080`
-
-The script prints:
-
-- the top actions returned by `webaction/list/actionList`
-- the chosen slowest action
-- the action overview
-- the trace candidates returned by `trace_current_overview`
-- a summary of the selected trace detail
-
-## Adapter Skeleton
-
-You can run the current stage 1 / stage 2 unit tests with:
+如果要指定配置文件：
 
 ```bash
-cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
-PYTHONPATH=./src python3 -m unittest discover -s tests/unit -p 'test_*.py'
+python3 replay_action_trace_flow.py --config ./config.local.json --biz-system-id 1065
 ```
-
-You can also inspect the initial CLI scaffold with:
-
-```bash
-cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
-PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli --help
-```
-
-You can point the adapter bootstrap at your captured samples:
-
-```bash
-cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
-PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli --captured-api-dir ./captured_api
-```
-
-If you want the project import path and script metadata locally, you can also install it in editable mode:
-
-```bash
-cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
-python3 -m pip install -e .
-tingyun-adapter --captured-api-dir ./captured_api
-```
-
-Build a stage 3 pack from captured samples:
-
-```bash
-cd /Users/wangrundong/work/mywork/tingyun_cdp_capture
-PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
-  --captured-api-dir ./captured_api \
-  --build-pack system_snapshot \
-  --biz-system-id 1059 \
-  --end-time '2026-04-03 12:20' \
-  --period-minutes 30 \
-  --source-mode sample
-```
-
-You can swap `system_snapshot` for:
-
-- `action_hotspot_pack`
-- `trace_case_pack`
-- `report_fact_pack`

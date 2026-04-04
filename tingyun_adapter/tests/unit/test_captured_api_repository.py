@@ -5,7 +5,7 @@ from tingyun_adapter.sources.captured_api_repository import CapturedApiRepositor
 
 
 ROOT = Path(__file__).resolve().parents[2]
-CAPTURED_API_DIR = ROOT / "captured_api"
+CAPTURED_API_DIR = ROOT.parent / "tingyun_cdp_capture" / "captured_api"
 
 
 class CapturedApiRepositoryTests(unittest.TestCase):

@@ -10,13 +10,25 @@ from tingyun_adapter.clients.nosql_client import NoSQLClient
 from tingyun_adapter.clients.trace_client import TraceClient
 from tingyun_adapter.clients.webaction_client import WebActionClient
 from tingyun_adapter.config.settings import AdapterSettings
-from tingyun_adapter.domain.models.common import AnalysisContext, TimeWindow
+from tingyun_adapter.domain.models.common import (
+    AnalysisContext,
+    AuthConfig,
+    ConnectionPoolRef,
+    DatabaseComponentRef,
+    NoSQLComponentRef,
+    TimeWindow,
+)
 from tingyun_adapter.sources.captured_api_repository import CapturedApiRepository
 from tingyun_adapter.usecases.builders import (
     build_action_hotspot_pack,
     build_report_fact_pack,
     build_system_snapshot,
     build_trace_case_pack,
+)
+from tingyun_adapter.usecases.component_builders import (
+    build_connection_pool_pack,
+    build_database_component_pack,
+    build_nosql_component_pack,
 )
 
 
@@ -25,6 +37,7 @@ class Adapter:
         self.settings = settings
         kwargs = {
             "base_url": settings.base_url,
+            "token": settings.token,
             "token_env": settings.token_env,
             "lang": settings.lang,
             "timeout": settings.timeout_seconds,
@@ -44,14 +57,16 @@ class Adapter:
 
     @classmethod
     def from_env(cls, **overrides) -> "Adapter":
-        settings = AdapterSettings.from_env()
+        settings = AdapterSettings.from_env(config_path=overrides.get("config_path"))
         merged = AdapterSettings(
             base_url=overrides.get("base_url", settings.base_url),
+            token=overrides.get("token", settings.token),
             token_env=overrides.get("token_env", settings.token_env),
             lang=overrides.get("lang", settings.lang),
             timezone=overrides.get("timezone", settings.timezone),
             timeout_seconds=overrides.get("timeout_seconds", settings.timeout_seconds),
             captured_api_dir=overrides.get("captured_api_dir", settings.captured_api_dir),
+            config_path=overrides.get("config_path", settings.config_path),
         )
         return cls(merged)
 
@@ -60,6 +75,7 @@ class Adapter:
             base_url=self.settings.base_url,
             biz_system_id=biz_system_id,
             time_window=TimeWindow(end_time=end_time, period_minutes=period_minutes),
+            auth=AuthConfig(token=self.settings.token, token_env=self.settings.token_env),
             lang=self.settings.lang,
             timezone=self.settings.timezone,
         )
@@ -75,3 +91,30 @@ class Adapter:
 
     def build_report_fact_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
         return build_report_fact_pack(self, context, source_mode=source_mode)
+
+    def build_database_component_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        component_ref: DatabaseComponentRef | None = None,
+    ):
+        return build_database_component_pack(self, context, source_mode=source_mode, component_ref=component_ref)
+
+    def build_nosql_component_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        component_ref: NoSQLComponentRef | None = None,
+    ):
+        return build_nosql_component_pack(self, context, source_mode=source_mode, component_ref=component_ref)
+
+    def build_connection_pool_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        pool_ref: ConnectionPoolRef | None = None,
+    ):
+        return build_connection_pool_pack(self, context, source_mode=source_mode, pool_ref=pool_ref)

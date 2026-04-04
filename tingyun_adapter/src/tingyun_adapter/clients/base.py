@@ -27,7 +27,7 @@ class BaseClient:
 
     def require_token(self) -> str:
         if not self.token:
-            raise RuntimeError("Missing Tingyun token. Set token or export TINGYUN_TOKEN.")
+            raise RuntimeError("Missing Tingyun token. Set token, config.local.json token, or export TINGYUN_TOKEN.")
         return self.token
 
     def _headers(self, content_type: str) -> dict[str, str]:
