@@ -17,6 +17,7 @@
 - 健康检查
 - pack 构建接口
 - 基于 `service_api_key` 的简单鉴权
+- 基于最小请求间隔和每分钟上限的基础节流
 
 ## 2. 配置
 
@@ -37,7 +38,9 @@
   "service_host": "127.0.0.1",
   "service_port": 8000,
   "service_api_key": "请改成一个随机长字符串",
-  "service_public_base_url": ""
+  "service_public_base_url": "",
+  "service_min_interval_ms": 800,
+  "service_max_requests_per_minute": 30
 }
 ```
 
@@ -53,6 +56,10 @@
   - 本地启动端口
 - `service_api_key`
   - 对外暴露时用于保护服务
+- `service_min_interval_ms`
+  - 同一个调用方两次请求之间的最小间隔
+- `service_max_requests_per_minute`
+  - 同一个调用方每分钟允许的最大请求数
 
 ## 3. 安装依赖
 
@@ -116,6 +123,7 @@ curl http://127.0.0.1:8000/healthz
 - 当前 `base_url`
 - `captured_api_attached`
 - `has_tingyun_token`
+- 当前节流参数
 
 ### 5.2 查看支持的 pack
 
@@ -335,3 +343,17 @@ curl https://tingyun-adapter.example.com/v1/packs/system_snapshot \
 
 - 先用 HTTP + skill
 - 后续再演进到 MCP / plugin
+
+## 10. 机器 B 的接入项目
+
+机器 B 现在已经有独立的远程 client 项目：
+
+- [../tingyun_adapter_client/README.md](/Users/wangrundong/work/mywork/tingyun_adapter_client/README.md)
+- [../tingyun_adapter_client/machine_b_agent_adapter_usage.md](/Users/wangrundong/work/mywork/tingyun_adapter_client/machine_b_agent_adapter_usage.md)
+
+建议机器 B：
+
+1. 只配置 `service_base_url` 和 `service_api_key`
+2. 先调用 `healthz` 和 `meta`
+3. 再调用 `build-pack`
+4. 先走 `sample`，验证通过后再切 `live`

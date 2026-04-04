@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import argparse
+import threading
+import time
+from collections import deque
+from dataclasses import dataclass, field
 from typing import Any, Optional
 
-from fastapi import Depends, FastAPI, Header, HTTPException
+from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from pydantic import BaseModel, Field
 
 from tingyun_adapter.config.settings import AdapterSettings
@@ -23,6 +27,36 @@ PACK_TYPES = {
     "nosql_component_pack",
     "connection_pool_pack",
 }
+
+
+@dataclass
+class InMemoryRateLimiter:
+    min_interval_ms: int
+    max_requests_per_minute: int
+    _lock: threading.Lock = field(default_factory=threading.Lock)
+    _recent_requests: dict[str, deque[float]] = field(default_factory=dict)
+    _last_request_at: dict[str, float] = field(default_factory=dict)
+
+    def check(self, identifier: str, *, now: Optional[float] = None) -> Optional[float]:
+        if self.min_interval_ms <= 0 and self.max_requests_per_minute <= 0:
+            return None
+        now = time.monotonic() if now is None else now
+        min_interval_seconds = max(self.min_interval_ms, 0) / 1000.0
+        with self._lock:
+            recent = self._recent_requests.setdefault(identifier, deque())
+            cutoff = now - 60.0
+            while recent and recent[0] <= cutoff:
+                recent.popleft()
+            if self.max_requests_per_minute > 0 and len(recent) >= self.max_requests_per_minute:
+                return max(0.0, 60.0 - (now - recent[0]))
+            last = self._last_request_at.get(identifier)
+            if last is not None and min_interval_seconds > 0:
+                wait_seconds = min_interval_seconds - (now - last)
+                if wait_seconds > 0:
+                    return wait_seconds
+            recent.append(now)
+            self._last_request_at[identifier] = now
+        return None
 
 
 class BuildPackRequest(BaseModel):
@@ -50,6 +84,10 @@ class BuildPackRequest(BaseModel):
 def create_app(*, config_path: Optional[str] = None) -> FastAPI:
     settings = AdapterSettings.from_env(config_path=config_path)
     adapter = Adapter(settings)
+    rate_limiter = InMemoryRateLimiter(
+        min_interval_ms=settings.service_min_interval_ms,
+        max_requests_per_minute=settings.service_max_requests_per_minute,
+    )
     app = FastAPI(
         title="Tingyun Adapter Service",
         version="0.1.0",
@@ -57,18 +95,35 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
     )
 
     def _authorize(
+        request: Request,
         x_adapter_api_key: Optional[str] = Header(default=None),
         authorization: Optional[str] = Header(default=None),
     ) -> None:
         expected = settings.service_api_key
-        if not expected:
-            return
         bearer = None
         if authorization and authorization.startswith("Bearer "):
             bearer = authorization[len("Bearer ") :]
-        if x_adapter_api_key == expected or bearer == expected:
+        if not expected:
+            client_host = request.client.host if request.client else "unknown"
+            wait_seconds = rate_limiter.check(client_host)
+            if wait_seconds:
+                raise HTTPException(
+                    status_code=429,
+                    detail=f"Rate limit exceeded, retry after {wait_seconds:.2f}s",
+                    headers={"Retry-After": str(max(1, int(wait_seconds) + 1))},
+                )
             return
-        raise HTTPException(status_code=401, detail="Unauthorized")
+        if x_adapter_api_key != expected and bearer != expected:
+            raise HTTPException(status_code=401, detail="Unauthorized")
+        client_host = request.client.host if request.client else "unknown"
+        client_key = (x_adapter_api_key or bearer or "anonymous")[:8]
+        wait_seconds = rate_limiter.check(f"{client_host}:{client_key}")
+        if wait_seconds:
+            raise HTTPException(
+                status_code=429,
+                detail=f"Rate limit exceeded, retry after {wait_seconds:.2f}s",
+                headers={"Retry-After": str(max(1, int(wait_seconds) + 1))},
+            )
 
     @app.get("/healthz")
     def healthz() -> dict[str, Any]:
@@ -83,6 +138,8 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                 "service_port": settings.service_port,
                 "service_public_base_url": settings.service_public_base_url,
                 "service_api_key_enabled": bool(settings.service_api_key),
+                "service_min_interval_ms": settings.service_min_interval_ms,
+                "service_max_requests_per_minute": settings.service_max_requests_per_minute,
             },
             "capabilities": {
                 "captured_api_attached": bool(adapter.captured_api and adapter.captured_api.exists()),
@@ -98,6 +155,10 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
             "pack_types": sorted(PACK_TYPES),
             "source_modes": ["auto", "sample", "live"],
             "public_base_url": settings.service_public_base_url,
+            "rate_limit": {
+                "min_interval_ms": settings.service_min_interval_ms,
+                "max_requests_per_minute": settings.service_max_requests_per_minute,
+            },
         }
 
     @app.post("/v1/packs/{pack_type}")

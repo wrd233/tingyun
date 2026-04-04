@@ -46,6 +46,8 @@ class AdapterSettings:
     service_port: int = 8000
     service_api_key: Optional[str] = None
     service_public_base_url: Optional[str] = None
+    service_min_interval_ms: int = 800
+    service_max_requests_per_minute: int = 30
     config_path: Optional[str] = None
 
     @classmethod
@@ -78,5 +80,14 @@ class AdapterSettings:
             service_port=int(os.environ.get("TINGYUN_SERVICE_PORT", raw.get("service_port", 8000))),
             service_api_key=os.environ.get("TINGYUN_SERVICE_API_KEY", raw.get("service_api_key")),
             service_public_base_url=os.environ.get("TINGYUN_SERVICE_PUBLIC_BASE_URL", raw.get("service_public_base_url")),
+            service_min_interval_ms=int(
+                os.environ.get("TINGYUN_SERVICE_MIN_INTERVAL_MS", raw.get("service_min_interval_ms", 800))
+            ),
+            service_max_requests_per_minute=int(
+                os.environ.get(
+                    "TINGYUN_SERVICE_MAX_REQUESTS_PER_MINUTE",
+                    raw.get("service_max_requests_per_minute", 30),
+                )
+            ),
             config_path=str(resolved_config_path),
         )

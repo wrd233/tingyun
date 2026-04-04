@@ -1,0 +1,6 @@
+{
+  "service_base_url": "http://127.0.0.1:8000",
+  "service_api_key": "change-me-before-public-exposure",
+  "timeout_seconds": 30,
+  "default_source_mode": "sample"
+}

@@ -25,6 +25,10 @@
   - `trace_fact_sheet`
   - `suspect_signals`
   - 默认敏感信息脱敏输出
+- 阶段 A
+  - 本地 HTTP 服务
+  - 面向机器 B 的远程调用入口
+  - 基础访问节流
 
 ## 本地配置
 
@@ -117,6 +121,7 @@ PYTHONPATH=./src python3 -m tingyun_adapter.service.http_api
 详细说明见：
 
 - [adapter_service_local_and_public.md](/Users/wangrundong/work/mywork/tingyun_adapter/adapter_service_local_and_public.md)
+- [../tingyun_adapter_client/README.md](/Users/wangrundong/work/mywork/tingyun_adapter_client/README.md)
 
 ## 典型调用
 
