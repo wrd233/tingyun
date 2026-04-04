@@ -6,6 +6,7 @@ import time
 from collections import deque
 from dataclasses import dataclass, field
 from typing import Any, Optional
+from urllib.error import HTTPError, URLError
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from pydantic import BaseModel, Field
@@ -79,6 +80,24 @@ class BuildPackRequest(BaseModel):
     request_id: Optional[str] = Field(None, alias="requestId")
 
     model_config = {"populate_by_name": True}
+
+
+def _http_error_detail(exc: HTTPError) -> dict[str, Any]:
+    body = ""
+    try:
+        raw = exc.read()
+        if raw:
+            body = raw.decode("utf-8", errors="replace")[:1000]
+    except Exception:
+        body = ""
+    return {
+        "code": "upstream_http_error",
+        "message": "Upstream Tingyun API returned an HTTP error.",
+        "upstream_status": exc.code,
+        "upstream_url": exc.filename,
+        "upstream_body": body,
+        "hint": "Check Tingyun token validity, permissions, and whether the selected sourceMode should be sample or live.",
+    }
 
 
 def create_app(*, config_path: Optional[str] = None) -> FastAPI:
@@ -166,90 +185,135 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
         if pack_type not in PACK_TYPES:
             raise HTTPException(status_code=404, detail=f"Unsupported pack type: {pack_type}")
 
-        context = adapter.build_context(
-            biz_system_id=request.biz_system_id,
-            end_time=request.end_time,
-            period_minutes=request.period_minutes,
-        )
-        if pack_type == "system_snapshot":
-            envelope = adapter.build_system_snapshot(context, source_mode=request.source_mode)
-        elif pack_type == "action_hotspot_pack":
-            envelope = adapter.build_action_hotspot_pack(context, source_mode=request.source_mode)
-        elif pack_type == "diagnostic_candidate_pack":
-            envelope = adapter.build_diagnostic_candidate_pack(context, source_mode=request.source_mode, limit=request.limit)
-        elif pack_type == "action_fact_sheet":
-            action_ref = None
-            if request.action_id and request.application_id:
-                action_ref = ActionRef(
-                    biz_system_id=request.biz_system_id,
-                    application_id=request.application_id,
-                    action_id=request.action_id,
-                    action_type=request.action_type,
-                )
-            envelope = adapter.build_action_fact_sheet(
-                context,
-                source_mode=request.source_mode,
-                action_ref=action_ref,
-                trace_limit=request.limit,
+        try:
+            context = adapter.build_context(
+                biz_system_id=request.biz_system_id,
+                end_time=request.end_time,
+                period_minutes=request.period_minutes,
             )
-        elif pack_type == "trace_case_pack":
-            envelope = adapter.build_trace_case_pack(context, source_mode=request.source_mode)
-        elif pack_type == "trace_fact_sheet":
-            action_ref = None
-            if request.action_id and request.application_id:
-                action_ref = ActionRef(
-                    biz_system_id=request.biz_system_id,
-                    application_id=request.application_id,
-                    action_id=request.action_id,
-                    action_type=request.action_type,
+            if pack_type == "system_snapshot":
+                envelope = adapter.build_system_snapshot(context, source_mode=request.source_mode)
+            elif pack_type == "action_hotspot_pack":
+                envelope = adapter.build_action_hotspot_pack(context, source_mode=request.source_mode)
+            elif pack_type == "diagnostic_candidate_pack":
+                envelope = adapter.build_diagnostic_candidate_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    limit=request.limit,
                 )
-            trace_ref = None
-            if request.trace_id or request.query_timestamp or request.trace_guid or request.action_guid or request.request_id:
-                trace_ref = TraceRef(
-                    biz_system_id=request.biz_system_id,
-                    trace_id_numeric=request.trace_id,
-                    query_timestamp=request.query_timestamp,
-                    trace_guid=request.trace_guid,
-                    action_guid=request.action_guid,
-                    request_id=request.request_id,
+            elif pack_type == "action_fact_sheet":
+                action_ref = None
+                if request.action_id and request.application_id:
+                    action_ref = ActionRef(
+                        biz_system_id=request.biz_system_id,
+                        application_id=request.application_id,
+                        action_id=request.action_id,
+                        action_type=request.action_type,
+                    )
+                envelope = adapter.build_action_fact_sheet(
+                    context,
+                    source_mode=request.source_mode,
+                    action_ref=action_ref,
+                    trace_limit=request.limit,
                 )
-            envelope = adapter.build_trace_fact_sheet(
-                context,
-                source_mode=request.source_mode,
-                action_ref=action_ref,
-                trace_ref=trace_ref,
-            )
-        elif pack_type == "report_fact_pack":
-            envelope = adapter.build_report_fact_pack(context, source_mode=request.source_mode)
-        elif pack_type == "database_component_pack":
-            component_ref = None
-            if request.component_name:
-                component_ref = DatabaseComponentRef(
-                    biz_system_id=request.biz_system_id,
-                    component_name=request.component_name,
-                    component_subtype=request.component_subtype,
+            elif pack_type == "trace_case_pack":
+                envelope = adapter.build_trace_case_pack(context, source_mode=request.source_mode)
+            elif pack_type == "trace_fact_sheet":
+                action_ref = None
+                if request.action_id and request.application_id:
+                    action_ref = ActionRef(
+                        biz_system_id=request.biz_system_id,
+                        application_id=request.application_id,
+                        action_id=request.action_id,
+                        action_type=request.action_type,
+                    )
+                trace_ref = None
+                if request.trace_id or request.query_timestamp or request.trace_guid or request.action_guid or request.request_id:
+                    trace_ref = TraceRef(
+                        biz_system_id=request.biz_system_id,
+                        trace_id_numeric=request.trace_id,
+                        query_timestamp=request.query_timestamp,
+                        trace_guid=request.trace_guid,
+                        action_guid=request.action_guid,
+                        request_id=request.request_id,
+                    )
+                envelope = adapter.build_trace_fact_sheet(
+                    context,
+                    source_mode=request.source_mode,
+                    action_ref=action_ref,
+                    trace_ref=trace_ref,
                 )
-            envelope = adapter.build_database_component_pack(context, source_mode=request.source_mode, component_ref=component_ref)
-        elif pack_type == "nosql_component_pack":
-            component_ref = None
-            if request.component_name:
-                component_ref = NoSQLComponentRef(
-                    biz_system_id=request.biz_system_id,
-                    component_name=request.component_name,
-                    component_subtype=request.component_subtype,
+            elif pack_type == "report_fact_pack":
+                envelope = adapter.build_report_fact_pack(context, source_mode=request.source_mode)
+            elif pack_type == "database_component_pack":
+                component_ref = None
+                if request.component_name:
+                    component_ref = DatabaseComponentRef(
+                        biz_system_id=request.biz_system_id,
+                        component_name=request.component_name,
+                        component_subtype=request.component_subtype,
+                    )
+                envelope = adapter.build_database_component_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    component_ref=component_ref,
                 )
-            envelope = adapter.build_nosql_component_pack(context, source_mode=request.source_mode, component_ref=component_ref)
-        else:
-            pool_ref = None
-            if request.metric_category or request.application_id or request.instance_id:
-                pool_ref = ConnectionPoolRef(
-                    biz_system_id=request.biz_system_id,
-                    metric_category=request.metric_category,
-                    application_id=request.application_id,
-                    instance_id=request.instance_id,
+            elif pack_type == "nosql_component_pack":
+                component_ref = None
+                if request.component_name:
+                    component_ref = NoSQLComponentRef(
+                        biz_system_id=request.biz_system_id,
+                        component_name=request.component_name,
+                        component_subtype=request.component_subtype,
+                    )
+                envelope = adapter.build_nosql_component_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    component_ref=component_ref,
                 )
-            envelope = adapter.build_connection_pool_pack(context, source_mode=request.source_mode, pool_ref=pool_ref)
-        return envelope.to_dict()
+            else:
+                pool_ref = None
+                if request.metric_category or request.application_id or request.instance_id:
+                    pool_ref = ConnectionPoolRef(
+                        biz_system_id=request.biz_system_id,
+                        metric_category=request.metric_category,
+                        application_id=request.application_id,
+                        instance_id=request.instance_id,
+                    )
+                envelope = adapter.build_connection_pool_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    pool_ref=pool_ref,
+                )
+            return envelope.to_dict()
+        except HTTPError as exc:
+            raise HTTPException(status_code=502, detail=_http_error_detail(exc)) from exc
+        except URLError as exc:
+            raise HTTPException(
+                status_code=502,
+                detail={
+                    "code": "upstream_network_error",
+                    "message": "Failed to reach upstream Tingyun API.",
+                    "reason": str(exc.reason),
+                    "hint": "Check base_url connectivity from machine A and verify the upstream service is reachable.",
+                },
+            ) from exc
+        except RuntimeError as exc:
+            raise HTTPException(
+                status_code=400,
+                detail={
+                    "code": "adapter_runtime_error",
+                    "message": str(exc),
+                },
+            ) from exc
+        except Exception as exc:
+            raise HTTPException(
+                status_code=500,
+                detail={
+                    "code": "adapter_internal_error",
+                    "message": str(exc),
+                },
+            ) from exc
 
     return app
 

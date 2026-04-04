@@ -9,7 +9,7 @@ from typing import Optional
 
 
 def _project_root() -> Path:
-    return Path(__file__).resolve().parents[3]
+    return Path(__file__).resolve().parents[2]
 
 
 def _load_config_file(config_path: Path) -> dict[str, Any]:
