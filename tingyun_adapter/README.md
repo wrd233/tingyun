@@ -75,6 +75,13 @@ cd /Users/wangrundong/work/mywork/tingyun_adapter
 python3 -m pip install -e .
 ```
 
+如果你的 macOS 系统 Python 比较老，`pip install -e .` 可能会被系统权限或旧版 `pip` 限制住。这种情况下可以直接使用下面的 fallback：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+python3 -m pip install --user fastapi uvicorn
+```
+
 ## 运行测试
 
 ```bash
@@ -88,6 +95,28 @@ PYTHONPATH=./src python3 -m unittest discover -s tests/unit -p 'test_*.py'
 cd /Users/wangrundong/work/mywork/tingyun_adapter
 PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli --help
 ```
+
+## 本地 HTTP 服务
+
+现在已经支持把 adapter 作为本地 HTTP 服务运行。
+
+启动方式：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+tingyun-adapter-service
+```
+
+或：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.service.http_api
+```
+
+详细说明见：
+
+- [adapter_service_local_and_public.md](/Users/wangrundong/work/mywork/tingyun_adapter/adapter_service_local_and_public.md)
 
 ## 典型调用
 

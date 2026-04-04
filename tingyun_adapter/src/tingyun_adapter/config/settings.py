@@ -42,6 +42,10 @@ class AdapterSettings:
     timezone: str = DEFAULT_TIMEZONE
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS
     captured_api_dir: Optional[str] = None
+    service_host: str = "127.0.0.1"
+    service_port: int = 8000
+    service_api_key: Optional[str] = None
+    service_public_base_url: Optional[str] = None
     config_path: Optional[str] = None
 
     @classmethod
@@ -70,5 +74,9 @@ class AdapterSettings:
                 os.environ.get("TINGYUN_TIMEOUT_SECONDS", raw.get("timeout_seconds", DEFAULT_TIMEOUT_SECONDS))
             ),
             captured_api_dir=_resolve_optional_path(resolved_config_path.parent, captured_api_dir),
+            service_host=os.environ.get("TINGYUN_SERVICE_HOST", raw.get("service_host", "127.0.0.1")),
+            service_port=int(os.environ.get("TINGYUN_SERVICE_PORT", raw.get("service_port", 8000))),
+            service_api_key=os.environ.get("TINGYUN_SERVICE_API_KEY", raw.get("service_api_key")),
+            service_public_base_url=os.environ.get("TINGYUN_SERVICE_PUBLIC_BASE_URL", raw.get("service_public_base_url")),
             config_path=str(resolved_config_path),
         )
