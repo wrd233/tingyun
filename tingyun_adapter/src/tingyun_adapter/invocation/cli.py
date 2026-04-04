@@ -4,7 +4,7 @@ import argparse
 import json
 
 from tingyun_adapter.config.settings import AdapterSettings
-from tingyun_adapter.domain.models.common import ConnectionPoolRef, DatabaseComponentRef, NoSQLComponentRef
+from tingyun_adapter.domain.models.common import ActionRef, ConnectionPoolRef, DatabaseComponentRef, NoSQLComponentRef, TraceRef
 from tingyun_adapter.invocation.sdk import Adapter
 
 
@@ -21,7 +21,10 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
         choices=[
             "system_snapshot",
             "action_hotspot_pack",
+            "diagnostic_candidate_pack",
+            "action_fact_sheet",
             "trace_case_pack",
+            "trace_fact_sheet",
             "report_fact_pack",
             "database_component_pack",
             "nosql_component_pack",
@@ -37,6 +40,14 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
     parser.add_argument("--metric-category")
     parser.add_argument("--application-id", type=int)
     parser.add_argument("--instance-id", type=int)
+    parser.add_argument("--action-id", type=int)
+    parser.add_argument("--action-type", default="TX")
+    parser.add_argument("--trace-id")
+    parser.add_argument("--query-timestamp")
+    parser.add_argument("--trace-guid")
+    parser.add_argument("--action-guid")
+    parser.add_argument("--request-id")
+    parser.add_argument("--limit", type=int, default=5)
     return parser
 
 
@@ -67,8 +78,40 @@ def main() -> int:
             envelope = adapter.build_system_snapshot(context, source_mode=args.source_mode)
         elif args.build_pack == "action_hotspot_pack":
             envelope = adapter.build_action_hotspot_pack(context, source_mode=args.source_mode)
+        elif args.build_pack == "diagnostic_candidate_pack":
+            envelope = adapter.build_diagnostic_candidate_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "action_fact_sheet":
+            action_ref = None
+            if args.action_id and args.application_id:
+                action_ref = ActionRef(
+                    biz_system_id=args.biz_system_id,
+                    application_id=args.application_id,
+                    action_id=args.action_id,
+                    action_type=args.action_type,
+                )
+            envelope = adapter.build_action_fact_sheet(context, source_mode=args.source_mode, action_ref=action_ref, trace_limit=args.limit)
         elif args.build_pack == "trace_case_pack":
             envelope = adapter.build_trace_case_pack(context, source_mode=args.source_mode)
+        elif args.build_pack == "trace_fact_sheet":
+            action_ref = None
+            if args.action_id and args.application_id:
+                action_ref = ActionRef(
+                    biz_system_id=args.biz_system_id,
+                    application_id=args.application_id,
+                    action_id=args.action_id,
+                    action_type=args.action_type,
+                )
+            trace_ref = None
+            if args.trace_id or args.query_timestamp or args.trace_guid or args.action_guid or args.request_id:
+                trace_ref = TraceRef(
+                    biz_system_id=args.biz_system_id,
+                    trace_id_numeric=args.trace_id,
+                    query_timestamp=args.query_timestamp,
+                    trace_guid=args.trace_guid,
+                    action_guid=args.action_guid,
+                    request_id=args.request_id,
+                )
+            envelope = adapter.build_trace_fact_sheet(context, source_mode=args.source_mode, action_ref=action_ref, trace_ref=trace_ref)
         elif args.build_pack == "database_component_pack":
             component_ref = None
             if args.component_name:

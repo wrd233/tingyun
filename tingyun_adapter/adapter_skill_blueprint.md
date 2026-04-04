@@ -1,7 +1,7 @@
 # 听云 Adapter + Skill 建设蓝图与 Adapter 设计文档
 
-生成时间：2026-04-03  
-工作目录：`/Users/wangrundong/work/mywork/tingyun_cdp_capture`  
+生成时间：2026-04-04  
+工作目录：`/Users/wangrundong/work/mywork/tingyun_adapter`  
 参考资料：
 
 - `captured_api/` 当前抓包接口样本
@@ -74,6 +74,82 @@
 一句话概括：
 
 `skill` 是“面向诊断解释与报告生成的认知层”。
+
+## 3.3 最近两轮讨论后的边界补充
+
+结合最近两轮讨论，adapter 与 skill 的边界补充如下：
+
+- adapter 可以负责：
+  - 候选对象筛选
+  - 可疑信号抽取
+  - fact sheet 组装
+  - 钻取键与钻取路径整理
+- adapter 不负责：
+  - 最终根因结论
+  - 最终问题优先级结论
+  - 最终建议生成
+  - 最终报告成文
+
+也就是说，adapter 可以帮助 skill 更快聚焦“疑似有问题的对象”，但不替 skill 做最终判断。
+
+## 3.4 下一阶段的关键输出形态
+
+在原有 `snapshot / hotspot / component / trace_case` 基础上，下一阶段建议稳定建设三类新输出：
+
+### `diagnostic_candidate_pack`
+
+定位：
+
+- 面向 skill 的诊断入口包
+- 回答“下一步先看什么”
+
+典型内容：
+
+- `system_signals`
+- `action_candidates`
+- `trace_candidates`
+- `component_candidates`
+- `recommended_next_packs`
+
+### `action_fact_sheet`
+
+定位：
+
+- 面向单个 action 的深入事实包
+
+典型内容：
+
+- action 基本信息
+- action overview
+- suspect signals
+- trace candidates
+- downstream components
+- drilldown keys
+
+### `trace_fact_sheet`
+
+定位：
+
+- 面向单条 trace 的深入事实包
+
+典型内容：
+
+- trace 基本对象
+- detail summary
+- call tree summary
+- exception summary
+- suspect signals
+- drilldown keys
+
+## 3.5 安全性补充要求
+
+adapter 输出默认不应携带明文 token。
+
+建议默认行为：
+
+- `context.auth.token` 输出为空或脱敏值
+- `context.auth.token_present` 表示当前是否存在 token
+- `context.auth.token_env` 表示环境变量来源
 
 ## 4. 先明确边界
 
@@ -183,7 +259,7 @@ adapter 必须承担这些不一致的吸收和归一化。
 
 ## 6. Adapter 的目标输出形态
 
-建议 adapter 不直接输出“单接口标准响应”，而是输出三类产物。
+建议 adapter 不直接输出“单接口标准响应”，而是输出四类产物。
 
 ### 6.1 领域对象
 
@@ -222,6 +298,27 @@ adapter 必须承担这些不一致的吸收和归一化。
 - `traced_by`
 - `derived_from`
 - `drilldown_path`
+
+### 6.4 可疑信号
+
+最近一轮设计和实现里新增了一类重要输出：
+
+- `suspect_signals`
+
+它们属于：
+
+- 轻量派生事实
+- 面向下钻的信号
+- 非最终结论
+
+典型例子：
+
+- `high_response_time_ms`
+- `slow_count_present`
+- `trace_duration_high_ms`
+- `suspected_problem_count`
+- `nosql_trace_empty`
+- `connection_pool_risk_level`
 
 ## 7. Adapter 的统一对象模型
 

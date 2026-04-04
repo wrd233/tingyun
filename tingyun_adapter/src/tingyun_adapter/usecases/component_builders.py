@@ -29,9 +29,12 @@ from tingyun_adapter.usecases.builders import (
     _evidence,
     _numeric,
     _pack,
+    _signal,
     _require_repo,
+    _summarize_action_components,
     _should_use_sample,
     _summarize_chart,
+    _trace_candidate_summary,
     _topology_summary,
 )
 
@@ -197,6 +200,7 @@ def build_database_component_pack(
         top_related_traces=related_traces[:10],
         topology_summary=topology_summary,
         connection_pool_summary=connection_pool_summary,
+        suspect_signals=_database_component_signals(component, related_traces, impacted_action_rows),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
     return _pack(PackType.DATABASE_COMPONENT.value, context, payload, evidence=evidence, warnings=warnings)
@@ -362,6 +366,7 @@ def build_nosql_component_pack(
         top_related_traces=trace_rows[:10],
         error_summary=error_summary,
         topology_summary=component.topology,
+        suspect_signals=_nosql_component_signals(component, impacted_actions, trace_rows),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
     return _pack(PackType.NOSQL_COMPONENT.value, context, payload, evidence=evidence, warnings=warnings)
@@ -471,6 +476,7 @@ def build_connection_pool_pack(
         summary=summary,
         time_series=time_series,
         waiter_risk=waiter_risk,
+        suspect_signals=_connection_pool_signals(pool_row, chart_summary, db_chart_summary),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
     return _pack(PackType.CONNECTION_POOL.value, context, payload, evidence=evidence, warnings=warnings)
@@ -983,17 +989,24 @@ def _summarize_connection_chart(payload: Any) -> dict[str, Any]:
     latest_metrics = _parse_tooltip_metrics(latest.get("tooltip")) if latest else {}
     max_waiter = 0.0
     latest_usage = None
+    latest_used = None
     for point in points:
         metrics = _parse_tooltip_metrics(point.get("tooltip"))
         max_waiter = max(max_waiter, _numeric(metrics.get("Waiter connections")) or 0.0)
         if point is latest:
             latest_usage = _numeric(metrics.get("使用率(%)") or metrics.get("Usage(%)"))
+            latest_used = _numeric(
+                metrics.get("Used connections")
+                or metrics.get("使用连接数")
+                or metrics.get("Used")
+            )
     return {
         "point_count": len(points),
         "latest_point": latest,
-        "latest_used_connections": latest.get("y") if latest else None,
+        "latest_used_connections": latest_used if latest_used is not None else (latest.get("y") if latest else None),
         "latest_waiter_connections": _numeric(latest_metrics.get("Waiter connections")) if latest_metrics else None,
         "latest_usage_ratio_pct": latest_usage,
+        "latest_connection_time_ms": _numeric(latest_metrics.get("Connection time")) if latest_metrics else None,
         "max_waiter_connections": max_waiter,
     }
 
@@ -1023,6 +1036,46 @@ def _classify_connection_risk(summary: dict[str, Any]) -> str:
     if latest_usage >= 60:
         return "medium"
     return "low"
+
+
+def _database_component_signals(component: DatabaseComponent, related_traces: list[dict[str, Any]], impacted_actions: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    signals: list[dict[str, Any]] = []
+    response_time = _numeric(component.metrics.get("response_time_ms"))
+    if response_time and response_time >= 100:
+        signals.append(_signal("database_response_time_high_ms", response_time, level="medium", source="Database/info"))
+    if impacted_actions:
+        signals.append(_signal("database_impacted_action_count", len(impacted_actions), level="info", source="component/database/actionList"))
+    if related_traces:
+        signals.append(_signal("database_related_trace_count", len(related_traces), level="info", source="component/database/actionTraceList"))
+    return signals
+
+
+def _nosql_component_signals(component: NoSQLComponent, impacted_actions: list[dict[str, Any]], trace_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    signals: list[dict[str, Any]] = []
+    if component.top_operations:
+        top_operation = component.top_operations[0]
+        signals.append(_signal("nosql_top_operation", top_operation.get("op_name_decoded") or top_operation.get("opName"), level="info", source="NoSQL/analysis"))
+    if impacted_actions:
+        signals.append(_signal("nosql_impacted_action_count", len(impacted_actions), level="medium", source="NoSQL/actionName/list"))
+    if not trace_rows:
+        signals.append(_signal("nosql_trace_empty", True, level="medium", source="NoSQL/trace"))
+    return signals
+
+
+def _connection_pool_signals(pool_row: dict[str, Any], chart_summary: dict[str, Any], db_chart_summary: dict[str, Any]) -> list[dict[str, Any]]:
+    signals: list[dict[str, Any]] = []
+    risk = _classify_connection_risk(chart_summary)
+    signals.append(_signal("connection_pool_risk_level", risk, level="info", source="connection/chart"))
+    latest_waiter = _numeric(chart_summary.get("latest_waiter_connections")) or 0.0
+    if latest_waiter > 0:
+        signals.append(_signal("connection_pool_waiters_present", latest_waiter, level="high", source="connection/chart"))
+    latest_usage = _numeric(chart_summary.get("latest_usage_ratio_pct")) or 0.0
+    if latest_usage >= 80:
+        signals.append(_signal("connection_pool_usage_high_pct", latest_usage, level="high", source="connection/chart"))
+    avg_conn = _numeric((db_chart_summary.get("overview") or {}).get("avg"))
+    if avg_conn and avg_conn > 50:
+        signals.append(_signal("database_connection_time_high_ms", avg_conn, level="medium", source="connection/database/chart"))
+    return signals
 
 
 def _resolve_biz_system_name(adapter: Any, context: AnalysisContext) -> str:

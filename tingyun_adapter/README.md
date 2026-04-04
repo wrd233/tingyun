@@ -19,6 +19,12 @@
   - `database_component_pack`
   - `nosql_component_pack`
   - `connection_pool_pack`
+- 阶段 5
+  - `diagnostic_candidate_pack`
+  - `action_fact_sheet`
+  - `trace_fact_sheet`
+  - `suspect_signals`
+  - 默认敏感信息脱敏输出
 
 ## 本地配置
 
@@ -56,6 +62,11 @@ cp /Users/wangrundong/work/mywork/tingyun_adapter/config.local.json.example /Use
 
 - `TINGYUN_TOKEN`
 - `TOKEN`
+
+CLI / SDK 输出中的 `context.auth.token` 默认会脱敏，同时额外给出：
+
+- `token_present`
+- `token_env`
 
 ## 安装
 
@@ -99,6 +110,47 @@ cd /Users/wangrundong/work/mywork/tingyun_adapter
 PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
   --build-pack report_fact_pack \
   --biz-system-id 1059 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `diagnostic_candidate_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack diagnostic_candidate_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --limit 5
+```
+
+### `action_fact_sheet`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack action_fact_sheet \
+  --biz-system-id 1065 \
+  --application-id 1644 \
+  --action-id 13220 \
+  --action-type TX \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --limit 5
+```
+
+### `trace_fact_sheet`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack trace_fact_sheet \
+  --biz-system-id 1062 \
   --end-time '2026-04-03 12:20' \
   --period-minutes 30 \
   --source-mode sample

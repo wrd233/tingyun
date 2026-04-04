@@ -17,6 +17,15 @@ def dataclass_to_dict(value: Any) -> Any:
     return value
 
 
+def mask_secret(value: Optional[str]) -> Optional[str]:
+    if not value:
+        return None
+    text = str(value)
+    if len(text) <= 10:
+        return "***redacted***"
+    return f"{text[:6]}...{text[-4:]}"
+
+
 @dataclass(frozen=True)
 class TimeWindow:
     end_time: str
@@ -141,11 +150,17 @@ class PackEnvelope:
     meta: PackMeta = field(default_factory=PackMeta)
 
     def to_dict(self) -> dict[str, Any]:
+        context_dict = dataclass_to_dict(self.context)
+        auth = context_dict.get("auth")
+        if isinstance(auth, dict):
+            raw_token = auth.get("token")
+            auth["token_present"] = bool(raw_token)
+            auth["token"] = mask_secret(raw_token)
         return {
             "schema_version": self.schema_version,
             "pack_type": self.pack_type,
             "generated_at": self.generated_at,
-            "context": dataclass_to_dict(self.context),
+            "context": context_dict,
             "payload": dataclass_to_dict(self.payload),
             "meta": dataclass_to_dict(self.meta),
         }

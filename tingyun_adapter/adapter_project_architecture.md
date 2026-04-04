@@ -1,7 +1,7 @@
 # 听云 Adapter 项目架构设计文档
 
-生成时间：2026-04-03  
-项目目录：`/Users/wangrundong/work/mywork/tingyun_cdp_capture`  
+生成时间：2026-04-04  
+项目目录：`/Users/wangrundong/work/mywork/tingyun_adapter`  
 关联文档：
 
 - `adapter_skill_blueprint.md`
@@ -138,6 +138,25 @@ adapter 负责：
 - 最终强归因
 - 最终结论性判断
 
+### 5.6 候选筛选允许，最终判断后置
+
+结合最近的实践，adapter 可以承担：
+
+- 候选对象筛选
+- 可疑信号提取
+- 面向单对象的 fact sheet 组装
+
+但不应承担：
+
+- 最终问题定性
+- 最终优先级结论
+- 最终优化建议
+
+换句话说：
+
+- adapter 负责“把值得看的对象组织出来”
+- skill 负责“解释这些对象为什么重要”
+
 ### 5.4 可回溯
 
 每个对象和 pack 中的重要字段都应该能回溯到：
@@ -205,6 +224,9 @@ flowchart TB
 - `build_trace_case_pack`
 - `build_database_component_pack`
 - `build_report_fact_pack`
+- `build_diagnostic_candidate_pack`
+- `build_action_fact_sheet`
+- `build_trace_fact_sheet`
 
 ### 6.4 第 3 层：Domain Service Layer
 
@@ -257,6 +279,31 @@ flowchart TB
 - `NoSQLClient`
 - `ConnectionClient`
 - `LogTraceClient`
+
+### 6.7 第 6 层：Candidate / Fact Sheet Layer
+
+这是下一阶段需要强调的一层能力形态，虽然仍然落在 use case / pack builder 中，但职责上值得单独说明。
+
+职责：
+
+- 从 snapshot、list、overview、analysis 中筛选候选对象
+- 把特定 action / trace / component 组织成可直接被 skill 消费的 fact sheet
+- 输出 suspect signals，而不是最终判断
+
+典型产物：
+
+- `diagnostic_candidate_pack`
+- `action_fact_sheet`
+- `trace_fact_sheet`
+
+## 6.8 当前已验证的工程修正
+
+最近一轮代码实践已经验证了几项重要修正：
+
+1. pack 输出中的 token 默认脱敏，不再暴露明文凭据
+2. `connection/chart` 的 tooltip 解析优先于 `y` 值，修正了 `latest_used_connections` 抽取错误
+3. pack 中开始统一输出 `suspect_signals`
+4. adapter 已具备“候选对象 + fact sheet”两类新增输出形态
 
 ### 6.7 第 6 层：Pack Builder / Persistence Layer
 

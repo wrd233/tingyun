@@ -11,8 +11,10 @@ from tingyun_adapter.clients.trace_client import TraceClient
 from tingyun_adapter.clients.webaction_client import WebActionClient
 from tingyun_adapter.config.settings import AdapterSettings
 from tingyun_adapter.domain.models.common import (
+    ActionRef,
     AnalysisContext,
     AuthConfig,
+    TraceRef,
     ConnectionPoolRef,
     DatabaseComponentRef,
     NoSQLComponentRef,
@@ -21,8 +23,11 @@ from tingyun_adapter.domain.models.common import (
 from tingyun_adapter.sources.captured_api_repository import CapturedApiRepository
 from tingyun_adapter.usecases.builders import (
     build_action_hotspot_pack,
+    build_action_fact_sheet,
+    build_diagnostic_candidate_pack,
     build_report_fact_pack,
     build_system_snapshot,
+    build_trace_fact_sheet,
     build_trace_case_pack,
 )
 from tingyun_adapter.usecases.component_builders import (
@@ -86,8 +91,31 @@ class Adapter:
     def build_action_hotspot_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
         return build_action_hotspot_pack(self, context, source_mode=source_mode)
 
+    def build_diagnostic_candidate_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 5):
+        return build_diagnostic_candidate_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_action_fact_sheet(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        action_ref: ActionRef | None = None,
+        trace_limit: int = 10,
+    ):
+        return build_action_fact_sheet(self, context, source_mode=source_mode, action_ref=action_ref, trace_limit=trace_limit)
+
     def build_trace_case_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
         return build_trace_case_pack(self, context, source_mode=source_mode)
+
+    def build_trace_fact_sheet(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        action_ref: ActionRef | None = None,
+        trace_ref: TraceRef | None = None,
+    ):
+        return build_trace_fact_sheet(self, context, source_mode=source_mode, action_ref=action_ref, trace_ref=trace_ref)
 
     def build_report_fact_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
         return build_report_fact_pack(self, context, source_mode=source_mode)
