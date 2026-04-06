@@ -104,6 +104,74 @@ class ConnectionPoolPackPayload:
 
 
 @dataclass
+class InstanceAnalysisPackPayload:
+    application: dict[str, Any]
+    instances: list[dict[str, Any]] = field(default_factory=list)
+    selected_instance: dict[str, Any] = field(default_factory=dict)
+    summary: dict[str, Any] = field(default_factory=dict)
+    cpu_chart: dict[str, Any] = field(default_factory=dict)
+    jvm_chart: dict[str, Any] = field(default_factory=dict)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class TopologyDependencyPackPayload:
+    biz_system: dict[str, Any]
+    business_graph: dict[str, Any] = field(default_factory=dict)
+    detail_graph: dict[str, Any] = field(default_factory=dict)
+    node_health: dict[str, Any] = field(default_factory=dict)
+    dependencies: list[dict[str, Any]] = field(default_factory=list)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class ExternalDependencyPackPayload:
+    biz_system: dict[str, Any]
+    topology_summary: dict[str, Any] = field(default_factory=dict)
+    protocol_summary: dict[str, Any] = field(default_factory=dict)
+    external_dependencies: list[dict[str, Any]] = field(default_factory=list)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class SlowSQLPackPayload:
+    scope: dict[str, Any]
+    selected_components: list[dict[str, Any]] = field(default_factory=list)
+    top_sqls: list[dict[str, Any]] = field(default_factory=list)
+    operation_overview: dict[str, Any] = field(default_factory=dict)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class SQLFactSheetPayload:
+    selector: dict[str, Any]
+    component: dict[str, Any] = field(default_factory=dict)
+    sql: dict[str, Any] = field(default_factory=dict)
+    sql_features: dict[str, Any] = field(default_factory=dict)
+    related_actions: list[dict[str, Any]] = field(default_factory=list)
+    related_traces: list[dict[str, Any]] = field(default_factory=list)
+    drilldown_keys: dict[str, Any] = field(default_factory=dict)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class ActionDependencyBreakdownPackPayload:
+    action_ref: dict[str, Any]
+    action: dict[str, Any] = field(default_factory=dict)
+    breakdown_summary: dict[str, Any] = field(default_factory=dict)
+    component_breakdown: list[dict[str, Any]] = field(default_factory=list)
+    action_graph: dict[str, Any] = field(default_factory=dict)
+    topology_summary: dict[str, Any] = field(default_factory=dict)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
 class ReportFactPackPayload:
     report_scope: dict[str, Any]
     summary: dict[str, Any] = field(default_factory=dict)

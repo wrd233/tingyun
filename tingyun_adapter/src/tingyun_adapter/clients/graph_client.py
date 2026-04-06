@@ -51,3 +51,75 @@ class GraphClient(BaseClient):
                 "timePeriod": str(time_period),
             },
         )
+
+    def query_biz_system_graph(self, *, end_time: str, time_period: int) -> Any:
+        return self.post_form(
+            "/server-api/graph/queryBizSystenGraph",
+            {
+                "endTime": end_time,
+                "lang": self.lang,
+                "timePeriod": str(time_period),
+            },
+        )
+
+    def query_biz_detail_graph(
+        self,
+        *,
+        biz_system_id: int,
+        end_time: str,
+        time_period: int,
+        merge_graph: str = "1",
+        cascading_display: str = "1",
+        is_biz_system_tree: str = "true",
+        is_group_tree: str = "false",
+    ) -> Any:
+        return self.post_form(
+            "/server-api/graph/queryBizDetailGraph",
+            {
+                "bizSystemId": str(biz_system_id),
+                "cascadingDisplay": cascading_display,
+                "endTime": end_time,
+                "isBizSystemTree": is_biz_system_tree,
+                "isGroupTree": is_group_tree,
+                "lang": self.lang,
+                "mergeGraph": merge_graph,
+                "timePeriod": str(time_period),
+            },
+        )
+
+    def query_action_graph(
+        self,
+        *,
+        biz_system_id: int,
+        application_id: int,
+        action_id: int,
+        action_type: str,
+        end_time: str,
+        time_period: int,
+        merge_graph: str = "1",
+    ) -> Any:
+        return self.post_form(
+            "/server-api/graph/queryActionGraph",
+            {
+                "actionId": str(action_id),
+                "actionType": action_type,
+                "applicationId": str(application_id),
+                "bizSystemId": str(biz_system_id),
+                "endTime": end_time,
+                "lang": self.lang,
+                "mergeGraph": merge_graph,
+                "timePeriod": str(time_period),
+            },
+        )
+
+    def query_graph_health(self, *, end_time: str, time_period: int, node_ids: dict[str, int]) -> Any:
+        return self.post_json(
+            "/server-api/graph/queryGraphHealth",
+            {
+                "endTime": end_time,
+                "lang": self.lang,
+                "nodeIds": node_ids,
+                "timePeriod": time_period,
+            },
+            query={"lang": self.lang},
+        )

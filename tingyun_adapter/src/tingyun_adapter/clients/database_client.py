@@ -86,6 +86,38 @@ class DatabaseClient(BaseClient):
             },
         )
 
+    def operate_analysis_list(
+        self,
+        *,
+        biz_system_id: int,
+        component_name: str,
+        component_subtype: str,
+        end_time: str,
+        time_period: int,
+        data_type: str = "OP",
+        page_number: int = 1,
+        page_size: int = 1000,
+        limit: bool = True,
+    ) -> Any:
+        return self.post_form(
+            "/server-api/Database/operate/analysisList",
+            {
+                "bizSystemId": str(biz_system_id),
+                "componentName": component_name,
+                "componentSubtype": component_subtype,
+                "componentType": "Database",
+                "dataType": data_type,
+                "endTime": end_time,
+                "lang": self.lang,
+                "limit": str(limit).lower(),
+                "pageNumber": str(page_number),
+                "pageSize": str(page_size),
+                "sortDirection": "DESC",
+                "sortField": "respTime",
+                "timePeriod": str(time_period),
+            },
+        )
+
     def action_list(
         self,
         *,

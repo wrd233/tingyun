@@ -29,6 +29,21 @@
   - 本地 HTTP 服务
   - 面向机器 B 的远程调用入口
   - 基础访问节流
+- 阶段 6
+  - `instance_analysis_pack`
+  - `topology_dependency_pack`
+  - `external_dependency_pack`
+  - `slow_sql_pack`
+  - `sql_fact_sheet`
+  - `action_dependency_breakdown_pack`
+
+当前暂缓的方向：
+
+- `impact_signals`
+- `business_labels`
+- `stability_signals`
+- `comparison_signals`
+- `page_experience_pack`
 
 ## 本地配置
 
@@ -203,3 +218,86 @@ PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
   --component-name '10.190.22.21:3306' \
   --component-subtype 'MySQL'
 ```
+
+### `instance_analysis_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack instance_analysis_pack \
+  --biz-system-id 1059 \
+  --application-id 1648 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `topology_dependency_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack topology_dependency_pack \
+  --biz-system-id 1059 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `external_dependency_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack external_dependency_pack \
+  --biz-system-id 1059 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `slow_sql_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack slow_sql_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --limit 5
+```
+
+### `sql_fact_sheet`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack sql_fact_sheet \
+  --biz-system-id 1065 \
+  --component-name '10.190.22.21:3306' \
+  --component-subtype 'MySQL' \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `action_dependency_breakdown_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack action_dependency_breakdown_pack \
+  --biz-system-id 1059 \
+  --application-id 1648 \
+  --action-id 20441 \
+  --action-type TX \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+本轮新增能力说明见：
+
+- [adapter_phase6_delivery.md](/Users/wangrundong/work/mywork/tingyun_adapter/adapter_phase6_delivery.md)

@@ -5,6 +5,7 @@ from tingyun_adapter.clients.connection_client import ConnectionClient
 from tingyun_adapter.clients.database_client import DatabaseClient
 from tingyun_adapter.clients.graph_client import GraphClient
 from tingyun_adapter.clients.health_client import HealthClient
+from tingyun_adapter.clients.instance_client import InstanceClient
 from tingyun_adapter.clients.logtrace_client import LogTraceClient
 from tingyun_adapter.clients.nosql_client import NoSQLClient
 from tingyun_adapter.clients.trace_client import TraceClient
@@ -35,6 +36,14 @@ from tingyun_adapter.usecases.component_builders import (
     build_database_component_pack,
     build_nosql_component_pack,
 )
+from tingyun_adapter.usecases.extended_builders import (
+    build_action_dependency_breakdown_pack,
+    build_external_dependency_pack,
+    build_instance_analysis_pack,
+    build_slow_sql_pack,
+    build_sql_fact_sheet,
+    build_topology_dependency_pack,
+)
 
 
 class Adapter:
@@ -55,6 +64,7 @@ class Adapter:
         self.nosql = NoSQLClient(**kwargs)
         self.connection = ConnectionClient(**kwargs)
         self.health = HealthClient(**kwargs)
+        self.instance = InstanceClient(**kwargs)
         self.logtrace = LogTraceClient(**kwargs)
         self.captured_api: CapturedApiRepository | None = None
         if settings.captured_api_dir:
@@ -146,3 +156,73 @@ class Adapter:
         pool_ref: ConnectionPoolRef | None = None,
     ):
         return build_connection_pool_pack(self, context, source_mode=source_mode, pool_ref=pool_ref)
+
+    def build_instance_analysis_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        application_id: int | None = None,
+        instance_id: int | None = None,
+    ):
+        return build_instance_analysis_pack(
+            self,
+            context,
+            source_mode=source_mode,
+            application_id=application_id,
+            instance_id=instance_id,
+        )
+
+    def build_topology_dependency_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
+        return build_topology_dependency_pack(self, context, source_mode=source_mode)
+
+    def build_external_dependency_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
+        return build_external_dependency_pack(self, context, source_mode=source_mode)
+
+    def build_slow_sql_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        component_ref: DatabaseComponentRef | None = None,
+        limit: int = 10,
+    ):
+        return build_slow_sql_pack(
+            self,
+            context,
+            source_mode=source_mode,
+            component_ref=component_ref,
+            limit=limit,
+        )
+
+    def build_sql_fact_sheet(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        component_ref: DatabaseComponentRef | None = None,
+        op_name: str | None = None,
+        limit: int = 10,
+    ):
+        return build_sql_fact_sheet(
+            self,
+            context,
+            source_mode=source_mode,
+            component_ref=component_ref,
+            op_name=op_name,
+            limit=limit,
+        )
+
+    def build_action_dependency_breakdown_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        action_ref: ActionRef | None = None,
+    ):
+        return build_action_dependency_breakdown_pack(
+            self,
+            context,
+            source_mode=source_mode,
+            action_ref=action_ref,
+        )

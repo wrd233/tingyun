@@ -55,3 +55,65 @@ class WebActionClient(BaseClient):
                 "lang": self.lang,
             },
         )
+
+    def performance_breakdown(
+        self,
+        *,
+        biz_system_id: int,
+        application_id: int,
+        action_id: int,
+        action_type: str,
+        begin_time: str,
+        end_time: str,
+        time_period: int,
+        breakdown_type: str = "ACTION_TRACE",
+    ) -> Any:
+        return self.post_form(
+            "/server-api/webaction/performance/breakdown",
+            {
+                "actionId": str(action_id),
+                "actionType": action_type,
+                "applicationId": str(application_id),
+                "beginTime": begin_time,
+                "bizSystemId": str(biz_system_id),
+                "breakdownType": breakdown_type,
+                "endTime": end_time,
+                "lang": self.lang,
+                "timePeriod": str(time_period),
+            },
+        )
+
+    def thread_analysis_list(
+        self,
+        *,
+        biz_system_id: int,
+        biz_system_name: str,
+        application_id: int,
+        action_id: int,
+        action_name: str,
+        action_alias: str,
+        action_type: str,
+        begin_time: str,
+        end_time: str,
+        time_period: int,
+        name: str = "",
+    ) -> Any:
+        return self.post_form(
+            "/server-api/webaction/threadAnalysisList",
+            {
+                "actionAlias": action_alias,
+                "actionId": str(action_id),
+                "actionName": action_name,
+                "actionType": action_type,
+                "applicationId": str(application_id),
+                "beginTime": begin_time,
+                "bizSystemId": str(biz_system_id),
+                "bizSystemName": biz_system_name,
+                "curP": "",
+                "endTime": end_time,
+                "lang": self.lang,
+                "localeOptionContent": "undefined",
+                "name": name,
+                "timePeriod": str(time_period),
+            },
+        )

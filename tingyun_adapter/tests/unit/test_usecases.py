@@ -2,6 +2,7 @@ import unittest
 from pathlib import Path
 
 from tingyun_adapter.config.settings import AdapterSettings
+from tingyun_adapter.domain.models.common import ActionRef, DatabaseComponentRef
 from tingyun_adapter.invocation.sdk import Adapter
 
 
@@ -79,6 +80,67 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(payload["pool"]["framework"], "Druid")
         self.assertGreater(payload["time_series"]["used_connections"]["point_count"], 0)
         self.assertIn("risk_level", payload["waiter_risk"])
+
+    def test_build_instance_analysis_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_instance_analysis_pack(context, source_mode="sample", application_id=1648)
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "instance_analysis_pack")
+        self.assertEqual(payload["application"]["application_id"], 1648)
+        self.assertEqual(payload["summary"]["instance_count"], 3)
+        self.assertGreater(payload["cpu_chart"]["point_count"], 0)
+
+    def test_build_topology_dependency_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_topology_dependency_pack(context, source_mode="sample")
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "topology_dependency_pack")
+        self.assertGreater(payload["detail_graph"]["node_count"], 0)
+        self.assertGreater(payload["detail_graph"]["node_type_counts"]["external"], 0)
+        self.assertGreater(len(payload["dependencies"]), 0)
+
+    def test_build_external_dependency_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_external_dependency_pack(context, source_mode="sample")
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "external_dependency_pack")
+        self.assertGreater(len(payload["external_dependencies"]), 0)
+        self.assertIn("http", {item["protocol"] for item in payload["external_dependencies"]})
+
+    def test_build_slow_sql_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_slow_sql_pack(context, source_mode="sample", limit=5)
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "slow_sql_pack")
+        self.assertGreater(len(payload["top_sqls"]), 0)
+        self.assertEqual(payload["top_sqls"][0]["component_name"], "10.190.22.21:3306")
+        self.assertIn("statement_type_counts", payload["operation_overview"])
+
+    def test_build_sql_fact_sheet_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_sql_fact_sheet(
+            context,
+            source_mode="sample",
+            component_ref=DatabaseComponentRef(biz_system_id=1065, component_name="10.190.22.21:3306", component_subtype="MySQL"),
+        )
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "sql_fact_sheet")
+        self.assertEqual(payload["component"]["componentName"], "10.190.22.21:3306")
+        self.assertGreater(len(payload["related_actions"]), 0)
+        self.assertIn("statement_type", payload["sql_features"])
+
+    def test_build_action_dependency_breakdown_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_action_dependency_breakdown_pack(
+            context,
+            source_mode="sample",
+            action_ref=ActionRef(biz_system_id=1059, application_id=1648, action_id=20441, action_type="TX"),
+        )
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "action_dependency_breakdown_pack")
+        self.assertGreater(len(payload["component_breakdown"]), 0)
+        self.assertGreater(payload["topology_summary"]["node_count"], 0)
+        self.assertIn("component_type_counts", payload["breakdown_summary"])
 
 
 if __name__ == "__main__":

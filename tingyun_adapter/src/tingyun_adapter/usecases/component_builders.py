@@ -23,7 +23,7 @@ from tingyun_adapter.domain.models.packs import (
 )
 from tingyun_adapter.normalizers.field_normalizer import unwrap_data
 from tingyun_adapter.normalizers.metric_normalizer import normalize_metric_fields
-from tingyun_adapter.normalizers.op_name_decoder import decode_op_name
+from tingyun_adapter.normalizers.op_name_decoder import decode_op_name, encode_op_name
 from tingyun_adapter.usecases.builders import (
     _coerce_evidence_list,
     _evidence,
@@ -541,11 +541,19 @@ def _load_database_analysis(adapter: Any, context: AnalysisContext, ref: Databas
 
 
 def _load_database_impacted_actions(adapter: Any, context: AnalysisContext, ref: DatabaseComponentRef, *, source_mode: str, op_name: str) -> Any:
+    encoded_op_name = encode_op_name(op_name) if op_name else ""
     matcher = (
         lambda body, _resp: str(body.get("bizSystemId")) == str(context.biz_system_id)
         and body.get("componentName") == ref.component_name
         and body.get("componentSubtype") == ref.component_subtype
-        and ((op_name and body.get("dataType") == "OP" and body.get("opName") == op_name) or (not op_name and body.get("dataType") == "COMP"))
+        and (
+            (
+                op_name
+                and body.get("dataType") == "OP"
+                and decode_op_name(str(body.get("opName") or "")).decoded == decode_op_name(op_name).decoded
+            )
+            or (not op_name and body.get("dataType") == "COMP")
+        )
     )
     if _should_use_sample(adapter, source_mode):
         _req, resp, _warning = _find_sample_pair(adapter, "component/database/actionList", matcher=matcher)
@@ -557,7 +565,7 @@ def _load_database_impacted_actions(adapter: Any, context: AnalysisContext, ref:
         end_time=context.time_window.end_time,
         time_period=context.time_window.period_minutes,
         data_type="OP" if op_name else "COMP",
-        op_name=op_name,
+        op_name=encoded_op_name,
     )
 
 
@@ -572,12 +580,20 @@ def _load_database_related_traces(
 ) -> Any:
     if not top_action:
         return {}
+    encoded_op_name = encode_op_name(op_name) if op_name else ""
     matcher = (
         lambda body, _resp: str(body.get("bizSystemId")) == str(context.biz_system_id)
         and body.get("componentName") == ref.component_name
         and body.get("componentSubtype") == ref.component_subtype
         and str(body.get("actionId")) == str(top_action.get("actionId"))
-        and ((op_name and body.get("dataType") == "OP" and body.get("opName") == op_name) or (not op_name and body.get("dataType") == "COMP"))
+        and (
+            (
+                op_name
+                and body.get("dataType") == "OP"
+                and decode_op_name(str(body.get("opName") or "")).decoded == decode_op_name(op_name).decoded
+            )
+            or (not op_name and body.get("dataType") == "COMP")
+        )
     )
     if _should_use_sample(adapter, source_mode):
         _req, resp, _warning = _find_sample_pair(adapter, "component/database/actionTraceList", matcher=matcher)
@@ -591,7 +607,7 @@ def _load_database_related_traces(
         action_id=int(top_action.get("actionId")),
         action_type=str(top_action.get("actionType") or "TX"),
         data_type="OP" if op_name else "COMP",
-        op_name=op_name,
+        op_name=encoded_op_name,
     )
 
 

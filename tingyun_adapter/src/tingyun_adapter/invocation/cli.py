@@ -29,6 +29,12 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
             "database_component_pack",
             "nosql_component_pack",
             "connection_pool_pack",
+            "instance_analysis_pack",
+            "topology_dependency_pack",
+            "external_dependency_pack",
+            "slow_sql_pack",
+            "sql_fact_sheet",
+            "action_dependency_breakdown_pack",
         ],
     )
     parser.add_argument("--biz-system-id", type=int)
@@ -47,6 +53,7 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
     parser.add_argument("--trace-guid")
     parser.add_argument("--action-guid")
     parser.add_argument("--request-id")
+    parser.add_argument("--op-name")
     parser.add_argument("--limit", type=int, default=5)
     return parser
 
@@ -140,6 +147,60 @@ def main() -> int:
                     instance_id=args.instance_id,
                 )
             envelope = adapter.build_connection_pool_pack(context, source_mode=args.source_mode, pool_ref=pool_ref)
+        elif args.build_pack == "instance_analysis_pack":
+            envelope = adapter.build_instance_analysis_pack(
+                context,
+                source_mode=args.source_mode,
+                application_id=args.application_id,
+                instance_id=args.instance_id,
+            )
+        elif args.build_pack == "topology_dependency_pack":
+            envelope = adapter.build_topology_dependency_pack(context, source_mode=args.source_mode)
+        elif args.build_pack == "external_dependency_pack":
+            envelope = adapter.build_external_dependency_pack(context, source_mode=args.source_mode)
+        elif args.build_pack == "slow_sql_pack":
+            component_ref = None
+            if args.component_name:
+                component_ref = DatabaseComponentRef(
+                    biz_system_id=args.biz_system_id,
+                    component_name=args.component_name,
+                    component_subtype=args.component_subtype,
+                )
+            envelope = adapter.build_slow_sql_pack(
+                context,
+                source_mode=args.source_mode,
+                component_ref=component_ref,
+                limit=args.limit,
+            )
+        elif args.build_pack == "sql_fact_sheet":
+            component_ref = None
+            if args.component_name:
+                component_ref = DatabaseComponentRef(
+                    biz_system_id=args.biz_system_id,
+                    component_name=args.component_name,
+                    component_subtype=args.component_subtype,
+                )
+            envelope = adapter.build_sql_fact_sheet(
+                context,
+                source_mode=args.source_mode,
+                component_ref=component_ref,
+                op_name=args.op_name,
+                limit=args.limit,
+            )
+        elif args.build_pack == "action_dependency_breakdown_pack":
+            action_ref = None
+            if args.action_id and args.application_id:
+                action_ref = ActionRef(
+                    biz_system_id=args.biz_system_id,
+                    application_id=args.application_id,
+                    action_id=args.action_id,
+                    action_type=args.action_type,
+                )
+            envelope = adapter.build_action_dependency_breakdown_pack(
+                context,
+                source_mode=args.source_mode,
+                action_ref=action_ref,
+            )
         else:
             envelope = adapter.build_report_fact_pack(context, source_mode=args.source_mode)
         print(json.dumps(envelope.to_dict(), ensure_ascii=False, indent=2))

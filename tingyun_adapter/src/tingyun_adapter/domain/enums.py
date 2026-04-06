@@ -13,6 +13,12 @@ class PackType(str, Enum):
     DATABASE_COMPONENT = "database_component_pack"
     NOSQL_COMPONENT = "nosql_component_pack"
     CONNECTION_POOL = "connection_pool_pack"
+    INSTANCE_ANALYSIS = "instance_analysis_pack"
+    TOPOLOGY_DEPENDENCY = "topology_dependency_pack"
+    EXTERNAL_DEPENDENCY = "external_dependency_pack"
+    SLOW_SQL = "slow_sql_pack"
+    SQL_FACT_SHEET = "sql_fact_sheet"
+    ACTION_DEPENDENCY_BREAKDOWN = "action_dependency_breakdown_pack"
     REPORT_FACT = "report_fact_pack"
 
 

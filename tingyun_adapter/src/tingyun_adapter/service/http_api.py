@@ -27,6 +27,12 @@ PACK_TYPES = {
     "database_component_pack",
     "nosql_component_pack",
     "connection_pool_pack",
+    "instance_analysis_pack",
+    "topology_dependency_pack",
+    "external_dependency_pack",
+    "slow_sql_pack",
+    "sql_fact_sheet",
+    "action_dependency_breakdown_pack",
 }
 
 
@@ -78,6 +84,7 @@ class BuildPackRequest(BaseModel):
     trace_guid: Optional[str] = Field(None, alias="traceGuid")
     action_guid: Optional[str] = Field(None, alias="actionGuid")
     request_id: Optional[str] = Field(None, alias="requestId")
+    op_name: Optional[str] = Field(None, alias="opName")
 
     model_config = {"populate_by_name": True}
 
@@ -271,7 +278,7 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                     source_mode=request.source_mode,
                     component_ref=component_ref,
                 )
-            else:
+            elif pack_type == "connection_pool_pack":
                 pool_ref = None
                 if request.metric_category or request.application_id or request.instance_id:
                     pool_ref = ConnectionPoolRef(
@@ -284,6 +291,60 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                     context,
                     source_mode=request.source_mode,
                     pool_ref=pool_ref,
+                )
+            elif pack_type == "instance_analysis_pack":
+                envelope = adapter.build_instance_analysis_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    application_id=request.application_id,
+                    instance_id=request.instance_id,
+                )
+            elif pack_type == "topology_dependency_pack":
+                envelope = adapter.build_topology_dependency_pack(context, source_mode=request.source_mode)
+            elif pack_type == "external_dependency_pack":
+                envelope = adapter.build_external_dependency_pack(context, source_mode=request.source_mode)
+            elif pack_type == "slow_sql_pack":
+                component_ref = None
+                if request.component_name:
+                    component_ref = DatabaseComponentRef(
+                        biz_system_id=request.biz_system_id,
+                        component_name=request.component_name,
+                        component_subtype=request.component_subtype,
+                    )
+                envelope = adapter.build_slow_sql_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    component_ref=component_ref,
+                    limit=request.limit,
+                )
+            elif pack_type == "sql_fact_sheet":
+                component_ref = None
+                if request.component_name:
+                    component_ref = DatabaseComponentRef(
+                        biz_system_id=request.biz_system_id,
+                        component_name=request.component_name,
+                        component_subtype=request.component_subtype,
+                    )
+                envelope = adapter.build_sql_fact_sheet(
+                    context,
+                    source_mode=request.source_mode,
+                    component_ref=component_ref,
+                    op_name=request.op_name,
+                    limit=request.limit,
+                )
+            else:
+                action_ref = None
+                if request.action_id and request.application_id:
+                    action_ref = ActionRef(
+                        biz_system_id=request.biz_system_id,
+                        application_id=request.application_id,
+                        action_id=request.action_id,
+                        action_type=request.action_type,
+                    )
+                envelope = adapter.build_action_dependency_breakdown_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    action_ref=action_ref,
                 )
             return envelope.to_dict()
         except HTTPError as exc:
