@@ -1,0 +1,386 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-07T14:47:17+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-07T14:47:17+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "breakDownTableChart",
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 09:00",
+            "labels": {
+              "actionIds": [
+                "16000"
+              ],
+              "applicationIds": [
+                "1645"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": 360
+          },
+          "key": "{\"action\":\"breakDownTableChart\",\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "breakDownTableChart",
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-07T14:47:17+08:00",
+      "inference_basis": [
+        "path=graph/action/receive",
+        "query params present"
+      ],
+      "inferred_purpose": "Likely related to graph",
+      "last_seen": "2026-04-07T14:47:17+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "document_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:47:17+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/action/receive?metric=breakDownTableChart&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "document_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:47:17+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/action/receive?metric=breakDownTableChart&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "document_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:47:17+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/action/receive?metric=breakDownTableChart&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "breakDownTableChart"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"breakDownTableChart\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "breakDownTableChart"
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "action": "breakDownTableChart",
+          "beginTime": "2026-04-07 03:00",
+          "endTime": "2026-04-07 09:00",
+          "labels": {
+            "actionIds": [
+              "16000"
+            ],
+            "applicationIds": [
+              "1645"
+            ]
+          },
+          "lang": "zh_CN",
+          "timePeriod": 360
+        },
+        "dynamic_fields": [
+          "body.beginTime",
+          "body.endTime",
+          "body.labels.actionIds[0]",
+          "body.labels.applicationIds[0]",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/action/receive?metric=breakDownTableChart&lang=zh_CN' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json' --data-raw '{\"action\":\"breakDownTableChart\",\"beginTime\":\"2026-04-07 03:00\",\"endTime\":\"2026-04-07 09:00\",\"labels\":{\"actionIds\":[\"16000\"],\"applicationIds\":[\"1645\"]},\"lang\":\"zh_CN\",\"timePeriod\":360}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/action/receive?metric=breakDownTableChart&lang=zh_CN"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "action": "breakDownTableChart",
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 09:00",
+            "labels": {
+              "actionIds": [
+                "16000"
+              ],
+              "applicationIds": [
+                "1645"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": 360
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "document_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:47:17+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/action/receive?metric=breakDownTableChart&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {
+            "lang": "zh_CN",
+            "metric": "breakDownTableChart"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:47:17+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/action/receive?metric=breakDownTableChart&lang=zh_CN"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "code": 200,
+              "data": {
+                "series": [
+                  {
+                    "data": [
+                      {
+                        "display": "6.00",
+                        "tooltip": "{\"title\":\"04-07 08:50--04-07 08:55\",\"data\":[{\"title\":\"响应时间\",\"value\":6.09,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总耗时\",\"value\":6.09,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总次数\",\"value\":1.00,\"unit\":\"\",\"scale\":2}]}",
+                        "value": 6.0,
+                        "x": 1775523000000,
+                        "y": 6.0
+                      }
+                    ],
+                    "name": "Code-com.hd.rcugrc.product.integration.mvc.DataCenterController/collectContractClose",
+                    "type": "line",
+                    "xAxis": 0,
+                    "yAxis": 0,
+                    "zIndex": 0
+                  },
+                  {
+                    "data": [
+                      {
+                        "display": "2.50",
+                        "tooltip": "{\"title\":\"04-07 08:50--04-07 08:55\",\"data\":[{\"title\":\"响应时间\",\"value\":2.66,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总耗时\",\"value\":5.31,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总次数\",\"value\":2.00,\"unit\":\"\",\"scale\":2}]}",
+                        "value": 2.5,
+                        "x": 1775523000000,
+                        "y": 2.5
+                      }
+                    ],
+                    "name": "Code-javax.*",
+                    "type": "line",
+                    "xAxis": 0,
+                    "yAxis": 0,
+                    "zIndex": 0
+                  },
+                  {
+                    "data": [
+                      {
+                        "display": "0.29",
+                        "tooltip": "{\"title\":\"04-07 08:50--04-07 08:55\",\"data\":[{\"title\":\"响应时间\",\"value\":0.32,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总耗时\",\"value\":2.22,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总次数\",\"value\":7.00,\"unit\":\"\",\"scale\":2}]}",
+                        "value": 0.29,
+                        "x": 1775523000000,
+                        "y": 0.29
+                      }
+                    ],
+                    "name": "NoSQL-10.190.22.20:6379/1",
+                    "type": "line",
+                    "xAxis": 0,
+                    "yAxis": 0,
+                    "zIndex": 0
+                  },
+                  {
+                    "data": [
+                      {
+                        "display": "2.00",
+                        "tooltip": "{\"title\":\"04-07 08:50--04-07 08:55\",\"data\":[{\"title\":\"响应时间\",\"value\":2.70,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总耗时\",\"value\":2.70,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总次数\",\"value\":1.00,\"unit\":\"\",\"scale\":2}]}",
+                        "value": 2.0,
+                        "x": 1775523000000,
+                        "y": 2.0
+                      }
+                    ],
+                    "name": "Code-com.hd.rcugrc.product.common.filter.CasRedirectFilter/doFilter",
+                    "type": "line",
+                    "xAxis": 0,
+                    "yAxis": 0,
+                    "zIndex": 0
+                  },
+                  {
+                    "data": [
+                      {
+                        "display": "166.08",
+                        "tooltip": "{\"title\":\"04-07 08:50--04-07 08:55\",\"data\":[{\"title\":\"响应时间\",\"value\":166.10,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总耗时\",\"value\":2159.34,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总次数\",\"value\":13.00,\"unit\":\"\",\"scale\":2}]}",
+                        "value": 166.08,
+                        "x": 1775523000000,
+                        "y": 166.08
+                      }
+                    ],
+                    "name": "Database-10.190.22.21:3306",
+                    "type": "line",
+                    "xAxis": 0,
+                    "yAxis": 0,
+                    "zIndex": 0
+                  },
+                  {
+                    "data": [
+                      {
+                        "display": "94.65",
+                        "tooltip": "{\"title\":\"04-07 08:50--04-07 08:55\",\"data\":[{\"title\":\"响应时间\",\"value\":46.32,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总耗时\",\"value\":2176.86,\"unit\":\"ms\",\"scale\":2},{\"title\":\"总次数\",\"value\":23.00,\"unit\":\"\",\"scale\":2}]}",
+                        "value": 94.65,
+                        "x": 1775523000000,
+                        "y": 94.65
+                      }
+                    ],
+                    "name": "其他",
+                    "type": "line",
+                    "xAxis": 0,
+                    "yAxis": 0,
+                    "zIndex": 0
+                  }
+                ],
+                "xAxis": {
+                  "categories": [],
+                  "max": 1775523540000,
+                  "min": 1775502000000
+                },
+                "yAxis": [
+                  {
+                    "opposite": false,
+                    "tickUnit": " ms"
+                  }
+                ]
+              }
+            },
+            "requestId": "032604c4-53be-eceb-81a8-fbff17ed8b8c",
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:47:05 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/graph/action/receive",
+  "relative_path": "graph/action/receive"
+}

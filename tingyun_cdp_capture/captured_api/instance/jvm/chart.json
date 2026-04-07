@@ -1,15 +1,15 @@
 {
-  "count_seen": 8,
+  "count_seen": 16,
   "first_seen": "2026-04-03T15:40:16+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 8
+    "http://169.169.173.25:8080": 16
   },
-  "last_seen": "2026-04-03T15:40:17+08:00",
+  "last_seen": "2026-04-07T14:49:56+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "body.applicationId",
             "body.bizSystemId",
@@ -62,7 +62,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "body.applicationId",
             "body.bizSystemId",
@@ -115,7 +115,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "body.applicationId",
             "body.bizSystemId",
@@ -165,7 +165,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "body.applicationId",
             "body.bizSystemId",
@@ -215,21 +215,81 @@
           }
         }
       ],
-      "count_seen": 8,
+      "count_seen": 16,
       "first_seen": "2026-04-03T15:40:16+08:00",
       "inference_basis": [
         "path=instance/jvm/chart"
       ],
       "inferred_purpose": "Likely related to instance/jvm/chart",
-      "last_seen": "2026-04-03T15:40:17+08:00",
+      "last_seen": "2026-04-07T14:49:56+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 8
+        "application/json": 16
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+            "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+            "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+            "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:56+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/instance/jvm/chart",
+            "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "frame_id": "1C473FD520D8494F94C450A1C523C412",
+            "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:44+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/instance/jvm/chart",
+            "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+          "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:56+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/instance/jvm/chart",
+          "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+          "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:56+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/instance/jvm/chart",
+          "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 8,
+          "count_seen": 16,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -276,7 +336,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 8
+        "XHR": 16
       },
       "sample_requests": [
         {
@@ -1581,7 +1641,7 @@
         }
       ],
       "status_codes": {
-        "200": 8
+        "200": 16
       }
     }
   },

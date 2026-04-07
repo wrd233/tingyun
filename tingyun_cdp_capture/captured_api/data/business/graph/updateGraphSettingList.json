@@ -1,10 +1,10 @@
 {
-  "count_seen": 9,
+  "count_seen": 16,
   "first_seen": "2026-04-03T15:40:25+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 9
+    "http://169.169.173.25:8080": 16
   },
-  "last_seen": "2026-04-03T20:00:14+08:00",
+  "last_seen": "2026-04-07T14:49:34+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -195,6 +195,206 @@
             "body.graphSettings[3].id",
             "body.graphSettings[4].id",
             "body.graphSettings[5].id",
+            "body.graphSettings[6].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9767,
+                "xaxes": "34.532332715372235",
+                "yaxes": "331.63671704721395"
+              },
+              {
+                "id": 9072,
+                "xaxes": "393.169049762599",
+                "yaxes": "183.0845248813032"
+              },
+              {
+                "id": 9345,
+                "xaxes": "-27",
+                "yaxes": "183.08452488128876"
+              },
+              {
+                "id": 9400,
+                "xaxes": "34.53233271538744",
+                "yaxes": "34.532332715369876"
+              },
+              {
+                "id": 9415,
+                "xaxes": "331.63671704721645",
+                "yaxes": "331.63671704722424"
+              },
+              {
+                "id": 9049,
+                "xaxes": "331.6367170472216",
+                "yaxes": "34.532332715379965"
+              },
+              {
+                "id": 9041,
+                "xaxes": "183.08452488129944",
+                "yaxes": "-27"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"34.532332715372235\",\"yaxes\":\"331.63671704721395\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"393.169049762599\",\"yaxes\":\"183.0845248813032\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-27\",\"yaxes\":\"183.08452488128876\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"34.53233271538744\",\"yaxes\":\"34.532332715369876\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"331.63671704721645\",\"yaxes\":\"331.63671704722424\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"331.6367170472216\",\"yaxes\":\"34.532332715379965\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"183.08452488129944\",\"yaxes\":\"-27\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "34.532332715372235",
+                "yaxes": "331.63671704721395"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "393.169049762599",
+                "yaxes": "183.0845248813032"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-27",
+                "yaxes": "183.08452488128876"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "34.53233271538744",
+                "yaxes": "34.532332715369876"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "331.63671704721645",
+                "yaxes": "331.63671704722424"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "331.6367170472216",
+                "yaxes": "34.532332715379965"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "183.08452488129944",
+                "yaxes": "-27"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[2].id",
+            "body.graphSettings[3].id",
+            "body.graphSettings[4].id",
+            "body.graphSettings[5].id",
+            "body.graphSettings[6].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9767,
+                "xaxes": "34.532332715372235",
+                "yaxes": "331.63671704721395"
+              },
+              {
+                "id": 9072,
+                "xaxes": "393.169049762599",
+                "yaxes": "183.0845248813032"
+              },
+              {
+                "id": 9345,
+                "xaxes": "-27",
+                "yaxes": "183.08452488128876"
+              },
+              {
+                "id": 9400,
+                "xaxes": "34.53233271538744",
+                "yaxes": "34.532332715369876"
+              },
+              {
+                "id": 9049,
+                "xaxes": "331.6367170472216",
+                "yaxes": "34.532332715379965"
+              },
+              {
+                "id": 9041,
+                "xaxes": "183.08452488129944",
+                "yaxes": "-27"
+              },
+              {
+                "id": 9415,
+                "xaxes": "331.63671704721645",
+                "yaxes": "331.63671704722424"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"34.532332715372235\",\"yaxes\":\"331.63671704721395\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"393.169049762599\",\"yaxes\":\"183.0845248813032\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-27\",\"yaxes\":\"183.08452488128876\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"34.53233271538744\",\"yaxes\":\"34.532332715369876\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"331.6367170472216\",\"yaxes\":\"34.532332715379965\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"183.08452488129944\",\"yaxes\":\"-27\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"331.63671704721645\",\"yaxes\":\"331.63671704722424\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "34.532332715372235",
+                "yaxes": "331.63671704721395"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "393.169049762599",
+                "yaxes": "183.0845248813032"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-27",
+                "yaxes": "183.08452488128876"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "34.53233271538744",
+                "yaxes": "34.532332715369876"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "331.6367170472216",
+                "yaxes": "34.532332715379965"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "183.08452488129944",
+                "yaxes": "-27"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "331.63671704721645",
+                "yaxes": "331.63671704722424"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[2].id",
+            "body.graphSettings[3].id",
+            "body.graphSettings[4].id",
+            "body.graphSettings[5].id",
             "body.graphSettings[6].id",
             "body.graphSettings[7].id"
           ],
@@ -292,6 +492,117 @@
                 "id": "<DYNAMIC_NUMBER>",
                 "xaxes": "-27",
                 "yaxes": "183.08452488128876"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.graphSettings[0].id",
+            "body.graphSettings[1].id",
+            "body.graphSettings[2].id",
+            "body.graphSettings[3].id",
+            "body.graphSettings[4].id",
+            "body.graphSettings[5].id",
+            "body.graphSettings[6].id",
+            "body.graphSettings[7].id"
+          ],
+          "example": {
+            "graphSettings": [
+              {
+                "id": 9435,
+                "xaxes": "51.97884723437673",
+                "yaxes": "24.768632711485054"
+              },
+              {
+                "id": 9434,
+                "xaxes": "290.0462211506559",
+                "yaxes": "429.62788487017536"
+              },
+              {
+                "id": 9436,
+                "xaxes": "0.770899736143349",
+                "yaxes": "327.0201184620299"
+              },
+              {
+                "id": 9437,
+                "xaxes": "414.95962572769065",
+                "yaxes": "321.8557736458756"
+              },
+              {
+                "id": 9447,
+                "xaxes": "130.06910417001671",
+                "yaxes": "435.4866476577701"
+              },
+              {
+                "id": 9445,
+                "xaxes": "-23.894227242760394",
+                "yaxes": "173.0378976616415"
+              },
+              {
+                "id": 9443,
+                "xaxes": "211.39341518314893",
+                "yaxes": "-27"
+              },
+              {
+                "id": 9440,
+                "xaxes": "445.65158185960433",
+                "yaxes": "167.18332868615911"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"51.97884723437673\",\"yaxes\":\"24.768632711485054\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"290.0462211506559\",\"yaxes\":\"429.62788487017536\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"0.770899736143349\",\"yaxes\":\"327.0201184620299\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"414.95962572769065\",\"yaxes\":\"321.8557736458756\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"130.06910417001671\",\"yaxes\":\"435.4866476577701\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"-23.894227242760394\",\"yaxes\":\"173.0378976616415\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"211.39341518314893\",\"yaxes\":\"-27\"},{\"id\":\"<DYNAMIC_NUMBER>\",\"xaxes\":\"445.65158185960433\",\"yaxes\":\"167.18332868615911\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "51.97884723437673",
+                "yaxes": "24.768632711485054"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "290.0462211506559",
+                "yaxes": "429.62788487017536"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "0.770899736143349",
+                "yaxes": "327.0201184620299"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "414.95962572769065",
+                "yaxes": "321.8557736458756"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "130.06910417001671",
+                "yaxes": "435.4866476577701"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "-23.894227242760394",
+                "yaxes": "173.0378976616415"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "211.39341518314893",
+                "yaxes": "-27"
+              },
+              {
+                "id": "<DYNAMIC_NUMBER>",
+                "xaxes": "445.65158185960433",
+                "yaxes": "167.18332868615911"
               }
             ],
             "lang": "zh_CN"
@@ -882,7 +1193,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 3,
           "dynamic_fields": [
             "body.graphSettings[0].id",
             "body.graphSettings[1].id",
@@ -943,6 +1254,90 @@
           "example": {
             "graphSettings": [
               {
+                "xaxes": "138",
+                "yaxes": "4"
+              },
+              {
+                "xaxes": "73",
+                "yaxes": "230"
+              },
+              {
+                "xaxes": "213",
+                "yaxes": "230"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"xaxes\":\"138\",\"yaxes\":\"4\"},{\"xaxes\":\"73\",\"yaxes\":\"230\"},{\"xaxes\":\"213\",\"yaxes\":\"230\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "xaxes": "138",
+                "yaxes": "4"
+              },
+              {
+                "xaxes": "73",
+                "yaxes": "230"
+              },
+              {
+                "xaxes": "213",
+                "yaxes": "230"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "graphSettings": [
+              {
+                "xaxes": "75.19182417449045",
+                "yaxes": "4"
+              },
+              {
+                "xaxes": "80.19182417449045",
+                "yaxes": "230"
+              }
+            ],
+            "lang": "zh_CN"
+          },
+          "key": "{\"graphSettings\":[{\"xaxes\":\"75.19182417449045\",\"yaxes\":\"4\"},{\"xaxes\":\"80.19182417449045\",\"yaxes\":\"230\"}],\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "graphSettings",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "graphSettings": [
+              {
+                "xaxes": "75.19182417449045",
+                "yaxes": "4"
+              },
+              {
+                "xaxes": "80.19182417449045",
+                "yaxes": "230"
+              }
+            ],
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "graphSettings": [
+              {
                 "xaxes": "78.8718397384553",
                 "yaxes": "230"
               },
@@ -976,22 +1371,96 @@
           }
         }
       ],
-      "count_seen": 9,
+      "count_seen": 16,
       "first_seen": "2026-04-03T15:40:25+08:00",
       "inference_basis": [
         "path=data/business/graph/updateGraphSettingList",
         "query params present"
       ],
       "inferred_purpose": "Likely related to graph",
-      "last_seen": "2026-04-03T20:00:14+08:00",
+      "last_seen": "2026-04-07T14:49:34+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 9
+        "application/json": 16
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:34+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:59+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:45:47+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 9,
+          "count_seen": 16,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN"
@@ -1082,7 +1551,7 @@
         "Content-Type": "application/json"
       },
       "resource_types": {
-        "XHR": 9
+        "XHR": 16
       },
       "sample_requests": [
         {
@@ -1336,7 +1805,7 @@
         }
       ],
       "status_codes": {
-        "200": 9
+        "200": 16
       }
     }
   },

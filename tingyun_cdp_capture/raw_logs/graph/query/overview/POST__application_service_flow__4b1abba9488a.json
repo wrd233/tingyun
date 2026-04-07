@@ -1,0 +1,3483 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:46:25+08:00",
+    "completeness_score": 4242,
+    "first_seen_at": "2026-04-07T14:46:25+08:00",
+    "last_seen_at": "2026-04-07T14:46:25+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:25+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+          "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:46:25+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:25+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:25+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/query/overview/POST__application_service_flow__4b1abba9488a.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544385.010923
+  },
+  "method": "POST",
+  "metric": "application_service_flow",
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+    "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:46:25+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:25+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:25+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:25+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/query/overview",
+  "relative_path": "graph/query/overview",
+  "request": {
+    "body": {
+      "endTime": "2026-04-07 14:46",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "1645"
+        ],
+        "cross": "1645"
+      },
+      "lang": "zh_CN",
+      "metric": "application_service_flow",
+      "timePeriod": 706,
+      "zoomTime": true
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC>"
+        ],
+        "cross": "1645"
+      },
+      "lang": "zh_CN",
+      "metric": "application_service_flow",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "6fe60a0a-7a4e-a944-f912-a33e8dc17f80",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1645?start=1775502000000&end=1775544384596&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:25+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/query/overview",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "application_service_flow"
+    },
+    "query_normalized": {
+      "lang": "zh_CN",
+      "metric": "application_service_flow"
+    },
+    "raw_post_data": "{\"timePeriod\":706,\"endTime\":\"2026-04-07 14:46\",\"metric\":\"application_service_flow\",\"zoomTime\":true,\"labels\":{\"cross\":\"1645\",\"applicationIds\":[\"1645\"],\"actionTypes\":[\"TX,IF\"]},\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": [
+        {
+          "root": {
+            "actionGuids": [],
+            "applicationId": 1645,
+            "bizSystemId": 1065,
+            "callTotalCount": 347877.0,
+            "children": [
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 27.34,
+                "callTotalCount": 1256273.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/7",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/7",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/7",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/7"
+                  }
+                ],
+                "durationAvg": 0.317,
+                "durationTotal": 398173.055,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 2,
+                "level": 2,
+                "nodeKey": "nodeKey-2-2",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 13.21,
+                "requestTime": 0,
+                "requestTotalCount": 45954,
+                "respTimeContributionDegree": 1.65,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/7",
+                "serviceName": "10.190.22.20:6379/7",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.5,
+                "callTotalCount": 867713.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1644,1646,1645",
+                "crossAndActionId": "U|0,1644,1646,1645",
+                "crossList": [
+                  "U|0,1644,1646,1645",
+                  "U|0,1646,1645",
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/1",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/1",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/1",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/1"
+                  }
+                ],
+                "durationAvg": 0.313,
+                "durationTotal": 271711.39499999996,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 3,
+                "level": 2,
+                "nodeKey": "nodeKey-2-3",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 99.66,
+                "requestTime": 0,
+                "requestTotalCount": 346695,
+                "respTimeContributionDegree": 1.13,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/1",
+                "serviceName": "10.190.22.20:6379/1",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1646,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 1852.0,
+                "children": [
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1646,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 1.0,
+                    "callTotalCount": 102.0,
+                    "children": [],
+                    "componentType": "External",
+                    "cross": "U|0,1645,1646",
+                    "crossAndActionId": "U|0,1645,1646",
+                    "crossList": [
+                      "U|0,1645,1646"
+                    ],
+                    "currentCross": "1645,1646-External-http-jtfw.nbport.com.cn:80",
+                    "currentCrossAndActionId": "1645,1646-External-http-jtfw.nbport.com.cn:80",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "fawucn.keking.ServerMain",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "jtfw.nbport.com.cn:80",
+                        "icon": "http",
+                        "value": "jtfw.nbport.com.cn:80"
+                      }
+                    ],
+                    "durationAvg": 25.529,
+                    "durationTotal": 2604.007,
+                    "errorRequestCount": 99.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "External,http",
+                    "id": 25,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-25",
+                    "parentCross": "1645",
+                    "parentCrossAndActionId": "1645",
+                    "pid": 4,
+                    "requestPercentage": 5.51,
+                    "requestTime": 0,
+                    "requestTotalCount": 102,
+                    "respTimeContributionDegree": 0.01,
+                    "seq": 0,
+                    "serviceId": "jtfw.nbport.com.cn:80",
+                    "serviceName": "jtfw.nbport.com.cn:80",
+                    "serviceType": "$$component",
+                    "serviceVendor": "http",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1645,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 1.0,
+                    "callTotalCount": 382.0,
+                    "children": [
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 3.25,
+                        "callTotalCount": 1121.0,
+                        "children": [],
+                        "componentType": "Database",
+                        "cross": "U|0,1645,1646,1645",
+                        "crossAndActionId": "U|0,1645,1646,1645",
+                        "crossList": [
+                          "U|0,1645,1646,1645"
+                        ],
+                        "currentCross": "1645,1646,1645-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossAndActionId": "1645,1646,1645-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "fawucn.keking.ServerMain",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "10.190.22.21:3306",
+                            "icon": "MySQL",
+                            "value": "10.190.22.21:3306"
+                          }
+                        ],
+                        "durationAvg": 0.353,
+                        "durationTotal": 396.079,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "Database,MySQL",
+                        "id": 28,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-28",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 26,
+                        "requestPercentage": 90.31,
+                        "requestTime": 0,
+                        "requestTotalCount": 345,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.21:3306",
+                        "serviceName": "10.190.22.21:3306",
+                        "serviceType": "$$component",
+                        "serviceVendor": "MySQL",
+                        "txNode": false
+                      },
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 7.0,
+                        "callTotalCount": 2673.0,
+                        "children": [],
+                        "componentType": "NoSQL",
+                        "cross": "U|0,1645,1646,1645",
+                        "crossAndActionId": "U|0,1645,1646,1645",
+                        "crossList": [
+                          "U|0,1645,1646,1645"
+                        ],
+                        "currentCross": "1645,1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossAndActionId": "1645,1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "fawucn.keking.ServerMain",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "10.190.22.20:6379/1",
+                            "icon": "Redis",
+                            "value": "10.190.22.20:6379/1"
+                          }
+                        ],
+                        "durationAvg": 0.326,
+                        "durationTotal": 872.023,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "NoSQL,Redis",
+                        "id": 29,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-29",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 26,
+                        "requestPercentage": 100.0,
+                        "requestTime": 0,
+                        "requestTotalCount": 382,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.20:6379/1",
+                        "serviceName": "10.190.22.20:6379/1",
+                        "serviceType": "$$component",
+                        "serviceVendor": "Redis",
+                        "txNode": false
+                      }
+                    ],
+                    "cross": "U|0,1645,1646,1645",
+                    "crossAndActionId": "U|0,1645,1646,1645",
+                    "crossList": [
+                      "U|0,1645,1646,1645"
+                    ],
+                    "currentCross": "1645,1646,1645",
+                    "currentCrossAndActionId": "1645,1646,1645",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "fawucn.keking.ServerMain",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      }
+                    ],
+                    "durationAvg": 18.678,
+                    "durationTotal": 7134.935,
+                    "errorRequestCount": 37.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Apache Tomcat",
+                    "id": 26,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-26",
+                    "parentCross": "1645,1646",
+                    "parentCrossAndActionId": "1645,1646",
+                    "pid": 4,
+                    "requestPercentage": 20.63,
+                    "requestTime": 0,
+                    "requestTotalCount": 382,
+                    "respTimeContributionDegree": 0.03,
+                    "seq": 0,
+                    "serviceId": "1645",
+                    "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "serviceType": "$$application",
+                    "serviceVendor": "Apache Tomcat",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1644,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 1.0,
+                    "callTotalCount": 480.0,
+                    "children": [
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1644,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 3.34,
+                        "callTotalCount": 1402.0,
+                        "children": [],
+                        "componentType": "Database",
+                        "cross": "U|0,1645,1646,1644",
+                        "crossAndActionId": "U|0,1645,1646,1644",
+                        "crossList": [
+                          "U|0,1645,1646,1644"
+                        ],
+                        "currentCross": "1645,1646,1644-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossAndActionId": "1645,1646,1644-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "fawucn.keking.ServerMain",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "org.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1644"
+                          },
+                          {
+                            "displayName": "10.190.22.21:3306",
+                            "icon": "MySQL",
+                            "value": "10.190.22.21:3306"
+                          }
+                        ],
+                        "durationAvg": 0.335,
+                        "durationTotal": 470.086,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "Database,MySQL",
+                        "id": 30,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-30",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 27,
+                        "requestPercentage": 87.5,
+                        "requestTime": 0,
+                        "requestTotalCount": 420,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.21:3306",
+                        "serviceName": "10.190.22.21:3306",
+                        "serviceType": "$$component",
+                        "serviceVendor": "MySQL",
+                        "txNode": false
+                      },
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1644,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 7.0,
+                        "callTotalCount": 3360.0,
+                        "children": [],
+                        "componentType": "NoSQL",
+                        "cross": "U|0,1645,1646,1644",
+                        "crossAndActionId": "U|0,1645,1646,1644",
+                        "crossList": [
+                          "U|0,1645,1646,1644"
+                        ],
+                        "currentCross": "1645,1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossAndActionId": "1645,1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "fawucn.keking.ServerMain",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "org.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1644"
+                          },
+                          {
+                            "displayName": "10.190.22.20:6379/1",
+                            "icon": "Redis",
+                            "value": "10.190.22.20:6379/1"
+                          }
+                        ],
+                        "durationAvg": 0.3,
+                        "durationTotal": 1008.319,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "NoSQL,Redis",
+                        "id": 31,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-31",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 27,
+                        "requestPercentage": 100.0,
+                        "requestTime": 0,
+                        "requestTotalCount": 480,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.20:6379/1",
+                        "serviceName": "10.190.22.20:6379/1",
+                        "serviceType": "$$component",
+                        "serviceVendor": "Redis",
+                        "txNode": false
+                      }
+                    ],
+                    "cross": "U|0,1645,1646,1644",
+                    "crossAndActionId": "U|0,1645,1646,1644",
+                    "crossList": [
+                      "U|0,1645,1646,1644"
+                    ],
+                    "currentCross": "1645,1646,1644",
+                    "currentCrossAndActionId": "1645,1646,1644",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "fawucn.keking.ServerMain",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "org.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1644"
+                      }
+                    ],
+                    "durationAvg": 28.746,
+                    "durationTotal": 13798.242,
+                    "errorRequestCount": 60.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Apache Tomcat",
+                    "id": 27,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-27",
+                    "parentCross": "1645,1646",
+                    "parentCrossAndActionId": "1645,1646",
+                    "pid": 4,
+                    "requestPercentage": 25.92,
+                    "requestTime": 0,
+                    "requestTotalCount": 480,
+                    "respTimeContributionDegree": 0.06,
+                    "seq": 0,
+                    "serviceId": "1644",
+                    "serviceName": "org.springframework.boot.loader.WarLauncher",
+                    "serviceType": "$$application",
+                    "serviceVendor": "Apache Tomcat",
+                    "txNode": false
+                  }
+                ],
+                "cross": "U|0,1645,1646",
+                "crossAndActionId": "U|0,1645,1646",
+                "crossList": [
+                  "U|0,1645,1646"
+                ],
+                "currentCross": "1645,1646",
+                "currentCrossAndActionId": "1645,1646",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "fawucn.keking.ServerMain",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  }
+                ],
+                "durationAvg": 1068.442,
+                "durationTotal": 1978754.22,
+                "errorRequestCount": 2.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Jetty",
+                "id": 4,
+                "level": 2,
+                "nodeKey": "nodeKey-2-4",
+                "parentCross": "1645",
+                "parentCrossAndActionId": "1645",
+                "pid": 1,
+                "requestPercentage": 0.53,
+                "requestTime": 0,
+                "requestTotalCount": 1852,
+                "respTimeContributionDegree": 8.2,
+                "seq": 0,
+                "serviceId": "1646",
+                "serviceName": "fawucn.keking.ServerMain",
+                "serviceType": "$$application",
+                "serviceVendor": "Jetty",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.47,
+                "callTotalCount": 1046.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/0",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/0",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/0",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/0"
+                  }
+                ],
+                "durationAvg": 0.413,
+                "durationTotal": 432.22,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 5,
+                "level": 2,
+                "nodeKey": "nodeKey-2-5",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.2,
+                "requestTime": 0,
+                "requestTotalCount": 710,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/0",
+                "serviceName": "10.190.22.18:6379/0",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.0,
+                "callTotalCount": 6.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-https-neam.nbport.com.cn:443",
+                "currentCrossAndActionId": "1645-External-https-neam.nbport.com.cn:443",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "neam.nbport.com.cn:443",
+                    "icon": "https",
+                    "value": "neam.nbport.com.cn:443"
+                  }
+                ],
+                "durationAvg": 16.072,
+                "durationTotal": 96.429,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,https",
+                "id": 6,
+                "level": 2,
+                "nodeKey": "nodeKey-2-6",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.0,
+                "requestTime": 0,
+                "requestTotalCount": 3,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "neam.nbport.com.cn:443",
+                "serviceName": "neam.nbport.com.cn:443",
+                "serviceType": "$$component",
+                "serviceVendor": "https",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 75.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-file-open.tianyancha.com:80",
+                "currentCrossAndActionId": "1645-External-http-file-open.tianyancha.com:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "file-open.tianyancha.com:80",
+                    "icon": "http",
+                    "value": "file-open.tianyancha.com:80"
+                  }
+                ],
+                "durationAvg": 76.372,
+                "durationTotal": 5727.882,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 7,
+                "level": 2,
+                "nodeKey": "nodeKey-2-7",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.02,
+                "requestTime": 0,
+                "requestTotalCount": 75,
+                "respTimeContributionDegree": 0.02,
+                "seq": 0,
+                "serviceId": "file-open.tianyancha.com:80",
+                "serviceName": "file-open.tianyancha.com:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.98,
+                "callTotalCount": 2217.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/0",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/0",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/0",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/0"
+                  }
+                ],
+                "durationAvg": 0.456,
+                "durationTotal": 1009.88,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 8,
+                "level": 2,
+                "nodeKey": "nodeKey-2-8",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.32,
+                "requestTime": 0,
+                "requestTotalCount": 1122,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/0",
+                "serviceName": "10.190.22.20:6379/0",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.42,
+                "callTotalCount": 242.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-open.api.tianyancha.com:80",
+                "currentCrossAndActionId": "1645-External-http-open.api.tianyancha.com:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "open.api.tianyancha.com:80",
+                    "icon": "http",
+                    "value": "open.api.tianyancha.com:80"
+                  }
+                ],
+                "durationAvg": 122.642,
+                "durationTotal": 29679.306,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 9,
+                "level": 2,
+                "nodeKey": "nodeKey-2-9",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.05,
+                "requestTime": 0,
+                "requestTotalCount": 170,
+                "respTimeContributionDegree": 0.12,
+                "seq": 0,
+                "serviceId": "open.api.tianyancha.com:80",
+                "serviceName": "open.api.tianyancha.com:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 4.06,
+                "callTotalCount": 1717.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/4",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/4",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/4",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/4"
+                  }
+                ],
+                "durationAvg": 0.156,
+                "durationTotal": 267.845,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 10,
+                "level": 2,
+                "nodeKey": "nodeKey-2-10",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.12,
+                "requestTime": 0,
+                "requestTotalCount": 423,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/4",
+                "serviceName": "10.190.22.19:6379/4",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 10.41,
+                "callTotalCount": 43275.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/2",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/2",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/2",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/2"
+                  }
+                ],
+                "durationAvg": 0.333,
+                "durationTotal": 14398.718,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 11,
+                "level": 2,
+                "nodeKey": "nodeKey-2-11",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 1.19,
+                "requestTime": 0,
+                "requestTotalCount": 4156,
+                "respTimeContributionDegree": 0.06,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/2",
+                "serviceName": "10.190.22.20:6379/2",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.68,
+                "callTotalCount": 535848.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/1",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/1",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/1",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/1"
+                  }
+                ],
+                "durationAvg": 0.224,
+                "durationTotal": 120136.321,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 12,
+                "level": 2,
+                "nodeKey": "nodeKey-2-12",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 91.95,
+                "requestTime": 0,
+                "requestTotalCount": 319883,
+                "respTimeContributionDegree": 0.5,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/1",
+                "serviceName": "10.190.22.19:6379/1",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 4.06,
+                "callTotalCount": 1714.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/4",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/4",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/4",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/4"
+                  }
+                ],
+                "durationAvg": 0.278,
+                "durationTotal": 476.528,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 13,
+                "level": 2,
+                "nodeKey": "nodeKey-2-13",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.12,
+                "requestTime": 0,
+                "requestTotalCount": 422,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/4",
+                "serviceName": "10.190.22.18:6379/4",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.24,
+                "callTotalCount": 152.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-10.190.22.24:7080",
+                "currentCrossAndActionId": "1645-External-http-10.190.22.24:7080",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.24:7080",
+                    "icon": "http",
+                    "value": "10.190.22.24:7080"
+                  }
+                ],
+                "durationAvg": 1245.958,
+                "durationTotal": 189385.582,
+                "errorRequestCount": 1.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 14,
+                "level": 2,
+                "nodeKey": "nodeKey-2-14",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.02,
+                "requestTime": 0,
+                "requestTotalCount": 68,
+                "respTimeContributionDegree": 0.78,
+                "seq": 0,
+                "serviceId": "10.190.22.24:7080",
+                "serviceName": "10.190.22.24:7080",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.05,
+                "callTotalCount": 736.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-https-cloud.nbport.com.cn:443",
+                "currentCrossAndActionId": "1645-External-https-cloud.nbport.com.cn:443",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "cloud.nbport.com.cn:443",
+                    "icon": "https",
+                    "value": "cloud.nbport.com.cn:443"
+                  }
+                ],
+                "durationAvg": 11.945,
+                "durationTotal": 8791.784,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,https",
+                "id": 15,
+                "level": 2,
+                "nodeKey": "nodeKey-2-15",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.1,
+                "requestTime": 0,
+                "requestTotalCount": 359,
+                "respTimeContributionDegree": 0.04,
+                "seq": 0,
+                "serviceId": "cloud.nbport.com.cn:443",
+                "serviceName": "cloud.nbport.com.cn:443",
+                "serviceType": "$$component",
+                "serviceVendor": "https",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.0,
+                "callTotalCount": 14018.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/5",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/5",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/5",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/5"
+                  }
+                ],
+                "durationAvg": 0.681,
+                "durationTotal": 9542.205,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 16,
+                "level": 2,
+                "nodeKey": "nodeKey-2-16",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 2.01,
+                "requestTime": 0,
+                "requestTotalCount": 7009,
+                "respTimeContributionDegree": 0.04,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/5",
+                "serviceName": "10.190.22.20:6379/5",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.67,
+                "callTotalCount": 535706.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/1",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/1",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/1",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/1"
+                  }
+                ],
+                "durationAvg": 0.385,
+                "durationTotal": 206458.317,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 17,
+                "level": 2,
+                "nodeKey": "nodeKey-2-17",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 91.94,
+                "requestTime": 0,
+                "requestTotalCount": 319850,
+                "respTimeContributionDegree": 0.86,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/1",
+                "serviceName": "10.190.22.18:6379/1",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 36.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-10.169.204.132:8720",
+                "currentCrossAndActionId": "1645-External-http-10.169.204.132:8720",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.169.204.132:8720",
+                    "icon": "http",
+                    "value": "10.169.204.132:8720"
+                  }
+                ],
+                "durationAvg": 32.818,
+                "durationTotal": 1181.45,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 18,
+                "level": 2,
+                "nodeKey": "nodeKey-2-18",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.01,
+                "requestTime": 0,
+                "requestTotalCount": 36,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.169.204.132:8720",
+                "serviceName": "10.169.204.132:8720",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 10.68,
+                "callTotalCount": 1829888.0,
+                "children": [],
+                "componentType": "Database",
+                "cross": "U|0,1644,1646,1645",
+                "crossAndActionId": "U|0,1644,1646,1645",
+                "crossList": [
+                  "U|0,1644,1646,1645",
+                  "U|0,1646,1645",
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-Database-MySQL-10.190.22.21:3306",
+                "currentCrossAndActionId": "1645-Database-MySQL-10.190.22.21:3306",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.21:3306",
+                    "icon": "MySQL",
+                    "value": "10.190.22.21:3306"
+                  }
+                ],
+                "durationAvg": 8.191,
+                "durationTotal": 14988959.79,
+                "errorRequestCount": 16.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Database,MySQL",
+                "id": 19,
+                "level": 2,
+                "nodeKey": "nodeKey-2-19",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 49.27,
+                "requestTime": 0,
+                "requestTotalCount": 171382,
+                "respTimeContributionDegree": 62.1,
+                "seq": 0,
+                "serviceId": "10.190.22.21:3306",
+                "serviceName": "10.190.22.21:3306",
+                "serviceType": "$$component",
+                "serviceVendor": "MySQL",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.5,
+                "callTotalCount": 1057.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/0",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/0",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/0",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/0"
+                  }
+                ],
+                "durationAvg": 0.185,
+                "durationTotal": 195.54,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 20,
+                "level": 2,
+                "nodeKey": "nodeKey-2-20",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.2,
+                "requestTime": 0,
+                "requestTotalCount": 706,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/0",
+                "serviceName": "10.190.22.19:6379/0",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 9.28,
+                "callTotalCount": 114942.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/4",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/4",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/4",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/4"
+                  }
+                ],
+                "durationAvg": 0.305,
+                "durationTotal": 35083.822,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 21,
+                "level": 2,
+                "nodeKey": "nodeKey-2-21",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 3.56,
+                "requestTime": 0,
+                "requestTotalCount": 12383,
+                "respTimeContributionDegree": 0.15,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/4",
+                "serviceName": "10.190.22.20:6379/4",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 5.78,
+                "callTotalCount": 188885.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/2",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/2",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/2",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/2"
+                  }
+                ],
+                "durationAvg": 0.303,
+                "durationTotal": 57185.964,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 22,
+                "level": 2,
+                "nodeKey": "nodeKey-2-22",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 9.39,
+                "requestTime": 0,
+                "requestTotalCount": 32683,
+                "respTimeContributionDegree": 0.24,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/2",
+                "serviceName": "10.190.22.18:6379/2",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 5.77,
+                "callTotalCount": 188747.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/2",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/2",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/2",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/2"
+                  }
+                ],
+                "durationAvg": 0.155,
+                "durationTotal": 29306.664,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 23,
+                "level": 2,
+                "nodeKey": "nodeKey-2-23",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 9.4,
+                "requestTime": 0,
+                "requestTotalCount": 32686,
+                "respTimeContributionDegree": 0.12,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/2",
+                "serviceName": "10.190.22.19:6379/2",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.0,
+                "callTotalCount": 1198.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-usercenter.nbport.com.cn:80",
+                "currentCrossAndActionId": "1645-External-http-usercenter.nbport.com.cn:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "usercenter.nbport.com.cn:80",
+                    "icon": "http",
+                    "value": "usercenter.nbport.com.cn:80"
+                  }
+                ],
+                "durationAvg": 208.556,
+                "durationTotal": 249849.58,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 24,
+                "level": 2,
+                "nodeKey": "nodeKey-2-24",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.17,
+                "requestTime": 0,
+                "requestTotalCount": 599,
+                "respTimeContributionDegree": 1.04,
+                "seq": 0,
+                "serviceId": "usercenter.nbport.com.cn:80",
+                "serviceName": "usercenter.nbport.com.cn:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              }
+            ],
+            "cross": "U|0,1645",
+            "crossAndActionId": "U|0,1645",
+            "crossList": [
+              "U|0,1644,1646,1645",
+              "U|0,1646,1645",
+              "U|0,1645"
+            ],
+            "currentCross": "1645",
+            "currentCrossAndActionId": "1645",
+            "currentCrossItems": [
+              {
+                "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                "icon": "Apache Tomcat",
+                "value": "1645"
+              }
+            ],
+            "durationAvg": 69.379,
+            "durationTotal": 24135405.616,
+            "errorRequestCount": 1090.0,
+            "frontType": 0,
+            "hasProblem": false,
+            "icon": "Apache Tomcat",
+            "id": 1,
+            "level": 1,
+            "nodeKey": "nodeKey-1-1",
+            "parentCross": "",
+            "parentCrossAndActionId": "",
+            "pid": 0,
+            "requestTime": 0,
+            "requestTotalCount": 347877,
+            "seq": 0,
+            "serviceId": "1645",
+            "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "serviceType": "$$application",
+            "serviceVendor": "Apache Tomcat",
+            "txNode": true
+          }
+        }
+      ],
+      "requestId": "6fe60a0a-7a4e-a944-f912-a33e8dc17f80",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": [
+        {
+          "root": {
+            "actionGuids": [],
+            "applicationId": 1645,
+            "bizSystemId": 1065,
+            "callTotalCount": 347877.0,
+            "children": [
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 27.34,
+                "callTotalCount": 1256273.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/7",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/7",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/7",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/7"
+                  }
+                ],
+                "durationAvg": 0.317,
+                "durationTotal": 398173.055,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 2,
+                "level": 2,
+                "nodeKey": "nodeKey-2-2",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 13.21,
+                "requestTime": 0,
+                "requestTotalCount": 45954,
+                "respTimeContributionDegree": 1.65,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/7",
+                "serviceName": "10.190.22.20:6379/7",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.5,
+                "callTotalCount": 867713.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1644,1646,1645",
+                "crossAndActionId": "U|0,1644,1646,1645",
+                "crossList": [
+                  "U|0,1644,1646,1645",
+                  "U|0,1646,1645",
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/1",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/1",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/1",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/1"
+                  }
+                ],
+                "durationAvg": 0.313,
+                "durationTotal": 271711.39499999996,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 3,
+                "level": 2,
+                "nodeKey": "nodeKey-2-3",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 99.66,
+                "requestTime": 0,
+                "requestTotalCount": 346695,
+                "respTimeContributionDegree": 1.13,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/1",
+                "serviceName": "10.190.22.20:6379/1",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1646,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 1852.0,
+                "children": [
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1646,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 1.0,
+                    "callTotalCount": 102.0,
+                    "children": [],
+                    "componentType": "External",
+                    "cross": "U|0,1645,1646",
+                    "crossAndActionId": "U|0,1645,1646",
+                    "crossList": [
+                      "U|0,1645,1646"
+                    ],
+                    "currentCross": "1645,1646-External-http-jtfw.nbport.com.cn:80",
+                    "currentCrossAndActionId": "1645,1646-External-http-jtfw.nbport.com.cn:80",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "<REDACTED>",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "jtfw.nbport.com.cn:80",
+                        "icon": "http",
+                        "value": "jtfw.nbport.com.cn:80"
+                      }
+                    ],
+                    "durationAvg": 25.529,
+                    "durationTotal": 2604.007,
+                    "errorRequestCount": 99.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "External,http",
+                    "id": 25,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-25",
+                    "parentCross": "1645",
+                    "parentCrossAndActionId": "1645",
+                    "pid": 4,
+                    "requestPercentage": 5.51,
+                    "requestTime": 0,
+                    "requestTotalCount": 102,
+                    "respTimeContributionDegree": 0.01,
+                    "seq": 0,
+                    "serviceId": "jtfw.nbport.com.cn:80",
+                    "serviceName": "jtfw.nbport.com.cn:80",
+                    "serviceType": "$$component",
+                    "serviceVendor": "http",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1645,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 1.0,
+                    "callTotalCount": 382.0,
+                    "children": [
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 3.25,
+                        "callTotalCount": 1121.0,
+                        "children": [],
+                        "componentType": "Database",
+                        "cross": "U|0,1645,1646,1645",
+                        "crossAndActionId": "U|0,1645,1646,1645",
+                        "crossList": [
+                          "U|0,1645,1646,1645"
+                        ],
+                        "currentCross": "1645,1646,1645-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossAndActionId": "1645,1646,1645-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "<REDACTED>",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "10.190.22.21:3306",
+                            "icon": "MySQL",
+                            "value": "10.190.22.21:3306"
+                          }
+                        ],
+                        "durationAvg": 0.353,
+                        "durationTotal": 396.079,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "Database,MySQL",
+                        "id": 28,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-28",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 26,
+                        "requestPercentage": 90.31,
+                        "requestTime": 0,
+                        "requestTotalCount": 345,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.21:3306",
+                        "serviceName": "10.190.22.21:3306",
+                        "serviceType": "$$component",
+                        "serviceVendor": "MySQL",
+                        "txNode": false
+                      },
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 7.0,
+                        "callTotalCount": 2673.0,
+                        "children": [],
+                        "componentType": "NoSQL",
+                        "cross": "U|0,1645,1646,1645",
+                        "crossAndActionId": "U|0,1645,1646,1645",
+                        "crossList": [
+                          "U|0,1645,1646,1645"
+                        ],
+                        "currentCross": "1645,1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossAndActionId": "1645,1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "<REDACTED>",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "10.190.22.20:6379/1",
+                            "icon": "Redis",
+                            "value": "10.190.22.20:6379/1"
+                          }
+                        ],
+                        "durationAvg": 0.326,
+                        "durationTotal": 872.023,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "NoSQL,Redis",
+                        "id": 29,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-29",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 26,
+                        "requestPercentage": 100.0,
+                        "requestTime": 0,
+                        "requestTotalCount": 382,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.20:6379/1",
+                        "serviceName": "10.190.22.20:6379/1",
+                        "serviceType": "$$component",
+                        "serviceVendor": "Redis",
+                        "txNode": false
+                      }
+                    ],
+                    "cross": "U|0,1645,1646,1645",
+                    "crossAndActionId": "U|0,1645,1646,1645",
+                    "crossList": [
+                      "U|0,1645,1646,1645"
+                    ],
+                    "currentCross": "1645,1646,1645",
+                    "currentCrossAndActionId": "1645,1646,1645",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "<REDACTED>",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      }
+                    ],
+                    "durationAvg": 18.678,
+                    "durationTotal": 7134.935,
+                    "errorRequestCount": 37.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Apache Tomcat",
+                    "id": 26,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-26",
+                    "parentCross": "1645,1646",
+                    "parentCrossAndActionId": "1645,1646",
+                    "pid": 4,
+                    "requestPercentage": 20.63,
+                    "requestTime": 0,
+                    "requestTotalCount": 382,
+                    "respTimeContributionDegree": 0.03,
+                    "seq": 0,
+                    "serviceId": "1645",
+                    "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "serviceType": "$$application",
+                    "serviceVendor": "Apache Tomcat",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1644,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 1.0,
+                    "callTotalCount": 480.0,
+                    "children": [
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1644,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 3.34,
+                        "callTotalCount": 1402.0,
+                        "children": [],
+                        "componentType": "Database",
+                        "cross": "U|0,1645,1646,1644",
+                        "crossAndActionId": "U|0,1645,1646,1644",
+                        "crossList": [
+                          "U|0,1645,1646,1644"
+                        ],
+                        "currentCross": "1645,1646,1644-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossAndActionId": "1645,1646,1644-Database-MySQL-10.190.22.21:3306",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "<REDACTED>",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "org.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1644"
+                          },
+                          {
+                            "displayName": "10.190.22.21:3306",
+                            "icon": "MySQL",
+                            "value": "10.190.22.21:3306"
+                          }
+                        ],
+                        "durationAvg": 0.335,
+                        "durationTotal": 470.086,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "Database,MySQL",
+                        "id": 30,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-30",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 27,
+                        "requestPercentage": 87.5,
+                        "requestTime": 0,
+                        "requestTotalCount": 420,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.21:3306",
+                        "serviceName": "10.190.22.21:3306",
+                        "serviceType": "$$component",
+                        "serviceVendor": "MySQL",
+                        "txNode": false
+                      },
+                      {
+                        "actionGuids": [],
+                        "applicationId": 1644,
+                        "bizSystemId": 1065,
+                        "callPerRequest": 7.0,
+                        "callTotalCount": 3360.0,
+                        "children": [],
+                        "componentType": "NoSQL",
+                        "cross": "U|0,1645,1646,1644",
+                        "crossAndActionId": "U|0,1645,1646,1644",
+                        "crossList": [
+                          "U|0,1645,1646,1644"
+                        ],
+                        "currentCross": "1645,1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossAndActionId": "1645,1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                        "currentCrossItems": [
+                          {
+                            "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1645"
+                          },
+                          {
+                            "displayName": "<REDACTED>",
+                            "icon": "Jetty",
+                            "value": "1646"
+                          },
+                          {
+                            "displayName": "org.springframework.boot.loader.WarLauncher",
+                            "icon": "Apache Tomcat",
+                            "value": "1644"
+                          },
+                          {
+                            "displayName": "10.190.22.20:6379/1",
+                            "icon": "Redis",
+                            "value": "10.190.22.20:6379/1"
+                          }
+                        ],
+                        "durationAvg": 0.3,
+                        "durationTotal": 1008.319,
+                        "errorRequestCount": 0.0,
+                        "frontType": 0,
+                        "hasProblem": false,
+                        "icon": "NoSQL,Redis",
+                        "id": 31,
+                        "level": 4,
+                        "nodeKey": "nodeKey-4-31",
+                        "parentCross": "1645,1646",
+                        "parentCrossAndActionId": "1645,1646",
+                        "pid": 27,
+                        "requestPercentage": 100.0,
+                        "requestTime": 0,
+                        "requestTotalCount": 480,
+                        "respTimeContributionDegree": 0.0,
+                        "seq": 0,
+                        "serviceId": "10.190.22.20:6379/1",
+                        "serviceName": "10.190.22.20:6379/1",
+                        "serviceType": "$$component",
+                        "serviceVendor": "Redis",
+                        "txNode": false
+                      }
+                    ],
+                    "cross": "U|0,1645,1646,1644",
+                    "crossAndActionId": "U|0,1645,1646,1644",
+                    "crossList": [
+                      "U|0,1645,1646,1644"
+                    ],
+                    "currentCross": "1645,1646,1644",
+                    "currentCrossAndActionId": "1645,1646,1644",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "<REDACTED>",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "org.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1644"
+                      }
+                    ],
+                    "durationAvg": 28.746,
+                    "durationTotal": 13798.242,
+                    "errorRequestCount": 60.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Apache Tomcat",
+                    "id": 27,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-27",
+                    "parentCross": "1645,1646",
+                    "parentCrossAndActionId": "1645,1646",
+                    "pid": 4,
+                    "requestPercentage": 25.92,
+                    "requestTime": 0,
+                    "requestTotalCount": 480,
+                    "respTimeContributionDegree": 0.06,
+                    "seq": 0,
+                    "serviceId": "1644",
+                    "serviceName": "org.springframework.boot.loader.WarLauncher",
+                    "serviceType": "$$application",
+                    "serviceVendor": "Apache Tomcat",
+                    "txNode": false
+                  }
+                ],
+                "cross": "U|0,1645,1646",
+                "crossAndActionId": "U|0,1645,1646",
+                "crossList": [
+                  "U|0,1645,1646"
+                ],
+                "currentCross": "1645,1646",
+                "currentCrossAndActionId": "1645,1646",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "<REDACTED>",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  }
+                ],
+                "durationAvg": 1068.442,
+                "durationTotal": 1978754.22,
+                "errorRequestCount": 2.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Jetty",
+                "id": 4,
+                "level": 2,
+                "nodeKey": "nodeKey-2-4",
+                "parentCross": "1645",
+                "parentCrossAndActionId": "1645",
+                "pid": 1,
+                "requestPercentage": 0.53,
+                "requestTime": 0,
+                "requestTotalCount": 1852,
+                "respTimeContributionDegree": 8.2,
+                "seq": 0,
+                "serviceId": "1646",
+                "serviceName": "<REDACTED>",
+                "serviceType": "$$application",
+                "serviceVendor": "Jetty",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.47,
+                "callTotalCount": 1046.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/0",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/0",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/0",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/0"
+                  }
+                ],
+                "durationAvg": 0.413,
+                "durationTotal": 432.22,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 5,
+                "level": 2,
+                "nodeKey": "nodeKey-2-5",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.2,
+                "requestTime": 0,
+                "requestTotalCount": 710,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/0",
+                "serviceName": "10.190.22.18:6379/0",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.0,
+                "callTotalCount": 6.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-https-neam.nbport.com.cn:443",
+                "currentCrossAndActionId": "1645-External-https-neam.nbport.com.cn:443",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "neam.nbport.com.cn:443",
+                    "icon": "https",
+                    "value": "neam.nbport.com.cn:443"
+                  }
+                ],
+                "durationAvg": 16.072,
+                "durationTotal": 96.429,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,https",
+                "id": 6,
+                "level": 2,
+                "nodeKey": "nodeKey-2-6",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.0,
+                "requestTime": 0,
+                "requestTotalCount": 3,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "neam.nbport.com.cn:443",
+                "serviceName": "neam.nbport.com.cn:443",
+                "serviceType": "$$component",
+                "serviceVendor": "https",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 75.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-file-open.tianyancha.com:80",
+                "currentCrossAndActionId": "1645-External-http-file-open.tianyancha.com:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "file-open.tianyancha.com:80",
+                    "icon": "http",
+                    "value": "file-open.tianyancha.com:80"
+                  }
+                ],
+                "durationAvg": 76.372,
+                "durationTotal": 5727.882,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 7,
+                "level": 2,
+                "nodeKey": "nodeKey-2-7",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.02,
+                "requestTime": 0,
+                "requestTotalCount": 75,
+                "respTimeContributionDegree": 0.02,
+                "seq": 0,
+                "serviceId": "file-open.tianyancha.com:80",
+                "serviceName": "file-open.tianyancha.com:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.98,
+                "callTotalCount": 2217.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/0",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/0",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/0",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/0"
+                  }
+                ],
+                "durationAvg": 0.456,
+                "durationTotal": 1009.88,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 8,
+                "level": 2,
+                "nodeKey": "nodeKey-2-8",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.32,
+                "requestTime": 0,
+                "requestTotalCount": 1122,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/0",
+                "serviceName": "10.190.22.20:6379/0",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.42,
+                "callTotalCount": 242.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-open.api.tianyancha.com:80",
+                "currentCrossAndActionId": "1645-External-http-open.api.tianyancha.com:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "open.api.tianyancha.com:80",
+                    "icon": "http",
+                    "value": "open.api.tianyancha.com:80"
+                  }
+                ],
+                "durationAvg": 122.642,
+                "durationTotal": 29679.306,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 9,
+                "level": 2,
+                "nodeKey": "nodeKey-2-9",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.05,
+                "requestTime": 0,
+                "requestTotalCount": 170,
+                "respTimeContributionDegree": 0.12,
+                "seq": 0,
+                "serviceId": "open.api.tianyancha.com:80",
+                "serviceName": "open.api.tianyancha.com:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 4.06,
+                "callTotalCount": 1717.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/4",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/4",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/4",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/4"
+                  }
+                ],
+                "durationAvg": 0.156,
+                "durationTotal": 267.845,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 10,
+                "level": 2,
+                "nodeKey": "nodeKey-2-10",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.12,
+                "requestTime": 0,
+                "requestTotalCount": 423,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/4",
+                "serviceName": "10.190.22.19:6379/4",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 10.41,
+                "callTotalCount": 43275.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/2",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/2",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/2",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/2"
+                  }
+                ],
+                "durationAvg": 0.333,
+                "durationTotal": 14398.718,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 11,
+                "level": 2,
+                "nodeKey": "nodeKey-2-11",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 1.19,
+                "requestTime": 0,
+                "requestTotalCount": 4156,
+                "respTimeContributionDegree": 0.06,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/2",
+                "serviceName": "10.190.22.20:6379/2",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.68,
+                "callTotalCount": 535848.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/1",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/1",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/1",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/1"
+                  }
+                ],
+                "durationAvg": 0.224,
+                "durationTotal": 120136.321,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 12,
+                "level": 2,
+                "nodeKey": "nodeKey-2-12",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 91.95,
+                "requestTime": 0,
+                "requestTotalCount": 319883,
+                "respTimeContributionDegree": 0.5,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/1",
+                "serviceName": "10.190.22.19:6379/1",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 4.06,
+                "callTotalCount": 1714.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/4",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/4",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/4",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/4"
+                  }
+                ],
+                "durationAvg": 0.278,
+                "durationTotal": 476.528,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 13,
+                "level": 2,
+                "nodeKey": "nodeKey-2-13",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.12,
+                "requestTime": 0,
+                "requestTotalCount": 422,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/4",
+                "serviceName": "10.190.22.18:6379/4",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.24,
+                "callTotalCount": 152.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-10.190.22.24:7080",
+                "currentCrossAndActionId": "1645-External-http-10.190.22.24:7080",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.24:7080",
+                    "icon": "http",
+                    "value": "10.190.22.24:7080"
+                  }
+                ],
+                "durationAvg": 1245.958,
+                "durationTotal": 189385.582,
+                "errorRequestCount": 1.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 14,
+                "level": 2,
+                "nodeKey": "nodeKey-2-14",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.02,
+                "requestTime": 0,
+                "requestTotalCount": 68,
+                "respTimeContributionDegree": 0.78,
+                "seq": 0,
+                "serviceId": "10.190.22.24:7080",
+                "serviceName": "10.190.22.24:7080",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.05,
+                "callTotalCount": 736.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-https-cloud.nbport.com.cn:443",
+                "currentCrossAndActionId": "1645-External-https-cloud.nbport.com.cn:443",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "cloud.nbport.com.cn:443",
+                    "icon": "https",
+                    "value": "cloud.nbport.com.cn:443"
+                  }
+                ],
+                "durationAvg": 11.945,
+                "durationTotal": 8791.784,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,https",
+                "id": 15,
+                "level": 2,
+                "nodeKey": "nodeKey-2-15",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.1,
+                "requestTime": 0,
+                "requestTotalCount": 359,
+                "respTimeContributionDegree": 0.04,
+                "seq": 0,
+                "serviceId": "cloud.nbport.com.cn:443",
+                "serviceName": "cloud.nbport.com.cn:443",
+                "serviceType": "$$component",
+                "serviceVendor": "https",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.0,
+                "callTotalCount": 14018.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/5",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/5",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/5",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/5"
+                  }
+                ],
+                "durationAvg": 0.681,
+                "durationTotal": 9542.205,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 16,
+                "level": 2,
+                "nodeKey": "nodeKey-2-16",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 2.01,
+                "requestTime": 0,
+                "requestTotalCount": 7009,
+                "respTimeContributionDegree": 0.04,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/5",
+                "serviceName": "10.190.22.20:6379/5",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.67,
+                "callTotalCount": 535706.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/1",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/1",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/1",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/1"
+                  }
+                ],
+                "durationAvg": 0.385,
+                "durationTotal": 206458.317,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 17,
+                "level": 2,
+                "nodeKey": "nodeKey-2-17",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 91.94,
+                "requestTime": 0,
+                "requestTotalCount": 319850,
+                "respTimeContributionDegree": 0.86,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/1",
+                "serviceName": "10.190.22.18:6379/1",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 36.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-10.169.204.132:8720",
+                "currentCrossAndActionId": "1645-External-http-10.169.204.132:8720",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.169.204.132:8720",
+                    "icon": "http",
+                    "value": "10.169.204.132:8720"
+                  }
+                ],
+                "durationAvg": 32.818,
+                "durationTotal": 1181.45,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 18,
+                "level": 2,
+                "nodeKey": "nodeKey-2-18",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.01,
+                "requestTime": 0,
+                "requestTotalCount": 36,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.169.204.132:8720",
+                "serviceName": "10.169.204.132:8720",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 10.68,
+                "callTotalCount": 1829888.0,
+                "children": [],
+                "componentType": "Database",
+                "cross": "U|0,1644,1646,1645",
+                "crossAndActionId": "U|0,1644,1646,1645",
+                "crossList": [
+                  "U|0,1644,1646,1645",
+                  "U|0,1646,1645",
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-Database-MySQL-10.190.22.21:3306",
+                "currentCrossAndActionId": "1645-Database-MySQL-10.190.22.21:3306",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.21:3306",
+                    "icon": "MySQL",
+                    "value": "10.190.22.21:3306"
+                  }
+                ],
+                "durationAvg": 8.191,
+                "durationTotal": 14988959.79,
+                "errorRequestCount": 16.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Database,MySQL",
+                "id": 19,
+                "level": 2,
+                "nodeKey": "nodeKey-2-19",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 49.27,
+                "requestTime": 0,
+                "requestTotalCount": 171382,
+                "respTimeContributionDegree": 62.1,
+                "seq": 0,
+                "serviceId": "10.190.22.21:3306",
+                "serviceName": "10.190.22.21:3306",
+                "serviceType": "$$component",
+                "serviceVendor": "MySQL",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.5,
+                "callTotalCount": 1057.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/0",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/0",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/0",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/0"
+                  }
+                ],
+                "durationAvg": 0.185,
+                "durationTotal": 195.54,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 20,
+                "level": 2,
+                "nodeKey": "nodeKey-2-20",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.2,
+                "requestTime": 0,
+                "requestTotalCount": 706,
+                "respTimeContributionDegree": 0.0,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/0",
+                "serviceName": "10.190.22.19:6379/0",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 9.28,
+                "callTotalCount": 114942.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.20:6379/4",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.20:6379/4",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.20:6379/4",
+                    "icon": "Redis",
+                    "value": "10.190.22.20:6379/4"
+                  }
+                ],
+                "durationAvg": 0.305,
+                "durationTotal": 35083.822,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 21,
+                "level": 2,
+                "nodeKey": "nodeKey-2-21",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 3.56,
+                "requestTime": 0,
+                "requestTotalCount": 12383,
+                "respTimeContributionDegree": 0.15,
+                "seq": 0,
+                "serviceId": "10.190.22.20:6379/4",
+                "serviceName": "10.190.22.20:6379/4",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 5.78,
+                "callTotalCount": 188885.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.18:6379/2",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.18:6379/2",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.18:6379/2",
+                    "icon": "Redis",
+                    "value": "10.190.22.18:6379/2"
+                  }
+                ],
+                "durationAvg": 0.303,
+                "durationTotal": 57185.964,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 22,
+                "level": 2,
+                "nodeKey": "nodeKey-2-22",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 9.39,
+                "requestTime": 0,
+                "requestTotalCount": 32683,
+                "respTimeContributionDegree": 0.24,
+                "seq": 0,
+                "serviceId": "10.190.22.18:6379/2",
+                "serviceName": "10.190.22.18:6379/2",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 5.77,
+                "callTotalCount": 188747.0,
+                "children": [],
+                "componentType": "NoSQL",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-NoSQL-Redis-10.190.22.19:6379/2",
+                "currentCrossAndActionId": "1645-NoSQL-Redis-10.190.22.19:6379/2",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "10.190.22.19:6379/2",
+                    "icon": "Redis",
+                    "value": "10.190.22.19:6379/2"
+                  }
+                ],
+                "durationAvg": 0.155,
+                "durationTotal": 29306.664,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "NoSQL,Redis",
+                "id": 23,
+                "level": 2,
+                "nodeKey": "nodeKey-2-23",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 9.4,
+                "requestTime": 0,
+                "requestTotalCount": 32686,
+                "respTimeContributionDegree": 0.12,
+                "seq": 0,
+                "serviceId": "10.190.22.19:6379/2",
+                "serviceName": "10.190.22.19:6379/2",
+                "serviceType": "$$component",
+                "serviceVendor": "Redis",
+                "txNode": true
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 2.0,
+                "callTotalCount": 1198.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1645",
+                "crossAndActionId": "U|0,1645",
+                "crossList": [
+                  "U|0,1645"
+                ],
+                "currentCross": "1645-External-http-usercenter.nbport.com.cn:80",
+                "currentCrossAndActionId": "1645-External-http-usercenter.nbport.com.cn:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  },
+                  {
+                    "displayName": "usercenter.nbport.com.cn:80",
+                    "icon": "http",
+                    "value": "usercenter.nbport.com.cn:80"
+                  }
+                ],
+                "durationAvg": 208.556,
+                "durationTotal": 249849.58,
+                "errorRequestCount": 0.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 24,
+                "level": 2,
+                "nodeKey": "nodeKey-2-24",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 0.17,
+                "requestTime": 0,
+                "requestTotalCount": 599,
+                "respTimeContributionDegree": 1.04,
+                "seq": 0,
+                "serviceId": "usercenter.nbport.com.cn:80",
+                "serviceName": "usercenter.nbport.com.cn:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": true
+              }
+            ],
+            "cross": "U|0,1645",
+            "crossAndActionId": "U|0,1645",
+            "crossList": [
+              "U|0,1644,1646,1645",
+              "U|0,1646,1645",
+              "U|0,1645"
+            ],
+            "currentCross": "1645",
+            "currentCrossAndActionId": "1645",
+            "currentCrossItems": [
+              {
+                "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                "icon": "Apache Tomcat",
+                "value": "1645"
+              }
+            ],
+            "durationAvg": 69.379,
+            "durationTotal": 24135405.616,
+            "errorRequestCount": 1090.0,
+            "frontType": 0,
+            "hasProblem": false,
+            "icon": "Apache Tomcat",
+            "id": 1,
+            "level": 1,
+            "nodeKey": "nodeKey-1-1",
+            "parentCross": "",
+            "parentCrossAndActionId": "",
+            "pid": 0,
+            "requestTime": 0,
+            "requestTotalCount": 347877,
+            "seq": 0,
+            "serviceId": "1645",
+            "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "serviceType": "$$application",
+            "serviceVendor": "Apache Tomcat",
+            "txNode": true
+          }
+        }
+      ],
+      "requestId": "6fe60a0a-7a4e-a944-f912-a33e8dc17f80",
+      "status": 200
+    },
+    "encoded_data_length": 3513,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:46:13 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC>"
+        ],
+        "cross": "1645"
+      },
+      "lang": "zh_CN",
+      "metric": "application_service_flow",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "application_service_flow"
+    },
+    "relative_path": "graph/query/overview"
+  }
+}

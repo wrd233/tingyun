@@ -1,0 +1,376 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-07T14:49:32+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-07T14:49:32+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "0",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "706"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"sortDirection\":\"DESC\",\"sortField\":\"response\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-07T14:49:32+08:00",
+      "inference_basis": [
+        "path=webaction/list/backgroundList"
+      ],
+      "inferred_purpose": "Likely related to list",
+      "last_seen": "2026-04-07T14:49:32+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+            "document_url": "http://169.169.173.25:8080/web/server/background/list",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:32+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+          "document_url": "http://169.169.173.25:8080/web/server/background/list",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:32+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+          "document_url": "http://169.169.173.25:8080/web/server/background/list",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:32+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "applicationId": "0",
+          "bizSystemId": "1065",
+          "endTime": "2026-04-07 14:46",
+          "lang": "zh_CN",
+          "sortDirection": "DESC",
+          "sortField": "response",
+          "timePeriod": "706"
+        },
+        "dynamic_fields": [
+          "body.applicationId",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/webaction/list/backgroundList -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw 'timePeriod=706&endTime=2026-04-07+14%3A46&bizSystemId=1065&sortField=response&sortDirection=DESC&applicationId=0&lang=zh_CN'",
+        "url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "applicationId": "0",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+            "document_url": "http://169.169.173.25:8080/web/server/background/list",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:32+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:49:32+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionId": 13540,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/lawFirmsAssessmentJobDetail",
+                  "response": 8383,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13538,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/oppositeGrowthJobDetail",
+                  "response": 4213,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 15949,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/reportContractLxJobDetail",
+                  "response": 4067,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13818,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/reportContractJobDetail",
+                  "response": 1232,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13537,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/continueContractInfoSignJobDetail",
+                  "response": 1067,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13817,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/caseStatusProcessRemindOneJobDetail",
+                  "response": 325,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 15096,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/selectGroupTaskJobDetail",
+                  "response": 170,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13544,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/reportContractJfJobDetail",
+                  "response": 27,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13536,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/caseExecuteProcessRemindJobDetail",
+                  "response": 17,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13816,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/learningApplyJobDetail",
+                  "response": 15,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13520,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+                  "response": 9,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13355,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+                  "response": 7,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13212,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+                  "response": 0,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13213,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+                  "response": 0,
+                  "throught": 0.0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 14
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:49:20 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/webaction/list/backgroundList",
+  "relative_path": "webaction/list/backgroundList"
+}

@@ -1,0 +1,1133 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:44:37+08:00",
+    "completeness_score": 1339,
+    "first_seen_at": "2026-04-07T14:44:37+08:00",
+    "last_seen_at": "2026-04-07T14:44:37+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:37+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+          "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:37+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:37+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:37+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/query/overview/POST__application_service_flow__8bb85e8be19d.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544277.07716
+  },
+  "method": "POST",
+  "metric": "application_service_flow",
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+    "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:44:37+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:37+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:37+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:37+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/query/overview",
+  "relative_path": "graph/query/overview",
+  "request": {
+    "body": {
+      "endTime": "2026-04-07 14:44",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "1646"
+        ],
+        "cross": "1646"
+      },
+      "lang": "zh_CN",
+      "metric": "application_service_flow",
+      "timePeriod": 1440,
+      "zoomTime": true
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC>"
+        ],
+        "cross": "1646"
+      },
+      "lang": "zh_CN",
+      "metric": "application_service_flow",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "07dcaafa-7b82-8898-e67d-ae51795fe371",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "document_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/serviceflow/1065/1646?start=1775371440000&end=1775544240000&actionTypes=TX;IF",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:37+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/query/overview",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "application_service_flow"
+    },
+    "query_normalized": {
+      "lang": "zh_CN",
+      "metric": "application_service_flow"
+    },
+    "raw_post_data": "{\"timePeriod\":1440,\"endTime\":\"2026-04-07 14:44\",\"metric\":\"application_service_flow\",\"zoomTime\":true,\"labels\":{\"cross\":\"1646\",\"applicationIds\":[\"1646\"],\"actionTypes\":[\"TX,IF\"]},\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_service_flow&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": [
+        {
+          "root": {
+            "actionGuids": [],
+            "applicationId": 1646,
+            "bizSystemId": 1065,
+            "callTotalCount": 3554.0,
+            "children": [
+              {
+                "actionGuids": [],
+                "applicationId": 1646,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 196.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1644,1646",
+                "crossAndActionId": "U|0,1644,1646",
+                "crossList": [
+                  "U|0,1644,1646",
+                  "U|0,1645,1646",
+                  "U|0,1646"
+                ],
+                "currentCross": "1646-External-http-jtfw.nbport.com.cn:80",
+                "currentCrossAndActionId": "1646-External-http-jtfw.nbport.com.cn:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawucn.keking.ServerMain",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  },
+                  {
+                    "displayName": "jtfw.nbport.com.cn:80",
+                    "icon": "http",
+                    "value": "jtfw.nbport.com.cn:80"
+                  }
+                ],
+                "durationAvg": 18.278,
+                "durationTotal": 3582.511,
+                "errorRequestCount": 185.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 2,
+                "level": 2,
+                "nodeKey": "nodeKey-2-2",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 5.51,
+                "requestTime": 0,
+                "requestTotalCount": 196,
+                "respTimeContributionDegree": 0.08,
+                "seq": 0,
+                "serviceId": "jtfw.nbport.com.cn:80",
+                "serviceName": "jtfw.nbport.com.cn:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 832.0,
+                "children": [
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1645,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 7.0,
+                    "callTotalCount": 5823.0,
+                    "children": [],
+                    "componentType": "NoSQL",
+                    "cross": "U|0,1645,1646,1645",
+                    "crossAndActionId": "U|0,1645,1646,1645",
+                    "crossList": [
+                      "U|0,1645,1646,1645",
+                      "U|0,1644,1646,1645",
+                      "U|0,1646,1645"
+                    ],
+                    "currentCross": "1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossAndActionId": "1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawucn.keking.ServerMain",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "10.190.22.20:6379/1",
+                        "icon": "Redis",
+                        "value": "10.190.22.20:6379/1"
+                      }
+                    ],
+                    "durationAvg": 0.315,
+                    "durationTotal": 1832.106,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "NoSQL,Redis",
+                    "id": 5,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-5",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 3,
+                    "requestPercentage": 100.0,
+                    "requestTime": 0,
+                    "requestTotalCount": 832,
+                    "respTimeContributionDegree": 0.04,
+                    "seq": 0,
+                    "serviceId": "10.190.22.20:6379/1",
+                    "serviceName": "10.190.22.20:6379/1",
+                    "serviceType": "$$component",
+                    "serviceVendor": "Redis",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1645,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 3.24,
+                    "callTotalCount": 2430.0,
+                    "children": [],
+                    "componentType": "Database",
+                    "cross": "U|0,1645,1646,1645",
+                    "crossAndActionId": "U|0,1645,1646,1645",
+                    "crossList": [
+                      "U|0,1645,1646,1645",
+                      "U|0,1644,1646,1645",
+                      "U|0,1646,1645"
+                    ],
+                    "currentCross": "1646,1645-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossAndActionId": "1646,1645-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawucn.keking.ServerMain",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "10.190.22.21:3306",
+                        "icon": "MySQL",
+                        "value": "10.190.22.21:3306"
+                      }
+                    ],
+                    "durationAvg": 0.423,
+                    "durationTotal": 1028.266,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Database,MySQL",
+                    "id": 6,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-6",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 3,
+                    "requestPercentage": 90.14,
+                    "requestTime": 0,
+                    "requestTotalCount": 750,
+                    "respTimeContributionDegree": 0.02,
+                    "seq": 0,
+                    "serviceId": "10.190.22.21:3306",
+                    "serviceName": "10.190.22.21:3306",
+                    "serviceType": "$$component",
+                    "serviceVendor": "MySQL",
+                    "txNode": false
+                  }
+                ],
+                "cross": "U|0,1646,1645",
+                "crossAndActionId": "U|0,1646,1645",
+                "crossList": [
+                  "U|0,1645,1646,1645",
+                  "U|0,1644,1646,1645",
+                  "U|0,1646,1645"
+                ],
+                "currentCross": "1646,1645",
+                "currentCrossAndActionId": "1646,1645",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawucn.keking.ServerMain",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  },
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  }
+                ],
+                "durationAvg": 33.968,
+                "durationTotal": 28261.055999999997,
+                "errorRequestCount": 82.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Apache Tomcat",
+                "id": 3,
+                "level": 2,
+                "nodeKey": "nodeKey-2-3",
+                "parentCross": "1646",
+                "parentCrossAndActionId": "1646",
+                "pid": 1,
+                "requestPercentage": 23.41,
+                "requestTime": 0,
+                "requestTotalCount": 832,
+                "respTimeContributionDegree": 0.64,
+                "seq": 0,
+                "serviceId": "1645",
+                "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+                "serviceType": "$$application",
+                "serviceVendor": "Apache Tomcat",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1644,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 851.0,
+                "children": [
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1644,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 7.0,
+                    "callTotalCount": 5957.0,
+                    "children": [],
+                    "componentType": "NoSQL",
+                    "cross": "U|0,1646,1644",
+                    "crossAndActionId": "U|0,1646,1644",
+                    "crossList": [
+                      "U|0,1646,1644",
+                      "U|0,1645,1646,1644",
+                      "U|0,1644,1646,1644"
+                    ],
+                    "currentCross": "1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossAndActionId": "1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawucn.keking.ServerMain",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "org.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1644"
+                      },
+                      {
+                        "displayName": "10.190.22.20:6379/1",
+                        "icon": "Redis",
+                        "value": "10.190.22.20:6379/1"
+                      }
+                    ],
+                    "durationAvg": 0.305,
+                    "durationTotal": 1816.624,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "NoSQL,Redis",
+                    "id": 7,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-7",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 4,
+                    "requestPercentage": 100.0,
+                    "requestTime": 0,
+                    "requestTotalCount": 851,
+                    "respTimeContributionDegree": 0.04,
+                    "seq": 0,
+                    "serviceId": "10.190.22.20:6379/1",
+                    "serviceName": "10.190.22.20:6379/1",
+                    "serviceType": "$$component",
+                    "serviceVendor": "Redis",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1644,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 3.29,
+                    "callTotalCount": 2471.0,
+                    "children": [],
+                    "componentType": "Database",
+                    "cross": "U|0,1646,1644",
+                    "crossAndActionId": "U|0,1646,1644",
+                    "crossList": [
+                      "U|0,1646,1644",
+                      "U|0,1645,1646,1644",
+                      "U|0,1644,1646,1644"
+                    ],
+                    "currentCross": "1646,1644-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossAndActionId": "1646,1644-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "fawucn.keking.ServerMain",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "org.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1644"
+                      },
+                      {
+                        "displayName": "10.190.22.21:3306",
+                        "icon": "MySQL",
+                        "value": "10.190.22.21:3306"
+                      }
+                    ],
+                    "durationAvg": 0.427,
+                    "durationTotal": 1053.98,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Database,MySQL",
+                    "id": 8,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-8",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 4,
+                    "requestPercentage": 88.25,
+                    "requestTime": 0,
+                    "requestTotalCount": 751,
+                    "respTimeContributionDegree": 0.02,
+                    "seq": 0,
+                    "serviceId": "10.190.22.21:3306",
+                    "serviceName": "10.190.22.21:3306",
+                    "serviceType": "$$component",
+                    "serviceVendor": "MySQL",
+                    "txNode": false
+                  }
+                ],
+                "cross": "U|0,1646,1644",
+                "crossAndActionId": "U|0,1646,1644",
+                "crossList": [
+                  "U|0,1646,1644",
+                  "U|0,1645,1646,1644",
+                  "U|0,1644,1646,1644"
+                ],
+                "currentCross": "1646,1644",
+                "currentCrossAndActionId": "1646,1644",
+                "currentCrossItems": [
+                  {
+                    "displayName": "fawucn.keking.ServerMain",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  },
+                  {
+                    "displayName": "org.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1644"
+                  }
+                ],
+                "durationAvg": 34.723,
+                "durationTotal": 29549.161,
+                "errorRequestCount": 100.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Apache Tomcat",
+                "id": 4,
+                "level": 2,
+                "nodeKey": "nodeKey-2-4",
+                "parentCross": "1646",
+                "parentCrossAndActionId": "1646",
+                "pid": 1,
+                "requestPercentage": 23.94,
+                "requestTime": 0,
+                "requestTotalCount": 851,
+                "respTimeContributionDegree": 0.67,
+                "seq": 0,
+                "serviceId": "1644",
+                "serviceName": "org.springframework.boot.loader.WarLauncher",
+                "serviceType": "$$application",
+                "serviceVendor": "Apache Tomcat",
+                "txNode": false
+              }
+            ],
+            "cross": "U|0,1646",
+            "crossAndActionId": "U|0,1646",
+            "crossList": [
+              "U|0,1644,1646",
+              "U|0,1645,1646",
+              "U|0,1646"
+            ],
+            "currentCross": "1646",
+            "currentCrossAndActionId": "1646",
+            "currentCrossItems": [
+              {
+                "displayName": "fawucn.keking.ServerMain",
+                "icon": "Jetty",
+                "value": "1646"
+              }
+            ],
+            "durationAvg": 1249.345,
+            "durationTotal": 4440170.425,
+            "errorRequestCount": 2.0,
+            "frontType": 0,
+            "hasProblem": false,
+            "icon": "Jetty",
+            "id": 1,
+            "level": 1,
+            "nodeKey": "nodeKey-1-1",
+            "parentCross": "",
+            "parentCrossAndActionId": "",
+            "pid": 0,
+            "requestTime": 0,
+            "requestTotalCount": 3554,
+            "seq": 0,
+            "serviceId": "1646",
+            "serviceName": "fawucn.keking.ServerMain",
+            "serviceType": "$$application",
+            "serviceVendor": "Jetty",
+            "txNode": true
+          }
+        }
+      ],
+      "requestId": "07dcaafa-7b82-8898-e67d-ae51795fe371",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": [
+        {
+          "root": {
+            "actionGuids": [],
+            "applicationId": 1646,
+            "bizSystemId": 1065,
+            "callTotalCount": 3554.0,
+            "children": [
+              {
+                "actionGuids": [],
+                "applicationId": 1646,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 196.0,
+                "children": [],
+                "componentType": "External",
+                "cross": "U|0,1644,1646",
+                "crossAndActionId": "U|0,1644,1646",
+                "crossList": [
+                  "U|0,1644,1646",
+                  "U|0,1645,1646",
+                  "U|0,1646"
+                ],
+                "currentCross": "1646-External-http-jtfw.nbport.com.cn:80",
+                "currentCrossAndActionId": "1646-External-http-jtfw.nbport.com.cn:80",
+                "currentCrossItems": [
+                  {
+                    "displayName": "<REDACTED>",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  },
+                  {
+                    "displayName": "jtfw.nbport.com.cn:80",
+                    "icon": "http",
+                    "value": "jtfw.nbport.com.cn:80"
+                  }
+                ],
+                "durationAvg": 18.278,
+                "durationTotal": 3582.511,
+                "errorRequestCount": 185.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "External,http",
+                "id": 2,
+                "level": 2,
+                "nodeKey": "nodeKey-2-2",
+                "parentCross": "",
+                "parentCrossAndActionId": "",
+                "pid": 1,
+                "requestPercentage": 5.51,
+                "requestTime": 0,
+                "requestTotalCount": 196,
+                "respTimeContributionDegree": 0.08,
+                "seq": 0,
+                "serviceId": "jtfw.nbport.com.cn:80",
+                "serviceName": "jtfw.nbport.com.cn:80",
+                "serviceType": "$$component",
+                "serviceVendor": "http",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1645,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 832.0,
+                "children": [
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1645,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 7.0,
+                    "callTotalCount": 5823.0,
+                    "children": [],
+                    "componentType": "NoSQL",
+                    "cross": "U|0,1645,1646,1645",
+                    "crossAndActionId": "U|0,1645,1646,1645",
+                    "crossList": [
+                      "U|0,1645,1646,1645",
+                      "U|0,1644,1646,1645",
+                      "U|0,1646,1645"
+                    ],
+                    "currentCross": "1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossAndActionId": "1646,1645-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "<REDACTED>",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "10.190.22.20:6379/1",
+                        "icon": "Redis",
+                        "value": "10.190.22.20:6379/1"
+                      }
+                    ],
+                    "durationAvg": 0.315,
+                    "durationTotal": 1832.106,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "NoSQL,Redis",
+                    "id": 5,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-5",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 3,
+                    "requestPercentage": 100.0,
+                    "requestTime": 0,
+                    "requestTotalCount": 832,
+                    "respTimeContributionDegree": 0.04,
+                    "seq": 0,
+                    "serviceId": "10.190.22.20:6379/1",
+                    "serviceName": "10.190.22.20:6379/1",
+                    "serviceType": "$$component",
+                    "serviceVendor": "Redis",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1645,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 3.24,
+                    "callTotalCount": 2430.0,
+                    "children": [],
+                    "componentType": "Database",
+                    "cross": "U|0,1645,1646,1645",
+                    "crossAndActionId": "U|0,1645,1646,1645",
+                    "crossList": [
+                      "U|0,1645,1646,1645",
+                      "U|0,1644,1646,1645",
+                      "U|0,1646,1645"
+                    ],
+                    "currentCross": "1646,1645-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossAndActionId": "1646,1645-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "<REDACTED>",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1645"
+                      },
+                      {
+                        "displayName": "10.190.22.21:3306",
+                        "icon": "MySQL",
+                        "value": "10.190.22.21:3306"
+                      }
+                    ],
+                    "durationAvg": 0.423,
+                    "durationTotal": 1028.266,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Database,MySQL",
+                    "id": 6,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-6",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 3,
+                    "requestPercentage": 90.14,
+                    "requestTime": 0,
+                    "requestTotalCount": 750,
+                    "respTimeContributionDegree": 0.02,
+                    "seq": 0,
+                    "serviceId": "10.190.22.21:3306",
+                    "serviceName": "10.190.22.21:3306",
+                    "serviceType": "$$component",
+                    "serviceVendor": "MySQL",
+                    "txNode": false
+                  }
+                ],
+                "cross": "U|0,1646,1645",
+                "crossAndActionId": "U|0,1646,1645",
+                "crossList": [
+                  "U|0,1645,1646,1645",
+                  "U|0,1644,1646,1645",
+                  "U|0,1646,1645"
+                ],
+                "currentCross": "1646,1645",
+                "currentCrossAndActionId": "1646,1645",
+                "currentCrossItems": [
+                  {
+                    "displayName": "<REDACTED>",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  },
+                  {
+                    "displayName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1645"
+                  }
+                ],
+                "durationAvg": 33.968,
+                "durationTotal": 28261.055999999997,
+                "errorRequestCount": 82.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Apache Tomcat",
+                "id": 3,
+                "level": 2,
+                "nodeKey": "nodeKey-2-3",
+                "parentCross": "1646",
+                "parentCrossAndActionId": "1646",
+                "pid": 1,
+                "requestPercentage": 23.41,
+                "requestTime": 0,
+                "requestTotalCount": 832,
+                "respTimeContributionDegree": 0.64,
+                "seq": 0,
+                "serviceId": "1645",
+                "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+                "serviceType": "$$application",
+                "serviceVendor": "Apache Tomcat",
+                "txNode": false
+              },
+              {
+                "actionGuids": [],
+                "applicationId": 1644,
+                "bizSystemId": 1065,
+                "callPerRequest": 1.0,
+                "callTotalCount": 851.0,
+                "children": [
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1644,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 7.0,
+                    "callTotalCount": 5957.0,
+                    "children": [],
+                    "componentType": "NoSQL",
+                    "cross": "U|0,1646,1644",
+                    "crossAndActionId": "U|0,1646,1644",
+                    "crossList": [
+                      "U|0,1646,1644",
+                      "U|0,1645,1646,1644",
+                      "U|0,1644,1646,1644"
+                    ],
+                    "currentCross": "1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossAndActionId": "1646,1644-NoSQL-Redis-10.190.22.20:6379/1",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "<REDACTED>",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "org.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1644"
+                      },
+                      {
+                        "displayName": "10.190.22.20:6379/1",
+                        "icon": "Redis",
+                        "value": "10.190.22.20:6379/1"
+                      }
+                    ],
+                    "durationAvg": 0.305,
+                    "durationTotal": 1816.624,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "NoSQL,Redis",
+                    "id": 7,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-7",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 4,
+                    "requestPercentage": 100.0,
+                    "requestTime": 0,
+                    "requestTotalCount": 851,
+                    "respTimeContributionDegree": 0.04,
+                    "seq": 0,
+                    "serviceId": "10.190.22.20:6379/1",
+                    "serviceName": "10.190.22.20:6379/1",
+                    "serviceType": "$$component",
+                    "serviceVendor": "Redis",
+                    "txNode": false
+                  },
+                  {
+                    "actionGuids": [],
+                    "applicationId": 1644,
+                    "bizSystemId": 1065,
+                    "callPerRequest": 3.29,
+                    "callTotalCount": 2471.0,
+                    "children": [],
+                    "componentType": "Database",
+                    "cross": "U|0,1646,1644",
+                    "crossAndActionId": "U|0,1646,1644",
+                    "crossList": [
+                      "U|0,1646,1644",
+                      "U|0,1645,1646,1644",
+                      "U|0,1644,1646,1644"
+                    ],
+                    "currentCross": "1646,1644-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossAndActionId": "1646,1644-Database-MySQL-10.190.22.21:3306",
+                    "currentCrossItems": [
+                      {
+                        "displayName": "<REDACTED>",
+                        "icon": "Jetty",
+                        "value": "1646"
+                      },
+                      {
+                        "displayName": "org.springframework.boot.loader.WarLauncher",
+                        "icon": "Apache Tomcat",
+                        "value": "1644"
+                      },
+                      {
+                        "displayName": "10.190.22.21:3306",
+                        "icon": "MySQL",
+                        "value": "10.190.22.21:3306"
+                      }
+                    ],
+                    "durationAvg": 0.427,
+                    "durationTotal": 1053.98,
+                    "errorRequestCount": 0.0,
+                    "frontType": 0,
+                    "hasProblem": false,
+                    "icon": "Database,MySQL",
+                    "id": 8,
+                    "level": 3,
+                    "nodeKey": "nodeKey-3-8",
+                    "parentCross": "1646",
+                    "parentCrossAndActionId": "1646",
+                    "pid": 4,
+                    "requestPercentage": 88.25,
+                    "requestTime": 0,
+                    "requestTotalCount": 751,
+                    "respTimeContributionDegree": 0.02,
+                    "seq": 0,
+                    "serviceId": "10.190.22.21:3306",
+                    "serviceName": "10.190.22.21:3306",
+                    "serviceType": "$$component",
+                    "serviceVendor": "MySQL",
+                    "txNode": false
+                  }
+                ],
+                "cross": "U|0,1646,1644",
+                "crossAndActionId": "U|0,1646,1644",
+                "crossList": [
+                  "U|0,1646,1644",
+                  "U|0,1645,1646,1644",
+                  "U|0,1644,1646,1644"
+                ],
+                "currentCross": "1646,1644",
+                "currentCrossAndActionId": "1646,1644",
+                "currentCrossItems": [
+                  {
+                    "displayName": "<REDACTED>",
+                    "icon": "Jetty",
+                    "value": "1646"
+                  },
+                  {
+                    "displayName": "org.springframework.boot.loader.WarLauncher",
+                    "icon": "Apache Tomcat",
+                    "value": "1644"
+                  }
+                ],
+                "durationAvg": 34.723,
+                "durationTotal": 29549.161,
+                "errorRequestCount": 100.0,
+                "frontType": 0,
+                "hasProblem": false,
+                "icon": "Apache Tomcat",
+                "id": 4,
+                "level": 2,
+                "nodeKey": "nodeKey-2-4",
+                "parentCross": "1646",
+                "parentCrossAndActionId": "1646",
+                "pid": 1,
+                "requestPercentage": 23.94,
+                "requestTime": 0,
+                "requestTotalCount": 851,
+                "respTimeContributionDegree": 0.67,
+                "seq": 0,
+                "serviceId": "1644",
+                "serviceName": "org.springframework.boot.loader.WarLauncher",
+                "serviceType": "$$application",
+                "serviceVendor": "Apache Tomcat",
+                "txNode": false
+              }
+            ],
+            "cross": "U|0,1646",
+            "crossAndActionId": "U|0,1646",
+            "crossList": [
+              "U|0,1644,1646",
+              "U|0,1645,1646",
+              "U|0,1646"
+            ],
+            "currentCross": "1646",
+            "currentCrossAndActionId": "1646",
+            "currentCrossItems": [
+              {
+                "displayName": "<REDACTED>",
+                "icon": "Jetty",
+                "value": "1646"
+              }
+            ],
+            "durationAvg": 1249.345,
+            "durationTotal": 4440170.425,
+            "errorRequestCount": 2.0,
+            "frontType": 0,
+            "hasProblem": false,
+            "icon": "Jetty",
+            "id": 1,
+            "level": 1,
+            "nodeKey": "nodeKey-1-1",
+            "parentCross": "",
+            "parentCrossAndActionId": "",
+            "pid": 0,
+            "requestTime": 0,
+            "requestTotalCount": 3554,
+            "seq": 0,
+            "serviceId": "1646",
+            "serviceName": "<REDACTED>",
+            "serviceType": "$$application",
+            "serviceVendor": "Jetty",
+            "txNode": true
+          }
+        }
+      ],
+      "requestId": "07dcaafa-7b82-8898-e67d-ae51795fe371",
+      "status": 200
+    },
+    "encoded_data_length": 1894,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:44:25 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC>"
+        ],
+        "cross": "1646"
+      },
+      "lang": "zh_CN",
+      "metric": "application_service_flow",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "application_service_flow"
+    },
+    "relative_path": "graph/query/overview"
+  }
+}

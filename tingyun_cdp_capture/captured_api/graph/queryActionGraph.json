@@ -1,15 +1,59 @@
 {
-  "count_seen": 1,
+  "count_seen": 3,
   "first_seen": "2026-04-03T15:42:36+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 1
+    "http://169.169.173.25:8080": 3
   },
-  "last_seen": "2026-04-03T15:42:36+08:00",
+  "last_seen": "2026-04-07T14:49:34+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
           "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "13537",
+            "actionType": "BG",
+            "applicationId": "1645",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "timePeriod": "706"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"BG\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"mergeGraph\":\"1\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "applicationId",
+              "bizSystemId",
+              "endTime",
+              "lang",
+              "mergeGraph",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "BG",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
           "dynamic_fields": [
             "body.actionId",
             "body.applicationId",
@@ -53,21 +97,81 @@
           }
         }
       ],
-      "count_seen": 1,
+      "count_seen": 3,
       "first_seen": "2026-04-03T15:42:36+08:00",
       "inference_basis": [
         "path=graph/queryActionGraph"
       ],
       "inferred_purpose": "Likely related to graph",
-      "last_seen": "2026-04-03T15:42:36+08:00",
+      "last_seen": "2026-04-07T14:49:34+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 1
+        "application/json": 3
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:34+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:59+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 3,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -112,7 +216,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 1
+        "XHR": 3
       },
       "sample_requests": [
         {
@@ -136,6 +240,80 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-03T15:42:36+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph"
+        },
+        {
+          "body": {
+            "actionId": "13278",
+            "actionType": "TX",
+            "applicationId": "1645",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:59+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:48:59+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph"
+        },
+        {
+          "body": {
+            "actionId": "13537",
+            "actionType": "BG",
+            "applicationId": "1645",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "mergeGraph": "1",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:34+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:49:34+08:00",
           "url": "http://169.169.173.25:8080/server-api/graph/queryActionGraph"
         }
       ],
@@ -410,10 +588,710 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "layout": "tree",
+              "linkeDataArray": [
+                {
+                  "error": 0.04,
+                  "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "lineType": 3,
+                  "response": 116.0,
+                  "slowError": 1.16,
+                  "throught": 0.83,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.04,
+                      "showTotal": false
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "响应时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 116.0,
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.83,
+                      "showTotal": false
+                    }
+                  },
+                  "to": "1065_0_0_Database_MySQL_[-1]"
+                },
+                {
+                  "error": 0.0,
+                  "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "lineType": 4,
+                  "response": 0.0,
+                  "slowError": 0.0,
+                  "throught": 2.55,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "Redis",
+                        "componentType": "NoSQL",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "showTotal": false
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "查询时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "Redis",
+                        "componentType": "NoSQL",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "Redis",
+                        "componentType": "NoSQL",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    }
+                  },
+                  "to": "1065_0_0_NoSQL_Redis_[-1]"
+                }
+              ],
+              "merge": "1",
+              "nodeDataArray": [
+                {
+                  "fill": "#43AA93",
+                  "id": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "error": 0.0,
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "",
+                      "targetValue": null
+                    },
+                    "instanceCount": 1,
+                    "name": "[入口]fawuorg.springframework.boot.loader.WarLauncher",
+                    "originName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "response": 202.0,
+                    "subType": 1,
+                    "throught": 0.49
+                  },
+                  "settingKey": "TX13278@1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]@2",
+                  "show": 1,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "actionId": 13278,
+                        "actionType": "TX",
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706
+                      },
+                      "chartUrl": "/webaction/charts/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "instanceCount": 1,
+                    "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "responseChart": {
+                      "chartParams": {
+                        "actionId": 13278,
+                        "actionType": "TX",
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706
+                      },
+                      "chartUrl": "/webaction/charts/response",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 202.0,
+                      "showTotal": false
+                    },
+                    "subType": 1,
+                    "throughChart": {
+                      "chartParams": {
+                        "actionId": 13278,
+                        "actionType": "TX",
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706
+                      },
+                      "chartUrl": "/webaction/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.49,
+                      "showTotal": false
+                    }
+                  },
+                  "type": 12,
+                  "x": "0",
+                  "y": "0"
+                },
+                {
+                  "figure": "Circle",
+                  "fill": "#43AA93",
+                  "id": "1065_0_0_Database_MySQL_[-1]",
+                  "info": {
+                    "error": 0.04,
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "",
+                      "targetValue": null
+                    },
+                    "name": "MySQL",
+                    "response": 116.0,
+                    "subType": 2,
+                    "throught": 0.83
+                  },
+                  "isShowName": false,
+                  "settingKey": "TX13278@1065_0_0_Database_MySQL_[-1]@2",
+                  "show": 1,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.04,
+                      "showTotal": false
+                    },
+                    "name": "-1",
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "chartName": "平均查询时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 116.0,
+                      "showTotal": false
+                    },
+                    "subType": 2,
+                    "throughChart": {
+                      "chartParams": {
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.83,
+                      "showTotal": false
+                    }
+                  },
+                  "type": 14,
+                  "x": "0",
+                  "y": "0"
+                },
+                {
+                  "figure": "Circle",
+                  "fill": "#0085c9",
+                  "id": "1065_0_0_NoSQL_Redis_[-1]",
+                  "info": {
+                    "error": 0,
+                    "health": -1,
+                    "healthInfo": {
+                      "eventLevel": -1,
+                      "healthStartTime": null,
+                      "targetName": "",
+                      "targetValue": null
+                    },
+                    "name": "Redis",
+                    "response": 0.0,
+                    "subType": 21,
+                    "throught": 2.55
+                  },
+                  "isShowName": false,
+                  "settingKey": "TX13278@1065_0_0_NoSQL_Redis_[-1]@2",
+                  "show": 1,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "Redis",
+                        "componentType": "NoSQL",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "name": "-1",
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "chartName": "查询时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "Redis",
+                        "componentType": "NoSQL",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "subType": 21,
+                    "throughChart": {
+                      "chartParams": {
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "Redis",
+                        "componentType": "NoSQL",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13278,
+                        "txActionType": "TX",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 2.55,
+                      "showTotal": false
+                    }
+                  },
+                  "type": 15,
+                  "x": "0",
+                  "y": "0"
+                }
+              ],
+              "scale": "0.85",
+              "topoNodeLimitInfos": []
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:48:47 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "data": {
+              "layout": "tree",
+              "linkeDataArray": [
+                {
+                  "error": 0.0,
+                  "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "lineType": 3,
+                  "response": 62.0,
+                  "slowError": 5.88,
+                  "throught": 0.0,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13537,
+                        "txActionType": "BG",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "响应时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13537,
+                        "txActionType": "BG",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 62.0,
+                      "showTotal": false
+                    },
+                    "throughChart": {
+                      "chartParams": {
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13537,
+                        "txActionType": "BG",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    }
+                  },
+                  "to": "1065_0_0_Database_MySQL_[-1]"
+                }
+              ],
+              "merge": "1",
+              "nodeDataArray": [
+                {
+                  "fill": "#43AA93",
+                  "id": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+                  "info": {
+                    "error": 0.0,
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "",
+                      "targetValue": null
+                    },
+                    "instanceCount": 1,
+                    "name": "[入口]fawuorg.springframework.boot.loader.WarLauncher",
+                    "originName": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "response": 1067.0,
+                    "subType": 1,
+                    "throught": 0.0
+                  },
+                  "settingKey": "TX13537@1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]@2",
+                  "show": 1,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "actionId": 13537,
+                        "actionType": "BG",
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706
+                      },
+                      "chartUrl": "/webaction/charts/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "instanceCount": 1,
+                    "name": "fawuorg.springframework.boot.loader.WarLauncher",
+                    "responseChart": {
+                      "chartParams": {
+                        "actionId": 13537,
+                        "actionType": "BG",
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706
+                      },
+                      "chartUrl": "/webaction/charts/response",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 1067.0,
+                      "showTotal": false
+                    },
+                    "subType": 1,
+                    "throughChart": {
+                      "chartParams": {
+                        "actionId": 13537,
+                        "actionType": "BG",
+                        "applicationId": 1645,
+                        "bizSystemId": 1065,
+                        "dataType": "ACT",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706
+                      },
+                      "chartUrl": "/webaction/charts/throught",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    }
+                  },
+                  "type": 12,
+                  "x": "0",
+                  "y": "0"
+                },
+                {
+                  "figure": "Circle",
+                  "fill": "#43AA93",
+                  "id": "1065_0_0_Database_MySQL_[-1]",
+                  "info": {
+                    "error": 0.0,
+                    "health": 0,
+                    "healthInfo": {
+                      "eventLevel": 0,
+                      "healthStartTime": null,
+                      "targetName": "",
+                      "targetValue": null
+                    },
+                    "name": "MySQL",
+                    "response": 62.0,
+                    "subType": 2,
+                    "throught": 0.0
+                  },
+                  "isShowName": false,
+                  "settingKey": "TX13537@1065_0_0_Database_MySQL_[-1]@2",
+                  "show": 1,
+                  "tips": {
+                    "errorChart": {
+                      "chartParams": {
+                        "chartName": "错误率",
+                        "chartYAxisUnit": "%",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13537,
+                        "txActionType": "BG",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/error",
+                      "indexKey": "ERROR",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    },
+                    "name": "-1",
+                    "queryTimeChart": {
+                      "chartParams": {
+                        "chartName": "平均查询时间",
+                        "chartYAxisUnit": "ms",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13537,
+                        "txActionType": "BG",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/respTime",
+                      "indexKey": "RESPONSE",
+                      "indexValue": 62.0,
+                      "showTotal": false
+                    },
+                    "subType": 2,
+                    "throughChart": {
+                      "chartParams": {
+                        "chartName": "吞吐率",
+                        "chartYAxisUnit": "qps",
+                        "componentSubtype": "MySQL",
+                        "componentType": "Database",
+                        "dataType": "COMP",
+                        "endTime": "2026-04-07 14:46:00",
+                        "timePeriod": 706,
+                        "txActionId": 13537,
+                        "txActionType": "BG",
+                        "txApplicationId": 1645,
+                        "txBizSystemId": 1065
+                      },
+                      "chartUrl": "/component/chart/throughput",
+                      "indexKey": "THROUGHT",
+                      "indexValue": 0.0,
+                      "showTotal": false
+                    }
+                  },
+                  "type": 14,
+                  "x": "0",
+                  "y": "0"
+                }
+              ],
+              "scale": "0.85",
+              "topoNodeLimitInfos": []
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:49:22 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 1
+        "200": 3
       }
     }
   },

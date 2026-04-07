@@ -1,10 +1,10 @@
 {
-  "count_seen": 9,
+  "count_seen": 16,
   "first_seen": "2026-04-03T15:40:25+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 9
+    "http://169.169.173.25:8080": 16
   },
-  "last_seen": "2026-04-03T20:00:14+08:00",
+  "last_seen": "2026-04-07T14:49:34+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -32,7 +32,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 3,
           "dynamic_fields": [],
           "example": {
             "key": "1065NoSQLRedis10.190.22.20:6379/5",
@@ -78,6 +78,29 @@
           }
         },
         {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "key": "BIZ10650",
+            "lang": "zh_CN",
+            "layout": "circle"
+          },
+          "key": "{\"key\":\"BIZ10650\",\"lang\":\"zh_CN\",\"layout\":\"circle\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "key",
+              "lang",
+              "layout"
+            ]
+          },
+          "normalized_example": {
+            "key": "BIZ10650",
+            "lang": "zh_CN",
+            "layout": "circle"
+          }
+        },
+        {
           "count_seen": 1,
           "dynamic_fields": [],
           "example": {
@@ -101,7 +124,7 @@
           }
         },
         {
-          "count_seen": 1,
+          "count_seen": 3,
           "dynamic_fields": [],
           "example": {
             "key": "GLB",
@@ -145,23 +168,143 @@
             "lang": "zh_CN",
             "layout": "tree"
           }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "key": "TX1065164513278",
+            "lang": "zh_CN",
+            "layout": "tree"
+          },
+          "key": "{\"key\":\"TX1065164513278\",\"lang\":\"zh_CN\",\"layout\":\"tree\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "key",
+              "lang",
+              "layout"
+            ]
+          },
+          "normalized_example": {
+            "key": "TX1065164513278",
+            "lang": "zh_CN",
+            "layout": "tree"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "key": "TX1065164513537",
+            "lang": "zh_CN",
+            "layout": "tree"
+          },
+          "key": "{\"key\":\"TX1065164513537\",\"lang\":\"zh_CN\",\"layout\":\"tree\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "key",
+              "lang",
+              "layout"
+            ]
+          },
+          "normalized_example": {
+            "key": "TX1065164513537",
+            "lang": "zh_CN",
+            "layout": "tree"
+          }
         }
       ],
-      "count_seen": 9,
+      "count_seen": 16,
       "first_seen": "2026-04-03T15:40:25+08:00",
       "inference_basis": [
         "path=graph/saveTopoLayout"
       ],
       "inferred_purpose": "Likely related to graph",
-      "last_seen": "2026-04-03T20:00:14+08:00",
+      "last_seen": "2026-04-07T14:49:34+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 9
+        "application/json": 16
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:34+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/saveTopoLayout",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:59+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/saveTopoLayout",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:45:47+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/saveTopoLayout",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/saveTopoLayout",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/saveTopoLayout",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 9,
+          "count_seen": 16,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -195,7 +338,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 9
+        "XHR": 16
       },
       "sample_requests": [
         {
@@ -343,7 +486,7 @@
         }
       ],
       "status_codes": {
-        "200": 9
+        "200": 16
       }
     }
   },

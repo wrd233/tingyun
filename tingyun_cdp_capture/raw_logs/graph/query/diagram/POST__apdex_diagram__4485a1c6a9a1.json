@@ -1,0 +1,2105 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:46:04+08:00",
+    "completeness_score": 2641,
+    "first_seen_at": "2026-04-07T14:44:33+08:00",
+    "last_seen_at": "2026-04-07T14:46:54+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:04+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:46:54+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:33+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:54+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:54+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/query/diagram/POST__apdex_diagram__4485a1c6a9a1.json",
+    "resource_type": "XHR",
+    "seen_count": 7,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544364.251235
+  },
+  "method": "POST",
+  "metric": "apdex_diagram",
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+    "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:46:04+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:54+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:54+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:54+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/query/diagram",
+  "relative_path": "graph/query/diagram",
+  "request": {
+    "body": {
+      "endTime": "2026-04-07 14:46",
+      "labels": {
+        "applicationIds": [
+          "1645"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "apdex_diagram",
+      "timePeriod": 2880,
+      "zoomTime": true
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "applicationIds": [
+          "<DYNAMIC>"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "apdex_diagram",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "efebe598-67e7-bc90-fb23-2d20474aa542",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:04+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/query/diagram",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "apdex_diagram"
+    },
+    "query_normalized": {
+      "lang": "zh_CN",
+      "metric": "apdex_diagram"
+    },
+    "raw_post_data": "{\"labels\":{\"applicationIds\":[\"1645\"]},\"metric\":\"apdex_diagram\",\"endTime\":\"2026-04-07 14:46\",\"timePeriod\":2880,\"zoomTime\":true,\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=apdex_diagram&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": {
+        "overviews": {
+          "apdex": 0.985,
+          "granularitySeconds": 1800,
+          "threshold": "500ms"
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "display": "0.99",
+                "header": "04-05 14:30--04-05 15:00",
+                "tooltip": "{\"title\":\"04-05 14:30--04-05 15:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":158.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":157.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775370600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 15:00--04-05 15:30",
+                "tooltip": "{\"title\":\"04-05 15:00--04-05 15:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":394.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":387.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775372400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 15:30--04-05 16:00",
+                "tooltip": "{\"title\":\"04-05 15:30--04-05 16:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":387.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":384.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775374200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 16:00--04-05 16:30",
+                "tooltip": "{\"title\":\"04-05 16:00--04-05 16:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1086.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1075.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775376000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 16:30--04-05 17:00",
+                "tooltip": "{\"title\":\"04-05 16:30--04-05 17:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":4178.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":4085.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":89.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775377800000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 17:00--04-05 17:30",
+                "tooltip": "{\"title\":\"04-05 17:00--04-05 17:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":335.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":334.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775379600000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 17:30--04-05 18:00",
+                "tooltip": "{\"title\":\"04-05 17:30--04-05 18:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":357.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":353.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775381400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 18:00--04-05 18:30",
+                "tooltip": "{\"title\":\"04-05 18:00--04-05 18:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":355.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775383200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 18:30--04-05 19:00",
+                "tooltip": "{\"title\":\"04-05 18:30--04-05 19:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":584.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":575.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775385000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 19:00--04-05 19:30",
+                "tooltip": "{\"title\":\"04-05 19:00--04-05 19:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":410.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":405.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775386800000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 19:30--04-05 20:00",
+                "tooltip": "{\"title\":\"04-05 19:30--04-05 20:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":354.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775388600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 20:00--04-05 20:30",
+                "tooltip": "{\"title\":\"04-05 20:00--04-05 20:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":567.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":564.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775390400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 20:30--04-05 21:00",
+                "tooltip": "{\"title\":\"04-05 20:30--04-05 21:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":359.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":357.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775392200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.98",
+                "header": "04-05 21:00--04-05 21:30",
+                "tooltip": "{\"title\":\"04-05 21:00--04-05 21:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":621.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":607.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775394000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 21:30--04-05 22:00",
+                "tooltip": "{\"title\":\"04-05 21:30--04-05 22:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":729.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":718.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775395800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 22:00--04-05 22:30",
+                "tooltip": "{\"title\":\"04-05 22:00--04-05 22:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":355.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775397600000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 22:30--04-05 23:00",
+                "tooltip": "{\"title\":\"04-05 22:30--04-05 23:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":313.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775399400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 23:00--04-05 23:30",
+                "tooltip": "{\"title\":\"04-05 23:00--04-05 23:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1683.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1674.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775401200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.98",
+                "header": "04-05 23:30--04-06 00:00",
+                "tooltip": "{\"title\":\"04-05 23:30--04-06 00:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":350.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":342.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775403000000,
+                "y": 0.98
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 00:00--04-06 00:30",
+                "tooltip": "{\"title\":\"04-06 00:00--04-06 00:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775404800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 00:30--04-06 01:00",
+                "tooltip": "{\"title\":\"04-06 00:30--04-06 01:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":269.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":269.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775406600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 01:00--04-06 01:30",
+                "tooltip": "{\"title\":\"04-06 01:00--04-06 01:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1285.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1285.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775408400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 01:30--04-06 02:00",
+                "tooltip": "{\"title\":\"04-06 01:30--04-06 02:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":281.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":281.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775410200000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 02:00--04-06 02:30",
+                "tooltip": "{\"title\":\"04-06 02:00--04-06 02:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":256.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":256.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775412000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 02:30--04-06 03:00",
+                "tooltip": "{\"title\":\"04-06 02:30--04-06 03:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":268.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":268.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775413800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 03:00--04-06 03:30",
+                "tooltip": "{\"title\":\"04-06 03:00--04-06 03:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":290.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":289.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775415600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 03:30--04-06 04:00",
+                "tooltip": "{\"title\":\"04-06 03:30--04-06 04:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775417400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 04:00--04-06 04:30",
+                "tooltip": "{\"title\":\"04-06 04:00--04-06 04:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":306.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":306.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775419200000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 04:30--04-06 05:00",
+                "tooltip": "{\"title\":\"04-06 04:30--04-06 05:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":301.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":301.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775421000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 05:00--04-06 05:30",
+                "tooltip": "{\"title\":\"04-06 05:00--04-06 05:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":3074.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":3060.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":12.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775422800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 05:30--04-06 06:00",
+                "tooltip": "{\"title\":\"04-06 05:30--04-06 06:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":316.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":316.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775424600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 06:00--04-06 06:30",
+                "tooltip": "{\"title\":\"04-06 06:00--04-06 06:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775426400000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 06:30--04-06 07:00",
+                "tooltip": "{\"title\":\"04-06 06:30--04-06 07:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":433.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":429.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775428200000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 07:00--04-06 07:30",
+                "tooltip": "{\"title\":\"04-06 07:00--04-06 07:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":348.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":348.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775430000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 07:30--04-06 08:00",
+                "tooltip": "{\"title\":\"04-06 07:30--04-06 08:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":491.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":490.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775431800000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 08:00--04-06 08:30",
+                "tooltip": "{\"title\":\"04-06 08:00--04-06 08:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":390.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":388.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775433600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 08:30--04-06 09:00",
+                "tooltip": "{\"title\":\"04-06 08:30--04-06 09:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":354.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775435400000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 09:00--04-06 09:30",
+                "tooltip": "{\"title\":\"04-06 09:00--04-06 09:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":854.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":835.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":15.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775437200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.97",
+                "header": "04-06 09:30--04-06 10:00",
+                "tooltip": "{\"title\":\"04-06 09:30--04-06 10:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.97,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1123.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1079.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":26.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.97,
+                "x": 1775439000000,
+                "y": 0.97
+              },
+              {
+                "display": "0.97",
+                "header": "04-06 10:00--04-06 10:30",
+                "tooltip": "{\"title\":\"04-06 10:00--04-06 10:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.97,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":742.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":13.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":715.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":14.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.97,
+                "x": 1775440800000,
+                "y": 0.97
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 10:30--04-06 11:00",
+                "tooltip": "{\"title\":\"04-06 10:30--04-06 11:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":362.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775442600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 11:00--04-06 11:30",
+                "tooltip": "{\"title\":\"04-06 11:00--04-06 11:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":736.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":725.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775444400000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 11:30--04-06 12:00",
+                "tooltip": "{\"title\":\"04-06 11:30--04-06 12:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":729.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":725.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775446200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 12:00--04-06 12:30",
+                "tooltip": "{\"title\":\"04-06 12:00--04-06 12:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":4083.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":15.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":4000.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":68.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775448000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 12:30--04-06 13:00",
+                "tooltip": "{\"title\":\"04-06 12:30--04-06 13:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":5301.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":5204.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":93.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775449800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 13:00--04-06 13:30",
+                "tooltip": "{\"title\":\"04-06 13:00--04-06 13:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":4393.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":24.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":4296.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":73.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775451600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 13:30--04-06 14:00",
+                "tooltip": "{\"title\":\"04-06 13:30--04-06 14:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":872.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":856.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":10.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775453400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.97",
+                "header": "04-06 14:00--04-06 14:30",
+                "tooltip": "{\"title\":\"04-06 14:00--04-06 14:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.97,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":736.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":14.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":713.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.97,
+                "x": 1775455200000,
+                "y": 0.97
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 14:30--04-06 15:00",
+                "tooltip": "{\"title\":\"04-06 14:30--04-06 15:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":456.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":454.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775457000000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 15:00--04-06 15:30",
+                "tooltip": "{\"title\":\"04-06 15:00--04-06 15:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":424.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":421.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775458800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 15:30--04-06 16:00",
+                "tooltip": "{\"title\":\"04-06 15:30--04-06 16:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":602.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":589.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775460600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 16:00--04-06 16:30",
+                "tooltip": "{\"title\":\"04-06 16:00--04-06 16:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":417.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":412.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775462400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 16:30--04-06 17:00",
+                "tooltip": "{\"title\":\"04-06 16:30--04-06 17:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":342.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":337.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775464200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 17:00--04-06 17:30",
+                "tooltip": "{\"title\":\"04-06 17:00--04-06 17:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":659.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":642.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775466000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 17:30--04-06 18:00",
+                "tooltip": "{\"title\":\"04-06 17:30--04-06 18:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":655.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":647.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775467800000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 18:00--04-06 18:30",
+                "tooltip": "{\"title\":\"04-06 18:00--04-06 18:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":316.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775469600000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 18:30--04-06 19:00",
+                "tooltip": "{\"title\":\"04-06 18:30--04-06 19:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":362.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":355.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775471400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 19:00--04-06 19:30",
+                "tooltip": "{\"title\":\"04-06 19:00--04-06 19:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1348.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1307.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":38.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775473200000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 19:30--04-06 20:00",
+                "tooltip": "{\"title\":\"04-06 19:30--04-06 20:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":855.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":846.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775475000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 20:00--04-06 20:30",
+                "tooltip": "{\"title\":\"04-06 20:00--04-06 20:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":565.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":17.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775476800000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 20:30--04-06 21:00",
+                "tooltip": "{\"title\":\"04-06 20:30--04-06 21:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":996.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":974.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":19.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775478600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 21:00--04-06 21:30",
+                "tooltip": "{\"title\":\"04-06 21:00--04-06 21:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":518.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":511.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775480400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 21:30--04-06 22:00",
+                "tooltip": "{\"title\":\"04-06 21:30--04-06 22:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":700.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":690.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775482200000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 22:00--04-06 22:30",
+                "tooltip": "{\"title\":\"04-06 22:00--04-06 22:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":324.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":323.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775484000000,
+                "y": 1.0
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 22:30--04-06 23:00",
+                "tooltip": "{\"title\":\"04-06 22:30--04-06 23:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":341.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":331.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775485800000,
+                "y": 0.98
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 23:00--04-06 23:30",
+                "tooltip": "{\"title\":\"04-06 23:00--04-06 23:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1650.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1644.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775487600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 23:30--04-07 00:00",
+                "tooltip": "{\"title\":\"04-06 23:30--04-07 00:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775489400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 00:00--04-07 00:30",
+                "tooltip": "{\"title\":\"04-07 00:00--04-07 00:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":287.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":287.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775491200000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 00:30--04-07 01:00",
+                "tooltip": "{\"title\":\"04-07 00:30--04-07 01:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":300.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":300.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775493000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 01:00--04-07 01:30",
+                "tooltip": "{\"title\":\"04-07 01:00--04-07 01:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1341.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1341.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775494800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 01:30--04-07 02:00",
+                "tooltip": "{\"title\":\"04-07 01:30--04-07 02:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":298.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775496600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 02:00--04-07 02:30",
+                "tooltip": "{\"title\":\"04-07 02:00--04-07 02:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775498400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 02:30--04-07 03:00",
+                "tooltip": "{\"title\":\"04-07 02:30--04-07 03:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":312.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775500200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 03:00--04-07 03:30",
+                "tooltip": "{\"title\":\"04-07 03:00--04-07 03:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":358.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":353.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775502000000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 03:30--04-07 04:00",
+                "tooltip": "{\"title\":\"04-07 03:30--04-07 04:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775503800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 04:00--04-07 04:30",
+                "tooltip": "{\"title\":\"04-07 04:00--04-07 04:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":295.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":295.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775505600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 04:30--04-07 05:00",
+                "tooltip": "{\"title\":\"04-07 04:30--04-07 05:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775507400000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 05:00--04-07 05:30",
+                "tooltip": "{\"title\":\"04-07 05:00--04-07 05:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":843.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":834.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775509200000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 05:30--04-07 06:00",
+                "tooltip": "{\"title\":\"04-07 05:30--04-07 06:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":495.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":495.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775511000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 06:00--04-07 06:30",
+                "tooltip": "{\"title\":\"04-07 06:00--04-07 06:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1468.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1459.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775512800000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 06:30--04-07 07:00",
+                "tooltip": "{\"title\":\"04-07 06:30--04-07 07:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":874.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":861.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":10.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775514600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 07:00--04-07 07:30",
+                "tooltip": "{\"title\":\"04-07 07:00--04-07 07:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":795.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":784.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775516400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 07:30--04-07 08:00",
+                "tooltip": "{\"title\":\"04-07 07:30--04-07 08:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":6520.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":68.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":6338.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":114.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775518200000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 08:00--04-07 08:30",
+                "tooltip": "{\"title\":\"04-07 08:00--04-07 08:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":27268.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":263.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":26444.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":561.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775520000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 08:30--04-07 09:00",
+                "tooltip": "{\"title\":\"04-07 08:30--04-07 09:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":32529.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":264.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":31663.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":602.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775521800000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 09:00--04-07 09:30",
+                "tooltip": "{\"title\":\"04-07 09:00--04-07 09:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":37710.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":242.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":36771.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":697.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775523600000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 09:30--04-07 10:00",
+                "tooltip": "{\"title\":\"04-07 09:30--04-07 10:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":44939.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":283.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":43795.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":861.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775525400000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 10:00--04-07 10:30",
+                "tooltip": "{\"title\":\"04-07 10:00--04-07 10:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":31295.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":152.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":30561.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":582.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775527200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 10:30--04-07 11:00",
+                "tooltip": "{\"title\":\"04-07 10:30--04-07 11:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":28028.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":204.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":27318.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":506.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775529000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 11:00--04-07 11:30",
+                "tooltip": "{\"title\":\"04-07 11:00--04-07 11:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":21745.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":125.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":21219.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":401.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775530800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 11:30--04-07 12:00",
+                "tooltip": "{\"title\":\"04-07 11:30--04-07 12:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":5752.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":42.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":5600.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":110.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775532600000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 12:00--04-07 12:30",
+                "tooltip": "{\"title\":\"04-07 12:00--04-07 12:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":6294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":35.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":6155.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":104.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775534400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 12:30--04-07 13:00",
+                "tooltip": "{\"title\":\"04-07 12:30--04-07 13:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":7692.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":35.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":7544.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":113.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775536200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 13:00--04-07 13:30",
+                "tooltip": "{\"title\":\"04-07 13:00--04-07 13:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":20113.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":139.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":19605.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":369.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775538000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 13:30--04-07 14:00",
+                "tooltip": "{\"title\":\"04-07 13:30--04-07 14:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":23594.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":182.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":22928.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":484.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775539800000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 14:00--04-07 14:30",
+                "tooltip": "{\"title\":\"04-07 14:00--04-07 14:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":34782.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":255.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":33833.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":694.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775541600000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 14:30--04-07 15:00",
+                "tooltip": "{\"title\":\"04-07 14:30--04-07 15:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":13758.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":78.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":13385.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":295.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775543400000,
+                "y": 0.98
+              }
+            ],
+            "name": "Apdex",
+            "tooltip": {
+              "valueSuffix": " "
+            },
+            "type": "line",
+            "xAxis": 0,
+            "yAxis": 0,
+            "yaxisProperties": {
+              "opposite": false,
+              "tickUnit": ""
+            },
+            "zIndex": 1
+          }
+        ],
+        "tooltip": "{\"backgroundColor\":null,\"borderColor\":null,\"borderWidth\":0,\"followPointer\":true,\"footerFormat\":\"</ul></div></div></div>\",\"headerFormat\":\"<div class='bubble-box'><div class='bubble-wrap pad-10'><div class='bubble-time'>{point.point.options.header}</div><div><ul>\",\"padding\":0,\"pointFormat\":\"<li><span class='bubble-main-left pull-left'>{series.name}:</span><span class='bubble-main-right pull-right'>{point.display} {point.series.userOptions.tooltip.valueSuffix}</span></li>\",\"shadow\":false,\"shared\":true,\"useHTML\":true}",
+        "xAxis": {
+          "categories": [
+            "1775371560000",
+            "1775373360000",
+            "1775375160000",
+            "1775376960000",
+            "1775378760000",
+            "1775380560000",
+            "1775382360000",
+            "1775384160000",
+            "1775385960000",
+            "1775387760000",
+            "1775389560000",
+            "1775391360000",
+            "1775393160000",
+            "1775394960000",
+            "1775396760000",
+            "1775398560000",
+            "1775400360000",
+            "1775402160000",
+            "1775403960000",
+            "1775405760000",
+            "1775407560000",
+            "1775409360000",
+            "1775411160000",
+            "1775412960000",
+            "1775414760000",
+            "1775416560000",
+            "1775418360000",
+            "1775420160000",
+            "1775421960000",
+            "1775423760000",
+            "1775425560000",
+            "1775427360000",
+            "1775429160000",
+            "1775430960000",
+            "1775432760000",
+            "1775434560000",
+            "1775436360000",
+            "1775438160000",
+            "1775439960000",
+            "1775441760000",
+            "1775443560000",
+            "1775445360000",
+            "1775447160000",
+            "1775448960000",
+            "1775450760000",
+            "1775452560000",
+            "1775454360000",
+            "1775456160000",
+            "1775457960000",
+            "1775459760000",
+            "1775461560000",
+            "1775463360000",
+            "1775465160000",
+            "1775466960000",
+            "1775468760000",
+            "1775470560000",
+            "1775472360000",
+            "1775474160000",
+            "1775475960000",
+            "1775477760000",
+            "1775479560000",
+            "1775481360000",
+            "1775483160000",
+            "1775484960000",
+            "1775486760000",
+            "1775488560000",
+            "1775490360000",
+            "1775492160000",
+            "1775493960000",
+            "1775495760000",
+            "1775497560000",
+            "1775499360000",
+            "1775501160000",
+            "1775502960000",
+            "1775504760000",
+            "1775506560000",
+            "1775508360000",
+            "1775510160000",
+            "1775511960000",
+            "1775513760000",
+            "1775515560000",
+            "1775517360000",
+            "1775519160000",
+            "1775520960000",
+            "1775522760000",
+            "1775524560000",
+            "1775526360000",
+            "1775528160000",
+            "1775529960000",
+            "1775531760000",
+            "1775533560000",
+            "1775535360000",
+            "1775537160000",
+            "1775538960000",
+            "1775540760000",
+            "1775542560000"
+          ],
+          "max": 1775544300000,
+          "min": 1775370600000
+        },
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": ""
+          }
+        ]
+      },
+      "requestId": "efebe598-67e7-bc90-fb23-2d20474aa542",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": {
+        "overviews": {
+          "apdex": 0.985,
+          "granularitySeconds": 1800,
+          "threshold": "500ms"
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "display": "0.99",
+                "header": "04-05 14:30--04-05 15:00",
+                "tooltip": "{\"title\":\"04-05 14:30--04-05 15:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":158.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":157.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775370600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 15:00--04-05 15:30",
+                "tooltip": "{\"title\":\"04-05 15:00--04-05 15:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":394.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":387.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775372400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 15:30--04-05 16:00",
+                "tooltip": "{\"title\":\"04-05 15:30--04-05 16:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":387.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":384.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775374200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 16:00--04-05 16:30",
+                "tooltip": "{\"title\":\"04-05 16:00--04-05 16:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1086.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1075.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775376000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 16:30--04-05 17:00",
+                "tooltip": "{\"title\":\"04-05 16:30--04-05 17:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":4178.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":4085.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":89.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775377800000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 17:00--04-05 17:30",
+                "tooltip": "{\"title\":\"04-05 17:00--04-05 17:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":335.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":334.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775379600000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 17:30--04-05 18:00",
+                "tooltip": "{\"title\":\"04-05 17:30--04-05 18:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":357.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":353.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775381400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 18:00--04-05 18:30",
+                "tooltip": "{\"title\":\"04-05 18:00--04-05 18:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":355.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775383200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 18:30--04-05 19:00",
+                "tooltip": "{\"title\":\"04-05 18:30--04-05 19:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":584.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":575.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775385000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 19:00--04-05 19:30",
+                "tooltip": "{\"title\":\"04-05 19:00--04-05 19:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":410.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":405.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775386800000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 19:30--04-05 20:00",
+                "tooltip": "{\"title\":\"04-05 19:30--04-05 20:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":354.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":354.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775388600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 20:00--04-05 20:30",
+                "tooltip": "{\"title\":\"04-05 20:00--04-05 20:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":567.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":564.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775390400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 20:30--04-05 21:00",
+                "tooltip": "{\"title\":\"04-05 20:30--04-05 21:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":359.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":357.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775392200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.98",
+                "header": "04-05 21:00--04-05 21:30",
+                "tooltip": "{\"title\":\"04-05 21:00--04-05 21:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":621.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":607.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775394000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 21:30--04-05 22:00",
+                "tooltip": "{\"title\":\"04-05 21:30--04-05 22:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":729.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":718.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775395800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-05 22:00--04-05 22:30",
+                "tooltip": "{\"title\":\"04-05 22:00--04-05 22:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":355.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775397600000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 22:30--04-05 23:00",
+                "tooltip": "{\"title\":\"04-05 22:30--04-05 23:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":313.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775399400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-05 23:00--04-05 23:30",
+                "tooltip": "{\"title\":\"04-05 23:00--04-05 23:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1683.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1674.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775401200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.98",
+                "header": "04-05 23:30--04-06 00:00",
+                "tooltip": "{\"title\":\"04-05 23:30--04-06 00:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":350.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":342.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775403000000,
+                "y": 0.98
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 00:00--04-06 00:30",
+                "tooltip": "{\"title\":\"04-06 00:00--04-06 00:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775404800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 00:30--04-06 01:00",
+                "tooltip": "{\"title\":\"04-06 00:30--04-06 01:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":269.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":269.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775406600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 01:00--04-06 01:30",
+                "tooltip": "{\"title\":\"04-06 01:00--04-06 01:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1285.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1285.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775408400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 01:30--04-06 02:00",
+                "tooltip": "{\"title\":\"04-06 01:30--04-06 02:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":281.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":281.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775410200000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 02:00--04-06 02:30",
+                "tooltip": "{\"title\":\"04-06 02:00--04-06 02:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":256.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":256.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775412000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 02:30--04-06 03:00",
+                "tooltip": "{\"title\":\"04-06 02:30--04-06 03:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":268.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":268.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775413800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 03:00--04-06 03:30",
+                "tooltip": "{\"title\":\"04-06 03:00--04-06 03:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":290.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":289.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775415600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 03:30--04-06 04:00",
+                "tooltip": "{\"title\":\"04-06 03:30--04-06 04:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775417400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 04:00--04-06 04:30",
+                "tooltip": "{\"title\":\"04-06 04:00--04-06 04:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":306.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":306.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775419200000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 04:30--04-06 05:00",
+                "tooltip": "{\"title\":\"04-06 04:30--04-06 05:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":301.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":301.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775421000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 05:00--04-06 05:30",
+                "tooltip": "{\"title\":\"04-06 05:00--04-06 05:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":3074.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":3060.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":12.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775422800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 05:30--04-06 06:00",
+                "tooltip": "{\"title\":\"04-06 05:30--04-06 06:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":316.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":316.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775424600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 06:00--04-06 06:30",
+                "tooltip": "{\"title\":\"04-06 06:00--04-06 06:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775426400000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 06:30--04-06 07:00",
+                "tooltip": "{\"title\":\"04-06 06:30--04-06 07:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":433.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":429.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775428200000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 07:00--04-06 07:30",
+                "tooltip": "{\"title\":\"04-06 07:00--04-06 07:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":348.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":348.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775430000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 07:30--04-06 08:00",
+                "tooltip": "{\"title\":\"04-06 07:30--04-06 08:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":491.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":490.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775431800000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 08:00--04-06 08:30",
+                "tooltip": "{\"title\":\"04-06 08:00--04-06 08:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":390.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":388.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775433600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 08:30--04-06 09:00",
+                "tooltip": "{\"title\":\"04-06 08:30--04-06 09:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":354.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775435400000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 09:00--04-06 09:30",
+                "tooltip": "{\"title\":\"04-06 09:00--04-06 09:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":854.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":835.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":15.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775437200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.97",
+                "header": "04-06 09:30--04-06 10:00",
+                "tooltip": "{\"title\":\"04-06 09:30--04-06 10:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.97,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1123.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1079.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":26.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.97,
+                "x": 1775439000000,
+                "y": 0.97
+              },
+              {
+                "display": "0.97",
+                "header": "04-06 10:00--04-06 10:30",
+                "tooltip": "{\"title\":\"04-06 10:00--04-06 10:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.97,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":742.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":13.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":715.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":14.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.97,
+                "x": 1775440800000,
+                "y": 0.97
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 10:30--04-06 11:00",
+                "tooltip": "{\"title\":\"04-06 10:30--04-06 11:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":362.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":360.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775442600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 11:00--04-06 11:30",
+                "tooltip": "{\"title\":\"04-06 11:00--04-06 11:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":736.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":725.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775444400000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 11:30--04-06 12:00",
+                "tooltip": "{\"title\":\"04-06 11:30--04-06 12:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":729.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":725.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775446200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 12:00--04-06 12:30",
+                "tooltip": "{\"title\":\"04-06 12:00--04-06 12:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":4083.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":15.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":4000.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":68.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775448000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 12:30--04-06 13:00",
+                "tooltip": "{\"title\":\"04-06 12:30--04-06 13:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":5301.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":5204.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":93.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775449800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 13:00--04-06 13:30",
+                "tooltip": "{\"title\":\"04-06 13:00--04-06 13:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":4393.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":24.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":4296.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":73.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775451600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 13:30--04-06 14:00",
+                "tooltip": "{\"title\":\"04-06 13:30--04-06 14:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":872.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":856.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":10.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775453400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.97",
+                "header": "04-06 14:00--04-06 14:30",
+                "tooltip": "{\"title\":\"04-06 14:00--04-06 14:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.97,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":736.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":14.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":713.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.97,
+                "x": 1775455200000,
+                "y": 0.97
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 14:30--04-06 15:00",
+                "tooltip": "{\"title\":\"04-06 14:30--04-06 15:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":456.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":454.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775457000000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 15:00--04-06 15:30",
+                "tooltip": "{\"title\":\"04-06 15:00--04-06 15:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":424.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":421.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775458800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 15:30--04-06 16:00",
+                "tooltip": "{\"title\":\"04-06 15:30--04-06 16:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":602.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":5.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":589.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775460600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 16:00--04-06 16:30",
+                "tooltip": "{\"title\":\"04-06 16:00--04-06 16:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":417.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":412.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775462400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 16:30--04-06 17:00",
+                "tooltip": "{\"title\":\"04-06 16:30--04-06 17:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":342.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":337.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775464200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 17:00--04-06 17:30",
+                "tooltip": "{\"title\":\"04-06 17:00--04-06 17:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":659.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":642.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775466000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 17:30--04-06 18:00",
+                "tooltip": "{\"title\":\"04-06 17:30--04-06 18:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":655.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":647.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775467800000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 18:00--04-06 18:30",
+                "tooltip": "{\"title\":\"04-06 18:00--04-06 18:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":316.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775469600000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 18:30--04-06 19:00",
+                "tooltip": "{\"title\":\"04-06 18:30--04-06 19:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":362.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":355.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775471400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 19:00--04-06 19:30",
+                "tooltip": "{\"title\":\"04-06 19:00--04-06 19:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1348.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1307.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":38.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775473200000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 19:30--04-06 20:00",
+                "tooltip": "{\"title\":\"04-06 19:30--04-06 20:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":855.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":846.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775475000000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 20:00--04-06 20:30",
+                "tooltip": "{\"title\":\"04-06 20:00--04-06 20:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":585.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":565.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":17.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775476800000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 20:30--04-06 21:00",
+                "tooltip": "{\"title\":\"04-06 20:30--04-06 21:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":996.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":974.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":19.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775478600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 21:00--04-06 21:30",
+                "tooltip": "{\"title\":\"04-06 21:00--04-06 21:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":518.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":511.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775480400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-06 21:30--04-06 22:00",
+                "tooltip": "{\"title\":\"04-06 21:30--04-06 22:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":700.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":690.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":6.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775482200000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 22:00--04-06 22:30",
+                "tooltip": "{\"title\":\"04-06 22:00--04-06 22:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":324.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":323.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775484000000,
+                "y": 1.0
+              },
+              {
+                "display": "0.98",
+                "header": "04-06 22:30--04-06 23:00",
+                "tooltip": "{\"title\":\"04-06 22:30--04-06 23:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":341.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":331.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775485800000,
+                "y": 0.98
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 23:00--04-06 23:30",
+                "tooltip": "{\"title\":\"04-06 23:00--04-06 23:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1650.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1644.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775487600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-06 23:30--04-07 00:00",
+                "tooltip": "{\"title\":\"04-06 23:30--04-07 00:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775489400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 00:00--04-07 00:30",
+                "tooltip": "{\"title\":\"04-07 00:00--04-07 00:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":287.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":287.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775491200000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 00:30--04-07 01:00",
+                "tooltip": "{\"title\":\"04-07 00:30--04-07 01:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":300.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":300.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775493000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 01:00--04-07 01:30",
+                "tooltip": "{\"title\":\"04-07 01:00--04-07 01:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1341.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1341.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775494800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 01:30--04-07 02:00",
+                "tooltip": "{\"title\":\"04-07 01:30--04-07 02:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":298.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775496600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 02:00--04-07 02:30",
+                "tooltip": "{\"title\":\"04-07 02:00--04-07 02:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775498400000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 02:30--04-07 03:00",
+                "tooltip": "{\"title\":\"04-07 02:30--04-07 03:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":314.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":312.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775500200000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 03:00--04-07 03:30",
+                "tooltip": "{\"title\":\"04-07 03:00--04-07 03:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":358.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":353.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775502000000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 03:30--04-07 04:00",
+                "tooltip": "{\"title\":\"04-07 03:30--04-07 04:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":286.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775503800000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 04:00--04-07 04:30",
+                "tooltip": "{\"title\":\"04-07 04:00--04-07 04:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":295.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":295.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775505600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 04:30--04-07 05:00",
+                "tooltip": "{\"title\":\"04-07 04:30--04-07 05:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":297.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775507400000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 05:00--04-07 05:30",
+                "tooltip": "{\"title\":\"04-07 05:00--04-07 05:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":843.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":834.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":9.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775509200000,
+                "y": 0.99
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 05:30--04-07 06:00",
+                "tooltip": "{\"title\":\"04-07 05:30--04-07 06:00\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":495.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":495.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775511000000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "header": "04-07 06:00--04-07 06:30",
+                "tooltip": "{\"title\":\"04-07 06:00--04-07 06:30\",\"data\":[{\"title\":\"Apdex\",\"value\":1.00,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":1468.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":1.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":1459.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775512800000,
+                "y": 1.0
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 06:30--04-07 07:00",
+                "tooltip": "{\"title\":\"04-07 06:30--04-07 07:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":874.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":3.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":861.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":10.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775514600000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 07:00--04-07 07:30",
+                "tooltip": "{\"title\":\"04-07 07:00--04-07 07:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":795.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":4.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":784.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775516400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 07:30--04-07 08:00",
+                "tooltip": "{\"title\":\"04-07 07:30--04-07 08:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":6520.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":68.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":6338.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":114.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775518200000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 08:00--04-07 08:30",
+                "tooltip": "{\"title\":\"04-07 08:00--04-07 08:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":27268.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":263.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":26444.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":561.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775520000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 08:30--04-07 09:00",
+                "tooltip": "{\"title\":\"04-07 08:30--04-07 09:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":32529.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":264.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":31663.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":602.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775521800000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 09:00--04-07 09:30",
+                "tooltip": "{\"title\":\"04-07 09:00--04-07 09:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":37710.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":242.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":36771.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":697.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775523600000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 09:30--04-07 10:00",
+                "tooltip": "{\"title\":\"04-07 09:30--04-07 10:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":44939.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":283.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":43795.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":861.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775525400000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 10:00--04-07 10:30",
+                "tooltip": "{\"title\":\"04-07 10:00--04-07 10:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":31295.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":152.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":30561.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":582.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775527200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 10:30--04-07 11:00",
+                "tooltip": "{\"title\":\"04-07 10:30--04-07 11:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":28028.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":204.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":27318.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":506.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775529000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 11:00--04-07 11:30",
+                "tooltip": "{\"title\":\"04-07 11:00--04-07 11:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":21745.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":125.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":21219.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":401.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775530800000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 11:30--04-07 12:00",
+                "tooltip": "{\"title\":\"04-07 11:30--04-07 12:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":5752.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":42.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":5600.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":110.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775532600000,
+                "y": 0.98
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 12:00--04-07 12:30",
+                "tooltip": "{\"title\":\"04-07 12:00--04-07 12:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":6294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":35.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":6155.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":104.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775534400000,
+                "y": 0.99
+              },
+              {
+                "display": "0.99",
+                "header": "04-07 12:30--04-07 13:00",
+                "tooltip": "{\"title\":\"04-07 12:30--04-07 13:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.99,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":7692.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":35.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":7544.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":113.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.99,
+                "x": 1775536200000,
+                "y": 0.99
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 13:00--04-07 13:30",
+                "tooltip": "{\"title\":\"04-07 13:00--04-07 13:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":20113.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":139.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":19605.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":369.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775538000000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 13:30--04-07 14:00",
+                "tooltip": "{\"title\":\"04-07 13:30--04-07 14:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":23594.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":182.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":22928.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":484.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775539800000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 14:00--04-07 14:30",
+                "tooltip": "{\"title\":\"04-07 14:00--04-07 14:30\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":34782.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":255.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":33833.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":694.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775541600000,
+                "y": 0.98
+              },
+              {
+                "display": "0.98",
+                "header": "04-07 14:30--04-07 15:00",
+                "tooltip": "{\"title\":\"04-07 14:30--04-07 15:00\",\"data\":[{\"title\":\"Apdex\",\"value\":0.98,\"unit\":\"\",\"scale\":3},{\"title\":\"请求数\",\"value\":13758.00,\"unit\":\"\",\"scale\":0},{\"title\":\"不可容忍的次数\",\"value\":78.00,\"unit\":\"\",\"scale\":0},{\"title\":\"满意的次数\",\"value\":13385.00,\"unit\":\"\",\"scale\":0},{\"title\":\"可容忍的次数\",\"value\":295.00,\"unit\":\"\",\"scale\":0}]}",
+                "value": 0.98,
+                "x": 1775543400000,
+                "y": 0.98
+              }
+            ],
+            "name": "Apdex",
+            "tooltip": {
+              "valueSuffix": " "
+            },
+            "type": "line",
+            "xAxis": 0,
+            "yAxis": 0,
+            "yaxisProperties": {
+              "opposite": false,
+              "tickUnit": ""
+            },
+            "zIndex": 1
+          }
+        ],
+        "tooltip": "{\"backgroundColor\":null,\"borderColor\":null,\"borderWidth\":0,\"followPointer\":true,\"footerFormat\":\"</ul></div></div></div>\",\"headerFormat\":\"<div class='bubble-box'><div class='bubble-wrap pad-10'><div class='bubble-time'>{point.point.options.header}</div><div><ul>\",\"padding\":0,\"pointFormat\":\"<li><span class='bubble-main-left pull-left'>{series.name}:</span><span class='bubble-main-right pull-right'>{point.display} {point.series.userOptions.tooltip.valueSuffix}</span></li>\",\"shadow\":false,\"shared\":true,\"useHTML\":true}",
+        "xAxis": {
+          "categories": [
+            "1775371560000",
+            "1775373360000",
+            "1775375160000",
+            "1775376960000",
+            "1775378760000",
+            "1775380560000",
+            "1775382360000",
+            "1775384160000",
+            "1775385960000",
+            "1775387760000",
+            "1775389560000",
+            "1775391360000",
+            "1775393160000",
+            "1775394960000",
+            "1775396760000",
+            "1775398560000",
+            "1775400360000",
+            "1775402160000",
+            "1775403960000",
+            "1775405760000",
+            "1775407560000",
+            "1775409360000",
+            "1775411160000",
+            "1775412960000",
+            "1775414760000",
+            "1775416560000",
+            "1775418360000",
+            "1775420160000",
+            "1775421960000",
+            "1775423760000",
+            "1775425560000",
+            "1775427360000",
+            "1775429160000",
+            "1775430960000",
+            "1775432760000",
+            "1775434560000",
+            "1775436360000",
+            "1775438160000",
+            "1775439960000",
+            "1775441760000",
+            "1775443560000",
+            "1775445360000",
+            "1775447160000",
+            "1775448960000",
+            "1775450760000",
+            "1775452560000",
+            "1775454360000",
+            "1775456160000",
+            "1775457960000",
+            "1775459760000",
+            "1775461560000",
+            "1775463360000",
+            "1775465160000",
+            "1775466960000",
+            "1775468760000",
+            "1775470560000",
+            "1775472360000",
+            "1775474160000",
+            "1775475960000",
+            "1775477760000",
+            "1775479560000",
+            "1775481360000",
+            "1775483160000",
+            "1775484960000",
+            "1775486760000",
+            "1775488560000",
+            "1775490360000",
+            "1775492160000",
+            "1775493960000",
+            "1775495760000",
+            "1775497560000",
+            "1775499360000",
+            "1775501160000",
+            "1775502960000",
+            "1775504760000",
+            "1775506560000",
+            "1775508360000",
+            "1775510160000",
+            "1775511960000",
+            "1775513760000",
+            "1775515560000",
+            "1775517360000",
+            "1775519160000",
+            "1775520960000",
+            "1775522760000",
+            "1775524560000",
+            "1775526360000",
+            "1775528160000",
+            "1775529960000",
+            "1775531760000",
+            "1775533560000",
+            "1775535360000",
+            "1775537160000",
+            "1775538960000",
+            "1775540760000",
+            "1775542560000"
+          ],
+          "max": 1775544300000,
+          "min": 1775370600000
+        },
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": ""
+          }
+        ]
+      },
+      "requestId": "efebe598-67e7-bc90-fb23-2d20474aa542",
+      "status": 200
+    },
+    "encoded_data_length": 4383,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:45:52 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "applicationIds": [
+          "<DYNAMIC>"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "apdex_diagram",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "apdex_diagram"
+    },
+    "relative_path": "graph/query/diagram"
+  }
+}

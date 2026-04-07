@@ -1,0 +1,529 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:49:32+08:00",
+    "completeness_score": 607,
+    "first_seen_at": "2026-04-07T14:49:32+08:00",
+    "last_seen_at": "2026-04-07T14:49:32+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+      "document_url": "http://169.169.173.25:8080/web/server/background/list",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:32+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+          "document_url": "http://169.169.173.25:8080/web/server/background/list",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:32+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+        "document_url": "http://169.169.173.25:8080/web/server/background/list",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:32+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+        "document_url": "http://169.169.173.25:8080/web/server/background/list",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:32+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "webaction/list/backgroundList/POST__variant__08bd5ef218ec.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544572.132716
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+    "document_url": "http://169.169.173.25:8080/web/server/background/list",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:49:32+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+        "document_url": "http://169.169.173.25:8080/web/server/background/list",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:32+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+      "document_url": "http://169.169.173.25:8080/web/server/background/list",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:32+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+      "document_url": "http://169.169.173.25:8080/web/server/background/list",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:32+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/webaction/list/backgroundList",
+  "relative_path": "webaction/list/backgroundList",
+  "request": {
+    "body": {
+      "applicationId": "0",
+      "bizSystemId": "1065",
+      "endTime": "2026-04-07 14:46",
+      "lang": "zh_CN",
+      "sortDirection": "DESC",
+      "sortField": "response",
+      "timePeriod": "706"
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "applicationId": "<DYNAMIC>",
+      "bizSystemId": "<DYNAMIC>",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "sortDirection": "DESC",
+      "sortField": "response",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "462fcec8-0483-426e-71e6-472b94e5799c",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/background/list",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+      "document_url": "http://169.169.173.25:8080/web/server/background/list",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:32+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/webaction/list/backgroundList",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "timePeriod=706&endTime=2026-04-07%2014:46&bizSystemId=1065&sortField=response&sortDirection=DESC&applicationId=0&lang=zh_CN",
+    "url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList"
+  },
+  "response": {
+    "body": {
+      "code": 200,
+      "data": {
+        "content": [
+          {
+            "actionId": 13540,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/lawFirmsAssessmentJobDetail",
+            "response": 8383,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13538,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/oppositeGrowthJobDetail",
+            "response": 4213,
+            "throught": 0.0
+          },
+          {
+            "actionId": 15949,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/reportContractLxJobDetail",
+            "response": 4067,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13818,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/reportContractJobDetail",
+            "response": 1232,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13537,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/continueContractInfoSignJobDetail",
+            "response": 1067,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13817,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/caseStatusProcessRemindOneJobDetail",
+            "response": 325,
+            "throught": 0.0
+          },
+          {
+            "actionId": 15096,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/selectGroupTaskJobDetail",
+            "response": 170,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13544,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/reportContractJfJobDetail",
+            "response": 27,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13536,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/caseExecuteProcessRemindJobDetail",
+            "response": 17,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13816,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/learningApplyJobDetail",
+            "response": 15,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13520,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+            "response": 9,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13355,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+            "response": 7,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13212,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+            "response": 0,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13213,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+            "response": 0,
+            "throught": 0.0
+          }
+        ],
+        "fastQuery": false,
+        "totalElements": 14
+      }
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "code": 200,
+      "data": {
+        "content": [
+          {
+            "actionId": 13540,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/lawFirmsAssessmentJobDetail",
+            "response": 8383,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13538,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/oppositeGrowthJobDetail",
+            "response": 4213,
+            "throught": 0.0
+          },
+          {
+            "actionId": 15949,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/reportContractLxJobDetail",
+            "response": 4067,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13818,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/reportContractJobDetail",
+            "response": 1232,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13537,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/continueContractInfoSignJobDetail",
+            "response": 1067,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13817,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/caseStatusProcessRemindOneJobDetail",
+            "response": 325,
+            "throught": 0.0
+          },
+          {
+            "actionId": 15096,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/selectGroupTaskJobDetail",
+            "response": 170,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13544,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/reportContractJfJobDetail",
+            "response": 27,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13536,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/caseExecuteProcessRemindJobDetail",
+            "response": 17,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13816,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/learningApplyJobDetail",
+            "response": 15,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13520,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+            "response": 9,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13355,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+            "response": 7,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13212,
+            "applicationId": 1644,
+            "applicationName": "org.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server1:8888",
+            "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+            "response": 0,
+            "throught": 0.0
+          },
+          {
+            "actionId": 13213,
+            "applicationId": 1645,
+            "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "error": 0.0,
+            "instanceName": "nbyd-jtfw-server2:8888",
+            "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+            "response": 0,
+            "throught": 0.0
+          }
+        ],
+        "fastQuery": false,
+        "totalElements": 14
+      }
+    },
+    "encoded_data_length": 1188,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:49:20 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "applicationId": "<DYNAMIC>",
+      "bizSystemId": "<DYNAMIC>",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "sortDirection": "DESC",
+      "sortField": "response",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "webaction/list/backgroundList"
+  }
+}

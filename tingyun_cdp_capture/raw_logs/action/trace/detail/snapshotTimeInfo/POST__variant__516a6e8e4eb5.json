@@ -1,0 +1,437 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:48:29+08:00",
+    "completeness_score": 415,
+    "first_seen_at": "2026-04-07T14:48:29+08:00",
+    "last_seen_at": "2026-04-07T14:49:44+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "frame_id": "1C473FD520D8494F94C450A1C523C412",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:48:29+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+      "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+          "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:44+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+          "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+        },
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "frame_id": "1C473FD520D8494F94C450A1C523C412",
+          "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:48:29+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+          "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+        "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:44+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+        "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+        "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:44+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+        "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+      }
+    },
+    "raw_log_file": "action/trace/detail/snapshotTimeInfo/POST__variant__516a6e8e4eb5.json",
+    "resource_type": "XHR",
+    "seen_count": 2,
+    "tab_target_id": "1C473FD520D8494F94C450A1C523C412",
+    "wall_time": 1775544508.938254
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+    "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+    "frame_id": "1C473FD520D8494F94C450A1C523C412",
+    "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:48:29+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+    "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+        "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:44+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+        "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+      },
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "frame_id": "1C473FD520D8494F94C450A1C523C412",
+        "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:48:29+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+        "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:44+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+      "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:44+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+      "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+    }
+  },
+  "path": "/server-api/action/trace/detail/snapshotTimeInfo",
+  "relative_path": "action/trace/detail/snapshotTimeInfo",
+  "request": {
+    "body": {
+      "bizSystemId": "1065",
+      "endTime": "2026-04-07 14:46",
+      "lang": "zh_CN",
+      "queryTimestamp": "1775523101840",
+      "timePeriod": "706",
+      "traceId": "1779409120",
+      "traceIds": ""
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "bizSystemId": "<DYNAMIC>",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "queryTimestamp": "<DYNAMIC>",
+      "timePeriod": "<DYNAMIC>",
+      "traceId": "<DYNAMIC>",
+      "traceIds": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "1bbd6cd1-c625-9067-2243-fa73be43edfc",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "frame_id": "1C473FD520D8494F94C450A1C523C412",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:48:29+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo",
+      "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+    },
+    "path": "/server-api/action/trace/detail/snapshotTimeInfo",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "timePeriod=706&endTime=2026-04-07%2014:46&traceId=1779409120&bizSystemId=1065&lang=zh_CN&traceIds=&queryTimestamp=1775523101840",
+    "url": "http://169.169.173.25:8080/server-api/action/trace/detail/snapshotTimeInfo"
+  },
+  "response": {
+    "body": {
+      "code": 200,
+      "data": [
+        {
+          "actionId": 16000,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
+          "actionType": "TX",
+          "applicationId": 1645,
+          "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+          "bizSystemId": 1065,
+          "bizSystemName": "集团法务",
+          "callTime": 0.0,
+          "clientIp": "10.85.100.48",
+          "coordinate": 2392.1084,
+          "duration": 2174.644,
+          "endTime": 1775523104014.644,
+          "entry": 0.0,
+          "errorNames": [
+            "Slf4j Error Message"
+          ],
+          "exceptions": [
+            {
+              "error": false,
+              "highest": false,
+              "msg": "请求的systemKey为null",
+              "name": "Slf4j Error Message",
+              "seq": 0,
+              "type": "Logged Error Message"
+            },
+            {
+              "error": false,
+              "highest": false,
+              "msg": "请求的sys_code为1.100.128",
+              "name": "Slf4j Error Message",
+              "seq": 0,
+              "type": "Logged Error Message"
+            },
+            {
+              "error": false,
+              "highest": false,
+              "msg": "collectContractClose方法执行时间为：2169 ms,ip来源地址为10.85.100.48",
+              "name": "Slf4j Error Message",
+              "seq": 0,
+              "type": "Logged Error Message"
+            }
+          ],
+          "exclusiveTime": 2174.644,
+          "exclusiveTimePercentage": 100.0,
+          "externalId": [],
+          "headers": {
+            "threadId": "33670"
+          },
+          "instanceId": 2746,
+          "instanceName": "nbyd-jtfw-server2:8888",
+          "isAsync": false,
+          "leftNetwork": 0.0,
+          "maxExit": 2174.644,
+          "methodName": "POST",
+          "minEntry": 0.0,
+          "network": [],
+          "networkTotal": 0.0,
+          "params": null,
+          "parentSpanId": null,
+          "parentThreadId": null,
+          "parentThreadName": null,
+          "posts": null,
+          "projection": [],
+          "refId": null,
+          "reponseHeader": null,
+          "requestHeader": {
+            "User-Agent": "Apache-HttpClient/4.4.1 (Java/1.8.0_202)"
+          },
+          "responseTime": 2174.432,
+          "rid": "27bb95d4f075ee9e",
+          "rightNetwork": 0.0,
+          "snapshot": false,
+          "snapshotTime": [],
+          "spanId": "27bb95d4f075ee9e",
+          "startTime": 1775523101840.0,
+          "statusCode": 200,
+          "threadCount": 1,
+          "threadId": 33670,
+          "threadName": "http-nio-8888-exec-64",
+          "tid": "27bb95d4f075ee9e",
+          "tranceId": "1779409120",
+          "url": "http://jtfw.nbport.com.cn/grcv5/serverapi/cj/rest/dataCenter/collectContractClose"
+        }
+      ]
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "code": 200,
+      "data": [
+        {
+          "actionId": 16000,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
+          "actionType": "TX",
+          "applicationId": 1645,
+          "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+          "bizSystemId": 1065,
+          "bizSystemName": "集团法务",
+          "callTime": 0.0,
+          "clientIp": "10.85.100.48",
+          "coordinate": 2392.1084,
+          "duration": 2174.644,
+          "endTime": 1775523104014.644,
+          "entry": 0.0,
+          "errorNames": [
+            "Slf4j Error Message"
+          ],
+          "exceptions": [
+            {
+              "error": false,
+              "highest": false,
+              "msg": "请求的systemKey为null",
+              "name": "Slf4j Error Message",
+              "seq": 0,
+              "type": "Logged Error Message"
+            },
+            {
+              "error": false,
+              "highest": false,
+              "msg": "请求的sys_code为1.100.128",
+              "name": "Slf4j Error Message",
+              "seq": 0,
+              "type": "Logged Error Message"
+            },
+            {
+              "error": false,
+              "highest": false,
+              "msg": "collectContractClose方法执行时间为：2169 ms,ip来源地址为10.85.100.48",
+              "name": "Slf4j Error Message",
+              "seq": 0,
+              "type": "Logged Error Message"
+            }
+          ],
+          "exclusiveTime": 2174.644,
+          "exclusiveTimePercentage": 100.0,
+          "externalId": [],
+          "headers": {
+            "threadId": "33670"
+          },
+          "instanceId": 2746,
+          "instanceName": "nbyd-jtfw-server2:8888",
+          "isAsync": false,
+          "leftNetwork": 0.0,
+          "maxExit": 2174.644,
+          "methodName": "POST",
+          "minEntry": 0.0,
+          "network": [],
+          "networkTotal": 0.0,
+          "params": null,
+          "parentSpanId": null,
+          "parentThreadId": null,
+          "parentThreadName": null,
+          "posts": null,
+          "projection": [],
+          "refId": null,
+          "reponseHeader": null,
+          "requestHeader": {
+            "User-Agent": "Apache-HttpClient/4.4.1 (Java/1.8.0_202)"
+          },
+          "responseTime": 2174.432,
+          "rid": "27bb95d4f075ee9e",
+          "rightNetwork": 0.0,
+          "snapshot": false,
+          "snapshotTime": [],
+          "spanId": "27bb95d4f075ee9e",
+          "startTime": 1775523101840.0,
+          "statusCode": 200,
+          "threadCount": 1,
+          "threadId": 33670,
+          "threadName": "http-nio-8888-exec-64",
+          "tid": "27bb95d4f075ee9e",
+          "tranceId": "1779409120",
+          "url": "http://jtfw.nbport.com.cn/grcv5/serverapi/cj/rest/dataCenter/collectContractClose"
+        }
+      ]
+    },
+    "encoded_data_length": 1544,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:48:16 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "bizSystemId": "<DYNAMIC>",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "queryTimestamp": "<DYNAMIC>",
+      "timePeriod": "<DYNAMIC>",
+      "traceId": "<DYNAMIC>",
+      "traceIds": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "action/trace/detail/snapshotTimeInfo"
+  }
+}

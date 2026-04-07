@@ -1,10 +1,10 @@
 {
-  "count_seen": 33,
+  "count_seen": 38,
   "first_seen": "2026-04-03T15:43:04+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 33
+    "http://169.169.173.25:8080": 38
   },
-  "last_seen": "2026-04-03T20:02:13+08:00",
+  "last_seen": "2026-04-07T14:50:01+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -1108,6 +1108,276 @@
           "count_seen": 1,
           "dynamic_fields": [
             "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "beginTime": "2026-04-07 03:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "2026-04-07 14:46",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-01803bc832bffeeea536ede5a82143f9",
+            "timePeriod": "706"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775544600603\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F5/Redis-01803bc832bffeeea536ede5a82143f9\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-01803bc832bffeeea536ede5a82143f9",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-07 03:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "2026-04-07 14:46",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-7a0654c66fdf29468caaef6adbc25d25",
+            "timePeriod": "706"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775544600603\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.20:6379%2F5/Redis-7a0654c66fdf29468caaef6adbc25d25\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.20:6379%2F5/Redis-7a0654c66fdf29468caaef6adbc25d25",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1645",
+            "beginTime": "2026-04-07 03:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "2026-04-07 14:46",
+            "instanceId": "2746",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d",
+            "timePeriod": "706"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775544600603\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-32457e74f90e6f59649b11775711927d",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-07 03:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "2026-04-07 14:46",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2",
+            "timePeriod": "706"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775544600603\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-650fdb694b0ae9650f4a54287ef91ce2",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.instanceId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "applicationId": "1644",
+            "beginTime": "2026-04-07 03:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "2026-04-07 14:46",
+            "instanceId": "2745",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-8f53b5d441667356933b641eafc47996",
+            "timePeriod": "706"
+          },
+          "key": "{\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"curP\":\"1775544600603\",\"endTime\":\"<DATETIME>\",\"instanceId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"undefined\",\"metricCategory\":\"10.190.22.21:3306%2Fbpmapp_hg/Database-8f53b5d441667356933b641eafc47996\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "curP",
+              "endTime",
+              "instanceId",
+              "lang",
+              "localeOptionContent",
+              "metricCategory",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "curP": "1775544600603",
+            "endTime": "<DATETIME>",
+            "instanceId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "undefined",
+            "metricCategory": "10.190.22.21:3306%2Fbpmapp_hg/Database-8f53b5d441667356933b641eafc47996",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.applicationId",
             "body.bizSystemId",
             "body.endTime",
             "body.instanceId",
@@ -1241,21 +1511,67 @@
           }
         }
       ],
-      "count_seen": 33,
+      "count_seen": 38,
       "first_seen": "2026-04-03T15:43:04+08:00",
       "inference_basis": [
         "path=connection/chart"
       ],
       "inferred_purpose": "Likely related to connection/chart",
-      "last_seen": "2026-04-03T20:02:13+08:00",
+      "last_seen": "2026-04-07T14:50:01+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 33
+        "application/json": 38
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+            "document_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:50:01+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/connection/chart",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "document_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:50:01+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/connection/chart",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "document_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:50:01+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/connection/chart",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 33,
+          "count_seen": 38,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -1304,7 +1620,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 33
+        "XHR": 38
       },
       "sample_requests": [
         {
@@ -2943,7 +3259,7 @@
         }
       ],
       "status_codes": {
-        "200": 33
+        "200": 38
       }
     }
   },

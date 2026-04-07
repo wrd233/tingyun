@@ -1,15 +1,15 @@
 {
-  "count_seen": 5,
+  "count_seen": 12,
   "first_seen": "2026-04-03T15:40:49+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 5
+    "http://169.169.173.25:8080": 12
   },
-  "last_seen": "2026-04-03T15:41:32+08:00",
+  "last_seen": "2026-04-07T14:46:53+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 5,
+          "count_seen": 8,
           "dynamic_fields": [
             "body.beginTime",
             "body.endTime",
@@ -52,24 +52,125 @@
             "lang": "zh_CN",
             "timePeriod": "<DYNAMIC_NUMBER>"
           }
+        },
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "appMetaInfo",
+            "endTime": "2026-04-07 14:44",
+            "labels": {
+              "applicationIds": [
+                "1646"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": 2880
+          },
+          "key": "{\"action\":\"appMetaInfo\",\"endTime\":\"<DATETIME>\",\"labels\":{\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "labels",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "appMetaInfo",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
         }
       ],
-      "count_seen": 5,
+      "count_seen": 12,
       "first_seen": "2026-04-03T15:40:49+08:00",
       "inference_basis": [
         "path=graph/application/receive",
         "query params present"
       ],
       "inferred_purpose": "Likely related to graph / application",
-      "last_seen": "2026-04-03T15:41:32+08:00",
+      "last_seen": "2026-04-07T14:46:53+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 5
+        "application/json": 12
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+            "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:46:53+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+            "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:44:33+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:46:53+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:46:53+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/application/receive?appMetaInfo&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [],
           "example": {
             "appMetaInfo": "",
@@ -127,7 +228,7 @@
         "Content-Type": "application/json"
       },
       "resource_types": {
-        "XHR": 5
+        "XHR": 12
       },
       "sample_requests": [
         {
@@ -332,7 +433,7 @@
         }
       ],
       "status_codes": {
-        "200": 5
+        "200": 12
       }
     }
   },

@@ -1,15 +1,15 @@
 {
-  "count_seen": 1,
+  "count_seen": 6,
   "first_seen": "2026-04-03T15:42:53+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 1
+    "http://169.169.173.25:8080": 6
   },
-  "last_seen": "2026-04-03T15:42:53+08:00",
+  "last_seen": "2026-04-07T14:49:28+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 6,
           "dynamic_fields": [
             "body.applicationId",
             "body.bizSystemId",
@@ -52,21 +52,67 @@
           }
         }
       ],
-      "count_seen": 1,
+      "count_seen": 6,
       "first_seen": "2026-04-03T15:42:53+08:00",
       "inference_basis": [
         "path=webaction/list/interfaceList"
       ],
       "inferred_purpose": "Likely related to list",
-      "last_seen": "2026-04-03T15:42:53+08:00",
+      "last_seen": "2026-04-07T14:49:28+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 1
+        "application/json": 6
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:28+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/interface/list",
+          "document_url": "http://169.169.173.25:8080/web/server/interface/list",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/interface/list",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:28+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/interface/list",
+          "document_url": "http://169.169.173.25:8080/web/server/interface/list",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/interface/list",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:28+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 6,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -110,7 +156,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 1
+        "XHR": 6
       },
       "sample_requests": [
         {
@@ -134,6 +180,80 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-03T15:42:53+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList"
+        },
+        {
+          "body": {
+            "actionName": "",
+            "applicationId": "1645",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:15+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:49:15+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList"
+        },
+        {
+          "body": {
+            "actionName": "",
+            "applicationId": "0",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/list",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:18+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:49:18+08:00",
           "url": "http://169.169.173.25:8080/server-api/webaction/list/interfaceList"
         }
       ],
@@ -192,10 +312,212 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+                  "actionId": 13228,
+                  "actionName": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+                  "actionType": "IF",
+                  "alias": null,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "count": 823,
+                  "error": 9.96,
+                  "errorCount": 82,
+                  "favorite": false,
+                  "health": -1,
+                  "healthInfo": null,
+                  "healthOrder": 0,
+                  "maxThrought": 0.0,
+                  "pureAlias": null,
+                  "response": 33,
+                  "slowCount": 0,
+                  "throught": 0.02,
+                  "timePercentage": 100.0,
+                  "totalResponse": 27010
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 1
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:49:03 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": "SpringController/onlinePreview",
+                  "actionId": 13229,
+                  "actionName": "SpringController/onlinePreview",
+                  "actionType": "IF",
+                  "alias": null,
+                  "applicationId": 1646,
+                  "applicationName": "<REDACTED>",
+                  "count": 1565,
+                  "error": 0.06,
+                  "errorCount": 1,
+                  "favorite": false,
+                  "health": -1,
+                  "healthInfo": null,
+                  "healthOrder": 0,
+                  "maxThrought": 0.0,
+                  "pureAlias": null,
+                  "response": 2305,
+                  "slowCount": 442,
+                  "throught": 0.04,
+                  "timePercentage": 98.49,
+                  "totalResponse": 3607525
+                },
+                {
+                  "actionAlias": "URI/preview/error",
+                  "actionId": 20051,
+                  "actionName": "URI/preview/error",
+                  "actionType": "IF",
+                  "alias": null,
+                  "applicationId": 1646,
+                  "applicationName": "<REDACTED>",
+                  "count": 1,
+                  "error": 100.0,
+                  "errorCount": 1,
+                  "favorite": false,
+                  "health": -1,
+                  "healthInfo": null,
+                  "healthOrder": 0,
+                  "maxThrought": 0.0,
+                  "pureAlias": null,
+                  "response": 356,
+                  "slowCount": 0,
+                  "throught": 0.0,
+                  "timePercentage": 0.01,
+                  "totalResponse": 356
+                },
+                {
+                  "actionAlias": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+                  "actionId": 13167,
+                  "actionName": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+                  "actionType": "IF",
+                  "alias": null,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "count": 833,
+                  "error": 11.88,
+                  "errorCount": 99,
+                  "favorite": false,
+                  "health": -1,
+                  "healthInfo": null,
+                  "healthOrder": 0,
+                  "maxThrought": 0.0,
+                  "pureAlias": null,
+                  "response": 33,
+                  "slowCount": 0,
+                  "throught": 0.02,
+                  "timePercentage": 0.75,
+                  "totalResponse": 27549
+                },
+                {
+                  "actionAlias": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+                  "actionId": 13228,
+                  "actionName": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+                  "actionType": "IF",
+                  "alias": null,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "count": 823,
+                  "error": 9.96,
+                  "errorCount": 82,
+                  "favorite": false,
+                  "health": -1,
+                  "healthInfo": null,
+                  "healthOrder": 0,
+                  "maxThrought": 0.0,
+                  "pureAlias": null,
+                  "response": 33,
+                  "slowCount": 0,
+                  "throught": 0.02,
+                  "timePercentage": 0.74,
+                  "totalResponse": 27010
+                },
+                {
+                  "actionAlias": "SpringController/cleanOfficeCacheByKey",
+                  "actionId": 13330,
+                  "actionName": "SpringController/cleanOfficeCacheByKey",
+                  "actionType": "IF",
+                  "alias": null,
+                  "applicationId": 1646,
+                  "applicationName": "<REDACTED>",
+                  "count": 1572,
+                  "error": 0.0,
+                  "errorCount": 0,
+                  "favorite": false,
+                  "health": -1,
+                  "healthInfo": null,
+                  "healthOrder": 0,
+                  "maxThrought": 0.0,
+                  "pureAlias": null,
+                  "response": 0,
+                  "slowCount": 0,
+                  "throught": 0.04,
+                  "timePercentage": 0.01,
+                  "totalResponse": 302
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 5
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:49:06 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 1
+        "200": 6
       }
     }
   },

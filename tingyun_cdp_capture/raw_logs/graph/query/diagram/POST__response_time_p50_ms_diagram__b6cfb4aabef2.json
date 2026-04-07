@@ -1,0 +1,4868 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:46:27+08:00",
+    "completeness_score": 6227,
+    "first_seen_at": "2026-04-07T14:46:08+08:00",
+    "last_seen_at": "2026-04-07T14:46:27+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:27+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+          "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:46:27+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:27+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:27+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/query/diagram/POST__response_time_p50_ms_diagram__b6cfb4aabef2.json",
+    "resource_type": "XHR",
+    "seen_count": 6,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544386.991455
+  },
+  "method": "POST",
+  "metric": "response_time_p50_ms_diagram",
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+    "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:46:27+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:27+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:27+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:27+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/query/diagram",
+  "relative_path": "graph/query/diagram",
+  "request": {
+    "body": {
+      "endTime": "2026-04-07 14:46",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          1645
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "response_time_p50_ms_diagram",
+      "timePeriod": 2880,
+      "zoomTime": true
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC_NUMBER>"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "response_time_p50_ms_diagram",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "a5e4c2f5-62d4-b346-2346-b5012aa6d28e",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/detail/1645?actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:27+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/query/diagram",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "response_time_p50_ms_diagram"
+    },
+    "query_normalized": {
+      "lang": "zh_CN",
+      "metric": "response_time_p50_ms_diagram"
+    },
+    "raw_post_data": "{\"labels\":{\"applicationIds\":[1645],\"actionTypes\":[\"TX,IF\"]},\"timePeriod\":2880,\"endTime\":\"2026-04-07 14:46\",\"metric\":\"response_time_p50_ms_diagram\",\"zoomTime\":true,\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_p50_ms_diagram&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": {
+        "overviews": {
+          "granularitySeconds": 1800,
+          "response_time_P50": 0.0,
+          "response_time_millisecond_avg": 0.0,
+          "throughput_second": 406039.0
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "display": "3.92",
+                "header": "04-05 14:30--04-05 15:00",
+                "value": 3.92,
+                "x": 1775370600000,
+                "y": 3.92
+              },
+              {
+                "display": "4.03",
+                "header": "04-05 15:00--04-05 15:30",
+                "value": 4.03,
+                "x": 1775372400000,
+                "y": 4.03
+              },
+              {
+                "display": "4.01",
+                "header": "04-05 15:30--04-05 16:00",
+                "value": 4.01,
+                "x": 1775374200000,
+                "y": 4.01
+              },
+              {
+                "display": "3.84",
+                "header": "04-05 16:00--04-05 16:30",
+                "value": 3.84,
+                "x": 1775376000000,
+                "y": 3.84
+              },
+              {
+                "display": "4.35",
+                "header": "04-05 16:30--04-05 17:00",
+                "value": 4.35,
+                "x": 1775377800000,
+                "y": 4.35
+              },
+              {
+                "display": "3.77",
+                "header": "04-05 17:00--04-05 17:30",
+                "value": 3.77,
+                "x": 1775379600000,
+                "y": 3.77
+              },
+              {
+                "display": "3.91",
+                "header": "04-05 17:30--04-05 18:00",
+                "value": 3.91,
+                "x": 1775381400000,
+                "y": 3.91
+              },
+              {
+                "display": "3.94",
+                "header": "04-05 18:00--04-05 18:30",
+                "value": 3.94,
+                "x": 1775383200000,
+                "y": 3.94
+              },
+              {
+                "display": "4.26",
+                "header": "04-05 18:30--04-05 19:00",
+                "value": 4.26,
+                "x": 1775385000000,
+                "y": 4.26
+              },
+              {
+                "display": "4.01",
+                "header": "04-05 19:00--04-05 19:30",
+                "value": 4.01,
+                "x": 1775386800000,
+                "y": 4.01
+              },
+              {
+                "display": "3.88",
+                "header": "04-05 19:30--04-05 20:00",
+                "value": 3.88,
+                "x": 1775388600000,
+                "y": 3.88
+              },
+              {
+                "display": "4.01",
+                "header": "04-05 20:00--04-05 20:30",
+                "value": 4.01,
+                "x": 1775390400000,
+                "y": 4.01
+              },
+              {
+                "display": "3.88",
+                "header": "04-05 20:30--04-05 21:00",
+                "value": 3.88,
+                "x": 1775392200000,
+                "y": 3.88
+              },
+              {
+                "display": "4.42",
+                "header": "04-05 21:00--04-05 21:30",
+                "value": 4.42,
+                "x": 1775394000000,
+                "y": 4.42
+              },
+              {
+                "display": "3.95",
+                "header": "04-05 21:30--04-05 22:00",
+                "value": 3.95,
+                "x": 1775395800000,
+                "y": 3.95
+              },
+              {
+                "display": "3.85",
+                "header": "04-05 22:00--04-05 22:30",
+                "value": 3.85,
+                "x": 1775397600000,
+                "y": 3.85
+              },
+              {
+                "display": "3.69",
+                "header": "04-05 22:30--04-05 23:00",
+                "value": 3.69,
+                "x": 1775399400000,
+                "y": 3.69
+              },
+              {
+                "display": "69.07",
+                "header": "04-05 23:00--04-05 23:30",
+                "value": 69.07,
+                "x": 1775401200000,
+                "y": 69.07
+              },
+              {
+                "display": "3.83",
+                "header": "04-05 23:30--04-06 00:00",
+                "value": 3.83,
+                "x": 1775403000000,
+                "y": 3.83
+              },
+              {
+                "display": "4.09",
+                "header": "04-06 00:00--04-06 00:30",
+                "value": 4.09,
+                "x": 1775404800000,
+                "y": 4.09
+              },
+              {
+                "display": "3.73",
+                "header": "04-06 00:30--04-06 01:00",
+                "value": 3.73,
+                "x": 1775406600000,
+                "y": 3.73
+              },
+              {
+                "display": "4.31",
+                "header": "04-06 01:00--04-06 01:30",
+                "value": 4.31,
+                "x": 1775408400000,
+                "y": 4.31
+              },
+              {
+                "display": "3.77",
+                "header": "04-06 01:30--04-06 02:00",
+                "value": 3.77,
+                "x": 1775410200000,
+                "y": 3.77
+              },
+              {
+                "display": "3.85",
+                "header": "04-06 02:00--04-06 02:30",
+                "value": 3.85,
+                "x": 1775412000000,
+                "y": 3.85
+              },
+              {
+                "display": "3.76",
+                "header": "04-06 02:30--04-06 03:00",
+                "value": 3.76,
+                "x": 1775413800000,
+                "y": 3.76
+              },
+              {
+                "display": "3.75",
+                "header": "04-06 03:00--04-06 03:30",
+                "value": 3.75,
+                "x": 1775415600000,
+                "y": 3.75
+              },
+              {
+                "display": "3.73",
+                "header": "04-06 03:30--04-06 04:00",
+                "value": 3.73,
+                "x": 1775417400000,
+                "y": 3.73
+              },
+              {
+                "display": "3.74",
+                "header": "04-06 04:00--04-06 04:30",
+                "value": 3.74,
+                "x": 1775419200000,
+                "y": 3.74
+              },
+              {
+                "display": "3.71",
+                "header": "04-06 04:30--04-06 05:00",
+                "value": 3.71,
+                "x": 1775421000000,
+                "y": 3.71
+              },
+              {
+                "display": "25.07",
+                "header": "04-06 05:00--04-06 05:30",
+                "value": 25.07,
+                "x": 1775422800000,
+                "y": 25.07
+              },
+              {
+                "display": "3.77",
+                "header": "04-06 05:30--04-06 06:00",
+                "value": 3.77,
+                "x": 1775424600000,
+                "y": 3.77
+              },
+              {
+                "display": "3.77",
+                "header": "04-06 06:00--04-06 06:30",
+                "value": 3.77,
+                "x": 1775426400000,
+                "y": 3.77
+              },
+              {
+                "display": "3.92",
+                "header": "04-06 06:30--04-06 07:00",
+                "value": 3.92,
+                "x": 1775428200000,
+                "y": 3.92
+              },
+              {
+                "display": "3.99",
+                "header": "04-06 07:00--04-06 07:30",
+                "value": 3.99,
+                "x": 1775430000000,
+                "y": 3.99
+              },
+              {
+                "display": "4.69",
+                "header": "04-06 07:30--04-06 08:00",
+                "value": 4.69,
+                "x": 1775431800000,
+                "y": 4.69
+              },
+              {
+                "display": "4.12",
+                "header": "04-06 08:00--04-06 08:30",
+                "value": 4.12,
+                "x": 1775433600000,
+                "y": 4.12
+              },
+              {
+                "display": "4.02",
+                "header": "04-06 08:30--04-06 09:00",
+                "value": 4.02,
+                "x": 1775435400000,
+                "y": 4.02
+              },
+              {
+                "display": "4.55",
+                "header": "04-06 09:00--04-06 09:30",
+                "value": 4.55,
+                "x": 1775437200000,
+                "y": 4.55
+              },
+              {
+                "display": "4.54",
+                "header": "04-06 09:30--04-06 10:00",
+                "value": 4.54,
+                "x": 1775439000000,
+                "y": 4.54
+              },
+              {
+                "display": "4.51",
+                "header": "04-06 10:00--04-06 10:30",
+                "value": 4.51,
+                "x": 1775440800000,
+                "y": 4.51
+              },
+              {
+                "display": "4.03",
+                "header": "04-06 10:30--04-06 11:00",
+                "value": 4.03,
+                "x": 1775442600000,
+                "y": 4.03
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 11:00--04-06 11:30",
+                "value": 4.0,
+                "x": 1775444400000,
+                "y": 4.0
+              },
+              {
+                "display": "3.84",
+                "header": "04-06 11:30--04-06 12:00",
+                "value": 3.84,
+                "x": 1775446200000,
+                "y": 3.84
+              },
+              {
+                "display": "4.42",
+                "header": "04-06 12:00--04-06 12:30",
+                "value": 4.42,
+                "x": 1775448000000,
+                "y": 4.42
+              },
+              {
+                "display": "4.39",
+                "header": "04-06 12:30--04-06 13:00",
+                "value": 4.39,
+                "x": 1775449800000,
+                "y": 4.39
+              },
+              {
+                "display": "4.79",
+                "header": "04-06 13:00--04-06 13:30",
+                "value": 4.79,
+                "x": 1775451600000,
+                "y": 4.79
+              },
+              {
+                "display": "4.40",
+                "header": "04-06 13:30--04-06 14:00",
+                "value": 4.4,
+                "x": 1775453400000,
+                "y": 4.4
+              },
+              {
+                "display": "4.44",
+                "header": "04-06 14:00--04-06 14:30",
+                "value": 4.44,
+                "x": 1775455200000,
+                "y": 4.44
+              },
+              {
+                "display": "4.29",
+                "header": "04-06 14:30--04-06 15:00",
+                "value": 4.29,
+                "x": 1775457000000,
+                "y": 4.29
+              },
+              {
+                "display": "4.39",
+                "header": "04-06 15:00--04-06 15:30",
+                "value": 4.39,
+                "x": 1775458800000,
+                "y": 4.39
+              },
+              {
+                "display": "4.45",
+                "header": "04-06 15:30--04-06 16:00",
+                "value": 4.45,
+                "x": 1775460600000,
+                "y": 4.45
+              },
+              {
+                "display": "4.27",
+                "header": "04-06 16:00--04-06 16:30",
+                "value": 4.27,
+                "x": 1775462400000,
+                "y": 4.27
+              },
+              {
+                "display": "3.93",
+                "header": "04-06 16:30--04-06 17:00",
+                "value": 3.93,
+                "x": 1775464200000,
+                "y": 3.93
+              },
+              {
+                "display": "4.27",
+                "header": "04-06 17:00--04-06 17:30",
+                "value": 4.27,
+                "x": 1775466000000,
+                "y": 4.27
+              },
+              {
+                "display": "4.56",
+                "header": "04-06 17:30--04-06 18:00",
+                "value": 4.56,
+                "x": 1775467800000,
+                "y": 4.56
+              },
+              {
+                "display": "3.82",
+                "header": "04-06 18:00--04-06 18:30",
+                "value": 3.82,
+                "x": 1775469600000,
+                "y": 3.82
+              },
+              {
+                "display": "3.98",
+                "header": "04-06 18:30--04-06 19:00",
+                "value": 3.98,
+                "x": 1775471400000,
+                "y": 3.98
+              },
+              {
+                "display": "4.71",
+                "header": "04-06 19:00--04-06 19:30",
+                "value": 4.71,
+                "x": 1775473200000,
+                "y": 4.71
+              },
+              {
+                "display": "3.93",
+                "header": "04-06 19:30--04-06 20:00",
+                "value": 3.93,
+                "x": 1775475000000,
+                "y": 3.93
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 20:00--04-06 20:30",
+                "value": 4.0,
+                "x": 1775476800000,
+                "y": 4.0
+              },
+              {
+                "display": "4.42",
+                "header": "04-06 20:30--04-06 21:00",
+                "value": 4.42,
+                "x": 1775478600000,
+                "y": 4.42
+              },
+              {
+                "display": "3.93",
+                "header": "04-06 21:00--04-06 21:30",
+                "value": 3.93,
+                "x": 1775480400000,
+                "y": 3.93
+              },
+              {
+                "display": "4.12",
+                "header": "04-06 21:30--04-06 22:00",
+                "value": 4.12,
+                "x": 1775482200000,
+                "y": 4.12
+              },
+              {
+                "display": "3.88",
+                "header": "04-06 22:00--04-06 22:30",
+                "value": 3.88,
+                "x": 1775484000000,
+                "y": 3.88
+              },
+              {
+                "display": "3.94",
+                "header": "04-06 22:30--04-06 23:00",
+                "value": 3.94,
+                "x": 1775485800000,
+                "y": 3.94
+              },
+              {
+                "display": "69.25",
+                "header": "04-06 23:00--04-06 23:30",
+                "value": 69.25,
+                "x": 1775487600000,
+                "y": 69.25
+              },
+              {
+                "display": "3.70",
+                "header": "04-06 23:30--04-07 00:00",
+                "value": 3.7,
+                "x": 1775489400000,
+                "y": 3.7
+              },
+              {
+                "display": "3.91",
+                "header": "04-07 00:00--04-07 00:30",
+                "value": 3.91,
+                "x": 1775491200000,
+                "y": 3.91
+              },
+              {
+                "display": "3.72",
+                "header": "04-07 00:30--04-07 01:00",
+                "value": 3.72,
+                "x": 1775493000000,
+                "y": 3.72
+              },
+              {
+                "display": "4.45",
+                "header": "04-07 01:00--04-07 01:30",
+                "value": 4.45,
+                "x": 1775494800000,
+                "y": 4.45
+              },
+              {
+                "display": "3.71",
+                "header": "04-07 01:30--04-07 02:00",
+                "value": 3.71,
+                "x": 1775496600000,
+                "y": 3.71
+              },
+              {
+                "display": "3.73",
+                "header": "04-07 02:00--04-07 02:30",
+                "value": 3.73,
+                "x": 1775498400000,
+                "y": 3.73
+              },
+              {
+                "display": "3.73",
+                "header": "04-07 02:30--04-07 03:00",
+                "value": 3.73,
+                "x": 1775500200000,
+                "y": 3.73
+              },
+              {
+                "display": "4.20",
+                "header": "04-07 03:00--04-07 03:30",
+                "value": 4.2,
+                "x": 1775502000000,
+                "y": 4.2
+              },
+              {
+                "display": "3.69",
+                "header": "04-07 03:30--04-07 04:00",
+                "value": 3.69,
+                "x": 1775503800000,
+                "y": 3.69
+              },
+              {
+                "display": "3.74",
+                "header": "04-07 04:00--04-07 04:30",
+                "value": 3.74,
+                "x": 1775505600000,
+                "y": 3.74
+              },
+              {
+                "display": "3.73",
+                "header": "04-07 04:30--04-07 05:00",
+                "value": 3.73,
+                "x": 1775507400000,
+                "y": 3.73
+              },
+              {
+                "display": "69.12",
+                "header": "04-07 05:00--04-07 05:30",
+                "value": 69.12,
+                "x": 1775509200000,
+                "y": 69.12
+              },
+              {
+                "display": "4.96",
+                "header": "04-07 05:30--04-07 06:00",
+                "value": 4.96,
+                "x": 1775511000000,
+                "y": 4.96
+              },
+              {
+                "display": "23.49",
+                "header": "04-07 06:00--04-07 06:30",
+                "value": 23.49,
+                "x": 1775512800000,
+                "y": 23.49
+              },
+              {
+                "display": "17.69",
+                "header": "04-07 06:30--04-07 07:00",
+                "value": 17.69,
+                "x": 1775514600000,
+                "y": 17.69
+              },
+              {
+                "display": "16.23",
+                "header": "04-07 07:00--04-07 07:30",
+                "value": 16.23,
+                "x": 1775516400000,
+                "y": 16.23
+              },
+              {
+                "display": "4.93",
+                "header": "04-07 07:30--04-07 08:00",
+                "value": 4.93,
+                "x": 1775518200000,
+                "y": 4.93
+              },
+              {
+                "display": "4.85",
+                "header": "04-07 08:00--04-07 08:30",
+                "value": 4.85,
+                "x": 1775520000000,
+                "y": 4.85
+              },
+              {
+                "display": "4.76",
+                "header": "04-07 08:30--04-07 09:00",
+                "value": 4.76,
+                "x": 1775521800000,
+                "y": 4.76
+              },
+              {
+                "display": "4.84",
+                "header": "04-07 09:00--04-07 09:30",
+                "value": 4.84,
+                "x": 1775523600000,
+                "y": 4.84
+              },
+              {
+                "display": "4.63",
+                "header": "04-07 09:30--04-07 10:00",
+                "value": 4.63,
+                "x": 1775525400000,
+                "y": 4.63
+              },
+              {
+                "display": "4.65",
+                "header": "04-07 10:00--04-07 10:30",
+                "value": 4.65,
+                "x": 1775527200000,
+                "y": 4.65
+              },
+              {
+                "display": "4.71",
+                "header": "04-07 10:30--04-07 11:00",
+                "value": 4.71,
+                "x": 1775529000000,
+                "y": 4.71
+              },
+              {
+                "display": "4.80",
+                "header": "04-07 11:00--04-07 11:30",
+                "value": 4.8,
+                "x": 1775530800000,
+                "y": 4.8
+              },
+              {
+                "display": "5.05",
+                "header": "04-07 11:30--04-07 12:00",
+                "value": 5.05,
+                "x": 1775532600000,
+                "y": 5.05
+              },
+              {
+                "display": "4.81",
+                "header": "04-07 12:00--04-07 12:30",
+                "value": 4.81,
+                "x": 1775534400000,
+                "y": 4.81
+              },
+              {
+                "display": "4.70",
+                "header": "04-07 12:30--04-07 13:00",
+                "value": 4.7,
+                "x": 1775536200000,
+                "y": 4.7
+              },
+              {
+                "display": "4.81",
+                "header": "04-07 13:00--04-07 13:30",
+                "value": 4.81,
+                "x": 1775538000000,
+                "y": 4.81
+              },
+              {
+                "display": "4.85",
+                "header": "04-07 13:30--04-07 14:00",
+                "value": 4.85,
+                "x": 1775539800000,
+                "y": 4.85
+              },
+              {
+                "display": "4.75",
+                "header": "04-07 14:00--04-07 14:30",
+                "value": 4.75,
+                "x": 1775541600000,
+                "y": 4.75
+              },
+              {
+                "display": "4.79",
+                "header": "04-07 14:30--04-07 15:00",
+                "value": 4.79,
+                "x": 1775543400000,
+                "y": 4.79
+              }
+            ],
+            "name": "响应时间中位数",
+            "tooltip": {
+              "valueSuffix": " ms"
+            },
+            "type": "line",
+            "xAxis": 0,
+            "yAxis": 0,
+            "zIndex": 3
+          },
+          {
+            "data": [
+              {
+                "display": "15.00",
+                "header": "04-05 14:30--04-05 15:00",
+                "value": 15.0,
+                "x": 1775370600000,
+                "y": 15.0
+              },
+              {
+                "display": "44.00",
+                "header": "04-05 15:00--04-05 15:30",
+                "value": 44.0,
+                "x": 1775372400000,
+                "y": 44.0
+              },
+              {
+                "display": "23.00",
+                "header": "04-05 15:30--04-05 16:00",
+                "value": 23.0,
+                "x": 1775374200000,
+                "y": 23.0
+              },
+              {
+                "display": "47.00",
+                "header": "04-05 16:00--04-05 16:30",
+                "value": 47.0,
+                "x": 1775376000000,
+                "y": 47.0
+              },
+              {
+                "display": "49.00",
+                "header": "04-05 16:30--04-05 17:00",
+                "value": 49.0,
+                "x": 1775377800000,
+                "y": 49.0
+              },
+              {
+                "display": "15.00",
+                "header": "04-05 17:00--04-05 17:30",
+                "value": 15.0,
+                "x": 1775379600000,
+                "y": 15.0
+              },
+              {
+                "display": "23.00",
+                "header": "04-05 17:30--04-05 18:00",
+                "value": 23.0,
+                "x": 1775381400000,
+                "y": 23.0
+              },
+              {
+                "display": "26.00",
+                "header": "04-05 18:00--04-05 18:30",
+                "value": 26.0,
+                "x": 1775383200000,
+                "y": 26.0
+              },
+              {
+                "display": "30.00",
+                "header": "04-05 18:30--04-05 19:00",
+                "value": 30.0,
+                "x": 1775385000000,
+                "y": 30.0
+              },
+              {
+                "display": "55.00",
+                "header": "04-05 19:00--04-05 19:30",
+                "value": 55.0,
+                "x": 1775386800000,
+                "y": 55.0
+              },
+              {
+                "display": "15.00",
+                "header": "04-05 19:30--04-05 20:00",
+                "value": 15.0,
+                "x": 1775388600000,
+                "y": 15.0
+              },
+              {
+                "display": "25.00",
+                "header": "04-05 20:00--04-05 20:30",
+                "value": 25.0,
+                "x": 1775390400000,
+                "y": 25.0
+              },
+              {
+                "display": "21.00",
+                "header": "04-05 20:30--04-05 21:00",
+                "value": 21.0,
+                "x": 1775392200000,
+                "y": 21.0
+              },
+              {
+                "display": "84.00",
+                "header": "04-05 21:00--04-05 21:30",
+                "value": 84.0,
+                "x": 1775394000000,
+                "y": 84.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-05 21:30--04-05 22:00",
+                "value": 61.0,
+                "x": 1775395800000,
+                "y": 61.0
+              },
+              {
+                "display": "38.00",
+                "header": "04-05 22:00--04-05 22:30",
+                "value": 38.0,
+                "x": 1775397600000,
+                "y": 38.0
+              },
+              {
+                "display": "10.00",
+                "header": "04-05 22:30--04-05 23:00",
+                "value": 10.0,
+                "x": 1775399400000,
+                "y": 10.0
+              },
+              {
+                "display": "124.00",
+                "header": "04-05 23:00--04-05 23:30",
+                "value": 124.0,
+                "x": 1775401200000,
+                "y": 124.0
+              },
+              {
+                "display": "27.00",
+                "header": "04-05 23:30--04-06 00:00",
+                "value": 27.0,
+                "x": 1775403000000,
+                "y": 27.0
+              },
+              {
+                "display": "14.00",
+                "header": "04-06 00:00--04-06 00:30",
+                "value": 14.0,
+                "x": 1775404800000,
+                "y": 14.0
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 00:30--04-06 01:00",
+                "value": 4.0,
+                "x": 1775406600000,
+                "y": 4.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-06 01:00--04-06 01:30",
+                "value": 5.0,
+                "x": 1775408400000,
+                "y": 5.0
+              },
+              {
+                "display": "7.00",
+                "header": "04-06 01:30--04-06 02:00",
+                "value": 7.0,
+                "x": 1775410200000,
+                "y": 7.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-06 02:00--04-06 02:30",
+                "value": 6.0,
+                "x": 1775412000000,
+                "y": 6.0
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 02:30--04-06 03:00",
+                "value": 4.0,
+                "x": 1775413800000,
+                "y": 4.0
+              },
+              {
+                "display": "16.00",
+                "header": "04-06 03:00--04-06 03:30",
+                "value": 16.0,
+                "x": 1775415600000,
+                "y": 16.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-06 03:30--04-06 04:00",
+                "value": 6.0,
+                "x": 1775417400000,
+                "y": 6.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-06 04:00--04-06 04:30",
+                "value": 6.0,
+                "x": 1775419200000,
+                "y": 6.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-06 04:30--04-06 05:00",
+                "value": 5.0,
+                "x": 1775421000000,
+                "y": 5.0
+              },
+              {
+                "display": "55.00",
+                "header": "04-06 05:00--04-06 05:30",
+                "value": 55.0,
+                "x": 1775422800000,
+                "y": 55.0
+              },
+              {
+                "display": "8.00",
+                "header": "04-06 05:30--04-06 06:00",
+                "value": 8.0,
+                "x": 1775424600000,
+                "y": 8.0
+              },
+              {
+                "display": "9.00",
+                "header": "04-06 06:00--04-06 06:30",
+                "value": 9.0,
+                "x": 1775426400000,
+                "y": 9.0
+              },
+              {
+                "display": "38.00",
+                "header": "04-06 06:30--04-06 07:00",
+                "value": 38.0,
+                "x": 1775428200000,
+                "y": 38.0
+              },
+              {
+                "display": "17.00",
+                "header": "04-06 07:00--04-06 07:30",
+                "value": 17.0,
+                "x": 1775430000000,
+                "y": 17.0
+              },
+              {
+                "display": "43.00",
+                "header": "04-06 07:30--04-06 08:00",
+                "value": 43.0,
+                "x": 1775431800000,
+                "y": 43.0
+              },
+              {
+                "display": "42.00",
+                "header": "04-06 08:00--04-06 08:30",
+                "value": 42.0,
+                "x": 1775433600000,
+                "y": 42.0
+              },
+              {
+                "display": "42.00",
+                "header": "04-06 08:30--04-06 09:00",
+                "value": 42.0,
+                "x": 1775435400000,
+                "y": 42.0
+              },
+              {
+                "display": "60.00",
+                "header": "04-06 09:00--04-06 09:30",
+                "value": 60.0,
+                "x": 1775437200000,
+                "y": 60.0
+              },
+              {
+                "display": "132.00",
+                "header": "04-06 09:30--04-06 10:00",
+                "value": 132.0,
+                "x": 1775439000000,
+                "y": 132.0
+              },
+              {
+                "display": "112.00",
+                "header": "04-06 10:00--04-06 10:30",
+                "value": 112.0,
+                "x": 1775440800000,
+                "y": 112.0
+              },
+              {
+                "display": "22.00",
+                "header": "04-06 10:30--04-06 11:00",
+                "value": 22.0,
+                "x": 1775442600000,
+                "y": 22.0
+              },
+              {
+                "display": "53.00",
+                "header": "04-06 11:00--04-06 11:30",
+                "value": 53.0,
+                "x": 1775444400000,
+                "y": 53.0
+              },
+              {
+                "display": "18.00",
+                "header": "04-06 11:30--04-06 12:00",
+                "value": 18.0,
+                "x": 1775446200000,
+                "y": 18.0
+              },
+              {
+                "display": "58.00",
+                "header": "04-06 12:00--04-06 12:30",
+                "value": 58.0,
+                "x": 1775448000000,
+                "y": 58.0
+              },
+              {
+                "display": "47.00",
+                "header": "04-06 12:30--04-06 13:00",
+                "value": 47.0,
+                "x": 1775449800000,
+                "y": 47.0
+              },
+              {
+                "display": "69.00",
+                "header": "04-06 13:00--04-06 13:30",
+                "value": 69.0,
+                "x": 1775451600000,
+                "y": 69.0
+              },
+              {
+                "display": "39.00",
+                "header": "04-06 13:30--04-06 14:00",
+                "value": 39.0,
+                "x": 1775453400000,
+                "y": 39.0
+              },
+              {
+                "display": "88.00",
+                "header": "04-06 14:00--04-06 14:30",
+                "value": 88.0,
+                "x": 1775455200000,
+                "y": 88.0
+              },
+              {
+                "display": "28.00",
+                "header": "04-06 14:30--04-06 15:00",
+                "value": 28.0,
+                "x": 1775457000000,
+                "y": 28.0
+              },
+              {
+                "display": "29.00",
+                "header": "04-06 15:00--04-06 15:30",
+                "value": 29.0,
+                "x": 1775458800000,
+                "y": 29.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-06 15:30--04-06 16:00",
+                "value": 61.0,
+                "x": 1775460600000,
+                "y": 61.0
+              },
+              {
+                "display": "38.00",
+                "header": "04-06 16:00--04-06 16:30",
+                "value": 38.0,
+                "x": 1775462400000,
+                "y": 38.0
+              },
+              {
+                "display": "90.00",
+                "header": "04-06 16:30--04-06 17:00",
+                "value": 90.0,
+                "x": 1775464200000,
+                "y": 90.0
+              },
+              {
+                "display": "44.00",
+                "header": "04-06 17:00--04-06 17:30",
+                "value": 44.0,
+                "x": 1775466000000,
+                "y": 44.0
+              },
+              {
+                "display": "40.00",
+                "header": "04-06 17:30--04-06 18:00",
+                "value": 40.0,
+                "x": 1775467800000,
+                "y": 40.0
+              },
+              {
+                "display": "17.00",
+                "header": "04-06 18:00--04-06 18:30",
+                "value": 17.0,
+                "x": 1775469600000,
+                "y": 17.0
+              },
+              {
+                "display": "40.00",
+                "header": "04-06 18:30--04-06 19:00",
+                "value": 40.0,
+                "x": 1775471400000,
+                "y": 40.0
+              },
+              {
+                "display": "51.00",
+                "header": "04-06 19:00--04-06 19:30",
+                "value": 51.0,
+                "x": 1775473200000,
+                "y": 51.0
+              },
+              {
+                "display": "33.00",
+                "header": "04-06 19:30--04-06 20:00",
+                "value": 33.0,
+                "x": 1775475000000,
+                "y": 33.0
+              },
+              {
+                "display": "51.00",
+                "header": "04-06 20:00--04-06 20:30",
+                "value": 51.0,
+                "x": 1775476800000,
+                "y": 51.0
+              },
+              {
+                "display": "52.00",
+                "header": "04-06 20:30--04-06 21:00",
+                "value": 52.0,
+                "x": 1775478600000,
+                "y": 52.0
+              },
+              {
+                "display": "39.00",
+                "header": "04-06 21:00--04-06 21:30",
+                "value": 39.0,
+                "x": 1775480400000,
+                "y": 39.0
+              },
+              {
+                "display": "40.00",
+                "header": "04-06 21:30--04-06 22:00",
+                "value": 40.0,
+                "x": 1775482200000,
+                "y": 40.0
+              },
+              {
+                "display": "14.00",
+                "header": "04-06 22:00--04-06 22:30",
+                "value": 14.0,
+                "x": 1775484000000,
+                "y": 14.0
+              },
+              {
+                "display": "42.00",
+                "header": "04-06 22:30--04-06 23:00",
+                "value": 42.0,
+                "x": 1775485800000,
+                "y": 42.0
+              },
+              {
+                "display": "71.00",
+                "header": "04-06 23:00--04-06 23:30",
+                "value": 71.0,
+                "x": 1775487600000,
+                "y": 71.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-06 23:30--04-07 00:00",
+                "value": 5.0,
+                "x": 1775489400000,
+                "y": 5.0
+              },
+              {
+                "display": "8.00",
+                "header": "04-07 00:00--04-07 00:30",
+                "value": 8.0,
+                "x": 1775491200000,
+                "y": 8.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 00:30--04-07 01:00",
+                "value": 5.0,
+                "x": 1775493000000,
+                "y": 5.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-07 01:00--04-07 01:30",
+                "value": 6.0,
+                "x": 1775494800000,
+                "y": 6.0
+              },
+              {
+                "display": "12.00",
+                "header": "04-07 01:30--04-07 02:00",
+                "value": 12.0,
+                "x": 1775496600000,
+                "y": 12.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 02:00--04-07 02:30",
+                "value": 5.0,
+                "x": 1775498400000,
+                "y": 5.0
+              },
+              {
+                "display": "204.00",
+                "header": "04-07 02:30--04-07 03:00",
+                "value": 204.0,
+                "x": 1775500200000,
+                "y": 204.0
+              },
+              {
+                "display": "92.00",
+                "header": "04-07 03:00--04-07 03:30",
+                "value": 92.0,
+                "x": 1775502000000,
+                "y": 92.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 03:30--04-07 04:00",
+                "value": 5.0,
+                "x": 1775503800000,
+                "y": 5.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 04:00--04-07 04:30",
+                "value": 5.0,
+                "x": 1775505600000,
+                "y": 5.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-07 04:30--04-07 05:00",
+                "value": 6.0,
+                "x": 1775507400000,
+                "y": 6.0
+              },
+              {
+                "display": "92.00",
+                "header": "04-07 05:00--04-07 05:30",
+                "value": 92.0,
+                "x": 1775509200000,
+                "y": 92.0
+              },
+              {
+                "display": "27.00",
+                "header": "04-07 05:30--04-07 06:00",
+                "value": 27.0,
+                "x": 1775511000000,
+                "y": 27.0
+              },
+              {
+                "display": "45.00",
+                "header": "04-07 06:00--04-07 06:30",
+                "value": 45.0,
+                "x": 1775512800000,
+                "y": 45.0
+              },
+              {
+                "display": "73.00",
+                "header": "04-07 06:30--04-07 07:00",
+                "value": 73.0,
+                "x": 1775514600000,
+                "y": 73.0
+              },
+              {
+                "display": "91.00",
+                "header": "04-07 07:00--04-07 07:30",
+                "value": 91.0,
+                "x": 1775516400000,
+                "y": 91.0
+              },
+              {
+                "display": "83.00",
+                "header": "04-07 07:30--04-07 08:00",
+                "value": 83.0,
+                "x": 1775518200000,
+                "y": 83.0
+              },
+              {
+                "display": "72.00",
+                "header": "04-07 08:00--04-07 08:30",
+                "value": 72.0,
+                "x": 1775520000000,
+                "y": 72.0
+              },
+              {
+                "display": "59.00",
+                "header": "04-07 08:30--04-07 09:00",
+                "value": 59.0,
+                "x": 1775521800000,
+                "y": 59.0
+              },
+              {
+                "display": "58.00",
+                "header": "04-07 09:00--04-07 09:30",
+                "value": 58.0,
+                "x": 1775523600000,
+                "y": 58.0
+              },
+              {
+                "display": "60.00",
+                "header": "04-07 09:30--04-07 10:00",
+                "value": 60.0,
+                "x": 1775525400000,
+                "y": 60.0
+              },
+              {
+                "display": "56.00",
+                "header": "04-07 10:00--04-07 10:30",
+                "value": 56.0,
+                "x": 1775527200000,
+                "y": 56.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-07 10:30--04-07 11:00",
+                "value": 61.0,
+                "x": 1775529000000,
+                "y": 61.0
+              },
+              {
+                "display": "146.00",
+                "header": "04-07 11:00--04-07 11:30",
+                "value": 146.0,
+                "x": 1775530800000,
+                "y": 146.0
+              },
+              {
+                "display": "96.00",
+                "header": "04-07 11:30--04-07 12:00",
+                "value": 96.0,
+                "x": 1775532600000,
+                "y": 96.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-07 12:00--04-07 12:30",
+                "value": 61.0,
+                "x": 1775534400000,
+                "y": 61.0
+              },
+              {
+                "display": "52.00",
+                "header": "04-07 12:30--04-07 13:00",
+                "value": 52.0,
+                "x": 1775536200000,
+                "y": 52.0
+              },
+              {
+                "display": "67.00",
+                "header": "04-07 13:00--04-07 13:30",
+                "value": 67.0,
+                "x": 1775538000000,
+                "y": 67.0
+              },
+              {
+                "display": "71.00",
+                "header": "04-07 13:30--04-07 14:00",
+                "value": 71.0,
+                "x": 1775539800000,
+                "y": 71.0
+              },
+              {
+                "display": "70.00",
+                "header": "04-07 14:00--04-07 14:30",
+                "value": 70.0,
+                "x": 1775541600000,
+                "y": 70.0
+              },
+              {
+                "display": "62.00",
+                "header": "04-07 14:30--04-07 15:00",
+                "value": 62.0,
+                "x": 1775543400000,
+                "y": 62.0
+              }
+            ],
+            "name": "平均响应时间",
+            "tooltip": {
+              "valueSuffix": " ms"
+            },
+            "type": "line",
+            "xAxis": 0,
+            "yAxis": 0,
+            "yaxisProperties": {
+              "opposite": false,
+              "tickUnit": "ms"
+            },
+            "zIndex": 3
+          },
+          {
+            "data": [
+              {
+                "display": "0.09",
+                "header": "04-05 14:30--04-05 15:00",
+                "total": 158.0,
+                "value": 0.09,
+                "x": 1775370600000,
+                "y": 0.09
+              },
+              {
+                "display": "0.22",
+                "header": "04-05 15:00--04-05 15:30",
+                "total": 394.0,
+                "value": 0.22,
+                "x": 1775372400000,
+                "y": 0.22
+              },
+              {
+                "display": "0.22",
+                "header": "04-05 15:30--04-05 16:00",
+                "total": 387.0,
+                "value": 0.22,
+                "x": 1775374200000,
+                "y": 0.22
+              },
+              {
+                "display": "0.60",
+                "header": "04-05 16:00--04-05 16:30",
+                "total": 1086.0,
+                "value": 0.6,
+                "x": 1775376000000,
+                "y": 0.6
+              },
+              {
+                "display": "2.32",
+                "header": "04-05 16:30--04-05 17:00",
+                "total": 4178.0,
+                "value": 2.32,
+                "x": 1775377800000,
+                "y": 2.32
+              },
+              {
+                "display": "0.19",
+                "header": "04-05 17:00--04-05 17:30",
+                "total": 335.0,
+                "value": 0.19,
+                "x": 1775379600000,
+                "y": 0.19
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 17:30--04-05 18:00",
+                "total": 357.0,
+                "value": 0.2,
+                "x": 1775381400000,
+                "y": 0.2
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 18:00--04-05 18:30",
+                "total": 360.0,
+                "value": 0.2,
+                "x": 1775383200000,
+                "y": 0.2
+              },
+              {
+                "display": "0.32",
+                "header": "04-05 18:30--04-05 19:00",
+                "total": 584.0,
+                "value": 0.32,
+                "x": 1775385000000,
+                "y": 0.32
+              },
+              {
+                "display": "0.23",
+                "header": "04-05 19:00--04-05 19:30",
+                "total": 410.0,
+                "value": 0.23,
+                "x": 1775386800000,
+                "y": 0.23
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 19:30--04-05 20:00",
+                "total": 354.0,
+                "value": 0.2,
+                "x": 1775388600000,
+                "y": 0.2
+              },
+              {
+                "display": "0.32",
+                "header": "04-05 20:00--04-05 20:30",
+                "total": 567.0,
+                "value": 0.32,
+                "x": 1775390400000,
+                "y": 0.32
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 20:30--04-05 21:00",
+                "total": 359.0,
+                "value": 0.2,
+                "x": 1775392200000,
+                "y": 0.2
+              },
+              {
+                "display": "0.35",
+                "header": "04-05 21:00--04-05 21:30",
+                "total": 621.0,
+                "value": 0.35,
+                "x": 1775394000000,
+                "y": 0.35
+              },
+              {
+                "display": "0.41",
+                "header": "04-05 21:30--04-05 22:00",
+                "total": 729.0,
+                "value": 0.41,
+                "x": 1775395800000,
+                "y": 0.41
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 22:00--04-05 22:30",
+                "total": 360.0,
+                "value": 0.2,
+                "x": 1775397600000,
+                "y": 0.2
+              },
+              {
+                "display": "0.17",
+                "header": "04-05 22:30--04-05 23:00",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775399400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.94",
+                "header": "04-05 23:00--04-05 23:30",
+                "total": 1683.0,
+                "value": 0.94,
+                "x": 1775401200000,
+                "y": 0.94
+              },
+              {
+                "display": "0.19",
+                "header": "04-05 23:30--04-06 00:00",
+                "total": 350.0,
+                "value": 0.19,
+                "x": 1775403000000,
+                "y": 0.19
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 00:00--04-06 00:30",
+                "total": 297.0,
+                "value": 0.17,
+                "x": 1775404800000,
+                "y": 0.17
+              },
+              {
+                "display": "0.15",
+                "header": "04-06 00:30--04-06 01:00",
+                "total": 269.0,
+                "value": 0.15,
+                "x": 1775406600000,
+                "y": 0.15
+              },
+              {
+                "display": "0.71",
+                "header": "04-06 01:00--04-06 01:30",
+                "total": 1285.0,
+                "value": 0.71,
+                "x": 1775408400000,
+                "y": 0.71
+              },
+              {
+                "display": "0.16",
+                "header": "04-06 01:30--04-06 02:00",
+                "total": 281.0,
+                "value": 0.16,
+                "x": 1775410200000,
+                "y": 0.16
+              },
+              {
+                "display": "0.14",
+                "header": "04-06 02:00--04-06 02:30",
+                "total": 256.0,
+                "value": 0.14,
+                "x": 1775412000000,
+                "y": 0.14
+              },
+              {
+                "display": "0.15",
+                "header": "04-06 02:30--04-06 03:00",
+                "total": 268.0,
+                "value": 0.15,
+                "x": 1775413800000,
+                "y": 0.15
+              },
+              {
+                "display": "0.16",
+                "header": "04-06 03:00--04-06 03:30",
+                "total": 290.0,
+                "value": 0.16,
+                "x": 1775415600000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 03:30--04-06 04:00",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775417400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 04:00--04-06 04:30",
+                "total": 306.0,
+                "value": 0.17,
+                "x": 1775419200000,
+                "y": 0.17
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 04:30--04-06 05:00",
+                "total": 301.0,
+                "value": 0.17,
+                "x": 1775421000000,
+                "y": 0.17
+              },
+              {
+                "display": "1.71",
+                "header": "04-06 05:00--04-06 05:30",
+                "total": 3074.0,
+                "value": 1.71,
+                "x": 1775422800000,
+                "y": 1.71
+              },
+              {
+                "display": "0.18",
+                "header": "04-06 05:30--04-06 06:00",
+                "total": 316.0,
+                "value": 0.18,
+                "x": 1775424600000,
+                "y": 0.18
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 06:00--04-06 06:30",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775426400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.24",
+                "header": "04-06 06:30--04-06 07:00",
+                "total": 433.0,
+                "value": 0.24,
+                "x": 1775428200000,
+                "y": 0.24
+              },
+              {
+                "display": "0.19",
+                "header": "04-06 07:00--04-06 07:30",
+                "total": 348.0,
+                "value": 0.19,
+                "x": 1775430000000,
+                "y": 0.19
+              },
+              {
+                "display": "0.27",
+                "header": "04-06 07:30--04-06 08:00",
+                "total": 491.0,
+                "value": 0.27,
+                "x": 1775431800000,
+                "y": 0.27
+              },
+              {
+                "display": "0.22",
+                "header": "04-06 08:00--04-06 08:30",
+                "total": 390.0,
+                "value": 0.22,
+                "x": 1775433600000,
+                "y": 0.22
+              },
+              {
+                "display": "0.20",
+                "header": "04-06 08:30--04-06 09:00",
+                "total": 360.0,
+                "value": 0.2,
+                "x": 1775435400000,
+                "y": 0.2
+              },
+              {
+                "display": "0.47",
+                "header": "04-06 09:00--04-06 09:30",
+                "total": 854.0,
+                "value": 0.47,
+                "x": 1775437200000,
+                "y": 0.47
+              },
+              {
+                "display": "0.62",
+                "header": "04-06 09:30--04-06 10:00",
+                "total": 1123.0,
+                "value": 0.62,
+                "x": 1775439000000,
+                "y": 0.62
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 10:00--04-06 10:30",
+                "total": 742.0,
+                "value": 0.41,
+                "x": 1775440800000,
+                "y": 0.41
+              },
+              {
+                "display": "0.20",
+                "header": "04-06 10:30--04-06 11:00",
+                "total": 362.0,
+                "value": 0.2,
+                "x": 1775442600000,
+                "y": 0.2
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 11:00--04-06 11:30",
+                "total": 736.0,
+                "value": 0.41,
+                "x": 1775444400000,
+                "y": 0.41
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 11:30--04-06 12:00",
+                "total": 729.0,
+                "value": 0.41,
+                "x": 1775446200000,
+                "y": 0.41
+              },
+              {
+                "display": "2.27",
+                "header": "04-06 12:00--04-06 12:30",
+                "total": 4083.0,
+                "value": 2.27,
+                "x": 1775448000000,
+                "y": 2.27
+              },
+              {
+                "display": "2.95",
+                "header": "04-06 12:30--04-06 13:00",
+                "total": 5301.0,
+                "value": 2.95,
+                "x": 1775449800000,
+                "y": 2.95
+              },
+              {
+                "display": "2.44",
+                "header": "04-06 13:00--04-06 13:30",
+                "total": 4393.0,
+                "value": 2.44,
+                "x": 1775451600000,
+                "y": 2.44
+              },
+              {
+                "display": "0.48",
+                "header": "04-06 13:30--04-06 14:00",
+                "total": 872.0,
+                "value": 0.48,
+                "x": 1775453400000,
+                "y": 0.48
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 14:00--04-06 14:30",
+                "total": 736.0,
+                "value": 0.41,
+                "x": 1775455200000,
+                "y": 0.41
+              },
+              {
+                "display": "0.25",
+                "header": "04-06 14:30--04-06 15:00",
+                "total": 456.0,
+                "value": 0.25,
+                "x": 1775457000000,
+                "y": 0.25
+              },
+              {
+                "display": "0.24",
+                "header": "04-06 15:00--04-06 15:30",
+                "total": 424.0,
+                "value": 0.24,
+                "x": 1775458800000,
+                "y": 0.24
+              },
+              {
+                "display": "0.33",
+                "header": "04-06 15:30--04-06 16:00",
+                "total": 602.0,
+                "value": 0.33,
+                "x": 1775460600000,
+                "y": 0.33
+              },
+              {
+                "display": "0.23",
+                "header": "04-06 16:00--04-06 16:30",
+                "total": 417.0,
+                "value": 0.23,
+                "x": 1775462400000,
+                "y": 0.23
+              },
+              {
+                "display": "0.19",
+                "header": "04-06 16:30--04-06 17:00",
+                "total": 342.0,
+                "value": 0.19,
+                "x": 1775464200000,
+                "y": 0.19
+              },
+              {
+                "display": "0.37",
+                "header": "04-06 17:00--04-06 17:30",
+                "total": 659.0,
+                "value": 0.37,
+                "x": 1775466000000,
+                "y": 0.37
+              },
+              {
+                "display": "0.36",
+                "header": "04-06 17:30--04-06 18:00",
+                "total": 655.0,
+                "value": 0.36,
+                "x": 1775467800000,
+                "y": 0.36
+              },
+              {
+                "display": "0.18",
+                "header": "04-06 18:00--04-06 18:30",
+                "total": 316.0,
+                "value": 0.18,
+                "x": 1775469600000,
+                "y": 0.18
+              },
+              {
+                "display": "0.20",
+                "header": "04-06 18:30--04-06 19:00",
+                "total": 362.0,
+                "value": 0.2,
+                "x": 1775471400000,
+                "y": 0.2
+              },
+              {
+                "display": "0.75",
+                "header": "04-06 19:00--04-06 19:30",
+                "total": 1348.0,
+                "value": 0.75,
+                "x": 1775473200000,
+                "y": 0.75
+              },
+              {
+                "display": "0.48",
+                "header": "04-06 19:30--04-06 20:00",
+                "total": 855.0,
+                "value": 0.48,
+                "x": 1775475000000,
+                "y": 0.48
+              },
+              {
+                "display": "0.33",
+                "header": "04-06 20:00--04-06 20:30",
+                "total": 585.0,
+                "value": 0.33,
+                "x": 1775476800000,
+                "y": 0.33
+              },
+              {
+                "display": "0.55",
+                "header": "04-06 20:30--04-06 21:00",
+                "total": 996.0,
+                "value": 0.55,
+                "x": 1775478600000,
+                "y": 0.55
+              },
+              {
+                "display": "0.29",
+                "header": "04-06 21:00--04-06 21:30",
+                "total": 518.0,
+                "value": 0.29,
+                "x": 1775480400000,
+                "y": 0.29
+              },
+              {
+                "display": "0.39",
+                "header": "04-06 21:30--04-06 22:00",
+                "total": 700.0,
+                "value": 0.39,
+                "x": 1775482200000,
+                "y": 0.39
+              },
+              {
+                "display": "0.18",
+                "header": "04-06 22:00--04-06 22:30",
+                "total": 324.0,
+                "value": 0.18,
+                "x": 1775484000000,
+                "y": 0.18
+              },
+              {
+                "display": "0.19",
+                "header": "04-06 22:30--04-06 23:00",
+                "total": 341.0,
+                "value": 0.19,
+                "x": 1775485800000,
+                "y": 0.19
+              },
+              {
+                "display": "0.92",
+                "header": "04-06 23:00--04-06 23:30",
+                "total": 1650.0,
+                "value": 0.92,
+                "x": 1775487600000,
+                "y": 0.92
+              },
+              {
+                "display": "0.16",
+                "header": "04-06 23:30--04-07 00:00",
+                "total": 294.0,
+                "value": 0.16,
+                "x": 1775489400000,
+                "y": 0.16
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 00:00--04-07 00:30",
+                "total": 287.0,
+                "value": 0.16,
+                "x": 1775491200000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 00:30--04-07 01:00",
+                "total": 300.0,
+                "value": 0.17,
+                "x": 1775493000000,
+                "y": 0.17
+              },
+              {
+                "display": "0.75",
+                "header": "04-07 01:00--04-07 01:30",
+                "total": 1341.0,
+                "value": 0.75,
+                "x": 1775494800000,
+                "y": 0.75
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 01:30--04-07 02:00",
+                "total": 298.0,
+                "value": 0.17,
+                "x": 1775496600000,
+                "y": 0.17
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 02:00--04-07 02:30",
+                "total": 286.0,
+                "value": 0.16,
+                "x": 1775498400000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 02:30--04-07 03:00",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775500200000,
+                "y": 0.17
+              },
+              {
+                "display": "0.20",
+                "header": "04-07 03:00--04-07 03:30",
+                "total": 358.0,
+                "value": 0.2,
+                "x": 1775502000000,
+                "y": 0.2
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 03:30--04-07 04:00",
+                "total": 286.0,
+                "value": 0.16,
+                "x": 1775503800000,
+                "y": 0.16
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 04:00--04-07 04:30",
+                "total": 295.0,
+                "value": 0.16,
+                "x": 1775505600000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 04:30--04-07 05:00",
+                "total": 297.0,
+                "value": 0.17,
+                "x": 1775507400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.47",
+                "header": "04-07 05:00--04-07 05:30",
+                "total": 843.0,
+                "value": 0.47,
+                "x": 1775509200000,
+                "y": 0.47
+              },
+              {
+                "display": "0.28",
+                "header": "04-07 05:30--04-07 06:00",
+                "total": 495.0,
+                "value": 0.28,
+                "x": 1775511000000,
+                "y": 0.28
+              },
+              {
+                "display": "0.82",
+                "header": "04-07 06:00--04-07 06:30",
+                "total": 1468.0,
+                "value": 0.82,
+                "x": 1775512800000,
+                "y": 0.82
+              },
+              {
+                "display": "0.49",
+                "header": "04-07 06:30--04-07 07:00",
+                "total": 874.0,
+                "value": 0.49,
+                "x": 1775514600000,
+                "y": 0.49
+              },
+              {
+                "display": "0.44",
+                "header": "04-07 07:00--04-07 07:30",
+                "total": 795.0,
+                "value": 0.44,
+                "x": 1775516400000,
+                "y": 0.44
+              },
+              {
+                "display": "3.62",
+                "header": "04-07 07:30--04-07 08:00",
+                "total": 6520.0,
+                "value": 3.62,
+                "x": 1775518200000,
+                "y": 3.62
+              },
+              {
+                "display": "15.15",
+                "header": "04-07 08:00--04-07 08:30",
+                "total": 27268.0,
+                "value": 15.15,
+                "x": 1775520000000,
+                "y": 15.15
+              },
+              {
+                "display": "18.07",
+                "header": "04-07 08:30--04-07 09:00",
+                "total": 32529.0,
+                "value": 18.07,
+                "x": 1775521800000,
+                "y": 18.07
+              },
+              {
+                "display": "20.95",
+                "header": "04-07 09:00--04-07 09:30",
+                "total": 37710.0,
+                "value": 20.95,
+                "x": 1775523600000,
+                "y": 20.95
+              },
+              {
+                "display": "24.97",
+                "header": "04-07 09:30--04-07 10:00",
+                "total": 44939.0,
+                "value": 24.97,
+                "x": 1775525400000,
+                "y": 24.97
+              },
+              {
+                "display": "17.39",
+                "header": "04-07 10:00--04-07 10:30",
+                "total": 31295.0,
+                "value": 17.39,
+                "x": 1775527200000,
+                "y": 17.39
+              },
+              {
+                "display": "15.57",
+                "header": "04-07 10:30--04-07 11:00",
+                "total": 28028.0,
+                "value": 15.57,
+                "x": 1775529000000,
+                "y": 15.57
+              },
+              {
+                "display": "12.08",
+                "header": "04-07 11:00--04-07 11:30",
+                "total": 21745.0,
+                "value": 12.08,
+                "x": 1775530800000,
+                "y": 12.08
+              },
+              {
+                "display": "3.20",
+                "header": "04-07 11:30--04-07 12:00",
+                "total": 5752.0,
+                "value": 3.2,
+                "x": 1775532600000,
+                "y": 3.2
+              },
+              {
+                "display": "3.50",
+                "header": "04-07 12:00--04-07 12:30",
+                "total": 6294.0,
+                "value": 3.5,
+                "x": 1775534400000,
+                "y": 3.5
+              },
+              {
+                "display": "4.27",
+                "header": "04-07 12:30--04-07 13:00",
+                "total": 7692.0,
+                "value": 4.27,
+                "x": 1775536200000,
+                "y": 4.27
+              },
+              {
+                "display": "11.17",
+                "header": "04-07 13:00--04-07 13:30",
+                "total": 20113.0,
+                "value": 11.17,
+                "x": 1775538000000,
+                "y": 11.17
+              },
+              {
+                "display": "13.11",
+                "header": "04-07 13:30--04-07 14:00",
+                "total": 23594.0,
+                "value": 13.11,
+                "x": 1775539800000,
+                "y": 13.11
+              },
+              {
+                "display": "19.32",
+                "header": "04-07 14:00--04-07 14:30",
+                "total": 34782.0,
+                "value": 19.32,
+                "x": 1775541600000,
+                "y": 19.32
+              },
+              {
+                "display": "7.94",
+                "header": "04-07 14:30--04-07 15:00",
+                "total": 14287.0,
+                "value": 7.94,
+                "x": 1775543400000,
+                "y": 7.94
+              }
+            ],
+            "name": "吞吐率",
+            "tooltip": {
+              "valueSuffix": " /s"
+            },
+            "type": "column",
+            "xAxis": 0,
+            "yAxis": 1,
+            "yaxisProperties": {
+              "opposite": true,
+              "tickUnit": "/s"
+            },
+            "zIndex": 1
+          }
+        ],
+        "tooltip": "{\"backgroundColor\":null,\"borderColor\":null,\"borderWidth\":0,\"followPointer\":true,\"footerFormat\":\"</ul></div></div></div>\",\"headerFormat\":\"<div class='bubble-box'><div class='bubble-wrap pad-10'><div class='bubble-time'>{point.point.options.header}</div><div><ul>\",\"padding\":0,\"pointFormat\":\"<li><span class='bubble-main-left pull-left'>{series.name}:</span><span class='bubble-main-right pull-right'>{point.display} {point.series.userOptions.tooltip.valueSuffix}</span></li>\",\"shadow\":false,\"shared\":true,\"useHTML\":true}",
+        "xAxis": {
+          "categories": [
+            "1775371560000",
+            "1775373360000",
+            "1775375160000",
+            "1775376960000",
+            "1775378760000",
+            "1775380560000",
+            "1775382360000",
+            "1775384160000",
+            "1775385960000",
+            "1775387760000",
+            "1775389560000",
+            "1775391360000",
+            "1775393160000",
+            "1775394960000",
+            "1775396760000",
+            "1775398560000",
+            "1775400360000",
+            "1775402160000",
+            "1775403960000",
+            "1775405760000",
+            "1775407560000",
+            "1775409360000",
+            "1775411160000",
+            "1775412960000",
+            "1775414760000",
+            "1775416560000",
+            "1775418360000",
+            "1775420160000",
+            "1775421960000",
+            "1775423760000",
+            "1775425560000",
+            "1775427360000",
+            "1775429160000",
+            "1775430960000",
+            "1775432760000",
+            "1775434560000",
+            "1775436360000",
+            "1775438160000",
+            "1775439960000",
+            "1775441760000",
+            "1775443560000",
+            "1775445360000",
+            "1775447160000",
+            "1775448960000",
+            "1775450760000",
+            "1775452560000",
+            "1775454360000",
+            "1775456160000",
+            "1775457960000",
+            "1775459760000",
+            "1775461560000",
+            "1775463360000",
+            "1775465160000",
+            "1775466960000",
+            "1775468760000",
+            "1775470560000",
+            "1775472360000",
+            "1775474160000",
+            "1775475960000",
+            "1775477760000",
+            "1775479560000",
+            "1775481360000",
+            "1775483160000",
+            "1775484960000",
+            "1775486760000",
+            "1775488560000",
+            "1775490360000",
+            "1775492160000",
+            "1775493960000",
+            "1775495760000",
+            "1775497560000",
+            "1775499360000",
+            "1775501160000",
+            "1775502960000",
+            "1775504760000",
+            "1775506560000",
+            "1775508360000",
+            "1775510160000",
+            "1775511960000",
+            "1775513760000",
+            "1775515560000",
+            "1775517360000",
+            "1775519160000",
+            "1775520960000",
+            "1775522760000",
+            "1775524560000",
+            "1775526360000",
+            "1775528160000",
+            "1775529960000",
+            "1775531760000",
+            "1775533560000",
+            "1775535360000",
+            "1775537160000",
+            "1775538960000",
+            "1775540760000",
+            "1775542560000"
+          ],
+          "max": 1775544300000,
+          "min": 1775370600000
+        },
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": "ms"
+          },
+          {
+            "opposite": true,
+            "tickUnit": "/s"
+          }
+        ]
+      },
+      "requestId": "a5e4c2f5-62d4-b346-2346-b5012aa6d28e",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": {
+        "overviews": {
+          "granularitySeconds": 1800,
+          "response_time_P50": 0.0,
+          "response_time_millisecond_avg": 0.0,
+          "throughput_second": 406039.0
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "display": "3.92",
+                "header": "04-05 14:30--04-05 15:00",
+                "value": 3.92,
+                "x": 1775370600000,
+                "y": 3.92
+              },
+              {
+                "display": "4.03",
+                "header": "04-05 15:00--04-05 15:30",
+                "value": 4.03,
+                "x": 1775372400000,
+                "y": 4.03
+              },
+              {
+                "display": "4.01",
+                "header": "04-05 15:30--04-05 16:00",
+                "value": 4.01,
+                "x": 1775374200000,
+                "y": 4.01
+              },
+              {
+                "display": "3.84",
+                "header": "04-05 16:00--04-05 16:30",
+                "value": 3.84,
+                "x": 1775376000000,
+                "y": 3.84
+              },
+              {
+                "display": "4.35",
+                "header": "04-05 16:30--04-05 17:00",
+                "value": 4.35,
+                "x": 1775377800000,
+                "y": 4.35
+              },
+              {
+                "display": "3.77",
+                "header": "04-05 17:00--04-05 17:30",
+                "value": 3.77,
+                "x": 1775379600000,
+                "y": 3.77
+              },
+              {
+                "display": "3.91",
+                "header": "04-05 17:30--04-05 18:00",
+                "value": 3.91,
+                "x": 1775381400000,
+                "y": 3.91
+              },
+              {
+                "display": "3.94",
+                "header": "04-05 18:00--04-05 18:30",
+                "value": 3.94,
+                "x": 1775383200000,
+                "y": 3.94
+              },
+              {
+                "display": "4.26",
+                "header": "04-05 18:30--04-05 19:00",
+                "value": 4.26,
+                "x": 1775385000000,
+                "y": 4.26
+              },
+              {
+                "display": "4.01",
+                "header": "04-05 19:00--04-05 19:30",
+                "value": 4.01,
+                "x": 1775386800000,
+                "y": 4.01
+              },
+              {
+                "display": "3.88",
+                "header": "04-05 19:30--04-05 20:00",
+                "value": 3.88,
+                "x": 1775388600000,
+                "y": 3.88
+              },
+              {
+                "display": "4.01",
+                "header": "04-05 20:00--04-05 20:30",
+                "value": 4.01,
+                "x": 1775390400000,
+                "y": 4.01
+              },
+              {
+                "display": "3.88",
+                "header": "04-05 20:30--04-05 21:00",
+                "value": 3.88,
+                "x": 1775392200000,
+                "y": 3.88
+              },
+              {
+                "display": "4.42",
+                "header": "04-05 21:00--04-05 21:30",
+                "value": 4.42,
+                "x": 1775394000000,
+                "y": 4.42
+              },
+              {
+                "display": "3.95",
+                "header": "04-05 21:30--04-05 22:00",
+                "value": 3.95,
+                "x": 1775395800000,
+                "y": 3.95
+              },
+              {
+                "display": "3.85",
+                "header": "04-05 22:00--04-05 22:30",
+                "value": 3.85,
+                "x": 1775397600000,
+                "y": 3.85
+              },
+              {
+                "display": "3.69",
+                "header": "04-05 22:30--04-05 23:00",
+                "value": 3.69,
+                "x": 1775399400000,
+                "y": 3.69
+              },
+              {
+                "display": "69.07",
+                "header": "04-05 23:00--04-05 23:30",
+                "value": 69.07,
+                "x": 1775401200000,
+                "y": 69.07
+              },
+              {
+                "display": "3.83",
+                "header": "04-05 23:30--04-06 00:00",
+                "value": 3.83,
+                "x": 1775403000000,
+                "y": 3.83
+              },
+              {
+                "display": "4.09",
+                "header": "04-06 00:00--04-06 00:30",
+                "value": 4.09,
+                "x": 1775404800000,
+                "y": 4.09
+              },
+              {
+                "display": "3.73",
+                "header": "04-06 00:30--04-06 01:00",
+                "value": 3.73,
+                "x": 1775406600000,
+                "y": 3.73
+              },
+              {
+                "display": "4.31",
+                "header": "04-06 01:00--04-06 01:30",
+                "value": 4.31,
+                "x": 1775408400000,
+                "y": 4.31
+              },
+              {
+                "display": "3.77",
+                "header": "04-06 01:30--04-06 02:00",
+                "value": 3.77,
+                "x": 1775410200000,
+                "y": 3.77
+              },
+              {
+                "display": "3.85",
+                "header": "04-06 02:00--04-06 02:30",
+                "value": 3.85,
+                "x": 1775412000000,
+                "y": 3.85
+              },
+              {
+                "display": "3.76",
+                "header": "04-06 02:30--04-06 03:00",
+                "value": 3.76,
+                "x": 1775413800000,
+                "y": 3.76
+              },
+              {
+                "display": "3.75",
+                "header": "04-06 03:00--04-06 03:30",
+                "value": 3.75,
+                "x": 1775415600000,
+                "y": 3.75
+              },
+              {
+                "display": "3.73",
+                "header": "04-06 03:30--04-06 04:00",
+                "value": 3.73,
+                "x": 1775417400000,
+                "y": 3.73
+              },
+              {
+                "display": "3.74",
+                "header": "04-06 04:00--04-06 04:30",
+                "value": 3.74,
+                "x": 1775419200000,
+                "y": 3.74
+              },
+              {
+                "display": "3.71",
+                "header": "04-06 04:30--04-06 05:00",
+                "value": 3.71,
+                "x": 1775421000000,
+                "y": 3.71
+              },
+              {
+                "display": "25.07",
+                "header": "04-06 05:00--04-06 05:30",
+                "value": 25.07,
+                "x": 1775422800000,
+                "y": 25.07
+              },
+              {
+                "display": "3.77",
+                "header": "04-06 05:30--04-06 06:00",
+                "value": 3.77,
+                "x": 1775424600000,
+                "y": 3.77
+              },
+              {
+                "display": "3.77",
+                "header": "04-06 06:00--04-06 06:30",
+                "value": 3.77,
+                "x": 1775426400000,
+                "y": 3.77
+              },
+              {
+                "display": "3.92",
+                "header": "04-06 06:30--04-06 07:00",
+                "value": 3.92,
+                "x": 1775428200000,
+                "y": 3.92
+              },
+              {
+                "display": "3.99",
+                "header": "04-06 07:00--04-06 07:30",
+                "value": 3.99,
+                "x": 1775430000000,
+                "y": 3.99
+              },
+              {
+                "display": "4.69",
+                "header": "04-06 07:30--04-06 08:00",
+                "value": 4.69,
+                "x": 1775431800000,
+                "y": 4.69
+              },
+              {
+                "display": "4.12",
+                "header": "04-06 08:00--04-06 08:30",
+                "value": 4.12,
+                "x": 1775433600000,
+                "y": 4.12
+              },
+              {
+                "display": "4.02",
+                "header": "04-06 08:30--04-06 09:00",
+                "value": 4.02,
+                "x": 1775435400000,
+                "y": 4.02
+              },
+              {
+                "display": "4.55",
+                "header": "04-06 09:00--04-06 09:30",
+                "value": 4.55,
+                "x": 1775437200000,
+                "y": 4.55
+              },
+              {
+                "display": "4.54",
+                "header": "04-06 09:30--04-06 10:00",
+                "value": 4.54,
+                "x": 1775439000000,
+                "y": 4.54
+              },
+              {
+                "display": "4.51",
+                "header": "04-06 10:00--04-06 10:30",
+                "value": 4.51,
+                "x": 1775440800000,
+                "y": 4.51
+              },
+              {
+                "display": "4.03",
+                "header": "04-06 10:30--04-06 11:00",
+                "value": 4.03,
+                "x": 1775442600000,
+                "y": 4.03
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 11:00--04-06 11:30",
+                "value": 4.0,
+                "x": 1775444400000,
+                "y": 4.0
+              },
+              {
+                "display": "3.84",
+                "header": "04-06 11:30--04-06 12:00",
+                "value": 3.84,
+                "x": 1775446200000,
+                "y": 3.84
+              },
+              {
+                "display": "4.42",
+                "header": "04-06 12:00--04-06 12:30",
+                "value": 4.42,
+                "x": 1775448000000,
+                "y": 4.42
+              },
+              {
+                "display": "4.39",
+                "header": "04-06 12:30--04-06 13:00",
+                "value": 4.39,
+                "x": 1775449800000,
+                "y": 4.39
+              },
+              {
+                "display": "4.79",
+                "header": "04-06 13:00--04-06 13:30",
+                "value": 4.79,
+                "x": 1775451600000,
+                "y": 4.79
+              },
+              {
+                "display": "4.40",
+                "header": "04-06 13:30--04-06 14:00",
+                "value": 4.4,
+                "x": 1775453400000,
+                "y": 4.4
+              },
+              {
+                "display": "4.44",
+                "header": "04-06 14:00--04-06 14:30",
+                "value": 4.44,
+                "x": 1775455200000,
+                "y": 4.44
+              },
+              {
+                "display": "4.29",
+                "header": "04-06 14:30--04-06 15:00",
+                "value": 4.29,
+                "x": 1775457000000,
+                "y": 4.29
+              },
+              {
+                "display": "4.39",
+                "header": "04-06 15:00--04-06 15:30",
+                "value": 4.39,
+                "x": 1775458800000,
+                "y": 4.39
+              },
+              {
+                "display": "4.45",
+                "header": "04-06 15:30--04-06 16:00",
+                "value": 4.45,
+                "x": 1775460600000,
+                "y": 4.45
+              },
+              {
+                "display": "4.27",
+                "header": "04-06 16:00--04-06 16:30",
+                "value": 4.27,
+                "x": 1775462400000,
+                "y": 4.27
+              },
+              {
+                "display": "3.93",
+                "header": "04-06 16:30--04-06 17:00",
+                "value": 3.93,
+                "x": 1775464200000,
+                "y": 3.93
+              },
+              {
+                "display": "4.27",
+                "header": "04-06 17:00--04-06 17:30",
+                "value": 4.27,
+                "x": 1775466000000,
+                "y": 4.27
+              },
+              {
+                "display": "4.56",
+                "header": "04-06 17:30--04-06 18:00",
+                "value": 4.56,
+                "x": 1775467800000,
+                "y": 4.56
+              },
+              {
+                "display": "3.82",
+                "header": "04-06 18:00--04-06 18:30",
+                "value": 3.82,
+                "x": 1775469600000,
+                "y": 3.82
+              },
+              {
+                "display": "3.98",
+                "header": "04-06 18:30--04-06 19:00",
+                "value": 3.98,
+                "x": 1775471400000,
+                "y": 3.98
+              },
+              {
+                "display": "4.71",
+                "header": "04-06 19:00--04-06 19:30",
+                "value": 4.71,
+                "x": 1775473200000,
+                "y": 4.71
+              },
+              {
+                "display": "3.93",
+                "header": "04-06 19:30--04-06 20:00",
+                "value": 3.93,
+                "x": 1775475000000,
+                "y": 3.93
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 20:00--04-06 20:30",
+                "value": 4.0,
+                "x": 1775476800000,
+                "y": 4.0
+              },
+              {
+                "display": "4.42",
+                "header": "04-06 20:30--04-06 21:00",
+                "value": 4.42,
+                "x": 1775478600000,
+                "y": 4.42
+              },
+              {
+                "display": "3.93",
+                "header": "04-06 21:00--04-06 21:30",
+                "value": 3.93,
+                "x": 1775480400000,
+                "y": 3.93
+              },
+              {
+                "display": "4.12",
+                "header": "04-06 21:30--04-06 22:00",
+                "value": 4.12,
+                "x": 1775482200000,
+                "y": 4.12
+              },
+              {
+                "display": "3.88",
+                "header": "04-06 22:00--04-06 22:30",
+                "value": 3.88,
+                "x": 1775484000000,
+                "y": 3.88
+              },
+              {
+                "display": "3.94",
+                "header": "04-06 22:30--04-06 23:00",
+                "value": 3.94,
+                "x": 1775485800000,
+                "y": 3.94
+              },
+              {
+                "display": "69.25",
+                "header": "04-06 23:00--04-06 23:30",
+                "value": 69.25,
+                "x": 1775487600000,
+                "y": 69.25
+              },
+              {
+                "display": "3.70",
+                "header": "04-06 23:30--04-07 00:00",
+                "value": 3.7,
+                "x": 1775489400000,
+                "y": 3.7
+              },
+              {
+                "display": "3.91",
+                "header": "04-07 00:00--04-07 00:30",
+                "value": 3.91,
+                "x": 1775491200000,
+                "y": 3.91
+              },
+              {
+                "display": "3.72",
+                "header": "04-07 00:30--04-07 01:00",
+                "value": 3.72,
+                "x": 1775493000000,
+                "y": 3.72
+              },
+              {
+                "display": "4.45",
+                "header": "04-07 01:00--04-07 01:30",
+                "value": 4.45,
+                "x": 1775494800000,
+                "y": 4.45
+              },
+              {
+                "display": "3.71",
+                "header": "04-07 01:30--04-07 02:00",
+                "value": 3.71,
+                "x": 1775496600000,
+                "y": 3.71
+              },
+              {
+                "display": "3.73",
+                "header": "04-07 02:00--04-07 02:30",
+                "value": 3.73,
+                "x": 1775498400000,
+                "y": 3.73
+              },
+              {
+                "display": "3.73",
+                "header": "04-07 02:30--04-07 03:00",
+                "value": 3.73,
+                "x": 1775500200000,
+                "y": 3.73
+              },
+              {
+                "display": "4.20",
+                "header": "04-07 03:00--04-07 03:30",
+                "value": 4.2,
+                "x": 1775502000000,
+                "y": 4.2
+              },
+              {
+                "display": "3.69",
+                "header": "04-07 03:30--04-07 04:00",
+                "value": 3.69,
+                "x": 1775503800000,
+                "y": 3.69
+              },
+              {
+                "display": "3.74",
+                "header": "04-07 04:00--04-07 04:30",
+                "value": 3.74,
+                "x": 1775505600000,
+                "y": 3.74
+              },
+              {
+                "display": "3.73",
+                "header": "04-07 04:30--04-07 05:00",
+                "value": 3.73,
+                "x": 1775507400000,
+                "y": 3.73
+              },
+              {
+                "display": "69.12",
+                "header": "04-07 05:00--04-07 05:30",
+                "value": 69.12,
+                "x": 1775509200000,
+                "y": 69.12
+              },
+              {
+                "display": "4.96",
+                "header": "04-07 05:30--04-07 06:00",
+                "value": 4.96,
+                "x": 1775511000000,
+                "y": 4.96
+              },
+              {
+                "display": "23.49",
+                "header": "04-07 06:00--04-07 06:30",
+                "value": 23.49,
+                "x": 1775512800000,
+                "y": 23.49
+              },
+              {
+                "display": "17.69",
+                "header": "04-07 06:30--04-07 07:00",
+                "value": 17.69,
+                "x": 1775514600000,
+                "y": 17.69
+              },
+              {
+                "display": "16.23",
+                "header": "04-07 07:00--04-07 07:30",
+                "value": 16.23,
+                "x": 1775516400000,
+                "y": 16.23
+              },
+              {
+                "display": "4.93",
+                "header": "04-07 07:30--04-07 08:00",
+                "value": 4.93,
+                "x": 1775518200000,
+                "y": 4.93
+              },
+              {
+                "display": "4.85",
+                "header": "04-07 08:00--04-07 08:30",
+                "value": 4.85,
+                "x": 1775520000000,
+                "y": 4.85
+              },
+              {
+                "display": "4.76",
+                "header": "04-07 08:30--04-07 09:00",
+                "value": 4.76,
+                "x": 1775521800000,
+                "y": 4.76
+              },
+              {
+                "display": "4.84",
+                "header": "04-07 09:00--04-07 09:30",
+                "value": 4.84,
+                "x": 1775523600000,
+                "y": 4.84
+              },
+              {
+                "display": "4.63",
+                "header": "04-07 09:30--04-07 10:00",
+                "value": 4.63,
+                "x": 1775525400000,
+                "y": 4.63
+              },
+              {
+                "display": "4.65",
+                "header": "04-07 10:00--04-07 10:30",
+                "value": 4.65,
+                "x": 1775527200000,
+                "y": 4.65
+              },
+              {
+                "display": "4.71",
+                "header": "04-07 10:30--04-07 11:00",
+                "value": 4.71,
+                "x": 1775529000000,
+                "y": 4.71
+              },
+              {
+                "display": "4.80",
+                "header": "04-07 11:00--04-07 11:30",
+                "value": 4.8,
+                "x": 1775530800000,
+                "y": 4.8
+              },
+              {
+                "display": "5.05",
+                "header": "04-07 11:30--04-07 12:00",
+                "value": 5.05,
+                "x": 1775532600000,
+                "y": 5.05
+              },
+              {
+                "display": "4.81",
+                "header": "04-07 12:00--04-07 12:30",
+                "value": 4.81,
+                "x": 1775534400000,
+                "y": 4.81
+              },
+              {
+                "display": "4.70",
+                "header": "04-07 12:30--04-07 13:00",
+                "value": 4.7,
+                "x": 1775536200000,
+                "y": 4.7
+              },
+              {
+                "display": "4.81",
+                "header": "04-07 13:00--04-07 13:30",
+                "value": 4.81,
+                "x": 1775538000000,
+                "y": 4.81
+              },
+              {
+                "display": "4.85",
+                "header": "04-07 13:30--04-07 14:00",
+                "value": 4.85,
+                "x": 1775539800000,
+                "y": 4.85
+              },
+              {
+                "display": "4.75",
+                "header": "04-07 14:00--04-07 14:30",
+                "value": 4.75,
+                "x": 1775541600000,
+                "y": 4.75
+              },
+              {
+                "display": "4.79",
+                "header": "04-07 14:30--04-07 15:00",
+                "value": 4.79,
+                "x": 1775543400000,
+                "y": 4.79
+              }
+            ],
+            "name": "响应时间中位数",
+            "tooltip": {
+              "valueSuffix": " ms"
+            },
+            "type": "line",
+            "xAxis": 0,
+            "yAxis": 0,
+            "zIndex": 3
+          },
+          {
+            "data": [
+              {
+                "display": "15.00",
+                "header": "04-05 14:30--04-05 15:00",
+                "value": 15.0,
+                "x": 1775370600000,
+                "y": 15.0
+              },
+              {
+                "display": "44.00",
+                "header": "04-05 15:00--04-05 15:30",
+                "value": 44.0,
+                "x": 1775372400000,
+                "y": 44.0
+              },
+              {
+                "display": "23.00",
+                "header": "04-05 15:30--04-05 16:00",
+                "value": 23.0,
+                "x": 1775374200000,
+                "y": 23.0
+              },
+              {
+                "display": "47.00",
+                "header": "04-05 16:00--04-05 16:30",
+                "value": 47.0,
+                "x": 1775376000000,
+                "y": 47.0
+              },
+              {
+                "display": "49.00",
+                "header": "04-05 16:30--04-05 17:00",
+                "value": 49.0,
+                "x": 1775377800000,
+                "y": 49.0
+              },
+              {
+                "display": "15.00",
+                "header": "04-05 17:00--04-05 17:30",
+                "value": 15.0,
+                "x": 1775379600000,
+                "y": 15.0
+              },
+              {
+                "display": "23.00",
+                "header": "04-05 17:30--04-05 18:00",
+                "value": 23.0,
+                "x": 1775381400000,
+                "y": 23.0
+              },
+              {
+                "display": "26.00",
+                "header": "04-05 18:00--04-05 18:30",
+                "value": 26.0,
+                "x": 1775383200000,
+                "y": 26.0
+              },
+              {
+                "display": "30.00",
+                "header": "04-05 18:30--04-05 19:00",
+                "value": 30.0,
+                "x": 1775385000000,
+                "y": 30.0
+              },
+              {
+                "display": "55.00",
+                "header": "04-05 19:00--04-05 19:30",
+                "value": 55.0,
+                "x": 1775386800000,
+                "y": 55.0
+              },
+              {
+                "display": "15.00",
+                "header": "04-05 19:30--04-05 20:00",
+                "value": 15.0,
+                "x": 1775388600000,
+                "y": 15.0
+              },
+              {
+                "display": "25.00",
+                "header": "04-05 20:00--04-05 20:30",
+                "value": 25.0,
+                "x": 1775390400000,
+                "y": 25.0
+              },
+              {
+                "display": "21.00",
+                "header": "04-05 20:30--04-05 21:00",
+                "value": 21.0,
+                "x": 1775392200000,
+                "y": 21.0
+              },
+              {
+                "display": "84.00",
+                "header": "04-05 21:00--04-05 21:30",
+                "value": 84.0,
+                "x": 1775394000000,
+                "y": 84.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-05 21:30--04-05 22:00",
+                "value": 61.0,
+                "x": 1775395800000,
+                "y": 61.0
+              },
+              {
+                "display": "38.00",
+                "header": "04-05 22:00--04-05 22:30",
+                "value": 38.0,
+                "x": 1775397600000,
+                "y": 38.0
+              },
+              {
+                "display": "10.00",
+                "header": "04-05 22:30--04-05 23:00",
+                "value": 10.0,
+                "x": 1775399400000,
+                "y": 10.0
+              },
+              {
+                "display": "124.00",
+                "header": "04-05 23:00--04-05 23:30",
+                "value": 124.0,
+                "x": 1775401200000,
+                "y": 124.0
+              },
+              {
+                "display": "27.00",
+                "header": "04-05 23:30--04-06 00:00",
+                "value": 27.0,
+                "x": 1775403000000,
+                "y": 27.0
+              },
+              {
+                "display": "14.00",
+                "header": "04-06 00:00--04-06 00:30",
+                "value": 14.0,
+                "x": 1775404800000,
+                "y": 14.0
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 00:30--04-06 01:00",
+                "value": 4.0,
+                "x": 1775406600000,
+                "y": 4.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-06 01:00--04-06 01:30",
+                "value": 5.0,
+                "x": 1775408400000,
+                "y": 5.0
+              },
+              {
+                "display": "7.00",
+                "header": "04-06 01:30--04-06 02:00",
+                "value": 7.0,
+                "x": 1775410200000,
+                "y": 7.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-06 02:00--04-06 02:30",
+                "value": 6.0,
+                "x": 1775412000000,
+                "y": 6.0
+              },
+              {
+                "display": "4.00",
+                "header": "04-06 02:30--04-06 03:00",
+                "value": 4.0,
+                "x": 1775413800000,
+                "y": 4.0
+              },
+              {
+                "display": "16.00",
+                "header": "04-06 03:00--04-06 03:30",
+                "value": 16.0,
+                "x": 1775415600000,
+                "y": 16.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-06 03:30--04-06 04:00",
+                "value": 6.0,
+                "x": 1775417400000,
+                "y": 6.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-06 04:00--04-06 04:30",
+                "value": 6.0,
+                "x": 1775419200000,
+                "y": 6.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-06 04:30--04-06 05:00",
+                "value": 5.0,
+                "x": 1775421000000,
+                "y": 5.0
+              },
+              {
+                "display": "55.00",
+                "header": "04-06 05:00--04-06 05:30",
+                "value": 55.0,
+                "x": 1775422800000,
+                "y": 55.0
+              },
+              {
+                "display": "8.00",
+                "header": "04-06 05:30--04-06 06:00",
+                "value": 8.0,
+                "x": 1775424600000,
+                "y": 8.0
+              },
+              {
+                "display": "9.00",
+                "header": "04-06 06:00--04-06 06:30",
+                "value": 9.0,
+                "x": 1775426400000,
+                "y": 9.0
+              },
+              {
+                "display": "38.00",
+                "header": "04-06 06:30--04-06 07:00",
+                "value": 38.0,
+                "x": 1775428200000,
+                "y": 38.0
+              },
+              {
+                "display": "17.00",
+                "header": "04-06 07:00--04-06 07:30",
+                "value": 17.0,
+                "x": 1775430000000,
+                "y": 17.0
+              },
+              {
+                "display": "43.00",
+                "header": "04-06 07:30--04-06 08:00",
+                "value": 43.0,
+                "x": 1775431800000,
+                "y": 43.0
+              },
+              {
+                "display": "42.00",
+                "header": "04-06 08:00--04-06 08:30",
+                "value": 42.0,
+                "x": 1775433600000,
+                "y": 42.0
+              },
+              {
+                "display": "42.00",
+                "header": "04-06 08:30--04-06 09:00",
+                "value": 42.0,
+                "x": 1775435400000,
+                "y": 42.0
+              },
+              {
+                "display": "60.00",
+                "header": "04-06 09:00--04-06 09:30",
+                "value": 60.0,
+                "x": 1775437200000,
+                "y": 60.0
+              },
+              {
+                "display": "132.00",
+                "header": "04-06 09:30--04-06 10:00",
+                "value": 132.0,
+                "x": 1775439000000,
+                "y": 132.0
+              },
+              {
+                "display": "112.00",
+                "header": "04-06 10:00--04-06 10:30",
+                "value": 112.0,
+                "x": 1775440800000,
+                "y": 112.0
+              },
+              {
+                "display": "22.00",
+                "header": "04-06 10:30--04-06 11:00",
+                "value": 22.0,
+                "x": 1775442600000,
+                "y": 22.0
+              },
+              {
+                "display": "53.00",
+                "header": "04-06 11:00--04-06 11:30",
+                "value": 53.0,
+                "x": 1775444400000,
+                "y": 53.0
+              },
+              {
+                "display": "18.00",
+                "header": "04-06 11:30--04-06 12:00",
+                "value": 18.0,
+                "x": 1775446200000,
+                "y": 18.0
+              },
+              {
+                "display": "58.00",
+                "header": "04-06 12:00--04-06 12:30",
+                "value": 58.0,
+                "x": 1775448000000,
+                "y": 58.0
+              },
+              {
+                "display": "47.00",
+                "header": "04-06 12:30--04-06 13:00",
+                "value": 47.0,
+                "x": 1775449800000,
+                "y": 47.0
+              },
+              {
+                "display": "69.00",
+                "header": "04-06 13:00--04-06 13:30",
+                "value": 69.0,
+                "x": 1775451600000,
+                "y": 69.0
+              },
+              {
+                "display": "39.00",
+                "header": "04-06 13:30--04-06 14:00",
+                "value": 39.0,
+                "x": 1775453400000,
+                "y": 39.0
+              },
+              {
+                "display": "88.00",
+                "header": "04-06 14:00--04-06 14:30",
+                "value": 88.0,
+                "x": 1775455200000,
+                "y": 88.0
+              },
+              {
+                "display": "28.00",
+                "header": "04-06 14:30--04-06 15:00",
+                "value": 28.0,
+                "x": 1775457000000,
+                "y": 28.0
+              },
+              {
+                "display": "29.00",
+                "header": "04-06 15:00--04-06 15:30",
+                "value": 29.0,
+                "x": 1775458800000,
+                "y": 29.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-06 15:30--04-06 16:00",
+                "value": 61.0,
+                "x": 1775460600000,
+                "y": 61.0
+              },
+              {
+                "display": "38.00",
+                "header": "04-06 16:00--04-06 16:30",
+                "value": 38.0,
+                "x": 1775462400000,
+                "y": 38.0
+              },
+              {
+                "display": "90.00",
+                "header": "04-06 16:30--04-06 17:00",
+                "value": 90.0,
+                "x": 1775464200000,
+                "y": 90.0
+              },
+              {
+                "display": "44.00",
+                "header": "04-06 17:00--04-06 17:30",
+                "value": 44.0,
+                "x": 1775466000000,
+                "y": 44.0
+              },
+              {
+                "display": "40.00",
+                "header": "04-06 17:30--04-06 18:00",
+                "value": 40.0,
+                "x": 1775467800000,
+                "y": 40.0
+              },
+              {
+                "display": "17.00",
+                "header": "04-06 18:00--04-06 18:30",
+                "value": 17.0,
+                "x": 1775469600000,
+                "y": 17.0
+              },
+              {
+                "display": "40.00",
+                "header": "04-06 18:30--04-06 19:00",
+                "value": 40.0,
+                "x": 1775471400000,
+                "y": 40.0
+              },
+              {
+                "display": "51.00",
+                "header": "04-06 19:00--04-06 19:30",
+                "value": 51.0,
+                "x": 1775473200000,
+                "y": 51.0
+              },
+              {
+                "display": "33.00",
+                "header": "04-06 19:30--04-06 20:00",
+                "value": 33.0,
+                "x": 1775475000000,
+                "y": 33.0
+              },
+              {
+                "display": "51.00",
+                "header": "04-06 20:00--04-06 20:30",
+                "value": 51.0,
+                "x": 1775476800000,
+                "y": 51.0
+              },
+              {
+                "display": "52.00",
+                "header": "04-06 20:30--04-06 21:00",
+                "value": 52.0,
+                "x": 1775478600000,
+                "y": 52.0
+              },
+              {
+                "display": "39.00",
+                "header": "04-06 21:00--04-06 21:30",
+                "value": 39.0,
+                "x": 1775480400000,
+                "y": 39.0
+              },
+              {
+                "display": "40.00",
+                "header": "04-06 21:30--04-06 22:00",
+                "value": 40.0,
+                "x": 1775482200000,
+                "y": 40.0
+              },
+              {
+                "display": "14.00",
+                "header": "04-06 22:00--04-06 22:30",
+                "value": 14.0,
+                "x": 1775484000000,
+                "y": 14.0
+              },
+              {
+                "display": "42.00",
+                "header": "04-06 22:30--04-06 23:00",
+                "value": 42.0,
+                "x": 1775485800000,
+                "y": 42.0
+              },
+              {
+                "display": "71.00",
+                "header": "04-06 23:00--04-06 23:30",
+                "value": 71.0,
+                "x": 1775487600000,
+                "y": 71.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-06 23:30--04-07 00:00",
+                "value": 5.0,
+                "x": 1775489400000,
+                "y": 5.0
+              },
+              {
+                "display": "8.00",
+                "header": "04-07 00:00--04-07 00:30",
+                "value": 8.0,
+                "x": 1775491200000,
+                "y": 8.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 00:30--04-07 01:00",
+                "value": 5.0,
+                "x": 1775493000000,
+                "y": 5.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-07 01:00--04-07 01:30",
+                "value": 6.0,
+                "x": 1775494800000,
+                "y": 6.0
+              },
+              {
+                "display": "12.00",
+                "header": "04-07 01:30--04-07 02:00",
+                "value": 12.0,
+                "x": 1775496600000,
+                "y": 12.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 02:00--04-07 02:30",
+                "value": 5.0,
+                "x": 1775498400000,
+                "y": 5.0
+              },
+              {
+                "display": "204.00",
+                "header": "04-07 02:30--04-07 03:00",
+                "value": 204.0,
+                "x": 1775500200000,
+                "y": 204.0
+              },
+              {
+                "display": "92.00",
+                "header": "04-07 03:00--04-07 03:30",
+                "value": 92.0,
+                "x": 1775502000000,
+                "y": 92.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 03:30--04-07 04:00",
+                "value": 5.0,
+                "x": 1775503800000,
+                "y": 5.0
+              },
+              {
+                "display": "5.00",
+                "header": "04-07 04:00--04-07 04:30",
+                "value": 5.0,
+                "x": 1775505600000,
+                "y": 5.0
+              },
+              {
+                "display": "6.00",
+                "header": "04-07 04:30--04-07 05:00",
+                "value": 6.0,
+                "x": 1775507400000,
+                "y": 6.0
+              },
+              {
+                "display": "92.00",
+                "header": "04-07 05:00--04-07 05:30",
+                "value": 92.0,
+                "x": 1775509200000,
+                "y": 92.0
+              },
+              {
+                "display": "27.00",
+                "header": "04-07 05:30--04-07 06:00",
+                "value": 27.0,
+                "x": 1775511000000,
+                "y": 27.0
+              },
+              {
+                "display": "45.00",
+                "header": "04-07 06:00--04-07 06:30",
+                "value": 45.0,
+                "x": 1775512800000,
+                "y": 45.0
+              },
+              {
+                "display": "73.00",
+                "header": "04-07 06:30--04-07 07:00",
+                "value": 73.0,
+                "x": 1775514600000,
+                "y": 73.0
+              },
+              {
+                "display": "91.00",
+                "header": "04-07 07:00--04-07 07:30",
+                "value": 91.0,
+                "x": 1775516400000,
+                "y": 91.0
+              },
+              {
+                "display": "83.00",
+                "header": "04-07 07:30--04-07 08:00",
+                "value": 83.0,
+                "x": 1775518200000,
+                "y": 83.0
+              },
+              {
+                "display": "72.00",
+                "header": "04-07 08:00--04-07 08:30",
+                "value": 72.0,
+                "x": 1775520000000,
+                "y": 72.0
+              },
+              {
+                "display": "59.00",
+                "header": "04-07 08:30--04-07 09:00",
+                "value": 59.0,
+                "x": 1775521800000,
+                "y": 59.0
+              },
+              {
+                "display": "58.00",
+                "header": "04-07 09:00--04-07 09:30",
+                "value": 58.0,
+                "x": 1775523600000,
+                "y": 58.0
+              },
+              {
+                "display": "60.00",
+                "header": "04-07 09:30--04-07 10:00",
+                "value": 60.0,
+                "x": 1775525400000,
+                "y": 60.0
+              },
+              {
+                "display": "56.00",
+                "header": "04-07 10:00--04-07 10:30",
+                "value": 56.0,
+                "x": 1775527200000,
+                "y": 56.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-07 10:30--04-07 11:00",
+                "value": 61.0,
+                "x": 1775529000000,
+                "y": 61.0
+              },
+              {
+                "display": "146.00",
+                "header": "04-07 11:00--04-07 11:30",
+                "value": 146.0,
+                "x": 1775530800000,
+                "y": 146.0
+              },
+              {
+                "display": "96.00",
+                "header": "04-07 11:30--04-07 12:00",
+                "value": 96.0,
+                "x": 1775532600000,
+                "y": 96.0
+              },
+              {
+                "display": "61.00",
+                "header": "04-07 12:00--04-07 12:30",
+                "value": 61.0,
+                "x": 1775534400000,
+                "y": 61.0
+              },
+              {
+                "display": "52.00",
+                "header": "04-07 12:30--04-07 13:00",
+                "value": 52.0,
+                "x": 1775536200000,
+                "y": 52.0
+              },
+              {
+                "display": "67.00",
+                "header": "04-07 13:00--04-07 13:30",
+                "value": 67.0,
+                "x": 1775538000000,
+                "y": 67.0
+              },
+              {
+                "display": "71.00",
+                "header": "04-07 13:30--04-07 14:00",
+                "value": 71.0,
+                "x": 1775539800000,
+                "y": 71.0
+              },
+              {
+                "display": "70.00",
+                "header": "04-07 14:00--04-07 14:30",
+                "value": 70.0,
+                "x": 1775541600000,
+                "y": 70.0
+              },
+              {
+                "display": "62.00",
+                "header": "04-07 14:30--04-07 15:00",
+                "value": 62.0,
+                "x": 1775543400000,
+                "y": 62.0
+              }
+            ],
+            "name": "平均响应时间",
+            "tooltip": {
+              "valueSuffix": " ms"
+            },
+            "type": "line",
+            "xAxis": 0,
+            "yAxis": 0,
+            "yaxisProperties": {
+              "opposite": false,
+              "tickUnit": "ms"
+            },
+            "zIndex": 3
+          },
+          {
+            "data": [
+              {
+                "display": "0.09",
+                "header": "04-05 14:30--04-05 15:00",
+                "total": 158.0,
+                "value": 0.09,
+                "x": 1775370600000,
+                "y": 0.09
+              },
+              {
+                "display": "0.22",
+                "header": "04-05 15:00--04-05 15:30",
+                "total": 394.0,
+                "value": 0.22,
+                "x": 1775372400000,
+                "y": 0.22
+              },
+              {
+                "display": "0.22",
+                "header": "04-05 15:30--04-05 16:00",
+                "total": 387.0,
+                "value": 0.22,
+                "x": 1775374200000,
+                "y": 0.22
+              },
+              {
+                "display": "0.60",
+                "header": "04-05 16:00--04-05 16:30",
+                "total": 1086.0,
+                "value": 0.6,
+                "x": 1775376000000,
+                "y": 0.6
+              },
+              {
+                "display": "2.32",
+                "header": "04-05 16:30--04-05 17:00",
+                "total": 4178.0,
+                "value": 2.32,
+                "x": 1775377800000,
+                "y": 2.32
+              },
+              {
+                "display": "0.19",
+                "header": "04-05 17:00--04-05 17:30",
+                "total": 335.0,
+                "value": 0.19,
+                "x": 1775379600000,
+                "y": 0.19
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 17:30--04-05 18:00",
+                "total": 357.0,
+                "value": 0.2,
+                "x": 1775381400000,
+                "y": 0.2
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 18:00--04-05 18:30",
+                "total": 360.0,
+                "value": 0.2,
+                "x": 1775383200000,
+                "y": 0.2
+              },
+              {
+                "display": "0.32",
+                "header": "04-05 18:30--04-05 19:00",
+                "total": 584.0,
+                "value": 0.32,
+                "x": 1775385000000,
+                "y": 0.32
+              },
+              {
+                "display": "0.23",
+                "header": "04-05 19:00--04-05 19:30",
+                "total": 410.0,
+                "value": 0.23,
+                "x": 1775386800000,
+                "y": 0.23
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 19:30--04-05 20:00",
+                "total": 354.0,
+                "value": 0.2,
+                "x": 1775388600000,
+                "y": 0.2
+              },
+              {
+                "display": "0.32",
+                "header": "04-05 20:00--04-05 20:30",
+                "total": 567.0,
+                "value": 0.32,
+                "x": 1775390400000,
+                "y": 0.32
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 20:30--04-05 21:00",
+                "total": 359.0,
+                "value": 0.2,
+                "x": 1775392200000,
+                "y": 0.2
+              },
+              {
+                "display": "0.35",
+                "header": "04-05 21:00--04-05 21:30",
+                "total": 621.0,
+                "value": 0.35,
+                "x": 1775394000000,
+                "y": 0.35
+              },
+              {
+                "display": "0.41",
+                "header": "04-05 21:30--04-05 22:00",
+                "total": 729.0,
+                "value": 0.41,
+                "x": 1775395800000,
+                "y": 0.41
+              },
+              {
+                "display": "0.20",
+                "header": "04-05 22:00--04-05 22:30",
+                "total": 360.0,
+                "value": 0.2,
+                "x": 1775397600000,
+                "y": 0.2
+              },
+              {
+                "display": "0.17",
+                "header": "04-05 22:30--04-05 23:00",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775399400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.94",
+                "header": "04-05 23:00--04-05 23:30",
+                "total": 1683.0,
+                "value": 0.94,
+                "x": 1775401200000,
+                "y": 0.94
+              },
+              {
+                "display": "0.19",
+                "header": "04-05 23:30--04-06 00:00",
+                "total": 350.0,
+                "value": 0.19,
+                "x": 1775403000000,
+                "y": 0.19
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 00:00--04-06 00:30",
+                "total": 297.0,
+                "value": 0.17,
+                "x": 1775404800000,
+                "y": 0.17
+              },
+              {
+                "display": "0.15",
+                "header": "04-06 00:30--04-06 01:00",
+                "total": 269.0,
+                "value": 0.15,
+                "x": 1775406600000,
+                "y": 0.15
+              },
+              {
+                "display": "0.71",
+                "header": "04-06 01:00--04-06 01:30",
+                "total": 1285.0,
+                "value": 0.71,
+                "x": 1775408400000,
+                "y": 0.71
+              },
+              {
+                "display": "0.16",
+                "header": "04-06 01:30--04-06 02:00",
+                "total": 281.0,
+                "value": 0.16,
+                "x": 1775410200000,
+                "y": 0.16
+              },
+              {
+                "display": "0.14",
+                "header": "04-06 02:00--04-06 02:30",
+                "total": 256.0,
+                "value": 0.14,
+                "x": 1775412000000,
+                "y": 0.14
+              },
+              {
+                "display": "0.15",
+                "header": "04-06 02:30--04-06 03:00",
+                "total": 268.0,
+                "value": 0.15,
+                "x": 1775413800000,
+                "y": 0.15
+              },
+              {
+                "display": "0.16",
+                "header": "04-06 03:00--04-06 03:30",
+                "total": 290.0,
+                "value": 0.16,
+                "x": 1775415600000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 03:30--04-06 04:00",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775417400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 04:00--04-06 04:30",
+                "total": 306.0,
+                "value": 0.17,
+                "x": 1775419200000,
+                "y": 0.17
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 04:30--04-06 05:00",
+                "total": 301.0,
+                "value": 0.17,
+                "x": 1775421000000,
+                "y": 0.17
+              },
+              {
+                "display": "1.71",
+                "header": "04-06 05:00--04-06 05:30",
+                "total": 3074.0,
+                "value": 1.71,
+                "x": 1775422800000,
+                "y": 1.71
+              },
+              {
+                "display": "0.18",
+                "header": "04-06 05:30--04-06 06:00",
+                "total": 316.0,
+                "value": 0.18,
+                "x": 1775424600000,
+                "y": 0.18
+              },
+              {
+                "display": "0.17",
+                "header": "04-06 06:00--04-06 06:30",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775426400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.24",
+                "header": "04-06 06:30--04-06 07:00",
+                "total": 433.0,
+                "value": 0.24,
+                "x": 1775428200000,
+                "y": 0.24
+              },
+              {
+                "display": "0.19",
+                "header": "04-06 07:00--04-06 07:30",
+                "total": 348.0,
+                "value": 0.19,
+                "x": 1775430000000,
+                "y": 0.19
+              },
+              {
+                "display": "0.27",
+                "header": "04-06 07:30--04-06 08:00",
+                "total": 491.0,
+                "value": 0.27,
+                "x": 1775431800000,
+                "y": 0.27
+              },
+              {
+                "display": "0.22",
+                "header": "04-06 08:00--04-06 08:30",
+                "total": 390.0,
+                "value": 0.22,
+                "x": 1775433600000,
+                "y": 0.22
+              },
+              {
+                "display": "0.20",
+                "header": "04-06 08:30--04-06 09:00",
+                "total": 360.0,
+                "value": 0.2,
+                "x": 1775435400000,
+                "y": 0.2
+              },
+              {
+                "display": "0.47",
+                "header": "04-06 09:00--04-06 09:30",
+                "total": 854.0,
+                "value": 0.47,
+                "x": 1775437200000,
+                "y": 0.47
+              },
+              {
+                "display": "0.62",
+                "header": "04-06 09:30--04-06 10:00",
+                "total": 1123.0,
+                "value": 0.62,
+                "x": 1775439000000,
+                "y": 0.62
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 10:00--04-06 10:30",
+                "total": 742.0,
+                "value": 0.41,
+                "x": 1775440800000,
+                "y": 0.41
+              },
+              {
+                "display": "0.20",
+                "header": "04-06 10:30--04-06 11:00",
+                "total": 362.0,
+                "value": 0.2,
+                "x": 1775442600000,
+                "y": 0.2
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 11:00--04-06 11:30",
+                "total": 736.0,
+                "value": 0.41,
+                "x": 1775444400000,
+                "y": 0.41
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 11:30--04-06 12:00",
+                "total": 729.0,
+                "value": 0.41,
+                "x": 1775446200000,
+                "y": 0.41
+              },
+              {
+                "display": "2.27",
+                "header": "04-06 12:00--04-06 12:30",
+                "total": 4083.0,
+                "value": 2.27,
+                "x": 1775448000000,
+                "y": 2.27
+              },
+              {
+                "display": "2.95",
+                "header": "04-06 12:30--04-06 13:00",
+                "total": 5301.0,
+                "value": 2.95,
+                "x": 1775449800000,
+                "y": 2.95
+              },
+              {
+                "display": "2.44",
+                "header": "04-06 13:00--04-06 13:30",
+                "total": 4393.0,
+                "value": 2.44,
+                "x": 1775451600000,
+                "y": 2.44
+              },
+              {
+                "display": "0.48",
+                "header": "04-06 13:30--04-06 14:00",
+                "total": 872.0,
+                "value": 0.48,
+                "x": 1775453400000,
+                "y": 0.48
+              },
+              {
+                "display": "0.41",
+                "header": "04-06 14:00--04-06 14:30",
+                "total": 736.0,
+                "value": 0.41,
+                "x": 1775455200000,
+                "y": 0.41
+              },
+              {
+                "display": "0.25",
+                "header": "04-06 14:30--04-06 15:00",
+                "total": 456.0,
+                "value": 0.25,
+                "x": 1775457000000,
+                "y": 0.25
+              },
+              {
+                "display": "0.24",
+                "header": "04-06 15:00--04-06 15:30",
+                "total": 424.0,
+                "value": 0.24,
+                "x": 1775458800000,
+                "y": 0.24
+              },
+              {
+                "display": "0.33",
+                "header": "04-06 15:30--04-06 16:00",
+                "total": 602.0,
+                "value": 0.33,
+                "x": 1775460600000,
+                "y": 0.33
+              },
+              {
+                "display": "0.23",
+                "header": "04-06 16:00--04-06 16:30",
+                "total": 417.0,
+                "value": 0.23,
+                "x": 1775462400000,
+                "y": 0.23
+              },
+              {
+                "display": "0.19",
+                "header": "04-06 16:30--04-06 17:00",
+                "total": 342.0,
+                "value": 0.19,
+                "x": 1775464200000,
+                "y": 0.19
+              },
+              {
+                "display": "0.37",
+                "header": "04-06 17:00--04-06 17:30",
+                "total": 659.0,
+                "value": 0.37,
+                "x": 1775466000000,
+                "y": 0.37
+              },
+              {
+                "display": "0.36",
+                "header": "04-06 17:30--04-06 18:00",
+                "total": 655.0,
+                "value": 0.36,
+                "x": 1775467800000,
+                "y": 0.36
+              },
+              {
+                "display": "0.18",
+                "header": "04-06 18:00--04-06 18:30",
+                "total": 316.0,
+                "value": 0.18,
+                "x": 1775469600000,
+                "y": 0.18
+              },
+              {
+                "display": "0.20",
+                "header": "04-06 18:30--04-06 19:00",
+                "total": 362.0,
+                "value": 0.2,
+                "x": 1775471400000,
+                "y": 0.2
+              },
+              {
+                "display": "0.75",
+                "header": "04-06 19:00--04-06 19:30",
+                "total": 1348.0,
+                "value": 0.75,
+                "x": 1775473200000,
+                "y": 0.75
+              },
+              {
+                "display": "0.48",
+                "header": "04-06 19:30--04-06 20:00",
+                "total": 855.0,
+                "value": 0.48,
+                "x": 1775475000000,
+                "y": 0.48
+              },
+              {
+                "display": "0.33",
+                "header": "04-06 20:00--04-06 20:30",
+                "total": 585.0,
+                "value": 0.33,
+                "x": 1775476800000,
+                "y": 0.33
+              },
+              {
+                "display": "0.55",
+                "header": "04-06 20:30--04-06 21:00",
+                "total": 996.0,
+                "value": 0.55,
+                "x": 1775478600000,
+                "y": 0.55
+              },
+              {
+                "display": "0.29",
+                "header": "04-06 21:00--04-06 21:30",
+                "total": 518.0,
+                "value": 0.29,
+                "x": 1775480400000,
+                "y": 0.29
+              },
+              {
+                "display": "0.39",
+                "header": "04-06 21:30--04-06 22:00",
+                "total": 700.0,
+                "value": 0.39,
+                "x": 1775482200000,
+                "y": 0.39
+              },
+              {
+                "display": "0.18",
+                "header": "04-06 22:00--04-06 22:30",
+                "total": 324.0,
+                "value": 0.18,
+                "x": 1775484000000,
+                "y": 0.18
+              },
+              {
+                "display": "0.19",
+                "header": "04-06 22:30--04-06 23:00",
+                "total": 341.0,
+                "value": 0.19,
+                "x": 1775485800000,
+                "y": 0.19
+              },
+              {
+                "display": "0.92",
+                "header": "04-06 23:00--04-06 23:30",
+                "total": 1650.0,
+                "value": 0.92,
+                "x": 1775487600000,
+                "y": 0.92
+              },
+              {
+                "display": "0.16",
+                "header": "04-06 23:30--04-07 00:00",
+                "total": 294.0,
+                "value": 0.16,
+                "x": 1775489400000,
+                "y": 0.16
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 00:00--04-07 00:30",
+                "total": 287.0,
+                "value": 0.16,
+                "x": 1775491200000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 00:30--04-07 01:00",
+                "total": 300.0,
+                "value": 0.17,
+                "x": 1775493000000,
+                "y": 0.17
+              },
+              {
+                "display": "0.75",
+                "header": "04-07 01:00--04-07 01:30",
+                "total": 1341.0,
+                "value": 0.75,
+                "x": 1775494800000,
+                "y": 0.75
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 01:30--04-07 02:00",
+                "total": 298.0,
+                "value": 0.17,
+                "x": 1775496600000,
+                "y": 0.17
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 02:00--04-07 02:30",
+                "total": 286.0,
+                "value": 0.16,
+                "x": 1775498400000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 02:30--04-07 03:00",
+                "total": 314.0,
+                "value": 0.17,
+                "x": 1775500200000,
+                "y": 0.17
+              },
+              {
+                "display": "0.20",
+                "header": "04-07 03:00--04-07 03:30",
+                "total": 358.0,
+                "value": 0.2,
+                "x": 1775502000000,
+                "y": 0.2
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 03:30--04-07 04:00",
+                "total": 286.0,
+                "value": 0.16,
+                "x": 1775503800000,
+                "y": 0.16
+              },
+              {
+                "display": "0.16",
+                "header": "04-07 04:00--04-07 04:30",
+                "total": 295.0,
+                "value": 0.16,
+                "x": 1775505600000,
+                "y": 0.16
+              },
+              {
+                "display": "0.17",
+                "header": "04-07 04:30--04-07 05:00",
+                "total": 297.0,
+                "value": 0.17,
+                "x": 1775507400000,
+                "y": 0.17
+              },
+              {
+                "display": "0.47",
+                "header": "04-07 05:00--04-07 05:30",
+                "total": 843.0,
+                "value": 0.47,
+                "x": 1775509200000,
+                "y": 0.47
+              },
+              {
+                "display": "0.28",
+                "header": "04-07 05:30--04-07 06:00",
+                "total": 495.0,
+                "value": 0.28,
+                "x": 1775511000000,
+                "y": 0.28
+              },
+              {
+                "display": "0.82",
+                "header": "04-07 06:00--04-07 06:30",
+                "total": 1468.0,
+                "value": 0.82,
+                "x": 1775512800000,
+                "y": 0.82
+              },
+              {
+                "display": "0.49",
+                "header": "04-07 06:30--04-07 07:00",
+                "total": 874.0,
+                "value": 0.49,
+                "x": 1775514600000,
+                "y": 0.49
+              },
+              {
+                "display": "0.44",
+                "header": "04-07 07:00--04-07 07:30",
+                "total": 795.0,
+                "value": 0.44,
+                "x": 1775516400000,
+                "y": 0.44
+              },
+              {
+                "display": "3.62",
+                "header": "04-07 07:30--04-07 08:00",
+                "total": 6520.0,
+                "value": 3.62,
+                "x": 1775518200000,
+                "y": 3.62
+              },
+              {
+                "display": "15.15",
+                "header": "04-07 08:00--04-07 08:30",
+                "total": 27268.0,
+                "value": 15.15,
+                "x": 1775520000000,
+                "y": 15.15
+              },
+              {
+                "display": "18.07",
+                "header": "04-07 08:30--04-07 09:00",
+                "total": 32529.0,
+                "value": 18.07,
+                "x": 1775521800000,
+                "y": 18.07
+              },
+              {
+                "display": "20.95",
+                "header": "04-07 09:00--04-07 09:30",
+                "total": 37710.0,
+                "value": 20.95,
+                "x": 1775523600000,
+                "y": 20.95
+              },
+              {
+                "display": "24.97",
+                "header": "04-07 09:30--04-07 10:00",
+                "total": 44939.0,
+                "value": 24.97,
+                "x": 1775525400000,
+                "y": 24.97
+              },
+              {
+                "display": "17.39",
+                "header": "04-07 10:00--04-07 10:30",
+                "total": 31295.0,
+                "value": 17.39,
+                "x": 1775527200000,
+                "y": 17.39
+              },
+              {
+                "display": "15.57",
+                "header": "04-07 10:30--04-07 11:00",
+                "total": 28028.0,
+                "value": 15.57,
+                "x": 1775529000000,
+                "y": 15.57
+              },
+              {
+                "display": "12.08",
+                "header": "04-07 11:00--04-07 11:30",
+                "total": 21745.0,
+                "value": 12.08,
+                "x": 1775530800000,
+                "y": 12.08
+              },
+              {
+                "display": "3.20",
+                "header": "04-07 11:30--04-07 12:00",
+                "total": 5752.0,
+                "value": 3.2,
+                "x": 1775532600000,
+                "y": 3.2
+              },
+              {
+                "display": "3.50",
+                "header": "04-07 12:00--04-07 12:30",
+                "total": 6294.0,
+                "value": 3.5,
+                "x": 1775534400000,
+                "y": 3.5
+              },
+              {
+                "display": "4.27",
+                "header": "04-07 12:30--04-07 13:00",
+                "total": 7692.0,
+                "value": 4.27,
+                "x": 1775536200000,
+                "y": 4.27
+              },
+              {
+                "display": "11.17",
+                "header": "04-07 13:00--04-07 13:30",
+                "total": 20113.0,
+                "value": 11.17,
+                "x": 1775538000000,
+                "y": 11.17
+              },
+              {
+                "display": "13.11",
+                "header": "04-07 13:30--04-07 14:00",
+                "total": 23594.0,
+                "value": 13.11,
+                "x": 1775539800000,
+                "y": 13.11
+              },
+              {
+                "display": "19.32",
+                "header": "04-07 14:00--04-07 14:30",
+                "total": 34782.0,
+                "value": 19.32,
+                "x": 1775541600000,
+                "y": 19.32
+              },
+              {
+                "display": "7.94",
+                "header": "04-07 14:30--04-07 15:00",
+                "total": 14287.0,
+                "value": 7.94,
+                "x": 1775543400000,
+                "y": 7.94
+              }
+            ],
+            "name": "吞吐率",
+            "tooltip": {
+              "valueSuffix": " /s"
+            },
+            "type": "column",
+            "xAxis": 0,
+            "yAxis": 1,
+            "yaxisProperties": {
+              "opposite": true,
+              "tickUnit": "/s"
+            },
+            "zIndex": 1
+          }
+        ],
+        "tooltip": "{\"backgroundColor\":null,\"borderColor\":null,\"borderWidth\":0,\"followPointer\":true,\"footerFormat\":\"</ul></div></div></div>\",\"headerFormat\":\"<div class='bubble-box'><div class='bubble-wrap pad-10'><div class='bubble-time'>{point.point.options.header}</div><div><ul>\",\"padding\":0,\"pointFormat\":\"<li><span class='bubble-main-left pull-left'>{series.name}:</span><span class='bubble-main-right pull-right'>{point.display} {point.series.userOptions.tooltip.valueSuffix}</span></li>\",\"shadow\":false,\"shared\":true,\"useHTML\":true}",
+        "xAxis": {
+          "categories": [
+            "1775371560000",
+            "1775373360000",
+            "1775375160000",
+            "1775376960000",
+            "1775378760000",
+            "1775380560000",
+            "1775382360000",
+            "1775384160000",
+            "1775385960000",
+            "1775387760000",
+            "1775389560000",
+            "1775391360000",
+            "1775393160000",
+            "1775394960000",
+            "1775396760000",
+            "1775398560000",
+            "1775400360000",
+            "1775402160000",
+            "1775403960000",
+            "1775405760000",
+            "1775407560000",
+            "1775409360000",
+            "1775411160000",
+            "1775412960000",
+            "1775414760000",
+            "1775416560000",
+            "1775418360000",
+            "1775420160000",
+            "1775421960000",
+            "1775423760000",
+            "1775425560000",
+            "1775427360000",
+            "1775429160000",
+            "1775430960000",
+            "1775432760000",
+            "1775434560000",
+            "1775436360000",
+            "1775438160000",
+            "1775439960000",
+            "1775441760000",
+            "1775443560000",
+            "1775445360000",
+            "1775447160000",
+            "1775448960000",
+            "1775450760000",
+            "1775452560000",
+            "1775454360000",
+            "1775456160000",
+            "1775457960000",
+            "1775459760000",
+            "1775461560000",
+            "1775463360000",
+            "1775465160000",
+            "1775466960000",
+            "1775468760000",
+            "1775470560000",
+            "1775472360000",
+            "1775474160000",
+            "1775475960000",
+            "1775477760000",
+            "1775479560000",
+            "1775481360000",
+            "1775483160000",
+            "1775484960000",
+            "1775486760000",
+            "1775488560000",
+            "1775490360000",
+            "1775492160000",
+            "1775493960000",
+            "1775495760000",
+            "1775497560000",
+            "1775499360000",
+            "1775501160000",
+            "1775502960000",
+            "1775504760000",
+            "1775506560000",
+            "1775508360000",
+            "1775510160000",
+            "1775511960000",
+            "1775513760000",
+            "1775515560000",
+            "1775517360000",
+            "1775519160000",
+            "1775520960000",
+            "1775522760000",
+            "1775524560000",
+            "1775526360000",
+            "1775528160000",
+            "1775529960000",
+            "1775531760000",
+            "1775533560000",
+            "1775535360000",
+            "1775537160000",
+            "1775538960000",
+            "1775540760000",
+            "1775542560000"
+          ],
+          "max": 1775544300000,
+          "min": 1775370600000
+        },
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": "ms"
+          },
+          {
+            "opposite": true,
+            "tickUnit": "/s"
+          }
+        ]
+      },
+      "requestId": "a5e4c2f5-62d4-b346-2346-b5012aa6d28e",
+      "status": 200
+    },
+    "encoded_data_length": 5450,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:46:14 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC_NUMBER>"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "response_time_p50_ms_diagram",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "response_time_p50_ms_diagram"
+    },
+    "relative_path": "graph/query/diagram"
+  }
+}

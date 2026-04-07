@@ -1,10 +1,10 @@
 {
-  "count_seen": 21,
+  "count_seen": 54,
   "first_seen": "2026-04-03T15:39:50+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 21
+    "http://169.169.173.25:8080": 54
   },
-  "last_seen": "2026-04-03T15:42:15+08:00",
+  "last_seen": "2026-04-07T14:47:41+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -79,7 +79,42 @@
           }
         },
         {
-          "count_seen": 1,
+          "count_seen": 10,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "chart",
+            "endTime": "2026-04-07 14:45",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1645",
+            "timePeriod": 2880
+          },
+          "key": "{\"action\":\"chart\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1645\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "chart",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1645",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
           "dynamic_fields": [
             "body.endTime",
             "body.timePeriod"
@@ -219,7 +254,42 @@
           }
         },
         {
-          "count_seen": 1,
+          "count_seen": 10,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "count",
+            "endTime": "2026-04-07 14:45",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1645",
+            "timePeriod": 2880
+          },
+          "key": "{\"action\":\"count\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1645\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "count",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1645",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
           "dynamic_fields": [
             "body.endTime",
             "body.timePeriod"
@@ -365,7 +435,45 @@
           }
         },
         {
-          "count_seen": 1,
+          "count_seen": 10,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "action": "list",
+            "endTime": "2026-04-07 14:45",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1645",
+            "timePeriod": 2880
+          },
+          "key": "{\"action\":\"list\",\"endTime\":\"<DATETIME>\",\"eventType\":\"\",\"lang\":\"zh_CN\",\"targetType\":\"$app\",\"targetValue\":\"1645\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "action",
+              "endTime",
+              "eventType",
+              "lang",
+              "targetType",
+              "targetValue",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "action": "list",
+            "endTime": "<DATETIME>",
+            "eventType": "",
+            "lang": "zh_CN",
+            "targetType": "$app",
+            "targetValue": "1645",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
           "dynamic_fields": [
             "body.endTime",
             "body.timePeriod"
@@ -441,22 +549,96 @@
           }
         }
       ],
-      "count_seen": 21,
+      "count_seen": 54,
       "first_seen": "2026-04-03T15:39:50+08:00",
       "inference_basis": [
         "path=graph/event",
         "query params present"
       ],
       "inferred_purpose": "Likely related to graph",
-      "last_seen": "2026-04-03T15:42:15+08:00",
+      "last_seen": "2026-04-07T14:47:41+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 21
+        "application/json": 54
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "document_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+            "frame_id": "1C473FD520D8494F94C450A1C523C412",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:47:41+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+            "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "document_url": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:47:23+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+            "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:46:54+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "document_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "frame_id": "1C473FD520D8494F94C450A1C523C412",
+          "frame_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:47:41+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+          "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "document_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "frame_id": "1C473FD520D8494F94C450A1C523C412",
+          "frame_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:47:41+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+          "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 7,
+          "count_seen": 18,
           "dynamic_fields": [],
           "example": {
             "chart": "",
@@ -479,7 +661,7 @@
           }
         },
         {
-          "count_seen": 7,
+          "count_seen": 18,
           "dynamic_fields": [],
           "example": {
             "count": "",
@@ -502,7 +684,7 @@
           }
         },
         {
-          "count_seen": 7,
+          "count_seen": 18,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -555,7 +737,7 @@
         "Content-Type": "application/json"
       },
       "resource_types": {
-        "XHR": 21
+        "XHR": 54
       },
       "sample_requests": [
         {
@@ -1127,7 +1309,7 @@
         }
       ],
       "status_codes": {
-        "200": 21
+        "200": 54
       }
     }
   },

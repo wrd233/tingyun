@@ -1,0 +1,1172 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:46:13+08:00",
+    "completeness_score": 1314,
+    "first_seen_at": "2026-04-07T14:46:13+08:00",
+    "last_seen_at": "2026-04-07T14:46:13+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:13+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+          "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:46:13+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:13+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:13+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/query/overview/POST__application_error_affect_action__f23eb1b56135.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544372.580644
+  },
+  "method": "POST",
+  "metric": "application_error_affect_action",
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+    "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:46:13+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:13+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:13+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:13+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/query/overview",
+  "relative_path": "graph/query/overview",
+  "request": {
+    "body": {
+      "endTime": "2026-04-07 14:46",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "1645"
+        ],
+        "errorLevel": "EX",
+        "errorMessages": [],
+        "errorNames": [
+          "Slf4j Error Message"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "application_error_affect_action",
+      "timePeriod": 706
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC>"
+        ],
+        "errorLevel": "EX",
+        "errorMessages": [],
+        "errorNames": [
+          "Slf4j Error Message"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "application_error_affect_action",
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "cf324be7-7786-2718-96aa-de2a8382fdef",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "document_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/errorAnalysis/1065/1645/EX?start=1775502000000&end=1775544372045&actionTypes=TX;IF&param=0",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:13+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/query/overview",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "application_error_affect_action"
+    },
+    "query_normalized": {
+      "lang": "zh_CN",
+      "metric": "application_error_affect_action"
+    },
+    "raw_post_data": "{\"timePeriod\":706,\"endTime\":\"2026-04-07 14:46\",\"metric\":\"application_error_affect_action\",\"labels\":{\"applicationIds\":[\"1645\"],\"errorLevel\":\"EX\",\"errorMessages\":[],\"errorNames\":[\"Slf4j Error Message\"],\"actionTypes\":[\"TX,IF\"]},\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/query/overview?metric=application_error_affect_action&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": [
+        {
+          "actionId": 13226,
+          "actionName": "SpringController/serverapi/v1/zg-tasks/getTaskForUias",
+          "count": 8238
+        },
+        {
+          "actionId": 13436,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.frmIndiDocs}",
+          "count": 6812
+        },
+        {
+          "actionId": 13201,
+          "actionName": "URI/grcv5/user/home.jsp",
+          "count": 3095
+        },
+        {
+          "actionId": 13317,
+          "actionName": "SpringController/${url.rest.token.verification} (POST)",
+          "count": 2971
+        },
+        {
+          "actionId": 13318,
+          "actionName": "SpringController/${url.rest.token.creation}",
+          "count": 2965
+        },
+        {
+          "actionId": 13348,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}",
+          "count": 2450
+        },
+        {
+          "actionId": 13209,
+          "actionName": "URI/grcv5/rest/mobile/thirdpartylogin.json",
+          "count": 2136
+        },
+        {
+          "actionId": 13332,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+          "count": 1939
+        },
+        {
+          "actionId": 13335,
+          "actionName": "SpringController/${url.workflow.edit}",
+          "count": 1606
+        },
+        {
+          "actionId": 13353,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/dispatch (POST)",
+          "count": 1428
+        },
+        {
+          "actionId": 13205,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/todo (POST)",
+          "count": 1198
+        },
+        {
+          "actionId": 13302,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+          "count": 1074
+        },
+        {
+          "actionId": 13185,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/todo-pages/{id}",
+          "count": 815
+        },
+        {
+          "actionId": 13608,
+          "actionName": "SpringController/${url.workflow.view}",
+          "count": 808
+        },
+        {
+          "actionId": 13556,
+          "actionName": "SpringController/serverapi/v1/tyc/findRelation (POST)",
+          "count": 755
+        },
+        {
+          "actionId": 13164,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getCommonOpinion/{account}",
+          "count": 602
+        },
+        {
+          "actionId": 13159,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/userInfos (POST)",
+          "count": 521
+        },
+        {
+          "actionId": 13491,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf",
+          "count": 357
+        },
+        {
+          "actionId": 13202,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidate-infos (POST)",
+          "count": 311
+        },
+        {
+          "actionId": 13476,
+          "actionName": "SpringController/${url.workflow.create}",
+          "count": 274
+        },
+        {
+          "actionId": 13334,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.updateContractInfo.dwr",
+          "count": 250
+        },
+        {
+          "actionId": 13223,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/processed (POST)",
+          "count": 214
+        },
+        {
+          "actionId": 13388,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/user-manager/users/switch/trustors",
+          "count": 166
+        },
+        {
+          "actionId": 14326,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrWorkflowListService.cancelEntriesWithData.dwr",
+          "count": 140
+        },
+        {
+          "actionId": 13858,
+          "actionName": "SpringController/${url.workflow.logs2}",
+          "count": 132
+        },
+        {
+          "actionId": 13863,
+          "actionName": "SpringController/${url.workflow.state2}",
+          "count": 130
+        },
+        {
+          "actionId": 13351,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidate-roots (POST)",
+          "count": 115
+        },
+        {
+          "actionId": 13488,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexWord",
+          "count": 114
+        },
+        {
+          "actionId": 13207,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getPreviewAttachConfig",
+          "count": 107
+        },
+        {
+          "actionId": 13499,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductGroupService.getNoAuthGroupTreeNodePd.dwr",
+          "count": 98
+        },
+        {
+          "actionId": 13485,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}/preview",
+          "count": 94
+        },
+        {
+          "actionId": 13225,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/done-pages/{instId}",
+          "count": 88
+        },
+        {
+          "actionId": 13840,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrPerformFeedbackService.changeElementFinish.dwr",
+          "count": 84
+        },
+        {
+          "actionId": 14076,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.copyContractInfo.dwr",
+          "count": 80
+        },
+        {
+          "actionId": 13595,
+          "actionName": "SpringController/serverapi/cw/acquire/contractInfo (POST)",
+          "count": 75
+        },
+        {
+          "actionId": 13710,
+          "actionName": "URI/grcv5/bpm/edit.htm",
+          "count": 72
+        },
+        {
+          "actionId": 13211,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidates (POST)",
+          "count": 70
+        },
+        {
+          "actionId": 13505,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/inst-logs/{id}",
+          "count": 59
+        },
+        {
+          "actionId": 13843,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.changeStatus.dwr",
+          "count": 57
+        },
+        {
+          "actionId": 14029,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.handoverTo.dwr",
+          "count": 45
+        },
+        {
+          "actionId": 14294,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/upload (POST)",
+          "count": 36
+        },
+        {
+          "actionId": 13439,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/task-form-process/done-pages/undefined",
+          "count": 30
+        },
+        {
+          "actionId": 13700,
+          "actionName": "SpringController/${url.workflow.viewComm}",
+          "count": 23
+        },
+        {
+          "actionId": 13785,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/reject (POST)",
+          "count": 22
+        },
+        {
+          "actionId": 14277,
+          "actionName": "URI/grcv5/admin/user_new/manager.jsp",
+          "count": 22
+        },
+        {
+          "actionId": 14525,
+          "actionName": "URI/grcv5/admin/home.jsp",
+          "count": 19
+        },
+        {
+          "actionId": 13547,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/getToken",
+          "count": 16
+        },
+        {
+          "actionId": 14025,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.createUpdateWorkFlow.dwr",
+          "count": 15
+        },
+        {
+          "actionId": 13303,
+          "actionName": "URI/grcv5/wp/lasContractSign/editLasContractSign.htm",
+          "count": 15
+        },
+        {
+          "actionId": 14962,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContract (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13548,
+          "actionName": "SpringController/serverapi/archive/acquire/complete/contractInfo (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13970,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/extra-task-process/communicate/reply (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13541,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getMyRemindList (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 14963,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContractArchive (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13808,
+          "actionName": "SpringController/serverapi/v1/zg-user-org/receiveUserAndOrg (POST)",
+          "count": 10
+        },
+        {
+          "actionId": 13750,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr",
+          "count": 10
+        },
+        {
+          "actionId": 13885,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/replied-communication (POST)",
+          "count": 10
+        },
+        {
+          "actionId": 13347,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.save.dwr",
+          "count": 10
+        },
+        {
+          "actionId": 13911,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr",
+          "count": 10
+        },
+        {
+          "actionId": 13886,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/commFeedback/{id}",
+          "count": 8
+        },
+        {
+          "actionId": 13960,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/communication/{id}",
+          "count": 6
+        },
+        {
+          "actionId": 14336,
+          "actionName": "SpringController/${url.rest.mobile.login}",
+          "count": 6
+        },
+        {
+          "actionId": 13942,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.feedbackCommunication.dwr",
+          "count": 5
+        },
+        {
+          "actionId": 17306,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHandOverService.doHandover.dwr",
+          "count": 5
+        },
+        {
+          "actionId": 14020,
+          "actionName": "SpringController/${url.workflow.viewToRead}",
+          "count": 5
+        },
+        {
+          "actionId": 16273,
+          "actionName": "SpringController/serverapi/restapi/other/v1/iam/draftContract (POST)",
+          "count": 5
+        },
+        {
+          "actionId": 13792,
+          "actionName": "URI/grcv5/wp/contractPerf/G_1_paymentFeedback.htm",
+          "count": 5
+        },
+        {
+          "actionId": 14329,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.cancelCommunication.dwr",
+          "count": 5
+        },
+        {
+          "actionId": 14161,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-manager/users/switch/login-token",
+          "count": 4
+        },
+        {
+          "actionId": 13673,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/replied-inform (POST)",
+          "count": 4
+        },
+        {
+          "actionId": 16868,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrReadService.updateReadedById.dwr",
+          "count": 4
+        },
+        {
+          "actionId": 16000,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
+          "count": 3
+        },
+        {
+          "actionId": 16217,
+          "actionName": "SpringController/serverapi/v1/thirdParty/getOppDocking",
+          "count": 3
+        },
+        {
+          "actionId": 14682,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectOpposites (POST)",
+          "count": 3
+        },
+        {
+          "actionId": 15127,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.inform.dwr",
+          "count": 3
+        },
+        {
+          "actionId": 17684,
+          "actionName": "URI/Others/*",
+          "count": 3
+        },
+        {
+          "actionId": 13672,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getRemindDetail/{remindId}",
+          "count": 2
+        },
+        {
+          "actionId": 14372,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.initIamContractInfo.dwr",
+          "count": 2
+        },
+        {
+          "actionId": 13665,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}",
+          "count": 2
+        },
+        {
+          "actionId": 15748,
+          "actionName": "SpringController/dataStatistics/info/legal.json",
+          "count": 2
+        },
+        {
+          "actionId": 15159,
+          "actionName": "URI/grcv5/admin/flowNew/designer.jsp",
+          "count": 2
+        },
+        {
+          "actionId": 14138,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/task-search-candidates (POST)",
+          "count": 1
+        },
+        {
+          "actionId": 15930,
+          "actionName": "URI/grcv5/admin/dictNew/manager.jsp",
+          "count": 1
+        },
+        {
+          "actionId": 14308,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/process-drive/task-candidate-infos",
+          "count": 1
+        },
+        {
+          "actionId": 15072,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrAiContractService.getContractTypeList.dwr",
+          "count": 1
+        },
+        {
+          "actionId": 31764,
+          "actionName": "URI/grcv5/api/mobile/v1/common-mobile/getCommonOpinion/nbg90026_9677",
+          "count": 1
+        },
+        {
+          "actionId": 13852,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)",
+          "count": 1
+        },
+        {
+          "actionId": 16242,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/user-tasks/processed",
+          "count": 1
+        },
+        {
+          "actionId": 13837,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+          "count": 1
+        }
+      ],
+      "requestId": "cf324be7-7786-2718-96aa-de2a8382fdef",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": [
+        {
+          "actionId": 13226,
+          "actionName": "SpringController/serverapi/v1/zg-tasks/getTaskForUias",
+          "count": 8238
+        },
+        {
+          "actionId": 13436,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.frmIndiDocs}",
+          "count": 6812
+        },
+        {
+          "actionId": 13201,
+          "actionName": "URI/grcv5/user/home.jsp",
+          "count": 3095
+        },
+        {
+          "actionId": 13317,
+          "actionName": "SpringController/${url.rest.token.verification} (POST)",
+          "count": 2971
+        },
+        {
+          "actionId": 13318,
+          "actionName": "SpringController/${url.rest.token.creation}",
+          "count": 2965
+        },
+        {
+          "actionId": 13348,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}",
+          "count": 2450
+        },
+        {
+          "actionId": 13209,
+          "actionName": "URI/grcv5/rest/mobile/thirdpartylogin.json",
+          "count": 2136
+        },
+        {
+          "actionId": 13332,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+          "count": 1939
+        },
+        {
+          "actionId": 13335,
+          "actionName": "SpringController/${url.workflow.edit}",
+          "count": 1606
+        },
+        {
+          "actionId": 13353,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/dispatch (POST)",
+          "count": 1428
+        },
+        {
+          "actionId": 13205,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/todo (POST)",
+          "count": 1198
+        },
+        {
+          "actionId": 13302,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrTodolistService.setSeenFlag.dwr",
+          "count": 1074
+        },
+        {
+          "actionId": 13185,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/todo-pages/{id}",
+          "count": 815
+        },
+        {
+          "actionId": 13608,
+          "actionName": "SpringController/${url.workflow.view}",
+          "count": 808
+        },
+        {
+          "actionId": 13556,
+          "actionName": "SpringController/serverapi/v1/tyc/findRelation (POST)",
+          "count": 755
+        },
+        {
+          "actionId": 13164,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getCommonOpinion/{account}",
+          "count": 602
+        },
+        {
+          "actionId": 13159,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/userInfos (POST)",
+          "count": 521
+        },
+        {
+          "actionId": 13491,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf",
+          "count": 357
+        },
+        {
+          "actionId": 13202,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidate-infos (POST)",
+          "count": 311
+        },
+        {
+          "actionId": 13476,
+          "actionName": "SpringController/${url.workflow.create}",
+          "count": 274
+        },
+        {
+          "actionId": 13334,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.updateContractInfo.dwr",
+          "count": 250
+        },
+        {
+          "actionId": 13223,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/processed (POST)",
+          "count": 214
+        },
+        {
+          "actionId": 13388,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/user-manager/users/switch/trustors",
+          "count": 166
+        },
+        {
+          "actionId": 14326,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrWorkflowListService.cancelEntriesWithData.dwr",
+          "count": 140
+        },
+        {
+          "actionId": 13858,
+          "actionName": "SpringController/${url.workflow.logs2}",
+          "count": 132
+        },
+        {
+          "actionId": 13863,
+          "actionName": "SpringController/${url.workflow.state2}",
+          "count": 130
+        },
+        {
+          "actionId": 13351,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidate-roots (POST)",
+          "count": 115
+        },
+        {
+          "actionId": 13488,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexWord",
+          "count": 114
+        },
+        {
+          "actionId": 13207,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getPreviewAttachConfig",
+          "count": 107
+        },
+        {
+          "actionId": 13499,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductGroupService.getNoAuthGroupTreeNodePd.dwr",
+          "count": 98
+        },
+        {
+          "actionId": 13485,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.download}/preview",
+          "count": 94
+        },
+        {
+          "actionId": 13225,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/done-pages/{instId}",
+          "count": 88
+        },
+        {
+          "actionId": 13840,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrPerformFeedbackService.changeElementFinish.dwr",
+          "count": 84
+        },
+        {
+          "actionId": 14076,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.copyContractInfo.dwr",
+          "count": 80
+        },
+        {
+          "actionId": 13595,
+          "actionName": "SpringController/serverapi/cw/acquire/contractInfo (POST)",
+          "count": 75
+        },
+        {
+          "actionId": 13710,
+          "actionName": "URI/grcv5/bpm/edit.htm",
+          "count": 72
+        },
+        {
+          "actionId": 13211,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task-candidates (POST)",
+          "count": 70
+        },
+        {
+          "actionId": 13505,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/inst-logs/{id}",
+          "count": 59
+        },
+        {
+          "actionId": 13843,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.changeStatus.dwr",
+          "count": 57
+        },
+        {
+          "actionId": 14029,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.handoverTo.dwr",
+          "count": 45
+        },
+        {
+          "actionId": 14294,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/upload (POST)",
+          "count": 36
+        },
+        {
+          "actionId": 13439,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/task-form-process/done-pages/undefined",
+          "count": 30
+        },
+        {
+          "actionId": 13700,
+          "actionName": "SpringController/${url.workflow.viewComm}",
+          "count": 23
+        },
+        {
+          "actionId": 13785,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/reject (POST)",
+          "count": 22
+        },
+        {
+          "actionId": 14277,
+          "actionName": "URI/grcv5/admin/user_new/manager.jsp",
+          "count": 22
+        },
+        {
+          "actionId": 14525,
+          "actionName": "URI/grcv5/admin/home.jsp",
+          "count": 19
+        },
+        {
+          "actionId": 13547,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/getToken",
+          "count": 16
+        },
+        {
+          "actionId": 14025,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.createUpdateWorkFlow.dwr",
+          "count": 15
+        },
+        {
+          "actionId": 13303,
+          "actionName": "URI/grcv5/wp/lasContractSign/editLasContractSign.htm",
+          "count": 15
+        },
+        {
+          "actionId": 14962,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContract (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13548,
+          "actionName": "SpringController/serverapi/archive/acquire/complete/contractInfo (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13970,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/extra-task-process/communicate/reply (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13541,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getMyRemindList (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 14963,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContractArchive (POST)",
+          "count": 12
+        },
+        {
+          "actionId": 13808,
+          "actionName": "SpringController/serverapi/v1/zg-user-org/receiveUserAndOrg (POST)",
+          "count": 10
+        },
+        {
+          "actionId": 13750,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr",
+          "count": 10
+        },
+        {
+          "actionId": 13885,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/replied-communication (POST)",
+          "count": 10
+        },
+        {
+          "actionId": 13347,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.save.dwr",
+          "count": 10
+        },
+        {
+          "actionId": 13911,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr",
+          "count": 10
+        },
+        {
+          "actionId": 13886,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/commFeedback/{id}",
+          "count": 8
+        },
+        {
+          "actionId": 13960,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/communication/{id}",
+          "count": 6
+        },
+        {
+          "actionId": 14336,
+          "actionName": "SpringController/${url.rest.mobile.login}",
+          "count": 6
+        },
+        {
+          "actionId": 13942,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.feedbackCommunication.dwr",
+          "count": 5
+        },
+        {
+          "actionId": 17306,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHandOverService.doHandover.dwr",
+          "count": 5
+        },
+        {
+          "actionId": 14020,
+          "actionName": "SpringController/${url.workflow.viewToRead}",
+          "count": 5
+        },
+        {
+          "actionId": 16273,
+          "actionName": "SpringController/serverapi/restapi/other/v1/iam/draftContract (POST)",
+          "count": 5
+        },
+        {
+          "actionId": 13792,
+          "actionName": "URI/grcv5/wp/contractPerf/G_1_paymentFeedback.htm",
+          "count": 5
+        },
+        {
+          "actionId": 14329,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.cancelCommunication.dwr",
+          "count": 5
+        },
+        {
+          "actionId": 14161,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-manager/users/switch/login-token",
+          "count": 4
+        },
+        {
+          "actionId": 13673,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/replied-inform (POST)",
+          "count": 4
+        },
+        {
+          "actionId": 16868,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrReadService.updateReadedById.dwr",
+          "count": 4
+        },
+        {
+          "actionId": 16000,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
+          "count": 3
+        },
+        {
+          "actionId": 16217,
+          "actionName": "SpringController/serverapi/v1/thirdParty/getOppDocking",
+          "count": 3
+        },
+        {
+          "actionId": 14682,
+          "actionName": "SpringController/serverapi/cj/rest/dataCenter/collectOpposites (POST)",
+          "count": 3
+        },
+        {
+          "actionId": 15127,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.inform.dwr",
+          "count": 3
+        },
+        {
+          "actionId": 17684,
+          "actionName": "URI/Others/*",
+          "count": 3
+        },
+        {
+          "actionId": 13672,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/getRemindDetail/{remindId}",
+          "count": 2
+        },
+        {
+          "actionId": 14372,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.initIamContractInfo.dwr",
+          "count": 2
+        },
+        {
+          "actionId": 13665,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}",
+          "count": 2
+        },
+        {
+          "actionId": 15748,
+          "actionName": "SpringController/dataStatistics/info/legal.json",
+          "count": 2
+        },
+        {
+          "actionId": 15159,
+          "actionName": "URI/grcv5/admin/flowNew/designer.jsp",
+          "count": 2
+        },
+        {
+          "actionId": 14138,
+          "actionName": "SpringController/${url.rest.prefix.mobileapi.v1}/common-mobile/task-search-candidates (POST)",
+          "count": 1
+        },
+        {
+          "actionId": 15930,
+          "actionName": "URI/grcv5/admin/dictNew/manager.jsp",
+          "count": 1
+        },
+        {
+          "actionId": 14308,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/process-drive/task-candidate-infos",
+          "count": 1
+        },
+        {
+          "actionId": 15072,
+          "actionName": "URI/grcv5/dwr/call/plaincall/dwrAiContractService.getContractTypeList.dwr",
+          "count": 1
+        },
+        {
+          "actionId": 31764,
+          "actionName": "URI/grcv5/api/mobile/v1/common-mobile/getCommonOpinion/nbg90026_9677",
+          "count": 1
+        },
+        {
+          "actionId": 13852,
+          "actionName": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)",
+          "count": 1
+        },
+        {
+          "actionId": 16242,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/user-tasks/processed",
+          "count": 1
+        },
+        {
+          "actionId": 13837,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+          "count": 1
+        }
+      ],
+      "requestId": "cf324be7-7786-2718-96aa-de2a8382fdef",
+      "status": 200
+    },
+    "encoded_data_length": 2576,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:46:00 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "actionTypes": [
+          "TX,IF"
+        ],
+        "applicationIds": [
+          "<DYNAMIC>"
+        ],
+        "errorLevel": "EX",
+        "errorMessages": [],
+        "errorNames": [
+          "Slf4j Error Message"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "application_error_affect_action",
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN",
+      "metric": "application_error_affect_action"
+    },
+    "relative_path": "graph/query/overview"
+  }
+}

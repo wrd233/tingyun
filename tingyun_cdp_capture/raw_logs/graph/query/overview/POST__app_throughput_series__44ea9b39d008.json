@@ -1,0 +1,1065 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:46:04+08:00",
+    "completeness_score": 1103,
+    "first_seen_at": "2026-04-07T14:44:33+08:00",
+    "last_seen_at": "2026-04-07T14:46:04+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:04+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:46:04+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:33+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:04+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:04+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/query/overview/POST__app_throughput_series__44ea9b39d008.json",
+    "resource_type": "XHR",
+    "seen_count": 4,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544364.235769
+  },
+  "method": "POST",
+  "metric": "app_throughput_series",
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+    "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:46:04+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:46:04+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:04+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:04+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/query/overview",
+  "relative_path": "graph/query/overview",
+  "request": {
+    "body": {
+      "endTime": "2026-04-07 14:46",
+      "labels": {
+        "applicationIds": [
+          "1645"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "app_throughput_series",
+      "timePeriod": 2880,
+      "zoomTime": true
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "applicationIds": [
+          "<DYNAMIC>"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "app_throughput_series",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "b363514e-8711-0830-41b0-ecaf8e5e98ee",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1645",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:46:04+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/query/overview",
+    "query": {
+      "app_throughput_series": "",
+      "lang": "zh_CN"
+    },
+    "query_normalized": {
+      "app_throughput_series": "",
+      "lang": "zh_CN"
+    },
+    "raw_post_data": "{\"metric\":\"app_throughput_series\",\"zoomTime\":true,\"labels\":{\"applicationIds\":[\"1645\"]},\"timePeriod\":2880,\"endTime\":\"2026-04-07 14:46\",\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/query/overview?app_throughput_series&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": [
+        {
+          "count": 158,
+          "throughput": 0.08777778
+        },
+        {
+          "count": 394,
+          "throughput": 0.21888889
+        },
+        {
+          "count": 387,
+          "throughput": 0.215
+        },
+        {
+          "count": 1086,
+          "throughput": 0.60333333
+        },
+        {
+          "count": 4178,
+          "throughput": 2.32111111
+        },
+        {
+          "count": 335,
+          "throughput": 0.18611111
+        },
+        {
+          "count": 357,
+          "throughput": 0.19833333
+        },
+        {
+          "count": 360,
+          "throughput": 0.2
+        },
+        {
+          "count": 584,
+          "throughput": 0.32444444
+        },
+        {
+          "count": 410,
+          "throughput": 0.22777778
+        },
+        {
+          "count": 354,
+          "throughput": 0.19666667
+        },
+        {
+          "count": 567,
+          "throughput": 0.315
+        },
+        {
+          "count": 359,
+          "throughput": 0.19944444
+        },
+        {
+          "count": 621,
+          "throughput": 0.345
+        },
+        {
+          "count": 729,
+          "throughput": 0.405
+        },
+        {
+          "count": 360,
+          "throughput": 0.2
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 1683,
+          "throughput": 0.935
+        },
+        {
+          "count": 350,
+          "throughput": 0.19444444
+        },
+        {
+          "count": 297,
+          "throughput": 0.165
+        },
+        {
+          "count": 269,
+          "throughput": 0.14944444
+        },
+        {
+          "count": 1285,
+          "throughput": 0.71388889
+        },
+        {
+          "count": 281,
+          "throughput": 0.15611111
+        },
+        {
+          "count": 256,
+          "throughput": 0.14222222
+        },
+        {
+          "count": 268,
+          "throughput": 0.14888889
+        },
+        {
+          "count": 290,
+          "throughput": 0.16111111
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 306,
+          "throughput": 0.17
+        },
+        {
+          "count": 301,
+          "throughput": 0.16722222
+        },
+        {
+          "count": 3074,
+          "throughput": 1.70777778
+        },
+        {
+          "count": 316,
+          "throughput": 0.17555556
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 433,
+          "throughput": 0.24055556
+        },
+        {
+          "count": 348,
+          "throughput": 0.19333333
+        },
+        {
+          "count": 491,
+          "throughput": 0.27277778
+        },
+        {
+          "count": 390,
+          "throughput": 0.21666667
+        },
+        {
+          "count": 360,
+          "throughput": 0.2
+        },
+        {
+          "count": 854,
+          "throughput": 0.47444444
+        },
+        {
+          "count": 1123,
+          "throughput": 0.62388889
+        },
+        {
+          "count": 742,
+          "throughput": 0.41222222
+        },
+        {
+          "count": 362,
+          "throughput": 0.20111111
+        },
+        {
+          "count": 736,
+          "throughput": 0.40888889
+        },
+        {
+          "count": 729,
+          "throughput": 0.405
+        },
+        {
+          "count": 4083,
+          "throughput": 2.26833333
+        },
+        {
+          "count": 5301,
+          "throughput": 2.945
+        },
+        {
+          "count": 4393,
+          "throughput": 2.44055556
+        },
+        {
+          "count": 872,
+          "throughput": 0.48444444
+        },
+        {
+          "count": 736,
+          "throughput": 0.40888889
+        },
+        {
+          "count": 456,
+          "throughput": 0.25333333
+        },
+        {
+          "count": 424,
+          "throughput": 0.23555556
+        },
+        {
+          "count": 602,
+          "throughput": 0.33444444
+        },
+        {
+          "count": 417,
+          "throughput": 0.23166667
+        },
+        {
+          "count": 342,
+          "throughput": 0.19
+        },
+        {
+          "count": 659,
+          "throughput": 0.36611111
+        },
+        {
+          "count": 655,
+          "throughput": 0.36388889
+        },
+        {
+          "count": 316,
+          "throughput": 0.17555556
+        },
+        {
+          "count": 362,
+          "throughput": 0.20111111
+        },
+        {
+          "count": 1348,
+          "throughput": 0.74888889
+        },
+        {
+          "count": 855,
+          "throughput": 0.475
+        },
+        {
+          "count": 585,
+          "throughput": 0.325
+        },
+        {
+          "count": 996,
+          "throughput": 0.55333333
+        },
+        {
+          "count": 518,
+          "throughput": 0.28777778
+        },
+        {
+          "count": 700,
+          "throughput": 0.38888889
+        },
+        {
+          "count": 324,
+          "throughput": 0.18
+        },
+        {
+          "count": 341,
+          "throughput": 0.18944444
+        },
+        {
+          "count": 1650,
+          "throughput": 0.91666667
+        },
+        {
+          "count": 294,
+          "throughput": 0.16333333
+        },
+        {
+          "count": 287,
+          "throughput": 0.15944444
+        },
+        {
+          "count": 300,
+          "throughput": 0.16666667
+        },
+        {
+          "count": 1341,
+          "throughput": 0.745
+        },
+        {
+          "count": 298,
+          "throughput": 0.16555556
+        },
+        {
+          "count": 286,
+          "throughput": 0.15888889
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 358,
+          "throughput": 0.19888889
+        },
+        {
+          "count": 286,
+          "throughput": 0.15888889
+        },
+        {
+          "count": 295,
+          "throughput": 0.16388889
+        },
+        {
+          "count": 297,
+          "throughput": 0.165
+        },
+        {
+          "count": 843,
+          "throughput": 0.46833333
+        },
+        {
+          "count": 495,
+          "throughput": 0.275
+        },
+        {
+          "count": 1468,
+          "throughput": 0.81555556
+        },
+        {
+          "count": 874,
+          "throughput": 0.48555556
+        },
+        {
+          "count": 795,
+          "throughput": 0.44166667
+        },
+        {
+          "count": 6520,
+          "throughput": 3.62222222
+        },
+        {
+          "count": 27268,
+          "throughput": 15.14888889
+        },
+        {
+          "count": 32529,
+          "throughput": 18.07166667
+        },
+        {
+          "count": 37710,
+          "throughput": 20.95
+        },
+        {
+          "count": 44939,
+          "throughput": 24.96611111
+        },
+        {
+          "count": 31295,
+          "throughput": 17.38611111
+        },
+        {
+          "count": 28028,
+          "throughput": 15.57111111
+        },
+        {
+          "count": 21745,
+          "throughput": 12.08055556
+        },
+        {
+          "count": 5752,
+          "throughput": 3.19555556
+        },
+        {
+          "count": 6294,
+          "throughput": 3.49666667
+        },
+        {
+          "count": 7692,
+          "throughput": 4.27333333
+        },
+        {
+          "count": 20113,
+          "throughput": 11.17388889
+        },
+        {
+          "count": 23594,
+          "throughput": 13.10777778
+        },
+        {
+          "count": 34782,
+          "throughput": 19.32333333
+        },
+        {
+          "count": 13758,
+          "throughput": 7.64333333
+        }
+      ],
+      "requestId": "b363514e-8711-0830-41b0-ecaf8e5e98ee",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": [
+        {
+          "count": 158,
+          "throughput": 0.08777778
+        },
+        {
+          "count": 394,
+          "throughput": 0.21888889
+        },
+        {
+          "count": 387,
+          "throughput": 0.215
+        },
+        {
+          "count": 1086,
+          "throughput": 0.60333333
+        },
+        {
+          "count": 4178,
+          "throughput": 2.32111111
+        },
+        {
+          "count": 335,
+          "throughput": 0.18611111
+        },
+        {
+          "count": 357,
+          "throughput": 0.19833333
+        },
+        {
+          "count": 360,
+          "throughput": 0.2
+        },
+        {
+          "count": 584,
+          "throughput": 0.32444444
+        },
+        {
+          "count": 410,
+          "throughput": 0.22777778
+        },
+        {
+          "count": 354,
+          "throughput": 0.19666667
+        },
+        {
+          "count": 567,
+          "throughput": 0.315
+        },
+        {
+          "count": 359,
+          "throughput": 0.19944444
+        },
+        {
+          "count": 621,
+          "throughput": 0.345
+        },
+        {
+          "count": 729,
+          "throughput": 0.405
+        },
+        {
+          "count": 360,
+          "throughput": 0.2
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 1683,
+          "throughput": 0.935
+        },
+        {
+          "count": 350,
+          "throughput": 0.19444444
+        },
+        {
+          "count": 297,
+          "throughput": 0.165
+        },
+        {
+          "count": 269,
+          "throughput": 0.14944444
+        },
+        {
+          "count": 1285,
+          "throughput": 0.71388889
+        },
+        {
+          "count": 281,
+          "throughput": 0.15611111
+        },
+        {
+          "count": 256,
+          "throughput": 0.14222222
+        },
+        {
+          "count": 268,
+          "throughput": 0.14888889
+        },
+        {
+          "count": 290,
+          "throughput": 0.16111111
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 306,
+          "throughput": 0.17
+        },
+        {
+          "count": 301,
+          "throughput": 0.16722222
+        },
+        {
+          "count": 3074,
+          "throughput": 1.70777778
+        },
+        {
+          "count": 316,
+          "throughput": 0.17555556
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 433,
+          "throughput": 0.24055556
+        },
+        {
+          "count": 348,
+          "throughput": 0.19333333
+        },
+        {
+          "count": 491,
+          "throughput": 0.27277778
+        },
+        {
+          "count": 390,
+          "throughput": 0.21666667
+        },
+        {
+          "count": 360,
+          "throughput": 0.2
+        },
+        {
+          "count": 854,
+          "throughput": 0.47444444
+        },
+        {
+          "count": 1123,
+          "throughput": 0.62388889
+        },
+        {
+          "count": 742,
+          "throughput": 0.41222222
+        },
+        {
+          "count": 362,
+          "throughput": 0.20111111
+        },
+        {
+          "count": 736,
+          "throughput": 0.40888889
+        },
+        {
+          "count": 729,
+          "throughput": 0.405
+        },
+        {
+          "count": 4083,
+          "throughput": 2.26833333
+        },
+        {
+          "count": 5301,
+          "throughput": 2.945
+        },
+        {
+          "count": 4393,
+          "throughput": 2.44055556
+        },
+        {
+          "count": 872,
+          "throughput": 0.48444444
+        },
+        {
+          "count": 736,
+          "throughput": 0.40888889
+        },
+        {
+          "count": 456,
+          "throughput": 0.25333333
+        },
+        {
+          "count": 424,
+          "throughput": 0.23555556
+        },
+        {
+          "count": 602,
+          "throughput": 0.33444444
+        },
+        {
+          "count": 417,
+          "throughput": 0.23166667
+        },
+        {
+          "count": 342,
+          "throughput": 0.19
+        },
+        {
+          "count": 659,
+          "throughput": 0.36611111
+        },
+        {
+          "count": 655,
+          "throughput": 0.36388889
+        },
+        {
+          "count": 316,
+          "throughput": 0.17555556
+        },
+        {
+          "count": 362,
+          "throughput": 0.20111111
+        },
+        {
+          "count": 1348,
+          "throughput": 0.74888889
+        },
+        {
+          "count": 855,
+          "throughput": 0.475
+        },
+        {
+          "count": 585,
+          "throughput": 0.325
+        },
+        {
+          "count": 996,
+          "throughput": 0.55333333
+        },
+        {
+          "count": 518,
+          "throughput": 0.28777778
+        },
+        {
+          "count": 700,
+          "throughput": 0.38888889
+        },
+        {
+          "count": 324,
+          "throughput": 0.18
+        },
+        {
+          "count": 341,
+          "throughput": 0.18944444
+        },
+        {
+          "count": 1650,
+          "throughput": 0.91666667
+        },
+        {
+          "count": 294,
+          "throughput": 0.16333333
+        },
+        {
+          "count": 287,
+          "throughput": 0.15944444
+        },
+        {
+          "count": 300,
+          "throughput": 0.16666667
+        },
+        {
+          "count": 1341,
+          "throughput": 0.745
+        },
+        {
+          "count": 298,
+          "throughput": 0.16555556
+        },
+        {
+          "count": 286,
+          "throughput": 0.15888889
+        },
+        {
+          "count": 314,
+          "throughput": 0.17444444
+        },
+        {
+          "count": 358,
+          "throughput": 0.19888889
+        },
+        {
+          "count": 286,
+          "throughput": 0.15888889
+        },
+        {
+          "count": 295,
+          "throughput": 0.16388889
+        },
+        {
+          "count": 297,
+          "throughput": 0.165
+        },
+        {
+          "count": 843,
+          "throughput": 0.46833333
+        },
+        {
+          "count": 495,
+          "throughput": 0.275
+        },
+        {
+          "count": 1468,
+          "throughput": 0.81555556
+        },
+        {
+          "count": 874,
+          "throughput": 0.48555556
+        },
+        {
+          "count": 795,
+          "throughput": 0.44166667
+        },
+        {
+          "count": 6520,
+          "throughput": 3.62222222
+        },
+        {
+          "count": 27268,
+          "throughput": 15.14888889
+        },
+        {
+          "count": 32529,
+          "throughput": 18.07166667
+        },
+        {
+          "count": 37710,
+          "throughput": 20.95
+        },
+        {
+          "count": 44939,
+          "throughput": 24.96611111
+        },
+        {
+          "count": 31295,
+          "throughput": 17.38611111
+        },
+        {
+          "count": 28028,
+          "throughput": 15.57111111
+        },
+        {
+          "count": 21745,
+          "throughput": 12.08055556
+        },
+        {
+          "count": 5752,
+          "throughput": 3.19555556
+        },
+        {
+          "count": 6294,
+          "throughput": 3.49666667
+        },
+        {
+          "count": 7692,
+          "throughput": 4.27333333
+        },
+        {
+          "count": 20113,
+          "throughput": 11.17388889
+        },
+        {
+          "count": 23594,
+          "throughput": 13.10777778
+        },
+        {
+          "count": 34782,
+          "throughput": 19.32333333
+        },
+        {
+          "count": 13758,
+          "throughput": 7.64333333
+        }
+      ],
+      "requestId": "b363514e-8711-0830-41b0-ecaf8e5e98ee",
+      "status": 200
+    },
+    "encoded_data_length": 1359,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:45:52 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "endTime": "<DATETIME>",
+      "labels": {
+        "applicationIds": [
+          "<DYNAMIC>"
+        ]
+      },
+      "lang": "zh_CN",
+      "metric": "app_throughput_series",
+      "timePeriod": "<DYNAMIC_NUMBER>",
+      "zoomTime": true
+    },
+    "method": "POST",
+    "query": {
+      "app_throughput_series": "",
+      "lang": "zh_CN"
+    },
+    "relative_path": "graph/query/overview"
+  }
+}

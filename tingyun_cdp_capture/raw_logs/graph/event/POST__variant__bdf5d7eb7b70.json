@@ -1,0 +1,717 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:44:33+08:00",
+    "completeness_score": 857,
+    "first_seen_at": "2026-04-07T14:44:33+08:00",
+    "last_seen_at": "2026-04-07T14:44:33+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:33+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/event/POST__variant__bdf5d7eb7b70.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544272.952538
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+    "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:44:33+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/event",
+  "relative_path": "graph/event",
+  "request": {
+    "body": {
+      "action": "chart",
+      "endTime": "2026-04-07 14:44",
+      "lang": "zh_CN",
+      "targetType": "$app",
+      "targetValue": "1646",
+      "timePeriod": 2880
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "action": "chart",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "targetType": "$app",
+      "targetValue": "1646",
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "40efbc71-9a6f-8d71-6413-bddffadacd48",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/event",
+    "query": {
+      "chart": "",
+      "lang": "zh_CN"
+    },
+    "query_normalized": {
+      "chart": "",
+      "lang": "zh_CN"
+    },
+    "raw_post_data": "{\"action\":\"chart\",\"targetType\":\"$app\",\"targetValue\":\"1646\",\"timePeriod\":2880,\"endTime\":\"2026-04-07 14:44\",\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/event?chart&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": {
+        "overviews": {
+          "timeHorizon": "04-05 14:44 ~ 04-07 14:44"
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-05 22:00--04-05 22:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775397600000,
+                "y": 2.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-06 17:30--04-06 18:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775467800000,
+                "y": 2.0
+              },
+              {
+                "display": "1.00",
+                "tooltip": "{\"title\":\"04-06 20:30--04-06 21:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775478600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "tooltip": "{\"title\":\"04-06 22:30--04-06 23:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775485800000,
+                "y": 1.0
+              },
+              {
+                "display": "7.00",
+                "tooltip": "{\"title\":\"04-07 08:30--04-07 09:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":7.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 7.0,
+                "x": 1775521800000,
+                "y": 7.0
+              },
+              {
+                "display": "11.00",
+                "tooltip": "{\"title\":\"04-07 09:00--04-07 09:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":11.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 11.0,
+                "x": 1775523600000,
+                "y": 11.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 09:30--04-07 10:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775525400000,
+                "y": 2.0
+              },
+              {
+                "display": "4.00",
+                "tooltip": "{\"title\":\"04-07 10:00--04-07 10:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 4.0,
+                "x": 1775527200000,
+                "y": 4.0
+              },
+              {
+                "display": "6.00",
+                "tooltip": "{\"title\":\"04-07 11:00--04-07 11:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":6.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 6.0,
+                "x": 1775530800000,
+                "y": 6.0
+              },
+              {
+                "display": "3.00",
+                "tooltip": "{\"title\":\"04-07 11:30--04-07 12:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":3.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 3.0,
+                "x": 1775532600000,
+                "y": 3.0
+              },
+              {
+                "display": "11.00",
+                "tooltip": "{\"title\":\"04-07 12:00--04-07 12:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":11.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 11.0,
+                "x": 1775534400000,
+                "y": 11.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 12:30--04-07 13:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775536200000,
+                "y": 2.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 13:00--04-07 13:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775538000000,
+                "y": 2.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 13:30--04-07 14:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775539800000,
+                "y": 2.0
+              },
+              {
+                "display": "8.00",
+                "tooltip": "{\"title\":\"04-07 14:00--04-07 14:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":8.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 8.0,
+                "x": 1775541600000,
+                "y": 8.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 14:30--04-07 15:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775543400000,
+                "y": 2.0
+              }
+            ],
+            "name": "探针熔断",
+            "type": "column",
+            "xAxis": 0,
+            "yAxis": 0,
+            "zIndex": 2
+          }
+        ],
+        "xAxis": {
+          "categories": [
+            "1775371440000",
+            "1775373240000",
+            "1775375040000",
+            "1775376840000",
+            "1775378640000",
+            "1775380440000",
+            "1775382240000",
+            "1775384040000",
+            "1775385840000",
+            "1775387640000",
+            "1775389440000",
+            "1775391240000",
+            "1775393040000",
+            "1775394840000",
+            "1775396640000",
+            "1775398440000",
+            "1775400240000",
+            "1775402040000",
+            "1775403840000",
+            "1775405640000",
+            "1775407440000",
+            "1775409240000",
+            "1775411040000",
+            "1775412840000",
+            "1775414640000",
+            "1775416440000",
+            "1775418240000",
+            "1775420040000",
+            "1775421840000",
+            "1775423640000",
+            "1775425440000",
+            "1775427240000",
+            "1775429040000",
+            "1775430840000",
+            "1775432640000",
+            "1775434440000",
+            "1775436240000",
+            "1775438040000",
+            "1775439840000",
+            "1775441640000",
+            "1775443440000",
+            "1775445240000",
+            "1775447040000",
+            "1775448840000",
+            "1775450640000",
+            "1775452440000",
+            "1775454240000",
+            "1775456040000",
+            "1775457840000",
+            "1775459640000",
+            "1775461440000",
+            "1775463240000",
+            "1775465040000",
+            "1775466840000",
+            "1775468640000",
+            "1775470440000",
+            "1775472240000",
+            "1775474040000",
+            "1775475840000",
+            "1775477640000",
+            "1775479440000",
+            "1775481240000",
+            "1775483040000",
+            "1775484840000",
+            "1775486640000",
+            "1775488440000",
+            "1775490240000",
+            "1775492040000",
+            "1775493840000",
+            "1775495640000",
+            "1775497440000",
+            "1775499240000",
+            "1775501040000",
+            "1775502840000",
+            "1775504640000",
+            "1775506440000",
+            "1775508240000",
+            "1775510040000",
+            "1775511840000",
+            "1775513640000",
+            "1775515440000",
+            "1775517240000",
+            "1775519040000",
+            "1775520840000",
+            "1775522640000",
+            "1775524440000",
+            "1775526240000",
+            "1775528040000",
+            "1775529840000",
+            "1775531640000",
+            "1775533440000",
+            "1775535240000",
+            "1775537040000",
+            "1775538840000",
+            "1775540640000",
+            "1775542440000"
+          ],
+          "max": 1775544180000,
+          "min": 1775371440000
+        },
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": "个"
+          }
+        ]
+      },
+      "requestId": "40efbc71-9a6f-8d71-6413-bddffadacd48",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": {
+        "overviews": {
+          "timeHorizon": "04-05 14:44 ~ 04-07 14:44"
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-05 22:00--04-05 22:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775397600000,
+                "y": 2.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-06 17:30--04-06 18:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775467800000,
+                "y": 2.0
+              },
+              {
+                "display": "1.00",
+                "tooltip": "{\"title\":\"04-06 20:30--04-06 21:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775478600000,
+                "y": 1.0
+              },
+              {
+                "display": "1.00",
+                "tooltip": "{\"title\":\"04-06 22:30--04-06 23:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":1.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 1.0,
+                "x": 1775485800000,
+                "y": 1.0
+              },
+              {
+                "display": "7.00",
+                "tooltip": "{\"title\":\"04-07 08:30--04-07 09:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":7.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 7.0,
+                "x": 1775521800000,
+                "y": 7.0
+              },
+              {
+                "display": "11.00",
+                "tooltip": "{\"title\":\"04-07 09:00--04-07 09:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":11.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 11.0,
+                "x": 1775523600000,
+                "y": 11.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 09:30--04-07 10:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775525400000,
+                "y": 2.0
+              },
+              {
+                "display": "4.00",
+                "tooltip": "{\"title\":\"04-07 10:00--04-07 10:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":4.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 4.0,
+                "x": 1775527200000,
+                "y": 4.0
+              },
+              {
+                "display": "6.00",
+                "tooltip": "{\"title\":\"04-07 11:00--04-07 11:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":6.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 6.0,
+                "x": 1775530800000,
+                "y": 6.0
+              },
+              {
+                "display": "3.00",
+                "tooltip": "{\"title\":\"04-07 11:30--04-07 12:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":3.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 3.0,
+                "x": 1775532600000,
+                "y": 3.0
+              },
+              {
+                "display": "11.00",
+                "tooltip": "{\"title\":\"04-07 12:00--04-07 12:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":11.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 11.0,
+                "x": 1775534400000,
+                "y": 11.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 12:30--04-07 13:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775536200000,
+                "y": 2.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 13:00--04-07 13:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775538000000,
+                "y": 2.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 13:30--04-07 14:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775539800000,
+                "y": 2.0
+              },
+              {
+                "display": "8.00",
+                "tooltip": "{\"title\":\"04-07 14:00--04-07 14:30\",\"data\":[{\"title\":\"探针熔断\",\"value\":8.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 8.0,
+                "x": 1775541600000,
+                "y": 8.0
+              },
+              {
+                "display": "2.00",
+                "tooltip": "{\"title\":\"04-07 14:30--04-07 15:00\",\"data\":[{\"title\":\"探针熔断\",\"value\":2.00,\"unit\":\"个\",\"scale\":0}]}",
+                "value": 2.0,
+                "x": 1775543400000,
+                "y": 2.0
+              }
+            ],
+            "name": "探针熔断",
+            "type": "column",
+            "xAxis": 0,
+            "yAxis": 0,
+            "zIndex": 2
+          }
+        ],
+        "xAxis": {
+          "categories": [
+            "1775371440000",
+            "1775373240000",
+            "1775375040000",
+            "1775376840000",
+            "1775378640000",
+            "1775380440000",
+            "1775382240000",
+            "1775384040000",
+            "1775385840000",
+            "1775387640000",
+            "1775389440000",
+            "1775391240000",
+            "1775393040000",
+            "1775394840000",
+            "1775396640000",
+            "1775398440000",
+            "1775400240000",
+            "1775402040000",
+            "1775403840000",
+            "1775405640000",
+            "1775407440000",
+            "1775409240000",
+            "1775411040000",
+            "1775412840000",
+            "1775414640000",
+            "1775416440000",
+            "1775418240000",
+            "1775420040000",
+            "1775421840000",
+            "1775423640000",
+            "1775425440000",
+            "1775427240000",
+            "1775429040000",
+            "1775430840000",
+            "1775432640000",
+            "1775434440000",
+            "1775436240000",
+            "1775438040000",
+            "1775439840000",
+            "1775441640000",
+            "1775443440000",
+            "1775445240000",
+            "1775447040000",
+            "1775448840000",
+            "1775450640000",
+            "1775452440000",
+            "1775454240000",
+            "1775456040000",
+            "1775457840000",
+            "1775459640000",
+            "1775461440000",
+            "1775463240000",
+            "1775465040000",
+            "1775466840000",
+            "1775468640000",
+            "1775470440000",
+            "1775472240000",
+            "1775474040000",
+            "1775475840000",
+            "1775477640000",
+            "1775479440000",
+            "1775481240000",
+            "1775483040000",
+            "1775484840000",
+            "1775486640000",
+            "1775488440000",
+            "1775490240000",
+            "1775492040000",
+            "1775493840000",
+            "1775495640000",
+            "1775497440000",
+            "1775499240000",
+            "1775501040000",
+            "1775502840000",
+            "1775504640000",
+            "1775506440000",
+            "1775508240000",
+            "1775510040000",
+            "1775511840000",
+            "1775513640000",
+            "1775515440000",
+            "1775517240000",
+            "1775519040000",
+            "1775520840000",
+            "1775522640000",
+            "1775524440000",
+            "1775526240000",
+            "1775528040000",
+            "1775529840000",
+            "1775531640000",
+            "1775533440000",
+            "1775535240000",
+            "1775537040000",
+            "1775538840000",
+            "1775540640000",
+            "1775542440000"
+          ],
+          "max": 1775544180000,
+          "min": 1775371440000
+        },
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": "个"
+          }
+        ]
+      },
+      "requestId": "40efbc71-9a6f-8d71-6413-bddffadacd48",
+      "status": 200
+    },
+    "encoded_data_length": 1578,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:44:21 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "action": "chart",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "targetType": "$app",
+      "targetValue": "1646",
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "method": "POST",
+    "query": {
+      "chart": "",
+      "lang": "zh_CN"
+    },
+    "relative_path": "graph/event"
+  }
+}

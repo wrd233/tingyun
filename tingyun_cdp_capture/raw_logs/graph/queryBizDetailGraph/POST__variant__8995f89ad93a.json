@@ -1,0 +1,3626 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:44:19+08:00",
+    "completeness_score": 4701,
+    "first_seen_at": "2026-04-07T14:44:08+08:00",
+    "last_seen_at": "2026-04-07T14:44:19+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:19+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:19+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:19+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:19+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/queryBizDetailGraph/POST__variant__8995f89ad93a.json",
+    "resource_type": "XHR",
+    "seen_count": 2,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544259.018914
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+    "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:44:19+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:19+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:19+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:19+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/queryBizDetailGraph",
+  "relative_path": "graph/queryBizDetailGraph",
+  "request": {
+    "body": {
+      "bizSystemId": "1065",
+      "cascadingDisplay": "1",
+      "endTime": "2026-04-07 14:44",
+      "lang": "zh_CN",
+      "mergeGraph": "1",
+      "timePeriod": "2880"
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "bizSystemId": "<DYNAMIC>",
+      "cascadingDisplay": "1",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "mergeGraph": "1",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "66209d06-ef5f-57fd-631f-ceb2d5a12d04",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:19+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/queryBizDetailGraph",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "timePeriod=2880&endTime=2026-04-07%2014:44&bizSystemId=1065&mergeGraph=1&cascadingDisplay=1&lang=zh_CN",
+    "url": "http://169.169.173.25:8080/server-api/graph/queryBizDetailGraph"
+  },
+  "response": {
+    "body": {
+      "data": {
+        "layout": "circle",
+        "linkeDataArray": [
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 2,
+            "response": 1275.0,
+            "throught": 0.01,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1644,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1644,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 1275.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1644,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1646_0_0_0_[fawucn.keking.ServerMain]"
+          },
+          {
+            "cline": 1,
+            "error": 0.05,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 2,
+            "response": 1034.0,
+            "throught": 0.01,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1645,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.05,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1645,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 1034.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1645,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1646_0_0_0_[fawucn.keking.ServerMain]"
+          },
+          {
+            "cline": 1,
+            "error": 0.28,
+            "from": "1065_[0-User]_0_0_0_[User]",
+            "lineType": 1,
+            "response": 67.0,
+            "throught": 2.33,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.28,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 67.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 2.33,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 1.8,
+            "from": "1065_[0-User]_0_0_0_[User]",
+            "lineType": 1,
+            "response": 74.0,
+            "throught": 1.21,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 1.8,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 74.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 1.21,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "lineType": 2,
+            "response": 35.0,
+            "throught": 0.0,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 35.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_[0-User]_0_0_0_[User]",
+            "lineType": 1,
+            "response": 3349.0,
+            "throught": 0.0,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 3349.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1646_0_0_0_[fawucn.keking.ServerMain]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "lineType": 2,
+            "response": 39.0,
+            "throught": 0.0,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 39.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 11.0,
+            "slowError": 0.0,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 11.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_https_[https]"
+          },
+          {
+            "cline": 1,
+            "error": 0.12,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 399.0,
+            "slowError": 2.5,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.12,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 399.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_http_[http]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 4,
+            "response": 0.0,
+            "slowError": 0.0,
+            "throught": 13.24,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 13.24,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_NoSQL_Redis_[Redis]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 3,
+            "response": 8.0,
+            "slowError": 0.09,
+            "throught": 7.54,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 8.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 7.54,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_Database_MySQL_[MySQL]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 3,
+            "response": 8.0,
+            "slowError": 0.04,
+            "throught": 12.13,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 8.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 12.13,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_Database_MySQL_[MySQL]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 22.0,
+            "slowError": 0.32,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 22.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_https_[https]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 4,
+            "response": 0.0,
+            "slowError": 0.0,
+            "throught": 24.44,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 24.44,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_NoSQL_Redis_[Redis]"
+          },
+          {
+            "cline": 1,
+            "error": 0.06,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 273.0,
+            "slowError": 1.71,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.06,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 273.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_http_[http]"
+          },
+          {
+            "cline": 3,
+            "error": 94.53,
+            "from": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "lineType": 7,
+            "response": 18.0,
+            "slowError": 0.0,
+            "throught": 0.0,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1646,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 94.53,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1646,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 18.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1646,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_http_[http]"
+          }
+        ],
+        "merge": "1",
+        "noData": false,
+        "nodeDataArray": [
+          {
+            "cursor": "pointer",
+            "fill": "#43AA93",
+            "graphId": 9435,
+            "hidId": 9435,
+            "id": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "health": -1,
+              "maxThrought": 0.0,
+              "name": "org.springframework.boot.loader.WarLauncher",
+              "response": 0.0,
+              "subType": 1,
+              "throught": 0.0
+            },
+            "isShowName": true,
+            "loc": "51.97884723437673 24.768632711485054",
+            "settingKey": "BIZ1065@1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "org.springframework.boot.loader.WarLauncher",
+              "responseChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "subType": 1,
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": true
+              }
+            },
+            "type": 12,
+            "x": "51.97884723437673",
+            "y": "24.768632711485054"
+          },
+          {
+            "cursor": "pointer",
+            "fill": "#43AA93",
+            "graphId": 9434,
+            "hidId": 9434,
+            "id": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "health": -1,
+              "maxThrought": 0.0,
+              "name": "fawuorg.springframework.boot.loader.WarLauncher",
+              "response": 0.0,
+              "subType": 1,
+              "throught": 0.0
+            },
+            "isShowName": true,
+            "loc": "290.0462211506559 429.62788487017536",
+            "settingKey": "BIZ1065@1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "fawuorg.springframework.boot.loader.WarLauncher",
+              "responseChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "subType": 1,
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": true
+              }
+            },
+            "type": 12,
+            "x": "290.0462211506559",
+            "y": "429.62788487017536"
+          },
+          {
+            "cursor": "pointer",
+            "fill": "#43AA93",
+            "graphId": 9436,
+            "hidId": 9436,
+            "id": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "health": -1,
+              "maxThrought": 0.0,
+              "name": "fawucn.keking.ServerMain",
+              "response": 0.0,
+              "subType": 1,
+              "throught": 0.0
+            },
+            "isShowName": true,
+            "loc": "0.770899736143349 327.0201184620299",
+            "settingKey": "BIZ1065@1065_1646_0_0_0_[fawucn.keking.ServerMain]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "fawucn.keking.ServerMain",
+              "responseChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "subType": 1,
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": true
+              }
+            },
+            "type": 12,
+            "x": "0.770899736143349",
+            "y": "327.0201184620299"
+          },
+          {
+            "cursor": "default",
+            "entryAppType": "User",
+            "fill": "#0085c9",
+            "graphId": 9437,
+            "hidId": 9437,
+            "id": "1065_[0-User]_0_0_0_[User]",
+            "info": {
+              "name": "User",
+              "subType": 0
+            },
+            "isShowName": true,
+            "loc": "414.95962572769065 321.8557736458756",
+            "settingKey": "BIZ1065@1065_[0-User]_0_0_0_[User]@2",
+            "show": 1,
+            "tips": {
+              "name": "User",
+              "responseChart": {
+                "chartParams": {
+                  "browserAppId": 0,
+                  "chartName": "平均加载时间",
+                  "chartYAxisUnit": "ms",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/front/response",
+                "indexKey": "RESPONSE",
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "browserAppId": 0,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "pps",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/front/throught",
+                "indexKey": "THROUGHT",
+                "showTotal": false
+              }
+            },
+            "type": 11,
+            "x": "414.95962572769065",
+            "y": "321.8557736458756"
+          },
+          {
+            "cursor": "default",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9447,
+            "hidId": 9447,
+            "id": "1065_0_0_External_https_[https]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "maxThrought": 0.0,
+              "name": "https",
+              "response": 11.0,
+              "subType": 43,
+              "throught": 0.01
+            },
+            "isShowName": false,
+            "loc": "130.06910417001671 435.4866476577701",
+            "settingKey": "BIZ1065@1065_0_0_External_https_[https]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "https",
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 11.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": true
+              }
+            },
+            "type": 17,
+            "x": "130.06910417001671",
+            "y": "435.4866476577701"
+          },
+          {
+            "cursor": "default",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9445,
+            "hidId": 9445,
+            "id": "1065_0_0_External_http_[http]",
+            "info": {
+              "error": 0.12,
+              "errorCount": 2,
+              "maxThrought": 0.0,
+              "name": "http",
+              "response": 399.0,
+              "subType": 42,
+              "throught": 0.01
+            },
+            "isShowName": false,
+            "loc": "-23.894227242760394 173.0378976616415",
+            "settingKey": "BIZ1065@1065_0_0_External_http_[http]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.12,
+                "showTotal": true
+              },
+              "name": "http",
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 399.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": true
+              }
+            },
+            "type": 17,
+            "x": "-23.894227242760394",
+            "y": "173.0378976616415"
+          },
+          {
+            "cursor": "pointer",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9443,
+            "hidId": 9443,
+            "id": "1065_0_0_NoSQL_Redis_[Redis]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "maxThrought": 0.0,
+              "name": "Redis",
+              "response": 0.0,
+              "subType": 21,
+              "throught": 13.24
+            },
+            "isShowName": false,
+            "loc": "211.39341518314893 -27",
+            "settingKey": "BIZ1065@1065_0_0_NoSQL_Redis_[Redis]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorCountChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误数",
+                  "chartYAxisUnit": "",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/exceptionCount",
+                "indexKey": "ERROR_COUNT",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "Redis",
+              "queryTimeChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 13.24,
+                "showTotal": true
+              }
+            },
+            "type": 15,
+            "x": "211.39341518314893",
+            "y": "-27"
+          },
+          {
+            "cursor": "pointer",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9440,
+            "hidId": 9440,
+            "id": "1065_0_0_Database_MySQL_[MySQL]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 21,
+              "maxThrought": 0.0,
+              "name": "MySQL",
+              "response": 8.0,
+              "subType": 2,
+              "throught": 7.54
+            },
+            "isShowName": false,
+            "loc": "445.65158185960433 167.18332868615911",
+            "settingKey": "BIZ1065@1065_0_0_Database_MySQL_[MySQL]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorCountChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误数",
+                  "chartYAxisUnit": "",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/exceptionCount",
+                "indexKey": "ERROR_COUNT",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "MySQL",
+              "queryTimeChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 8.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 7.54,
+                "showTotal": true
+              }
+            },
+            "type": 14,
+            "x": "445.65158185960433",
+            "y": "167.18332868615911"
+          }
+        ],
+        "scale": "0.917361525633181",
+        "topoNodeLimitInfos": []
+      },
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": {
+        "layout": "circle",
+        "linkeDataArray": [
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 2,
+            "response": 1275.0,
+            "throught": 0.01,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1644,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1644,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 1275.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1644,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1646_0_0_0_[fawucn.keking.ServerMain]"
+          },
+          {
+            "cline": 1,
+            "error": 0.05,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 2,
+            "response": 1034.0,
+            "throught": 0.01,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1645,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.05,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1645,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 1034.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1645,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1646_0_0_0_[fawucn.keking.ServerMain]"
+          },
+          {
+            "cline": 1,
+            "error": 0.28,
+            "from": "1065_[0-User]_0_0_0_[User]",
+            "lineType": 1,
+            "response": 67.0,
+            "throught": 2.33,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.28,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 67.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 2.33,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 1.8,
+            "from": "1065_[0-User]_0_0_0_[User]",
+            "lineType": 1,
+            "response": 74.0,
+            "throught": 1.21,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 1.8,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 74.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 1.21,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "lineType": 2,
+            "response": 35.0,
+            "throught": 0.0,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 35.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_[0-User]_0_0_0_[User]",
+            "lineType": 1,
+            "response": 3349.0,
+            "throught": 0.0,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 3349.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 0,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "User",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1646_0_0_0_[fawucn.keking.ServerMain]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "lineType": 2,
+            "response": 39.0,
+            "throught": 0.0,
+            "tips": {
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 39.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "callerApplicationId": 1646,
+                  "callerBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "entryAppType": "Application",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 11.0,
+            "slowError": 0.0,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 11.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_https_[https]"
+          },
+          {
+            "cline": 1,
+            "error": 0.12,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 399.0,
+            "slowError": 2.5,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.12,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 399.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_http_[http]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 4,
+            "response": 0.0,
+            "slowError": 0.0,
+            "throught": 13.24,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 13.24,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_NoSQL_Redis_[Redis]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "lineType": 3,
+            "response": 8.0,
+            "slowError": 0.09,
+            "throught": 7.54,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 8.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 7.54,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_Database_MySQL_[MySQL]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 3,
+            "response": 8.0,
+            "slowError": 0.04,
+            "throught": 12.13,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 8.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 12.13,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_Database_MySQL_[MySQL]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 22.0,
+            "slowError": 0.32,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 22.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_https_[https]"
+          },
+          {
+            "cline": 1,
+            "error": 0.0,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 4,
+            "response": 0.0,
+            "slowError": 0.0,
+            "throught": 24.44,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 24.44,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_NoSQL_Redis_[Redis]"
+          },
+          {
+            "cline": 1,
+            "error": 0.06,
+            "from": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "lineType": 7,
+            "response": 273.0,
+            "slowError": 1.71,
+            "throught": 0.01,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.06,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 273.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1645,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_http_[http]"
+          },
+          {
+            "cline": 3,
+            "error": 94.53,
+            "from": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "lineType": 7,
+            "response": 18.0,
+            "slowError": 0.0,
+            "throught": 0.0,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 1646,
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 94.53,
+                "showTotal": false
+              },
+              "queryTimeChart": {
+                "chartParams": {
+                  "applicationId": 1646,
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 18.0,
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 1646,
+                  "bizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": false
+              }
+            },
+            "tline": 2,
+            "to": "1065_0_0_External_http_[http]"
+          }
+        ],
+        "merge": "1",
+        "noData": false,
+        "nodeDataArray": [
+          {
+            "cursor": "pointer",
+            "fill": "#43AA93",
+            "graphId": 9435,
+            "hidId": 9435,
+            "id": "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "health": -1,
+              "maxThrought": 0.0,
+              "name": "org.springframework.boot.loader.WarLauncher",
+              "response": 0.0,
+              "subType": 1,
+              "throught": 0.0
+            },
+            "isShowName": true,
+            "loc": "51.97884723437673 24.768632711485054",
+            "settingKey": "BIZ1065@1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "org.springframework.boot.loader.WarLauncher",
+              "responseChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "subType": 1,
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1644,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": true
+              }
+            },
+            "type": 12,
+            "x": "51.97884723437673",
+            "y": "24.768632711485054"
+          },
+          {
+            "cursor": "pointer",
+            "fill": "#43AA93",
+            "graphId": 9434,
+            "hidId": 9434,
+            "id": "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "health": -1,
+              "maxThrought": 0.0,
+              "name": "fawuorg.springframework.boot.loader.WarLauncher",
+              "response": 0.0,
+              "subType": 1,
+              "throught": 0.0
+            },
+            "isShowName": true,
+            "loc": "290.0462211506559 429.62788487017536",
+            "settingKey": "BIZ1065@1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "fawuorg.springframework.boot.loader.WarLauncher",
+              "responseChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "subType": 1,
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1645,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": true
+              }
+            },
+            "type": 12,
+            "x": "290.0462211506559",
+            "y": "429.62788487017536"
+          },
+          {
+            "cursor": "pointer",
+            "fill": "#43AA93",
+            "graphId": 9436,
+            "hidId": 9436,
+            "id": "1065_1646_0_0_0_[fawucn.keking.ServerMain]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "health": -1,
+              "maxThrought": 0.0,
+              "name": "<REDACTED>",
+              "response": 0.0,
+              "subType": 1,
+              "throught": 0.0
+            },
+            "isShowName": true,
+            "loc": "0.770899736143349 327.0201184620299",
+            "settingKey": "BIZ1065@1065_1646_0_0_0_[fawucn.keking.ServerMain]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均错误率",
+                  "chartYAxisUnit": "%",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "<REDACTED>",
+              "responseChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均响应时间",
+                  "chartYAxisUnit": "ms",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/reponse",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "subType": 1,
+              "throughChart": {
+                "chartParams": {
+                  "applicationId": 0,
+                  "bizSystemId": 1065,
+                  "calleeApplicationId": 1646,
+                  "calleeBizSystemId": 1065,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "tps",
+                  "dataType": "BIZD",
+                  "endTime": "2026-04-07 14:44:00",
+                  "instanceId": 0,
+                  "timePeriod": 2880,
+                  "topoType": "1",
+                  "type": 12
+                },
+                "chartUrl": "/graph/charts/throught",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.0,
+                "showTotal": true
+              }
+            },
+            "type": 12,
+            "x": "0.770899736143349",
+            "y": "327.0201184620299"
+          },
+          {
+            "cursor": "default",
+            "entryAppType": "User",
+            "fill": "#0085c9",
+            "graphId": 9437,
+            "hidId": 9437,
+            "id": "1065_[0-User]_0_0_0_[User]",
+            "info": {
+              "name": "User",
+              "subType": 0
+            },
+            "isShowName": true,
+            "loc": "414.95962572769065 321.8557736458756",
+            "settingKey": "BIZ1065@1065_[0-User]_0_0_0_[User]@2",
+            "show": 1,
+            "tips": {
+              "name": "User",
+              "responseChart": {
+                "chartParams": {
+                  "browserAppId": 0,
+                  "chartName": "平均加载时间",
+                  "chartYAxisUnit": "ms",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/front/response",
+                "indexKey": "RESPONSE",
+                "showTotal": false
+              },
+              "throughChart": {
+                "chartParams": {
+                  "browserAppId": 0,
+                  "chartName": "平均吞吐率",
+                  "chartYAxisUnit": "pps",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/graph/charts/front/throught",
+                "indexKey": "THROUGHT",
+                "showTotal": false
+              }
+            },
+            "type": 11,
+            "x": "414.95962572769065",
+            "y": "321.8557736458756"
+          },
+          {
+            "cursor": "default",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9447,
+            "hidId": 9447,
+            "id": "1065_0_0_External_https_[https]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "maxThrought": 0.0,
+              "name": "https",
+              "response": 11.0,
+              "subType": 43,
+              "throught": 0.01
+            },
+            "isShowName": false,
+            "loc": "130.06910417001671 435.4866476577701",
+            "settingKey": "BIZ1065@1065_0_0_External_https_[https]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "https",
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 11.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "https",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": true
+              }
+            },
+            "type": 17,
+            "x": "130.06910417001671",
+            "y": "435.4866476577701"
+          },
+          {
+            "cursor": "default",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9445,
+            "hidId": 9445,
+            "id": "1065_0_0_External_http_[http]",
+            "info": {
+              "error": 0.12,
+              "errorCount": 2,
+              "maxThrought": 0.0,
+              "name": "http",
+              "response": 399.0,
+              "subType": 42,
+              "throught": 0.01
+            },
+            "isShowName": false,
+            "loc": "-23.894227242760394 173.0378976616415",
+            "settingKey": "BIZ1065@1065_0_0_External_http_[http]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "错误率",
+                  "chartYAxisUnit": "%",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/error",
+                "indexKey": "ERROR",
+                "indexValue": 0.12,
+                "showTotal": true
+              },
+              "name": "http",
+              "responseChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 399.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 0.01,
+                "showTotal": true
+              }
+            },
+            "type": 17,
+            "x": "-23.894227242760394",
+            "y": "173.0378976616415"
+          },
+          {
+            "cursor": "pointer",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9443,
+            "hidId": 9443,
+            "id": "1065_0_0_NoSQL_Redis_[Redis]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 0,
+              "maxThrought": 0.0,
+              "name": "Redis",
+              "response": 0.0,
+              "subType": 21,
+              "throught": 13.24
+            },
+            "isShowName": false,
+            "loc": "211.39341518314893 -27",
+            "settingKey": "BIZ1065@1065_0_0_NoSQL_Redis_[Redis]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorCountChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误数",
+                  "chartYAxisUnit": "",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/exceptionCount",
+                "indexKey": "ERROR_COUNT",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "Redis",
+              "queryTimeChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 13.24,
+                "showTotal": true
+              }
+            },
+            "type": 15,
+            "x": "211.39341518314893",
+            "y": "-27"
+          },
+          {
+            "cursor": "pointer",
+            "figure": "Circle",
+            "fill": "#0085c9",
+            "graphId": 9440,
+            "hidId": 9440,
+            "id": "1065_0_0_Database_MySQL_[MySQL]",
+            "info": {
+              "error": 0.0,
+              "errorCount": 21,
+              "maxThrought": 0.0,
+              "name": "MySQL",
+              "response": 8.0,
+              "subType": 2,
+              "throught": 7.54
+            },
+            "isShowName": false,
+            "loc": "445.65158185960433 167.18332868615911",
+            "settingKey": "BIZ1065@1065_0_0_Database_MySQL_[MySQL]@2",
+            "show": 1,
+            "tips": {
+              "apexThrought": 0.0,
+              "errorCountChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均错误数",
+                  "chartYAxisUnit": "",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/exceptionCount",
+                "indexKey": "ERROR_COUNT",
+                "indexValue": 0.0,
+                "showTotal": true
+              },
+              "name": "MySQL",
+              "queryTimeChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "平均查询时间",
+                  "chartYAxisUnit": "ms",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/respTime",
+                "indexKey": "RESPONSE",
+                "indexValue": 8.0,
+                "showTotal": true
+              },
+              "throughChart": {
+                "chartParams": {
+                  "bizSystemId": 1065,
+                  "chartName": "吞吐率",
+                  "chartYAxisUnit": "qps",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "dataType": "COMP",
+                  "endTime": "2026-04-07 14:44:00",
+                  "timePeriod": 2880
+                },
+                "chartUrl": "/component/chart/throughput",
+                "indexKey": "THROUGHT",
+                "indexValue": 7.54,
+                "showTotal": true
+              }
+            },
+            "type": 14,
+            "x": "445.65158185960433",
+            "y": "167.18332868615911"
+          }
+        ],
+        "scale": "0.917361525633181",
+        "topoNodeLimitInfos": []
+      },
+      "status": 200
+    },
+    "encoded_data_length": 3098,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:44:07 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "bizSystemId": "<DYNAMIC>",
+      "cascadingDisplay": "1",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "mergeGraph": "1",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "graph/queryBizDetailGraph"
+  }
+}

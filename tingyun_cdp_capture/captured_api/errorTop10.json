@@ -1,10 +1,10 @@
 {
-  "count_seen": 2,
+  "count_seen": 4,
   "first_seen": "2026-04-03T15:42:36+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 2
+    "http://169.169.173.25:8080": 4
   },
-  "last_seen": "2026-04-03T15:42:57+08:00",
+  "last_seen": "2026-04-07T14:49:35+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -69,6 +69,72 @@
           "dynamic_fields": [
             "body.actionId",
             "body.applicationId",
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "13537",
+            "actionName": "Job/DEFAULT/continueContractInfoSignJobDetail",
+            "actionType": "BG",
+            "applicationId": "1645",
+            "beginTime": "2026-04-07 03:00",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "chartName": "错误率",
+            "chartYAxisUnit": "%",
+            "curP": "1775544574424",
+            "endTime": "2026-04-07 14:46",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "timePeriod": "706",
+            "toolTipContainDetail": "true"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionName\":\"Job/DEFAULT/continueContractInfoSignJobDetail\",\"actionType\":\"BG\",\"applicationId\":\"<DYNAMIC>\",\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"chartName\":\"错误率\",\"chartYAxisUnit\":\"%\",\"curP\":\"1775544574424\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\",\"toolTipContainDetail\":\"true\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionName",
+              "actionType",
+              "applicationId",
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "chartName",
+              "chartYAxisUnit",
+              "curP",
+              "endTime",
+              "errorLevel",
+              "lang",
+              "timePeriod",
+              "toolTipContainDetail"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionName": "Job/DEFAULT/continueContractInfoSignJobDetail",
+            "actionType": "BG",
+            "applicationId": "<DYNAMIC>",
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "chartName": "错误率",
+            "chartYAxisUnit": "%",
+            "curP": "1775544574424",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>",
+            "toolTipContainDetail": "true"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
             "body.bizSystemId",
             "body.endTime",
             "body.timePeriod"
@@ -106,21 +172,81 @@
           }
         }
       ],
-      "count_seen": 2,
+      "count_seen": 4,
       "first_seen": "2026-04-03T15:42:36+08:00",
       "inference_basis": [
         "path=errorTop10"
       ],
       "inferred_purpose": "Likely related to errorTop10",
-      "last_seen": "2026-04-03T15:42:57+08:00",
+      "last_seen": "2026-04-07T14:49:35+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 2
+        "application/json": 4
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:35+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/errorTop10",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:59+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/errorTop10",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:35+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/errorTop10",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:35+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/errorTop10",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -164,7 +290,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 2
+        "XHR": 4
       },
       "sample_requests": [
         {
@@ -214,6 +340,42 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-03T15:42:57+08:00",
+          "url": "http://169.169.173.25:8080/server-api/errorTop10"
+        },
+        {
+          "body": {
+            "actionId": "13278",
+            "actionType": "TX",
+            "applicationId": "1645",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:59+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/errorTop10",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:48:59+08:00",
           "url": "http://169.169.173.25:8080/server-api/errorTop10"
         }
       ],
@@ -275,10 +437,69 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-07 08:50--04-07 09:00\",\"data\":[{\"title\":\"错误数\",\"value\":3,\"unit\":\"次\",\"scale\":0},{\"title\":\"错误率\",\"value\":0.38,\"unit\":\"%\",\"scale\":2}]}",
+                      "x": 1775523000000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-07 09:20--04-07 09:30\",\"data\":[{\"title\":\"错误数\",\"value\":3,\"unit\":\"次\",\"scale\":0},{\"title\":\"错误率\",\"value\":0.36,\"unit\":\"%\",\"scale\":2}]}",
+                      "x": 1775524800000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-07 09:30--04-07 09:40\",\"data\":[{\"title\":\"错误数\",\"value\":7,\"unit\":\"次\",\"scale\":0},{\"title\":\"错误率\",\"value\":0.89,\"unit\":\"%\",\"scale\":2}]}",
+                      "x": 1775525400000,
+                      "y": 7.0
+                    }
+                  ],
+                  "name": "<REDACTED>",
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "次"
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:48:47 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 2
+        "200": 4
       }
     }
   },

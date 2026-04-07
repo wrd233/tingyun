@@ -1,15 +1,15 @@
 {
-  "count_seen": 4,
+  "count_seen": 8,
   "first_seen": "2026-04-03T15:40:10+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 4
+    "http://169.169.173.25:8080": 8
   },
-  "last_seen": "2026-04-03T20:01:15+08:00",
+  "last_seen": "2026-04-07T14:49:49+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "body.actionGuid",
             "body.bizSystemId",
@@ -57,7 +57,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "body.actionGuid",
             "body.bizSystemId",
@@ -99,21 +99,81 @@
           }
         }
       ],
-      "count_seen": 4,
+      "count_seen": 8,
       "first_seen": "2026-04-03T15:40:10+08:00",
       "inference_basis": [
         "path=action/trace/callTree"
       ],
       "inferred_purpose": "Likely related to trace",
-      "last_seen": "2026-04-03T20:01:15+08:00",
+      "last_seen": "2026-04-07T14:49:49+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 4
+        "application/json": 8
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+            "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+            "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+            "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:49+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/action/trace/callTree",
+            "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "frame_id": "1C473FD520D8494F94C450A1C523C412",
+            "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:34+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/action/trace/callTree",
+            "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+          "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:49+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/action/trace/callTree",
+          "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "document_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "frame_id": "977A5408B2A3C5CBC060903FB1FC8169",
+          "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:49+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/action/trace/callTree",
+          "tab_target_id": "977A5408B2A3C5CBC060903FB1FC8169"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 4,
+          "count_seen": 8,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -160,7 +220,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 4
+        "XHR": 8
       },
       "sample_requests": [
         {
@@ -64613,7 +64673,7 @@
         }
       ],
       "status_codes": {
-        "200": 4
+        "200": 8
       }
     }
   },

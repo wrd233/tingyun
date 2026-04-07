@@ -1,0 +1,329 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:48:11+08:00",
+    "completeness_score": 337,
+    "first_seen_at": "2026-04-07T14:48:05+08:00",
+    "last_seen_at": "2026-04-07T14:48:11+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "frame_id": "1C473FD520D8494F94C450A1C523C412",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:48:11+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+      "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "frame_id": "1C473FD520D8494F94C450A1C523C412",
+          "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:48:11+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+          "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "frame_id": "1C473FD520D8494F94C450A1C523C412",
+        "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:48:11+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+        "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "frame_id": "1C473FD520D8494F94C450A1C523C412",
+        "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:48:11+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+        "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+      }
+    },
+    "raw_log_file": "action/trace/detail/poolInfo/POST__variant__a22e390d48c4.json",
+    "resource_type": "XHR",
+    "seen_count": 2,
+    "tab_target_id": "1C473FD520D8494F94C450A1C523C412",
+    "wall_time": 1775544491.548478
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+    "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+    "frame_id": "1C473FD520D8494F94C450A1C523C412",
+    "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:48:11+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+    "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "frame_id": "1C473FD520D8494F94C450A1C523C412",
+        "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:48:11+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+        "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "frame_id": "1C473FD520D8494F94C450A1C523C412",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:48:11+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+      "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "frame_id": "1C473FD520D8494F94C450A1C523C412",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:48:11+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+      "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+    }
+  },
+  "path": "/server-api/action/trace/detail/poolInfo",
+  "relative_path": "action/trace/detail/poolInfo",
+  "request": {
+    "body": {
+      "lang": "zh_CN"
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "lang": "zh_CN"
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "f5f32735-19ab-be3c-7385-8777046c5498",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "document_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "frame_id": "1C473FD520D8494F94C450A1C523C412",
+      "frame_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:48:11+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN",
+      "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+    },
+    "path": "/server-api/action/trace/detail/poolInfo",
+    "query": {
+      "lang": "zh_CN",
+      "metricCategory": "10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c",
+      "poolActiveCount": "0",
+      "poolEndTime": "1775523101840",
+      "poolWaitCount": "0"
+    },
+    "query_normalized": {
+      "lang": "zh_CN",
+      "metricCategory": "10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c",
+      "poolActiveCount": "0",
+      "poolEndTime": "<DYNAMIC>",
+      "poolWaitCount": "0"
+    },
+    "raw_post_data": "{\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/action/trace/detail/poolInfo?poolActiveCount=0&poolWaitCount=0&poolEndTime=1775523101840&metricCategory=10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "code": 200,
+      "data": {
+        "address": "10.190.22.20:6379",
+        "addressSplit": "10.190.22.20:6379",
+        "addressWithSchema": "10.190.22.20:63792%F1Redis",
+        "applicationId": 1645,
+        "avgTime": 0.0,
+        "bizSystemId": 1059,
+        "ctime": 1765541885000,
+        "currentIdle": 0,
+        "currentUsed": 0,
+        "databaseName": "1",
+        "databaseType": "Redis",
+        "framework": "Redisson",
+        "id": 620,
+        "initActive": 0,
+        "instanceId": 2746,
+        "maxActive": 128,
+        "maxIdle": 64,
+        "mertricScope": "Pool",
+        "metricCategory": "10.190.22.20:6379%2F1/Redis-71302e7634fce89ebb80ae0f8b259f8c",
+        "metricName": "Register",
+        "metricTag": "Redis-71302e7634fce89ebb80ae0f8b259f8c",
+        "minIdle": 24,
+        "mtime": 1765541885000,
+        "other": null,
+        "pools": [
+          {
+            "applicationId": 0,
+            "bizSystemId": 0,
+            "frameworkName": "Redisson-71302e7634fce89ebb80ae0f8b259f8c",
+            "idle": 128,
+            "initActive": 0,
+            "instanceId": 0,
+            "max": 0,
+            "maxActive": 0,
+            "maxIdle": 0,
+            "minIdle": 0,
+            "name": null,
+            "time": 0.0,
+            "used": 0,
+            "waitCount": 0
+          }
+        ],
+        "rawUrl": null,
+        "serviceGroupId": 0
+      }
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "code": 200,
+      "data": {
+        "address": "10.190.22.20:6379",
+        "addressSplit": "10.190.22.20:6379",
+        "addressWithSchema": "10.190.22.20:63792%F1Redis",
+        "applicationId": 1645,
+        "avgTime": 0.0,
+        "bizSystemId": 1059,
+        "ctime": 1765541885000,
+        "currentIdle": 0,
+        "currentUsed": 0,
+        "databaseName": "1",
+        "databaseType": "Redis",
+        "framework": "Redisson",
+        "id": 620,
+        "initActive": 0,
+        "instanceId": 2746,
+        "maxActive": 128,
+        "maxIdle": 64,
+        "mertricScope": "Pool",
+        "metricCategory": "10.190.22.20:6379%2F1/Redis-71302e7634fce89ebb80ae0f8b259f8c",
+        "metricName": "Register",
+        "metricTag": "Redis-71302e7634fce89ebb80ae0f8b259f8c",
+        "minIdle": 24,
+        "mtime": 1765541885000,
+        "other": null,
+        "pools": [
+          {
+            "applicationId": 0,
+            "bizSystemId": 0,
+            "frameworkName": "Redisson-71302e7634fce89ebb80ae0f8b259f8c",
+            "idle": 128,
+            "initActive": 0,
+            "instanceId": 0,
+            "max": 0,
+            "maxActive": 0,
+            "maxIdle": 0,
+            "minIdle": 0,
+            "name": null,
+            "time": 0.0,
+            "used": 0,
+            "waitCount": 0
+          }
+        ],
+        "rawUrl": null,
+        "serviceGroupId": 0
+      }
+    },
+    "encoded_data_length": 1075,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:47:59 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "lang": "zh_CN"
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN",
+      "metricCategory": "10.190.22.20:6379/1/Redis-71302e7634fce89ebb80ae0f8b259f8c",
+      "poolActiveCount": "0",
+      "poolEndTime": "<DYNAMIC>",
+      "poolWaitCount": "0"
+    },
+    "relative_path": "action/trace/detail/poolInfo"
+  }
+}

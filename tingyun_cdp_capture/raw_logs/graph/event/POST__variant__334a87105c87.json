@@ -1,0 +1,1578 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:44:33+08:00",
+    "completeness_score": 1621,
+    "first_seen_at": "2026-04-07T14:44:33+08:00",
+    "last_seen_at": "2026-04-07T14:44:33+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:33+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "graph/event/POST__variant__334a87105c87.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544272.951001
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+    "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:44:33+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:44:33+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/graph/event",
+  "relative_path": "graph/event",
+  "request": {
+    "body": {
+      "action": "list",
+      "endTime": "2026-04-07 14:44",
+      "eventType": "",
+      "lang": "zh_CN",
+      "targetType": "$app",
+      "targetValue": "1646",
+      "timePeriod": 2880
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "action": "list",
+      "endTime": "<DATETIME>",
+      "eventType": "",
+      "lang": "zh_CN",
+      "targetType": "$app",
+      "targetValue": "1646",
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "525d811d-1029-42be-6c96-067013e93b84",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "document_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/application/home/1646",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:44:33+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/graph/event",
+    "query": {
+      "lang": "zh_CN",
+      "list": ""
+    },
+    "query_normalized": {
+      "lang": "zh_CN",
+      "list": ""
+    },
+    "raw_post_data": "{\"action\":\"list\",\"targetType\":\"$app\",\"targetValue\":\"1646\",\"timePeriod\":2880,\"endTime\":\"2026-04-07 14:44\",\"eventType\":\"\",\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/event?list&lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": {
+        "eventList": [
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 37.23, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775544164000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 8.45, GC CPU使用率(%): 11.24, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775544113000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 28.47, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542751000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.93, GC CPU使用率(%): 0.48, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542439000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 30.53, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542280000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.3, GC CPU使用率(%): 1.86, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542229000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 12.44, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542007000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 0, 当前内存使用率(%): 86.98, GC CPU使用率(%): 2.8, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775541905000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 68.05, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775541824000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.79, GC CPU使用率(%): 0.82, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775541653000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 29.32, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775540762000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 25.98, GC CPU使用率(%): 11.56, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775540711000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 12.51, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775538623000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.61, GC CPU使用率(%): 0.54, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775538575000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 51.33, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775536580000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 55.9, GC CPU使用率(%): 10.65, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775536490000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 14.1, GC CPU使用率(%): 0.18, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535644000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 77.97, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535596000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.62, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535584000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.78, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535443000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.62, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535431000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.38, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534936000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 67.8, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534927000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.92, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534786000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 65.12, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534699000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.67, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534612000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.93, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534435000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.36, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534336000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 62.6, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775533910000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 73.82, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775533616000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 28.73, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532446000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 77.6, GC CPU使用率(%): 1.58, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532398000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 60.23, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532356000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.15, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532299000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 60.3, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532077000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 76.3, GC CPU使用率(%): 1.94, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775531999000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 3.55, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775528042000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 22.4, GC CPU使用率(%): 10.53, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775527886000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 68.74, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775527835000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.17, GC CPU使用率(%): 1.06, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775527529000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 19.05, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775526641000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 76.93, GC CPU使用率(%): 4.75, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775526455000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 29.36, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775525033000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 0, 当前内存使用率(%): 81.49, GC CPU使用率(%): 2.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524940000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 28.15, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524388000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.33, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524226000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.22, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524202000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.05, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524094000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 65.72, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523992000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.16, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523824000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 67.57, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523728000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.32, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523677000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 64.41, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523668000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.8, GC CPU使用率(%): 1.14, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523548000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 37.09, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522699000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 78.35, GC CPU使用率(%): 4.19, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522669000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 60.39, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522354000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.73, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522312000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 48.49, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775521931000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.67, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775521871000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 3.24, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775486513000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.1, GC CPU使用率(%): 0.28, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775479433000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 48.21, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775467997000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.04, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775467841000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 56.34, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775399036000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.2, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775398499000
+          }
+        ],
+        "total": 66
+      },
+      "requestId": "525d811d-1029-42be-6c96-067013e93b84",
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": {
+        "eventList": [
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 37.23, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775544164000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 8.45, GC CPU使用率(%): 11.24, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775544113000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 28.47, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542751000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.93, GC CPU使用率(%): 0.48, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542439000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 30.53, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542280000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.3, GC CPU使用率(%): 1.86, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542229000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 12.44, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775542007000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 0, 当前内存使用率(%): 86.98, GC CPU使用率(%): 2.8, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775541905000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 68.05, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775541824000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.79, GC CPU使用率(%): 0.82, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775541653000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 29.32, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775540762000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 25.98, GC CPU使用率(%): 11.56, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775540711000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 12.51, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775538623000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.61, GC CPU使用率(%): 0.54, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775538575000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 51.33, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775536580000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 55.9, GC CPU使用率(%): 10.65, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775536490000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 14.1, GC CPU使用率(%): 0.18, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535644000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 77.97, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535596000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.62, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535584000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.78, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535443000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.62, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775535431000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.38, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534936000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 67.8, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534927000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.92, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534786000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 65.12, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534699000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.67, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534612000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.93, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534435000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.36, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775534336000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 62.6, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775533910000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 73.82, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775533616000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 28.73, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532446000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 77.6, GC CPU使用率(%): 1.58, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532398000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 60.23, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532356000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.15, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532299000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 60.3, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775532077000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 76.3, GC CPU使用率(%): 1.94, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775531999000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 3.55, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775528042000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 22.4, GC CPU使用率(%): 10.53, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775527886000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 68.74, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775527835000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.17, GC CPU使用率(%): 1.06, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775527529000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 19.05, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775526641000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 76.93, GC CPU使用率(%): 4.75, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775526455000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 29.36, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775525033000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 0, 当前内存使用率(%): 81.49, GC CPU使用率(%): 2.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524940000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 28.15, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524388000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.33, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524226000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 66.22, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524202000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.05, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775524094000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 65.72, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523992000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.16, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523824000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 67.57, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523728000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 72.32, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523677000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 64.41, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523668000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 74.8, GC CPU使用率(%): 1.14, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775523548000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 37.09, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522699000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 78.35, GC CPU使用率(%): 4.19, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522669000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 60.39, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522354000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.73, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775522312000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 48.49, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775521931000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 71.67, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775521871000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 3.24, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775486513000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.1, GC CPU使用率(%): 0.28, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775479433000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 48.21, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775467997000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.04, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775467841000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 100, 当前内存使用率(%): 56.34, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775399036000
+          },
+          {
+            "applicationId": 1646,
+            "description": "事件名称：探针熔断，事件类型：Event/Sampling/Touch，应用名称 : fawucn.keking.ServerMain，实例名称 : NBYD-JTFW-FILE1:7080， 请求采样率(%): 50, 当前内存使用率(%): 70.2, GC CPU使用率(%): 0.0, CPU平均负载: -1.0",
+            "eventDisplayName": "探针熔断",
+            "eventObject": "产品线: APM,fawucn.keking.ServerMain",
+            "eventParams": {},
+            "eventType": "agent_fuse",
+            "eventUri": "",
+            "timestamp": 1775398499000
+          }
+        ],
+        "total": 66
+      },
+      "requestId": "525d811d-1029-42be-6c96-067013e93b84",
+      "status": 200
+    },
+    "encoded_data_length": 1839,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:44:20 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "action": "list",
+      "endTime": "<DATETIME>",
+      "eventType": "",
+      "lang": "zh_CN",
+      "targetType": "$app",
+      "targetValue": "1646",
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN",
+      "list": ""
+    },
+    "relative_path": "graph/event"
+  }
+}

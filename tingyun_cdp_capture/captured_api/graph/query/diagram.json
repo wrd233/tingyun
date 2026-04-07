@@ -1,15 +1,15 @@
 {
-  "count_seen": 36,
+  "count_seen": 116,
   "first_seen": "2026-04-03T15:39:50+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 36
+    "http://169.169.173.25:8080": 116
   },
-  "last_seen": "2026-04-03T15:42:15+08:00",
+  "last_seen": "2026-04-07T14:47:41+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 8,
           "dynamic_fields": [
             "body.beginTime",
             "body.endTime",
@@ -63,7 +63,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 8,
           "dynamic_fields": [
             "body.beginTime",
             "body.endTime",
@@ -117,7 +117,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 8,
           "dynamic_fields": [
             "body.beginTime",
             "body.endTime",
@@ -171,7 +171,384 @@
           }
         },
         {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 09:00",
+            "labels": {
+              "actionIds": [
+                "16000"
+              ],
+              "applicationIds": [
+                "1645"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown",
+            "seriesType": "pie",
+            "timePeriod": 360
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"response_time_breakdown\",\"seriesType\":\"pie\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "seriesType",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown",
+            "seriesType": "pie",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.actionIds[0]",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 09:00",
+            "labels": {
+              "actionIds": [
+                "16000"
+              ],
+              "applicationIds": [
+                "1645"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown_trend",
+            "timePeriod": 360
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionIds\":[\"<DYNAMIC>\"],\"applicationIds\":[\"<DYNAMIC>\"]},\"lang\":\"zh_CN\",\"metric\":\"response_time_breakdown_trend\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionIds": [
+                "<DYNAMIC>"
+              ],
+              "applicationIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown_trend",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 14:46",
+            "labels": {
+              "actionTypes": [
+                "BG"
+              ],
+              "applicationIds": [
+                1645
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "error_diagram",
+            "timePeriod": 706,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"BG\"],\"applicationIds\":[\"<DYNAMIC_NUMBER>\"]},\"lang\":\"zh_CN\",\"metric\":\"error_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "BG"
+              ],
+              "applicationIds": [
+                "<DYNAMIC_NUMBER>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "error_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 14:46",
+            "labels": {
+              "actionTypes": [
+                "BG"
+              ],
+              "applicationIds": [
+                1645
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram",
+            "timePeriod": 706,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"BG\"],\"applicationIds\":[\"<DYNAMIC_NUMBER>\"]},\"lang\":\"zh_CN\",\"metric\":\"response_time_p50_ms_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "BG"
+              ],
+              "applicationIds": [
+                "<DYNAMIC_NUMBER>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 14:46",
+            "labels": {
+              "actionTypes": [
+                "BG"
+              ],
+              "applicationIds": [
+                1645
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "throughput_diagram",
+            "timePeriod": 706,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"BG\"],\"applicationIds\":[\"<DYNAMIC_NUMBER>\"]},\"lang\":\"zh_CN\",\"metric\":\"throughput_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "BG"
+              ],
+              "applicationIds": [
+                "<DYNAMIC_NUMBER>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "throughput_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 14:46",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                1645
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "client_response_time_diagram",
+            "timePeriod": 706,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"TX,IF\"],\"applicationIds\":[\"<DYNAMIC_NUMBER>\"]},\"lang\":\"zh_CN\",\"metric\":\"client_response_time_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                "<DYNAMIC_NUMBER>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "client_response_time_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
           "count_seen": 2,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-07 03:00",
+            "endTime": "2026-04-07 14:46",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                1645
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram",
+            "timePeriod": 706,
+            "zoomTime": true
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"TX,IF\"],\"applicationIds\":[\"<DYNAMIC_NUMBER>\"]},\"lang\":\"zh_CN\",\"metric\":\"response_time_p50_ms_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                "<DYNAMIC_NUMBER>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 6,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.actionIds[0]",
@@ -221,7 +598,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 6,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.actionIds[0]",
@@ -278,7 +655,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 6,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.actionIds[0]",
@@ -328,7 +705,57 @@
           }
         },
         {
-          "count_seen": 5,
+          "count_seen": 6,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.applicationIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-07 14:46",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                1645
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram",
+            "timePeriod": 2880,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"TX,IF\"],\"applicationIds\":[\"<DYNAMIC_NUMBER>\"]},\"lang\":\"zh_CN\",\"metric\":\"response_time_p50_ms_diagram\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "lang",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "applicationIds": [
+                "<DYNAMIC_NUMBER>"
+              ]
+            },
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 12,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.applicationIds[0]",
@@ -372,7 +799,7 @@
           }
         },
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.applicationIds[0]",
@@ -416,7 +843,7 @@
           }
         },
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.applicationIds[0]",
@@ -460,7 +887,7 @@
           }
         },
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.applicationIds[0]",
@@ -504,7 +931,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 6,
           "dynamic_fields": [
             "body.endTime",
             "body.labels.applicationIds[0]",
@@ -548,7 +975,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 6,
           "dynamic_fields": [
             "body.labels.actionIds[0]"
           ],
@@ -590,34 +1017,112 @@
           }
         }
       ],
-      "count_seen": 36,
+      "count_seen": 116,
       "first_seen": "2026-04-03T15:39:50+08:00",
       "inference_basis": [
         "body.metric=request_trace_type",
         "body.labels present"
       ],
       "inferred_purpose": "Likely used to query request trace type related data",
-      "last_seen": "2026-04-03T15:42:15+08:00",
+      "last_seen": "2026-04-07T14:47:41+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 36
+        "application/json": 116
       },
       "observed_metrics": [
         "active_instance_count_total_diagram",
         "apdex_diagram",
         "application_response_diagram",
         "application_task_diagram",
+        "client_response_time_diagram",
+        "error_diagram",
         "infra_log_count_total_diagram",
         "request_error_diagram",
         "request_response_ms_diagram",
         "request_trace_type",
         "response_time_breakdown",
+        "response_time_breakdown_trend",
+        "response_time_p50_ms_diagram",
         "throughput_diagram",
         "throughput_mini_diagram"
       ],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+            "document_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+            "frame_id": "1C473FD520D8494F94C450A1C523C412",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:47:41+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?request_trace_type&lang=zh_CN",
+            "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "document_url": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:47:24+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?request_trace_type&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "document_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:47:17+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?metric=response_time_breakdown_trend&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "document_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "frame_id": "1C473FD520D8494F94C450A1C523C412",
+          "frame_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:47:41+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?request_trace_type&lang=zh_CN",
+          "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "document_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "frame_id": "1C473FD520D8494F94C450A1C523C412",
+          "frame_url": "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:47:41+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/diagram?request_trace_type&lang=zh_CN",
+          "tab_target_id": "1C473FD520D8494F94C450A1C523C412"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -640,7 +1145,7 @@
           }
         },
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -663,7 +1168,7 @@
           }
         },
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -686,7 +1191,7 @@
           }
         },
         {
-          "count_seen": 5,
+          "count_seen": 12,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -709,7 +1214,53 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "client_response_time_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"client_response_time_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "client_response_time_diagram"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "error_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"error_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "error_diagram"
+          }
+        },
+        {
+          "count_seen": 6,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -732,7 +1283,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 8,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -755,7 +1306,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 8,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -778,7 +1329,53 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown_trend"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"response_time_breakdown_trend\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "response_time_breakdown_trend"
+          }
+        },
+        {
+          "count_seen": 9,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram"
+          },
+          "key": "{\"lang\":\"zh_CN\",\"metric\":\"response_time_p50_ms_diagram\"}",
+          "metadata": {
+            "keys": [
+              "lang",
+              "metric"
+            ],
+            "signature": [
+              "lang",
+              "metric"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN",
+            "metric": "response_time_p50_ms_diagram"
+          }
+        },
+        {
+          "count_seen": 9,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -801,7 +1398,7 @@
           }
         },
         {
-          "count_seen": 4,
+          "count_seen": 12,
           "dynamic_fields": [
             "query.request_trace_type"
           ],
@@ -826,7 +1423,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 7,
           "dynamic_fields": [
             "query.response_time_breakdown"
           ],
@@ -851,7 +1448,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 6,
           "dynamic_fields": [
             "query.throughput_mini_diagram"
           ],
@@ -910,7 +1507,7 @@
         "Content-Type": "application/json"
       },
       "resource_types": {
-        "XHR": 36
+        "XHR": 116
       },
       "sample_requests": [
         {
@@ -2116,7 +2713,7 @@
         }
       ],
       "status_codes": {
-        "200": 36
+        "200": 116
       }
     }
   },

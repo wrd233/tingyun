@@ -1,10 +1,10 @@
 {
-  "count_seen": 48,
+  "count_seen": 76,
   "first_seen": "2026-04-03T15:39:50+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 48
+    "http://169.169.173.25:8080": 76
   },
-  "last_seen": "2026-04-03T20:02:14+08:00",
+  "last_seen": "2026-04-07T14:49:37+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -247,6 +247,64 @@
             "body.timePeriod"
           ],
           "example": {
+            "endTime": "2026-04-07 14:44",
+            "key": "application_health_summary",
+            "lang": "zh_CN",
+            "timePeriod": 2880
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"application_health_summary\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "application_health_summary",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-07 14:44",
+            "key": "application_technology_summary",
+            "lang": "zh_CN",
+            "timePeriod": 2880
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"key\":\"application_technology_summary\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "key",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "key": "application_technology_summary",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
             "endTime": "2026-04-03 12:20",
             "key": "diagnose_task_summary",
             "labels": {
@@ -277,7 +335,7 @@
           }
         },
         {
-          "count_seen": 11,
+          "count_seen": 12,
           "dynamic_fields": [
             "body.endTime",
             "body.timePeriod"
@@ -306,7 +364,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 5,
           "dynamic_fields": [
             "body.endTime",
             "body.timePeriod"
@@ -338,7 +396,7 @@
           }
         },
         {
-          "count_seen": 6,
+          "count_seen": 8,
           "dynamic_fields": [
             "body.endTime",
             "body.timePeriod"
@@ -372,6 +430,32 @@
         {
           "count_seen": 2,
           "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-07 14:44",
+            "lang": "zh_CN",
+            "timePeriod": 2880
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 4,
+          "dynamic_fields": [
             "body.labels.actionIds[0]"
           ],
           "example": {
@@ -403,7 +487,7 @@
           }
         },
         {
-          "count_seen": 7,
+          "count_seen": 15,
           "dynamic_fields": [
             "body.labels.applicationIds[0]"
           ],
@@ -436,7 +520,7 @@
           }
         },
         {
-          "count_seen": 6,
+          "count_seen": 10,
           "dynamic_fields": [
             "body.labels.systemIds[0]"
           ],
@@ -469,22 +553,96 @@
           }
         }
       ],
-      "count_seen": 48,
+      "count_seen": 76,
       "first_seen": "2026-04-03T15:39:50+08:00",
       "inference_basis": [
         "path=graph/suggestions",
         "query params present"
       ],
       "inferred_purpose": "Likely related to graph",
-      "last_seen": "2026-04-03T20:02:14+08:00",
+      "last_seen": "2026-04-07T14:49:37+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 48
+        "application/json": 76
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+            "document_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:37+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/suggestions?actionIds&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+            "document_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:05+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/suggestions?actionIds&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+            "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:49+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/suggestions?tags&lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "document_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:37+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/suggestions?actionIds&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "document_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:37+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/suggestions?actionIds&lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "query.actionIds"
           ],
@@ -509,7 +667,7 @@
           }
         },
         {
-          "count_seen": 7,
+          "count_seen": 15,
           "dynamic_fields": [
             "query.applicationIds"
           ],
@@ -534,7 +692,55 @@
           }
         },
         {
-          "count_seen": 3,
+          "count_seen": 2,
+          "dynamic_fields": [
+            "query.application_detail_suggestions?systemIds"
+          ],
+          "example": {
+            "application_detail_suggestions?systemIds": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"application_detail_suggestions?systemIds\":\"<DYNAMIC>\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "application_detail_suggestions?systemIds",
+              "lang"
+            ],
+            "signature": [
+              "application_detail_suggestions?systemIds",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "application_detail_suggestions?systemIds": "<DYNAMIC>",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "application_detail_suggestions?undefined": "",
+            "lang": "zh_CN"
+          },
+          "key": "{\"application_detail_suggestions?undefined\":\"\",\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "keys": [
+              "application_detail_suggestions?undefined",
+              "lang"
+            ],
+            "signature": [
+              "application_detail_suggestions?undefined",
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "application_detail_suggestions?undefined": "",
+            "lang": "zh_CN"
+          }
+        },
+        {
+          "count_seen": 5,
           "dynamic_fields": [],
           "example": {
             "application_health_summary": "",
@@ -557,7 +763,7 @@
           }
         },
         {
-          "count_seen": 3,
+          "count_seen": 7,
           "dynamic_fields": [],
           "example": {
             "application_technology_summary": "",
@@ -699,7 +905,7 @@
           }
         },
         {
-          "count_seen": 11,
+          "count_seen": 12,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -722,7 +928,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 3,
           "dynamic_fields": [
             "query.request_overview?systemIds"
           ],
@@ -770,7 +976,7 @@
           }
         },
         {
-          "count_seen": 6,
+          "count_seen": 10,
           "dynamic_fields": [
             "query.systemIds"
           ],
@@ -795,7 +1001,7 @@
           }
         },
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -848,7 +1054,7 @@
         "Content-Type": "application/json"
       },
       "resource_types": {
-        "XHR": 48
+        "XHR": 76
       },
       "sample_requests": [
         {
@@ -1063,7 +1269,7 @@
         }
       ],
       "status_codes": {
-        "200": 48
+        "200": 76
       }
     }
   },

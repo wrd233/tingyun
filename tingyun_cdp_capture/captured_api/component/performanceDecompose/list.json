@@ -1,10 +1,10 @@
 {
-  "count_seen": 1,
+  "count_seen": 4,
   "first_seen": "2026-04-03T15:42:55+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 1
+    "http://169.169.173.25:8080": 4
   },
-  "last_seen": "2026-04-03T15:42:55+08:00",
+  "last_seen": "2026-04-07T14:49:27+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -54,23 +54,238 @@
             "lang": "zh_CN",
             "timePeriod": "<DYNAMIC>"
           }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "13229",
+            "actionType": "IF",
+            "applicationId": "1646",
+            "bizSystemId": "1065",
+            "curP": "1775544560169",
+            "dataType": "COMP",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "timePeriod": "706"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"IF\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"curP\":\"1775544560169\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "applicationId",
+              "bizSystemId",
+              "curP",
+              "dataType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "IF",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "curP": "1775544560169",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "13167",
+            "actionType": "IF",
+            "applicationId": "1644",
+            "bizSystemId": "1065",
+            "curP": "1775544563781",
+            "dataType": "COMP",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "timePeriod": "706"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"IF\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"curP\":\"1775544563781\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "applicationId",
+              "bizSystemId",
+              "curP",
+              "dataType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "IF",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "curP": "1775544563781",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.actionId",
+            "body.applicationId",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "actionId": "13330",
+            "actionType": "IF",
+            "applicationId": "1646",
+            "bizSystemId": "1065",
+            "curP": "1775544567129",
+            "dataType": "COMP",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "timePeriod": "706"
+          },
+          "key": "{\"actionId\":\"<DYNAMIC>\",\"actionType\":\"IF\",\"applicationId\":\"<DYNAMIC>\",\"bizSystemId\":\"<DYNAMIC>\",\"curP\":\"1775544567129\",\"dataType\":\"COMP\",\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "actionId",
+              "actionType",
+              "applicationId",
+              "bizSystemId",
+              "curP",
+              "dataType",
+              "endTime",
+              "lang",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "actionId": "<DYNAMIC>",
+            "actionType": "IF",
+            "applicationId": "<DYNAMIC>",
+            "bizSystemId": "<DYNAMIC>",
+            "curP": "1775544567129",
+            "dataType": "COMP",
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "timePeriod": "<DYNAMIC>"
+          }
         }
       ],
-      "count_seen": 1,
+      "count_seen": 4,
       "first_seen": "2026-04-03T15:42:55+08:00",
       "inference_basis": [
         "path=component/performanceDecompose/list"
       ],
       "inferred_purpose": "Likely related to list",
-      "last_seen": "2026-04-03T15:42:55+08:00",
+      "last_seen": "2026-04-07T14:49:27+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 1
+        "application/json": 4
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:27+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:23+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:20+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:27+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:27+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 4,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -116,7 +331,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 1
+        "XHR": 4
       },
       "sample_requests": [
         {
@@ -141,6 +356,82 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-03T15:42:55+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list"
+        },
+        {
+          "body": {
+            "actionId": "13229",
+            "actionType": "IF",
+            "applicationId": "1646",
+            "bizSystemId": "1065",
+            "curP": "1775544560169",
+            "dataType": "COMP",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:20+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:49:20+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list"
+        },
+        {
+          "body": {
+            "actionId": "13167",
+            "actionType": "IF",
+            "applicationId": "1644",
+            "bizSystemId": "1065",
+            "curP": "1775544563781",
+            "dataType": "COMP",
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "timePeriod": "706"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:23+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-07T14:49:23+08:00",
           "url": "http://169.169.173.25:8080/server-api/component/performanceDecompose/list"
         }
       ],
@@ -251,10 +542,314 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "componentName": "javax.*",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 3130,
+                  "rate": "0.1",
+                  "respTime": "1",
+                  "respTimeDouble": 1.0,
+                  "totalTime": 3587.0
+                },
+                {
+                  "componentName": "cn.keking.web.filter.TrustHostFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 1565,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+                  "componentSubtype": "http",
+                  "componentType": "ExternalTransaction",
+                  "count": 1306,
+                  "rate": "0.83",
+                  "respTime": "23",
+                  "respTimeDouble": 23.0,
+                  "totalTime": 29914.0
+                },
+                {
+                  "componentName": "cn.keking.web.controller.OnlinePreviewController/onlinePreview",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 1565,
+                  "rate": "98.98",
+                  "respTime": "2281",
+                  "respTimeDouble": 2281.0,
+                  "totalTime": 3569183.0
+                },
+                {
+                  "componentName": "cn.keking.web.filter.TrustDirFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 1565,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 2.0
+                },
+                {
+                  "componentName": "jtfw.nbport.com.cn:80",
+                  "componentSubtype": "http",
+                  "componentType": "External",
+                  "count": 188,
+                  "rate": "0.09",
+                  "respTime": "18",
+                  "respTimeDouble": 18.0,
+                  "totalTime": 3407.0
+                },
+                {
+                  "componentName": "cn.keking.web.filter.AttributeSetFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 1565,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 1.0
+                },
+                {
+                  "componentName": "cn.keking.web.filter.BaseUrlFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 1565,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "cn.keking.web.filter.ChinesePathFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 1565,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 22.0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 9
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:49:08 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "componentName": "10.190.22.21:3306",
+                  "componentSubtype": "Database",
+                  "componentType": "Pool",
+                  "count": 2417,
+                  "rate": "0.06",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 17.0
+                },
+                {
+                  "componentName": "javax.*",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 1666,
+                  "rate": "4.12",
+                  "respTime": "1",
+                  "respTimeDouble": 1.0,
+                  "totalTime": 1151.0
+                },
+                {
+                  "actionId": 13167,
+                  "actionType": "IF",
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "componentName": "10.190.22.20:6379/1",
+                  "componentSubtype": "Redis",
+                  "componentType": "NoSQL",
+                  "count": 5831,
+                  "dataType": "OP",
+                  "rate": "5.55",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 1551.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.platform.rest.mobile.filter.MobileAuthFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.security.jwt.JwtRequestFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.platform.rest.mobile.filter.MobilePreLoginFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "10.190.22.20:6379",
+                  "componentSubtype": "Redis",
+                  "componentType": "Pool",
+                  "count": 5831,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.bpm.facade.mobile.mvc.AttachmentPreConversionController/downLoadAttachementKfv",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "80.54",
+                  "respTime": "27",
+                  "respTimeDouble": 27.0,
+                  "totalTime": 22508.0
+                },
+                {
+                  "actionId": 13167,
+                  "actionType": "IF",
+                  "applicationId": 1644,
+                  "bizSystemId": 1065,
+                  "componentName": "10.190.22.21:3306",
+                  "componentSubtype": "MySQL",
+                  "componentType": "Database",
+                  "count": 2417,
+                  "dataType": "OP",
+                  "rate": "2.65",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 741.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.container.servlet.DispatcherFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "0.01",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 3.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.security.web.filter.IdDecryptFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.product.common.filter.CasRedirectFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "6.98",
+                  "respTime": "2",
+                  "respTimeDouble": 2.0,
+                  "totalTime": 1950.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.platform.rest.mobile.filter.MyMobilePreLoginFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "0.0",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 0.0
+                },
+                {
+                  "componentName": "com.hd.rcugrc.platform.common.authentication.MultipathUserAuthFilter/doFilter",
+                  "componentSubtype": "java",
+                  "componentType": "Code",
+                  "count": 833,
+                  "rate": "0.1",
+                  "respTime": "0",
+                  "respTimeDouble": 0.0,
+                  "totalTime": 27.0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 14
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Tue, 07 Apr 2026 06:49:11 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 1
+        "200": 4
       }
     }
   },

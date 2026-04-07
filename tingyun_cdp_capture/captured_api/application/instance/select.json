@@ -1,15 +1,15 @@
 {
-  "count_seen": 12,
+  "count_seen": 17,
   "first_seen": "2026-04-03T15:42:39+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 12
+    "http://169.169.173.25:8080": 17
   },
-  "last_seen": "2026-04-03T20:02:48+08:00",
+  "last_seen": "2026-04-07T14:50:00+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 5,
+          "count_seen": 9,
           "dynamic_fields": [
             "body.applicationId",
             "body.bizSystemId",
@@ -43,7 +43,7 @@
           }
         },
         {
-          "count_seen": 7,
+          "count_seen": 8,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -73,21 +73,95 @@
           }
         }
       ],
-      "count_seen": 12,
+      "count_seen": 17,
       "first_seen": "2026-04-03T15:42:39+08:00",
       "inference_basis": [
         "path=application/instance/select"
       ],
       "inferred_purpose": "Likely related to application",
-      "last_seen": "2026-04-03T20:02:48+08:00",
+      "last_seen": "2026-04-07T14:50:00+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 12
+        "application/json": 17
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+            "document_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:50:00+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/application/instance/select",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:27+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/application/instance/select",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "document_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:23+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/application/instance/select",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "document_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:50:00+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/application/instance/select",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "document_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:50:00+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/application/instance/select",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 12,
+          "count_seen": 17,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -128,7 +202,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 12
+        "XHR": 17
       },
       "sample_requests": [
         {
@@ -354,7 +428,7 @@
         }
       ],
       "status_codes": {
-        "200": 12
+        "200": 17
       }
     }
   },

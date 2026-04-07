@@ -1,0 +1,385 @@
+{
+  "capture": {
+    "captured_at": "2026-04-07T14:49:03+08:00",
+    "completeness_score": 360,
+    "first_seen_at": "2026-04-07T14:49:03+08:00",
+    "last_seen_at": "2026-04-07T14:49:03+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:03+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+          "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:03+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:03+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:03+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    },
+    "raw_log_file": "error/smart/errorFilter/list/POST__variant__fae038d99d2d.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "wall_time": 1775544543.161938
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+    "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-07T14:49:03+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-07T14:49:03+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:03+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:03+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    }
+  },
+  "path": "/server-api/error/smart/errorFilter/list",
+  "relative_path": "error/smart/errorFilter/list",
+  "request": {
+    "body": {
+      "applicationId": "1645",
+      "beginTime": "2026-04-07 03:00",
+      "bizSystemId": "1065",
+      "bizSystemName": "集团法务",
+      "endTime": "2026-04-07 14:46",
+      "errorLevel": "ER",
+      "lang": "zh_CN",
+      "localeOptionContent": "undefined",
+      "timePeriod": "706"
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "applicationId": "<DYNAMIC>",
+      "beginTime": "<DATETIME>",
+      "bizSystemId": "<DYNAMIC>",
+      "bizSystemName": "集团法务",
+      "endTime": "<DATETIME>",
+      "errorLevel": "ER",
+      "lang": "zh_CN",
+      "localeOptionContent": "undefined",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
+      "BuiltInRequestId": "d70f7685-a375-7a22-2d1b-48f8924e4e60",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "document_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_url": "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-07T14:49:03+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list",
+      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    },
+    "path": "/server-api/error/smart/errorFilter/list",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "bizSystemId=1065&bizSystemName=%E9%9B%86%E5%9B%A2%E6%B3%95%E5%8A%A1&timePeriod=706&endTime=2026-04-07%2014:46&beginTime=2026-04-07%2003:00&localeOptionContent=undefined&applicationId=1645&errorLevel=ER&lang=zh_CN",
+    "url": "http://169.169.173.25:8080/server-api/error/smart/errorFilter/list"
+  },
+  "response": {
+    "body": {
+      "apmDataInfos": {},
+      "bgActions": null,
+      "errorErMode": [
+        "HTTP Error Code",
+        "Uncaught Exception",
+        "Logged Exception"
+      ],
+      "errorErName": [
+        "HTTP ERROR CODE: 500",
+        "org.springframework.web.util.NestedServletException",
+        "HTTP ERROR CODE: 404",
+        "HTTP ERROR CODE: 400",
+        "org.apache.catalina.connector.ClientAbortException",
+        "com.fasterxml.jackson.databind.JsonMappingException"
+      ],
+      "errorExMode": [],
+      "errorExName": [],
+      "ifActions": {
+        "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}": [
+          13228
+        ]
+      },
+      "txActions": {
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/dispatch (POST)": [
+          13353
+        ],
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/reject (POST)": [
+          13785
+        ],
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/done-pages/{instId}": [
+          13225
+        ],
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/todo-pages/{id}": [
+          13185
+        ],
+        "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}": [
+          13228
+        ],
+        "URI/": [
+          13824
+        ],
+        "URI/favicon.ico": [
+          13291
+        ],
+        "URI/grcv5/api/flow-mobile/v1/task-form-process/done-pages/undefined": [
+          13439
+        ],
+        "URI/grcv5/api/flow-mobile/v1/user-tasks/undefined": [
+          13837
+        ],
+        "URI/grcv5/resources/lib/hd/widget/indidocx//update/update.xml": [
+          14201
+        ],
+        "URI/grcv5/resources/plugins/jsviews/jsrender.min.js.map": [
+          13298
+        ],
+        "URI/grcv5/resources/plugins/jsviews/jsviews.min.js.map": [
+          13297
+        ],
+        "URI/grcv5/rest/mobile/thirdpartylogin.json": [
+          13209
+        ],
+        "URI/grcv5/wp/oppositeManager/oppositeView.htm": [
+          13887
+        ],
+        "URI/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js": [
+          13305
+        ],
+        "URI/update/update.xml": [
+          19091
+        ]
+      }
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "apmDataInfos": {},
+      "bgActions": null,
+      "errorErMode": [
+        "HTTP Error Code",
+        "Uncaught Exception",
+        "Logged Exception"
+      ],
+      "errorErName": [
+        "HTTP ERROR CODE: 500",
+        "org.springframework.web.util.NestedServletException",
+        "HTTP ERROR CODE: 404",
+        "HTTP ERROR CODE: 400",
+        "org.apache.catalina.connector.ClientAbortException",
+        "com.fasterxml.jackson.databind.JsonMappingException"
+      ],
+      "errorExMode": [],
+      "errorExName": [],
+      "ifActions": {
+        "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}": [
+          13228
+        ]
+      },
+      "txActions": {
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/dispatch (POST)": [
+          13353
+        ],
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/process-drive/task/reject (POST)": [
+          13785
+        ],
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/done-pages/{instId}": [
+          13225
+        ],
+        "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/todo-pages/{id}": [
+          13185
+        ],
+        "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}": [
+          13228
+        ],
+        "URI/": [
+          13824
+        ],
+        "URI/favicon.ico": [
+          13291
+        ],
+        "URI/grcv5/api/flow-mobile/v1/task-form-process/done-pages/undefined": [
+          13439
+        ],
+        "URI/grcv5/api/flow-mobile/v1/user-tasks/undefined": [
+          13837
+        ],
+        "URI/grcv5/resources/lib/hd/widget/indidocx//update/update.xml": [
+          14201
+        ],
+        "URI/grcv5/resources/plugins/jsviews/jsrender.min.js.map": [
+          13298
+        ],
+        "URI/grcv5/resources/plugins/jsviews/jsviews.min.js.map": [
+          13297
+        ],
+        "URI/grcv5/rest/mobile/thirdpartylogin.json": [
+          13209
+        ],
+        "URI/grcv5/wp/oppositeManager/oppositeView.htm": [
+          13887
+        ],
+        "URI/resources/plugins/jquery.seniorSelector.user/locale/jquery.seniorSelector.user-lang-zh_CN.js": [
+          13305
+        ],
+        "URI/update/update.xml": [
+          19091
+        ]
+      }
+    },
+    "encoded_data_length": 1320,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Tue, 07 Apr 2026 06:48:51 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "applicationId": "<DYNAMIC>",
+      "beginTime": "<DATETIME>",
+      "bizSystemId": "<DYNAMIC>",
+      "bizSystemName": "集团法务",
+      "endTime": "<DATETIME>",
+      "errorLevel": "ER",
+      "lang": "zh_CN",
+      "localeOptionContent": "undefined",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "error/smart/errorFilter/list"
+  }
+}

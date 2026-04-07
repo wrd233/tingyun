@@ -1,15 +1,15 @@
 {
-  "count_seen": 3,
+  "count_seen": 5,
   "first_seen": "2026-04-03T15:40:41+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 3
+    "http://169.169.173.25:8080": 5
   },
-  "last_seen": "2026-04-03T15:40:53+08:00",
+  "last_seen": "2026-04-07T14:44:19+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 3,
+          "count_seen": 5,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -42,21 +42,67 @@
           }
         }
       ],
-      "count_seen": 3,
+      "count_seen": 5,
       "first_seen": "2026-04-03T15:40:41+08:00",
       "inference_basis": [
         "path=application/charts/error"
       ],
       "inferred_purpose": "Likely related to application / error",
-      "last_seen": "2026-04-03T15:40:53+08:00",
+      "last_seen": "2026-04-07T14:44:19+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 3
+        "application/json": 5
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+            "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:44:19+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/application/charts/error",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:19+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/application/charts/error",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:44:19+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/application/charts/error",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 3,
+          "count_seen": 5,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -96,7 +142,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 3
+        "XHR": 5
       },
       "sample_requests": [
         {
@@ -1603,7 +1649,7 @@
         }
       ],
       "status_codes": {
-        "200": 3
+        "200": 5
       }
     }
   },

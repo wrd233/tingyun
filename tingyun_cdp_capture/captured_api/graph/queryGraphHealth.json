@@ -1,10 +1,10 @@
 {
-  "count_seen": 6,
+  "count_seen": 13,
   "first_seen": "2026-04-03T15:40:25+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 6
+    "http://169.169.173.25:8080": 13
   },
-  "last_seen": "2026-04-03T15:42:36+08:00",
+  "last_seen": "2026-04-07T14:49:34+08:00",
   "methods": {
     "POST": {
       "body_variants": [
@@ -56,6 +56,51 @@
           }
         },
         {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-07 14:44",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_0_0_[铃与堆场]": 13,
+              "1060_0_0_0_0_[外理理货]": 13,
+              "1061_0_0_0_0_[浙港办]": 13,
+              "1062_0_0_0_0_[共用应用]": 13,
+              "1063_0_0_0_0_[default]": 13,
+              "1064_0_0_0_0_[信创-浙港通]": 13,
+              "1065_0_0_0_0_[集团法务]": 13
+            },
+            "timePeriod": 30
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1059_0_0_0_0_[铃与堆场]\":13,\"1060_0_0_0_0_[外理理货]\":13,\"1061_0_0_0_0_[浙港办]\":13,\"1062_0_0_0_0_[共用应用]\":13,\"1063_0_0_0_0_[default]\":13,\"1064_0_0_0_0_[信创-浙港通]\":13,\"1065_0_0_0_0_[集团法务]\":13},\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "nodeIds",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1059_0_0_0_0_[铃与堆场]": 13,
+              "1060_0_0_0_0_[外理理货]": 13,
+              "1061_0_0_0_0_[浙港办]": 13,
+              "1062_0_0_0_0_[共用应用]": 13,
+              "1063_0_0_0_0_[default]": 13,
+              "1064_0_0_0_0_[信创-浙港通]": 13,
+              "1065_0_0_0_0_[集团法务]": 13
+            },
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
           "count_seen": 1,
           "dynamic_fields": [
             "body.endTime",
@@ -91,7 +136,7 @@
           }
         },
         {
-          "count_seen": 4,
+          "count_seen": 5,
           "dynamic_fields": [
             "body.endTime",
             "body.timePeriod"
@@ -132,24 +177,217 @@
             },
             "timePeriod": "<DYNAMIC_NUMBER>"
           }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1065_0_0_Database_MySQL_[-1]": 14,
+              "1065_0_0_NoSQL_Redis_[-1]": 15,
+              "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]": 12
+            },
+            "timePeriod": 706
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1065_0_0_Database_MySQL_[-1]\":14,\"1065_0_0_NoSQL_Redis_[-1]\":15,\"1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]\":12},\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "nodeIds",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1065_0_0_Database_MySQL_[-1]": 14,
+              "1065_0_0_NoSQL_Redis_[-1]": 15,
+              "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]": 12
+            },
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-07 14:46",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1065_0_0_Database_MySQL_[-1]": 14,
+              "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]": 12
+            },
+            "timePeriod": 706
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1065_0_0_Database_MySQL_[-1]\":14,\"1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]\":12},\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "nodeIds",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1065_0_0_Database_MySQL_[-1]": 14,
+              "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]": 12
+            },
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-07 14:44",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1065_0_0_Database_MySQL_[MySQL]": 14,
+              "1065_0_0_External_http_[http]": 17,
+              "1065_0_0_External_https_[https]": 17,
+              "1065_0_0_NoSQL_Redis_[Redis]": 15,
+              "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]": 12,
+              "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]": 12,
+              "1065_1646_0_0_0_[fawucn.keking.ServerMain]": 12,
+              "1065_[0-User]_0_0_0_[User]": 11
+            },
+            "timePeriod": 2880
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"lang\":\"zh_CN\",\"nodeIds\":{\"1065_0_0_Database_MySQL_[MySQL]\":14,\"1065_0_0_External_http_[http]\":17,\"1065_0_0_External_https_[https]\":17,\"1065_0_0_NoSQL_Redis_[Redis]\":15,\"1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]\":12,\"1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]\":12,\"1065_1646_0_0_0_[fawucn.keking.ServerMain]\":12,\"1065_[0-User]_0_0_0_[User]\":11},\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "lang",
+              "nodeIds",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "lang": "zh_CN",
+            "nodeIds": {
+              "1065_0_0_Database_MySQL_[MySQL]": 14,
+              "1065_0_0_External_http_[http]": 17,
+              "1065_0_0_External_https_[https]": 17,
+              "1065_0_0_NoSQL_Redis_[Redis]": 15,
+              "1065_1644_0_0_0_[org.springframework.boot.loader.WarLauncher]": 12,
+              "1065_1645_0_0_0_[fawuorg.springframework.boot.loader.WarLauncher]": 12,
+              "1065_1646_0_0_0_[fawucn.keking.ServerMain]": 12,
+              "1065_[0-User]_0_0_0_[User]": 11
+            },
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
         }
       ],
-      "count_seen": 6,
+      "count_seen": 13,
       "first_seen": "2026-04-03T15:40:25+08:00",
       "inference_basis": [
         "path=graph/queryGraphHealth",
         "query params present"
       ],
       "inferred_purpose": "Likely related to graph",
-      "last_seen": "2026-04-03T15:42:36+08:00",
+      "last_seen": "2026-04-07T14:49:34+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 6
+        "application/json": 13
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:49:34+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:48:59+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+            "document_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+            "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+            "frame_url": "http://169.169.173.25:8080/web/server/system/overview/1065",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-07T14:44:19+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+            "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "document_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_url": "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-07T14:49:34+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 6,
+          "count_seen": 13,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN"
@@ -204,7 +442,7 @@
         "Content-Type": "application/json"
       },
       "resource_types": {
-        "XHR": 6
+        "XHR": 13
       },
       "sample_requests": [
         {
@@ -713,7 +951,7 @@
         }
       ],
       "status_codes": {
-        "200": 6
+        "200": 13
       }
     }
   },
