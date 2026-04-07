@@ -22,6 +22,7 @@ from tingyun_adapter.domain.models.common import (
     TimeWindow,
 )
 from tingyun_adapter.sources.captured_api_repository import CapturedApiRepository
+from tingyun_adapter.sources.knowledge_repository import KnowledgeRepository
 from tingyun_adapter.usecases.builders import (
     build_action_hotspot_pack,
     build_action_fact_sheet,
@@ -43,6 +44,10 @@ from tingyun_adapter.usecases.enhancement_builders import (
     build_page_experience_pack,
     build_screenshot_index_pack,
     build_stability_signals_pack,
+)
+from tingyun_adapter.usecases.knowledge_builders import (
+    build_knowledge_context_pack,
+    build_knowledge_update_proposal_pack,
 )
 from tingyun_adapter.usecases.extended_builders import (
     build_action_dependency_breakdown_pack,
@@ -75,8 +80,11 @@ class Adapter:
         self.instance = InstanceClient(**kwargs)
         self.logtrace = LogTraceClient(**kwargs)
         self.captured_api: CapturedApiRepository | None = None
+        self.knowledge_repository: KnowledgeRepository | None = None
         if settings.captured_api_dir:
             self.captured_api = CapturedApiRepository(settings.captured_api_dir)
+        if settings.knowledge_dir:
+            self.knowledge_repository = KnowledgeRepository(settings.knowledge_dir)
 
     @classmethod
     def from_env(cls, **overrides) -> "Adapter":
@@ -89,6 +97,7 @@ class Adapter:
             timezone=overrides.get("timezone", settings.timezone),
             timeout_seconds=overrides.get("timeout_seconds", settings.timeout_seconds),
             captured_api_dir=overrides.get("captured_api_dir", settings.captured_api_dir),
+            knowledge_dir=overrides.get("knowledge_dir", settings.knowledge_dir),
             console_public_base_url=overrides.get("console_public_base_url", settings.console_public_base_url),
             service_host=overrides.get("service_host", settings.service_host),
             service_port=overrides.get("service_port", settings.service_port),
@@ -262,3 +271,22 @@ class Adapter:
 
     def build_screenshot_index_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
         return build_screenshot_index_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_knowledge_context_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 5):
+        return build_knowledge_context_pack(self, context, source_mode=source_mode, recent_log_limit=limit)
+
+    def build_knowledge_update_proposal_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        proposals: list[dict] | None = None,
+        persist: bool = True,
+    ):
+        return build_knowledge_update_proposal_pack(
+            self,
+            context,
+            proposals=proposals,
+            source_mode=source_mode,
+            persist=persist,
+        )

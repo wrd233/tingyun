@@ -39,6 +39,8 @@ PACK_TYPES = {
     "comparison_signals_pack",
     "page_experience_pack",
     "screenshot_index_pack",
+    "knowledge_context_pack",
+    "knowledge_update_proposal_pack",
 }
 
 
@@ -91,6 +93,8 @@ class BuildPackRequest(BaseModel):
     action_guid: Optional[str] = Field(None, alias="actionGuid")
     request_id: Optional[str] = Field(None, alias="requestId")
     op_name: Optional[str] = Field(None, alias="opName")
+    proposal_items: list[dict[str, Any]] = Field(default_factory=list, alias="proposalItems")
+    persist_proposals: bool = Field(True, alias="persistProposals")
 
     model_config = {"populate_by_name": True}
 
@@ -170,12 +174,14 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                 "service_port": settings.service_port,
                 "service_public_base_url": settings.service_public_base_url,
                 "console_public_base_url": settings.console_public_base_url,
+                "knowledge_dir": settings.knowledge_dir,
                 "service_api_key_enabled": bool(settings.service_api_key),
                 "service_min_interval_ms": settings.service_min_interval_ms,
                 "service_max_requests_per_minute": settings.service_max_requests_per_minute,
             },
             "capabilities": {
                 "captured_api_attached": bool(adapter.captured_api and adapter.captured_api.exists()),
+                "knowledge_repository_configured": bool(adapter.knowledge_repository is not None),
                 "has_tingyun_token": bool(settings.token),
             },
         }
@@ -189,6 +195,7 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
             "source_modes": ["auto", "sample", "live"],
             "public_base_url": settings.service_public_base_url,
             "console_public_base_url": settings.console_public_base_url,
+            "knowledge_dir": settings.knowledge_dir,
             "rate_limit": {
                 "min_interval_ms": settings.service_min_interval_ms,
                 "max_requests_per_minute": settings.service_max_requests_per_minute,
@@ -366,6 +373,15 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                 envelope = adapter.build_page_experience_pack(context, source_mode=request.source_mode, limit=request.limit)
             elif pack_type == "screenshot_index_pack":
                 envelope = adapter.build_screenshot_index_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "knowledge_context_pack":
+                envelope = adapter.build_knowledge_context_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "knowledge_update_proposal_pack":
+                envelope = adapter.build_knowledge_update_proposal_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    proposals=request.proposal_items,
+                    persist=request.persist_proposals,
+                )
             else:
                 envelope = adapter.build_report_fact_pack(context, source_mode=request.source_mode)
             return envelope.to_dict()

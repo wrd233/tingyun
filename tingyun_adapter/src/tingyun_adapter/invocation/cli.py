@@ -2,10 +2,16 @@ from __future__ import annotations
 
 import argparse
 import json
+from pathlib import Path
 
 from tingyun_adapter.config.settings import AdapterSettings
 from tingyun_adapter.domain.models.common import ActionRef, ConnectionPoolRef, DatabaseComponentRef, NoSQLComponentRef, TraceRef
 from tingyun_adapter.invocation.sdk import Adapter
+
+
+def _load_json_file(path: str) -> object:
+    with Path(path).expanduser().open("r", encoding="utf-8") as handle:
+        return json.load(handle)
 
 
 def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
@@ -16,6 +22,7 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
     parser.add_argument("--lang", default=settings.lang)
     parser.add_argument("--timeout-seconds", type=int, default=settings.timeout_seconds)
     parser.add_argument("--captured-api-dir", default=settings.captured_api_dir)
+    parser.add_argument("--knowledge-dir", default=settings.knowledge_dir)
     parser.add_argument(
         "--build-pack",
         choices=[
@@ -41,6 +48,8 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
             "comparison_signals_pack",
             "page_experience_pack",
             "screenshot_index_pack",
+            "knowledge_context_pack",
+            "knowledge_update_proposal_pack",
         ],
     )
     parser.add_argument("--biz-system-id", type=int)
@@ -60,6 +69,8 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
     parser.add_argument("--action-guid")
     parser.add_argument("--request-id")
     parser.add_argument("--op-name")
+    parser.add_argument("--proposal-file")
+    parser.add_argument("--persist-proposals", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--limit", type=int, default=5)
     return parser
 
@@ -78,6 +89,7 @@ def main() -> int:
         lang=args.lang,
         timeout_seconds=args.timeout_seconds,
         captured_api_dir=args.captured_api_dir,
+        knowledge_dir=args.knowledge_dir,
     )
     if args.build_pack:
         if not args.biz_system_id or not args.end_time:
@@ -219,6 +231,20 @@ def main() -> int:
             envelope = adapter.build_page_experience_pack(context, source_mode=args.source_mode, limit=args.limit)
         elif args.build_pack == "screenshot_index_pack":
             envelope = adapter.build_screenshot_index_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "knowledge_context_pack":
+            envelope = adapter.build_knowledge_context_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "knowledge_update_proposal_pack":
+            proposals = []
+            if args.proposal_file:
+                proposals = _load_json_file(args.proposal_file)
+                if isinstance(proposals, dict):
+                    proposals = list(proposals.get("proposals") or [])
+            envelope = adapter.build_knowledge_update_proposal_pack(
+                context,
+                source_mode=args.source_mode,
+                proposals=proposals,
+                persist=args.persist_proposals,
+            )
         else:
             envelope = adapter.build_report_fact_pack(context, source_mode=args.source_mode)
         print(json.dumps(envelope.to_dict(), ensure_ascii=False, indent=2))
@@ -233,9 +259,11 @@ def main() -> int:
                     "lang": adapter.settings.lang,
                     "timeout_seconds": adapter.settings.timeout_seconds,
                     "captured_api_dir": adapter.settings.captured_api_dir,
+                    "knowledge_dir": adapter.settings.knowledge_dir,
                 },
                 "capabilities": {
                     "captured_api_attached": bool(adapter.captured_api and adapter.captured_api.exists()),
+                    "knowledge_repository_configured": bool(adapter.knowledge_repository is not None),
                     "has_token": bool(adapter.settings.token),
                     "token_env": adapter.settings.token_env,
                 },

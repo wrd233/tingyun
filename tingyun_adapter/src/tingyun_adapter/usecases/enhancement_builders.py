@@ -40,6 +40,11 @@ from tingyun_adapter.usecases.extended_builders import (
     build_slow_sql_pack,
     build_topology_dependency_pack,
 )
+from tingyun_adapter.usecases.knowledge_builders import (
+    load_knowledge_context_snapshot,
+    lookup_confirmed_knowledge,
+    lookup_pending_proposals,
+)
 from tingyun_adapter.usecases.report_support import (
     apply_report_support,
     collect_screenshot_cards,
@@ -60,6 +65,7 @@ def build_business_labels_pack(
 ) -> PackEnvelope:
     warnings: list[WarningMessage] = []
     missing_inputs: list[str] = []
+    knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
     hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
     topology = build_topology_dependency_pack(adapter, context, source_mode=source_mode)
@@ -91,24 +97,42 @@ def build_business_labels_pack(
         raw = row.get("raw") or {}
         name = str(action.get("name") or "")
         labels, label_groups, review_flags, derivation_notes = _derive_action_labels(name, raw, user_entry_apps)
+        target_ref = _action_target_ref(action)
+        confirmed_entries = lookup_confirmed_knowledge(knowledge_snapshot, "action_labels", target_ref)
+        pending_entries = lookup_pending_proposals(knowledge_snapshot, target_ref, target_file_hint="action_labels")
+        confirmed_labels = _confirmed_labels_from_entries(confirmed_entries)
+        conflicts = _label_conflicts(labels, confirmed_labels)
         if duplicate_action_names.get(name, 0) > 1:
             review_flags.append("cross_application_name_reused")
+        if conflicts:
+            review_flags.append("candidate_confirmed_label_conflict")
         confidence = _label_confidence(labels, review_flags)
         objects.append(
             {
-                "target_ref": _action_target_ref(action),
+                "target_ref": target_ref,
                 "target_type": "action",
                 "display_name": name,
                 "target_metrics": dataclass_to_dict(action.get("metrics") or {}),
+                "candidate_labels": labels,
                 "labels": labels,
-                "label_groups": label_groups,
+                "candidate_label_groups": label_groups,
+                "confirmed_labels": confirmed_labels,
+                "confirmed_context": _entry_context(confirmed_entries),
+                "pending_label_proposals": _entry_context(pending_entries),
+                "label_conflicts": conflicts,
+                "knowledge_update_input": {
+                    "target_file_hint": "action_labels",
+                    "object_ref": target_ref,
+                    "attributes": {"candidate_labels": labels, "candidate_label_groups": label_groups},
+                },
                 "confidence": confidence,
                 "source_basis": [
                     {"kind": "pack", "value": "action_hotspot_pack"},
                     {"kind": "rule", "value": "action_name_keyword_rules"},
                     {"kind": "rule", "value": "topology_user_entry_app_names"},
+                    {"kind": "knowledge", "value": "action_labels"},
                 ],
-                "evidence_refs": ["action_list", "action_overview"],
+                "evidence_refs": ["action_list", "action_overview", "knowledge_action_labels", "knowledge_review_queue"],
                 "review_flags": review_flags,
                 "derivation_notes": derivation_notes,
             }
@@ -116,9 +140,16 @@ def build_business_labels_pack(
 
     for dep in dependencies[:limit]:
         labels, label_groups, review_flags, derivation_notes = _derive_dependency_labels(dep, user_entry_apps)
+        target_ref = _dependency_target_ref(dep)
+        confirmed_entries = lookup_confirmed_knowledge(knowledge_snapshot, "dependency_annotations", target_ref)
+        pending_entries = lookup_pending_proposals(knowledge_snapshot, target_ref, target_file_hint="dependency_annotations")
+        confirmed_labels = _confirmed_labels_from_entries(confirmed_entries)
+        conflicts = _label_conflicts(labels, confirmed_labels)
+        if conflicts:
+            review_flags.append("candidate_confirmed_label_conflict")
         objects.append(
             {
-                "target_ref": _dependency_target_ref(dep),
+                "target_ref": target_ref,
                 "target_type": "external_dependency",
                 "display_name": dep.get("node_id") or dep.get("protocol") or "external_dependency",
                 "target_metrics": {
@@ -127,14 +158,25 @@ def build_business_labels_pack(
                     "throughput": dep.get("throughput"),
                     "link_count": dep.get("link_count"),
                 },
+                "candidate_labels": labels,
                 "labels": labels,
-                "label_groups": label_groups,
+                "candidate_label_groups": label_groups,
+                "confirmed_labels": confirmed_labels,
+                "confirmed_context": _entry_context(confirmed_entries),
+                "pending_label_proposals": _entry_context(pending_entries),
+                "label_conflicts": conflicts,
+                "knowledge_update_input": {
+                    "target_file_hint": "dependency_annotations",
+                    "object_ref": target_ref,
+                    "attributes": {"candidate_labels": labels, "candidate_label_groups": label_groups},
+                },
                 "confidence": _label_confidence(labels, review_flags),
                 "source_basis": [
                     {"kind": "pack", "value": "external_dependency_pack"},
                     {"kind": "rule", "value": "dependency_protocol_and_upstream_rules"},
+                    {"kind": "knowledge", "value": "dependency_annotations"},
                 ],
-                "evidence_refs": ["biz_detail_graph", "graph_health"],
+                "evidence_refs": ["biz_detail_graph", "graph_health", "knowledge_dependency_annotations", "knowledge_review_queue"],
                 "review_flags": review_flags,
                 "derivation_notes": derivation_notes,
             }
@@ -144,15 +186,23 @@ def build_business_labels_pack(
         scope=_pack_scope(context, source_mode, limit),
         objects=objects,
         summaries=_label_summaries(objects),
-        input_dependencies=["action_hotspot_pack", "topology_dependency_pack", "external_dependency_pack"],
+        knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        input_dependencies=["action_hotspot_pack", "topology_dependency_pack", "external_dependency_pack", "knowledge_context_pack"],
+        evidence_refs=_evidence_ids(
+            hotspot_payload.get("evidence", []),
+            topology_payload.get("evidence", []),
+            external_payload.get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
+        ),
         derivation_notes=[
-            "Labels are lightweight heuristics derived from names, topology context, and external dependency structure.",
-            "No final business criticality conclusion is made inside the adapter.",
+            "Labels are candidate semantics derived from names, topology context, and existing business memory.",
+            "Confirmed knowledge is read first and surfaced alongside conflicts instead of being silently overwritten.",
         ],
         evidence=_merge_evidence(
             hotspot_payload.get("evidence", []),
             topology_payload.get("evidence", []),
             external_payload.get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
         ),
     )
     build_stats = {"object_count": len(objects), "action_count": len(hotspot_rows), "dependency_count": min(len(dependencies), limit)}
@@ -163,8 +213,8 @@ def build_business_labels_pack(
         evidence=_merge_evidence_objects(payload.evidence),
         warnings=warnings,
         source_mode=source_mode,
-        missing_inputs=sorted(set(missing_inputs)),
-        confidence_notes=["Rules are intentionally lightweight and designed for ranking support, not final business judgment."],
+        missing_inputs=sorted(set(missing_inputs + knowledge_snapshot.get("missing_items", []))),
+        confidence_notes=["Candidate labels are intentionally lightweight and must be reviewed against confirmed knowledge and pending proposals."],
         build_stats=build_stats,
     )
 
@@ -178,6 +228,7 @@ def build_stability_signals_pack(
 ) -> PackEnvelope:
     warnings: list[WarningMessage] = []
     missing_inputs: list[str] = []
+    knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
     hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
     external = build_external_dependency_pack(adapter, context, source_mode=source_mode)
@@ -220,9 +271,12 @@ def build_stability_signals_pack(
             instance_count=_numeric((fact_payload.get("overview") or {}).get("instanceCount")),
             duplicate_name_count=action_name_counts.get(action.get("name"), 0),
         )
+        target_ref = _action_target_ref(action)
+        known_patterns = lookup_confirmed_knowledge(knowledge_snapshot, "known_patterns", target_ref)
+        pending_updates = lookup_pending_proposals(knowledge_snapshot, target_ref)
         objects.append(
             {
-                "target_ref": _action_target_ref(action),
+                "target_ref": target_ref,
                 "target_type": "action",
                 "display_name": action.get("name"),
                 "metrics": dataclass_to_dict(action.get("metrics") or {}),
@@ -239,12 +293,37 @@ def build_stability_signals_pack(
                     count=_numeric((action.get("metrics") or {}).get("count")),
                     timestamps=timestamps,
                 ),
+                "stability_facts": {
+                    "repeatability": repeatability_score,
+                    "spread_scope": spread_scope,
+                    "time_distribution": _time_distribution(timestamps),
+                    "burstiness": _burstiness(
+                        response_time_ms=_numeric((action.get("metrics") or {}).get("response_time_ms")),
+                        count=_numeric((action.get("metrics") or {}).get("count")),
+                        timestamps=timestamps,
+                    ),
+                },
+                "historical_context": {
+                    "known_patterns": _entry_context(known_patterns),
+                    "pending_proposals": _entry_context(pending_updates),
+                    "recent_judgments": _recent_logs_for_ref(knowledge_snapshot, target_ref),
+                },
+                "knowledge_seed_hints": _stability_seed_hints(
+                    stability_class=_stability_class(repeatability_score),
+                    time_distribution=_time_distribution(timestamps),
+                    burstiness=_burstiness(
+                        response_time_ms=_numeric((action.get("metrics") or {}).get("response_time_ms")),
+                        count=_numeric((action.get("metrics") or {}).get("count")),
+                        timestamps=timestamps,
+                    ),
+                ),
                 "confidence": "medium" if trace_candidates else "low",
                 "source_basis": [
                     {"kind": "pack", "value": "action_hotspot_pack"},
                     {"kind": "pack", "value": "action_fact_sheet"},
+                    {"kind": "knowledge", "value": "known_patterns"},
                 ],
-                "evidence_refs": ["action_list", "action_fact_trace_candidates"],
+                "evidence_refs": ["action_list", "action_fact_trace_candidates", "knowledge_known_patterns", "knowledge_judgment_log"],
                 "review_flags": ["trace_candidates_missing"] if not trace_candidates else [],
             }
         )
@@ -252,9 +331,11 @@ def build_stability_signals_pack(
     for dep in (external_payload.get("external_dependencies") or [])[:limit]:
         upstream_count = len(dep.get("upstream_nodes") or [])
         repeatability_score = _dependency_repeatability_score(dep)
+        target_ref = _dependency_target_ref(dep)
+        known_patterns = lookup_confirmed_knowledge(knowledge_snapshot, "known_patterns", target_ref)
         objects.append(
             {
-                "target_ref": _dependency_target_ref(dep),
+                "target_ref": target_ref,
                 "target_type": "external_dependency",
                 "display_name": dep.get("node_id") or dep.get("protocol") or "external_dependency",
                 "metrics": {
@@ -269,9 +350,25 @@ def build_stability_signals_pack(
                 "time_distribution": "uniformly_distributed",
                 "instance_distribution": {"upstream_count": upstream_count},
                 "burstiness": "stable_bad" if _numeric(dep.get("response_time_ms")) and _numeric(dep.get("response_time_ms")) >= 1000 else "unstable_spiky",
+                "stability_facts": {
+                    "repeatability": repeatability_score,
+                    "spread_scope": _dependency_spread_scope(upstream_count),
+                    "time_distribution": "uniformly_distributed",
+                    "burstiness": "stable_bad" if _numeric(dep.get("response_time_ms")) and _numeric(dep.get("response_time_ms")) >= 1000 else "unstable_spiky",
+                },
+                "historical_context": {
+                    "known_patterns": _entry_context(known_patterns),
+                    "pending_proposals": _entry_context(lookup_pending_proposals(knowledge_snapshot, target_ref)),
+                    "recent_judgments": _recent_logs_for_ref(knowledge_snapshot, target_ref),
+                },
+                "knowledge_seed_hints": _stability_seed_hints(
+                    stability_class=_stability_class(repeatability_score),
+                    time_distribution="uniformly_distributed",
+                    burstiness="stable_bad" if _numeric(dep.get("response_time_ms")) and _numeric(dep.get("response_time_ms")) >= 1000 else "unstable_spiky",
+                ),
                 "confidence": "medium",
-                "source_basis": [{"kind": "pack", "value": "external_dependency_pack"}],
-                "evidence_refs": ["biz_detail_graph", "graph_health"],
+                "source_basis": [{"kind": "pack", "value": "external_dependency_pack"}, {"kind": "knowledge", "value": "known_patterns"}],
+                "evidence_refs": ["biz_detail_graph", "graph_health", "knowledge_known_patterns", "knowledge_judgment_log"],
                 "review_flags": [],
             }
         )
@@ -282,9 +379,10 @@ def build_stability_signals_pack(
         error_count = _numeric(sql_row.get("error_count") or sql_row.get("errorCount"))
         trace_count = _numeric(sql_row.get("traceCount"))
         repeatability_score = _repeatability_score(count=count, slow_count=error_count, trace_count=trace_count)
+        target_ref = _sql_target_ref(sql_row)
         objects.append(
             {
-                "target_ref": _sql_target_ref(sql_row),
+                "target_ref": target_ref,
                 "target_type": "sql",
                 "display_name": _sql_display_name(sql_row),
                 "metrics": {
@@ -299,9 +397,25 @@ def build_stability_signals_pack(
                 "time_distribution": "uniformly_distributed",
                 "instance_distribution": {"trace_count": trace_count},
                 "burstiness": "stable_bad" if response_time_ms and response_time_ms >= 1000 else "unstable_spiky",
+                "stability_facts": {
+                    "repeatability": repeatability_score,
+                    "spread_scope": _sql_spread_scope(trace_count),
+                    "time_distribution": "uniformly_distributed",
+                    "burstiness": "stable_bad" if response_time_ms and response_time_ms >= 1000 else "unstable_spiky",
+                },
+                "historical_context": {
+                    "known_patterns": _entry_context(lookup_confirmed_knowledge(knowledge_snapshot, "known_patterns", target_ref)),
+                    "pending_proposals": _entry_context(lookup_pending_proposals(knowledge_snapshot, target_ref)),
+                    "recent_judgments": _recent_logs_for_ref(knowledge_snapshot, target_ref),
+                },
+                "knowledge_seed_hints": _stability_seed_hints(
+                    stability_class=_stability_class(repeatability_score),
+                    time_distribution="uniformly_distributed",
+                    burstiness="stable_bad" if response_time_ms and response_time_ms >= 1000 else "unstable_spiky",
+                ),
                 "confidence": "medium",
-                "source_basis": [{"kind": "pack", "value": "slow_sql_pack"}],
-                "evidence_refs": ["database_analysis", "database_operate_analysis"],
+                "source_basis": [{"kind": "pack", "value": "slow_sql_pack"}, {"kind": "knowledge", "value": "known_patterns"}],
+                "evidence_refs": ["database_analysis", "database_operate_analysis", "knowledge_known_patterns", "knowledge_judgment_log"],
                 "review_flags": ["time_distribution_inferred"],
             }
         )
@@ -310,15 +424,23 @@ def build_stability_signals_pack(
         scope=_pack_scope(context, source_mode, limit),
         objects=objects,
         summaries=_stability_summaries(objects),
-        input_dependencies=["action_hotspot_pack", "action_fact_sheet", "external_dependency_pack", "slow_sql_pack"],
+        knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        input_dependencies=["action_hotspot_pack", "action_fact_sheet", "external_dependency_pack", "slow_sql_pack", "knowledge_context_pack"],
+        evidence_refs=_evidence_ids(
+            hotspot_payload.get("evidence", []),
+            external_payload.get("evidence", []),
+            sql_payload.get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
+        ),
         derivation_notes=[
-            "Stability signals describe recurrence and spread, not final root cause.",
-            "When trace timestamps are absent, time distribution falls back to a low-confidence heuristic.",
+            "Stability signals describe recurrence and spread as facts, not final root cause.",
+            "Persistent or patterned behavior is exposed as a knowledge seed for later review rather than a confirmed conclusion.",
         ],
         evidence=_merge_evidence(
             hotspot_payload.get("evidence", []),
             external_payload.get("evidence", []),
             sql_payload.get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
         ),
     )
     return _pack(
@@ -328,7 +450,7 @@ def build_stability_signals_pack(
         evidence=_merge_evidence_objects(payload.evidence),
         warnings=warnings,
         source_mode=source_mode,
-        missing_inputs=sorted(set(missing_inputs)),
+        missing_inputs=sorted(set(missing_inputs + knowledge_snapshot.get("missing_items", []))),
         confidence_notes=["Repeatability and spread use simple heuristics so the output stays explainable and stable."],
         build_stats={"object_count": len(objects)},
     )
@@ -342,6 +464,7 @@ def build_impact_signals_pack(
     limit: int = 10,
 ) -> PackEnvelope:
     warnings: list[WarningMessage] = []
+    knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
     labels_envelope = build_business_labels_pack(adapter, context, source_mode=source_mode, limit=limit)
     stability_envelope = build_stability_signals_pack(adapter, context, source_mode=source_mode, limit=limit)
@@ -357,46 +480,59 @@ def build_impact_signals_pack(
     for item in stability_payload.get("objects") or []:
         ref_key = _ref_key(item.get("target_ref"))
         label_item = label_map.get(ref_key, {})
-        labels = set(label_item.get("labels") or [])
+        labels = set(label_item.get("candidate_labels") or label_item.get("labels") or [])
         metrics = item.get("metrics") or {}
         impact_dimensions = _impact_dimensions(labels, item, metrics)
         impact_reasons = _impact_reasons(labels, item, metrics)
         score = _impact_score(impact_dimensions, metrics)
-        tier = _impact_tier(labels, impact_dimensions, metrics)
+        priority_hints = {
+            "review_priority": _impact_review_priority(score, labels, impact_dimensions),
+            "ranking_score": score,
+            "needs_business_confirmation": True,
+            "evidence_strength": impact_dimensions.get("evidence_strength"),
+        }
         objects.append(
             {
                 "target_ref": item.get("target_ref"),
                 "target_type": item.get("target_type"),
                 "display_name": item.get("display_name"),
-                "impact_tier": tier,
-                "impact_score": score,
-                "impact_dimensions": impact_dimensions,
-                "impact_reasons": impact_reasons,
+                "impact_features": impact_dimensions,
+                "priority_hints": priority_hints,
+                "supporting_reasons": impact_reasons,
                 "evidence_strength": impact_dimensions.get("evidence_strength"),
+                "business_relevance_inputs": {
+                    "candidate_labels": label_item.get("candidate_labels") or label_item.get("labels") or [],
+                    "confirmed_labels": label_item.get("confirmed_labels") or [],
+                    "critical_paths": _entry_context(knowledge_snapshot.get("core_context", {}).get("critical_paths", [])[:5]),
+                    "known_patterns": item.get("historical_context", {}).get("known_patterns") or [],
+                },
                 "confidence": "medium" if item.get("confidence") != "low" else "low",
                 "review_flags": _impact_review_flags(metrics, item),
                 "evidence_refs": sorted(set((item.get("evidence_refs") or []) + (label_item.get("evidence_refs") or []))),
                 "source_basis": [
                     {"kind": "pack", "value": "business_labels_pack"},
                     {"kind": "pack", "value": "stability_signals_pack"},
+                    {"kind": "knowledge", "value": "critical_paths"},
                 ],
             }
         )
 
-    objects.sort(key=lambda item: (item.get("impact_score") or 0, item.get("impact_tier") == "P1_user_failure"), reverse=True)
+    objects.sort(key=lambda item: item.get("priority_hints", {}).get("ranking_score") or 0, reverse=True)
     payload = ImpactSignalsPackPayload(
         scope=_pack_scope(context, source_mode, limit),
         objects=objects,
         summaries={
-            "tier_counts": dict(Counter(item.get("impact_tier") for item in objects)),
-            "top_reasons": dict(Counter(reason for item in objects for reason in item.get("impact_reasons") or []).most_common(10)),
+            "review_priority_counts": dict(Counter((item.get("priority_hints") or {}).get("review_priority") for item in objects)),
+            "top_reasons": dict(Counter(reason for item in objects for reason in item.get("supporting_reasons") or []).most_common(10)),
         },
-        input_dependencies=["business_labels_pack", "stability_signals_pack"],
+        knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        input_dependencies=["business_labels_pack", "stability_signals_pack", "knowledge_context_pack"],
+        evidence_refs=_evidence_ids(labels_payload.get("evidence", []), stability_payload.get("evidence", []), knowledge_snapshot.get("evidence", [])),
         derivation_notes=[
-            "Impact signals are ranking aids, not final priority conclusions.",
-            "Scores are configurable heuristics composed from business labels, stability, failures, and evidence strength.",
+            "Impact signals are feature layers and review hints, not final priority conclusions.",
+            "Scores remain explainable heuristics that feed LLM or human prioritization instead of replacing it.",
         ],
-        evidence=_merge_evidence(labels_payload.get("evidence", []), stability_payload.get("evidence", [])),
+        evidence=_merge_evidence(labels_payload.get("evidence", []), stability_payload.get("evidence", []), knowledge_snapshot.get("evidence", [])),
     )
     return _pack(
         PackType.IMPACT_SIGNALS.value,
@@ -406,7 +542,7 @@ def build_impact_signals_pack(
         warnings=warnings,
         source_mode=source_mode,
         missing_inputs=sorted(set(labels_envelope.meta.missing_inputs + stability_envelope.meta.missing_inputs)),
-        confidence_notes=["Impact tiers are intentionally conservative and require human review before final prioritization."],
+        confidence_notes=["Priority hints are intentionally conservative and require human or LLM review before final prioritization."],
         build_stats={"object_count": len(objects)},
     )
 
@@ -420,6 +556,7 @@ def build_comparison_signals_pack(
 ) -> PackEnvelope:
     warnings: list[WarningMessage] = []
     missing_inputs: list[str] = []
+    knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
     previous_context = _previous_window_context(context)
     if previous_context is None:
@@ -463,9 +600,12 @@ def build_comparison_signals_pack(
         current_item = current_map.get(key)
         previous_item = previous_map.get(key)
         change_class, delta_metrics, summary, trend_confidence = _comparison_result(current_item, previous_item)
+        target_ref = (current_item or previous_item or {}).get("target_ref")
+        baseline_notes = lookup_confirmed_knowledge(knowledge_snapshot, "baseline_notes", target_ref or {})
+        known_patterns = lookup_confirmed_knowledge(knowledge_snapshot, "known_patterns", target_ref or {})
         objects.append(
             {
-                "target_ref": (current_item or previous_item or {}).get("target_ref"),
+                "target_ref": target_ref,
                 "target_type": (current_item or previous_item or {}).get("target_type"),
                 "display_name": (current_item or previous_item or {}).get("display_name"),
                 "comparison_baseline": {
@@ -476,10 +616,22 @@ def build_comparison_signals_pack(
                 "change_class": change_class,
                 "change_summary": summary,
                 "delta_metrics": delta_metrics,
+                "comparison_facts": {
+                    "change_class": change_class,
+                    "delta_metrics": delta_metrics,
+                    "summary": summary,
+                },
+                "historical_baseline_context": {
+                    "baseline_notes": _entry_context(baseline_notes),
+                    "known_patterns": _entry_context(known_patterns),
+                    "pending_proposals": _entry_context(lookup_pending_proposals(knowledge_snapshot, target_ref or {})),
+                    "recent_judgments": _recent_logs_for_ref(knowledge_snapshot, target_ref or {}),
+                },
+                "missing_baseline_inputs": ["previous_window_context"] if previous_context is None else [],
                 "new_or_disappeared": change_class in {"new_risk", "disappeared"},
                 "trend_confidence": trend_confidence,
-                "evidence_refs": (current_item or previous_item or {}).get("evidence_refs") or [],
-                "source_basis": [{"kind": "baseline", "value": "previous_window"}],
+                "evidence_refs": ((current_item or previous_item or {}).get("evidence_refs") or []) + ["knowledge_baseline_notes", "knowledge_known_patterns", "knowledge_judgment_log"],
+                "source_basis": [{"kind": "baseline", "value": "previous_window"}, {"kind": "knowledge", "value": "baseline_notes"}],
             }
         )
 
@@ -489,18 +641,30 @@ def build_comparison_signals_pack(
             "mode": "previous_window",
             "current_window": dataclass_to_dict(context.time_window),
             "previous_window": dataclass_to_dict(previous_context.time_window) if previous_context else {},
+            "history_source": "previous_window_plus_knowledge",
         },
         objects=objects,
-        summaries={"change_class_counts": dict(Counter(item.get("change_class") for item in objects))},
-        input_dependencies=["action_hotspot_pack", "external_dependency_pack", "slow_sql_pack"],
+        summaries={
+            "change_class_counts": dict(Counter(item.get("change_class") for item in objects)),
+            "knowledge_hit_count": sum(1 for item in objects if (item.get("historical_baseline_context") or {}).get("baseline_notes") or (item.get("historical_baseline_context") or {}).get("known_patterns")),
+        },
+        knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        input_dependencies=["action_hotspot_pack", "external_dependency_pack", "slow_sql_pack", "knowledge_context_pack"],
+        evidence_refs=_evidence_ids(
+            current_hotspots.to_dict()["payload"].get("evidence", []),
+            current_external.to_dict()["payload"].get("evidence", []),
+            current_sql.to_dict()["payload"].get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
+        ),
         derivation_notes=[
-            "Comparison uses previous_window first and keeps the baseline explicit in output.",
+            "Comparison uses previous_window first and augments it with persisted baseline notes and known patterns.",
             "No long-term forecast is performed inside the adapter.",
         ],
         evidence=_merge_evidence(
             current_hotspots.to_dict()["payload"].get("evidence", []),
             current_external.to_dict()["payload"].get("evidence", []),
             current_sql.to_dict()["payload"].get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
         ),
     )
     return _pack(
@@ -510,7 +674,7 @@ def build_comparison_signals_pack(
         evidence=_merge_evidence_objects(payload.evidence),
         warnings=warnings,
         source_mode=source_mode,
-        missing_inputs=sorted(set(missing_inputs)),
+        missing_inputs=sorted(set(missing_inputs + knowledge_snapshot.get("missing_items", []))),
         confidence_notes=["If the previous window has sparse data, comparison falls back to low-confidence deltas instead of failing."],
         build_stats={"object_count": len(objects)},
     )
@@ -525,6 +689,7 @@ def build_page_experience_pack(
 ) -> PackEnvelope:
     warnings: list[WarningMessage] = []
     missing_inputs = ["js_error_summary", "browser_distribution", "geo_distribution", "platform_distribution"]
+    knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
     hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
     topology = build_topology_dependency_pack(adapter, context, source_mode=source_mode)
@@ -562,8 +727,11 @@ def build_page_experience_pack(
         app_name = str(raw.get("applicationName") or "")
         user_edge = user_edges.get(app_name, {})
         page_dependencies = app_to_external.get(app_name, [])
+        page_ref = {"kind": "page", "route": route, "application_name": app_name}
+        confirmed_page_map = lookup_confirmed_knowledge(knowledge_snapshot, "page_route_map", page_ref)
+        pending_page_map = lookup_pending_proposals(knowledge_snapshot, page_ref, target_file_hint="page_route_map")
         page = {
-            "page_ref": {"kind": "page", "route": route, "application_name": app_name},
+            "page_ref": page_ref,
             "page_name": _page_name_from_route(route),
             "route_or_url_pattern": route,
             "traffic_summary": {
@@ -580,6 +748,16 @@ def build_page_experience_pack(
             "geo_distribution": [],
             "related_actions": [_action_target_ref(action)],
             "related_dependencies": [_dependency_target_ref(dep) for dep in page_dependencies[:3]],
+            "candidate_action_links": [_action_target_ref(action)],
+            "candidate_dependency_links": [_dependency_target_ref(dep) for dep in page_dependencies[:3]],
+            "confirmed_page_mapping": _entry_context(confirmed_page_map),
+            "pending_page_proposals": _entry_context(pending_page_map),
+            "page_semantic_context": {
+                "confirmed_route_mapping": _entry_context(confirmed_page_map),
+                "known_action_labels": _entry_context(lookup_confirmed_knowledge(knowledge_snapshot, "action_labels", _action_target_ref(action))),
+                "critical_paths": _entry_context(knowledge_snapshot.get("core_context", {}).get("critical_paths", [])[:3]),
+            },
+            "knowledge_conflicts": _extract_conflict_refs(pending_page_map),
             "likely_backend_hotspots": row.get("suspect_signals") or [],
             "page_signals": _page_signals(action, user_edge, page_dependencies),
             "page_impact_hints": _page_impact_hints(action, user_edge, page_dependencies),
@@ -587,6 +765,7 @@ def build_page_experience_pack(
                 {"kind": "pack", "value": "action_hotspot_pack"},
                 {"kind": "pack", "value": "topology_dependency_pack"},
                 {"kind": "pack", "value": "external_dependency_pack"},
+                {"kind": "knowledge", "value": "page_route_map"},
             ],
             "confidence": "low",
             "review_flags": ["backend_route_proxy"],
@@ -597,9 +776,10 @@ def build_page_experience_pack(
 
     if not pages:
         for app_name, user_edge in list(user_edges.items())[:limit]:
+            page_ref = {"kind": "page", "route": f"user-entry::{app_name}", "application_name": app_name}
             pages.append(
                 {
-                    "page_ref": {"kind": "page", "route": f"user-entry::{app_name}", "application_name": app_name},
+                    "page_ref": page_ref,
                     "page_name": f"{app_name} user entry",
                     "route_or_url_pattern": None,
                     "traffic_summary": {"user_edge_throughput": user_edge.get("throughput")},
@@ -609,10 +789,20 @@ def build_page_experience_pack(
                     "geo_distribution": [],
                     "related_actions": [],
                     "related_dependencies": [_dependency_target_ref(dep) for dep in app_to_external.get(app_name, [])[:3]],
+                    "candidate_action_links": [],
+                    "candidate_dependency_links": [_dependency_target_ref(dep) for dep in app_to_external.get(app_name, [])[:3]],
+                    "confirmed_page_mapping": _entry_context(lookup_confirmed_knowledge(knowledge_snapshot, "page_route_map", page_ref)),
+                    "pending_page_proposals": _entry_context(lookup_pending_proposals(knowledge_snapshot, page_ref, target_file_hint="page_route_map")),
+                    "page_semantic_context": {
+                        "confirmed_route_mapping": _entry_context(lookup_confirmed_knowledge(knowledge_snapshot, "page_route_map", page_ref)),
+                        "known_action_labels": [],
+                        "critical_paths": _entry_context(knowledge_snapshot.get("core_context", {}).get("critical_paths", [])[:3]),
+                    },
+                    "knowledge_conflicts": _extract_conflict_refs(lookup_pending_proposals(knowledge_snapshot, page_ref, target_file_hint="page_route_map")),
                     "likely_backend_hotspots": [],
                     "page_signals": _page_signals({}, user_edge, app_to_external.get(app_name, [])),
                     "page_impact_hints": ["derived_from_user_entry_edge_only"],
-                    "source_basis": [{"kind": "pack", "value": "topology_dependency_pack"}],
+                    "source_basis": [{"kind": "pack", "value": "topology_dependency_pack"}, {"kind": "knowledge", "value": "page_route_map"}],
                     "confidence": "low",
                     "review_flags": ["no_page_api_dataset"],
                 }
@@ -635,15 +825,23 @@ def build_page_experience_pack(
         platform_distribution=[],
         related_actions=_unique_refs(related_action_refs),
         related_dependencies=_unique_refs(related_dependency_refs),
-        input_dependencies=["action_hotspot_pack", "topology_dependency_pack", "external_dependency_pack"],
+        knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        input_dependencies=["action_hotspot_pack", "topology_dependency_pack", "external_dependency_pack", "knowledge_context_pack"],
+        evidence_refs=_evidence_ids(
+            hotspot_payload.get("evidence", []),
+            topology_payload.get("evidence", []),
+            external_payload.get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
+        ),
         derivation_notes=[
             "Current project does not yet ship dedicated page-side clients, so page objects are inferred from user-entry topology and URI-style actions.",
-            "This pack remains a fact layer and does not claim full RUM coverage.",
+            "Confirmed page route knowledge is read first and exposed as semantic bridge context instead of being silently overwritten.",
         ],
         evidence=_merge_evidence(
             hotspot_payload.get("evidence", []),
             topology_payload.get("evidence", []),
             external_payload.get("evidence", []),
+            knowledge_snapshot.get("evidence", []),
         ),
     )
     page_links = [
@@ -726,7 +924,7 @@ def build_page_experience_pack(
         evidence=_merge_evidence_objects(payload.evidence),
         warnings=warnings,
         source_mode=source_mode,
-        missing_inputs=sorted(set(missing_inputs)),
+        missing_inputs=sorted(set(missing_inputs + knowledge_snapshot.get("missing_items", []))),
         confidence_notes=["Page objects are inferred proxies until dedicated page-side APIs are added."],
         build_stats={"page_count": len(pages), "user_entry_count": len(user_edges)},
     )
@@ -934,16 +1132,124 @@ def _sql_target_ref(sql_row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _knowledge_context_summary(snapshot: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "knowledge_scope": snapshot.get("knowledge_scope") or {},
+        "confirmed_knowledge_summary": snapshot.get("confirmed_knowledge_summary") or {},
+        "pending_proposals_summary": snapshot.get("pending_proposals_summary") or {},
+        "recent_judgment_logs": _entry_context(snapshot.get("recent_judgment_logs") or []),
+        "critical_paths": _entry_context((snapshot.get("core_context") or {}).get("critical_paths") or []),
+        "known_patterns": _entry_context((snapshot.get("core_context") or {}).get("known_patterns") or []),
+        "page_route_map": _entry_context((snapshot.get("core_context") or {}).get("page_route_map") or []),
+    }
+
+
+def _entry_context(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    context: list[dict[str, Any]] = []
+    for entry in entries[:5]:
+        context.append(
+            {
+                "entry_id": entry.get("entry_id") or entry.get("proposal_id") or entry.get("log_id"),
+                "title": entry.get("title"),
+                "summary": entry.get("summary"),
+                "object_ref": entry.get("object_ref") or {},
+                "attributes": entry.get("attributes") or entry.get("outcome") or {},
+                "status": entry.get("status") or entry.get("entry_type") or "unknown",
+                "staleness": entry.get("staleness"),
+                "target_file_hint": entry.get("target_file_hint"),
+                "conflicts": entry.get("conflicts") or [],
+            }
+        )
+    return context
+
+
+def _extract_conflict_refs(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    conflicts: list[dict[str, Any]] = []
+    for entry in entries:
+        for conflict in entry.get("conflicts") or []:
+            conflicts.append(conflict)
+    return conflicts
+
+
+def _confirmed_labels_from_entries(entries: list[dict[str, Any]]) -> list[str]:
+    labels: list[str] = []
+    for entry in entries:
+        attributes = entry.get("attributes") or {}
+        labels.extend(attributes.get("confirmed_labels") or attributes.get("labels") or [])
+    return _unique_list([str(item) for item in labels])
+
+
+def _label_conflicts(candidate_labels: list[str], confirmed_labels: list[str]) -> list[dict[str, Any]]:
+    candidate = set(candidate_labels or [])
+    confirmed = set(confirmed_labels or [])
+    if not candidate or not confirmed:
+        return []
+    if candidate == confirmed or candidate.issubset(confirmed):
+        return []
+    return [
+        {
+            "type": "label_mismatch",
+            "candidate_only": sorted(candidate - confirmed),
+            "confirmed_only": sorted(confirmed - candidate),
+        }
+    ]
+
+
+def _recent_logs_for_ref(snapshot: dict[str, Any], target_ref: dict[str, Any]) -> list[dict[str, Any]]:
+    key = _ref_key(target_ref)
+    results: list[dict[str, Any]] = []
+    for entry in snapshot.get("recent_judgment_logs") or []:
+        related_refs = entry.get("related_refs") or []
+        if any(_ref_key(ref) == key for ref in related_refs if isinstance(ref, dict)):
+            results.append(entry)
+    return _entry_context(results)
+
+
+def _stability_seed_hints(*, stability_class: str, time_distribution: str, burstiness: str) -> list[str]:
+    hints: list[str] = []
+    if stability_class in {"persistent", "recurring"}:
+        hints.append("candidate_known_pattern")
+    if time_distribution in {"nightly_batch_related", "daily_recurring"}:
+        hints.append("candidate_schedule_related_pattern")
+    if burstiness == "stable_bad":
+        hints.append("candidate_long_term_baseline_note")
+    return hints
+
+
+def _evidence_ids(*groups: list[Any]) -> list[str]:
+    evidence_ids: list[str] = []
+    for group in groups:
+        for item in group or []:
+            if not isinstance(item, dict):
+                continue
+            evidence_id = str(item.get("id") or "")
+            if evidence_id:
+                evidence_ids.append(evidence_id)
+    return _unique_list(evidence_ids)
+
+
 def _label_summaries(objects: list[dict[str, Any]]) -> dict[str, Any]:
     label_counts: Counter[str] = Counter()
+    confirmed_label_counts: Counter[str] = Counter()
     type_counts: Counter[str] = Counter()
+    conflict_count = 0
+    pending_hits = 0
     for item in objects:
         type_counts.update([str(item.get("target_type") or "unknown")])
-        label_counts.update(item.get("labels") or [])
+        label_counts.update(item.get("candidate_labels") or item.get("labels") or [])
+        confirmed_label_counts.update(item.get("confirmed_labels") or [])
+        if item.get("label_conflicts"):
+            conflict_count += 1
+        if item.get("pending_label_proposals"):
+            pending_hits += 1
     return {
         "object_count": len(objects),
         "target_type_counts": dict(type_counts),
+        "candidate_label_counts": dict(label_counts),
+        "confirmed_label_counts": dict(confirmed_label_counts),
         "label_counts": dict(label_counts),
+        "conflict_count": conflict_count,
+        "pending_proposal_hit_count": pending_hits,
     }
 
 
@@ -952,6 +1258,7 @@ def _stability_summaries(objects: list[dict[str, Any]]) -> dict[str, Any]:
         "object_count": len(objects),
         "stability_class_counts": dict(Counter(item.get("stability_class") for item in objects)),
         "spread_scope_counts": dict(Counter(item.get("spread_scope") for item in objects)),
+        "knowledge_seed_hint_counts": dict(Counter(hint for item in objects for hint in item.get("knowledge_seed_hints") or [])),
     }
 
 
@@ -1191,6 +1498,16 @@ def _impact_score(dimensions: dict[str, int], metrics: dict[str, Any]) -> int:
     if (count or 0) <= 3 and (error_count or 0) <= 0:
         score -= IMPACT_WEIGHTS["penalty"]["low_frequency"]
     return max(0, min(score, 100))
+
+
+def _impact_review_priority(score: int, labels: set[str], dimensions: dict[str, int]) -> str:
+    if dimensions["failure_severity"] >= 28 and "real_user_visible" in labels:
+        return "urgent_review"
+    if score >= 60:
+        return "high_review"
+    if score >= 35:
+        return "medium_review"
+    return "low_review"
 
 
 def _impact_tier(labels: set[str], dimensions: dict[str, int], metrics: dict[str, Any]) -> str:

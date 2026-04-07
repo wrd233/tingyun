@@ -300,7 +300,9 @@ class BusinessLabelsPackPayload:
     scope: dict[str, Any]
     objects: list[dict[str, Any]] = field(default_factory=list)
     summaries: dict[str, Any] = field(default_factory=dict)
+    knowledge_context: dict[str, Any] = field(default_factory=dict)
     input_dependencies: list[str] = field(default_factory=list)
+    evidence_refs: list[str] = field(default_factory=list)
     derivation_notes: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
@@ -310,7 +312,9 @@ class StabilitySignalsPackPayload:
     scope: dict[str, Any]
     objects: list[dict[str, Any]] = field(default_factory=list)
     summaries: dict[str, Any] = field(default_factory=list)
+    knowledge_context: dict[str, Any] = field(default_factory=dict)
     input_dependencies: list[str] = field(default_factory=list)
+    evidence_refs: list[str] = field(default_factory=list)
     derivation_notes: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
@@ -320,7 +324,9 @@ class ImpactSignalsPackPayload:
     scope: dict[str, Any]
     objects: list[dict[str, Any]] = field(default_factory=list)
     summaries: dict[str, Any] = field(default_factory=dict)
+    knowledge_context: dict[str, Any] = field(default_factory=dict)
     input_dependencies: list[str] = field(default_factory=list)
+    evidence_refs: list[str] = field(default_factory=list)
     derivation_notes: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
@@ -331,7 +337,9 @@ class ComparisonSignalsPackPayload:
     comparison_baseline: dict[str, Any] = field(default_factory=dict)
     objects: list[dict[str, Any]] = field(default_factory=list)
     summaries: dict[str, Any] = field(default_factory=dict)
+    knowledge_context: dict[str, Any] = field(default_factory=dict)
     input_dependencies: list[str] = field(default_factory=list)
+    evidence_refs: list[str] = field(default_factory=list)
     derivation_notes: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
@@ -354,7 +362,9 @@ class PageExperiencePackPayload:
     metric_semantics: list[dict[str, Any]] = field(default_factory=list)
     coverage_boundary: dict[str, Any] = field(default_factory=dict)
     evidence_linkage: dict[str, Any] = field(default_factory=dict)
+    knowledge_context: dict[str, Any] = field(default_factory=dict)
     input_dependencies: list[str] = field(default_factory=list)
+    evidence_refs: list[str] = field(default_factory=list)
     derivation_notes: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
@@ -369,5 +379,37 @@ class ScreenshotIndexPackPayload:
     coverage_boundary: dict[str, Any] = field(default_factory=dict)
     evidence_linkage: dict[str, Any] = field(default_factory=dict)
     input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class KnowledgeContextPackPayload:
+    scope: dict[str, Any]
+    knowledge_scope: dict[str, Any] = field(default_factory=dict)
+    confirmed_knowledge_summary: dict[str, Any] = field(default_factory=dict)
+    pending_proposals_summary: dict[str, Any] = field(default_factory=dict)
+    recent_judgment_logs: list[dict[str, Any]] = field(default_factory=list)
+    core_context: dict[str, Any] = field(default_factory=dict)
+    missing_items: list[str] = field(default_factory=list)
+    source_summary: dict[str, Any] = field(default_factory=dict)
+    input_dependencies: list[str] = field(default_factory=list)
+    evidence_refs: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class KnowledgeUpdateProposalPackPayload:
+    scope: dict[str, Any]
+    knowledge_scope: dict[str, Any] = field(default_factory=dict)
+    received_proposals: list[dict[str, Any]] = field(default_factory=list)
+    normalized_proposals: list[dict[str, Any]] = field(default_factory=list)
+    merge_summary: dict[str, Any] = field(default_factory=dict)
+    conflicts: list[dict[str, Any]] = field(default_factory=list)
+    pending_proposals: list[dict[str, Any]] = field(default_factory=list)
+    review_queue_snapshot: dict[str, Any] = field(default_factory=dict)
+    input_dependencies: list[str] = field(default_factory=list)
+    evidence_refs: list[str] = field(default_factory=list)
     derivation_notes: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)

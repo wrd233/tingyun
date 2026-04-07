@@ -26,6 +26,8 @@ class PackType(str, Enum):
     COMPARISON_SIGNALS = "comparison_signals_pack"
     PAGE_EXPERIENCE = "page_experience_pack"
     SCREENSHOT_INDEX = "screenshot_index_pack"
+    KNOWLEDGE_CONTEXT = "knowledge_context_pack"
+    KNOWLEDGE_UPDATE_PROPOSAL = "knowledge_update_proposal_pack"
 
 
 class RelationType(str, Enum):
