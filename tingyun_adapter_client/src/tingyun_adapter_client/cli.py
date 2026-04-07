@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from pathlib import Path
 from typing import Any
 
 from .config import RemoteClientSettings
@@ -37,6 +38,9 @@ def _build_parser() -> argparse.ArgumentParser:
     build_pack.add_argument("--trace-guid")
     build_pack.add_argument("--action-guid")
     build_pack.add_argument("--request-id")
+    build_pack.add_argument("--op-name")
+    build_pack.add_argument("--proposal-file")
+    build_pack.add_argument("--persist-proposals", action=argparse.BooleanOptionalAction, default=True)
     return parser
 
 
@@ -72,11 +76,32 @@ def _pack_payload(args: argparse.Namespace, default_source_mode: str) -> dict[st
         "traceGuid": args.trace_guid,
         "actionGuid": args.action_guid,
         "requestId": args.request_id,
+        "opName": args.op_name,
     }
     for key, value in optional_fields.items():
         if value is not None:
-            payload[key] = value
+            if key == "queryTimestamp":
+                payload[key] = str(value)
+            else:
+                payload[key] = value
+    if args.proposal_file:
+        proposal_items = _load_proposals(args.proposal_file)
+        payload["proposalItems"] = proposal_items
+        payload["persistProposals"] = args.persist_proposals
     return payload
+
+
+def _load_proposals(path: str) -> list[dict[str, Any]]:
+    with Path(path).expanduser().open("r", encoding="utf-8") as handle:
+        loaded = json.load(handle)
+    if isinstance(loaded, dict):
+        proposals = loaded.get("proposals")
+        if not isinstance(proposals, list):
+            raise RuntimeError("proposal file dict must contain a 'proposals' list")
+        return [item for item in proposals if isinstance(item, dict)]
+    if isinstance(loaded, list):
+        return [item for item in loaded if isinstance(item, dict)]
+    raise RuntimeError("proposal file must be a JSON list or a JSON object with a 'proposals' list")
 
 
 def main() -> None:

@@ -43,6 +43,20 @@
 - `database_component_pack`
 - `nosql_component_pack`
 - `connection_pool_pack`
+- `instance_analysis_pack`
+- `topology_dependency_pack`
+- `external_dependency_pack`
+- `slow_sql_pack`
+- `sql_fact_sheet`
+- `action_dependency_breakdown_pack`
+- `business_labels_pack`
+- `stability_signals_pack`
+- `impact_signals_pack`
+- `comparison_signals_pack`
+- `page_experience_pack`
+- `screenshot_index_pack`
+- `knowledge_context_pack`
+- `knowledge_update_proposal_pack`
 
 ## 4. 每类 pack 的用途
 
@@ -111,6 +125,8 @@
 - 证据保留
 - 候选对象筛选
 - `suspect_signals` 标注
+- 历史知识读取
+- 待确认知识提议结构化写入
 
 机器 A 上的 adapter 不会做：
 
@@ -141,6 +157,11 @@
 2. 选第一名或前几名热点 action
 3. 调 `action_fact_sheet`
 4. 如果返回了 trace 候选，再调 `trace_fact_sheet`
+
+注意：
+
+- `trace_fact_sheet` 的 `queryTimestamp` 在 HTTP 接口里按字符串接收
+- 当前 client CLI 已经自动做了这个兼容转换
 
 ### 场景三：先分析某个组件
 
@@ -239,6 +260,33 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
   --period-minutes 30 \
   --source-mode sample \
   --limit 5
+```
+
+### 读取业务记忆
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
+  --pack-type knowledge_context_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --limit 5
+```
+
+### 写入待确认提议
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
+  --pack-type knowledge_update_proposal_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --proposal-file ./proposal.example.json \
+  --persist-proposals
 ```
 
 ## 9. 速率与节流

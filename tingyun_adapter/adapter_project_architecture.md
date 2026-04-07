@@ -87,10 +87,12 @@ adapter 至少应达成以下能力：
 
 1. `adapter/adapt`
 2. `analysis/report skill`
+3. `knowledge files`
 
 其中：
 
 - `adapter` 向下连接听云平台原始接口
+- `adapter` 同时读取和整理按业务系统隔离的知识文件
 - `skill` 向上消费 adapter 产出的 pack，做分析、解释、成文
 
 ### 4.1 总体上下文图
@@ -99,7 +101,8 @@ adapter 至少应达成以下能力：
 flowchart LR
     A["Tingyun Raw APIs"] --> B["Adapter Source Clients"]
     B --> C["Normalization & Object Resolver"]
-    C --> D["Evidence / Relation / Pack Builder"]
+    I["Knowledge Files"] --> D["Evidence / Relation / Pack Builder"]
+    C --> D
     D --> E["Adapter Output Packs"]
     E --> F["Analysis Skill"]
     E --> G["Report Skill"]
@@ -132,11 +135,14 @@ adapter 负责：
 - observed facts
 - normalized facts
 - lightly derived facts
+- business memory reading
+- pending knowledge proposal structuring
 
 不负责：
 
 - 最终强归因
 - 最终结论性判断
+- 最终知识审批
 
 ### 5.6 候选筛选允许，最终判断后置
 
@@ -187,6 +193,7 @@ flowchart TB
     D --> E["Raw Source Client Layer"]
     C --> F["Pack Builder Layer"]
     F --> G["Persistence / Cache / Export Layer"]
+    G --> H["Knowledge Repository"]
 ```
 
 ### 6.2 第 1 层：Invocation Layer

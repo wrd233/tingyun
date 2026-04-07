@@ -49,10 +49,38 @@
   - `coverage_boundary`
   - `evidence_linkage`
   - `screenshot_index_pack`
+- 阶段 9
+  - `knowledge_context_pack`
+  - `knowledge_update_proposal_pack`
+  - `knowledge/<biz_system>/` 文件化业务记忆层
+  - 5 个增强 pack 接入 confirmed knowledge、pending proposals、judgment log
 
 当前暂缓的方向：
 - 更复杂的历史基线仓储与长期趋势预测
 - 更完整的页面侧 API 采集与 RUM 明细建模
+
+## 阶段 9 设计边界
+
+本轮新增的是“面向大模型的业务记忆层 + 读写协助层”，不是审批系统，也不是最终报告层：
+
+- adapter 负责读取 confirmed knowledge、pending proposals、judgment log
+- adapter 负责把模型建议规范化为 pending proposal
+- adapter 不直接把模型建议写成 confirmed knowledge
+- adapter 不直接输出最终业务标签、最终重要性和最终业务结论
+
+新增 pack：
+
+- `knowledge_context_pack`
+  - 统一输出某个业务系统的 confirmed / pending / judgment log 摘要
+- `knowledge_update_proposal_pack`
+  - 接收提议并写入 `review_queue`
+  - 做 dedupe / conflict awareness / merge-not-overwrite
+
+新增配置：
+
+- `knowledge_dir`
+  - 默认为 `./knowledge`
+  - 用于按 `biz_system` 隔离存放业务知识文件
 
 ## 阶段 8 设计边界
 
@@ -128,6 +156,7 @@ cp /Users/wangrundong/work/mywork/tingyun_adapter/config.local.json.example /Use
   "timezone": "Asia/Shanghai",
   "timeout_seconds": 30,
   "captured_api_dir": "../tingyun_cdp_capture/captured_api",
+  "knowledge_dir": "./knowledge",
   "console_public_base_url": "https://your-tingyun-console.example.com"
 }
 ```
@@ -155,6 +184,12 @@ CLI / SDK 输出中的 `context.auth.token` 默认会脱敏，同时额外给出
   - 一个报告读者可以访问到的听云控制台根地址
   - 当前 adapter 会优先输出“控制台根地址 + 页面类型 + 导航路径 + 筛选条件”
   - 这样即使某些 SPA 路由还没完全反推，也不会输出不可用的假深链
+
+如果你希望增强 pack 和知识 pack 复用历史业务上下文，建议同时配置：
+
+- `knowledge_dir`
+  - 可使用默认值 `./knowledge`
+  - 目录下将按 `biz_system_<id>/` 组织 `system_profile`、`action_labels`、`known_patterns`、`review_queue`、`judgment_log` 等文件
 
 ## 安装
 
@@ -244,6 +279,33 @@ PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
   --period-minutes 30 \
   --source-mode sample \
   --limit 5
+```
+
+### `knowledge_context_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack knowledge_context_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --limit 5
+```
+
+### `knowledge_update_proposal_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack knowledge_update_proposal_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --proposal-file ./proposal.example.json \
+  --persist-proposals
 ```
 
 ## 报告取证字段说明

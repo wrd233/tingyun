@@ -1,0 +1,53 @@
+from __future__ import annotations
+
+import argparse
+import json
+import tempfile
+import unittest
+from pathlib import Path
+
+from tingyun_adapter_client.cli import _load_proposals, _pack_payload
+
+
+class ClientCliTests(unittest.TestCase):
+    def test_pack_payload_normalizes_query_timestamp_and_op_name(self) -> None:
+        args = argparse.Namespace(
+            biz_system_id=1065,
+            end_time="2026-04-07 12:24",
+            period_minutes=30,
+            source_mode="live",
+            limit=5,
+            application_id=1644,
+            instance_id=None,
+            action_id=13513,
+            action_type="TX",
+            component_name="10.0.0.1:3306",
+            component_subtype="MySQL",
+            metric_category=None,
+            trace_id="1782890998",
+            query_timestamp=1775535633940,
+            trace_guid="trace-guid",
+            action_guid="action-guid",
+            request_id="request-id",
+            op_name="SELECT * FROM dual",
+            proposal_file=None,
+            persist_proposals=True,
+        )
+        payload = _pack_payload(args, "sample")
+        self.assertEqual(payload["queryTimestamp"], "1775535633940")
+        self.assertEqual(payload["opName"], "SELECT * FROM dual")
+
+    def test_load_proposals_supports_wrapped_dict(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            path = Path(tmpdir) / "proposal.json"
+            path.write_text(
+                json.dumps({"proposals": [{"proposal_type": "action_labels", "summary": "demo"}]}),
+                encoding="utf-8",
+            )
+            proposals = _load_proposals(str(path))
+        self.assertEqual(len(proposals), 1)
+        self.assertEqual(proposals[0]["proposal_type"], "action_labels")
+
+
+if __name__ == "__main__":
+    unittest.main()

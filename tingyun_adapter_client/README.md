@@ -22,6 +22,8 @@
 - 页面能力边界
 - 更清晰的证据链关联
 - `screenshot_index_pack` 这类面向正式报告取证的索引输出
+- `knowledge_context_pack` 这类面向大模型业务记忆复用的上下文输出
+- `knowledge_update_proposal_pack` 这类把模型建议沉淀到 `review_queue` 的写入入口
 
 ## 本地配置
 
@@ -154,6 +156,38 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
   --limit 5
 ```
 
+### 8. 构建 `knowledge_context_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
+  --pack-type knowledge_context_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --limit 5
+```
+
+### 9. 构建 `knowledge_update_proposal_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
+  --pack-type knowledge_update_proposal_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --proposal-file ./proposal.example.json \
+  --persist-proposals
+```
+
+补充说明：
+
+- client 现在会把 `queryTimestamp` 统一按字符串发给远端服务，避免 `trace_fact_sheet` 调用时出现 `422`
+- 如果要调用 `sql_fact_sheet`，现在也可以通过 `--op-name` 传入 SQL 操作名
+
 ## 适合下游怎么消费
 
 如果目标是正式巡检报告，而不是只看 JSON，建议优先关注 pack 里的这些字段：
@@ -183,6 +217,7 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
    - `database_component_pack`
    - `nosql_component_pack`
    - `connection_pool_pack`
+   - `knowledge_context_pack`
 
 更详细的面向模型 / agent 的说明见：
 

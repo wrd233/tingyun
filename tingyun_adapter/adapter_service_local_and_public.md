@@ -36,6 +36,7 @@
   "timezone": "Asia/Shanghai",
   "timeout_seconds": 30,
   "captured_api_dir": "../tingyun_cdp_capture/captured_api",
+  "knowledge_dir": "./knowledge",
   "console_public_base_url": "https://your-tingyun-console.example.com",
   "service_host": "127.0.0.1",
   "service_port": 8000,
@@ -55,6 +56,9 @@
 - `console_public_base_url`
   - 用于生成适合 Word 报告使用的可点击控制台链接
   - 当前输出以“控制台根地址 + 页面类型 + 导航路径 + 筛选条件”为主
+- `knowledge_dir`
+  - 用于保存业务系统维度的 confirmed knowledge / pending proposals / judgment log
+  - 默认建议使用项目下的 `./knowledge`
 - `service_host`
   - 本地启动监听地址
 - `service_port`
@@ -127,7 +131,9 @@ curl http://127.0.0.1:8000/healthz
 - `status: ok`
 - 当前 `base_url`
 - 当前 `console_public_base_url`
+- 当前 `knowledge_dir`
 - `captured_api_attached`
+- `knowledge_repository_configured`
 - `has_tingyun_token`
 - 当前节流参数
 
@@ -190,6 +196,56 @@ curl http://127.0.0.1:8000/v1/packs/screenshot_index_pack \
   }'
 ```
 
+### 5.4.2 构建 `knowledge_context_pack`
+
+```bash
+curl http://127.0.0.1:8000/v1/packs/knowledge_context_pack \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "X-Adapter-API-Key: $ADAPTER_API_KEY" \
+  -d '{
+    "bizSystemId": 1065,
+    "endTime": "2026-04-03 12:20",
+    "periodMinutes": 30,
+    "sourceMode": "sample",
+    "limit": 5
+  }'
+```
+
+### 5.4.3 构建 `knowledge_update_proposal_pack`
+
+```bash
+curl http://127.0.0.1:8000/v1/packs/knowledge_update_proposal_pack \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "X-Adapter-API-Key: $ADAPTER_API_KEY" \
+  -d '{
+    "bizSystemId": 1065,
+    "endTime": "2026-04-03 12:20",
+    "periodMinutes": 30,
+    "sourceMode": "sample",
+    "proposalItems": [
+      {
+        "proposal_type": "action_labels",
+        "target_file_hint": "action_labels",
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 13220,
+          "action_type": "TX"
+        },
+        "summary": "模型建议该 action 可能属于核心业务链路。",
+        "attributes": {
+          "candidate_labels": ["core_business_path"]
+        },
+        "reasoning_summary": "来自当前一次分析的结构化建议。"
+      }
+    ],
+    "persistProposals": true
+  }'
+```
+
 ### 5.5 构建 `action_fact_sheet`
 
 ```bash
@@ -223,6 +279,11 @@ curl http://127.0.0.1:8000/v1/packs/trace_fact_sheet \
     "sourceMode": "sample"
   }'
 ```
+
+说明：
+
+- `queryTimestamp` 在 HTTP 接口里按字符串接收
+- 如果这个值来自别的 pack 中的数值时间戳，客户端应先转成字符串再透传
 
 ## 6. `sample` 与 `live` 的使用建议
 
@@ -279,6 +340,10 @@ curl http://127.0.0.1:8000/v1/packs/action_hotspot_pack \
   - 明确页面体验是否是真实覆盖还是代理证据
 - `screenshot_index_pack`
   - 聚合成可直接给 Word 报告使用的截图候选卡片
+- `knowledge_context_pack`
+  - 聚合业务知识、待确认提议和判断日志，适合给大模型直接消费
+- `knowledge_update_proposal_pack`
+  - 作为后续人工确认或审批流程的结构化落点
 
 ## 7. 公网发布建议
 
