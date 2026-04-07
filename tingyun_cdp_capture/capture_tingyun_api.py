@@ -397,6 +397,121 @@ class VariantRecord:
 
 
 @dataclass
+class PageContextCandidate:
+    captured_page_url: Optional[str] = None
+    document_url: Optional[str] = None
+    frame_url: Optional[str] = None
+    page_title: Optional[str] = None
+    request_url: Optional[str] = None
+    request_method: Optional[str] = None
+    request_timestamp: Optional[str] = None
+    tab_target_id: Optional[str] = None
+    frame_id: Optional[str] = None
+    referrer: Optional[str] = None
+    initiator_url: Optional[str] = None
+    initiator_type: Optional[str] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "captured_page_url": self.captured_page_url,
+            "document_url": self.document_url,
+            "frame_url": self.frame_url,
+            "page_title": self.page_title,
+            "request_url": self.request_url,
+            "request_method": self.request_method,
+            "request_timestamp": self.request_timestamp,
+            "tab_target_id": self.tab_target_id,
+            "frame_id": self.frame_id,
+            "referrer": self.referrer,
+            "initiator_url": self.initiator_url,
+            "initiator_type": self.initiator_type,
+        }
+
+    def populated_field_count(self) -> int:
+        score = 0
+        for key, value in self.to_dict().items():
+            if key == "request_timestamp":
+                continue
+            if isinstance(value, str):
+                score += 1 if value.strip() else 0
+            elif value is not None:
+                score += 1
+        return score
+
+    def has_page_location(self) -> bool:
+        for value in (self.captured_page_url, self.document_url, self.frame_url):
+            if isinstance(value, str) and value.strip():
+                return True
+        return False
+
+    def identity_key(self) -> str:
+        return canonical_json(
+            {
+                "captured_page_url": self.captured_page_url,
+                "document_url": self.document_url,
+                "frame_url": self.frame_url,
+                "page_title": self.page_title,
+                "tab_target_id": self.tab_target_id,
+                "frame_id": self.frame_id,
+                "referrer": self.referrer,
+                "initiator_url": self.initiator_url,
+                "initiator_type": self.initiator_type,
+            }
+        )
+
+    @classmethod
+    def from_mapping(cls, data: Optional[Dict[str, Any]]) -> "PageContextCandidate":
+        payload = data or {}
+        return cls(
+            captured_page_url=payload.get("captured_page_url"),
+            document_url=payload.get("document_url"),
+            frame_url=payload.get("frame_url"),
+            page_title=payload.get("page_title"),
+            request_url=payload.get("request_url"),
+            request_method=payload.get("request_method"),
+            request_timestamp=payload.get("request_timestamp"),
+            tab_target_id=payload.get("tab_target_id"),
+            frame_id=payload.get("frame_id"),
+            referrer=payload.get("referrer"),
+            initiator_url=payload.get("initiator_url"),
+            initiator_type=payload.get("initiator_type"),
+        )
+
+
+@dataclass
+class PageContextSummary:
+    latest: Optional[PageContextCandidate] = None
+    latest_non_empty: Optional[PageContextCandidate] = None
+    candidates: List[PageContextCandidate] = field(default_factory=list)
+
+    def observe(self, candidate: PageContextCandidate, max_candidates: int) -> None:
+        self.latest = candidate
+        if candidate.has_page_location():
+            self.latest_non_empty = candidate
+        identity = candidate.identity_key()
+        filtered = [item for item in self.candidates if item.identity_key() != identity]
+        filtered.insert(0, candidate)
+        self.candidates = filtered[:max_candidates]
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "latest": self.latest.to_dict() if self.latest is not None else None,
+            "latest_non_empty": self.latest_non_empty.to_dict() if self.latest_non_empty is not None else None,
+            "candidates": [item.to_dict() for item in self.candidates],
+        }
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "PageContextSummary":
+        return cls(
+            latest=PageContextCandidate.from_mapping(data.get("latest")) if data.get("latest") else None,
+            latest_non_empty=PageContextCandidate.from_mapping(data.get("latest_non_empty"))
+            if data.get("latest_non_empty")
+            else None,
+            candidates=[PageContextCandidate.from_mapping(item) for item in data.get("candidates", [])],
+        )
+
+
+@dataclass
 class MethodRecord:
     method: str
     count_seen: int = 0
@@ -414,6 +529,7 @@ class MethodRecord:
     inferred_purpose: str = ""
     inference_basis: List[str] = field(default_factory=list)
     replay: Dict[str, Any] = field(default_factory=dict)
+    page_context_summary: PageContextSummary = field(default_factory=PageContextSummary)
 
     def observe(self, observation: Dict[str, Any], max_examples: int) -> None:
         seen_at = observation["seen_at"]
@@ -458,6 +574,10 @@ class MethodRecord:
         self._append_unique_sample(self.sample_requests, observation["sample_request"], max_examples)
         if observation.get("sample_response") is not None:
             self._append_unique_sample(self.sample_responses, observation["sample_response"], max_examples)
+        self.page_context_summary.observe(
+            PageContextCandidate.from_mapping(observation.get("page_context")),
+            max_examples,
+        )
 
         inferred_purpose, inference_basis = infer_purpose(
             observation["relative_path"], observation["query_example"], observation["body_example"]
@@ -509,6 +629,7 @@ class MethodRecord:
             "inferred_purpose": self.inferred_purpose,
             "inference_basis": self.inference_basis,
             "replay": self.replay,
+            "page_context_summary": self.page_context_summary.to_dict(),
         }
 
     @classmethod
@@ -528,6 +649,9 @@ class MethodRecord:
             inferred_purpose=data.get("inferred_purpose", ""),
             inference_basis=list(data.get("inference_basis", [])),
             replay=dict(data.get("replay", {})),
+            page_context_summary=PageContextSummary.from_dict(data.get("page_context_summary", {}))
+            if data.get("page_context_summary")
+            else PageContextSummary(),
         )
         for variant in data.get("query_variants", []):
             loaded = VariantRecord.from_dict(variant)
@@ -717,6 +841,19 @@ class RawLogCatalog:
         with open(path, "r", encoding="utf-8") as handle:
             return json.load(handle)
 
+    @staticmethod
+    def _merge_page_context(existing_record: Dict[str, Any], incoming_record: Dict[str, Any]) -> None:
+        existing_summary = PageContextSummary.from_dict(
+            existing_record.get("page_context_summary")
+            or existing_record.get("capture", {}).get("page_context_summary")
+            or {}
+        )
+        incoming_context = PageContextCandidate.from_mapping(incoming_record.get("page_context"))
+        existing_summary.observe(incoming_context, max_candidates=10)
+        summary_dict = existing_summary.to_dict()
+        incoming_record["page_context_summary"] = summary_dict
+        incoming_record.setdefault("capture", {})["page_context_summary"] = summary_dict
+
     def observe(self, raw_record: Dict[str, Any]) -> Tuple[str, bool]:
         file_path = self.raw_log_file_path(raw_record)
         ensure_parent_dir(file_path)
@@ -724,6 +861,7 @@ class RawLogCatalog:
         raw_record["capture"]["completeness_score"] = self.completeness_score(raw_record)
 
         existing = self._load_existing(file_path)
+        self._merge_page_context(existing or {}, raw_record)
         if existing is not None:
             existing_score = int(existing.get("capture", {}).get("completeness_score", 0))
             existing_seen = int(existing.get("capture", {}).get("seen_count", 1))
@@ -734,6 +872,12 @@ class RawLogCatalog:
             if raw_record["capture"]["completeness_score"] < existing_score:
                 existing["capture"]["seen_count"] = existing_seen + 1
                 existing["capture"]["last_seen_at"] = raw_record["capture"]["captured_at"]
+                merged_summary = raw_record.get("page_context_summary") or raw_record.get("capture", {}).get(
+                    "page_context_summary"
+                )
+                if merged_summary is not None:
+                    existing["page_context_summary"] = merged_summary
+                    existing.setdefault("capture", {})["page_context_summary"] = merged_summary
                 with open(file_path, "w", encoding="utf-8") as handle:
                     json.dump(existing, handle, ensure_ascii=False, indent=2, sort_keys=True)
                     handle.write("\n")
@@ -831,6 +975,15 @@ class PendingRequest:
     response_body_kind: str = "none"
     response_body_capture_error: Optional[str] = None
     response_error: Optional[str] = None
+    document_url: Optional[str] = None
+    frame_id: Optional[str] = None
+    frame_url: Optional[str] = None
+    page_title: Optional[str] = None
+    captured_page_url: Optional[str] = None
+    tab_target_id: Optional[str] = None
+    referrer: Optional[str] = None
+    initiator_url: Optional[str] = None
+    initiator_type: Optional[str] = None
 
 
 class CaptureSession:
@@ -840,6 +993,9 @@ class CaptureSession:
         catalog: EndpointCatalog,
         raw_log_catalog: RawLogCatalog,
         api_prefix: str,
+        target_id: str,
+        target_title: str,
+        target_url: str,
         include_response_body: bool,
         max_response_bytes: int,
         network_total_buffer_bytes: int,
@@ -851,6 +1007,9 @@ class CaptureSession:
         self.catalog = catalog
         self.raw_log_catalog = raw_log_catalog
         self.api_prefix = api_prefix.rstrip("/") + "/"
+        self.target_id = target_id
+        self.target_title = target_title
+        self.target_url = target_url
         self.include_response_body = include_response_body
         self.max_response_bytes = max_response_bytes
         self.network_total_buffer_bytes = max(network_total_buffer_bytes, max_response_bytes * 4)
@@ -858,9 +1017,20 @@ class CaptureSession:
         self.verbose = verbose
         self.pending: Dict[str, PendingRequest] = {}
         self.stop_requested = stop_requested or asyncio.Event()
+        self.frame_urls: Dict[str, str] = {}
+        self.main_frame_id: Optional[str] = None
+        self.cached_page_snapshot: Dict[str, Optional[str]] = {
+            "href": target_url or None,
+            "title": target_title or None,
+            "referrer": None,
+        }
 
     async def start(self) -> None:
         await self.cdp_client.send_command("Page.enable")
+        try:
+            await self.cdp_client.send_command("Runtime.enable")
+        except Exception:
+            pass
         network_params = {
             "maxPostDataSize": 1024 * 1024,
             "maxResourceBufferSize": self.network_resource_buffer_bytes,
@@ -876,6 +1046,7 @@ class CaptureSession:
             )
         except Exception:
             await self.cdp_client.send_command("Network.enable", network_params)
+        await self._refresh_page_snapshot()
 
     async def run_forever(self) -> None:
         await self.start()
@@ -903,6 +1074,11 @@ class CaptureSession:
             resource_type = params.get("type", "Unknown")
             if relative_path is None or resource_type not in {"XHR", "Fetch"}:
                 return
+            document_url = params.get("documentURL")
+            frame_id = params.get("frameId")
+            frame_url = self._frame_url_for(frame_id, document_url)
+            page_snapshot = await self._snapshot_for_request(document_url=document_url, frame_id=frame_id)
+            initiator = params.get("initiator", {})
             self.pending[params["requestId"]] = PendingRequest(
                 request_id=params["requestId"],
                 method=request.get("method", "GET").upper(),
@@ -911,7 +1087,43 @@ class CaptureSession:
                 post_data=request.get("postData"),
                 resource_type=resource_type,
                 wall_time=float(params.get("wallTime", 0.0)),
+                document_url=document_url,
+                frame_id=frame_id,
+                frame_url=frame_url,
+                page_title=page_snapshot.get("title"),
+                captured_page_url=page_snapshot.get("href") or frame_url or document_url,
+                tab_target_id=self.target_id,
+                referrer=page_snapshot.get("referrer")
+                or request.get("referrerPolicy")
+                or request.get("headers", {}).get("Referer")
+                or request.get("headers", {}).get("referer"),
+                initiator_url=self._extract_initiator_url(initiator),
+                initiator_type=initiator.get("type"),
             )
+            return
+
+        if method == "Page.frameNavigated":
+            frame = params.get("frame", {})
+            frame_id = frame.get("id")
+            frame_url = frame.get("url")
+            parent_id = frame.get("parentId")
+            if frame_id and frame_url:
+                self.frame_urls[str(frame_id)] = str(frame_url)
+            if frame_id and not parent_id:
+                self.main_frame_id = str(frame_id)
+                self.cached_page_snapshot["href"] = str(frame_url) if frame_url else self.cached_page_snapshot.get("href")
+                self.cached_page_snapshot["title"] = frame.get("name") or self.cached_page_snapshot.get("title")
+                await self._refresh_page_snapshot()
+            return
+
+        if method == "Page.navigatedWithinDocument":
+            frame_id = params.get("frameId")
+            url = params.get("url")
+            if frame_id and url:
+                self.frame_urls[str(frame_id)] = str(url)
+            if frame_id and str(frame_id) == self.main_frame_id and url:
+                self.cached_page_snapshot["href"] = str(url)
+                await self._refresh_page_snapshot()
             return
 
         if method == "Network.responseReceived":
@@ -981,6 +1193,72 @@ class CaptureSession:
                 await asyncio.sleep(0.1)
         pending.response_body_capture_error = last_error
 
+    def _frame_url_for(self, frame_id: Optional[str], document_url: Optional[str]) -> Optional[str]:
+        if frame_id and self.frame_urls.get(str(frame_id)):
+            return self.frame_urls[str(frame_id)]
+        if document_url:
+            return document_url
+        if frame_id and self.main_frame_id and str(frame_id) == self.main_frame_id:
+            return self.cached_page_snapshot.get("href")
+        return None
+
+    async def _refresh_page_snapshot(self) -> None:
+        try:
+            result = await self.cdp_client.send_command(
+                "Runtime.evaluate",
+                {
+                    "expression": "JSON.stringify({href: location.href, title: document.title, referrer: document.referrer})",
+                    "returnByValue": True,
+                },
+            )
+        except Exception:
+            return
+        value = result.get("result", {}).get("value")
+        if not isinstance(value, str) or not value.strip():
+            return
+        try:
+            payload = json.loads(value)
+        except json.JSONDecodeError:
+            return
+        self.cached_page_snapshot["href"] = payload.get("href") or self.cached_page_snapshot.get("href")
+        self.cached_page_snapshot["title"] = payload.get("title") or self.cached_page_snapshot.get("title")
+        self.cached_page_snapshot["referrer"] = payload.get("referrer") or self.cached_page_snapshot.get("referrer")
+
+    async def _snapshot_for_request(
+        self,
+        *,
+        document_url: Optional[str],
+        frame_id: Optional[str],
+    ) -> Dict[str, Optional[str]]:
+        if not self.cached_page_snapshot.get("href") and (document_url or frame_id):
+            await self._refresh_page_snapshot()
+        href = self.cached_page_snapshot.get("href") or self._frame_url_for(frame_id, document_url) or self.target_url or None
+        return {
+            "href": href,
+            "title": self.cached_page_snapshot.get("title") or self.target_title or None,
+            "referrer": self.cached_page_snapshot.get("referrer"),
+        }
+
+    @staticmethod
+    def _extract_initiator_url(initiator: Dict[str, Any]) -> Optional[str]:
+        if not initiator:
+            return None
+        if initiator.get("url"):
+            return str(initiator.get("url"))
+        stack = initiator.get("stack") or {}
+        for frame in stack.get("callFrames", []) or []:
+            url = frame.get("url")
+            if url:
+                return str(url)
+        parent = stack.get("parent")
+        while isinstance(parent, dict):
+            for frame in parent.get("callFrames", []) or []:
+                url = frame.get("url")
+                if url:
+                    return str(url)
+            parent = parent.get("parent")
+        return None
+
     async def _finalize_request(self, request_id: str) -> None:
         pending = self.pending.pop(request_id, None)
         if pending is None:
@@ -1007,6 +1285,20 @@ class CaptureSession:
         response_headers = {
             str(key): truncate_text(str(value), 2000) for key, value in pending.response_headers.items()
         }
+        page_context = {
+            "captured_page_url": pending.captured_page_url,
+            "document_url": pending.document_url,
+            "frame_url": pending.frame_url,
+            "page_title": pending.page_title,
+            "request_url": pending.url,
+            "request_method": pending.method,
+            "request_timestamp": now_iso(),
+            "tab_target_id": pending.tab_target_id,
+            "frame_id": pending.frame_id,
+            "referrer": pending.referrer,
+            "initiator_url": pending.initiator_url,
+            "initiator_type": pending.initiator_type,
+        }
         sample_request = {
             "seen_at": now_iso(),
             "url": pending.url,
@@ -1015,6 +1307,7 @@ class CaptureSession:
             "headers": headers_template,
             "body_kind": body_kind,
             "body": body_example,
+            "page_context": page_context,
         }
         sample_response = None
         if pending.response_status is not None or pending.response_body is not None or pending.response_error is not None:
@@ -1061,6 +1354,7 @@ class CaptureSession:
             "response_mime_type": pending.response_mime_type,
             "sample_request": sample_request,
             "sample_response": sample_response,
+            "page_context": page_context,
         }
 
         output_path = self.catalog.observe(observation)
@@ -1074,7 +1368,10 @@ class CaptureSession:
                 "captured_at": observation["seen_at"],
                 "resource_type": pending.resource_type,
                 "wall_time": pending.wall_time,
+                "tab_target_id": pending.tab_target_id,
+                "page_context": page_context,
             },
+            "page_context": page_context,
             "request": {
                 "url": pending.url,
                 "host_base": host_base,
@@ -1088,6 +1385,7 @@ class CaptureSession:
                 "raw_post_data": truncate_text(pending.post_data or "", 20000) if pending.post_data is not None else None,
                 "body": parsed_body,
                 "body_normalized": body_normalized,
+                "page_context": page_context,
             },
             "response": {
                 "status": pending.response_status,
@@ -1300,6 +1598,9 @@ async def async_main(args: argparse.Namespace) -> int:
             catalog=catalog,
             raw_log_catalog=raw_log_catalog,
             api_prefix=args.api_prefix,
+            target_id=target_id,
+            target_title=str(target.get("title", "")),
+            target_url=str(target.get("url", "")),
             include_response_body=args.include_response_body,
             max_response_bytes=args.max_response_bytes,
             network_total_buffer_bytes=args.network_total_buffer_bytes,

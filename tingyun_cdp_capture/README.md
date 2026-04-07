@@ -17,6 +17,7 @@
   - 聚合后的接口样本
 - `raw_logs/`
   - 更细粒度的请求 / 响应样本
+  - 新样本会额外保留 `page_context` / `page_context_summary`，用于回填真实页面 URL、frame 上下文和候选链接
 - `api_analysis_priority.md`
 - `api_report_shortlist.md`
 - `tingyun_manual_context_and_component_mapping.md`
