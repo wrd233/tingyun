@@ -15,6 +15,14 @@
 - 机器 B 只持有服务地址和 `service_api_key`
 - 本机大模型、agent、Codex 都可以通过 CLI 稳定使用这些 pack
 
+现在 client 不只是拿到结构化对象 pack，也能直接拿到：
+
+- 可点击的听云控制台链接
+- 截图建议
+- 页面能力边界
+- 更清晰的证据链关联
+- `screenshot_index_pack` 这类面向正式报告取证的索引输出
+
 ## 本地配置
 
 机器 B 的配置文件放在：
@@ -132,6 +140,34 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
   --source-mode sample \
   --limit 5
 ```
+
+### 7. 构建 `screenshot_index_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
+  --pack-type screenshot_index_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample \
+  --limit 5
+```
+
+## 适合下游怎么消费
+
+如果目标是正式巡检报告，而不是只看 JSON，建议优先关注 pack 里的这些字段：
+
+- `page_links`
+  - 适合直接插入 Word 的可点击链接
+- `screenshot_hints`
+  - 可直接转成“建议截图什么 / 标注什么”的说明
+- `coverage_boundary`
+  - 可判断某个章节是强证据还是弱证据
+- `metric_semantics`
+  - 可帮助写出带主语和统计口径的描述
+- `evidence_linkage`
+  - 可帮助把时间窗、接口、trace、SQL、依赖串成证据链
 
 ## 适合给 Codex 怎么用
 

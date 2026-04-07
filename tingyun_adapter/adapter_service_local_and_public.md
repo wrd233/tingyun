@@ -18,6 +18,7 @@
 - pack 构建接口
 - 基于 `service_api_key` 的简单鉴权
 - 基于最小请求间隔和每分钟上限的基础节流
+- 面向正式报告取证的深链、截图建议、覆盖边界与截图索引输出
 
 ## 2. 配置
 
@@ -35,6 +36,7 @@
   "timezone": "Asia/Shanghai",
   "timeout_seconds": 30,
   "captured_api_dir": "../tingyun_cdp_capture/captured_api",
+  "console_public_base_url": "https://your-tingyun-console.example.com",
   "service_host": "127.0.0.1",
   "service_port": 8000,
   "service_api_key": "请改成一个随机长字符串",
@@ -50,6 +52,9 @@
   - live 模式请求听云接口时需要
 - `captured_api_dir`
   - sample 模式需要
+- `console_public_base_url`
+  - 用于生成适合 Word 报告使用的可点击控制台链接
+  - 当前输出以“控制台根地址 + 页面类型 + 导航路径 + 筛选条件”为主
 - `service_host`
   - 本地启动监听地址
 - `service_port`
@@ -121,6 +126,7 @@ curl http://127.0.0.1:8000/healthz
 
 - `status: ok`
 - 当前 `base_url`
+- 当前 `console_public_base_url`
 - `captured_api_attached`
 - `has_tingyun_token`
 - 当前节流参数
@@ -156,6 +162,22 @@ curl http://127.0.0.1:8000/v1/packs/system_snapshot \
 
 ```bash
 curl http://127.0.0.1:8000/v1/packs/diagnostic_candidate_pack \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "X-Adapter-API-Key: $ADAPTER_API_KEY" \
+  -d '{
+    "bizSystemId": 1065,
+    "endTime": "2026-04-03 12:20",
+    "periodMinutes": 30,
+    "sourceMode": "sample",
+    "limit": 5
+  }'
+```
+
+### 5.4.1 构建 `screenshot_index_pack`
+
+```bash
+curl http://127.0.0.1:8000/v1/packs/screenshot_index_pack \
   -X POST \
   -H "Content-Type: application/json" \
   -H "X-Adapter-API-Key: $ADAPTER_API_KEY" \
@@ -234,6 +256,29 @@ curl http://127.0.0.1:8000/v1/packs/action_hotspot_pack \
     "sourceMode": "live"
   }'
 ```
+
+## 6.1 正式报告取证相关输出
+
+重点 pack 现在会带上这些统一字段：
+
+- `page_links`
+- `primary_console_url`
+- `related_console_urls`
+- `screenshot_hints`
+- `metric_semantics`
+- `coverage_boundary`
+- `evidence_linkage`
+
+其中：
+
+- `page_links`
+  - 给出页面类型、链接、建议导航路径和建议筛选条件
+- `screenshot_hints`
+  - 给出建议截图内容、建议标注内容和建议使用章节
+- `coverage_boundary`
+  - 明确页面体验是否是真实覆盖还是代理证据
+- `screenshot_index_pack`
+  - 聚合成可直接给 Word 报告使用的截图候选卡片
 
 ## 7. 公网发布建议
 

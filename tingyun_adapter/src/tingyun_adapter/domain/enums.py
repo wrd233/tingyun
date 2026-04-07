@@ -25,6 +25,7 @@ class PackType(str, Enum):
     IMPACT_SIGNALS = "impact_signals_pack"
     COMPARISON_SIGNALS = "comparison_signals_pack"
     PAGE_EXPERIENCE = "page_experience_pack"
+    SCREENSHOT_INDEX = "screenshot_index_pack"
 
 
 class RelationType(str, Enum):

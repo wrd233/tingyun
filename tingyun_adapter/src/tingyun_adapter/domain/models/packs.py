@@ -11,6 +11,13 @@ class SystemSnapshotPayload:
     health: dict[str, Any] = field(default_factory=dict)
     trends: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -19,6 +26,13 @@ class ActionHotspotPackPayload:
     ranking_policy: dict[str, Any]
     hotspots: list[dict[str, Any]] = field(default_factory=list)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -28,6 +42,13 @@ class TraceCasePackPayload:
     trace_case: dict[str, Any]
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
     drilldown_path: list[str] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -39,6 +60,13 @@ class DiagnosticCandidatePackPayload:
     trace_candidates: list[dict[str, Any]] = field(default_factory=list)
     component_candidates: list[dict[str, Any]] = field(default_factory=list)
     recommended_next_packs: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -52,6 +80,13 @@ class ActionFactSheetPayload:
     downstream_components: dict[str, Any] = field(default_factory=dict)
     drilldown_keys: dict[str, Any] = field(default_factory=dict)
     drilldown_path: list[str] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -65,6 +100,13 @@ class TraceFactSheetPayload:
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
     drilldown_keys: dict[str, Any] = field(default_factory=dict)
     drilldown_path: list[str] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -78,6 +120,13 @@ class DatabaseComponentPackPayload:
     topology_summary: dict[str, Any] = field(default_factory=dict)
     connection_pool_summary: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -90,6 +139,13 @@ class NoSQLComponentPackPayload:
     error_summary: dict[str, Any] = field(default_factory=dict)
     topology_summary: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -100,6 +156,13 @@ class ConnectionPoolPackPayload:
     time_series: dict[str, Any] = field(default_factory=dict)
     waiter_risk: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -112,6 +175,13 @@ class InstanceAnalysisPackPayload:
     cpu_chart: dict[str, Any] = field(default_factory=dict)
     jvm_chart: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -123,6 +193,13 @@ class TopologyDependencyPackPayload:
     node_health: dict[str, Any] = field(default_factory=dict)
     dependencies: list[dict[str, Any]] = field(default_factory=list)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -133,6 +210,13 @@ class ExternalDependencyPackPayload:
     protocol_summary: dict[str, Any] = field(default_factory=dict)
     external_dependencies: list[dict[str, Any]] = field(default_factory=list)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -143,6 +227,13 @@ class SlowSQLPackPayload:
     top_sqls: list[dict[str, Any]] = field(default_factory=list)
     operation_overview: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -156,6 +247,13 @@ class SQLFactSheetPayload:
     related_traces: list[dict[str, Any]] = field(default_factory=list)
     drilldown_keys: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -168,6 +266,13 @@ class ActionDependencyBreakdownPackPayload:
     action_graph: dict[str, Any] = field(default_factory=dict)
     topology_summary: dict[str, Any] = field(default_factory=dict)
     suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -180,6 +285,13 @@ class ReportFactPackPayload:
     trace_case: dict[str, Any] = field(default_factory=dict)
     issues: list[dict[str, Any]] = field(default_factory=list)
     drilldown_paths: list[str] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     evidence: list[dict[str, Any]] = field(default_factory=list)
 
 
@@ -235,6 +347,27 @@ class PageExperiencePackPayload:
     platform_distribution: list[dict[str, Any]] = field(default_factory=list)
     related_actions: list[dict[str, Any]] = field(default_factory=list)
     related_dependencies: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
+    input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class ScreenshotIndexPackPayload:
+    scope: dict[str, Any]
+    screenshot_cards: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
     input_dependencies: list[str] = field(default_factory=list)
     derivation_notes: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)

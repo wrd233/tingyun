@@ -40,6 +40,7 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
             "impact_signals_pack",
             "comparison_signals_pack",
             "page_experience_pack",
+            "screenshot_index_pack",
         ],
     )
     parser.add_argument("--biz-system-id", type=int)
@@ -216,6 +217,8 @@ def main() -> int:
             envelope = adapter.build_comparison_signals_pack(context, source_mode=args.source_mode, limit=args.limit)
         elif args.build_pack == "page_experience_pack":
             envelope = adapter.build_page_experience_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "screenshot_index_pack":
+            envelope = adapter.build_screenshot_index_pack(context, source_mode=args.source_mode, limit=args.limit)
         else:
             envelope = adapter.build_report_fact_pack(context, source_mode=args.source_mode)
         print(json.dumps(envelope.to_dict(), ensure_ascii=False, indent=2))

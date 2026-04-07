@@ -37,6 +37,14 @@ from tingyun_adapter.usecases.builders import (
     _trace_candidate_summary,
     _topology_summary,
 )
+from tingyun_adapter.usecases.report_support import (
+    apply_report_support,
+    default_coverage_boundary,
+    make_console_link,
+    make_metric_semantic,
+    make_screenshot_hint,
+    time_window_text,
+)
 
 
 def build_database_component_pack(
@@ -203,7 +211,118 @@ def build_database_component_pack(
         suspect_signals=_database_component_signals(component, related_traces, impacted_action_rows),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.DATABASE_COMPONENT.value, context, payload, evidence=evidence, warnings=warnings)
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="database_component_overview",
+            label="数据库组件总览页",
+            why_relevant="用于查看数据库组件总体响应、吞吐、错误和连接情况。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "数据库组件", selected_ref.component_name],
+            suggested_filters={"componentName": selected_ref.component_name, "componentSubtype": selected_ref.component_subtype},
+            target_ref={"kind": "database_component", "component_name": selected_ref.component_name, "component_subtype": selected_ref.component_subtype},
+        ),
+        make_console_link(
+            adapter,
+            context,
+            page_type="database_sql_analysis",
+            label="数据库 SQL 分析页",
+            why_relevant="用于查看慢 SQL、异常 SQL 和影响事务。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "数据库组件", selected_ref.component_name, "SQL 分析"],
+            suggested_filters={"componentName": selected_ref.component_name, "componentSubtype": selected_ref.component_subtype},
+            target_ref={"kind": "database_component", "component_name": selected_ref.component_name, "component_subtype": selected_ref.component_subtype},
+        ),
+        make_console_link(
+            adapter,
+            context,
+            page_type="database_topology",
+            label="数据库拓扑页",
+            why_relevant="用于查看数据库与上游应用、事务之间的拓扑关系。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "数据库组件", selected_ref.component_name, "拓扑"],
+            suggested_filters={"componentName": selected_ref.component_name},
+            target_ref={"kind": "database_component", "component_name": selected_ref.component_name, "component_subtype": selected_ref.component_subtype},
+        ),
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="数据库组件总览截图建议",
+            page_type="database_component_overview",
+            url=page_links[0]["url"],
+            recommended_capture=["组件响应时间趋势", "错误率或错误数趋势", "组件摘要指标卡"],
+            recommended_annotations=["圈出异常时间窗", "标注组件名称", "标注响应时间或错误率异常点"],
+            usage_in_report="可用于 SQL 检查章节说明数据库侧整体风险。",
+            suggested_report_section="3.4 SQL 检查",
+            target_ref=page_links[0]["target_ref"],
+            priority="high",
+        ),
+        make_screenshot_hint(
+            title="数据库慢 SQL 列表截图建议",
+            page_type="database_sql_analysis",
+            url=page_links[1]["url"],
+            recommended_capture=["慢 SQL Top 列表", "错误 SQL 列表", "受影响事务列表"],
+            recommended_annotations=["标出最慢 SQL", "标出错误次数高的 SQL", "标出关联事务名称"],
+            usage_in_report="可用于 SQL Top 问题举证与影响面说明。",
+            suggested_report_section="3.4 SQL 检查",
+            target_ref=page_links[1]["target_ref"],
+            priority="high",
+        ),
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="response_time_ms",
+            subject_type="database_component",
+            subject_key=f"database_component:{selected_ref.component_name}",
+            aggregation="average",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="all database component calls in selected business scope",
+        ),
+        make_metric_semantic(
+            metric_name="throughput",
+            subject_type="database_component",
+            subject_key=f"database_component:{selected_ref.component_name}",
+            aggregation="rate",
+            unit="rpm",
+            time_window=time_window_text(context),
+            sample_scope="all database component calls in selected business scope",
+        ),
+        make_metric_semantic(
+            metric_name="error_rate",
+            subject_type="database_component",
+            subject_key=f"database_component:{selected_ref.component_name}",
+            aggregation="ratio",
+            unit="percent",
+            time_window=time_window_text(context),
+            sample_scope="all database component calls in selected business scope",
+        ),
+    ]
+    evidence_linkage = {
+        "related_time_windows": [dataclass_to_dict(context.time_window)],
+        "related_actions": impacted_action_rows[:5],
+        "related_traces": related_traces[:5],
+        "related_sqls": operation_rows[:5],
+        "related_dependencies": topology_summary.get("key_edges") if isinstance(topology_summary, dict) else [],
+        "recommended_next_pages": page_links,
+    }
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage=evidence_linkage,
+    )
+    return _pack(
+        PackType.DATABASE_COMPONENT.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def build_nosql_component_pack(
@@ -369,7 +488,87 @@ def build_nosql_component_pack(
         suspect_signals=_nosql_component_signals(component, impacted_actions, trace_rows),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.NOSQL_COMPONENT.value, context, payload, evidence=evidence, warnings=warnings)
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="nosql_component_overview",
+            label="NoSQL 组件总览页",
+            why_relevant="用于查看 NoSQL 组件的响应、吞吐和错误概况。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "NoSQL 组件", selected_ref.component_name],
+            suggested_filters={"componentName": selected_ref.component_name, "componentSubtype": selected_ref.component_subtype},
+            target_ref={"kind": "nosql_component", "component_name": selected_ref.component_name, "component_subtype": selected_ref.component_subtype},
+        ),
+        make_console_link(
+            adapter,
+            context,
+            page_type="nosql_topology",
+            label="NoSQL 拓扑页",
+            why_relevant="用于查看 NoSQL 与上游动作和依赖关系。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "NoSQL 组件", selected_ref.component_name, "拓扑"],
+            suggested_filters={"componentName": selected_ref.component_name},
+            target_ref={"kind": "nosql_component", "component_name": selected_ref.component_name, "component_subtype": selected_ref.component_subtype},
+        ),
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="NoSQL 组件概览截图建议",
+            page_type="nosql_component_overview",
+            url=page_links[0]["url"],
+            recommended_capture=["组件性能摘要", "Top 操作列表", "错误摘要"],
+            recommended_annotations=["标注最慢操作", "标注错误类型", "标注组件名称"],
+            usage_in_report="可用于说明 Redis/NoSQL 侧热点操作和异常。",
+            suggested_report_section="3.4 SQL 检查",
+            target_ref=page_links[0]["target_ref"],
+            priority="medium",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="response_time_ms",
+            subject_type="nosql_component",
+            subject_key=f"nosql_component:{selected_ref.component_name}",
+            aggregation="average",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="all NoSQL component calls in selected business scope",
+        ),
+        make_metric_semantic(
+            metric_name="throughput",
+            subject_type="nosql_component",
+            subject_key=f"nosql_component:{selected_ref.component_name}",
+            aggregation="rate",
+            unit="rpm",
+            time_window=time_window_text(context),
+            sample_scope="all NoSQL component calls in selected business scope",
+        ),
+    ]
+    evidence_linkage = {
+        "related_time_windows": [dataclass_to_dict(context.time_window)],
+        "related_actions": impacted_actions[:5],
+        "related_traces": trace_rows[:5],
+        "related_sqls": [],
+        "related_dependencies": component.topology.get("key_edges") if isinstance(component.topology, dict) else [],
+        "recommended_next_pages": page_links,
+    }
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage=evidence_linkage,
+    )
+    return _pack(
+        PackType.NOSQL_COMPONENT.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def build_connection_pool_pack(
@@ -479,7 +678,82 @@ def build_connection_pool_pack(
         suspect_signals=_connection_pool_signals(pool_row, chart_summary, db_chart_summary),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.CONNECTION_POOL.value, context, payload, evidence=evidence, warnings=warnings)
+    pool_ref_dict = {
+        "kind": "connection_pool",
+        "metric_category": pool.metric_category,
+        "application_id": selected_ref.application_id,
+        "instance_id": selected_ref.instance_id,
+    }
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="connection_pool_overview",
+            label="连接池概览页",
+            why_relevant="用于查看池使用率、等待连接和连接时间趋势。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "连接池", str(pool.metric_category or pool.framework or "连接池")],
+            suggested_filters={"metricCategory": pool.metric_category, "applicationId": selected_ref.application_id, "instanceId": selected_ref.instance_id},
+            target_ref=pool_ref_dict,
+        )
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="连接池趋势截图建议",
+            page_type="connection_pool_overview",
+            url=page_links[0]["url"],
+            recommended_capture=["已用连接数趋势", "等待连接数趋势", "数据库连接时间趋势"],
+            recommended_annotations=["标出等待连接峰值", "标出高使用率时段", "标出连接时间升高时段"],
+            usage_in_report="可用于说明连接池拥塞或连接耗时风险。",
+            suggested_report_section="3.4 SQL 检查",
+            target_ref=pool_ref_dict,
+            priority="medium",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="used_connections",
+            subject_type="connection_pool",
+            subject_key=f"connection_pool:{pool.metric_category or pool.framework or 'pool'}",
+            aggregation="timeseries_latest",
+            unit="count",
+            time_window=time_window_text(context),
+            sample_scope="selected connection pool within business scope",
+        ),
+        make_metric_semantic(
+            metric_name="database_connection_time",
+            subject_type="connection_pool",
+            subject_key=f"connection_pool:{pool.metric_category or pool.framework or 'pool'}",
+            aggregation="timeseries_average",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="selected connection pool within business scope",
+        ),
+    ]
+    evidence_linkage = {
+        "related_time_windows": [dataclass_to_dict(context.time_window)],
+        "related_actions": [],
+        "related_traces": [],
+        "related_sqls": [],
+        "related_dependencies": [],
+        "recommended_next_pages": page_links,
+    }
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage=evidence_linkage,
+    )
+    return _pack(
+        PackType.CONNECTION_POOL.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def _load_database_list(adapter: Any, context: AnalysisContext, *, source_mode: str) -> tuple[Any, dict[str, Any]]:

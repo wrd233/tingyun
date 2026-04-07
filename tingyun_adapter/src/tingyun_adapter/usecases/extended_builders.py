@@ -50,6 +50,14 @@ from tingyun_adapter.usecases.component_builders import (
     _normalize_component_trace_rows,
     _preferred_component_from_sample,
 )
+from tingyun_adapter.usecases.report_support import (
+    apply_report_support,
+    default_coverage_boundary,
+    make_console_link,
+    make_metric_semantic,
+    make_screenshot_hint,
+    time_window_text,
+)
 
 
 def build_instance_analysis_pack(
@@ -170,7 +178,77 @@ def build_instance_analysis_pack(
         suspect_signals=_instance_analysis_signals(summary, cpu_chart, jvm_chart),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.INSTANCE_ANALYSIS.value, context, payload, evidence=evidence, warnings=warnings)
+    instance_ref = {"kind": "instance", "application_id": selected_application_id, "instance_id": selected_instance_id}
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="instance_overview",
+            label="实例分析页",
+            why_relevant="用于查看实例 CPU、JVM 与实例差异。",
+            suggested_report_section="3.2 应用检查",
+            navigation_path=["业务系统", "应用", str(selected_application_id), "实例", str(selected_instance_id)],
+            suggested_filters={"applicationId": selected_application_id, "instanceId": selected_instance_id},
+            target_ref=instance_ref,
+        )
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="实例资源趋势截图建议",
+            page_type="instance_overview",
+            url=page_links[0]["url"],
+            recommended_capture=["CPU 趋势图", "JVM 趋势图", "实例列表"],
+            recommended_annotations=["标出异常实例", "标出 CPU 峰值时段", "标出 JVM 数据是否缺失"],
+            usage_in_report="可用于实例差异和单实例异常举证。",
+            suggested_report_section="3.2 应用检查",
+            target_ref=instance_ref,
+            priority="medium",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="cpu_latest_pct",
+            subject_type="instance",
+            subject_key=f"instance:{selected_instance_id}",
+            aggregation="latest",
+            unit="percent",
+            time_window=time_window_text(context),
+            sample_scope="selected instance",
+        ),
+        make_metric_semantic(
+            metric_name="cpu_peak_pct",
+            subject_type="instance",
+            subject_key=f"instance:{selected_instance_id}",
+            aggregation="max",
+            unit="percent",
+            time_window=time_window_text(context),
+            sample_scope="selected instance",
+        ),
+    ]
+    evidence_linkage = {
+        "related_time_windows": [dataclass_to_dict(context.time_window)],
+        "related_actions": [],
+        "related_traces": [],
+        "related_sqls": [],
+        "related_dependencies": [],
+        "recommended_next_pages": page_links,
+    }
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage=evidence_linkage,
+    )
+    return _pack(
+        PackType.INSTANCE_ANALYSIS.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def build_topology_dependency_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
@@ -229,7 +307,56 @@ def build_topology_dependency_pack(adapter: Any, context: AnalysisContext, *, so
         suspect_signals=_topology_signals(detail_graph_summary, dependencies),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.TOPOLOGY_DEPENDENCY.value, context, payload, evidence=evidence, warnings=warnings)
+    biz_ref = {"kind": "biz_system", "biz_system_id": context.biz_system_id}
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="business_topology",
+            label="业务系统拓扑页",
+            why_relevant="用于查看用户、应用、数据库和外部依赖之间的调用关系。",
+            suggested_report_section="3.2 应用检查",
+            navigation_path=["业务系统", "拓扑"],
+            suggested_filters={"bizSystemId": context.biz_system_id},
+            target_ref=biz_ref,
+        )
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="业务系统拓扑截图建议",
+            page_type="business_topology",
+            url=page_links[0]["url"],
+            recommended_capture=["全局拓扑图", "健康度异常节点", "关键依赖链路"],
+            recommended_annotations=["圈出异常应用或依赖", "标出用户入口到异常组件的链路", "标出异常健康节点"],
+            usage_in_report="可用于应用关系和影响链路说明。",
+            suggested_report_section="3.2 应用检查",
+            target_ref=biz_ref,
+            priority="high",
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=[],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
+            "related_actions": [],
+            "related_traces": [],
+            "related_sqls": [],
+            "related_dependencies": dependencies[:10],
+            "recommended_next_pages": page_links,
+        },
+    )
+    return _pack(
+        PackType.TOPOLOGY_DEPENDENCY.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def build_external_dependency_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
@@ -285,7 +412,67 @@ def build_external_dependency_pack(adapter: Any, context: AnalysisContext, *, so
         suspect_signals=_external_dependency_signals(external_dependencies),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.EXTERNAL_DEPENDENCY.value, context, payload, evidence=evidence, warnings=warnings)
+    biz_ref = {"kind": "biz_system", "biz_system_id": context.biz_system_id}
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="external_dependency",
+            label="外部依赖页",
+            why_relevant="用于查看 HTTP、MQ 等外部依赖的调用量、响应和错误。",
+            suggested_report_section="3.2 应用检查",
+            navigation_path=["业务系统", "外部依赖"],
+            suggested_filters={"bizSystemId": context.biz_system_id},
+            target_ref=biz_ref,
+        )
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="外部依赖热点截图建议",
+            page_type="external_dependency",
+            url=page_links[0]["url"],
+            recommended_capture=["外部依赖列表", "协议分布", "高延迟依赖"],
+            recommended_annotations=["标出高延迟依赖", "标出高错误依赖", "标出受影响上游应用"],
+            usage_in_report="可用于外部依赖影响面说明。",
+            suggested_report_section="3.2 应用检查",
+            target_ref=biz_ref,
+            priority="medium",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="response_time_ms",
+            subject_type="external_dependency",
+            subject_key=f"biz_system:{context.biz_system_id}:external_dependencies",
+            aggregation="average",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="all external dependencies in selected business scope",
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
+            "related_actions": [],
+            "related_traces": [],
+            "related_sqls": [],
+            "related_dependencies": external_dependencies[:10],
+            "recommended_next_pages": page_links,
+        },
+    )
+    return _pack(
+        PackType.EXTERNAL_DEPENDENCY.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def build_slow_sql_pack(
@@ -371,7 +558,66 @@ def build_slow_sql_pack(
         suspect_signals=_slow_sql_signals(top_sqls, operation_overview),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.SLOW_SQL.value, context, payload, evidence=evidence, warnings=warnings)
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="slow_sql_list",
+            label="慢 SQL 列表页",
+            why_relevant="用于查看业务系统范围内的慢 SQL Top。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "数据库组件", "慢 SQL"],
+            suggested_filters={"bizSystemId": context.biz_system_id, "componentNames": scope.get("componentNames")},
+            target_ref={"kind": "slow_sql_scope", "biz_system_id": context.biz_system_id},
+        )
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="慢 SQL 总表截图建议",
+            page_type="slow_sql_list",
+            url=page_links[0]["url"],
+            recommended_capture=["慢 SQL Top 列表", "语句类型分布", "高 trace SQL 列表"],
+            recommended_annotations=["标出最慢 SQL", "标出受影响组件", "标出高调用或高 trace SQL"],
+            usage_in_report="可用于慢 SQL 总览和排序说明。",
+            suggested_report_section="3.4 SQL 检查",
+            target_ref=page_links[0]["target_ref"],
+            priority="high",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="response_time_ms",
+            subject_type="sql_operation",
+            subject_key=f"biz_system:{context.biz_system_id}:slow_sql_top",
+            aggregation="average",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="top SQL operations across selected database components",
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
+            "related_actions": [],
+            "related_traces": [],
+            "related_sqls": top_sqls[:10],
+            "related_dependencies": [],
+            "recommended_next_pages": page_links,
+        },
+    )
+    return _pack(
+        PackType.SLOW_SQL.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def build_sql_fact_sheet(
@@ -494,7 +740,103 @@ def build_sql_fact_sheet(
         suspect_signals=_sql_fact_signals(selected_sql, related_actions, related_traces, sql_features),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.SQL_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+    sql_ref = {
+        "kind": "sql",
+        "component_name": ref.component_name,
+        "component_subtype": ref.component_subtype,
+        "op_name": selector.get("opName"),
+    }
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="sql_detail",
+            label="SQL 详情页",
+            why_relevant="用于查看单条 SQL 的耗时、错误和调用者。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "数据库组件", ref.component_name, "SQL 详情"],
+            suggested_filters={"componentName": ref.component_name, "componentSubtype": ref.component_subtype, "opName": selector.get("opName")},
+            target_ref=sql_ref,
+        ),
+        make_console_link(
+            adapter,
+            context,
+            page_type="sql_related_actions",
+            label="SQL 调用者页",
+            why_relevant="用于查看受该 SQL 影响的事务或接口。",
+            suggested_report_section="3.4 SQL 检查",
+            navigation_path=["业务系统", "数据库组件", ref.component_name, "SQL 调用者"],
+            suggested_filters={"componentName": ref.component_name, "opName": selector.get("opName")},
+            target_ref=sql_ref,
+        ),
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="SQL 详情截图建议",
+            page_type="sql_detail",
+            url=page_links[0]["url"],
+            recommended_capture=["SQL 指标摘要", "SQL 文本或特征", "耗时/错误相关图表"],
+            recommended_annotations=["标出 SQL 指纹", "标出平均耗时", "标出错误次数或 trace 数"],
+            usage_in_report="可用于重点 SQL 的核心证据截图。",
+            suggested_report_section="3.4 SQL 检查",
+            target_ref=sql_ref,
+            priority="high",
+        ),
+        make_screenshot_hint(
+            title="SQL 调用者截图建议",
+            page_type="sql_related_actions",
+            url=page_links[1]["url"],
+            recommended_capture=["关联事务列表", "代表性 trace 列表"],
+            recommended_annotations=["标出受影响接口", "标出代表性 trace", "标出影响面"],
+            usage_in_report="可用于 SQL 与接口/事务关系说明。",
+            suggested_report_section="3.4 SQL 检查",
+            target_ref=sql_ref,
+            priority="high",
+        ),
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="response_time_ms",
+            subject_type="sql_operation",
+            subject_key=f"sql:{ref.component_name}:{selector.get('opName')}",
+            aggregation="average",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="selected SQL operation within selected component",
+        ),
+        make_metric_semantic(
+            metric_name="count",
+            subject_type="sql_operation",
+            subject_key=f"sql:{ref.component_name}:{selector.get('opName')}",
+            aggregation="count",
+            unit="count",
+            time_window=time_window_text(context),
+            sample_scope="selected SQL operation within selected component",
+        ),
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
+            "related_actions": related_actions[:5],
+            "related_traces": related_traces[:5],
+            "related_sqls": [selected_sql],
+            "related_dependencies": [],
+            "recommended_next_pages": page_links,
+        },
+    )
+    return _pack(
+        PackType.SQL_FACT_SHEET.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def build_action_dependency_breakdown_pack(
@@ -599,7 +941,73 @@ def build_action_dependency_breakdown_pack(
         suspect_signals=_action_breakdown_signals(component_breakdown, topology_summary),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.ACTION_DEPENDENCY_BREAKDOWN.value, context, payload, evidence=evidence, warnings=warnings)
+    action_target = {
+        "kind": "action",
+        "biz_system_id": context.biz_system_id,
+        "application_id": resolved_action_ref.application_id,
+        "action_id": resolved_action_ref.action_id,
+        "action_type": resolved_action_ref.action_type,
+    }
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="action_dependency_breakdown",
+            label="接口依赖拆解页",
+            why_relevant="用于查看接口耗时拆分、下游组件构成和依赖拓扑。",
+            suggested_report_section="3.3 接口检查",
+            navigation_path=["业务系统", "接口", str(resolved_action_ref.action_id), "依赖拆解"],
+            suggested_filters={"applicationId": resolved_action_ref.application_id, "actionId": resolved_action_ref.action_id},
+            target_ref=action_target,
+        )
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="接口依赖拆解截图建议",
+            page_type="action_dependency_breakdown",
+            url=page_links[0]["url"],
+            recommended_capture=["组件耗时拆分表", "依赖拓扑图", "Top 组件列表"],
+            recommended_annotations=["标出耗时占比最高的组件", "标出 SQL 或外部依赖", "标出关键链路"],
+            usage_in_report="可用于接口根因方向的证据说明。",
+            suggested_report_section="3.3 接口检查",
+            target_ref=action_target,
+            priority="high",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="component_total_time",
+            subject_type="action",
+            subject_key=f"action:{resolved_action_ref.action_id}",
+            aggregation="sum",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="dependency components within selected action",
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
+            "related_actions": [action],
+            "related_traces": [],
+            "related_sqls": [item for item in component_breakdown[:5] if str(item.get("componentType") or "").lower() in {"database", "sql"}],
+            "related_dependencies": component_breakdown[:5],
+            "recommended_next_pages": page_links,
+        },
+    )
+    return _pack(
+        PackType.ACTION_DEPENDENCY_BREAKDOWN.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+    )
 
 
 def _load_business_overview(adapter: Any, context: AnalysisContext, *, source_mode: str) -> dict[str, Any]:

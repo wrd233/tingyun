@@ -41,6 +41,7 @@ from tingyun_adapter.usecases.enhancement_builders import (
     build_comparison_signals_pack,
     build_impact_signals_pack,
     build_page_experience_pack,
+    build_screenshot_index_pack,
     build_stability_signals_pack,
 )
 from tingyun_adapter.usecases.extended_builders import (
@@ -88,6 +89,16 @@ class Adapter:
             timezone=overrides.get("timezone", settings.timezone),
             timeout_seconds=overrides.get("timeout_seconds", settings.timeout_seconds),
             captured_api_dir=overrides.get("captured_api_dir", settings.captured_api_dir),
+            console_public_base_url=overrides.get("console_public_base_url", settings.console_public_base_url),
+            service_host=overrides.get("service_host", settings.service_host),
+            service_port=overrides.get("service_port", settings.service_port),
+            service_api_key=overrides.get("service_api_key", settings.service_api_key),
+            service_public_base_url=overrides.get("service_public_base_url", settings.service_public_base_url),
+            service_min_interval_ms=overrides.get("service_min_interval_ms", settings.service_min_interval_ms),
+            service_max_requests_per_minute=overrides.get(
+                "service_max_requests_per_minute",
+                settings.service_max_requests_per_minute,
+            ),
             config_path=overrides.get("config_path", settings.config_path),
         )
         return cls(merged)
@@ -248,3 +259,6 @@ class Adapter:
 
     def build_page_experience_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
         return build_page_experience_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_screenshot_index_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
+        return build_screenshot_index_pack(self, context, source_mode=source_mode, limit=limit)

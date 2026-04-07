@@ -31,6 +31,14 @@ from tingyun_adapter.domain.models.packs import (
 from tingyun_adapter.normalizers.field_normalizer import unwrap_data
 from tingyun_adapter.normalizers.metric_normalizer import normalize_metric_fields
 from tingyun_adapter.normalizers.trace_key_resolver import resolve_trace_keys
+from tingyun_adapter.usecases.report_support import (
+    apply_report_support,
+    default_coverage_boundary,
+    make_console_link,
+    make_metric_semantic,
+    make_screenshot_hint,
+    time_window_text,
+)
 
 
 def build_system_snapshot(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
@@ -99,7 +107,76 @@ def build_system_snapshot(adapter: Any, context: AnalysisContext, *, source_mode
         suspect_signals=suspect_signals,
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.SYSTEM_SNAPSHOT.value, context, payload, evidence=evidence, warnings=warnings)
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="business_system_overview",
+            label="业务系统总览页",
+            why_relevant="用于查看业务系统健康度、响应时间、吞吐率、错误率和 Apdex 趋势。",
+            suggested_report_section="3.1 业务系统总体检查",
+            navigation_path=["业务系统", str(context.biz_system_id), "总览"],
+            suggested_filters={"time_window": dataclass_to_dict(context.time_window)},
+            target_ref={"kind": "biz_system", "biz_system_id": context.biz_system_id},
+        ),
+        make_console_link(
+            adapter,
+            context,
+            page_type="business_system_topology",
+            label="业务系统拓扑页",
+            why_relevant="用于查看系统级依赖、外部服务和数据库拓扑。",
+            suggested_report_section="3.7 运行环境与基础设施关联检查",
+            navigation_path=["业务系统", str(context.biz_system_id), "拓扑"],
+            suggested_filters={"time_window": dataclass_to_dict(context.time_window)},
+            target_ref={"kind": "biz_system", "biz_system_id": context.biz_system_id},
+        ),
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="业务系统总览趋势截图建议",
+            page_type="business_system_overview",
+            url=page_links[0]["url"],
+            recommended_capture=["响应时间趋势图", "错误率趋势图", "Apdex / 健康度摘要"],
+            recommended_annotations=["圈出异常时间窗", "标注 P99 抬升时段", "标注 action 告警数量"],
+            usage_in_report="适合用于 3.1 业务系统总体检查 的总体判断。",
+            suggested_report_section="3.1 业务系统总体检查",
+            target_ref={"kind": "biz_system", "biz_system_id": context.biz_system_id},
+            priority="high",
+        ),
+        make_screenshot_hint(
+            title="业务系统拓扑截图建议",
+            page_type="business_system_topology",
+            url=page_links[1]["url"],
+            recommended_capture=["业务系统拓扑图", "外部依赖节点", "数据库与应用节点关系"],
+            recommended_annotations=["圈出异常依赖方向", "标出关键数据库组件", "标出用户入口应用"],
+            usage_in_report="适合用于 3.7 运行环境与基础设施关联检查。",
+            suggested_report_section="3.7 运行环境与基础设施关联检查",
+            target_ref={"kind": "biz_system", "biz_system_id": context.biz_system_id},
+            priority="medium",
+        ),
+    ]
+    metric_semantics = [
+        make_metric_semantic(metric_name="avg_response_time", subject_type="business_system", subject_key=f"biz_system:{context.biz_system_id}", aggregation="average", unit="ms", time_window=time_window_text(context), sample_scope="all requests in selected business scope"),
+        make_metric_semantic(metric_name="avg_throughput", subject_type="business_system", subject_key=f"biz_system:{context.biz_system_id}", aggregation="average", unit="tps", time_window=time_window_text(context), sample_scope="all requests in selected business scope"),
+        make_metric_semantic(metric_name="avg_error_rate", subject_type="business_system", subject_key=f"biz_system:{context.biz_system_id}", aggregation="average", unit="%", time_window=time_window_text(context), sample_scope="all requests in selected business scope"),
+        make_metric_semantic(metric_name="apdex", subject_type="business_system", subject_key=f"biz_system:{context.biz_system_id}", aggregation="summary", unit="score", time_window=time_window_text(context), sample_scope="all requests in selected business scope"),
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [((trends.get("response") or {}).get("latest_point") or {}).get("startTime"), ((trends.get("response") or {}).get("latest_point") or {}).get("endTime")],
+            "related_actions": [],
+            "related_traces": [],
+            "related_sqls": [],
+            "related_dependencies": ["business_system_topology"],
+            "recommended_next_pages": ["business_system_overview", "business_system_topology"],
+        },
+    )
+    return _pack(PackType.SYSTEM_SNAPSHOT.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
 
 
 def build_action_hotspot_pack(
@@ -204,7 +281,65 @@ def build_action_hotspot_pack(
         suspect_signals=_aggregate_action_signals(hotspots),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.ACTION_HOTSPOT.value, context, payload, evidence=evidence, warnings=warnings)
+    top_action = (hotspots[0].get("action") or {}) if hotspots else {}
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="action_hotspot_list",
+            label="事务与接口热点列表页",
+            why_relevant="用于查看慢接口 Top、高错误接口和热点事务列表。",
+            suggested_report_section="3.3 事务与服务接口检查",
+            navigation_path=["应用", str(top_action.get("application_id") or context.biz_system_id), "事务与服务接口", "热点列表"],
+            suggested_filters={"time_window": dataclass_to_dict(context.time_window), "sort_by": policy.sort_by},
+            target_ref=_action_target_ref_for_support(top_action),
+        )
+    ]
+    if top_action:
+        page_links.append(
+            make_console_link(
+                adapter,
+                context,
+                page_type="action_overview",
+                label="热点接口详情页",
+                why_relevant="用于查看重点接口概览、下游组件和 trace 候选。",
+                suggested_report_section="3.3 事务与服务接口检查",
+                navigation_path=["应用", str(top_action.get("application_id")), "事务与服务接口", str(top_action.get("id"))],
+                suggested_filters={"action_type": top_action.get("type"), "time_window": dataclass_to_dict(context.time_window)},
+                target_ref=_action_target_ref_for_support(top_action),
+            )
+        )
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=[
+            make_screenshot_hint(
+                title="热点接口列表截图建议",
+                page_type="action_hotspot_list",
+                url=page_links[0]["url"],
+                recommended_capture=["Top 请求列表", "Top 错误列表", "排序列高亮"],
+                recommended_annotations=["圈出最慢接口", "标注错误率或 slowCount", "标注对应应用"],
+                usage_in_report="适合用于 3.3 事务与服务接口检查 的对象排序说明。",
+                suggested_report_section="3.3 事务与服务接口检查",
+                target_ref=_action_target_ref_for_support(top_action),
+                priority="high",
+            )
+        ],
+        metric_semantics=[
+            make_metric_semantic(metric_name="response_time_ms", subject_type="action", subject_key=f"action:{top_action.get('id') or 'hotspots'}", aggregation="average", unit="ms", time_window=time_window_text(context), sample_scope="selected hotspot actions"),
+            make_metric_semantic(metric_name="error_count", subject_type="action", subject_key=f"action:{top_action.get('id') or 'hotspots'}", aggregation="count", unit="count", time_window=time_window_text(context), sample_scope="selected hotspot actions"),
+        ],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [],
+            "related_actions": [_action_target_ref_for_support(item.get("action") or {}) for item in hotspots[:5]],
+            "related_traces": [],
+            "related_sqls": [],
+            "related_dependencies": [],
+            "recommended_next_pages": [item["page_type"] for item in page_links],
+        },
+    )
+    return _pack(PackType.ACTION_HOTSPOT.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
 
 
 def build_trace_case_pack(
@@ -319,7 +454,50 @@ def build_trace_case_pack(
         drilldown_path=drilldown_path,
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.TRACE_CASE.value, context, payload, evidence=evidence, warnings=warnings)
+    trace_info = trace_case.get("trace") or {}
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="trace_detail",
+            label="请求追踪详情页",
+            why_relevant="用于查看代表性 trace 的时间线、可疑节点和调用树。",
+            suggested_report_section="3.5 请求追踪与根因分析专题",
+            navigation_path=["请求追踪", str(trace_info.get("trace_id_numeric") or selector.get("trace_id_numeric") or "")],
+            suggested_filters={"trace_guid": trace_info.get("trace_guid") or selector.get("trace_guid"), "time_window": dataclass_to_dict(context.time_window)},
+            target_ref={"kind": "trace", "trace_id_numeric": trace_info.get("trace_id_numeric"), "trace_guid": trace_info.get("trace_guid")},
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=[
+            make_screenshot_hint(
+                title="代表性 Trace 详情截图建议",
+                page_type="trace_detail",
+                url=page_links[0]["url"],
+                recommended_capture=["Trace 时间线", "可疑问题节点列表", "调用树摘要"],
+                recommended_annotations=["圈出最长耗时段", "标注数据库/外部依赖节点", "标注 trace id"],
+                usage_in_report="适合用于 3.5 请求追踪与根因分析专题。",
+                suggested_report_section="3.5 请求追踪与根因分析专题",
+                target_ref={"kind": "trace", "trace_id_numeric": trace_info.get("trace_id_numeric"), "trace_guid": trace_info.get("trace_guid")},
+                priority="high",
+            )
+        ],
+        metric_semantics=[
+            make_metric_semantic(metric_name="duration_ms", subject_type="trace", subject_key=f"trace:{trace_info.get('trace_id_numeric') or selector.get('trace_id_numeric')}", aggregation="sample", unit="ms", time_window=time_window_text(context), sample_scope="selected representative trace", confidence="high")
+        ],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [trace_case.get("detail_summary", {}).get("timestamp")],
+            "related_actions": [{"kind": "action", "action_id": trace_info.get("action_id"), "application_id": trace_info.get("application_id"), "biz_system_id": trace_info.get("biz_system_id")}],
+            "related_traces": [{"kind": "trace", "trace_id_numeric": trace_info.get("trace_id_numeric"), "trace_guid": trace_info.get("trace_guid")}],
+            "related_sqls": [],
+            "related_dependencies": [item.get("metricName") for item in (trace_info.get("suspected_problems") or []) if item.get("metricType") in {"DATABASE", "EXTERNAL", "NoSQL", "POOL"}],
+            "recommended_next_pages": ["trace_detail"],
+        },
+    )
+    return _pack(PackType.TRACE_CASE.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
 
 
 def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
@@ -404,12 +582,27 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         + hotspot_payload.get("evidence", [])
         + trace_payload.get("evidence", []),
     )
+    payload = apply_report_support(
+        payload,
+        page_links=(snapshot_payload.get("page_links") or []) + (hotspot_payload.get("page_links") or []) + (trace_payload.get("page_links") or []),
+        screenshot_hints=(snapshot_payload.get("screenshot_hints") or []) + (hotspot_payload.get("screenshot_hints") or []) + (trace_payload.get("screenshot_hints") or []),
+        metric_semantics=(snapshot_payload.get("metric_semantics") or []) + (hotspot_payload.get("metric_semantics") or []) + (trace_payload.get("metric_semantics") or []),
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [((snapshot_payload.get("trends") or {}).get("response") or {}).get("latest_point", {}).get("startTime") if isinstance((snapshot_payload.get("trends") or {}).get("response"), dict) else None],
+            "related_actions": [item.get("action") for item in hotspot_payload.get("hotspots", [])[:5]],
+            "related_traces": [trace_payload.get("trace_case", {}).get("trace", {})],
+            "related_sqls": [],
+            "related_dependencies": ["business_system_topology"],
+            "recommended_next_pages": [item.get("page_type") for item in ((snapshot_payload.get("page_links") or []) + (hotspot_payload.get("page_links") or []) + (trace_payload.get("page_links") or []))[:10]],
+        },
+    )
     all_evidence = [
         *(_coerce_evidence_list(system_snapshot.to_dict()["payload"].get("evidence", []))),
         *(_coerce_evidence_list(hotspot_payload.get("evidence", []))),
         *(_coerce_evidence_list(trace_payload.get("evidence", []))),
     ]
-    return _pack(PackType.REPORT_FACT.value, context, payload, evidence=all_evidence, warnings=warnings)
+    return _pack(PackType.REPORT_FACT.value, context, payload, evidence=all_evidence, warnings=warnings, source_mode=source_mode)
 
 
 def build_diagnostic_candidate_pack(
@@ -454,11 +647,26 @@ def build_diagnostic_candidate_pack(
         recommended_next_packs=_recommended_next_packs(top_action, component_candidates, trace_candidates),
         evidence=snapshot_payload.get("evidence", []) + hotspot_payload.get("evidence", []),
     )
+    payload = apply_report_support(
+        payload,
+        page_links=(snapshot_payload.get("page_links") or []) + (hotspot_payload.get("page_links") or []),
+        screenshot_hints=(hotspot_payload.get("screenshot_hints") or []),
+        metric_semantics=(snapshot_payload.get("metric_semantics") or []) + (hotspot_payload.get("metric_semantics") or []),
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [],
+            "related_actions": [item.get("action") for item in top_hotspots],
+            "related_traces": trace_candidates[:5],
+            "related_sqls": [],
+            "related_dependencies": component_candidates,
+            "recommended_next_pages": [item.get("page_type") for item in (hotspot_payload.get("page_links") or [])[:5]],
+        },
+    )
     all_evidence = [
         *(_coerce_evidence_list(snapshot_payload.get("evidence", []))),
         *(_coerce_evidence_list(hotspot_payload.get("evidence", []))),
     ]
-    return _pack(PackType.DIAGNOSTIC_CANDIDATE.value, context, payload, evidence=all_evidence, warnings=warnings)
+    return _pack(PackType.DIAGNOSTIC_CANDIDATE.value, context, payload, evidence=all_evidence, warnings=warnings, source_mode=source_mode)
 
 
 def build_action_fact_sheet(
@@ -568,7 +776,83 @@ def build_action_fact_sheet(
         ],
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.ACTION_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="action_overview",
+            label="接口/事务详情页",
+            why_relevant="用于查看接口概览、错误、下游组件和关联 trace。",
+            suggested_report_section="3.3 事务与服务接口检查",
+            navigation_path=["应用", str(resolved_ref.application_id), "事务与服务接口", str(resolved_ref.action_id)],
+            suggested_filters={"action_type": resolved_ref.action_type, "time_window": dataclass_to_dict(context.time_window)},
+            target_ref={"kind": "action", "biz_system_id": context.biz_system_id, "application_id": resolved_ref.application_id, "action_id": resolved_ref.action_id, "action_type": resolved_ref.action_type},
+        )
+    ]
+    if trace_rows:
+        trace_candidate = _trace_candidate_summary(trace_rows[0])
+        page_links.append(
+            make_console_link(
+                adapter,
+                context,
+                page_type="trace_detail",
+                label="相关 Trace 页",
+                why_relevant="用于查看该接口的代表性 trace、瓶颈段和可疑节点。",
+                suggested_report_section="3.5 请求追踪与根因分析专题",
+                navigation_path=["请求追踪", str(trace_candidate.get("trace_id_numeric") or "")],
+                suggested_filters={"trace_guid": trace_candidate.get("trace_guid"), "time_window": dataclass_to_dict(context.time_window)},
+                target_ref={"kind": "trace", "trace_id_numeric": trace_candidate.get("trace_id_numeric"), "trace_guid": trace_candidate.get("trace_guid")},
+            )
+        )
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=[
+            make_screenshot_hint(
+                title="接口详情截图建议",
+                page_type="action_overview",
+                url=page_links[0]["url"],
+                recommended_capture=["接口概览卡片", "下游组件分解", "关联 trace 列表"],
+                recommended_annotations=["标注接口名称", "标注平均响应时间/错误率", "标注主要下游组件"],
+                usage_in_report="适合用于 3.3 事务与服务接口检查。",
+                suggested_report_section="3.3 事务与服务接口检查",
+                target_ref={"kind": "action", "action_id": resolved_ref.action_id, "application_id": resolved_ref.application_id},
+                priority="high",
+            )
+        ]
+        + (
+            [
+                make_screenshot_hint(
+                    title="接口关联 Trace 截图建议",
+                    page_type="trace_detail",
+                    url=page_links[1]["url"],
+                    recommended_capture=["trace 时间线", "可疑节点", "调用树"],
+                    recommended_annotations=["圈出最长耗时段", "标注 trace id", "标注数据库/依赖节点"],
+                    usage_in_report="适合用于 3.5 请求追踪与根因分析专题 或 3.3 接口章节的样本说明。",
+                    suggested_report_section="3.5 请求追踪与根因分析专题",
+                    target_ref={"kind": "trace", "trace_id_numeric": (_trace_candidate_summary(trace_rows[0]).get('trace_id_numeric') if trace_rows else None)},
+                    priority="high",
+                )
+            ]
+            if len(page_links) > 1
+            else []
+        ),
+        metric_semantics=[
+            make_metric_semantic(metric_name="response_time_ms", subject_type="action", subject_key=f"action:{resolved_ref.action_id}", aggregation="average", unit="ms", time_window=time_window_text(context), sample_scope="selected action in requested business scope"),
+            make_metric_semantic(metric_name="error_rate", subject_type="action", subject_key=f"action:{resolved_ref.action_id}", aggregation="average", unit="%", time_window=time_window_text(context), sample_scope="selected action in requested business scope"),
+            make_metric_semantic(metric_name="throughput", subject_type="action", subject_key=f"action:{resolved_ref.action_id}", aggregation="average", unit="tps", time_window=time_window_text(context), sample_scope="selected action in requested business scope"),
+        ],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [item.get("timestamp") for item in [_trace_candidate_summary(row) for row in trace_rows[:5]]],
+            "related_actions": [{"kind": "action", "action_id": resolved_ref.action_id, "application_id": resolved_ref.application_id, "biz_system_id": context.biz_system_id}],
+            "related_traces": [_trace_candidate_summary(row) for row in trace_rows[:5]],
+            "related_sqls": [],
+            "related_dependencies": list((overview.get("components") or {}).keys()) if isinstance(overview.get("components"), dict) else [],
+            "recommended_next_pages": [item["page_type"] for item in page_links],
+        },
+    )
+    return _pack(PackType.ACTION_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
 
 
 def build_trace_fact_sheet(
@@ -619,8 +903,16 @@ def build_trace_fact_sheet(
             drilldown_path=trace_payload.get("drilldown_path", []),
             evidence=trace_payload.get("evidence", []),
         )
+        payload = apply_report_support(
+            payload,
+            page_links=trace_payload.get("page_links", []),
+            screenshot_hints=trace_payload.get("screenshot_hints", []),
+            metric_semantics=trace_payload.get("metric_semantics", []),
+            coverage_boundary=trace_payload.get("coverage_boundary", default_coverage_boundary(adapter)),
+            evidence_linkage=trace_payload.get("evidence_linkage", {}),
+        )
         evidence.extend(_coerce_evidence_list(trace_payload.get("evidence", [])))
-        return _pack(PackType.TRACE_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+        return _pack(PackType.TRACE_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
 
     trace = _trace_from_detail(detail_data, context.biz_system_id)
     detail_summary = _trace_detail_summary(detail_data)
@@ -658,7 +950,60 @@ def build_trace_fact_sheet(
         drilldown_path=["action/trace/detail", "action/trace/callTree", "action/trace/detail/exceptions"],
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
-    return _pack(PackType.TRACE_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="trace_detail",
+            label="Trace 详情页",
+            why_relevant="用于查看时间线、异常节点、调用树与异常详情。",
+            suggested_report_section="3.5 请求追踪与根因分析专题",
+            navigation_path=["请求追踪", str(trace.trace_id_numeric or selector.get("trace_id_numeric") or "")],
+            suggested_filters={"trace_guid": trace.trace_guid, "query_timestamp": selector.get("query_timestamp")},
+            target_ref={"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid},
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=[
+            make_screenshot_hint(
+                title="Trace 详情截图建议",
+                page_type="trace_detail",
+                url=page_links[0]["url"],
+                recommended_capture=["trace 时间线", "调用树", "异常或可疑节点区域"],
+                recommended_annotations=["圈出最长耗时段", "标注 trace id", "标注可疑组件节点"],
+                usage_in_report="适合用于 3.5 请求追踪与根因分析专题。",
+                suggested_report_section="3.5 请求追踪与根因分析专题",
+                target_ref={"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid},
+                priority="high",
+            )
+        ],
+        metric_semantics=[
+            make_metric_semantic(metric_name="duration_ms", subject_type="trace", subject_key=f"trace:{trace.trace_id_numeric or 'selected'}", aggregation="sample", unit="ms", time_window=time_window_text(context), sample_scope="selected trace"),
+            make_metric_semantic(metric_name="error_count", subject_type="trace", subject_key=f"trace:{trace.trace_id_numeric or 'selected'}", aggregation="count", unit="count", time_window=time_window_text(context), sample_scope="selected trace"),
+        ],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [detail_summary.get("timestamp")],
+            "related_actions": [{"kind": "action", "action_id": trace.action_id, "application_id": trace.application_id, "biz_system_id": trace.biz_system_id}],
+            "related_traces": [{"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid}],
+            "related_sqls": [item.get("metricName") for item in (trace.suspected_problems or []) if item.get("metricType") == "DATABASE"],
+            "related_dependencies": [item.get("metricName") for item in (trace.suspected_problems or []) if item.get("metricType") in {"EXTERNAL", "POOL", "NoSQL"}],
+            "recommended_next_pages": ["trace_detail"],
+        },
+    )
+    return _pack(PackType.TRACE_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+
+
+def _action_target_ref_for_support(action: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "kind": "action",
+        "biz_system_id": action.get("biz_system_id"),
+        "application_id": action.get("application_id"),
+        "action_id": action.get("id"),
+        "action_type": action.get("type"),
+    }
 
 
 def _load_business_overview(adapter: Any, context: AnalysisContext, *, source_mode: str) -> Any:

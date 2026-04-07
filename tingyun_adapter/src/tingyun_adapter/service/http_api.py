@@ -38,6 +38,7 @@ PACK_TYPES = {
     "impact_signals_pack",
     "comparison_signals_pack",
     "page_experience_pack",
+    "screenshot_index_pack",
 }
 
 
@@ -168,6 +169,7 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                 "service_host": settings.service_host,
                 "service_port": settings.service_port,
                 "service_public_base_url": settings.service_public_base_url,
+                "console_public_base_url": settings.console_public_base_url,
                 "service_api_key_enabled": bool(settings.service_api_key),
                 "service_min_interval_ms": settings.service_min_interval_ms,
                 "service_max_requests_per_minute": settings.service_max_requests_per_minute,
@@ -186,6 +188,7 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
             "pack_types": sorted(PACK_TYPES),
             "source_modes": ["auto", "sample", "live"],
             "public_base_url": settings.service_public_base_url,
+            "console_public_base_url": settings.console_public_base_url,
             "rate_limit": {
                 "min_interval_ms": settings.service_min_interval_ms,
                 "max_requests_per_minute": settings.service_max_requests_per_minute,
@@ -361,6 +364,8 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                 envelope = adapter.build_comparison_signals_pack(context, source_mode=request.source_mode, limit=request.limit)
             elif pack_type == "page_experience_pack":
                 envelope = adapter.build_page_experience_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "screenshot_index_pack":
+                envelope = adapter.build_screenshot_index_pack(context, source_mode=request.source_mode, limit=request.limit)
             else:
                 envelope = adapter.build_report_fact_pack(context, source_mode=request.source_mode)
             return envelope.to_dict()

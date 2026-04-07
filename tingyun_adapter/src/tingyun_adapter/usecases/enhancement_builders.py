@@ -6,12 +6,13 @@ from datetime import datetime, timedelta
 from typing import Any, Optional
 
 from tingyun_adapter.domain.enums import PackType
-from tingyun_adapter.domain.models.common import AnalysisContext, Evidence, PackEnvelope, WarningMessage, dataclass_to_dict
+from tingyun_adapter.domain.models.common import AnalysisContext, DatabaseComponentRef, Evidence, PackEnvelope, WarningMessage, dataclass_to_dict
 from tingyun_adapter.domain.models.packs import (
     BusinessLabelsPackPayload,
     ComparisonSignalsPackPayload,
     ImpactSignalsPackPayload,
     PageExperiencePackPayload,
+    ScreenshotIndexPackPayload,
     StabilitySignalsPackPayload,
 )
 from tingyun_adapter.usecases.analysis_rules import (
@@ -31,11 +32,22 @@ from tingyun_adapter.usecases.builders import (
     _pack,
     build_action_fact_sheet,
     build_action_hotspot_pack,
+    build_system_snapshot,
 )
+from tingyun_adapter.usecases.extended_builders import build_sql_fact_sheet
 from tingyun_adapter.usecases.extended_builders import (
     build_external_dependency_pack,
     build_slow_sql_pack,
     build_topology_dependency_pack,
+)
+from tingyun_adapter.usecases.report_support import (
+    apply_report_support,
+    collect_screenshot_cards,
+    default_coverage_boundary,
+    make_console_link,
+    make_metric_semantic,
+    make_screenshot_hint,
+    time_window_text,
 )
 
 
@@ -634,6 +646,79 @@ def build_page_experience_pack(
             external_payload.get("evidence", []),
         ),
     )
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="page_experience_proxy",
+            label="页面体验代理视图",
+            why_relevant="用于从用户入口拓扑和代表性后端请求代理查看页面体验证据。",
+            suggested_report_section="3.5 页面用户体验检查",
+            navigation_path=["业务系统", "拓扑", "用户入口", "代表性接口"],
+            suggested_filters={"bizSystemId": context.biz_system_id},
+            target_ref={"kind": "biz_system", "biz_system_id": context.biz_system_id},
+        )
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="页面体验代理证据截图建议",
+            page_type="page_experience_proxy",
+            url=page_links[0]["url"],
+            recommended_capture=["用户入口到应用拓扑", "代表性后端接口列表", "外部依赖列表"],
+            recommended_annotations=["标注页面代理对象", "标注对应后端接口", "标注页面侧缺失能力范围"],
+            usage_in_report="可用于页面章节的保守举证，并明确说明当前仅为代理证据。",
+            suggested_report_section="3.5 页面用户体验检查",
+            target_ref=page_links[0]["target_ref"],
+            priority="medium",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="avg_response_time_ms",
+            subject_type="page_proxy",
+            subject_key=f"biz_system:{context.biz_system_id}:page_proxy",
+            aggregation="average",
+            unit="ms",
+            time_window=time_window_text(context),
+            sample_scope="proxy pages inferred from user-entry topology and URI-style backend actions",
+            confidence="low",
+        )
+    ]
+    coverage_boundary = default_coverage_boundary(
+        adapter,
+        page_status="partial",
+        page_reason="Dedicated page-side APIs are not exposed yet; page objects are inferred from topology and backend request evidence.",
+        available_page_evidence=[
+            "user_to_application_topology",
+            "representative_request_urls",
+            "external_dependency_edges",
+            "backend_action_and_trace_correlation",
+        ],
+        missing_page_evidence=[
+            "slow_pages",
+            "slow_requests",
+            "js_errors",
+            "browser_breakdown",
+            "geo_breakdown",
+            "frontend_resource_timing",
+        ],
+    )
+    evidence_linkage = {
+        "related_time_windows": [dataclass_to_dict(context.time_window)],
+        "related_actions": _unique_refs(related_action_refs),
+        "related_traces": [],
+        "related_sqls": [],
+        "related_dependencies": _unique_refs(related_dependency_refs),
+        "recommended_next_pages": page_links,
+    }
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=coverage_boundary,
+        evidence_linkage=evidence_linkage,
+    )
     return _pack(
         PackType.PAGE_EXPERIENCE.value,
         context,
@@ -644,6 +729,161 @@ def build_page_experience_pack(
         missing_inputs=sorted(set(missing_inputs)),
         confidence_notes=["Page objects are inferred proxies until dedicated page-side APIs are added."],
         build_stats={"page_count": len(pages), "user_entry_count": len(user_edges)},
+    )
+
+
+def build_screenshot_index_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    limit: int = 10,
+) -> PackEnvelope:
+    warnings: list[WarningMessage] = []
+    missing_inputs: list[str] = []
+
+    snapshot = build_system_snapshot(adapter, context, source_mode=source_mode)
+    action_hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
+    page_pack = build_page_experience_pack(adapter, context, source_mode=source_mode, limit=limit)
+    slow_sql = build_slow_sql_pack(adapter, context, source_mode=source_mode, limit=limit)
+
+    warnings.extend(snapshot.meta.warnings)
+    warnings.extend(action_hotspots.meta.warnings)
+    warnings.extend(page_pack.meta.warnings)
+    warnings.extend(slow_sql.meta.warnings)
+    missing_inputs.extend(snapshot.meta.missing_inputs)
+    missing_inputs.extend(action_hotspots.meta.missing_inputs)
+    missing_inputs.extend(page_pack.meta.missing_inputs)
+    missing_inputs.extend(slow_sql.meta.missing_inputs)
+
+    snapshot_payload = snapshot.to_dict()["payload"]
+    hotspot_payload = action_hotspots.to_dict()["payload"]
+    page_payload = page_pack.to_dict()["payload"]
+    slow_sql_payload = slow_sql.to_dict()["payload"]
+
+    cards = collect_screenshot_cards(
+        snapshot_payload.get("screenshot_hints", []),
+        hotspot_payload.get("screenshot_hints", []),
+        page_payload.get("screenshot_hints", []),
+        slow_sql_payload.get("screenshot_hints", []),
+    )
+
+    hotspot_rows = hotspot_payload.get("hotspots") or []
+    if hotspot_rows:
+        top_action = hotspot_rows[0].get("action") or {}
+        if top_action.get("id") and top_action.get("application_id"):
+            action_fact = build_action_fact_sheet(
+                adapter,
+                context,
+                source_mode=source_mode,
+                action_ref=_action_ref_from_target(top_action),
+                trace_limit=min(limit, 5),
+            )
+            warnings.extend(action_fact.meta.warnings)
+            missing_inputs.extend(action_fact.meta.missing_inputs)
+            action_payload = action_fact.to_dict()["payload"]
+            cards = collect_screenshot_cards(cards, action_payload.get("screenshot_hints", []))
+        else:
+            action_payload = {}
+    else:
+        action_payload = {}
+
+    top_sqls = slow_sql_payload.get("top_sqls") or []
+    if top_sqls:
+        top_sql = top_sqls[0]
+        component_name = top_sql.get("component_name") or top_sql.get("componentName")
+        if component_name:
+            sql_fact = build_sql_fact_sheet(
+                adapter,
+                context,
+                source_mode=source_mode,
+                component_ref=DatabaseComponentRef(
+                    biz_system_id=context.biz_system_id,
+                    component_name=str(component_name),
+                    component_subtype=top_sql.get("component_subtype") or top_sql.get("componentSubtype"),
+                ),
+                op_name=top_sql.get("op_name_decoded") or top_sql.get("opName"),
+                limit=min(limit, 5),
+            )
+            warnings.extend(sql_fact.meta.warnings)
+            missing_inputs.extend(sql_fact.meta.missing_inputs)
+            sql_payload = sql_fact.to_dict()["payload"]
+            cards = collect_screenshot_cards(cards, sql_payload.get("screenshot_hints", []))
+        else:
+            sql_payload = {}
+    else:
+        sql_payload = {}
+
+    page_links = []
+    for payload in (snapshot_payload, hotspot_payload, action_payload, slow_sql_payload, sql_payload, page_payload):
+        page_links.extend(payload.get("page_links") or [])
+
+    screenshot_cards = []
+    for index, card in enumerate(cards, start=1):
+        screenshot_cards.append(
+            {
+                "figure_id": f"FIG-{index:02d}",
+                "title": card.get("title"),
+                "page_type": card.get("page_type"),
+                "url": card.get("url"),
+                "recommended_capture": card.get("recommended_capture") or [],
+                "recommended_annotations": card.get("recommended_annotations") or [],
+                "usage_in_report": card.get("usage_in_report"),
+                "suggested_report_section": card.get("suggested_report_section"),
+                "priority": card.get("priority", "medium"),
+                "target_ref": card.get("target_ref") or {},
+            }
+        )
+
+    payload = ScreenshotIndexPackPayload(
+        scope=_pack_scope(context, source_mode, limit),
+        screenshot_cards=screenshot_cards,
+        input_dependencies=[
+            "system_snapshot",
+            "action_hotspot_pack",
+            "action_fact_sheet",
+            "slow_sql_pack",
+            "sql_fact_sheet",
+            "page_experience_pack",
+        ],
+        derivation_notes=[
+            "This pack indexes screenshot candidates and console links for report evidence collection.",
+            "It does not assert final conclusions; it only organizes capture candidates and navigation hints.",
+        ],
+        evidence=_merge_evidence(
+            snapshot_payload.get("evidence", []),
+            hotspot_payload.get("evidence", []),
+            action_payload.get("evidence", []),
+            slow_sql_payload.get("evidence", []),
+            sql_payload.get("evidence", []),
+            page_payload.get("evidence", []),
+        ),
+    )
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_cards,
+        metric_semantics=[],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
+            "related_actions": action_payload.get("evidence_linkage", {}).get("related_actions", []),
+            "related_traces": action_payload.get("evidence_linkage", {}).get("related_traces", []),
+            "related_sqls": sql_payload.get("evidence_linkage", {}).get("related_sqls", []) or slow_sql_payload.get("top_sqls", [])[:5],
+            "related_dependencies": page_payload.get("evidence_linkage", {}).get("related_dependencies", []),
+            "recommended_next_pages": page_links[:10],
+        },
+    )
+    return _pack(
+        PackType.SCREENSHOT_INDEX.value,
+        context,
+        payload,
+        evidence=_merge_evidence_objects(payload.evidence),
+        warnings=warnings,
+        source_mode=source_mode,
+        missing_inputs=sorted(set(missing_inputs)),
+        confidence_notes=["Screenshot index organizes capture candidates and links; human review is still required before report insertion."],
+        build_stats={"card_count": len(screenshot_cards)},
     )
 
 

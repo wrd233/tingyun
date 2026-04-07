@@ -26,6 +26,10 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(payload["biz_system"]["id"], 1059)
         self.assertEqual(payload["biz_system"]["name"], "铃与堆场")
         self.assertIn("response", payload["trends"])
+        self.assertGreater(len(payload["page_links"]), 0)
+        self.assertGreater(len(payload["screenshot_hints"]), 0)
+        self.assertIn("page_experience", payload["coverage_boundary"])
+        self.assertGreater(len(payload["metric_semantics"]), 0)
 
     def test_build_action_hotspot_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
@@ -34,6 +38,8 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(envelope.pack_type, "action_hotspot_pack")
         self.assertGreater(len(payload["hotspots"]), 0)
         self.assertIn("action", payload["hotspots"][0])
+        self.assertGreater(len(payload["page_links"]), 0)
+        self.assertGreater(len(payload["screenshot_hints"]), 0)
 
     def test_build_trace_case_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1062, end_time="2026-04-03 12:20", period_minutes=30)
@@ -61,6 +67,10 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertGreater(len(payload["top_operations"]), 0)
         self.assertGreater(len(payload["top_impacted_actions"]), 0)
         self.assertGreaterEqual(payload["topology_summary"]["node_count"], 1)
+        self.assertGreater(len(payload["page_links"]), 0)
+        self.assertGreater(len(payload["screenshot_hints"]), 0)
+        self.assertGreater(len(payload["metric_semantics"]), 0)
+        self.assertGreater(len(payload["evidence_linkage"]["related_sqls"]), 0)
 
     def test_build_nosql_component_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
@@ -128,6 +138,9 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(payload["component"]["componentName"], "10.190.22.21:3306")
         self.assertGreater(len(payload["related_actions"]), 0)
         self.assertIn("statement_type", payload["sql_features"])
+        self.assertGreater(len(payload["page_links"]), 0)
+        self.assertGreater(len(payload["screenshot_hints"]), 0)
+        self.assertGreater(len(payload["evidence_linkage"]["related_traces"]), 0)
 
     def test_build_action_dependency_breakdown_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
@@ -182,6 +195,18 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(envelope.pack_type, "page_experience_pack")
         self.assertGreater(len(payload["pages"]), 0)
         self.assertIn("browser_distribution", data["meta"]["missing_inputs"])
+        self.assertEqual(payload["coverage_boundary"]["page_experience"]["status"], "partial")
+        self.assertGreater(len(payload["page_links"]), 0)
+        self.assertGreater(len(payload["screenshot_hints"]), 0)
+
+    def test_build_screenshot_index_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_screenshot_index_pack(context, source_mode="sample", limit=5)
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "screenshot_index_pack")
+        self.assertGreater(len(payload["screenshot_cards"]), 0)
+        self.assertGreater(len(payload["page_links"]), 0)
+        self.assertEqual(payload["screenshot_cards"][0]["figure_id"], "FIG-01")
 
 
 if __name__ == "__main__":
