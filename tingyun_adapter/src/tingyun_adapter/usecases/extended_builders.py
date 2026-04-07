@@ -1534,6 +1534,29 @@ def _sql_features(sql_text: str) -> dict[str, Any]:
             table = match.group(1).strip("`\"")
             if table not in tables:
                 tables.append(table)
+    tags: list[str] = []
+    if " JOIN " in upper:
+        tags.append("JOIN")
+    if " LEFT JOIN " in upper:
+        tags.append("LEFT_JOIN")
+    if " UNION ALL " in upper:
+        tags.append("UNION_ALL")
+    elif " UNION " in upper:
+        tags.append("UNION")
+    if " GROUP BY " in upper:
+        tags.append("GROUP_BY")
+    if " ORDER BY " in upper:
+        tags.append("ORDER_BY")
+    if " DISTINCT " in upper:
+        tags.append("DISTINCT")
+    if upper.count("SELECT") > 1:
+        tags.append("SUBQUERY")
+    if re.search(r"\bLIKE\s+['\"]?%", upper):
+        tags.append("LIKE_PREFIXLESS")
+    if re.search(r"\bIN\s*\((?:[^)]*\?,){4,}", upper) or re.search(r"\bIN\s*\((?:[^)]*,){9,}[^)]*\)", upper):
+        tags.append("IN_LARGE_SET")
+    if re.search(r"\b(UPPER|LOWER|DATE_FORMAT|SUBSTR|SUBSTRING|TRIM|CAST|CONVERT)\s*\(\s*[A-Z0-9_`\"\.]+\s*\)", upper):
+        tags.append("FUNCTION_ON_COLUMN")
     return {
         "statement_type": statement_type,
         "table_candidates": tables[:10],
@@ -1543,6 +1566,7 @@ def _sql_features(sql_text: str) -> dict[str, Any]:
         "has_group_by": " GROUP BY " in upper,
         "has_limit": " LIMIT " in upper,
         "has_distinct": " DISTINCT " in upper,
+        "tags": tags,
         "length": len(text),
     }
 

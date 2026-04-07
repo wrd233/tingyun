@@ -54,10 +54,124 @@
   - `knowledge_update_proposal_pack`
   - `knowledge/<biz_system>/` 文件化业务记忆层
   - 5 个增强 pack 接入 confirmed knowledge、pending proposals、judgment log
+- 阶段 10
+  - `report_fact_pack` 扩展 issue / observation / SQL candidate 池
+  - `report_writer_input`
+  - `template_mapping`
+  - `report_pack_exports`
+  - `02_sections/sql.md` / `03_issues/*.csv` / `04_raw/*.json` 的文件化导出视图
 
 当前暂缓的方向：
 - 更复杂的历史基线仓储与长期趋势预测
 - 更完整的页面侧 API 采集与 RUM 明细建模
+
+## 阶段 10 设计边界
+
+本轮新增的是“更稳的巡检素材构建与排序层”，不是最终报告生成器：
+
+- adapter 会扩 issue candidate 与 SQL candidate 池，再做收敛
+- adapter 会输出 `issues / observations / sql_opportunities / writer_input`
+- adapter 会在 `report_fact_pack` 中提供 `report_pack_exports`，让下游可以直接落成固定路径文件
+- adapter 仍然不直接给出最终根因、最终整改方案和最终定稿措辞
+
+本轮重点新增：
+
+- issue 三层输出
+  - `issues`
+  - `observations`
+  - `issue_candidates`
+- SQL 三路并集
+  - `global_top`
+  - `trace_bound`
+  - `optimization`
+- writer 单入口
+  - `report_writer_input`
+  - `template_mapping`
+  - `report_pack_exports`
+
+### `report_fact_pack` 新增字段
+
+- `observations`
+  - 承接低频、弱证据、仅单窗口命中的对象
+- `issue_candidates`
+  - 原始候选池，保留去重关系、降级原因和证据角色
+- `sql_main_candidates`
+  - 进入 SQL 主展开层的对象
+- `sql_opportunities`
+  - 可优化但暂不一定上升为系统主问题的 SQL
+- `sql_candidates`
+  - SQL 全量候选池，包含 `candidate_source / rank_by_avg / rank_by_total / rank_by_trace / trace_binding_strength`
+- `report_writer_input`
+  - 供 Codex / ChatGPT / 后续 writer 直接消费的结构化单入口
+- `template_mapping`
+  - 模板章节和 pack 素材的显式映射
+- `report_pack_exports`
+  - 把“固定路径文件”表示成 pack 内的导出视图
+
+### `report_pack_exports` 当前固定路径
+
+- `01_foundation/screenshot_index.csv`
+- `02_sections/sql.md`
+- `03_issues/issues.csv`
+- `03_issues/observations.csv`
+- `03_issues/sql_opportunities.csv`
+- `04_raw/issue_candidates.json`
+- `04_raw/sql_candidates.json`
+- `00_internal/report_writer_input.md`
+- `00_internal/report_writer_input.json`
+- `00_internal/template_outline.md`
+
+说明：
+
+- 这个仓库当前仍然返回 envelope，而不是直接写磁盘目录
+- `report_pack_exports` 的目标是让下游 materialize 成真实文件时不需要再重新组织
+- CSV 导出使用 `columns + rows`
+- Markdown 导出使用 `content`
+- JSON 导出使用 `data`
+
+### issue 体系说明
+
+- `issues`
+  - 正文主问题
+  - 会带 `report_priority / selection_reason / evidence_strength / business_criticality`
+- `observations`
+  - 观察项
+  - 适合承接低频、低影响、证据不足但值得保留的对象
+- `issue_candidates`
+  - 原始候选池
+  - 会带 `canonical_issue_key / duplicate_of / evidence_role`
+
+### SQL 候选池说明
+
+- `global_top`
+  - 来自全局慢 SQL 排序
+- `trace_bound`
+  - 来自 traceCount、trace 关联 action 或 SQL fact 的绑定关系
+- `optimization`
+  - 来自复杂结构、高频累计耗时或明显优化特征
+
+SQL candidate 当前会补：
+
+- `sql_fingerprint`
+- `candidate_source`
+- `rank_by_avg`
+- `rank_by_total`
+- `rank_by_trace`
+- `trace_binding_strength`
+- `caller_objects`
+- `impact_objects`
+- `sql_feature_tags`
+- `optimization_hypothesis`
+- `report_recommendation`
+
+### 兼容性说明
+
+- 原有 `summary / issues / page_links / screenshot_hints` 继续保留
+- `issues` 仍保留旧消费者常用字段，如 `priority / category / title / evidence_ref / details`
+- 新字段尽量以增量方式追加，不要求旧消费者立刻迁移
+- 若下游希望稳定消费正式报告素材，优先读取：
+  - `report_writer_input`
+  - `report_pack_exports`
 
 ## 阶段 9 设计边界
 
@@ -268,6 +382,15 @@ PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
   --period-minutes 30 \
   --source-mode sample
 ```
+
+重点看这些字段：
+
+- `payload.issues`
+- `payload.observations`
+- `payload.sql_main_candidates`
+- `payload.sql_opportunities`
+- `payload.report_writer_input`
+- `payload.report_pack_exports`
 
 ### `screenshot_index_pack`
 

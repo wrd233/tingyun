@@ -298,6 +298,19 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(payload["report_scope"]["bizSystemId"], 1059)
         self.assertIn("summary", payload)
         self.assertIn("issues", payload)
+        self.assertIn("observations", payload)
+        self.assertIn("sql_candidates", payload)
+        self.assertIn("report_writer_input", payload)
+        self.assertIn("report_pack_exports", payload)
+        self.assertIn("03_issues/issues.csv", payload["report_pack_exports"])
+        self.assertIn("03_issues/observations.csv", payload["report_pack_exports"])
+        self.assertIn("03_issues/sql_opportunities.csv", payload["report_pack_exports"])
+        self.assertIn("04_raw/issue_candidates.json", payload["report_pack_exports"])
+        self.assertIn("04_raw/sql_candidates.json", payload["report_pack_exports"])
+        self.assertIn("00_internal/report_writer_input.md", payload["report_pack_exports"])
+        self.assertIn("00_internal/report_writer_input.json", payload["report_pack_exports"])
+        self.assertIn("00_internal/template_outline.md", payload["report_pack_exports"])
+        self.assertIn("02_sections/sql.md", payload["report_pack_exports"])
 
     def test_build_database_component_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
@@ -459,6 +472,7 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertIn("fallback_url", payload["screenshot_cards"][0])
         self.assertIn("navigation_path", payload["screenshot_cards"][0])
         self.assertIn("url_source", payload["screenshot_cards"][0])
+        self.assertIn("writer_summary", payload["screenshot_cards"][0])
 
     def test_build_knowledge_context_pack_from_files(self) -> None:
         adapter, context, action_ref, _ = self._make_adapter_with_knowledge()

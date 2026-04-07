@@ -39,6 +39,17 @@ from tingyun_adapter.usecases.report_support import (
     make_screenshot_hint,
     time_window_text,
 )
+from tingyun_adapter.usecases.report_fact_enhancements import (
+    build_issue_inventory,
+    build_report_pack_exports,
+    build_template_mapping,
+    build_writer_input,
+    render_sql_section_markdown,
+    render_template_outline_markdown,
+    render_writer_input_markdown,
+    sql_fingerprint,
+    union_sql_candidates,
+)
 
 
 def build_system_snapshot(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
@@ -394,6 +405,10 @@ def build_trace_case_pack(
         "detail_summary": _trace_detail_summary(detail),
         "call_tree_summary": _call_tree_summary(call_tree),
         "exception_summary": _exception_summary(exceptions),
+        "key_sqls": _trace_key_sqls(detail),
+        "primary_sql_fingerprint": _trace_primary_sql_fingerprint(detail),
+        "sql_bottleneck_ratio": _trace_sql_bottleneck_ratio(detail),
+        "sql_trace_binding_strength": _trace_sql_binding_strength(detail),
     }
     suspect_signals = _trace_suspect_signals(detail, trace_case["call_tree_summary"], trace_case["exception_summary"])
     drilldown_path = [
@@ -502,19 +517,35 @@ def build_trace_case_pack(
 
 def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
     warnings: list[WarningMessage] = []
+    missing_inputs: list[str] = []
+
+    from tingyun_adapter.domain.models.common import DatabaseComponentRef
+    from tingyun_adapter.usecases.enhancement_builders import build_page_experience_pack
+    from tingyun_adapter.usecases.extended_builders import build_slow_sql_pack, build_sql_fact_sheet
+
     system_snapshot = build_system_snapshot(adapter, context, source_mode=source_mode)
     action_hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
-    trace_case = build_trace_case_pack(adapter, context, source_mode=source_mode)
+    trace_case_envelope = build_trace_case_pack(adapter, context, source_mode=source_mode)
+    slow_sql = build_slow_sql_pack(adapter, context, source_mode=source_mode, limit=20)
+    page_pack = build_page_experience_pack(adapter, context, source_mode=source_mode, limit=5)
 
-    warnings.extend(system_snapshot.meta.warnings)
-    warnings.extend(action_hotspots.meta.warnings)
-    warnings.extend(trace_case.meta.warnings)
+    for envelope in (system_snapshot, action_hotspots, trace_case_envelope, slow_sql, page_pack):
+        warnings.extend(envelope.meta.warnings)
+        missing_inputs.extend(envelope.meta.missing_inputs)
 
     snapshot_payload = system_snapshot.to_dict()["payload"]
     hotspot_payload = action_hotspots.to_dict()["payload"]
-    trace_payload = trace_case.to_dict()["payload"]
+    trace_payload = trace_case_envelope.to_dict()["payload"]
+    slow_sql_payload = slow_sql.to_dict()["payload"]
+    page_payload = page_pack.to_dict()["payload"]
 
     top_hotspot = (hotspot_payload.get("hotspots") or [{}])[0]
+    report_scope = {
+        "bizSystemId": context.biz_system_id,
+        "endTime": context.time_window.end_time,
+        "periodMinutes": context.time_window.period_minutes,
+        "sourceMode": source_mode,
+    }
     summary = {
         "biz_system_name": snapshot_payload.get("biz_system", {}).get("name"),
         "avg_response_time_ms": snapshot_payload.get("overview", {}).get("response"),
@@ -525,84 +556,210 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         "top_action_response_time_ms": top_hotspot.get("action", {}).get("metrics", {}).get("response_time_ms"),
         "trace_case_action_name": trace_payload.get("trace_case", {}).get("detail_summary", {}).get("actionName"),
         "trace_case_duration_ms": trace_payload.get("trace_case", {}).get("trace", {}).get("duration_ms"),
+        "sql_candidate_count": len(slow_sql_payload.get("top_sqls") or []),
+        "page_count": len(page_payload.get("pages") or []),
     }
 
-    issues: list[dict[str, Any]] = []
-    action_health = snapshot_payload.get("health", {}).get("action", {}) or {}
-    if _numeric(action_health.get("warn")) > 0:
-        issues.append(
-            {
-                "priority": "high",
-                "category": "health",
-                "title": "Action health contains warning objects",
-                "evidence_ref": "health_level_statistics",
-                "details": action_health,
-            }
+    sql_rows = list(slow_sql_payload.get("top_sqls") or [])
+    sql_fact_payloads: dict[str, dict[str, Any]] = {}
+    for row in _select_sql_enrichment_rows(sql_rows):
+        component_name = row.get("component_name") or row.get("componentName")
+        if not component_name:
+            continue
+        sql_fact = build_sql_fact_sheet(
+            adapter,
+            context,
+            source_mode=source_mode,
+            component_ref=DatabaseComponentRef(
+                biz_system_id=context.biz_system_id,
+                component_name=str(component_name),
+                component_subtype=row.get("component_subtype") or row.get("componentSubtype"),
+            ),
+            op_name=row.get("op_name_decoded") or row.get("opName"),
+            limit=5,
         )
-    if _numeric(summary.get("top_action_response_time_ms")) >= 1000:
-        issues.append(
-            {
-                "priority": "high",
-                "category": "hotspot",
-                "title": "Top action response time is elevated",
-                "evidence_ref": "action_list",
-                "details": top_hotspot,
-            }
+        warnings.extend(sql_fact.meta.warnings)
+        missing_inputs.extend(sql_fact.meta.missing_inputs)
+        sql_fact_payload = sql_fact.to_dict()["payload"]
+        fingerprint = sql_fingerprint(
+            str(
+                (sql_fact_payload.get("sql") or {}).get("op_name_decoded")
+                or (sql_fact_payload.get("sql") or {}).get("opName")
+                or row.get("op_name_decoded")
+                or row.get("opName")
+                or ""
+            )
         )
-    suspected = trace_payload.get("trace_case", {}).get("trace", {}).get("suspected_problems") or []
-    if suspected:
-        issues.append(
-            {
-                "priority": "high",
-                "category": "trace",
-                "title": "Trace case contains suspected problem nodes",
-                "evidence_ref": "trace_detail",
-                "details": suspected[:5],
-            }
-        )
+        sql_fact_payloads[fingerprint] = sql_fact_payload
+
+    sql_inventory = union_sql_candidates(
+        sql_rows,
+        trace_case=trace_payload.get("trace_case") or {},
+        sql_fact_payloads=sql_fact_payloads,
+    )
+    enriched_trace_case = _enrich_trace_case_with_sql(trace_payload.get("trace_case") or {}, sql_inventory.get("sql_candidates") or [])
+    issue_inventory = build_issue_inventory(
+        summary=summary,
+        snapshot_payload=snapshot_payload,
+        hotspot_payload=hotspot_payload,
+        trace_payload={"trace_case": enriched_trace_case},
+        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+    )
+    screenshot_index_rows = _build_screenshot_index_rows(
+        snapshot_payload,
+        hotspot_payload,
+        trace_payload,
+        slow_sql_payload,
+        page_payload,
+    )
+    screenshot_index_summary = {
+        "card_count": len(screenshot_index_rows),
+        "direct_card_count": len([item for item in screenshot_index_rows if item.get("url_status") == "direct"]),
+        "navigation_only_count": len([item for item in screenshot_index_rows if item.get("url_status") == "navigation_only"]),
+        "sections_with_screenshots": sorted({item.get("suggested_report_section") for item in screenshot_index_rows if item.get("suggested_report_section")}),
+    }
+    template_mapping = build_template_mapping(
+        issues=issue_inventory.get("issues") or [],
+        observations=issue_inventory.get("observations") or [],
+        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+        page_boundary=page_payload.get("coverage_boundary") or snapshot_payload.get("coverage_boundary") or {},
+    )
+    writer_input = build_writer_input(
+        report_scope=report_scope,
+        summary=summary,
+        coverage_boundary=page_payload.get("coverage_boundary") or snapshot_payload.get("coverage_boundary") or default_coverage_boundary(adapter),
+        issues=issue_inventory.get("issues") or [],
+        observations=issue_inventory.get("observations") or [],
+        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+        trace_case=enriched_trace_case,
+        page_payload=page_payload,
+        screenshot_index_summary=screenshot_index_summary,
+        template_mapping=template_mapping,
+    )
+    writer_markdown = render_writer_input_markdown(writer_input)
+    template_outline_markdown = render_template_outline_markdown(template_mapping)
+    sql_section_markdown = render_sql_section_markdown(
+        summary=summary,
+        slow_sql_overview=slow_sql_payload.get("operation_overview") or {},
+        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+    )
+    report_pack_exports = build_report_pack_exports(
+        issues=issue_inventory.get("issues") or [],
+        observations=issue_inventory.get("observations") or [],
+        issue_candidates=issue_inventory.get("issue_candidates") or [],
+        sql_candidates=sql_inventory.get("sql_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+        writer_input=writer_input,
+        writer_markdown=writer_markdown,
+        template_outline_markdown=template_outline_markdown,
+        sql_section_markdown=sql_section_markdown,
+        screenshot_index_rows=screenshot_index_rows,
+    )
 
     payload = ReportFactPackPayload(
-        report_scope={
-            "bizSystemId": context.biz_system_id,
-            "endTime": context.time_window.end_time,
-            "periodMinutes": context.time_window.period_minutes,
-            "sourceMode": source_mode,
-        },
+        report_scope=report_scope,
         summary=summary,
         hotspots={
             "actions": hotspot_payload.get("hotspots", []),
+            "screenshot_index_summary": screenshot_index_summary,
         },
         components={
             "action_component_summary": top_hotspot.get("overview", {}).get("components", {}),
+            "slow_sql_overview": slow_sql_payload.get("operation_overview", {}),
+            "page_performance_summary": page_payload.get("performance_summary", {}),
         },
-        trace_case=trace_payload.get("trace_case", {}),
-        issues=issues,
-        drilldown_paths=trace_payload.get("drilldown_path", []),
-        evidence=system_snapshot.to_dict()["payload"].get("evidence", [])
-        + hotspot_payload.get("evidence", [])
-        + trace_payload.get("evidence", []),
+        trace_case=enriched_trace_case,
+        issues=issue_inventory.get("legacy_issues") or [],
+        observations=issue_inventory.get("observations") or [],
+        issue_candidates=issue_inventory.get("issue_candidates") or [],
+        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+        sql_candidates=sql_inventory.get("sql_candidates") or [],
+        report_writer_input=writer_input,
+        template_mapping=template_mapping,
+        report_pack_exports=report_pack_exports,
+        drilldown_paths=trace_payload.get("drilldown_path", []) + ["Database/analysis", "component/database/actionList", "component/database/actionTraceList"],
+        evidence=(
+            snapshot_payload.get("evidence", [])
+            + hotspot_payload.get("evidence", [])
+            + trace_payload.get("evidence", [])
+            + slow_sql_payload.get("evidence", [])
+            + page_payload.get("evidence", [])
+            + [entry for item in sql_fact_payloads.values() for entry in (item.get("evidence") or [])]
+        ),
+    )
+    page_links = _aggregate_report_page_links(
+        snapshot_payload,
+        hotspot_payload,
+        trace_payload,
+        slow_sql_payload,
+        page_payload,
+        *sql_fact_payloads.values(),
+    )
+    screenshot_hints = _aggregate_report_screenshot_hints(
+        snapshot_payload,
+        hotspot_payload,
+        trace_payload,
+        slow_sql_payload,
+        page_payload,
+        *sql_fact_payloads.values(),
+    )
+    metric_semantics = _aggregate_report_metric_semantics(
+        snapshot_payload,
+        hotspot_payload,
+        trace_payload,
+        slow_sql_payload,
+        page_payload,
+        *sql_fact_payloads.values(),
     )
     payload = apply_report_support(
         payload,
-        page_links=(snapshot_payload.get("page_links") or []) + (hotspot_payload.get("page_links") or []) + (trace_payload.get("page_links") or []),
-        screenshot_hints=(snapshot_payload.get("screenshot_hints") or []) + (hotspot_payload.get("screenshot_hints") or []) + (trace_payload.get("screenshot_hints") or []),
-        metric_semantics=(snapshot_payload.get("metric_semantics") or []) + (hotspot_payload.get("metric_semantics") or []) + (trace_payload.get("metric_semantics") or []),
-        coverage_boundary=default_coverage_boundary(adapter),
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=page_payload.get("coverage_boundary") or snapshot_payload.get("coverage_boundary") or default_coverage_boundary(adapter),
         evidence_linkage={
-            "related_time_windows": [((snapshot_payload.get("trends") or {}).get("response") or {}).get("latest_point", {}).get("startTime") if isinstance((snapshot_payload.get("trends") or {}).get("response"), dict) else None],
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
             "related_actions": [item.get("action") for item in hotspot_payload.get("hotspots", [])[:5]],
-            "related_traces": [trace_payload.get("trace_case", {}).get("trace", {})],
-            "related_sqls": [],
-            "related_dependencies": ["business_system_topology"],
-            "recommended_next_pages": [item.get("page_type") for item in ((snapshot_payload.get("page_links") or []) + (hotspot_payload.get("page_links") or []) + (trace_payload.get("page_links") or []))[:10]],
+            "related_traces": [enriched_trace_case.get("trace", {})],
+            "related_sqls": (sql_inventory.get("sql_candidates") or [])[:10],
+            "related_dependencies": page_payload.get("related_dependencies") or ["business_system_topology"],
+            "recommended_next_pages": [item.get("page_type") for item in page_links[:10]],
         },
     )
     all_evidence = [
-        *(_coerce_evidence_list(system_snapshot.to_dict()["payload"].get("evidence", []))),
+        *(_coerce_evidence_list(snapshot_payload.get("evidence", []))),
         *(_coerce_evidence_list(hotspot_payload.get("evidence", []))),
         *(_coerce_evidence_list(trace_payload.get("evidence", []))),
+        *(_coerce_evidence_list(slow_sql_payload.get("evidence", []))),
+        *(_coerce_evidence_list(page_payload.get("evidence", []))),
     ]
-    return _pack(PackType.REPORT_FACT.value, context, payload, evidence=all_evidence, warnings=warnings, source_mode=source_mode)
+    for sql_fact_payload in sql_fact_payloads.values():
+        all_evidence.extend(_coerce_evidence_list(sql_fact_payload.get("evidence", [])))
+    return _pack(
+        PackType.REPORT_FACT.value,
+        context,
+        payload,
+        evidence=all_evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+        missing_inputs=sorted(set(missing_inputs)),
+        confidence_notes=[
+            "report_fact_pack now expands issue and SQL candidate pools before exporting writer-facing summaries.",
+            "report_pack_exports is a materialization-friendly view; downstream writers may still choose custom serialization.",
+        ],
+        build_stats={
+            "issue_count": len(issue_inventory.get("issues") or []),
+            "observation_count": len(issue_inventory.get("observations") or []),
+            "sql_candidate_count": len(sql_inventory.get("sql_candidates") or []),
+            "sql_main_count": len(sql_inventory.get("sql_main_candidates") or []),
+            "screenshot_row_count": len(screenshot_index_rows),
+        },
+    )
 
 
 def build_diagnostic_candidate_pack(
@@ -1507,6 +1664,177 @@ def _coerce_evidence_list(items: list[Any]) -> list[Evidence]:
                 )
             )
     return coerced
+
+
+def _trace_key_sqls(detail: dict[str, Any]) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    for item in detail.get("suspectedProblemList") or []:
+        metric_type = str(item.get("metricType") or "")
+        metric_name = str(item.get("metricName") or "")
+        if metric_type.upper() == "DATABASE" or any(token in metric_name.upper() for token in ("SELECT ", "UPDATE ", "DELETE ", "INSERT ")):
+            candidates.append(
+                {
+                    "source": "suspected_problem",
+                    "label": metric_name,
+                    "metric_type": metric_type,
+                    "exclusive_time": item.get("exclusiveTime"),
+                }
+            )
+    return candidates[:5]
+
+
+def _trace_primary_sql_fingerprint(detail: dict[str, Any]) -> str | None:
+    key_sqls = _trace_key_sqls(detail)
+    if not key_sqls:
+        return None
+    return sql_fingerprint(str(key_sqls[0].get("label") or ""))
+
+
+def _trace_sql_bottleneck_ratio(detail: dict[str, Any]) -> float | None:
+    suspects = detail.get("suspectedProblemList") or []
+    if not suspects:
+        return None
+    database_time = sum(_numeric(item.get("exclusiveTime")) or 0.0 for item in suspects if str(item.get("metricType") or "").upper() == "DATABASE")
+    duration = _numeric(detail.get("respTime") or detail.get("duration"))
+    if not duration or database_time <= 0:
+        return None
+    return round(database_time / duration, 4)
+
+
+def _trace_sql_binding_strength(detail: dict[str, Any]) -> str:
+    ratio = _trace_sql_bottleneck_ratio(detail)
+    if ratio is None:
+        return "none"
+    if ratio >= 0.3:
+        return "strong"
+    if ratio >= 0.1:
+        return "medium"
+    return "weak"
+
+
+def _select_sql_enrichment_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    selected: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for sort_key in (
+        lambda row: _numeric(row.get("response_time_ms")) or 0.0,
+        lambda row: _numeric(row.get("total_response_time_ms") or row.get("totalResptime")) or 0.0,
+        lambda row: _numeric(row.get("traceCount")) or 0.0,
+    ):
+        for row in sorted(rows, key=sort_key, reverse=True)[:3]:
+            fingerprint = sql_fingerprint(str(row.get("op_name_decoded") or row.get("opName") or ""))
+            if fingerprint in seen:
+                continue
+            seen.add(fingerprint)
+            selected.append(row)
+    return selected
+
+
+def _enrich_trace_case_with_sql(trace_case: dict[str, Any], sql_candidates: list[dict[str, Any]]) -> dict[str, Any]:
+    enriched = dict(trace_case)
+    trace = enriched.get("trace") or {}
+    trace_id = trace.get("trace_id_numeric")
+    trace_action_id = trace.get("action_id")
+    matched: list[dict[str, Any]] = []
+    for candidate in sql_candidates:
+        caller_objects = candidate.get("caller_objects") or []
+        impact_objects = candidate.get("impact_objects") or []
+        if trace_id and str(trace_id) in {str(item) for item in candidate.get("trace_case_ids") or []}:
+            matched.append(candidate)
+            continue
+        action_ids = {str(item.get("action_id")) for item in caller_objects + impact_objects if item.get("action_id") is not None}
+        if trace_action_id is not None and str(trace_action_id) in action_ids:
+            matched.append(candidate)
+    matched = matched[:5]
+    if matched:
+        enriched["key_sqls"] = [
+            {
+                "sql_fingerprint": item.get("sql_fingerprint"),
+                "trace_binding_strength": item.get("trace_binding_strength"),
+                "candidate_source": item.get("candidate_source"),
+                "metrics": item.get("metrics"),
+            }
+            for item in matched
+        ]
+        enriched["primary_sql_fingerprint"] = matched[0].get("sql_fingerprint")
+        enriched["sql_bottleneck_ratio"] = matched[0].get("metrics", {}).get("response_time_ms")
+        enriched["sql_trace_binding_strength"] = matched[0].get("trace_binding_strength")
+    return enriched
+
+
+def _aggregate_report_page_links(*payloads: dict[str, Any]) -> list[dict[str, Any]]:
+    links: list[dict[str, Any]] = []
+    for payload in payloads:
+        links.extend(payload.get("page_links") or [])
+    return links
+
+
+def _aggregate_report_screenshot_hints(*payloads: dict[str, Any]) -> list[dict[str, Any]]:
+    hints: list[dict[str, Any]] = []
+    for payload in payloads:
+        hints.extend(payload.get("screenshot_hints") or [])
+    return hints
+
+
+def _aggregate_report_metric_semantics(*payloads: dict[str, Any]) -> list[dict[str, Any]]:
+    semantics: list[dict[str, Any]] = []
+    for payload in payloads:
+        semantics.extend(payload.get("metric_semantics") or [])
+    return semantics
+
+
+def _build_screenshot_index_rows(*payloads: dict[str, Any]) -> list[dict[str, Any]]:
+    links = _aggregate_report_page_links(*payloads)
+    rows: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    figure_index = 1
+    for payload in payloads:
+        for hint in payload.get("screenshot_hints") or []:
+            key = (str(hint.get("title") or ""), str(hint.get("url") or ""))
+            if key in seen:
+                continue
+            seen.add(key)
+            matched_link = _match_report_link(hint, links)
+            rows.append(
+                {
+                    "figure_id": f"FIG-{figure_index:02d}",
+                    "title": hint.get("title"),
+                    "page_type": hint.get("page_type"),
+                    "suggested_report_section": hint.get("suggested_report_section"),
+                    "priority": hint.get("priority", "medium"),
+                    "url": hint.get("url"),
+                    "url_status": matched_link.get("url_status") or "unknown",
+                    "writer_summary": _report_screenshot_summary(hint, matched_link),
+                }
+            )
+            figure_index += 1
+    return rows
+
+
+def _match_report_link(hint: dict[str, Any], links: list[dict[str, Any]]) -> dict[str, Any]:
+    page_type = hint.get("page_type")
+    target_ref = hint.get("target_ref") or {}
+    best: dict[str, Any] = {}
+    best_score = -1
+    for link in links:
+        score = 0
+        if page_type and link.get("page_type") == page_type:
+            score += 4
+        if target_ref and json.dumps(link.get("target_ref") or {}, ensure_ascii=False, sort_keys=True) == json.dumps(target_ref, ensure_ascii=False, sort_keys=True):
+            score += 5
+        if hint.get("url") and link.get("url") == hint.get("url"):
+            score += 3
+        if score > best_score:
+            best = link
+            best_score = score
+    return best if best_score > 0 else {}
+
+
+def _report_screenshot_summary(hint: dict[str, Any], matched_link: dict[str, Any]) -> str:
+    section = hint.get("suggested_report_section") or "未指定章节"
+    title = hint.get("title") or hint.get("page_type") or "未命名截图"
+    url_status = matched_link.get("url_status") or "unknown"
+    usage = hint.get("usage_in_report") or ""
+    return f"{section} | {title} | 链接状态={url_status} | 用途={usage}"
 
 
 def _should_use_sample(adapter: Any, source_mode: str) -> bool:

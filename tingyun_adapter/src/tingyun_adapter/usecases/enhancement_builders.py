@@ -1037,6 +1037,7 @@ def build_screenshot_index_pack(
                 "suggested_report_section": card.get("suggested_report_section"),
                 "priority": card.get("priority", "medium"),
                 "target_ref": card.get("target_ref") or {},
+                "writer_summary": _screenshot_writer_summary(card, matched_link),
             }
         )
 
@@ -1132,6 +1133,14 @@ def _target_ref_key(target_ref: dict[str, Any]) -> tuple[tuple[str, str], ...]:
             continue
         normalized.append((str(key), str(value)))
     return tuple(normalized)
+
+
+def _screenshot_writer_summary(card: dict[str, Any], matched_link: dict[str, Any]) -> str:
+    section = card.get("suggested_report_section") or "未指定章节"
+    url_status = matched_link.get("url_status") or "unknown"
+    title = card.get("title") or card.get("page_type") or "未命名截图"
+    usage = card.get("usage_in_report") or ""
+    return f"{section} | {title} | 链接状态={url_status} | 用途={usage}"
 
 
 def _action_target_ref(action: dict[str, Any]) -> dict[str, Any]:
