@@ -3,10 +3,14 @@ from __future__ import annotations
 import unittest
 
 from tingyun_adapter.usecases.report_fact_enhancements import (
+    build_candidate_registry,
+    build_codex_review_input,
     build_writer_input,
     dedupe_issue_candidates,
     rank_issue_candidate,
+    render_codex_review_input_markdown,
     render_writer_input_markdown,
+    select_candidate_outcomes,
     sql_fingerprint,
     union_sql_candidates,
 )
@@ -139,6 +143,101 @@ class ReportFactEnhancementTests(unittest.TestCase):
         self.assertIn("能力边界", markdown)
         self.assertIn("缺少 RUM 明细", markdown)
         self.assertGreater(len(writer_input["manual_review_items"]), 0)
+
+    def test_candidate_registry_merges_action_and_comparison_sources(self) -> None:
+        registry = build_candidate_registry(
+            report_scope={"bizSystemId": 1059},
+            snapshot_payload={"health": {}},
+            diagnostic_payload={"system_signals": []},
+            hotspot_payload={
+                "hotspots": [
+                    {
+                        "action": {
+                            "id": 20441,
+                            "biz_system_id": 1059,
+                            "application_id": 1648,
+                            "type": "TX",
+                            "name": "核心提交接口",
+                            "metrics": {"slow_count": 8, "error_count": 0},
+                        },
+                        "overview": {"components": {"db": 1}},
+                        "suspect_signals": [{"type": "high_response_time_ms"}],
+                    }
+                ]
+            },
+            trace_candidates=[],
+            trace_case={},
+            sql_candidates=[],
+            external_payload={"external_dependencies": []},
+            comparison_payload={
+                "objects": [
+                    {
+                        "target_ref": {"kind": "action", "biz_system_id": 1059, "application_id": 1648, "action_id": 20441, "action_type": "TX"},
+                        "display_name": "核心提交接口",
+                        "change_class": "regressed",
+                        "trend_confidence": "medium",
+                        "evidence_refs": ["comparison"],
+                        "source_basis": [{"value": "previous_window"}],
+                    }
+                ]
+            },
+            labels_payload={
+                "objects": [
+                    {
+                        "target_ref": {"kind": "action", "biz_system_id": 1059, "application_id": 1648, "action_id": 20441, "action_type": "TX"},
+                        "candidate_labels": ["core_business_path"],
+                        "confirmed_labels": [],
+                    }
+                ]
+            },
+            stability_payload={"objects": []},
+            impact_payload={"objects": []},
+            knowledge_payload={"core_context": {}},
+        )
+        self.assertEqual(len(registry), 1)
+        candidate = registry[0]
+        self.assertIn("action_hotspot_pack", candidate["source_packs"])
+        self.assertIn("comparison_signals_pack", candidate["source_packs"])
+        self.assertIn("regressed", candidate["review_hints"])
+
+    def test_codex_review_input_groups_candidates(self) -> None:
+        candidate_registry = [
+            {
+                "candidate_key": "action:1",
+                "candidate_type": "action",
+                "display_name": "核心接口",
+                "evidence_strength": "strong",
+                "impact_scope": "core_path",
+                "review_hints": ["high_latency"],
+                "recommended_next_packs": ["action_fact_sheet"],
+            },
+            {
+                "candidate_key": "sql:1",
+                "candidate_type": "sql",
+                "display_name": "sql:1",
+                "evidence_strength": "medium",
+                "impact_scope": "local",
+                "review_hints": ["optimization"],
+                "recommended_next_packs": ["sql_fact_sheet"],
+                "report_recommendation": "appendix_candidate",
+            },
+        ]
+        outcomes = select_candidate_outcomes(candidate_registry)
+        review_input = build_codex_review_input(
+            report_scope={"bizSystemId": 1059, "endTime": "2026-04-03 12:20"},
+            summary={"biz_system_name": "示例系统"},
+            candidate_registry=candidate_registry,
+            main_issue_selections=outcomes["main_issue_selections"],
+            observation_candidates=outcomes["observation_candidates"],
+            sql_opportunity_candidates=outcomes["sql_opportunity_candidates"],
+            deep_dive_targets=outcomes["deep_dive_targets"],
+            knowledge_payload={"confirmed_knowledge_summary": {"entry_count": 0}, "pending_proposals_summary": {"pending_count": 0}, "missing_items": []},
+        )
+        markdown = render_codex_review_input_markdown(review_input)
+        self.assertIn("主问题高可信候选", markdown)
+        self.assertIn("优化机会级 SQL 候选", markdown)
+        self.assertEqual(len(review_input["main_issue_candidates"]), 1)
+        self.assertEqual(len(review_input["sql_candidates"]["optimization_level"]), 1)
 
 
 if __name__ == "__main__":

@@ -396,6 +396,118 @@ def build_issue_inventory(
     }
 
 
+def build_candidate_registry(
+    *,
+    report_scope: dict[str, Any],
+    snapshot_payload: dict[str, Any],
+    diagnostic_payload: dict[str, Any],
+    hotspot_payload: dict[str, Any],
+    trace_candidates: list[dict[str, Any]],
+    trace_case: dict[str, Any],
+    sql_candidates: list[dict[str, Any]],
+    external_payload: dict[str, Any],
+    comparison_payload: dict[str, Any],
+    labels_payload: dict[str, Any],
+    stability_payload: dict[str, Any],
+    impact_payload: dict[str, Any],
+    knowledge_payload: dict[str, Any],
+) -> list[dict[str, Any]]:
+    registry: list[dict[str, Any]] = []
+    registry.extend(_system_signal_candidates(report_scope, snapshot_payload, diagnostic_payload))
+    registry.extend(_action_candidates(hotspot_payload, labels_payload, stability_payload, impact_payload))
+    registry.extend(_trace_candidates(trace_candidates, trace_case))
+    registry.extend(_sql_registry_candidates(sql_candidates))
+    registry.extend(_dependency_candidates(external_payload))
+    registry.extend(_comparison_candidates(comparison_payload))
+    registry = _merge_candidate_registry(registry)
+    registry = _enrich_candidate_registry_with_context(registry, labels_payload, stability_payload, impact_payload, comparison_payload, knowledge_payload)
+    return sorted(registry, key=_candidate_sort_key)
+
+
+def select_candidate_outcomes(candidate_registry: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    main_issue_selections: list[dict[str, Any]] = []
+    observation_candidates: list[dict[str, Any]] = []
+    sql_opportunity_candidates: list[dict[str, Any]] = []
+    deep_dive_targets: list[dict[str, Any]] = []
+
+    for candidate in candidate_registry:
+        bucket = _candidate_selection_bucket(candidate)
+        selected = dict(candidate)
+        selected["selection_bucket"] = bucket
+        selected["selection_reason"] = _candidate_selection_reason(candidate, bucket)
+        if bucket == "main_issue":
+            main_issue_selections.append(selected)
+        elif bucket == "sql_opportunity":
+            sql_opportunity_candidates.append(selected)
+        elif bucket == "deep_dive":
+            deep_dive_targets.append(selected)
+        else:
+            observation_candidates.append(selected)
+
+    return {
+        "main_issue_selections": main_issue_selections[:8],
+        "observation_candidates": observation_candidates[:12],
+        "sql_opportunity_candidates": sql_opportunity_candidates[:12],
+        "deep_dive_targets": deep_dive_targets[:6],
+    }
+
+
+def build_codex_review_input(
+    *,
+    report_scope: dict[str, Any],
+    summary: dict[str, Any],
+    candidate_registry: list[dict[str, Any]],
+    main_issue_selections: list[dict[str, Any]],
+    observation_candidates: list[dict[str, Any]],
+    sql_opportunity_candidates: list[dict[str, Any]],
+    deep_dive_targets: list[dict[str, Any]],
+    knowledge_payload: dict[str, Any],
+) -> dict[str, Any]:
+    return {
+        "scope": report_scope,
+        "summary": summary,
+        "candidate_registry_count": len(candidate_registry),
+        "main_issue_candidates": main_issue_selections,
+        "observation_candidates": observation_candidates,
+        "sql_candidates": {
+            "main_issue_level": [item for item in main_issue_selections if item.get("candidate_type") == "sql"],
+            "optimization_level": sql_opportunity_candidates,
+        },
+        "deep_dive_targets": deep_dive_targets,
+        "knowledge_context": {
+            "confirmed_entry_count": ((knowledge_payload.get("confirmed_knowledge_summary") or {}).get("entry_count")),
+            "pending_count": ((knowledge_payload.get("pending_proposals_summary") or {}).get("pending_count")),
+            "missing_items": knowledge_payload.get("missing_items") or [],
+        },
+    }
+
+
+def render_codex_review_input_markdown(review_input: dict[str, Any]) -> str:
+    lines = [
+        "# Codex Review Input",
+        "",
+        "## 巡检范围",
+        f"- 业务系统: {((review_input.get('scope') or {}).get('bizSystemId'))}",
+        f"- 时间窗: {((review_input.get('scope') or {}).get('endTime'))}",
+        f"- 候选总数: {review_input.get('candidate_registry_count') or 0}",
+        "",
+        "## 主问题高可信候选",
+    ]
+    lines.extend(_render_candidate_markdown(review_input.get("main_issue_candidates") or [], fallback="- 当前没有高可信主问题候选。"))
+    lines.extend(["", "## 观察项候选"])
+    lines.extend(_render_candidate_markdown(review_input.get("observation_candidates") or [], fallback="- 当前没有 observation 候选。"))
+    lines.extend(["", "## SQL 候选"])
+    sql_candidates = review_input.get("sql_candidates") or {}
+    lines.append("### 主问题级 SQL 候选")
+    lines.extend(_render_candidate_markdown((sql_candidates.get("main_issue_level") or []), fallback="- 当前没有主问题级 SQL 候选。"))
+    lines.append("")
+    lines.append("### 优化机会级 SQL 候选")
+    lines.extend(_render_candidate_markdown((sql_candidates.get("optimization_level") or []), fallback="- 当前没有优化机会级 SQL 候选。"))
+    lines.extend(["", "## 建议进一步深挖的对象"])
+    lines.extend(_render_candidate_markdown(review_input.get("deep_dive_targets") or [], fallback="- 当前没有建议进一步深挖的对象。"))
+    return "\n".join(lines).strip() + "\n"
+
+
 def build_template_mapping(
     *,
     issues: list[dict[str, Any]],
@@ -636,8 +748,13 @@ def build_report_pack_exports(
     issues: list[dict[str, Any]],
     observations: list[dict[str, Any]],
     issue_candidates: list[dict[str, Any]],
+    candidate_registry: list[dict[str, Any]],
     sql_candidates: list[dict[str, Any]],
     sql_opportunities: list[dict[str, Any]],
+    main_issue_selections: list[dict[str, Any]],
+    deep_dive_targets: list[dict[str, Any]],
+    codex_review_input: dict[str, Any],
+    codex_review_markdown: str,
     writer_input: dict[str, Any],
     writer_markdown: str,
     template_outline_markdown: str,
@@ -649,8 +766,13 @@ def build_report_pack_exports(
         "03_issues/observations.csv": _csv_export(observations, ISSUE_EXPORT_COLUMNS),
         "03_issues/sql_opportunities.csv": _csv_export(sql_opportunities, SQL_EXPORT_COLUMNS),
         "01_foundation/screenshot_index.csv": _csv_export(screenshot_index_rows, SCREENSHOT_EXPORT_COLUMNS),
+        "03_issues/main_issue_selections.json": {"format": "json", "data": main_issue_selections},
+        "03_issues/deep_dive_targets.json": {"format": "json", "data": deep_dive_targets},
+        "04_raw/candidate_registry.json": {"format": "json", "data": candidate_registry},
         "04_raw/issue_candidates.json": {"format": "json", "data": issue_candidates},
         "04_raw/sql_candidates.json": {"format": "json", "data": sql_candidates},
+        "00_internal/codex_review_input.json": {"format": "json", "data": codex_review_input},
+        "00_internal/codex_review_input.md": {"format": "markdown", "content": codex_review_markdown},
         "00_internal/report_writer_input.json": {"format": "json", "data": writer_input},
         "00_internal/report_writer_input.md": {"format": "markdown", "content": writer_markdown},
         "00_internal/template_outline.md": {"format": "markdown", "content": template_outline_markdown},
@@ -711,6 +833,358 @@ SCREENSHOT_EXPORT_COLUMNS = [
     "url_status",
     "writer_summary",
 ]
+
+
+def _system_signal_candidates(report_scope: dict[str, Any], snapshot_payload: dict[str, Any], diagnostic_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    for index, signal in enumerate(diagnostic_payload.get("system_signals") or [], start=1):
+        signal_type = str(signal.get("type") or f"signal_{index}")
+        level = str(signal.get("level") or "medium")
+        candidates.append(
+            {
+                "candidate_key": f"signal:{signal_type}:{index}",
+                "candidate_type": "regression_signal",
+                "target_ref": {"kind": "system_signal", "signal_type": signal_type, "biz_system_id": report_scope.get("bizSystemId")},
+                "display_name": signal_type,
+                "source_packs": ["diagnostic_candidate_pack", "system_snapshot"],
+                "source_basis": ["system_signal"],
+                "evidence_refs": [str(signal.get("source_api") or "system_snapshot")],
+                "evidence_strength": "medium" if level in {"medium", "high"} else "weak",
+                "occurrence_count": max(1, _safe_int(signal.get("value"))),
+                "active_windows": 1,
+                "impact_scope": "cross_object" if level == "high" else "local",
+                "review_hints": [signal_type, level],
+                "recommended_next_packs": ["system_snapshot"],
+            }
+        )
+    health = (snapshot_payload.get("health") or {}).get("action") or {}
+    if _safe_int(health.get("warn")) > 0:
+        candidates.append(
+            {
+                "candidate_key": f"signal:action_warn:{_safe_int(health.get('warn'))}",
+                "candidate_type": "regression_signal",
+                "target_ref": {"kind": "system_health", "metric": "action_warn", "biz_system_id": report_scope.get("bizSystemId")},
+                "display_name": "action_warn",
+                "source_packs": ["system_snapshot"],
+                "source_basis": ["health_warning"],
+                "evidence_refs": ["health_level_statistics"],
+                "evidence_strength": "strong",
+                "occurrence_count": _safe_int(health.get("warn")),
+                "active_windows": 1,
+                "impact_scope": "cross_object",
+                "review_hints": ["action_health_warn", "high"],
+                "recommended_next_packs": ["system_snapshot", "diagnostic_candidate_pack"],
+            }
+        )
+    return candidates
+
+
+def _action_candidates(
+    hotspot_payload: dict[str, Any],
+    labels_payload: dict[str, Any],
+    stability_payload: dict[str, Any],
+    impact_payload: dict[str, Any],
+) -> list[dict[str, Any]]:
+    label_map = {_target_ref_signature(item.get("target_ref") or {}): item for item in labels_payload.get("objects") or []}
+    stability_map = {_target_ref_signature(item.get("target_ref") or {}): item for item in stability_payload.get("objects") or []}
+    impact_map = {_target_ref_signature(item.get("target_ref") or {}): item for item in impact_payload.get("objects") or []}
+    candidates: list[dict[str, Any]] = []
+    for hotspot in hotspot_payload.get("hotspots") or []:
+        action = hotspot.get("action") or {}
+        target_ref = {
+            "kind": "action",
+            "biz_system_id": action.get("biz_system_id"),
+            "application_id": action.get("application_id"),
+            "action_id": action.get("id"),
+            "action_type": action.get("type"),
+        }
+        signature = _target_ref_signature(target_ref)
+        labels = label_map.get(signature) or {}
+        stability = stability_map.get(signature) or {}
+        impact = impact_map.get(signature) or {}
+        review_hints = [signal.get("type") for signal in hotspot.get("suspect_signals") or []]
+        review_hints.extend(list(labels.get("candidate_labels") or [])[:3])
+        if (impact.get("priority_hints") or {}).get("review_priority"):
+            review_hints.append(str((impact.get("priority_hints") or {}).get("review_priority")))
+        if stability.get("stability_class"):
+            review_hints.append(str(stability.get("stability_class")))
+        candidates.append(
+            {
+                "candidate_key": f"action:{action.get('application_id')}:{action.get('id')}:{action.get('type')}",
+                "candidate_type": "action",
+                "target_ref": target_ref,
+                "display_name": action.get("name") or action.get("alias"),
+                "source_packs": ["action_hotspot_pack"],
+                "source_basis": ["top_hotspot"],
+                "evidence_refs": ["action_list", "action_overview"],
+                "evidence_strength": "strong" if hotspot.get("overview") else "medium",
+                "occurrence_count": max(
+                    _safe_int((action.get("metrics") or {}).get("slow_count")),
+                    _safe_int((action.get("metrics") or {}).get("error_count")),
+                    1,
+                ),
+                "active_windows": 2 if _safe_int((action.get("metrics") or {}).get("slow_count")) >= 3 else 1,
+                "impact_scope": _impact_scope_from_action(labels, impact),
+                "review_hints": _unique_strings(review_hints),
+                "recommended_next_packs": ["action_fact_sheet", "action_dependency_breakdown_pack"],
+            }
+        )
+    return candidates
+
+
+def _trace_candidates(trace_candidates: list[dict[str, Any]], trace_case: dict[str, Any]) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    for item in trace_candidates:
+        review_hints = [signal.get("type") for signal in item.get("suspect_signals") or []]
+        if _safe_float(item.get("duration_ms")) >= 1000:
+            review_hints.append("high_latency")
+        candidates.append(
+            {
+                "candidate_key": f"trace:{item.get('trace_id_numeric') or item.get('trace_guid')}",
+                "candidate_type": "trace",
+                "target_ref": {
+                    "kind": "trace",
+                    "trace_id_numeric": item.get("trace_id_numeric"),
+                    "trace_guid": item.get("trace_guid"),
+                    "action_guid": item.get("action_guid"),
+                    "query_timestamp": item.get("query_timestamp"),
+                },
+                "display_name": item.get("trace_id_numeric") or item.get("trace_guid"),
+                "source_packs": ["trace_case_pack"],
+                "source_basis": ["trace_candidate"],
+                "evidence_refs": ["graph/query/overview"],
+                "evidence_strength": "strong" if item.get("suspect_signals") else "medium",
+                "occurrence_count": 1,
+                "active_windows": 1,
+                "impact_scope": "core_path" if review_hints else "local",
+                "review_hints": _unique_strings(review_hints),
+                "recommended_next_packs": ["trace_fact_sheet"],
+            }
+        )
+    trace_info = (trace_case or {}).get("trace") or {}
+    if trace_info:
+        candidates.append(
+            {
+                "candidate_key": f"trace:{trace_info.get('trace_id_numeric') or trace_info.get('trace_guid')}",
+                "candidate_type": "trace",
+                "target_ref": {
+                    "kind": "trace",
+                    "trace_id_numeric": trace_info.get("trace_id_numeric"),
+                    "trace_guid": trace_info.get("trace_guid"),
+                    "action_guid": trace_info.get("action_guid"),
+                    "query_timestamp": trace_info.get("timestamp"),
+                },
+                "display_name": trace_info.get("trace_id_numeric") or trace_info.get("trace_guid"),
+                "source_packs": ["trace_case_pack"],
+                "source_basis": ["representative_trace"],
+                "evidence_refs": ["trace_detail", "trace_call_tree"],
+                "evidence_strength": "strong" if trace_info.get("suspected_problems") else "medium",
+                "occurrence_count": max(1, len(trace_info.get("suspected_problems") or [])),
+                "active_windows": 1,
+                "impact_scope": "core_path" if trace_info.get("suspected_problems") else "local",
+                "review_hints": _unique_strings(["representative_trace"] + [item.get("type") for item in trace_info.get("suspected_problems") or [] if item.get("type")]),
+                "recommended_next_packs": ["trace_fact_sheet"],
+            }
+        )
+    return candidates
+
+
+def _sql_registry_candidates(sql_candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    for item in sql_candidates:
+        hints = list(item.get("candidate_source") or []) + list(item.get("sql_feature_tags") or [])
+        target_ref = {
+            "kind": "sql",
+            "sql_fingerprint": item.get("sql_fingerprint"),
+            "component_name": item.get("component_name"),
+            "component_subtype": item.get("component_subtype"),
+            "op_name": item.get("sql_text"),
+        }
+        candidates.append(
+            {
+                "candidate_key": f"sql:{item.get('sql_fingerprint')}",
+                "candidate_type": "sql",
+                "target_ref": target_ref,
+                "display_name": item.get("sql_fingerprint"),
+                "source_packs": ["slow_sql_pack"] + (["trace_case_pack"] if "trace_bound" in (item.get("candidate_source") or []) else []),
+                "source_basis": item.get("candidate_source") or [],
+                "evidence_refs": ["slow_sql_analysis", "component/database/actionList", "component/database/actionTraceList"],
+                "evidence_strength": "strong" if item.get("trace_binding_strength") == "strong" else ("medium" if item.get("trace_binding_strength") == "medium" else "weak"),
+                "occurrence_count": _safe_int((item.get("metrics") or {}).get("count")) or 1,
+                "active_windows": 2 if item.get("trace_binding_strength") in {"strong", "medium"} else 1,
+                "impact_scope": "core_path" if len(item.get("impact_objects") or []) >= 2 else ("cross_object" if len(item.get("impact_objects") or []) >= 1 else "local"),
+                "review_hints": _unique_strings(hints),
+                "recommended_next_packs": ["sql_fact_sheet"],
+                "report_recommendation": item.get("report_recommendation"),
+            }
+        )
+    return candidates
+
+
+def _dependency_candidates(external_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    for item in external_payload.get("external_dependencies") or []:
+        review_hints = [str(item.get("protocol") or "external_dependency")]
+        if _safe_float(item.get("response_time_ms")) >= 1000:
+            review_hints.append("high_latency")
+        if _safe_float(item.get("error_rate")) > 0:
+            review_hints.append("error_present")
+        candidates.append(
+            {
+                "candidate_key": f"dependency:{item.get('node_id')}",
+                "candidate_type": "dependency",
+                "target_ref": {"kind": "dependency", "node_id": item.get("node_id"), "protocol": item.get("protocol")},
+                "display_name": item.get("node_id"),
+                "source_packs": ["external_dependency_pack"],
+                "source_basis": ["dependency_latency"],
+                "evidence_refs": ["external_topology", "external_protocol_analysis"],
+                "evidence_strength": "strong" if _safe_float(item.get("response_time_ms")) >= 1000 else "medium",
+                "occurrence_count": max(1, _safe_int(item.get("link_count"))),
+                "active_windows": 1,
+                "impact_scope": "cross_object" if _safe_int(item.get("link_count")) > 1 else "local",
+                "review_hints": review_hints,
+                "recommended_next_packs": ["external_dependency_pack", "topology_dependency_pack"],
+            }
+        )
+    return candidates
+
+
+def _comparison_candidates(comparison_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    for item in comparison_payload.get("objects") or []:
+        target_ref = item.get("target_ref") or {}
+        change_class = str(item.get("change_class") or "stable_risk")
+        candidates.append(
+            {
+                "candidate_key": f"regression:{_target_ref_signature(target_ref)}:{change_class}",
+                "candidate_type": "regression_signal",
+                "target_ref": target_ref,
+                "display_name": item.get("display_name"),
+                "source_packs": ["comparison_signals_pack"],
+                "source_basis": ["comparison_regression"],
+                "evidence_refs": item.get("evidence_refs") or [],
+                "evidence_strength": "medium" if item.get("trend_confidence") in {"medium", "high"} else "weak",
+                "occurrence_count": 1,
+                "active_windows": 2,
+                "impact_scope": "cross_object" if change_class in {"new_risk", "regressed"} else "local",
+                "review_hints": _unique_strings([change_class, item.get("trend_confidence")]),
+                "recommended_next_packs": _recommended_next_packs_for_target_ref(target_ref),
+            }
+        )
+    return candidates
+
+
+def _merge_candidate_registry(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged_by_key: dict[str, dict[str, Any]] = {}
+    by_target_signature: dict[str, str] = {}
+    for candidate in candidates:
+        candidate_key = str(candidate.get("candidate_key") or "candidate:unknown")
+        target_signature = _target_ref_signature(candidate.get("target_ref") or {})
+        existing_key = merged_by_key.get(candidate_key) and candidate_key or by_target_signature.get(target_signature)
+        if existing_key is None or _should_keep_regression_separate(candidate, merged_by_key.get(existing_key, {})):
+            merged_by_key[candidate_key] = dict(candidate)
+            if target_signature:
+                by_target_signature[target_signature] = candidate_key
+            continue
+        current = merged_by_key[existing_key]
+        current["source_packs"] = sorted(set((current.get("source_packs") or []) + (candidate.get("source_packs") or [])))
+        current["source_basis"] = sorted(set((current.get("source_basis") or []) + (candidate.get("source_basis") or [])))
+        current["evidence_refs"] = sorted(set((current.get("evidence_refs") or []) + (candidate.get("evidence_refs") or [])))
+        current["review_hints"] = _unique_strings((current.get("review_hints") or []) + (candidate.get("review_hints") or []))
+        current["recommended_next_packs"] = _unique_strings((current.get("recommended_next_packs") or []) + (candidate.get("recommended_next_packs") or []))
+        current["occurrence_count"] = max(_safe_int(current.get("occurrence_count")), _safe_int(candidate.get("occurrence_count")))
+        current["active_windows"] = max(_safe_int(current.get("active_windows")), _safe_int(candidate.get("active_windows")))
+        current["evidence_strength"] = _better_evidence_strength(current.get("evidence_strength"), candidate.get("evidence_strength"))
+        current["impact_scope"] = _better_impact_scope(current.get("impact_scope"), candidate.get("impact_scope"))
+    return list(merged_by_key.values())
+
+
+def _enrich_candidate_registry_with_context(
+    registry: list[dict[str, Any]],
+    labels_payload: dict[str, Any],
+    stability_payload: dict[str, Any],
+    impact_payload: dict[str, Any],
+    comparison_payload: dict[str, Any],
+    knowledge_payload: dict[str, Any],
+) -> list[dict[str, Any]]:
+    label_map = {_target_ref_signature(item.get("target_ref") or {}): item for item in labels_payload.get("objects") or []}
+    stability_map = {_target_ref_signature(item.get("target_ref") or {}): item for item in stability_payload.get("objects") or []}
+    impact_map = {_target_ref_signature(item.get("target_ref") or {}): item for item in impact_payload.get("objects") or []}
+    comparison_map = {_target_ref_signature(item.get("target_ref") or {}): item for item in comparison_payload.get("objects") or []}
+    knowledge_context = knowledge_payload.get("core_context") or {}
+    for item in registry:
+        signature = _target_ref_signature(item.get("target_ref") or {})
+        labels = label_map.get(signature) or {}
+        stability = stability_map.get(signature) or {}
+        impact = impact_map.get(signature) or {}
+        comparison = comparison_map.get(signature) or {}
+        item["source_packs"] = _unique_strings((item.get("source_packs") or []) + _extra_pack_names(labels, stability, impact, comparison))
+        item["review_hints"] = _unique_strings(
+            (item.get("review_hints") or [])
+            + list(labels.get("candidate_labels") or [])[:3]
+            + [stability.get("stability_class"), comparison.get("change_class"), (impact.get("priority_hints") or {}).get("review_priority")]
+        )
+        item["source_basis"] = _unique_strings(
+            (item.get("source_basis") or [])
+            + [basis.get("value") for basis in comparison.get("source_basis") or [] if basis.get("value")]
+        )
+        item["knowledge_context"] = {
+            "confirmed_labels": labels.get("confirmed_labels") or [],
+            "stability_class": stability.get("stability_class"),
+            "review_priority": (impact.get("priority_hints") or {}).get("review_priority"),
+            "change_class": comparison.get("change_class"),
+            "known_patterns": knowledge_context.get("known_patterns", [])[:2] if isinstance(knowledge_context, dict) else [],
+        }
+    return registry
+
+
+def _candidate_selection_bucket(candidate: dict[str, Any]) -> str:
+    candidate_type = str(candidate.get("candidate_type") or "")
+    evidence_strength = str(candidate.get("evidence_strength") or "weak")
+    impact_scope = str(candidate.get("impact_scope") or "local")
+    review_hints = {str(item) for item in candidate.get("review_hints") or []}
+    report_recommendation = str(candidate.get("report_recommendation") or "")
+
+    if candidate_type == "sql":
+        if report_recommendation == "main_issue" and evidence_strength in {"strong", "medium"}:
+            return "main_issue"
+        if "optimization" in review_hints or report_recommendation == "appendix_candidate":
+            return "sql_opportunity"
+        if evidence_strength == "weak":
+            return "deep_dive"
+        return "observation"
+
+    if evidence_strength == "strong" and impact_scope in {"core_path", "cross_object"}:
+        return "main_issue"
+    if {"new_risk", "regressed", "high_review", "high_latency", "error_present"} & review_hints and evidence_strength != "weak":
+        return "main_issue"
+    if "low_frequency" in review_hints or "needs_confirmation" in review_hints or evidence_strength == "weak":
+        return "observation"
+    if candidate.get("recommended_next_packs"):
+        return "deep_dive"
+    return "observation"
+
+
+def _candidate_selection_reason(candidate: dict[str, Any], bucket: str) -> str:
+    hints = ", ".join([str(item) for item in (candidate.get("review_hints") or [])[:4]])
+    if bucket == "main_issue":
+        return f"证据强度={candidate.get('evidence_strength')}，影响范围={candidate.get('impact_scope')}，review_hints={hints}"
+    if bucket == "sql_opportunity":
+        return f"SQL 已进入优化机会池，推荐后续用 {', '.join(candidate.get('recommended_next_packs') or [])} 补证。"
+    if bucket == "deep_dive":
+        return f"当前证据不足以下最终结论，建议继续构建 {', '.join(candidate.get('recommended_next_packs') or [])}。"
+    return f"当前更适合作为 observation 保留，主要提示为 {hints or '弱证据或低频'}。"
+
+
+def _render_candidate_markdown(items: list[dict[str, Any]], *, fallback: str) -> list[str]:
+    if not items:
+        return [fallback]
+    lines: list[str] = []
+    for item in items[:8]:
+        lines.append(
+            f"- {item.get('display_name')} | 类型: {item.get('candidate_type')} | 来源: {','.join(item.get('source_packs') or [])} | hints: {','.join(item.get('review_hints') or [])} | 推荐深挖: {','.join(item.get('recommended_next_packs') or [])}"
+        )
+    return lines
 
 
 def _csv_export(rows: list[dict[str, Any]], columns: list[str]) -> dict[str, Any]:
@@ -935,6 +1409,93 @@ def _merge_named_objects(left: list[dict[str, Any]], right: list[dict[str, Any]]
         seen.add(key)
         merged.append(item)
     return merged[:10]
+
+
+def _target_ref_signature(target_ref: dict[str, Any]) -> str:
+    if not target_ref:
+        return ""
+    return json.dumps(target_ref, ensure_ascii=False, sort_keys=True)
+
+
+def _impact_scope_from_action(labels: dict[str, Any], impact: dict[str, Any]) -> str:
+    candidate_labels = set(str(item) for item in labels.get("candidate_labels") or [])
+    review_priority = str((impact.get("priority_hints") or {}).get("review_priority") or "")
+    if {"core_business_path", "real_user_visible", "user_entry"} & candidate_labels:
+        return "core_path"
+    if review_priority == "high_review":
+        return "cross_object"
+    return "local"
+
+
+def _recommended_next_packs_for_target_ref(target_ref: dict[str, Any]) -> list[str]:
+    kind = str((target_ref or {}).get("kind") or "")
+    if kind == "action":
+        return ["action_fact_sheet", "action_dependency_breakdown_pack"]
+    if kind == "trace":
+        return ["trace_fact_sheet"]
+    if kind == "sql":
+        return ["sql_fact_sheet"]
+    if kind == "dependency":
+        return ["external_dependency_pack", "topology_dependency_pack"]
+    if kind == "instance":
+        return ["instance_analysis_pack"]
+    return []
+
+
+def _extra_pack_names(*objects: dict[str, Any]) -> list[str]:
+    names: list[str] = []
+    mapping = {
+        "candidate_labels": "business_labels_pack",
+        "stability_class": "stability_signals_pack",
+        "priority_hints": "impact_signals_pack",
+        "change_class": "comparison_signals_pack",
+    }
+    for item in objects:
+        for key, value in mapping.items():
+            if item.get(key):
+                names.append(value)
+    return names
+
+
+def _should_keep_regression_separate(candidate: dict[str, Any], current: dict[str, Any]) -> bool:
+    return candidate.get("candidate_type") == "regression_signal" and current.get("candidate_type") == "regression_signal"
+
+
+def _better_evidence_strength(current: Any, other: Any) -> str:
+    ranking = {"strong": 0, "medium": 1, "weak": 2}
+    current_value = str(current or "weak")
+    other_value = str(other or "weak")
+    return current_value if ranking.get(current_value, 9) <= ranking.get(other_value, 9) else other_value
+
+
+def _better_impact_scope(current: Any, other: Any) -> str:
+    ranking = {"core_path": 0, "cross_object": 1, "local": 2}
+    current_value = str(current or "local")
+    other_value = str(other or "local")
+    return current_value if ranking.get(current_value, 9) <= ranking.get(other_value, 9) else other_value
+
+
+def _candidate_sort_key(item: dict[str, Any]) -> tuple[int, int, int, str]:
+    scope_ranking = {"core_path": 0, "cross_object": 1, "local": 2}
+    strength_ranking = {"strong": 0, "medium": 1, "weak": 2}
+    return (
+        strength_ranking.get(str(item.get("evidence_strength")), 9),
+        scope_ranking.get(str(item.get("impact_scope")), 9),
+        -_safe_int(item.get("occurrence_count")),
+        str(item.get("display_name") or ""),
+    )
+
+
+def _unique_strings(items: list[Any]) -> list[str]:
+    result: list[str] = []
+    seen: set[str] = set()
+    for item in items:
+        text = str(item or "").strip()
+        if not text or text in seen:
+            continue
+        seen.add(text)
+        result.append(text)
+    return result
 
 
 def _better_sql_recommendation(current: Any, other: Any) -> str:

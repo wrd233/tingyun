@@ -60,6 +60,13 @@
   - `template_mapping`
   - `report_pack_exports`
   - `02_sections/sql.md` / `03_issues/*.csv` / `04_raw/*.json` 的文件化导出视图
+- 阶段 11
+  - `candidate_registry`
+  - `codex_review_input`
+  - `main_issue_selections`
+  - `deep_dive_targets`
+  - `selected_target_expansions`
+  - 多入口候选池 + 选择式深挖
 
 当前暂缓的方向：
 - 更复杂的历史基线仓储与长期趋势预测
@@ -172,6 +179,101 @@ SQL candidate 当前会补：
 - 若下游希望稳定消费正式报告素材，优先读取：
   - `report_writer_input`
   - `report_pack_exports`
+
+## 阶段 11 设计边界
+
+本轮新增的是“多入口候选池 + Codex 选择式深挖层”，仍然不是最终报告裁决器：
+
+- adapter 会先把 action / trace / sql / dependency / regression signal 合并成统一候选池
+- adapter 会把选择权交给 Codex 可读的评审输入，而不是在候选层写死最终主问题
+- adapter 只会对被选中的 `deep_dive_targets` 继续展开更重的 pack
+- adapter 仍然不直接输出最终根因、最终业务优先级和最终报告定稿
+
+### 当前并入候选池的主要入口
+
+- `diagnostic_candidate_pack`
+- `action_hotspot_pack`
+- 多 hotspot action 的 trace candidates
+- `slow_sql_pack`
+- `external_dependency_pack`
+- `comparison_signals_pack`
+
+同时会把下面这些结果作为候选增强层接入：
+
+- `business_labels_pack`
+- `stability_signals_pack`
+- `impact_signals_pack`
+- `knowledge_context_pack`
+
+### `report_fact_pack` 本轮新增字段
+
+- `candidate_registry`
+  - 统一候选池
+  - 每个候选会带 `candidate_key / candidate_type / target_ref / source_packs / source_basis / evidence_strength / impact_scope / review_hints / recommended_next_packs`
+- `codex_review_input`
+  - 给 Codex / ChatGPT 直接消费的结构化评审输入
+- `main_issue_selections`
+  - 当前建议优先进入正文主问题讨论的候选
+- `deep_dive_targets`
+  - 当前建议进一步 build 重 pack 的候选
+- `selected_target_expansions`
+  - 只对 `deep_dive_targets` 继续展开后的 pack 结果
+
+### `candidate_registry` 设计说明
+
+- `candidate_type`
+  - 当前控制在 `action / trace / sql / dependency / regression_signal`
+- `source_packs`
+  - 保留对象从哪些入口进入池子
+- `source_basis`
+  - 说明进入池子的具体原因，如 `top_hotspot / trace_candidate / comparison_regression`
+- `review_hints`
+  - 继续保持“可解释 hints”，而不是最终优先级结论
+- `recommended_next_packs`
+  - 说明如果要继续查，这个对象建议展开哪些 pack
+
+### `codex_review_input` 结构
+
+- `main_issue_candidates`
+- `observation_candidates`
+- `sql_candidates.main_issue_level`
+- `sql_candidates.optimization_level`
+- `deep_dive_targets`
+
+对应导出：
+
+- `00_internal/codex_review_input.md`
+- `00_internal/codex_review_input.json`
+
+### 选择式深挖说明
+
+当前 `report_fact_pack` 会按 `deep_dive_targets` 自动触发有限度的定向展开，典型映射如下：
+
+- action
+  - `action_fact_sheet`
+  - `action_dependency_breakdown_pack`
+- trace
+  - `trace_fact_sheet`
+- sql
+  - `sql_fact_sheet`
+- dependency
+  - `external_dependency_pack`
+  - `topology_dependency_pack`
+
+设计目标是：
+
+- 候选入口尽量宽
+- 深挖成本只花在被选中的对象上
+
+### `report_pack_exports` 新增路径
+
+在阶段 10 的基础上，本轮新增：
+
+- `00_internal/codex_review_input.md`
+- `00_internal/codex_review_input.json`
+- `03_issues/main_issue_selections.json`
+- `03_issues/deep_dive_targets.json`
+- `04_raw/candidate_registry.json`
 
 ## 阶段 9 设计边界
 
@@ -387,6 +489,11 @@ PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
 
 - `payload.issues`
 - `payload.observations`
+- `payload.candidate_registry`
+- `payload.codex_review_input`
+- `payload.main_issue_selections`
+- `payload.deep_dive_targets`
+- `payload.selected_target_expansions`
 - `payload.sql_main_candidates`
 - `payload.sql_opportunities`
 - `payload.report_writer_input`
