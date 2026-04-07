@@ -142,6 +142,47 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertGreater(payload["topology_summary"]["node_count"], 0)
         self.assertIn("component_type_counts", payload["breakdown_summary"])
 
+    def test_build_business_labels_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_business_labels_pack(context, source_mode="sample", limit=5)
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "business_labels_pack")
+        self.assertGreater(len(payload["objects"]), 0)
+        self.assertIn("label_counts", payload["summaries"])
+
+    def test_build_stability_signals_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_stability_signals_pack(context, source_mode="sample", limit=5)
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "stability_signals_pack")
+        self.assertGreater(len(payload["objects"]), 0)
+        self.assertIn("stability_class_counts", payload["summaries"])
+
+    def test_build_impact_signals_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_impact_signals_pack(context, source_mode="sample", limit=5)
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "impact_signals_pack")
+        self.assertGreater(len(payload["objects"]), 0)
+        self.assertIn("impact_tier", payload["objects"][0])
+
+    def test_build_comparison_signals_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_comparison_signals_pack(context, source_mode="sample", limit=5)
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "comparison_signals_pack")
+        self.assertEqual(payload["comparison_baseline"]["mode"], "previous_window")
+        self.assertGreater(len(payload["objects"]), 0)
+
+    def test_build_page_experience_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_page_experience_pack(context, source_mode="sample", limit=5)
+        data = envelope.to_dict()
+        payload = data["payload"]
+        self.assertEqual(envelope.pack_type, "page_experience_pack")
+        self.assertGreater(len(payload["pages"]), 0)
+        self.assertIn("browser_distribution", data["meta"]["missing_inputs"])
+
 
 if __name__ == "__main__":
     unittest.main()

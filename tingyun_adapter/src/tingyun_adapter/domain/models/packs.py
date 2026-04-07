@@ -181,3 +181,60 @@ class ReportFactPackPayload:
     issues: list[dict[str, Any]] = field(default_factory=list)
     drilldown_paths: list[str] = field(default_factory=list)
     evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class BusinessLabelsPackPayload:
+    scope: dict[str, Any]
+    objects: list[dict[str, Any]] = field(default_factory=list)
+    summaries: dict[str, Any] = field(default_factory=dict)
+    input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class StabilitySignalsPackPayload:
+    scope: dict[str, Any]
+    objects: list[dict[str, Any]] = field(default_factory=list)
+    summaries: dict[str, Any] = field(default_factory=list)
+    input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class ImpactSignalsPackPayload:
+    scope: dict[str, Any]
+    objects: list[dict[str, Any]] = field(default_factory=list)
+    summaries: dict[str, Any] = field(default_factory=dict)
+    input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class ComparisonSignalsPackPayload:
+    scope: dict[str, Any]
+    comparison_baseline: dict[str, Any] = field(default_factory=dict)
+    objects: list[dict[str, Any]] = field(default_factory=list)
+    summaries: dict[str, Any] = field(default_factory=dict)
+    input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class PageExperiencePackPayload:
+    scope: dict[str, Any]
+    pages: list[dict[str, Any]] = field(default_factory=list)
+    performance_summary: dict[str, Any] = field(default_factory=dict)
+    js_error_summary: dict[str, Any] = field(default_factory=dict)
+    browser_distribution: list[dict[str, Any]] = field(default_factory=list)
+    geo_distribution: list[dict[str, Any]] = field(default_factory=list)
+    platform_distribution: list[dict[str, Any]] = field(default_factory=list)
+    related_actions: list[dict[str, Any]] = field(default_factory=list)
+    related_dependencies: list[dict[str, Any]] = field(default_factory=list)
+    input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)

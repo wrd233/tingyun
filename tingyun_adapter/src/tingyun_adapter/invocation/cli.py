@@ -35,6 +35,11 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
             "slow_sql_pack",
             "sql_fact_sheet",
             "action_dependency_breakdown_pack",
+            "business_labels_pack",
+            "stability_signals_pack",
+            "impact_signals_pack",
+            "comparison_signals_pack",
+            "page_experience_pack",
         ],
     )
     parser.add_argument("--biz-system-id", type=int)
@@ -201,6 +206,16 @@ def main() -> int:
                 source_mode=args.source_mode,
                 action_ref=action_ref,
             )
+        elif args.build_pack == "business_labels_pack":
+            envelope = adapter.build_business_labels_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "stability_signals_pack":
+            envelope = adapter.build_stability_signals_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "impact_signals_pack":
+            envelope = adapter.build_impact_signals_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "comparison_signals_pack":
+            envelope = adapter.build_comparison_signals_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "page_experience_pack":
+            envelope = adapter.build_page_experience_pack(context, source_mode=args.source_mode, limit=args.limit)
         else:
             envelope = adapter.build_report_fact_pack(context, source_mode=args.source_mode)
         print(json.dumps(envelope.to_dict(), ensure_ascii=False, indent=2))

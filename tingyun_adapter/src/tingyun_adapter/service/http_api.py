@@ -33,6 +33,11 @@ PACK_TYPES = {
     "slow_sql_pack",
     "sql_fact_sheet",
     "action_dependency_breakdown_pack",
+    "business_labels_pack",
+    "stability_signals_pack",
+    "impact_signals_pack",
+    "comparison_signals_pack",
+    "page_experience_pack",
 }
 
 
@@ -332,7 +337,7 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                     op_name=request.op_name,
                     limit=request.limit,
                 )
-            else:
+            elif pack_type == "action_dependency_breakdown_pack":
                 action_ref = None
                 if request.action_id and request.application_id:
                     action_ref = ActionRef(
@@ -346,6 +351,18 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                     source_mode=request.source_mode,
                     action_ref=action_ref,
                 )
+            elif pack_type == "business_labels_pack":
+                envelope = adapter.build_business_labels_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "stability_signals_pack":
+                envelope = adapter.build_stability_signals_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "impact_signals_pack":
+                envelope = adapter.build_impact_signals_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "comparison_signals_pack":
+                envelope = adapter.build_comparison_signals_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "page_experience_pack":
+                envelope = adapter.build_page_experience_pack(context, source_mode=request.source_mode, limit=request.limit)
+            else:
+                envelope = adapter.build_report_fact_pack(context, source_mode=request.source_mode)
             return envelope.to_dict()
         except HTTPError as exc:
             raise HTTPException(status_code=502, detail=_http_error_detail(exc)) from exc

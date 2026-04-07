@@ -20,6 +20,11 @@ class PackType(str, Enum):
     SQL_FACT_SHEET = "sql_fact_sheet"
     ACTION_DEPENDENCY_BREAKDOWN = "action_dependency_breakdown_pack"
     REPORT_FACT = "report_fact_pack"
+    BUSINESS_LABELS = "business_labels_pack"
+    STABILITY_SIGNALS = "stability_signals_pack"
+    IMPACT_SIGNALS = "impact_signals_pack"
+    COMPARISON_SIGNALS = "comparison_signals_pack"
+    PAGE_EXPERIENCE = "page_experience_pack"
 
 
 class RelationType(str, Enum):

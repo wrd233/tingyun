@@ -36,14 +36,39 @@
   - `slow_sql_pack`
   - `sql_fact_sheet`
   - `action_dependency_breakdown_pack`
+- 阶段 7
+  - `business_labels_pack`
+  - `stability_signals_pack`
+  - `impact_signals_pack`
+  - `comparison_signals_pack`
+  - `page_experience_pack`
 
 当前暂缓的方向：
+- 更复杂的历史基线仓储与长期趋势预测
+- 更完整的页面侧 API 采集与 RUM 明细建模
 
-- `impact_signals`
-- `business_labels`
-- `stability_signals`
-- `comparison_signals`
+## 阶段 7 设计边界
+
+这 5 个新增能力仍然遵守 adapter 的统一原则：
+
+- 面向对象，不面向页面截图
+- 输出稳定 pack，而不是最终报告
+- 以事实、标签、轻量派生信号、对比结果为主
+- 不在 adapter 内输出最终根因、最终整改建议、最终优先级结论
+
+其中：
+
+- `business_labels_pack`
+  - 给 action / dependency / 派生 page 对象补充业务语义标签
+- `stability_signals_pack`
+  - 表达复现性、扩散范围、时间分布、波动特征
+- `impact_signals_pack`
+  - 提供排序辅助层，不替代人工判断
+- `comparison_signals_pack`
+  - 提供 `previous_window` 基线对比
 - `page_experience_pack`
+  - 当前先做降级版页面体验事实层
+  - 缺少页面侧专用输入时会在 `meta.missing_inputs` 中明确说明
 
 ## 本地配置
 

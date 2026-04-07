@@ -135,9 +135,13 @@ class Evidence:
 @dataclass
 class PackMeta:
     adapter_version: str = "0.1.0"
+    source_mode: str = "unknown"
     source_count: int = 0
     evidence_count: int = 0
+    missing_inputs: list[str] = field(default_factory=list)
     warnings: list[WarningMessage] = field(default_factory=list)
+    confidence_notes: list[str] = field(default_factory=list)
+    build_stats: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass

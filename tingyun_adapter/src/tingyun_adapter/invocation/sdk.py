@@ -36,6 +36,13 @@ from tingyun_adapter.usecases.component_builders import (
     build_database_component_pack,
     build_nosql_component_pack,
 )
+from tingyun_adapter.usecases.enhancement_builders import (
+    build_business_labels_pack,
+    build_comparison_signals_pack,
+    build_impact_signals_pack,
+    build_page_experience_pack,
+    build_stability_signals_pack,
+)
 from tingyun_adapter.usecases.extended_builders import (
     build_action_dependency_breakdown_pack,
     build_external_dependency_pack,
@@ -226,3 +233,18 @@ class Adapter:
             source_mode=source_mode,
             action_ref=action_ref,
         )
+
+    def build_business_labels_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
+        return build_business_labels_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_stability_signals_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
+        return build_stability_signals_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_impact_signals_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
+        return build_impact_signals_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_comparison_signals_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
+        return build_comparison_signals_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_page_experience_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
+        return build_page_experience_pack(self, context, source_mode=source_mode, limit=limit)

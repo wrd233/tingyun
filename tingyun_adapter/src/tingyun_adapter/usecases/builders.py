@@ -1117,8 +1117,27 @@ def _evidence(
     )
 
 
-def _pack(pack_type: str, context: AnalysisContext, payload: Any, *, evidence: list[Evidence], warnings: list[WarningMessage]) -> PackEnvelope:
-    meta = PackMeta(source_count=len(evidence), evidence_count=len(evidence), warnings=warnings)
+def _pack(
+    pack_type: str,
+    context: AnalysisContext,
+    payload: Any,
+    *,
+    evidence: list[Evidence],
+    warnings: list[WarningMessage],
+    source_mode: str = "unknown",
+    missing_inputs: Optional[list[str]] = None,
+    confidence_notes: Optional[list[str]] = None,
+    build_stats: Optional[dict[str, Any]] = None,
+) -> PackEnvelope:
+    meta = PackMeta(
+        source_mode=source_mode,
+        source_count=len(evidence),
+        evidence_count=len(evidence),
+        missing_inputs=missing_inputs or [],
+        warnings=warnings,
+        confidence_notes=confidence_notes or [],
+        build_stats=build_stats or {},
+    )
     return PackEnvelope(pack_type=pack_type, context=context, payload=payload, meta=meta)
 
 
