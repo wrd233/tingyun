@@ -265,6 +265,9 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(payload["biz_system"]["name"], "铃与堆场")
         self.assertIn("response", payload["trends"])
         self.assertGreater(len(payload["page_links"]), 0)
+        self.assertIn("url_status", payload["page_links"][0])
+        self.assertIn("fallback_url", payload["page_links"][0])
+        self.assertIn("url_source", payload["page_links"][0])
         self.assertGreater(len(payload["screenshot_hints"]), 0)
         self.assertIn("page_experience", payload["coverage_boundary"])
         self.assertGreater(len(payload["metric_semantics"]), 0)
@@ -437,6 +440,7 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertIn("browser_distribution", data["meta"]["missing_inputs"])
         self.assertEqual(payload["coverage_boundary"]["page_experience"]["status"], "partial")
         self.assertGreater(len(payload["page_links"]), 0)
+        self.assertIn(payload["page_links"][0]["url_status"], {"direct", "navigation_only", "unavailable"})
         self.assertGreater(len(payload["screenshot_hints"]), 0)
         self.assertIn("knowledge_context", payload)
         self.assertIn("candidate_action_links", payload["pages"][0])
@@ -449,6 +453,7 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertGreater(len(payload["screenshot_cards"]), 0)
         self.assertGreater(len(payload["page_links"]), 0)
         self.assertEqual(payload["screenshot_cards"][0]["figure_id"], "FIG-01")
+        self.assertTrue(payload["screenshot_cards"][0]["url"])
 
     def test_build_knowledge_context_pack_from_files(self) -> None:
         adapter, context, action_ref, _ = self._make_adapter_with_knowledge()
