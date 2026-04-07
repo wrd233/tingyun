@@ -7,6 +7,7 @@ from typing import Any
 
 from .config import RemoteClientSettings
 from .http_client import AdapterRemoteClient
+from .report_pack_builder import build_report_pack
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -41,6 +42,14 @@ def _build_parser() -> argparse.ArgumentParser:
     build_pack.add_argument("--op-name")
     build_pack.add_argument("--proposal-file")
     build_pack.add_argument("--persist-proposals", action=argparse.BooleanOptionalAction, default=True)
+
+    build_report = subparsers.add_parser("build-report-pack", help="Build a local report_pack directory from remote packs.")
+    build_report.add_argument("--biz-system-id", type=int, required=True)
+    build_report.add_argument("--start-time", required=True)
+    build_report.add_argument("--end-time", required=True)
+    build_report.add_argument("--source-mode")
+    build_report.add_argument("--limit", type=int, default=5)
+    build_report.add_argument("--output-dir", default="./report_pack")
     return parser
 
 
@@ -116,13 +125,34 @@ def main() -> None:
         payload = client.meta()
     elif args.command == "build-pack":
         payload = client.build_pack(args.pack_type, _pack_payload(args, settings.default_source_mode))
+    elif args.command == "build-report-pack":
+        payload = build_report_pack(
+            client,
+            biz_system_id=args.biz_system_id,
+            start_time=args.start_time,
+            end_time=args.end_time,
+            source_mode=args.source_mode or settings.default_source_mode,
+            limit=args.limit,
+            output_dir=args.output_dir,
+            command_display=" ".join(
+                [
+                    "build-report-pack",
+                    f"--biz-system-id {args.biz_system_id}",
+                    f"--start-time {args.start_time}",
+                    f"--end-time {args.end_time}",
+                    f"--source-mode {args.source_mode or settings.default_source_mode}",
+                    f"--limit {args.limit}",
+                    f"--output-dir {args.output_dir}",
+                ]
+            ),
+        )
     else:
         payload = {
             "service_base_url": settings.service_base_url,
             "config_path": settings.config_path,
             "has_service_api_key": bool(settings.service_api_key),
             "default_source_mode": settings.default_source_mode,
-            "commands": ["healthz", "meta", "build-pack"],
+            "commands": ["healthz", "meta", "build-pack", "build-report-pack"],
         }
 
     print(json.dumps(payload, ensure_ascii=False, indent=2))

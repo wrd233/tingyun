@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tingyun_adapter_client.cli import _load_proposals, _pack_payload
+from tingyun_adapter_client.cli import _build_parser, _load_proposals, _pack_payload
 
 
 class ClientCliTests(unittest.TestCase):
@@ -47,6 +47,31 @@ class ClientCliTests(unittest.TestCase):
             proposals = _load_proposals(str(path))
         self.assertEqual(len(proposals), 1)
         self.assertEqual(proposals[0]["proposal_type"], "action_labels")
+
+    def test_build_report_pack_parser_accepts_time_range(self) -> None:
+        parser = _build_parser()
+        args = parser.parse_args(
+            [
+                "build-report-pack",
+                "--biz-system-id",
+                "1065",
+                "--start-time",
+                "2025-12-20",
+                "--end-time",
+                "2026-03-31",
+                "--source-mode",
+                "live",
+                "--limit",
+                "6",
+                "--output-dir",
+                "./report_pack",
+            ]
+        )
+        self.assertEqual(args.command, "build-report-pack")
+        self.assertEqual(args.biz_system_id, 1065)
+        self.assertEqual(args.start_time, "2025-12-20")
+        self.assertEqual(args.end_time, "2026-03-31")
+        self.assertEqual(args.limit, 6)
 
 
 if __name__ == "__main__":

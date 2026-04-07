@@ -110,6 +110,7 @@
 - `screenshot_index_pack`
   - 用于聚合截图候选卡片与页面深链
   - 适合让 Codex / ChatGPT 直接生成 Word 中的“截图索引”
+  - `screenshot_cards` 现在也会同步带上 `url_status`、`direct_url`、`fallback_url`、`navigation_path`、`url_source`，避免上层导出层只能看到裸 `url`
 
 ## 阶段 7 设计边界
 

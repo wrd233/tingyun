@@ -1018,14 +1018,21 @@ def build_screenshot_index_pack(
 
     screenshot_cards = []
     for index, card in enumerate(cards, start=1):
+        matched_link = _match_screenshot_card_link(card, page_links)
         screenshot_cards.append(
             {
                 "figure_id": f"FIG-{index:02d}",
                 "title": card.get("title"),
                 "page_type": card.get("page_type"),
                 "url": card.get("url"),
+                "url_status": matched_link.get("url_status"),
+                "direct_url": matched_link.get("direct_url"),
+                "fallback_url": matched_link.get("fallback_url"),
+                "navigation_path": matched_link.get("navigation_path") or [],
+                "url_source": matched_link.get("url_source"),
                 "recommended_capture": card.get("recommended_capture") or [],
                 "recommended_annotations": card.get("recommended_annotations") or [],
+                "why_relevant": matched_link.get("why_relevant") or card.get("usage_in_report"),
                 "usage_in_report": card.get("usage_in_report"),
                 "suggested_report_section": card.get("suggested_report_section"),
                 "priority": card.get("priority", "medium"),
@@ -1093,6 +1100,38 @@ def _pack_scope(context: AnalysisContext, source_mode: str, limit: int) -> dict[
         "sourceMode": source_mode,
         "limit": limit,
     }
+
+
+def _match_screenshot_card_link(card: dict[str, Any], page_links: list[dict[str, Any]]) -> dict[str, Any]:
+    target_ref = card.get("target_ref") or {}
+    page_type = card.get("page_type")
+    url = card.get("url")
+    target_key = _target_ref_key(target_ref)
+
+    best_match: dict[str, Any] = {}
+    best_score = -1
+    for link in page_links:
+        score = 0
+        if page_type and link.get("page_type") == page_type:
+            score += 4
+        if url and link.get("url") == url:
+            score += 3
+        if target_key and _target_ref_key(link.get("target_ref") or {}) == target_key:
+            score += 5
+        if score > best_score:
+            best_match = link
+            best_score = score
+    return best_match if best_score > 0 else {}
+
+
+def _target_ref_key(target_ref: dict[str, Any]) -> tuple[tuple[str, str], ...]:
+    normalized: list[tuple[str, str]] = []
+    for key in sorted(target_ref):
+        value = target_ref.get(key)
+        if value is None:
+            continue
+        normalized.append((str(key), str(value)))
+    return tuple(normalized)
 
 
 def _action_target_ref(action: dict[str, Any]) -> dict[str, Any]:

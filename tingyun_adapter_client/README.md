@@ -24,6 +24,7 @@
 - `screenshot_index_pack` 这类面向正式报告取证的索引输出
 - `knowledge_context_pack` 这类面向大模型业务记忆复用的上下文输出
 - `knowledge_update_proposal_pack` 这类把模型建议沉淀到 `review_queue` 的写入入口
+- `build-report-pack` 这类把多个 pack 组装成本地 `report_pack/` 素材目录的导出入口
 
 ## 本地配置
 
@@ -183,6 +184,27 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
   --persist-proposals
 ```
 
+### 10. 构建本地 `report_pack`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-report-pack \
+  --biz-system-id 1065 \
+  --start-time '2025-12-20' \
+  --end-time '2026-03-31' \
+  --source-mode live \
+  --limit 6 \
+  --output-dir /Users/wangrundong/work/mywork/report_pack
+```
+
+这个命令会：
+
+- 先调用远端 `healthz` / `meta`
+- 再按时间窗批量拉取 `report_fact_pack`、`screenshot_index_pack`、`page_experience_pack`、`slow_sql_pack` 等核心 packs
+- 自动补抓重点 `action_fact_sheet`、`trace_fact_sheet`、`database_component_pack`、`sql_fact_sheet`、`instance_analysis_pack`
+- 在本地生成 `00_internal/` 到 `05_knowledge/` 的 `report_pack` 目录
+- 输出新版本 `screenshot_index.csv` 和带 `canonical_issue_key / primary_section / duplicate_of / evidence_role` 的 `issues.csv`
+
 补充说明：
 
 - client 现在会把 `queryTimestamp` 统一按字符串发给远端服务，避免 `trace_fact_sheet` 调用时出现 `422`
@@ -202,6 +224,8 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
   - 可帮助写出带主语和统计口径的描述
 - `evidence_linkage`
   - 可帮助把时间窗、接口、trace、SQL、依赖串成证据链
+- `build-report-pack` 的导出目录
+  - 适合把结构化 pack 继续转成可直接交给上层报告生成器消费的章节素材包
 
 ## 适合给 Codex 怎么用
 

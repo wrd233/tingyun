@@ -454,6 +454,11 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertGreater(len(payload["page_links"]), 0)
         self.assertEqual(payload["screenshot_cards"][0]["figure_id"], "FIG-01")
         self.assertTrue(payload["screenshot_cards"][0]["url"])
+        self.assertIn("url_status", payload["screenshot_cards"][0])
+        self.assertIn("direct_url", payload["screenshot_cards"][0])
+        self.assertIn("fallback_url", payload["screenshot_cards"][0])
+        self.assertIn("navigation_path", payload["screenshot_cards"][0])
+        self.assertIn("url_source", payload["screenshot_cards"][0])
 
     def test_build_knowledge_context_pack_from_files(self) -> None:
         adapter, context, action_ref, _ = self._make_adapter_with_knowledge()
