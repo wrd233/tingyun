@@ -322,6 +322,17 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertIn("00_internal/report_writer_input.json", payload["report_pack_exports"])
         self.assertIn("00_internal/template_outline.md", payload["report_pack_exports"])
         self.assertIn("02_sections/sql.md", payload["report_pack_exports"])
+        screenshot_export = payload["report_pack_exports"]["01_foundation/screenshot_index.csv"]
+        self.assertIn("direct_url", screenshot_export["columns"])
+        self.assertIn("fallback_url", screenshot_export["columns"])
+        self.assertIn("navigation_path", screenshot_export["columns"])
+        self.assertIn("why_relevant", screenshot_export["columns"])
+        self.assertIn("page_capability_boundary", payload["report_writer_input"])
+        self.assertIn("links_and_screenshots", payload["report_writer_input"])
+        deep_dive_types = {item.get("candidate_type") for item in payload["deep_dive_targets"]}
+        self.assertTrue({"trace", "sql", "dependency"} & deep_dive_types)
+        expansion_types = {item.get("pack_type") for item in payload["selected_target_expansions"]}
+        self.assertTrue({"trace_fact_sheet", "sql_fact_sheet", "external_dependency_pack", "topology_dependency_pack"} & expansion_types)
 
     def test_build_database_component_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)

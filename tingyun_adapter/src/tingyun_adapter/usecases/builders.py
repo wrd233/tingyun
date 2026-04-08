@@ -700,6 +700,10 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         trace_case=enriched_trace_case,
         page_payload=page_payload,
         screenshot_index_summary=screenshot_index_summary,
+        page_links=[],
+        screenshot_index_rows=screenshot_index_rows,
+        main_issue_selections=candidate_outcomes.get("main_issue_selections") or [],
+        deep_dive_targets=candidate_outcomes.get("deep_dive_targets") or [],
         template_mapping=template_mapping,
     )
     writer_markdown = render_writer_input_markdown(writer_input)
@@ -780,6 +784,24 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         *sql_fact_payloads.values(),
         *[item.get("payload") or {} for item in selected_target_expansions],
     )
+    writer_input = build_writer_input(
+        report_scope=report_scope,
+        summary=summary,
+        coverage_boundary=page_payload.get("coverage_boundary") or snapshot_payload.get("coverage_boundary") or default_coverage_boundary(adapter),
+        issues=issue_inventory.get("issues") or [],
+        observations=issue_inventory.get("observations") or [],
+        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+        trace_case=enriched_trace_case,
+        page_payload=page_payload,
+        screenshot_index_summary=screenshot_index_summary,
+        page_links=page_links,
+        screenshot_index_rows=screenshot_index_rows,
+        main_issue_selections=candidate_outcomes.get("main_issue_selections") or [],
+        deep_dive_targets=candidate_outcomes.get("deep_dive_targets") or [],
+        template_mapping=template_mapping,
+    )
+    writer_markdown = render_writer_input_markdown(writer_input)
     screenshot_hints = _aggregate_report_screenshot_hints(
         snapshot_payload,
         diagnostic_payload,
@@ -1883,6 +1905,9 @@ def _collect_trace_registry_candidates(
         for row in rows:
             summary = _trace_candidate_summary(row)
             summary["action_ref"] = dataclass_to_dict(action_ref)
+            summary["_registry_source_packs"] = ["trace_case_pack"]
+            summary["_registry_source_basis"] = ["trace_candidate", "multi_hotspot_trace"]
+            summary["_registry_review_hints"] = ["multi_hotspot_trace"]
             trace_key = str(summary.get("trace_id_numeric") or summary.get("trace_guid") or "")
             if not trace_key or trace_key in seen_trace_keys:
                 continue
@@ -1995,6 +2020,19 @@ def _build_selected_target_pack(
             op_name=target_ref.get("op_name"),
             limit=5,
         )
+    if pack_name == "database_component_pack" and kind == "sql":
+        component_name = target_ref.get("component_name")
+        if not component_name:
+            return None
+        return adapter.build_database_component_pack(
+            context,
+            source_mode=source_mode,
+            component_ref=DatabaseComponentRef(
+                biz_system_id=context.biz_system_id,
+                component_name=str(component_name),
+                component_subtype=target_ref.get("component_subtype"),
+            ),
+        )
     if pack_name == "external_dependency_pack":
         return adapter.build_external_dependency_pack(context, source_mode=source_mode)
     if pack_name == "topology_dependency_pack":
@@ -2076,6 +2114,9 @@ def _build_screenshot_index_rows(*payloads: dict[str, Any]) -> list[dict[str, An
             matched_link = _match_report_link(hint, links)
             rows.append(
                 {
+                    "section": hint.get("suggested_report_section"),
+                    "object_type": (hint.get("target_ref") or {}).get("kind") or hint.get("page_type"),
+                    "object_name": _screenshot_object_name(hint),
                     "figure_id": f"FIG-{figure_index:02d}",
                     "title": hint.get("title"),
                     "page_type": hint.get("page_type"),
@@ -2083,6 +2124,19 @@ def _build_screenshot_index_rows(*payloads: dict[str, Any]) -> list[dict[str, An
                     "priority": hint.get("priority", "medium"),
                     "url": hint.get("url"),
                     "url_status": matched_link.get("url_status") or "unknown",
+                    "direct_url": matched_link.get("direct_url"),
+                    "fallback_url": matched_link.get("fallback_url"),
+                    "navigation_path": matched_link.get("navigation_path") or [],
+                    "url_source": matched_link.get("url_source"),
+                    "suggested_capture": hint.get("recommended_capture") or [],
+                    "suggested_annotation": hint.get("recommended_annotations") or [],
+                    "why_relevant": matched_link.get("why_relevant") or hint.get("usage_in_report"),
+                    "evidence_linkage": {
+                        "target_ref": hint.get("target_ref") or {},
+                        "matched_target_ref": matched_link.get("target_ref") or {},
+                        "page_type": matched_link.get("page_type") or hint.get("page_type"),
+                        "url": matched_link.get("url") or hint.get("url"),
+                    },
                     "writer_summary": _report_screenshot_summary(hint, matched_link),
                 }
             )
@@ -2115,6 +2169,14 @@ def _report_screenshot_summary(hint: dict[str, Any], matched_link: dict[str, Any
     url_status = matched_link.get("url_status") or "unknown"
     usage = hint.get("usage_in_report") or ""
     return f"{section} | {title} | 链接状态={url_status} | 用途={usage}"
+
+
+def _screenshot_object_name(hint: dict[str, Any]) -> str:
+    target_ref = hint.get("target_ref") or {}
+    for key in ("display_name", "short_name", "raw_name", "action_name", "component_name", "node_id", "trace_id_numeric", "trace_guid"):
+        if target_ref.get(key):
+            return str(target_ref.get(key))
+    return str(hint.get("title") or hint.get("page_type") or "未命名对象")
 
 
 def _should_use_sample(adapter: Any, source_mode: str) -> bool:

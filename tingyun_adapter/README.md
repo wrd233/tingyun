@@ -115,6 +115,20 @@
 - `report_pack_exports`
   - 把“固定路径文件”表示成 pack 内的导出视图
 
+当前 `report_writer_input` 会优先按正式报告章节顺序组织素材，而不是按 pack 名称摊开，重点包含：
+
+- 巡检范围
+- 能力边界
+- 总体判断
+- 主问题摘要
+- observations 摘要
+- SQL 主问题
+- SQL 优化储备
+- trace 典型样本
+- 页面能力边界
+- 链接与截图摘要
+- 待人工定稿项
+
 ### `report_pack_exports` 当前固定路径
 
 - `01_foundation/screenshot_index.csv`
@@ -232,6 +246,13 @@ SQL candidate 当前会补：
 - `recommended_next_packs`
   - 说明如果要继续查，这个对象建议展开哪些 pack
 
+补充说明：
+
+- 候选池会同时消费 `diagnostic_candidate_pack`、`action_hotspot_pack`、`trace_case_pack`、`slow_sql_pack`、`external_dependency_pack`、`comparison_signals_pack`
+- 同对象多来源会先并集再去重
+- 弱候选会保留，但会额外标记 `low_frequency / weak_evidence / needs_confirmation`
+- `impact_signals_pack` 只作为排序与 review hint 增强层，不直接当作最终优先级结论
+
 ### `codex_review_input` 结构
 
 - `main_issue_candidates`
@@ -274,6 +295,29 @@ SQL candidate 当前会补：
 - `03_issues/main_issue_selections.json`
 - `03_issues/deep_dive_targets.json`
 - `04_raw/candidate_registry.json`
+
+其中 `01_foundation/screenshot_index.csv` 目前会显式导出：
+
+- `section`
+- `object_type`
+- `object_name`
+- `page_type`
+- `url_status`
+- `direct_url`
+- `fallback_url`
+- `navigation_path`
+- `url_source`
+- `suggested_capture`
+- `suggested_annotation`
+- `why_relevant`
+- `evidence_linkage`
+- `priority`
+
+兼容性说明：
+
+- 旧列如 `figure_id / title / writer_summary` 仍保留
+- 旧消费者仍可继续读取 `summary / issues / page_links / screenshot_hints`
+- 新消费者如果要直接做正式报告写作，优先读取 `report_writer_input`、`template_mapping` 和 `report_pack_exports`
 
 ## 阶段 9 设计边界
 

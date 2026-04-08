@@ -414,13 +414,24 @@ def build_candidate_registry(
 ) -> list[dict[str, Any]]:
     registry: list[dict[str, Any]] = []
     registry.extend(_system_signal_candidates(report_scope, snapshot_payload, diagnostic_payload))
+    registry.extend(_diagnostic_action_candidates(diagnostic_payload))
     registry.extend(_action_candidates(hotspot_payload, labels_payload, stability_payload, impact_payload))
-    registry.extend(_trace_candidates(trace_candidates, trace_case))
+    diagnostic_trace_candidates = [
+        {
+            **item,
+            "_registry_source_packs": ["diagnostic_candidate_pack"],
+            "_registry_source_basis": ["diagnostic_trace_candidate"],
+            "_registry_review_hints": ["diagnostic_shortlist"],
+        }
+        for item in (diagnostic_payload.get("trace_candidates") or [])
+    ]
+    registry.extend(_trace_candidates(trace_candidates + diagnostic_trace_candidates, trace_case))
     registry.extend(_sql_registry_candidates(sql_candidates))
     registry.extend(_dependency_candidates(external_payload))
     registry.extend(_comparison_candidates(comparison_payload))
     registry = _merge_candidate_registry(registry)
     registry = _enrich_candidate_registry_with_context(registry, labels_payload, stability_payload, impact_payload, comparison_payload, knowledge_payload)
+    registry = _annotate_candidate_review_state(registry)
     return sorted(registry, key=_candidate_sort_key)
 
 
@@ -429,12 +440,15 @@ def select_candidate_outcomes(candidate_registry: list[dict[str, Any]]) -> dict[
     observation_candidates: list[dict[str, Any]] = []
     sql_opportunity_candidates: list[dict[str, Any]] = []
     deep_dive_targets: list[dict[str, Any]] = []
+    expandable_candidates: list[dict[str, Any]] = []
 
     for candidate in candidate_registry:
         bucket = _candidate_selection_bucket(candidate)
         selected = dict(candidate)
         selected["selection_bucket"] = bucket
         selected["selection_reason"] = _candidate_selection_reason(candidate, bucket)
+        if selected.get("recommended_next_packs"):
+            expandable_candidates.append(selected)
         if bucket == "main_issue":
             main_issue_selections.append(selected)
         elif bucket == "sql_opportunity":
@@ -448,7 +462,7 @@ def select_candidate_outcomes(candidate_registry: list[dict[str, Any]]) -> dict[
         "main_issue_selections": main_issue_selections[:8],
         "observation_candidates": observation_candidates[:12],
         "sql_opportunity_candidates": sql_opportunity_candidates[:12],
-        "deep_dive_targets": deep_dive_targets[:6],
+        "deep_dive_targets": _prioritize_deep_dive_targets(_ensure_deep_dive_coverage(deep_dive_targets, expandable_candidates), limit=6),
     }
 
 
@@ -518,34 +532,70 @@ def build_template_mapping(
 ) -> dict[str, Any]:
     sections = [
         {
-            "section_id": "overview",
-            "section_title": "本次巡检范围与总体判断",
+            "section_id": "inspection_scope",
+            "section_title": "巡检范围",
             "source_paths": ["report_scope", "summary", "coverage_boundary"],
-            "writer_guidance": "先交代范围、时间窗和能力边界，再给出总体判断。",
+            "writer_guidance": "先交代业务系统、时间窗、样本来源和能力边界。",
         },
         {
-            "section_id": "issues",
-            "section_title": "重点问题清单",
-            "source_paths": ["issues", "issue_candidates"],
+            "section_id": "capability_boundary",
+            "section_title": "能力边界",
+            "source_paths": ["coverage_boundary", "page_boundary", "manual_review_items"],
+            "writer_guidance": "明确哪些页面侧指标只有代理证据，哪些数据当前不可确认。",
+        },
+        {
+            "section_id": "overall_judgment",
+            "section_title": "总体判断",
+            "source_paths": ["summary", "issues", "sql_main_candidates"],
+            "writer_guidance": "用总体判断承接主问题数量、观察项数量和 SQL 关注点。",
+        },
+        {
+            "section_id": "main_issues",
+            "section_title": "主问题摘要",
+            "source_paths": ["issues", "main_issue_selections", "issue_candidates"],
             "writer_guidance": "正文主问题优先使用 P0/P1，再补 P2 的影响说明。",
         },
         {
-            "section_id": "sql",
-            "section_title": "SQL 检查与优化建议",
-            "source_paths": ["sql_main_candidates", "sql_opportunities"],
-            "writer_guidance": "先写数据库整体结论，再写重点 SQL，最后列优化储备。",
+            "section_id": "observations",
+            "section_title": "观察项摘要",
+            "source_paths": ["observations", "issue_candidates"],
+            "writer_guidance": "观察项只保留弱证据、低频或待确认对象，不上升为最终主问题。",
         },
         {
-            "section_id": "trace",
-            "section_title": "请求追踪与根因样本",
+            "section_id": "sql_main",
+            "section_title": "SQL 主问题",
+            "source_paths": ["sql_main_candidates", "sql_opportunities"],
+            "writer_guidance": "先写数据库整体结论，再写重点 SQL 对业务链路的影响。",
+        },
+        {
+            "section_id": "sql_optimization",
+            "section_title": "SQL 优化储备",
+            "source_paths": ["sql_opportunities", "sql_candidates"],
+            "writer_guidance": "区分优化储备和主问题，不把所有优化 SQL 都拔高成主问题。",
+        },
+        {
+            "section_id": "trace_sample",
+            "section_title": "Trace 典型样本",
             "source_paths": ["trace_case"],
             "writer_guidance": "使用代表性 trace 说明瓶颈链路，明确证据边界。",
         },
         {
             "section_id": "page_boundary",
-            "section_title": "页面能力边界与截图索引",
-            "source_paths": ["coverage_boundary", "screenshot_index_summary"],
+            "section_title": "页面能力边界",
+            "source_paths": ["coverage_boundary", "page_boundary"],
             "writer_guidance": "缺少页面侧专用输入时，明确写能力边界，不要虚构页面问题。",
+        },
+        {
+            "section_id": "links_and_screenshots",
+            "section_title": "链接与截图摘要",
+            "source_paths": ["links_and_screenshots", "screenshot_index_summary"],
+            "writer_guidance": "给正式报告生成器一个单入口的链接、截图和页面导航摘要。",
+        },
+        {
+            "section_id": "manual_finalize",
+            "section_title": "待人工定稿项",
+            "source_paths": ["manual_review_items", "deep_dive_targets"],
+            "writer_guidance": "列出仍需人工确认、补图或业务语义复核的部分。",
         },
     ]
     return {
@@ -572,16 +622,27 @@ def build_writer_input(
     trace_case: dict[str, Any],
     page_payload: dict[str, Any],
     screenshot_index_summary: dict[str, Any],
+    page_links: list[dict[str, Any]],
+    screenshot_index_rows: list[dict[str, Any]],
+    main_issue_selections: list[dict[str, Any]],
+    deep_dive_targets: list[dict[str, Any]],
     template_mapping: dict[str, Any],
 ) -> dict[str, Any]:
     capability_boundary = coverage_boundary or {}
     manual_review_items = _manual_review_items(capability_boundary, issues, sql_main_candidates, page_payload)
+    links_and_screenshots = _build_links_and_screenshot_summary(page_links, screenshot_index_rows)
     section_evidence_map = {
-        "overview": ["system_snapshot.overview", "system_snapshot.health", "report_fact_pack.summary"],
-        "issues": ["report_fact_pack.issues", "report_fact_pack.issue_candidates"],
-        "sql": ["report_fact_pack.sql_main_candidates", "report_fact_pack.sql_opportunities"],
-        "trace": ["trace_case_pack.trace_case"],
-        "page": ["page_experience_pack.pages", "coverage_boundary", "screenshot_index_summary"],
+        "inspection_scope": ["report_fact_pack.report_scope", "report_fact_pack.summary"],
+        "capability_boundary": ["coverage_boundary", "page_experience_pack.coverage_boundary"],
+        "overall_judgment": ["report_fact_pack.summary", "report_fact_pack.issues", "report_fact_pack.sql_main_candidates"],
+        "main_issues": ["report_fact_pack.issues", "report_fact_pack.main_issue_selections", "report_fact_pack.issue_candidates"],
+        "observations": ["report_fact_pack.observations", "report_fact_pack.issue_candidates"],
+        "sql_main": ["report_fact_pack.sql_main_candidates", "slow_sql_pack.operation_overview"],
+        "sql_optimization": ["report_fact_pack.sql_opportunities", "report_fact_pack.sql_candidates"],
+        "trace_sample": ["trace_case_pack.trace_case"],
+        "page_boundary": ["page_experience_pack.pages", "coverage_boundary"],
+        "links_and_screenshots": ["report_fact_pack.page_links", "screenshot_index_summary", "01_foundation/screenshot_index.csv"],
+        "manual_finalize": ["report_fact_pack.deep_dive_targets", "manual_review_items"],
     }
     executive_summary = {
         "overall_assessment": _overall_assessment(issues, sql_main_candidates, capability_boundary),
@@ -591,21 +652,43 @@ def build_writer_input(
     }
     return {
         "scope": report_scope,
+        "section_order": [section.get("section_id") for section in template_mapping.get("sections") or []],
         "capability_boundary": capability_boundary,
         "executive_summary": executive_summary,
+        "overall_judgment": {
+            "assessment": executive_summary["overall_assessment"],
+            "main_issue_count": len(issues),
+            "observation_count": len(observations),
+            "sql_main_issue_count": len(sql_main_candidates),
+            "deep_dive_target_count": len(deep_dive_targets),
+        },
+        "main_issue_summary": issues,
         "top_issues": issues,
+        "observation_summary": observations,
         "observations": observations,
+        "sql_main_issue_summary": sql_main_candidates,
         "sql_main_candidates": sql_main_candidates,
+        "sql_optimization_reserve": sql_opportunities,
         "sql_opportunities": sql_opportunities,
+        "trace_typical_samples": [trace_case] if trace_case else [],
         "trace_cases": [trace_case] if trace_case else [],
+        "page_capability_boundary": {
+            "coverage_boundary": (page_payload or {}).get("coverage_boundary") or capability_boundary,
+            "boundary_statement": _page_boundary_statement((page_payload or {}).get("coverage_boundary") or capability_boundary),
+            "pages": (page_payload or {}).get("pages") or [],
+            "related_actions": (page_payload or {}).get("related_actions") or [],
+        },
         "page_boundary": {
             "coverage_boundary": (page_payload or {}).get("coverage_boundary") or capability_boundary,
             "pages": (page_payload or {}).get("pages") or [],
             "related_actions": (page_payload or {}).get("related_actions") or [],
         },
+        "links_and_screenshots": links_and_screenshots,
         "screenshot_index_summary": screenshot_index_summary,
         "section_evidence_map": section_evidence_map,
         "template_mapping": template_mapping,
+        "main_issue_selections": main_issue_selections,
+        "deep_dive_targets": deep_dive_targets,
         "manual_review_items": manual_review_items,
         "summary": summary,
     }
@@ -625,10 +708,10 @@ def render_writer_input_markdown(writer_input: dict[str, Any]) -> str:
         f"- 页面体验边界说明: {(((writer_input.get('capability_boundary') or {}).get('page_experience') or {}).get('reason') or '未提供')}",
         "",
         "## 总体判断",
-        f"- 结论: {((writer_input.get('executive_summary') or {}).get('overall_assessment') or '待补充')}",
-        f"- 主问题数: {((writer_input.get('executive_summary') or {}).get('top_issue_count') or 0)}",
-        f"- 观察项数: {((writer_input.get('executive_summary') or {}).get('observation_count') or 0)}",
-        f"- SQL 重点对象数: {((writer_input.get('executive_summary') or {}).get('sql_focus_count') or 0)}",
+        f"- 结论: {((writer_input.get('overall_judgment') or {}).get('assessment') or '待补充')}",
+        f"- 主问题数: {((writer_input.get('overall_judgment') or {}).get('main_issue_count') or 0)}",
+        f"- 观察项数: {((writer_input.get('overall_judgment') or {}).get('observation_count') or 0)}",
+        f"- SQL 重点对象数: {((writer_input.get('overall_judgment') or {}).get('sql_main_issue_count') or 0)}",
         "",
         "## 重点问题清单摘要",
     ]
@@ -679,8 +762,11 @@ def render_writer_input_markdown(writer_input: dict[str, Any]) -> str:
         [
             "",
             "## 页面能力边界与截图摘要",
-            f"- 页面对象数: {len((writer_input.get('page_boundary') or {}).get('pages') or [])}",
+            f"- 页面对象数: {len((writer_input.get('page_capability_boundary') or {}).get('pages') or [])}",
             f"- 截图候选数: {((writer_input.get('screenshot_index_summary') or {}).get('card_count') or 0)}",
+            f"- 页面边界说明: {((writer_input.get('page_capability_boundary') or {}).get('boundary_statement') or '未提供')}",
+            f"- 直链数量: {((writer_input.get('links_and_screenshots') or {}).get('direct_link_count') or 0)}",
+            f"- 仅导航数量: {((writer_input.get('links_and_screenshots') or {}).get('navigation_only_count') or 0)}",
             "",
             "## 待人工定稿项",
         ]
@@ -825,19 +911,31 @@ SQL_EXPORT_COLUMNS = [
 ]
 
 SCREENSHOT_EXPORT_COLUMNS = [
+    "section",
+    "object_type",
+    "object_name",
     "figure_id",
     "title",
     "page_type",
     "suggested_report_section",
     "priority",
     "url_status",
+    "direct_url",
+    "fallback_url",
+    "navigation_path",
+    "url_source",
+    "suggested_capture",
+    "suggested_annotation",
+    "why_relevant",
+    "evidence_linkage",
     "writer_summary",
 ]
 
 
 def _system_signal_candidates(report_scope: dict[str, Any], snapshot_payload: dict[str, Any], diagnostic_payload: dict[str, Any]) -> list[dict[str, Any]]:
     candidates: list[dict[str, Any]] = []
-    for index, signal in enumerate(diagnostic_payload.get("system_signals") or [], start=1):
+    system_signals = list(snapshot_payload.get("suspect_signals") or []) + list(diagnostic_payload.get("system_signals") or [])
+    for index, signal in enumerate(system_signals, start=1):
         signal_type = str(signal.get("type") or f"signal_{index}")
         level = str(signal.get("level") or "medium")
         candidates.append(
@@ -847,7 +945,7 @@ def _system_signal_candidates(report_scope: dict[str, Any], snapshot_payload: di
                 "target_ref": {"kind": "system_signal", "signal_type": signal_type, "biz_system_id": report_scope.get("bizSystemId")},
                 "display_name": signal_type,
                 "source_packs": ["diagnostic_candidate_pack", "system_snapshot"],
-                "source_basis": ["system_signal"],
+                "source_basis": ["system_signal", "suspect_signal"],
                 "evidence_refs": [str(signal.get("source_api") or "system_snapshot")],
                 "evidence_strength": "medium" if level in {"medium", "high"} else "weak",
                 "occurrence_count": max(1, _safe_int(signal.get("value"))),
@@ -874,6 +972,44 @@ def _system_signal_candidates(report_scope: dict[str, Any], snapshot_payload: di
                 "impact_scope": "cross_object",
                 "review_hints": ["action_health_warn", "high"],
                 "recommended_next_packs": ["system_snapshot", "diagnostic_candidate_pack"],
+            }
+        )
+    return candidates
+
+
+def _diagnostic_action_candidates(diagnostic_payload: dict[str, Any]) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+    for hotspot in diagnostic_payload.get("action_candidates") or []:
+        action = hotspot.get("action") or {}
+        if not action.get("id") or not action.get("application_id"):
+            continue
+        candidates.append(
+            {
+                "candidate_key": f"action:{action.get('application_id')}:{action.get('id')}:{action.get('type')}",
+                "candidate_type": "action",
+                "target_ref": {
+                    "kind": "action",
+                    "biz_system_id": action.get("biz_system_id"),
+                    "application_id": action.get("application_id"),
+                    "action_id": action.get("id"),
+                    "action_type": action.get("type"),
+                },
+                "display_name": action.get("name") or action.get("alias"),
+                "source_packs": ["diagnostic_candidate_pack"],
+                "source_basis": ["diagnostic_hotspot"],
+                "evidence_refs": ["diagnostic_candidate_pack"],
+                "evidence_strength": "strong" if hotspot.get("overview") else "medium",
+                "occurrence_count": max(
+                    _safe_int((action.get("metrics") or {}).get("slow_count")),
+                    _safe_int((action.get("metrics") or {}).get("error_count")),
+                    1,
+                ),
+                "active_windows": 1,
+                "impact_scope": "core_path" if hotspot.get("suspect_signals") else "local",
+                "review_hints": _unique_strings(
+                    ["diagnostic_shortlist"] + [signal.get("type") for signal in hotspot.get("suspect_signals") or [] if signal.get("type")]
+                ),
+                "recommended_next_packs": ["action_fact_sheet", "action_dependency_breakdown_pack"],
             }
         )
     return candidates
@@ -950,14 +1086,14 @@ def _trace_candidates(trace_candidates: list[dict[str, Any]], trace_case: dict[s
                     "query_timestamp": item.get("query_timestamp"),
                 },
                 "display_name": item.get("trace_id_numeric") or item.get("trace_guid"),
-                "source_packs": ["trace_case_pack"],
-                "source_basis": ["trace_candidate"],
+                "source_packs": item.get("_registry_source_packs") or ["trace_case_pack"],
+                "source_basis": item.get("_registry_source_basis") or ["trace_candidate"],
                 "evidence_refs": ["graph/query/overview"],
                 "evidence_strength": "strong" if item.get("suspect_signals") else "medium",
                 "occurrence_count": 1,
                 "active_windows": 1,
                 "impact_scope": "core_path" if review_hints else "local",
-                "review_hints": _unique_strings(review_hints),
+                "review_hints": _unique_strings(review_hints + list(item.get("_registry_review_hints") or [])),
                 "recommended_next_packs": ["trace_fact_sheet"],
             }
         )
@@ -1014,7 +1150,7 @@ def _sql_registry_candidates(sql_candidates: list[dict[str, Any]]) -> list[dict[
                 "active_windows": 2 if item.get("trace_binding_strength") in {"strong", "medium"} else 1,
                 "impact_scope": "core_path" if len(item.get("impact_objects") or []) >= 2 else ("cross_object" if len(item.get("impact_objects") or []) >= 1 else "local"),
                 "review_hints": _unique_strings(hints),
-                "recommended_next_packs": ["sql_fact_sheet"],
+                "recommended_next_packs": ["sql_fact_sheet", "database_component_pack"] if item.get("component_name") else ["sql_fact_sheet"],
                 "report_recommendation": item.get("report_recommendation"),
             }
         )
@@ -1138,6 +1274,17 @@ def _enrich_candidate_registry_with_context(
     return registry
 
 
+def _annotate_candidate_review_state(registry: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    for item in registry:
+        review_hints = list(item.get("review_hints") or [])
+        if _safe_int(item.get("occurrence_count")) <= 1:
+            review_hints.append("low_frequency")
+        if str(item.get("evidence_strength") or "weak") == "weak":
+            review_hints.extend(["weak_evidence", "needs_confirmation"])
+        item["review_hints"] = _unique_strings(review_hints)
+    return registry
+
+
 def _candidate_selection_bucket(candidate: dict[str, Any]) -> str:
     candidate_type = str(candidate.get("candidate_type") or "")
     evidence_strength = str(candidate.get("evidence_strength") or "weak")
@@ -1150,7 +1297,7 @@ def _candidate_selection_bucket(candidate: dict[str, Any]) -> str:
             return "main_issue"
         if "optimization" in review_hints or report_recommendation == "appendix_candidate":
             return "sql_opportunity"
-        if evidence_strength == "weak":
+        if candidate.get("recommended_next_packs"):
             return "deep_dive"
         return "observation"
 
@@ -1158,6 +1305,10 @@ def _candidate_selection_bucket(candidate: dict[str, Any]) -> str:
         return "main_issue"
     if {"new_risk", "regressed", "high_review", "high_latency", "error_present"} & review_hints and evidence_strength != "weak":
         return "main_issue"
+    if candidate_type in {"trace", "dependency"} and candidate.get("recommended_next_packs"):
+        return "deep_dive"
+    if candidate_type == "action" and candidate.get("recommended_next_packs") and impact_scope in {"core_path", "cross_object"}:
+        return "deep_dive"
     if "low_frequency" in review_hints or "needs_confirmation" in review_hints or evidence_strength == "weak":
         return "observation"
     if candidate.get("recommended_next_packs"):
@@ -1434,7 +1585,7 @@ def _recommended_next_packs_for_target_ref(target_ref: dict[str, Any]) -> list[s
     if kind == "trace":
         return ["trace_fact_sheet"]
     if kind == "sql":
-        return ["sql_fact_sheet"]
+        return ["sql_fact_sheet", "database_component_pack"]
     if kind == "dependency":
         return ["external_dependency_pack", "topology_dependency_pack"]
     if kind == "instance":
@@ -1484,6 +1635,68 @@ def _candidate_sort_key(item: dict[str, Any]) -> tuple[int, int, int, str]:
         -_safe_int(item.get("occurrence_count")),
         str(item.get("display_name") or ""),
     )
+
+
+def _prioritize_deep_dive_targets(items: list[dict[str, Any]], *, limit: int) -> list[dict[str, Any]]:
+    type_priority = {"trace": 0, "sql": 1, "dependency": 2, "action": 3, "regression_signal": 4}
+    strength_priority = {"strong": 0, "medium": 1, "weak": 2}
+    ordered = sorted(
+        items,
+        key=lambda item: (
+            type_priority.get(str(item.get("candidate_type") or ""), 9),
+            strength_priority.get(str(item.get("evidence_strength") or "weak"), 9),
+            -_safe_int(item.get("occurrence_count")),
+            str(item.get("display_name") or ""),
+        ),
+    )
+    selected: list[dict[str, Any]] = []
+    used_keys: set[str] = set()
+    for candidate_type in ("trace", "sql", "dependency", "action"):
+        match = next((item for item in ordered if item.get("candidate_type") == candidate_type and str(item.get("candidate_key") or "") not in used_keys), None)
+        if not match:
+            continue
+        selected.append(match)
+        used_keys.add(str(match.get("candidate_key") or ""))
+        if len(selected) >= limit:
+            return selected[:limit]
+    for item in ordered:
+        key = str(item.get("candidate_key") or "")
+        if key in used_keys:
+            continue
+        selected.append(item)
+        used_keys.add(key)
+        if len(selected) >= limit:
+            break
+    return selected[:limit]
+
+
+def _ensure_deep_dive_coverage(
+    deep_dive_targets: list[dict[str, Any]],
+    expandable_candidates: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    combined = list(deep_dive_targets)
+    used_keys = {str(item.get("candidate_key") or "") for item in deep_dive_targets}
+    existing_types = {str(item.get("candidate_type") or "") for item in deep_dive_targets}
+    for candidate_type in ("trace", "sql", "dependency", "action"):
+        if candidate_type in existing_types:
+            continue
+        supplement = next(
+            (
+                item
+                for item in expandable_candidates
+                if item.get("candidate_type") == candidate_type and str(item.get("candidate_key") or "") not in used_keys
+            ),
+            None,
+        )
+        if not supplement:
+            continue
+        promoted = dict(supplement)
+        promoted["selection_bucket"] = "deep_dive"
+        promoted["selection_reason"] = _candidate_selection_reason(promoted, "deep_dive")
+        combined.append(promoted)
+        used_keys.add(str(promoted.get("candidate_key") or ""))
+        existing_types.add(candidate_type)
+    return combined
 
 
 def _unique_strings(items: list[Any]) -> list[str]:
@@ -1539,6 +1752,40 @@ def _manual_review_items(
     if any(item.get("report_priority") == "P0" for item in issues):
         items.append("存在 P0 问题，建议人工确认标题表述和影响范围后再定稿。")
     return items
+
+
+def _page_boundary_statement(capability_boundary: dict[str, Any]) -> str:
+    page_boundary = (capability_boundary or {}).get("page_experience") or {}
+    if page_boundary.get("status") == "partial":
+        return f"页面代理证据: {page_boundary.get('reason') or '当前只有后端/拓扑代理证据。'}"
+    return str(page_boundary.get("reason") or "未提供页面能力边界说明。")
+
+
+def _build_links_and_screenshot_summary(
+    page_links: list[dict[str, Any]],
+    screenshot_index_rows: list[dict[str, Any]],
+) -> dict[str, Any]:
+    direct_links = [item for item in page_links if item.get("url_status") == "direct"]
+    navigation_only = [item for item in page_links if item.get("url_status") == "navigation_only"]
+    unavailable = [item for item in page_links if item.get("url_status") == "unavailable"]
+    return {
+        "direct_link_count": len(direct_links),
+        "navigation_only_count": len(navigation_only),
+        "unavailable_link_count": len(unavailable),
+        "high_priority_screenshots": [item for item in screenshot_index_rows if item.get("priority") == "high"][:5],
+        "link_samples": [
+            {
+                "page_type": item.get("page_type"),
+                "url_status": item.get("url_status"),
+                "direct_url": item.get("direct_url"),
+                "fallback_url": item.get("fallback_url"),
+                "navigation_path": item.get("navigation_path") or [],
+                "url_source": item.get("url_source"),
+                "why_relevant": item.get("why_relevant"),
+            }
+            for item in page_links[:8]
+        ],
+    }
 
 
 def _render_issue_markdown(items: list[dict[str, Any]], *, fallback: str) -> list[str]:

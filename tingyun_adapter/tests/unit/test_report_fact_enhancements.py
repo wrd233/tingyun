@@ -137,12 +137,18 @@ class ReportFactEnhancementTests(unittest.TestCase):
             trace_case={},
             page_payload={},
             screenshot_index_summary={"card_count": 0},
+            page_links=[],
+            screenshot_index_rows=[],
+            main_issue_selections=[],
+            deep_dive_targets=[],
             template_mapping={"sections": []},
         )
         markdown = render_writer_input_markdown(writer_input)
         self.assertIn("能力边界", markdown)
         self.assertIn("缺少 RUM 明细", markdown)
         self.assertGreater(len(writer_input["manual_review_items"]), 0)
+        self.assertIn("section_order", writer_input)
+        self.assertIn("page_capability_boundary", writer_input)
 
     def test_candidate_registry_merges_action_and_comparison_sources(self) -> None:
         registry = build_candidate_registry(
@@ -200,6 +206,42 @@ class ReportFactEnhancementTests(unittest.TestCase):
         self.assertIn("comparison_signals_pack", candidate["source_packs"])
         self.assertIn("regressed", candidate["review_hints"])
 
+    def test_candidate_registry_accepts_diagnostic_trace_and_marks_weak_candidates(self) -> None:
+        registry = build_candidate_registry(
+            report_scope={"bizSystemId": 1065},
+            snapshot_payload={"health": {}, "suspect_signals": [{"type": "high_response_time_ms", "level": "high", "source_api": "overview"}]},
+            diagnostic_payload={
+                "system_signals": [],
+                "action_candidates": [],
+                "trace_candidates": [
+                    {
+                        "trace_id_numeric": "trace-1065-1",
+                        "trace_guid": "guid-1",
+                        "query_timestamp": "1700000000000",
+                        "suspect_signals": [],
+                        "_registry_source_packs": ["diagnostic_candidate_pack"],
+                        "_registry_source_basis": ["diagnostic_trace_candidate"],
+                    }
+                ],
+            },
+            hotspot_payload={"hotspots": []},
+            trace_candidates=[],
+            trace_case={},
+            sql_candidates=[],
+            external_payload={"external_dependencies": []},
+            comparison_payload={"objects": []},
+            labels_payload={"objects": []},
+            stability_payload={"objects": []},
+            impact_payload={"objects": []},
+            knowledge_payload={"core_context": {}},
+        )
+        trace_candidate = next(item for item in registry if item["candidate_type"] == "trace")
+        signal_candidate = next(item for item in registry if item["candidate_type"] == "regression_signal")
+        self.assertIn("diagnostic_candidate_pack", trace_candidate["source_packs"])
+        self.assertIn("diagnostic_trace_candidate", trace_candidate["source_basis"])
+        self.assertIn("low_frequency", trace_candidate["review_hints"])
+        self.assertIn("suspect_signal", signal_candidate["source_basis"])
+
     def test_codex_review_input_groups_candidates(self) -> None:
         candidate_registry = [
             {
@@ -238,6 +280,52 @@ class ReportFactEnhancementTests(unittest.TestCase):
         self.assertIn("优化机会级 SQL 候选", markdown)
         self.assertEqual(len(review_input["main_issue_candidates"]), 1)
         self.assertEqual(len(review_input["sql_candidates"]["optimization_level"]), 1)
+
+    def test_select_candidate_outcomes_prioritizes_multi_type_deep_dive_targets(self) -> None:
+        candidate_registry = [
+            {
+                "candidate_key": "trace:1",
+                "candidate_type": "trace",
+                "display_name": "trace-1",
+                "evidence_strength": "medium",
+                "impact_scope": "local",
+                "review_hints": ["needs_confirmation"],
+                "recommended_next_packs": ["trace_fact_sheet"],
+            },
+            {
+                "candidate_key": "sql:1",
+                "candidate_type": "sql",
+                "display_name": "sql-1",
+                "evidence_strength": "weak",
+                "impact_scope": "local",
+                "review_hints": [],
+                "recommended_next_packs": ["sql_fact_sheet", "database_component_pack"],
+                "report_recommendation": "section_highlight",
+            },
+            {
+                "candidate_key": "dependency:1",
+                "candidate_type": "dependency",
+                "display_name": "dep-1",
+                "evidence_strength": "medium",
+                "impact_scope": "local",
+                "review_hints": ["needs_confirmation"],
+                "recommended_next_packs": ["external_dependency_pack", "topology_dependency_pack"],
+            },
+            {
+                "candidate_key": "action:1",
+                "candidate_type": "action",
+                "display_name": "action-1",
+                "evidence_strength": "medium",
+                "impact_scope": "core_path",
+                "review_hints": [],
+                "recommended_next_packs": ["action_fact_sheet", "action_dependency_breakdown_pack"],
+            },
+        ]
+        outcomes = select_candidate_outcomes(candidate_registry)
+        deep_dive_types = [item["candidate_type"] for item in outcomes["deep_dive_targets"]]
+        self.assertIn("trace", deep_dive_types)
+        self.assertIn("sql", deep_dive_types)
+        self.assertIn("dependency", deep_dive_types)
 
 
 if __name__ == "__main__":
