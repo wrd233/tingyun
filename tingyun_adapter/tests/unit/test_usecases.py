@@ -8,6 +8,7 @@ from pathlib import Path
 from tingyun_adapter.config.settings import AdapterSettings
 from tingyun_adapter.domain.models.common import ActionRef, DatabaseComponentRef
 from tingyun_adapter.invocation.sdk import Adapter
+from tingyun_adapter.usecases.build_session import BuildSession
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -293,7 +294,8 @@ class UsecaseBuilderTests(unittest.TestCase):
     def test_build_report_fact_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
         envelope = self.adapter.build_report_fact_pack(context, source_mode="sample")
-        payload = envelope.to_dict()["payload"]
+        data = envelope.to_dict()
+        payload = data["payload"]
         self.assertEqual(envelope.pack_type, "report_fact_pack")
         self.assertEqual(payload["report_scope"]["bizSystemId"], 1059)
         self.assertIn("summary", payload)
@@ -318,6 +320,9 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertIn("04_raw/sql_candidates.json", payload["report_pack_exports"])
         self.assertIn("00_internal/codex_review_input.md", payload["report_pack_exports"])
         self.assertIn("00_internal/codex_review_input.json", payload["report_pack_exports"])
+        self.assertIn("diagnostics", payload)
+        self.assertIn("phase_1", payload["diagnostics"])
+        self.assertIn("upstream_call_count", data["meta"]["build_stats"])
         self.assertIn("00_internal/report_writer_input.md", payload["report_pack_exports"])
         self.assertIn("00_internal/report_writer_input.json", payload["report_pack_exports"])
         self.assertIn("00_internal/template_outline.md", payload["report_pack_exports"])
@@ -417,6 +422,7 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertGreater(len(payload["page_links"]), 0)
         self.assertGreater(len(payload["screenshot_hints"]), 0)
         self.assertGreater(len(payload["evidence_linkage"]["related_traces"]), 0)
+        self.assertEqual(payload["diagnostics"]["mode"], "full")
 
     def test_build_action_dependency_breakdown_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
@@ -446,6 +452,7 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(envelope.pack_type, "stability_signals_pack")
         self.assertGreater(len(payload["objects"]), 0)
         self.assertIn("stability_class_counts", payload["summaries"])
+        self.assertIn("deep_dive_action_ids", payload["diagnostics"])
 
     def test_build_impact_signals_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
@@ -462,8 +469,17 @@ class UsecaseBuilderTests(unittest.TestCase):
         payload = envelope.to_dict()["payload"]
         self.assertEqual(envelope.pack_type, "comparison_signals_pack")
         self.assertEqual(payload["comparison_baseline"]["mode"], "previous_window")
+        self.assertIn(payload["comparison_baseline"]["comparison_mode"], {"summary", "full"})
         self.assertEqual(payload["comparison_baseline"]["history_source"], "previous_window_plus_knowledge")
         self.assertGreater(len(payload["objects"]), 0)
+
+    def test_build_session_uses_shards_for_long_window(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=90 * 24 * 60)
+        session = BuildSession(context=context, source_mode="sample")
+        self.assertEqual(session.time_strategy.mode, "auto_sharded_summary")
+        self.assertEqual(session.time_strategy.comparison_mode, "summary")
+        self.assertEqual(session.time_strategy.short_window_minutes, 30 * 24 * 60)
+        self.assertGreater(session.time_strategy.shard_count, 1)
 
     def test_build_page_experience_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)

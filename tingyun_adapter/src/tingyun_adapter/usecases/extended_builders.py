@@ -26,6 +26,7 @@ from tingyun_adapter.normalizers.field_normalizer import unwrap_data
 from tingyun_adapter.normalizers.metric_normalizer import normalize_metric_fields
 from tingyun_adapter.normalizers.op_name_decoder import decode_op_name, encode_op_name
 from tingyun_adapter.usecases.builders import (
+    _coerce_evidence_list,
     _evidence,
     _extract_action_rows,
     _load_matching_action_overview,
@@ -58,6 +59,20 @@ from tingyun_adapter.usecases.report_support import (
     make_screenshot_hint,
     time_window_text,
 )
+from tingyun_adapter.usecases.build_session import BuildSession, context_signature, shard_contexts
+
+
+def _session_lookup(session: Optional[BuildSession], namespace: str, key: Any) -> Any | None:
+    if session is None:
+        return None
+    found, value = session.lookup(namespace, key)
+    return value if found else None
+
+
+def _session_store(session: Optional[BuildSession], namespace: str, key: Any, value: Any) -> Any:
+    if session is None:
+        return value
+    return session.store(namespace, key, value)
 
 
 def build_instance_analysis_pack(
@@ -251,7 +266,202 @@ def build_instance_analysis_pack(
     )
 
 
-def build_topology_dependency_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
+def _cached_database_component_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str,
+    session: Optional[BuildSession],
+) -> list[dict[str, Any]]:
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "raw:database_component_rows", cache_key)
+    if cached is not None:
+        return cached
+    rows = [normalize_metric_fields(row) for row in _extract_content_rows(_load_database_list(adapter, context, source_mode=source_mode)[0])]
+    return _session_store(session, "raw:database_component_rows", cache_key, rows)
+
+
+def _cached_database_analysis_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    ref: DatabaseComponentRef,
+    *,
+    source_mode: str,
+    session: Optional[BuildSession],
+) -> list[dict[str, Any]]:
+    cache_key = (context_signature(context), ref.component_name, ref.component_subtype, source_mode)
+    cached = _session_lookup(session, "raw:database_analysis_rows", cache_key)
+    if cached is not None:
+        return cached
+    rows = _decoded_operation_rows(_extract_content_rows(_load_database_analysis(adapter, context, ref, source_mode=source_mode)))
+    return _session_store(session, "raw:database_analysis_rows", cache_key, rows)
+
+
+def _cached_database_operate_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    ref: DatabaseComponentRef,
+    *,
+    source_mode: str,
+    session: Optional[BuildSession],
+) -> list[dict[str, Any]]:
+    cache_key = (context_signature(context), ref.component_name, ref.component_subtype, source_mode)
+    cached = _session_lookup(session, "raw:database_operate_rows", cache_key)
+    if cached is not None:
+        return cached
+    rows = _extract_content_rows(_load_database_operate_analysis(adapter, context, ref, source_mode=source_mode))
+    return _session_store(session, "raw:database_operate_rows", cache_key, rows)
+
+
+def _cached_database_impacted_action_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    ref: DatabaseComponentRef,
+    *,
+    source_mode: str,
+    op_name: str,
+    session: Optional[BuildSession],
+) -> list[dict[str, Any]]:
+    cache_key = (context_signature(context), ref.component_name, ref.component_subtype, source_mode, op_name)
+    cached = _session_lookup(session, "raw:database_impacted_actions", cache_key)
+    if cached is not None:
+        return cached
+    rows = _extract_content_rows(
+        _load_database_impacted_actions(
+            adapter,
+            context,
+            ref,
+            source_mode=source_mode,
+            op_name=op_name,
+        )
+    )
+    return _session_store(session, "raw:database_impacted_actions", cache_key, rows)
+
+
+def _cached_database_related_trace_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    ref: DatabaseComponentRef,
+    *,
+    source_mode: str,
+    top_action: Optional[dict[str, Any]],
+    op_name: str,
+    session: Optional[BuildSession],
+) -> list[dict[str, Any]]:
+    action_key = (
+        top_action.get("actionId") if top_action else None,
+        top_action.get("actionType") if top_action else None,
+    )
+    cache_key = (context_signature(context), ref.component_name, ref.component_subtype, source_mode, op_name, action_key)
+    cached = _session_lookup(session, "raw:database_related_traces", cache_key)
+    if cached is not None:
+        return cached
+    rows = _normalize_component_trace_rows(
+        _extract_content_rows(
+            _load_database_related_traces(
+                adapter,
+                context,
+                ref,
+                source_mode=source_mode,
+                top_action=top_action,
+                op_name=op_name,
+            )
+        )
+    )
+    return _session_store(session, "raw:database_related_traces", cache_key, rows)
+
+
+def _merge_external_dependency_payloads(shard_payloads: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any]]:
+    merged: dict[str, dict[str, Any]] = {}
+    for payload in shard_payloads:
+        for item in payload.get("external_dependencies") or []:
+            key = str(item.get("node_id") or item.get("protocol") or "")
+            if not key:
+                continue
+            existing = merged.get(key)
+            if existing is None:
+                clone = dict(item)
+                clone["shard_hits"] = 1
+                merged[key] = clone
+                continue
+            existing["shard_hits"] = int(existing.get("shard_hits") or 1) + 1
+            for metric_key in ("response_time_ms", "error_rate", "throughput", "link_count"):
+                if _numeric(item.get(metric_key)) > _numeric(existing.get(metric_key)):
+                    existing[metric_key] = item.get(metric_key)
+            upstream_nodes = list(existing.get("upstream_nodes") or [])
+            for node in item.get("upstream_nodes") or []:
+                if node not in upstream_nodes:
+                    upstream_nodes.append(node)
+            existing["upstream_nodes"] = upstream_nodes
+    ranked = sorted(
+        merged.values(),
+        key=lambda item: (
+            _numeric(item.get("response_time_ms")) or 0.0,
+            _numeric(item.get("error_rate")) or 0.0,
+            int(item.get("shard_hits") or 1),
+        ),
+        reverse=True,
+    )
+    return ranked, _external_protocol_summary(ranked)
+
+
+def _merge_slow_sql_payloads(shard_payloads: list[dict[str, Any]], *, limit: int) -> tuple[list[dict[str, Any]], dict[str, Any], list[dict[str, Any]]]:
+    merged: dict[tuple[str, str, str], dict[str, Any]] = {}
+    selected_components: list[dict[str, Any]] = []
+    for payload in shard_payloads:
+        for component in payload.get("selected_components") or []:
+            if component not in selected_components:
+                selected_components.append(component)
+        for row in payload.get("top_sqls") or []:
+            key = (
+                str(row.get("component_name") or row.get("componentName") or ""),
+                str(row.get("component_subtype") or row.get("componentSubtype") or ""),
+                str(row.get("op_name_decoded") or row.get("opName") or ""),
+            )
+            if not key[2]:
+                continue
+            existing = merged.get(key)
+            if existing is None:
+                clone = dict(row)
+                clone["shard_hits"] = 1
+                merged[key] = clone
+                continue
+            existing["shard_hits"] = int(existing.get("shard_hits") or 1) + 1
+            for metric_key in ("response_time_ms", "total_response_time_ms", "traceCount", "count", "error_count", "errorCount"):
+                if _numeric(row.get(metric_key)) > _numeric(existing.get(metric_key)):
+                    existing[metric_key] = row.get(metric_key)
+            if row.get("sql_features") and not existing.get("sql_features"):
+                existing["sql_features"] = row.get("sql_features")
+    ranked = sorted(
+        merged.values(),
+        key=lambda row: (
+            _numeric(row.get("response_time_ms")) or 0.0,
+            _numeric(row.get("total_response_time_ms")) or 0.0,
+            int(row.get("shard_hits") or 1),
+        ),
+        reverse=True,
+    )[:limit]
+    overview = {
+        "component_count": len(selected_components),
+        "sql_count": len(merged),
+        "statement_type_counts": _statement_type_counts(list(merged.values())),
+        "high_trace_sql_count": len([row for row in merged.values() if (_numeric(row.get("traceCount")) or 0.0) > 0]),
+    }
+    return ranked, overview, selected_components
+
+
+def build_topology_dependency_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    session: Optional[BuildSession] = None,
+) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "pack:topology_dependency_pack", cache_key)
+    if cached is not None:
+        return cached
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
 
@@ -349,7 +559,7 @@ def build_topology_dependency_pack(adapter: Any, context: AnalysisContext, *, so
             "recommended_next_pages": page_links,
         },
     )
-    return _pack(
+    envelope = _pack(
         PackType.TOPOLOGY_DEPENDENCY.value,
         context,
         payload,
@@ -357,11 +567,132 @@ def build_topology_dependency_pack(adapter: Any, context: AnalysisContext, *, so
         warnings=warnings,
         source_mode=source_mode,
     )
+    return _session_store(session, "pack:topology_dependency_pack", cache_key, envelope)
 
 
-def build_external_dependency_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
+def build_external_dependency_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    session: Optional[BuildSession] = None,
+) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "pack:external_dependency_pack", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
+
+    shard_context_list = shard_contexts(context, session.time_strategy)
+    if len(shard_context_list) > 1:
+        shard_payloads: list[dict[str, Any]] = []
+        for shard_context in shard_context_list:
+            shard_envelope = build_external_dependency_pack(
+                adapter,
+                shard_context,
+                source_mode=source_mode,
+                session=session,
+            )
+            warnings.extend(shard_envelope.meta.warnings)
+            shard_payloads.append(shard_envelope.to_dict()["payload"])
+        external_dependencies, protocol_summary = _merge_external_dependency_payloads(shard_payloads)
+        topology_summary = {
+            "node_count": max([(payload.get("topology_summary") or {}).get("node_count") or 0 for payload in shard_payloads] or [0]),
+            "line_count": max([(payload.get("topology_summary") or {}).get("line_count") or 0 for payload in shard_payloads] or [0]),
+            "external_dependency_count": len(external_dependencies),
+            "protocol_count": len(protocol_summary.get("protocols", [])),
+        }
+        biz_system = {
+            "id": context.biz_system_id,
+            "name": next(
+                (
+                    (payload.get("biz_system") or {}).get("name")
+                    for payload in shard_payloads
+                    if (payload.get("biz_system") or {}).get("name")
+                ),
+                None,
+            ),
+        }
+        payload = ExternalDependencyPackPayload(
+            biz_system=biz_system,
+            topology_summary=topology_summary,
+            protocol_summary=protocol_summary,
+            external_dependencies=external_dependencies,
+            suspect_signals=_external_dependency_signals(external_dependencies),
+            evidence=[entry for payload in shard_payloads for entry in (payload.get("evidence") or [])],
+        )
+        biz_ref = {"kind": "biz_system", "biz_system_id": context.biz_system_id}
+        page_links = [
+            make_console_link(
+                adapter,
+                context,
+                page_type="external_dependency",
+                label="外部依赖页",
+                why_relevant="用于查看 HTTP、MQ 等外部依赖的调用量、响应和错误。",
+                suggested_report_section="3.2 应用检查",
+                navigation_path=["业务系统", "外部依赖"],
+                suggested_filters={"bizSystemId": context.biz_system_id},
+                target_ref=biz_ref,
+            )
+        ]
+        screenshot_hints = [
+            make_screenshot_hint(
+                title="外部依赖热点截图建议",
+                page_type="external_dependency",
+                url=page_links[0]["url"],
+                recommended_capture=["外部依赖列表", "协议分布", "高延迟依赖"],
+                recommended_annotations=["标出高延迟依赖", "标出高错误依赖", "标出受影响上游应用"],
+                usage_in_report="可用于外部依赖影响面说明。",
+                suggested_report_section="3.2 应用检查",
+                target_ref=biz_ref,
+                priority="medium",
+            )
+        ]
+        metric_semantics = [
+            make_metric_semantic(
+                metric_name="response_time_ms",
+                subject_type="external_dependency",
+                subject_key=f"biz_system:{context.biz_system_id}:external_dependencies",
+                aggregation="average",
+                unit="ms",
+                time_window=time_window_text(context),
+                sample_scope="all external dependencies in selected business scope",
+            )
+        ]
+        payload = apply_report_support(
+            payload,
+            page_links=page_links,
+            screenshot_hints=screenshot_hints,
+            metric_semantics=metric_semantics,
+            coverage_boundary=default_coverage_boundary(adapter),
+            evidence_linkage={
+                "related_time_windows": [dataclass_to_dict(context.time_window)],
+                "related_actions": [],
+                "related_traces": [],
+                "related_sqls": [],
+                "related_dependencies": external_dependencies[:10],
+                "recommended_next_pages": page_links,
+            },
+        )
+        envelope = _pack(
+            PackType.EXTERNAL_DEPENDENCY.value,
+            context,
+            payload,
+            evidence=_coerce_evidence_list(payload.evidence),
+            warnings=warnings,
+            source_mode=source_mode,
+            build_stats=session.build_stats(
+                stats_snapshot,
+                collection_count=len(external_dependencies),
+                ranking_count=len(external_dependencies),
+                deep_dive_count=0,
+                extra={"protocol_count": len(protocol_summary.get("protocols", []))},
+            ),
+        )
+        return _session_store(session, "pack:external_dependency_pack", cache_key, envelope)
 
     detail_graph_payload = _load_biz_detail_graph(adapter, context, source_mode=source_mode)
     detail_graph = unwrap_data(detail_graph_payload) or {}
@@ -465,14 +796,22 @@ def build_external_dependency_pack(adapter: Any, context: AnalysisContext, *, so
             "recommended_next_pages": page_links,
         },
     )
-    return _pack(
+    envelope = _pack(
         PackType.EXTERNAL_DEPENDENCY.value,
         context,
         payload,
         evidence=evidence,
         warnings=warnings,
         source_mode=source_mode,
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(external_dependencies),
+            ranking_count=len(external_dependencies),
+            deep_dive_count=0,
+            extra={"protocol_count": len(protocol_summary.get("protocols", []))},
+        ),
     )
+    return _session_store(session, "pack:external_dependency_pack", cache_key, envelope)
 
 
 def build_slow_sql_pack(
@@ -482,16 +821,141 @@ def build_slow_sql_pack(
     source_mode: str = "auto",
     component_ref: Optional[DatabaseComponentRef] = None,
     limit: int = 10,
+    session: Optional[BuildSession] = None,
+    preloaded_component_rows: Optional[list[dict[str, Any]]] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (
+        context_signature(context),
+        source_mode,
+        dataclass_to_dict(component_ref) if component_ref else None,
+        limit,
+    )
+    cached = _session_lookup(session, "pack:slow_sql_pack", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
+    pool_limits = session.get_pool_limits("slow_sql", fallback_limit=limit)
 
-    component_rows = [normalize_metric_fields(row) for row in _extract_content_rows(_load_database_list(adapter, context, source_mode=source_mode)[0])]
+    shard_context_list = shard_contexts(context, session.time_strategy)
+    if component_ref is None and len(shard_context_list) > 1:
+        shard_payloads: list[dict[str, Any]] = []
+        for shard_context in shard_context_list:
+            shard_envelope = build_slow_sql_pack(
+                adapter,
+                shard_context,
+                source_mode=source_mode,
+                component_ref=component_ref,
+                limit=pool_limits.collection_limit,
+                session=session,
+            )
+            warnings.extend(shard_envelope.meta.warnings)
+            shard_payloads.append(shard_envelope.to_dict()["payload"])
+        top_sqls, operation_overview, selected_components = _merge_slow_sql_payloads(
+            shard_payloads,
+            limit=pool_limits.collection_limit,
+        )
+        scope = {
+            "bizSystemId": context.biz_system_id,
+            "componentNames": [row.get("componentName") for row in selected_components],
+            "limit": limit,
+        }
+        payload = SlowSQLPackPayload(
+            scope=scope,
+            selected_components=selected_components,
+            top_sqls=top_sqls,
+            operation_overview=operation_overview,
+            diagnostics={
+                "pool_limits": dataclass_to_dict(pool_limits),
+                "time_strategy": dataclass_to_dict(session.time_strategy),
+                "selected_component_count": len(selected_components),
+            },
+            suspect_signals=_slow_sql_signals(top_sqls, operation_overview),
+            evidence=[entry for shard_payload in shard_payloads for entry in (shard_payload.get("evidence") or [])],
+        )
+        page_links = [
+            make_console_link(
+                adapter,
+                context,
+                page_type="slow_sql_list",
+                label="慢 SQL 列表页",
+                why_relevant="用于查看业务系统范围内的慢 SQL Top。",
+                suggested_report_section="3.4 SQL 检查",
+                navigation_path=["业务系统", "数据库组件", "慢 SQL"],
+                suggested_filters={"bizSystemId": context.biz_system_id, "componentNames": scope.get("componentNames")},
+                target_ref={"kind": "slow_sql_scope", "biz_system_id": context.biz_system_id},
+            )
+        ]
+        screenshot_hints = [
+            make_screenshot_hint(
+                title="慢 SQL 总表截图建议",
+                page_type="slow_sql_list",
+                url=page_links[0]["url"],
+                recommended_capture=["慢 SQL Top 列表", "语句类型分布", "高 trace SQL 列表"],
+                recommended_annotations=["标出最慢 SQL", "标出受影响组件", "标出高调用或高 trace SQL"],
+                usage_in_report="可用于慢 SQL 总览和排序说明。",
+                suggested_report_section="3.4 SQL 检查",
+                target_ref=page_links[0]["target_ref"],
+                priority="high",
+            )
+        ]
+        metric_semantics = [
+            make_metric_semantic(
+                metric_name="response_time_ms",
+                subject_type="sql_operation",
+                subject_key=f"biz_system:{context.biz_system_id}:slow_sql_top",
+                aggregation="average",
+                unit="ms",
+                time_window=time_window_text(context),
+                sample_scope="top SQL operations across selected database components",
+            )
+        ]
+        payload = apply_report_support(
+            payload,
+            page_links=page_links,
+            screenshot_hints=screenshot_hints,
+            metric_semantics=metric_semantics,
+            coverage_boundary=default_coverage_boundary(adapter),
+            evidence_linkage={
+                "related_time_windows": [dataclass_to_dict(context.time_window)],
+                "related_actions": [],
+                "related_traces": [],
+                "related_sqls": top_sqls[:10],
+                "related_dependencies": [],
+                "recommended_next_pages": page_links,
+            },
+        )
+        envelope = _pack(
+            PackType.SLOW_SQL.value,
+            context,
+            payload,
+            evidence=_coerce_evidence_list(payload.evidence),
+            warnings=warnings,
+            source_mode=source_mode,
+            build_stats=session.build_stats(
+                stats_snapshot,
+                collection_count=operation_overview.get("sql_count") or len(top_sqls),
+                ranking_count=min(len(top_sqls), pool_limits.ranking_limit),
+                deep_dive_count=0,
+                extra={"component_count": len(selected_components)},
+            ),
+        )
+        return _session_store(session, "pack:slow_sql_pack", cache_key, envelope)
+
+    component_rows = preloaded_component_rows or _cached_database_component_rows(
+        adapter,
+        context,
+        source_mode=source_mode,
+        session=session,
+    )
     selected_components = _select_database_components(adapter, context, source_mode=source_mode, component_rows=component_rows, component_ref=component_ref)
     if not selected_components:
         warnings.append(WarningMessage(code="slow_sql_empty_component", message="没有可用的 Database 组件来分析 SQL。", source_api="Database/list"))
-        payload = SlowSQLPackPayload(scope={"bizSystemId": context.biz_system_id}, evidence=[])
-        return _pack(PackType.SLOW_SQL.value, context, payload, evidence=evidence, warnings=warnings)
+        payload = SlowSQLPackPayload(scope={"bizSystemId": context.biz_system_id}, diagnostics={"time_strategy": dataclass_to_dict(session.time_strategy)}, evidence=[])
+        envelope = _pack(PackType.SLOW_SQL.value, context, payload, evidence=evidence, warnings=warnings)
+        return _session_store(session, "pack:slow_sql_pack", cache_key, envelope)
 
     aggregated_sqls: list[dict[str, Any]] = []
     for selected in selected_components:
@@ -500,8 +964,8 @@ def build_slow_sql_pack(
             component_name=str(selected.get("componentName") or ""),
             component_subtype=selected.get("componentSubtype"),
         )
-        analysis_rows = _decoded_operation_rows(_extract_content_rows(_load_database_analysis(adapter, context, ref, source_mode=source_mode)))
-        operate_rows = _extract_content_rows(_load_database_operate_analysis(adapter, context, ref, source_mode=source_mode))
+        analysis_rows = _cached_database_analysis_rows(adapter, context, ref, source_mode=source_mode, session=session)
+        operate_rows = _cached_database_operate_rows(adapter, context, ref, source_mode=source_mode, session=session)
         evidence.append(
             _evidence(
                 evidence_id=f"slow_sql_analysis_{ref.component_name}",
@@ -537,7 +1001,7 @@ def build_slow_sql_pack(
         ),
         reverse=True,
     )
-    top_sqls = aggregated_sqls[:limit]
+    top_sqls = aggregated_sqls[: pool_limits.collection_limit]
     operation_overview = {
         "component_count": len(selected_components),
         "sql_count": len(aggregated_sqls),
@@ -555,6 +1019,11 @@ def build_slow_sql_pack(
         selected_components=selected_components,
         top_sqls=top_sqls,
         operation_overview=operation_overview,
+        diagnostics={
+            "pool_limits": dataclass_to_dict(pool_limits),
+            "time_strategy": dataclass_to_dict(session.time_strategy),
+            "selected_component_count": len(selected_components),
+        },
         suspect_signals=_slow_sql_signals(top_sqls, operation_overview),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
@@ -610,14 +1079,22 @@ def build_slow_sql_pack(
             "recommended_next_pages": page_links,
         },
     )
-    return _pack(
+    envelope = _pack(
         PackType.SLOW_SQL.value,
         context,
         payload,
         evidence=evidence,
         warnings=warnings,
         source_mode=source_mode,
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(aggregated_sqls),
+            ranking_count=min(len(top_sqls), pool_limits.ranking_limit),
+            deep_dive_count=0,
+            extra={"component_count": len(selected_components)},
+        ),
     )
+    return _session_store(session, "pack:slow_sql_pack", cache_key, envelope)
 
 
 def build_sql_fact_sheet(
@@ -628,55 +1105,97 @@ def build_sql_fact_sheet(
     component_ref: Optional[DatabaseComponentRef] = None,
     op_name: Optional[str] = None,
     limit: int = 10,
+    mode: str = "full",
+    session: Optional[BuildSession] = None,
+    preloaded_component_rows: Optional[list[dict[str, Any]]] = None,
+    preloaded_analysis_rows: Optional[list[dict[str, Any]]] = None,
+    preloaded_operate_rows: Optional[list[dict[str, Any]]] = None,
+    selected_sql_row: Optional[dict[str, Any]] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (
+        context_signature(context),
+        source_mode,
+        dataclass_to_dict(component_ref) if component_ref else None,
+        op_name,
+        limit,
+        mode,
+    )
+    cached = _session_lookup(session, "pack:sql_fact_sheet", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
 
-    component_rows = [normalize_metric_fields(row) for row in _extract_content_rows(_load_database_list(adapter, context, source_mode=source_mode)[0])]
+    component_rows = preloaded_component_rows or _cached_database_component_rows(
+        adapter,
+        context,
+        source_mode=source_mode,
+        session=session,
+    )
     selected_component = _resolve_sql_component(adapter, context, source_mode=source_mode, component_rows=component_rows, component_ref=component_ref)
     if not selected_component:
         warnings.append(WarningMessage(code="sql_fact_missing_component", message="没有可用的 Database 组件来构建 SQL fact sheet。", source_api="Database/list"))
-        payload = SQLFactSheetPayload(selector={}, evidence=[])
-        return _pack(PackType.SQL_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+        payload = SQLFactSheetPayload(selector={}, diagnostics={"mode": mode}, evidence=[])
+        envelope = _pack(PackType.SQL_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+        return _session_store(session, "pack:sql_fact_sheet", cache_key, envelope)
 
     ref = DatabaseComponentRef(
         biz_system_id=context.biz_system_id,
         component_name=str(selected_component.get("componentName") or ""),
         component_subtype=selected_component.get("componentSubtype"),
     )
-    analysis_rows = _decoded_operation_rows(_extract_content_rows(_load_database_analysis(adapter, context, ref, source_mode=source_mode)))
+    analysis_rows = preloaded_analysis_rows or _cached_database_analysis_rows(
+        adapter,
+        context,
+        ref,
+        source_mode=source_mode,
+        session=session,
+    )
     if not analysis_rows:
         warnings.append(WarningMessage(code="sql_fact_missing_analysis", message="当前组件没有 SQL 操作样本。", source_api="Database/analysis"))
-        payload = SQLFactSheetPayload(selector={"componentName": ref.component_name}, component=selected_component, evidence=[])
-        return _pack(PackType.SQL_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+        payload = SQLFactSheetPayload(
+            selector={"componentName": ref.component_name},
+            component=selected_component,
+            diagnostics={"mode": mode},
+            evidence=[],
+        )
+        envelope = _pack(PackType.SQL_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings)
+        return _session_store(session, "pack:sql_fact_sheet", cache_key, envelope)
 
-    selected_sql = _resolve_sql_row(analysis_rows, op_name)
+    selected_sql = selected_sql_row or _resolve_sql_row(analysis_rows, op_name)
     if op_name and selected_sql != analysis_rows[0] and not _op_name_matches(selected_sql, op_name):
         warnings.append(WarningMessage(code="sql_fact_fallback", message="未找到指定 SQL，已回退到当前最慢 SQL。", source_api="Database/analysis"))
 
-    related_actions = _extract_content_rows(
-        _load_database_impacted_actions(
+    related_actions: list[dict[str, Any]] = []
+    related_traces: list[dict[str, Any]] = []
+    if mode == "full":
+        related_actions = _cached_database_impacted_action_rows(
             adapter,
             context,
             ref,
             source_mode=source_mode,
             op_name=str(selected_sql.get("op_name_raw") or selected_sql.get("opName") or ""),
-        )
-    )[:limit]
-    top_action = related_actions[0] if related_actions else None
-    related_traces = _normalize_component_trace_rows(
-        _extract_content_rows(
-            _load_database_related_traces(
-                adapter,
-                context,
-                ref,
-                source_mode=source_mode,
-                top_action=top_action,
-                op_name=str(selected_sql.get("op_name_raw") or selected_sql.get("opName") or ""),
-            )
-        )
-    )[:limit]
-    operate_rows = _extract_content_rows(_load_database_operate_analysis(adapter, context, ref, source_mode=source_mode))
+            session=session,
+        )[:limit]
+        top_action = related_actions[0] if related_actions else None
+        related_traces = _cached_database_related_trace_rows(
+            adapter,
+            context,
+            ref,
+            source_mode=source_mode,
+            top_action=top_action,
+            op_name=str(selected_sql.get("op_name_raw") or selected_sql.get("opName") or ""),
+            session=session,
+        )[:limit]
+    operate_rows = preloaded_operate_rows or _cached_database_operate_rows(
+        adapter,
+        context,
+        ref,
+        source_mode=source_mode,
+        session=session,
+    )
 
     selector = {
         "componentName": ref.component_name,
@@ -737,6 +1256,12 @@ def build_sql_fact_sheet(
         related_actions=related_actions,
         related_traces=related_traces,
         drilldown_keys=drilldown_keys,
+        diagnostics={
+            "mode": mode,
+            "time_strategy": dataclass_to_dict(session.time_strategy),
+            "reused_analysis_rows": preloaded_analysis_rows is not None,
+            "reused_operate_rows": preloaded_operate_rows is not None,
+        },
         suspect_signals=_sql_fact_signals(selected_sql, related_actions, related_traces, sql_features),
         evidence=[dataclass_to_dict(item) for item in evidence],
     )
@@ -829,14 +1354,22 @@ def build_sql_fact_sheet(
             "recommended_next_pages": page_links,
         },
     )
-    return _pack(
+    envelope = _pack(
         PackType.SQL_FACT_SHEET.value,
         context,
         payload,
         evidence=evidence,
         warnings=warnings,
         source_mode=source_mode,
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(analysis_rows),
+            ranking_count=min(len(analysis_rows), session.get_pool_limits("slow_sql", fallback_limit=limit).ranking_limit),
+            deep_dive_count=1 if mode == "full" else 0,
+            extra={"mode": mode, "related_action_count": len(related_actions), "related_trace_count": len(related_traces)},
+        ),
     )
+    return _session_store(session, "pack:sql_fact_sheet", cache_key, envelope)
 
 
 def build_action_dependency_breakdown_pack(

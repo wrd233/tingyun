@@ -117,6 +117,20 @@ def _http_error_detail(exc: HTTPError) -> dict[str, Any]:
     }
 
 
+def _rate_limit_headers(
+    *,
+    wait_seconds: float,
+    limiter: InMemoryRateLimiter,
+    scope: str,
+) -> dict[str, str]:
+    return {
+        "Retry-After": str(max(1, int(wait_seconds) + 1)),
+        "X-RateLimit-Scope": scope,
+        "X-RateLimit-Min-Interval-Ms": str(max(0, limiter.min_interval_ms)),
+        "X-RateLimit-Max-Requests-Per-Minute": str(max(0, limiter.max_requests_per_minute)),
+    }
+
+
 def create_app(*, config_path: Optional[str] = None) -> FastAPI:
     settings = AdapterSettings.from_env(config_path=config_path)
     adapter = Adapter(settings)
@@ -146,7 +160,7 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                 raise HTTPException(
                     status_code=429,
                     detail=f"Rate limit exceeded, retry after {wait_seconds:.2f}s",
-                    headers={"Retry-After": str(max(1, int(wait_seconds) + 1))},
+                    headers=_rate_limit_headers(wait_seconds=wait_seconds, limiter=rate_limiter, scope="anonymous_host"),
                 )
             return
         if x_adapter_api_key != expected and bearer != expected:
@@ -158,7 +172,7 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
             raise HTTPException(
                 status_code=429,
                 detail=f"Rate limit exceeded, retry after {wait_seconds:.2f}s",
-                headers={"Retry-After": str(max(1, int(wait_seconds) + 1))},
+                headers=_rate_limit_headers(wait_seconds=wait_seconds, limiter=rate_limiter, scope="authorized_client"),
             )
 
     @app.get("/healthz")

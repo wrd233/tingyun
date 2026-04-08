@@ -54,6 +54,20 @@ from tingyun_adapter.usecases.report_support import (
     make_screenshot_hint,
     time_window_text,
 )
+from tingyun_adapter.usecases.build_session import BuildSession, comparison_contexts, context_signature
+
+
+def _session_lookup(session: Optional[BuildSession], namespace: str, key: Any) -> Any | None:
+    if session is None:
+        return None
+    found, value = session.lookup(namespace, key)
+    return value if found else None
+
+
+def _session_store(session: Optional[BuildSession], namespace: str, key: Any, value: Any) -> Any:
+    if session is None:
+        return value
+    return session.store(namespace, key, value)
 
 
 def build_business_labels_pack(
@@ -62,14 +76,24 @@ def build_business_labels_pack(
     *,
     source_mode: str = "auto",
     limit: int = 10,
+    session: Optional[BuildSession] = None,
+    preloaded_hotspots: Optional[PackEnvelope] = None,
+    preloaded_topology: Optional[PackEnvelope] = None,
+    preloaded_external: Optional[PackEnvelope] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode, limit)
+    cached = _session_lookup(session, "pack:business_labels_pack", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     missing_inputs: list[str] = []
     knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
-    hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
-    topology = build_topology_dependency_pack(adapter, context, source_mode=source_mode)
-    external = build_external_dependency_pack(adapter, context, source_mode=source_mode)
+    hotspots = preloaded_hotspots or build_action_hotspot_pack(adapter, context, source_mode=source_mode, session=session)
+    topology = preloaded_topology or build_topology_dependency_pack(adapter, context, source_mode=source_mode, session=session)
+    external = preloaded_external or build_external_dependency_pack(adapter, context, source_mode=source_mode, session=session)
 
     warnings.extend(hotspots.meta.warnings)
     warnings.extend(topology.meta.warnings)
@@ -187,6 +211,10 @@ def build_business_labels_pack(
         objects=objects,
         summaries=_label_summaries(objects),
         knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        diagnostics={
+            "pool_limits": dataclass_to_dict(session.get_pool_limits("hotspots", fallback_limit=limit)),
+            "time_strategy": dataclass_to_dict(session.time_strategy),
+        },
         input_dependencies=["action_hotspot_pack", "topology_dependency_pack", "external_dependency_pack", "knowledge_context_pack"],
         evidence_refs=_evidence_ids(
             hotspot_payload.get("evidence", []),
@@ -205,8 +233,14 @@ def build_business_labels_pack(
             knowledge_snapshot.get("evidence", []),
         ),
     )
-    build_stats = {"object_count": len(objects), "action_count": len(hotspot_rows), "dependency_count": min(len(dependencies), limit)}
-    return _pack(
+    build_stats = session.build_stats(
+        stats_snapshot,
+        collection_count=len(hotspot_payload.get("hotspots") or []) + len(dependencies),
+        ranking_count=len(hotspot_rows) + min(len(dependencies), limit),
+        deep_dive_count=0,
+        extra={"object_count": len(objects), "action_count": len(hotspot_rows), "dependency_count": min(len(dependencies), limit)},
+    )
+    envelope = _pack(
         PackType.BUSINESS_LABELS.value,
         context,
         payload,
@@ -217,6 +251,7 @@ def build_business_labels_pack(
         confidence_notes=["Candidate labels are intentionally lightweight and must be reviewed against confirmed knowledge and pending proposals."],
         build_stats=build_stats,
     )
+    return _session_store(session, "pack:business_labels_pack", cache_key, envelope)
 
 
 def build_stability_signals_pack(
@@ -225,14 +260,34 @@ def build_stability_signals_pack(
     *,
     source_mode: str = "auto",
     limit: int = 10,
+    session: Optional[BuildSession] = None,
+    preloaded_hotspots: Optional[PackEnvelope] = None,
+    preloaded_external: Optional[PackEnvelope] = None,
+    preloaded_slow_sql: Optional[PackEnvelope] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode, limit)
+    cached = _session_lookup(session, "pack:stability_signals_pack", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     missing_inputs: list[str] = []
     knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
-    hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
-    external = build_external_dependency_pack(adapter, context, source_mode=source_mode)
-    slow_sql = build_slow_sql_pack(adapter, context, source_mode=source_mode, limit=limit)
+    hotspot_limits = session.get_pool_limits("hotspots", fallback_limit=limit)
+    external_limits = session.get_pool_limits("external_dependencies", fallback_limit=limit)
+    slow_sql_limits = session.get_pool_limits("slow_sql", fallback_limit=limit)
+
+    hotspots = preloaded_hotspots or build_action_hotspot_pack(adapter, context, source_mode=source_mode, session=session)
+    external = preloaded_external or build_external_dependency_pack(adapter, context, source_mode=source_mode, session=session)
+    slow_sql = preloaded_slow_sql or build_slow_sql_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=slow_sql_limits.collection_limit,
+        session=session,
+    )
 
     warnings.extend(hotspots.meta.warnings)
     warnings.extend(external.meta.warnings)
@@ -242,29 +297,41 @@ def build_stability_signals_pack(
     external_payload = external.to_dict()["payload"]
     sql_payload = slow_sql.to_dict()["payload"]
 
-    hotspot_rows = (hotspot_payload.get("hotspots") or [])[:limit]
+    hotspot_rows = list(hotspot_payload.get("hotspots") or [])
+    ranking_hotspots = hotspot_rows[: hotspot_limits.ranking_limit]
+    deep_dive_slots = session.consume_deep_dive("hotspots", hotspot_limits.deep_dive_limit)
+    deep_dive_hotspots = ranking_hotspots[:deep_dive_slots]
     action_name_counts = Counter((row.get("action") or {}).get("name") for row in hotspot_rows if (row.get("action") or {}).get("name"))
 
     objects: list[dict[str, Any]] = []
-    for row in hotspot_rows:
+    deep_dive_action_ids = {
+        str((row.get("action") or {}).get("id"))
+        for row in deep_dive_hotspots
+        if (row.get("action") or {}).get("id") is not None
+    }
+    for row in ranking_hotspots:
         action = row.get("action") or {}
-        fact = build_action_fact_sheet(
-            adapter,
-            context,
-            source_mode=source_mode,
-            action_ref=_action_ref_from_target(action),
-            trace_limit=min(limit, 5),
-        )
-        warnings.extend(fact.meta.warnings)
-        fact_payload = fact.to_dict()["payload"]
-        trace_candidates = fact_payload.get("trace_candidates") or []
+        fact_payload: dict[str, Any] = {}
+        trace_candidates: list[dict[str, Any]] = []
+        if str(action.get("id")) in deep_dive_action_ids:
+            fact = build_action_fact_sheet(
+                adapter,
+                context,
+                source_mode=source_mode,
+                action_ref=_action_ref_from_target(action),
+                trace_limit=min(limit, 5),
+                session=session,
+            )
+            warnings.extend(fact.meta.warnings)
+            fact_payload = fact.to_dict()["payload"]
+            trace_candidates = fact_payload.get("trace_candidates") or []
         timestamps = [item.get("timestamp") for item in trace_candidates if item.get("timestamp") is not None]
-        if not timestamps:
+        if str(action.get("id")) in deep_dive_action_ids and not timestamps:
             missing_inputs.append(f"trace_candidates:{action.get('id')}")
         repeatability_score = _repeatability_score(
             count=_numeric((action.get("metrics") or {}).get("count")),
             slow_count=_numeric((action.get("metrics") or {}).get("slow_count")),
-            trace_count=len(trace_candidates),
+            trace_count=max(len(trace_candidates), int(_numeric((action.get("metrics") or {}).get("slow_count")) or 0)),
         )
         spread_scope = _action_spread_scope(
             action_name=action.get("name"),
@@ -320,15 +387,15 @@ def build_stability_signals_pack(
                 "confidence": "medium" if trace_candidates else "low",
                 "source_basis": [
                     {"kind": "pack", "value": "action_hotspot_pack"},
-                    {"kind": "pack", "value": "action_fact_sheet"},
+                    *([{"kind": "pack", "value": "action_fact_sheet"}] if trace_candidates else []),
                     {"kind": "knowledge", "value": "known_patterns"},
                 ],
-                "evidence_refs": ["action_list", "action_fact_trace_candidates", "knowledge_known_patterns", "knowledge_judgment_log"],
-                "review_flags": ["trace_candidates_missing"] if not trace_candidates else [],
+                "evidence_refs": ["action_list", *(["action_fact_trace_candidates"] if trace_candidates else []), "knowledge_known_patterns", "knowledge_judgment_log"],
+                "review_flags": ["trace_candidates_missing", "lightweight_summary_only"] if not trace_candidates else [],
             }
         )
 
-    for dep in (external_payload.get("external_dependencies") or [])[:limit]:
+    for dep in (external_payload.get("external_dependencies") or [])[: external_limits.ranking_limit]:
         upstream_count = len(dep.get("upstream_nodes") or [])
         repeatability_score = _dependency_repeatability_score(dep)
         target_ref = _dependency_target_ref(dep)
@@ -373,7 +440,7 @@ def build_stability_signals_pack(
             }
         )
 
-    for sql_row in (sql_payload.get("top_sqls") or [])[:limit]:
+    for sql_row in (sql_payload.get("top_sqls") or [])[: slow_sql_limits.ranking_limit]:
         response_time_ms = _numeric(sql_row.get("response_time_ms") or sql_row.get("respTime"))
         count = _numeric(sql_row.get("count"))
         error_count = _numeric(sql_row.get("error_count") or sql_row.get("errorCount"))
@@ -425,6 +492,15 @@ def build_stability_signals_pack(
         objects=objects,
         summaries=_stability_summaries(objects),
         knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        diagnostics={
+            "pool_limits": {
+                "hotspots": dataclass_to_dict(hotspot_limits),
+                "external_dependencies": dataclass_to_dict(external_limits),
+                "slow_sql": dataclass_to_dict(slow_sql_limits),
+            },
+            "deep_dive_action_ids": sorted(deep_dive_action_ids),
+            "time_strategy": dataclass_to_dict(session.time_strategy),
+        },
         input_dependencies=["action_hotspot_pack", "action_fact_sheet", "external_dependency_pack", "slow_sql_pack", "knowledge_context_pack"],
         evidence_refs=_evidence_ids(
             hotspot_payload.get("evidence", []),
@@ -443,7 +519,7 @@ def build_stability_signals_pack(
             knowledge_snapshot.get("evidence", []),
         ),
     )
-    return _pack(
+    envelope = _pack(
         PackType.STABILITY_SIGNALS.value,
         context,
         payload,
@@ -452,8 +528,15 @@ def build_stability_signals_pack(
         source_mode=source_mode,
         missing_inputs=sorted(set(missing_inputs + knowledge_snapshot.get("missing_items", []))),
         confidence_notes=["Repeatability and spread use simple heuristics so the output stays explainable and stable."],
-        build_stats={"object_count": len(objects)},
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(hotspot_rows) + len(external_payload.get("external_dependencies") or []) + len(sql_payload.get("top_sqls") or []),
+            ranking_count=len(ranking_hotspots) + min(len(external_payload.get("external_dependencies") or []), external_limits.ranking_limit) + min(len(sql_payload.get("top_sqls") or []), slow_sql_limits.ranking_limit),
+            deep_dive_count=len(deep_dive_action_ids),
+            extra={"object_count": len(objects)},
+        ),
     )
+    return _session_store(session, "pack:stability_signals_pack", cache_key, envelope)
 
 
 def build_impact_signals_pack(
@@ -462,12 +545,21 @@ def build_impact_signals_pack(
     *,
     source_mode: str = "auto",
     limit: int = 10,
+    session: Optional[BuildSession] = None,
+    preloaded_labels_envelope: Optional[PackEnvelope] = None,
+    preloaded_stability_envelope: Optional[PackEnvelope] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode, limit)
+    cached = _session_lookup(session, "pack:impact_signals_pack", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
-    labels_envelope = build_business_labels_pack(adapter, context, source_mode=source_mode, limit=limit)
-    stability_envelope = build_stability_signals_pack(adapter, context, source_mode=source_mode, limit=limit)
+    labels_envelope = preloaded_labels_envelope or build_business_labels_pack(adapter, context, source_mode=source_mode, limit=limit, session=session)
+    stability_envelope = preloaded_stability_envelope or build_stability_signals_pack(adapter, context, source_mode=source_mode, limit=limit, session=session)
 
     warnings.extend(labels_envelope.meta.warnings)
     warnings.extend(stability_envelope.meta.warnings)
@@ -526,6 +618,11 @@ def build_impact_signals_pack(
             "top_reasons": dict(Counter(reason for item in objects for reason in item.get("supporting_reasons") or []).most_common(10)),
         },
         knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        diagnostics={
+            "consumed_preloaded_labels": preloaded_labels_envelope is not None,
+            "consumed_preloaded_stability": preloaded_stability_envelope is not None,
+            "time_strategy": dataclass_to_dict(session.time_strategy),
+        },
         input_dependencies=["business_labels_pack", "stability_signals_pack", "knowledge_context_pack"],
         evidence_refs=_evidence_ids(labels_payload.get("evidence", []), stability_payload.get("evidence", []), knowledge_snapshot.get("evidence", [])),
         derivation_notes=[
@@ -534,7 +631,7 @@ def build_impact_signals_pack(
         ],
         evidence=_merge_evidence(labels_payload.get("evidence", []), stability_payload.get("evidence", []), knowledge_snapshot.get("evidence", [])),
     )
-    return _pack(
+    envelope = _pack(
         PackType.IMPACT_SIGNALS.value,
         context,
         payload,
@@ -543,8 +640,15 @@ def build_impact_signals_pack(
         source_mode=source_mode,
         missing_inputs=sorted(set(labels_envelope.meta.missing_inputs + stability_envelope.meta.missing_inputs)),
         confidence_notes=["Priority hints are intentionally conservative and require human or LLM review before final prioritization."],
-        build_stats={"object_count": len(objects)},
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(stability_payload.get("objects") or []),
+            ranking_count=len(objects),
+            deep_dive_count=0,
+            extra={"object_count": len(objects)},
+        ),
     )
+    return _session_store(session, "pack:impact_signals_pack", cache_key, envelope)
 
 
 def build_comparison_signals_pack(
@@ -553,30 +657,85 @@ def build_comparison_signals_pack(
     *,
     source_mode: str = "auto",
     limit: int = 10,
+    session: Optional[BuildSession] = None,
+    preloaded_current_hotspots: Optional[PackEnvelope] = None,
+    preloaded_current_external: Optional[PackEnvelope] = None,
+    preloaded_current_slow_sql: Optional[PackEnvelope] = None,
+    comparison_mode: str = "summary",
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    resolved_request_mode = comparison_mode or session.time_strategy.comparison_mode or "full"
+    cache_key = (context_signature(context), source_mode, limit, resolved_request_mode)
+    cached = _session_lookup(session, "pack:comparison_signals_pack", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     missing_inputs: list[str] = []
     knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
-    previous_context = _previous_window_context(context)
-    if previous_context is None:
+    hotspot_limits = session.get_pool_limits("hotspots", fallback_limit=limit)
+    external_limits = session.get_pool_limits("external_dependencies", fallback_limit=limit)
+    slow_sql_limits = session.get_pool_limits("slow_sql", fallback_limit=limit)
+    comparison_current_context, previous_context, resolved_comparison_mode = comparison_contexts(
+        context,
+        session.time_strategy,
+        requested_mode=resolved_request_mode,
+    )
+    if previous_context is None or comparison_current_context is None:
         missing_inputs.append("previous_window_context")
 
-    current_hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
-    current_external = build_external_dependency_pack(adapter, context, source_mode=source_mode)
-    current_sql = build_slow_sql_pack(adapter, context, source_mode=source_mode, limit=limit)
+    current_hotspots = preloaded_current_hotspots or build_action_hotspot_pack(adapter, context, source_mode=source_mode, session=session)
+    current_external = preloaded_current_external or build_external_dependency_pack(adapter, context, source_mode=source_mode, session=session)
+    current_sql = preloaded_current_slow_sql or build_slow_sql_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=slow_sql_limits.collection_limit,
+        session=session,
+    )
 
     warnings.extend(current_hotspots.meta.warnings)
     warnings.extend(current_external.meta.warnings)
     warnings.extend(current_sql.meta.warnings)
 
+    current_hotspot_payload = current_hotspots.to_dict()["payload"]
+    current_external_payload = current_external.to_dict()["payload"]
+    current_sql_payload = current_sql.to_dict()["payload"]
+
+    compare_current_hotspot_payload = current_hotspot_payload
+    compare_current_external_payload = current_external_payload
+    compare_current_sql_payload = current_sql_payload
+    if comparison_current_context and context_signature(comparison_current_context) != context_signature(context):
+        compare_current_hotspots = build_action_hotspot_pack(adapter, comparison_current_context, source_mode=source_mode, session=session)
+        compare_current_external = build_external_dependency_pack(adapter, comparison_current_context, source_mode=source_mode, session=session)
+        compare_current_sql = build_slow_sql_pack(
+            adapter,
+            comparison_current_context,
+            source_mode=source_mode,
+            limit=slow_sql_limits.ranking_limit,
+            session=session,
+        )
+        warnings.extend(compare_current_hotspots.meta.warnings)
+        warnings.extend(compare_current_external.meta.warnings)
+        warnings.extend(compare_current_sql.meta.warnings)
+        compare_current_hotspot_payload = compare_current_hotspots.to_dict()["payload"]
+        compare_current_external_payload = compare_current_external.to_dict()["payload"]
+        compare_current_sql_payload = compare_current_sql.to_dict()["payload"]
+
     previous_hotspot_payload: dict[str, Any] = {}
     previous_external_payload: dict[str, Any] = {}
     previous_sql_payload: dict[str, Any] = {}
     if previous_context is not None:
-        previous_hotspots = build_action_hotspot_pack(adapter, previous_context, source_mode=source_mode)
-        previous_external = build_external_dependency_pack(adapter, previous_context, source_mode=source_mode)
-        previous_sql = build_slow_sql_pack(adapter, previous_context, source_mode=source_mode, limit=limit)
+        previous_hotspots = build_action_hotspot_pack(adapter, previous_context, source_mode=source_mode, session=session)
+        previous_external = build_external_dependency_pack(adapter, previous_context, source_mode=source_mode, session=session)
+        previous_sql = build_slow_sql_pack(
+            adapter,
+            previous_context,
+            source_mode=source_mode,
+            limit=slow_sql_limits.ranking_limit,
+            session=session,
+        )
         warnings.extend(previous_hotspots.meta.warnings)
         warnings.extend(previous_external.meta.warnings)
         warnings.extend(previous_sql.meta.warnings)
@@ -585,32 +744,46 @@ def build_comparison_signals_pack(
         previous_sql_payload = previous_sql.to_dict()["payload"]
 
     current_objects = _comparison_source_objects(
-        current_hotspots.to_dict()["payload"],
-        current_external.to_dict()["payload"],
-        current_sql.to_dict()["payload"],
-        limit=limit,
+        current_hotspot_payload,
+        current_external_payload,
+        current_sql_payload,
+        limit=max(hotspot_limits.collection_limit, external_limits.collection_limit, slow_sql_limits.collection_limit),
     )
-    previous_objects = _comparison_source_objects(previous_hotspot_payload, previous_external_payload, previous_sql_payload, limit=limit)
+    comparison_current_objects = _comparison_source_objects(
+        compare_current_hotspot_payload,
+        compare_current_external_payload,
+        compare_current_sql_payload,
+        limit=max(hotspot_limits.ranking_limit, external_limits.ranking_limit, slow_sql_limits.ranking_limit),
+    )
+    previous_objects = _comparison_source_objects(
+        previous_hotspot_payload,
+        previous_external_payload,
+        previous_sql_payload,
+        limit=max(hotspot_limits.ranking_limit, external_limits.ranking_limit, slow_sql_limits.ranking_limit),
+    )
     previous_map = {_ref_key(item.get("target_ref")): item for item in previous_objects}
     current_map = {_ref_key(item.get("target_ref")): item for item in current_objects}
+    comparison_current_map = {_ref_key(item.get("target_ref")): item for item in comparison_current_objects}
     all_keys = list(dict.fromkeys([*current_map.keys(), *previous_map.keys()]))
 
     objects: list[dict[str, Any]] = []
     for key in all_keys:
-        current_item = current_map.get(key)
+        current_item = comparison_current_map.get(key)
         previous_item = previous_map.get(key)
         change_class, delta_metrics, summary, trend_confidence = _comparison_result(current_item, previous_item)
-        target_ref = (current_item or previous_item or {}).get("target_ref")
+        source_item = current_map.get(key) or current_item or previous_item or {}
+        target_ref = source_item.get("target_ref")
         baseline_notes = lookup_confirmed_knowledge(knowledge_snapshot, "baseline_notes", target_ref or {})
         known_patterns = lookup_confirmed_knowledge(knowledge_snapshot, "known_patterns", target_ref or {})
         objects.append(
             {
                 "target_ref": target_ref,
-                "target_type": (current_item or previous_item or {}).get("target_type"),
-                "display_name": (current_item or previous_item or {}).get("display_name"),
+                "target_type": source_item.get("target_type"),
+                "display_name": source_item.get("display_name"),
                 "comparison_baseline": {
                     "mode": "previous_window",
-                    "current_end_time": context.time_window.end_time,
+                    "comparison_mode": resolved_comparison_mode,
+                    "current_end_time": comparison_current_context.time_window.end_time if comparison_current_context else context.time_window.end_time,
                     "previous_end_time": previous_context.time_window.end_time if previous_context else None,
                 },
                 "change_class": change_class,
@@ -630,8 +803,8 @@ def build_comparison_signals_pack(
                 "missing_baseline_inputs": ["previous_window_context"] if previous_context is None else [],
                 "new_or_disappeared": change_class in {"new_risk", "disappeared"},
                 "trend_confidence": trend_confidence,
-                "evidence_refs": ((current_item or previous_item or {}).get("evidence_refs") or []) + ["knowledge_baseline_notes", "knowledge_known_patterns", "knowledge_judgment_log"],
-                "source_basis": [{"kind": "baseline", "value": "previous_window"}, {"kind": "knowledge", "value": "baseline_notes"}],
+                "evidence_refs": (source_item.get("evidence_refs") or []) + ["knowledge_baseline_notes", "knowledge_known_patterns", "knowledge_judgment_log"],
+                "source_basis": [{"kind": "baseline", "value": resolved_comparison_mode}, {"kind": "knowledge", "value": "baseline_notes"}],
             }
         )
 
@@ -639,7 +812,9 @@ def build_comparison_signals_pack(
         scope=_pack_scope(context, source_mode, limit),
         comparison_baseline={
             "mode": "previous_window",
+            "comparison_mode": resolved_comparison_mode,
             "current_window": dataclass_to_dict(context.time_window),
+            "comparison_current_window": dataclass_to_dict(comparison_current_context.time_window) if comparison_current_context else {},
             "previous_window": dataclass_to_dict(previous_context.time_window) if previous_context else {},
             "history_source": "previous_window_plus_knowledge",
         },
@@ -649,11 +824,20 @@ def build_comparison_signals_pack(
             "knowledge_hit_count": sum(1 for item in objects if (item.get("historical_baseline_context") or {}).get("baseline_notes") or (item.get("historical_baseline_context") or {}).get("known_patterns")),
         },
         knowledge_context=_knowledge_context_summary(knowledge_snapshot),
+        diagnostics={
+            "comparison_mode": resolved_comparison_mode,
+            "pool_limits": {
+                "hotspots": dataclass_to_dict(hotspot_limits),
+                "external_dependencies": dataclass_to_dict(external_limits),
+                "slow_sql": dataclass_to_dict(slow_sql_limits),
+            },
+            "time_strategy": dataclass_to_dict(session.time_strategy),
+        },
         input_dependencies=["action_hotspot_pack", "external_dependency_pack", "slow_sql_pack", "knowledge_context_pack"],
         evidence_refs=_evidence_ids(
-            current_hotspots.to_dict()["payload"].get("evidence", []),
-            current_external.to_dict()["payload"].get("evidence", []),
-            current_sql.to_dict()["payload"].get("evidence", []),
+            current_hotspot_payload.get("evidence", []),
+            current_external_payload.get("evidence", []),
+            current_sql_payload.get("evidence", []),
             knowledge_snapshot.get("evidence", []),
         ),
         derivation_notes=[
@@ -661,13 +845,13 @@ def build_comparison_signals_pack(
             "No long-term forecast is performed inside the adapter.",
         ],
         evidence=_merge_evidence(
-            current_hotspots.to_dict()["payload"].get("evidence", []),
-            current_external.to_dict()["payload"].get("evidence", []),
-            current_sql.to_dict()["payload"].get("evidence", []),
+            current_hotspot_payload.get("evidence", []),
+            current_external_payload.get("evidence", []),
+            current_sql_payload.get("evidence", []),
             knowledge_snapshot.get("evidence", []),
         ),
     )
-    return _pack(
+    envelope = _pack(
         PackType.COMPARISON_SIGNALS.value,
         context,
         payload,
@@ -676,8 +860,16 @@ def build_comparison_signals_pack(
         source_mode=source_mode,
         missing_inputs=sorted(set(missing_inputs + knowledge_snapshot.get("missing_items", []))),
         confidence_notes=["If the previous window has sparse data, comparison falls back to low-confidence deltas instead of failing."],
-        build_stats={"object_count": len(objects)},
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(current_objects),
+            ranking_count=len(comparison_current_objects),
+            deep_dive_count=0,
+            comparison_mode=resolved_comparison_mode,
+            extra={"object_count": len(objects)},
+        ),
     )
+    return _session_store(session, "pack:comparison_signals_pack", cache_key, envelope)
 
 
 def build_page_experience_pack(
@@ -686,14 +878,24 @@ def build_page_experience_pack(
     *,
     source_mode: str = "auto",
     limit: int = 10,
+    session: Optional[BuildSession] = None,
+    preloaded_hotspots: Optional[PackEnvelope] = None,
+    preloaded_topology: Optional[PackEnvelope] = None,
+    preloaded_external: Optional[PackEnvelope] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode, limit)
+    cached = _session_lookup(session, "pack:page_experience_pack", cache_key)
+    if cached is not None:
+        return cached
+    stats_snapshot = session.snapshot_counters()
     warnings: list[WarningMessage] = []
     missing_inputs = ["js_error_summary", "browser_distribution", "geo_distribution", "platform_distribution"]
     knowledge_snapshot = load_knowledge_context_snapshot(adapter, context, recent_log_limit=limit)
 
-    hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
-    topology = build_topology_dependency_pack(adapter, context, source_mode=source_mode)
-    external = build_external_dependency_pack(adapter, context, source_mode=source_mode)
+    hotspots = preloaded_hotspots or build_action_hotspot_pack(adapter, context, source_mode=source_mode, session=session)
+    topology = preloaded_topology or build_topology_dependency_pack(adapter, context, source_mode=source_mode, session=session)
+    external = preloaded_external or build_external_dependency_pack(adapter, context, source_mode=source_mode, session=session)
 
     warnings.extend(hotspots.meta.warnings)
     warnings.extend(topology.meta.warnings)
@@ -917,7 +1119,7 @@ def build_page_experience_pack(
         coverage_boundary=coverage_boundary,
         evidence_linkage=evidence_linkage,
     )
-    return _pack(
+    envelope = _pack(
         PackType.PAGE_EXPERIENCE.value,
         context,
         payload,
@@ -926,8 +1128,15 @@ def build_page_experience_pack(
         source_mode=source_mode,
         missing_inputs=sorted(set(missing_inputs + knowledge_snapshot.get("missing_items", []))),
         confidence_notes=["Page objects are inferred proxies until dedicated page-side APIs are added."],
-        build_stats={"page_count": len(pages), "user_entry_count": len(user_edges)},
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(hotspot_payload.get("hotspots") or []) + len(topology_dependencies) + len(external_dependencies),
+            ranking_count=len(pages),
+            deep_dive_count=0,
+            extra={"page_count": len(pages), "user_entry_count": len(user_edges)},
+        ),
     )
+    return _session_store(session, "pack:page_experience_pack", cache_key, envelope)
 
 
 def build_screenshot_index_pack(

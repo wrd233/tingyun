@@ -54,9 +54,92 @@ from tingyun_adapter.usecases.report_fact_enhancements import (
     sql_fingerprint,
     union_sql_candidates,
 )
+from tingyun_adapter.usecases.build_session import BuildSession, context_signature, shard_contexts
 
 
-def build_system_snapshot(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
+def _session_lookup(session: Optional[BuildSession], namespace: str, key: Any) -> Any | None:
+    if session is None:
+        return None
+    found, value = session.lookup(namespace, key)
+    return value if found else None
+
+
+def _session_store(session: Optional[BuildSession], namespace: str, key: Any, value: Any) -> Any:
+    if session is None:
+        return value
+    return session.store(namespace, key, value)
+
+
+def _merge_hotspot_shard_payloads(shard_payloads: list[dict[str, Any]], *, limit: int) -> dict[str, Any]:
+    merged: dict[tuple[str, str, str], dict[str, Any]] = {}
+    for payload in shard_payloads:
+        for item in payload.get("hotspots") or []:
+            action = dict(item.get("action") or {})
+            key = (
+                str(action.get("id") or ""),
+                str(action.get("application_id") or ""),
+                str(action.get("type") or "TX"),
+            )
+            if not key[0]:
+                continue
+            existing = merged.get(key)
+            if existing is None:
+                clone = dict(item)
+                clone["action"] = action
+                clone["hotspot"] = dict(item.get("hotspot") or {})
+                clone["shard_hits"] = 1
+                merged[key] = clone
+                continue
+            existing["shard_hits"] = int(existing.get("shard_hits") or 1) + 1
+            if _numeric((action.get("metrics") or {}).get("response_time_ms")) > _numeric(((existing.get("action") or {}).get("metrics") or {}).get("response_time_ms")):
+                existing["action"] = action
+            existing_signals = list(existing.get("suspect_signals") or [])
+            for signal in item.get("suspect_signals") or []:
+                if signal not in existing_signals:
+                    existing_signals.append(signal)
+            existing["suspect_signals"] = existing_signals
+            current_severity = _numeric((item.get("hotspot") or {}).get("severity_score")) or 0.0
+            existing_severity = _numeric((existing.get("hotspot") or {}).get("severity_score")) or 0.0
+            existing["hotspot"]["severity_score"] = max(existing_severity, current_severity) + (existing["shard_hits"] - 1) * 25
+            why_selected = list(existing["hotspot"].get("why_selected") or [])
+            for reason in (item.get("hotspot") or {}).get("why_selected") or []:
+                if reason not in why_selected:
+                    why_selected.append(reason)
+            existing["hotspot"]["why_selected"] = why_selected
+    ranked = sorted(
+        merged.values(),
+        key=lambda item: (
+            _numeric((item.get("hotspot") or {}).get("severity_score")) or 0.0,
+            _numeric((((item.get("action") or {}).get("metrics") or {}).get("response_time_ms"))) or 0.0,
+            int(item.get("shard_hits") or 1),
+        ),
+        reverse=True,
+    )[:limit]
+    for rank, item in enumerate(ranked, start=1):
+        item["rank"] = rank
+        item["hotspot"] = {
+            **(item.get("hotspot") or {}),
+            "shard_hits": item.get("shard_hits"),
+        }
+    return {
+        "hotspots": ranked,
+        "suspect_signals": _aggregate_action_signals(ranked),
+        "evidence": [entry for payload in shard_payloads for entry in (payload.get("evidence") or [])],
+    }
+
+
+def build_system_snapshot(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    session: Optional[BuildSession] = None,
+) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "pack:system_snapshot", cache_key)
+    if cached is not None:
+        return cached
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
 
@@ -191,7 +274,8 @@ def build_system_snapshot(adapter: Any, context: AnalysisContext, *, source_mode
             "recommended_next_pages": ["business_system_overview", "business_system_topology"],
         },
     )
-    return _pack(PackType.SYSTEM_SNAPSHOT.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    envelope = _pack(PackType.SYSTEM_SNAPSHOT.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    return _session_store(session, "pack:system_snapshot", cache_key, envelope)
 
 
 def build_action_hotspot_pack(
@@ -201,10 +285,124 @@ def build_action_hotspot_pack(
     source_mode: str = "auto",
     policy: Optional[HotspotPolicy] = None,
     application_id: int = 0,
+    session: Optional[BuildSession] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
     policy = policy or HotspotPolicy()
+    cache_key = (
+        context_signature(context),
+        source_mode,
+        dataclass_to_dict(policy),
+        application_id,
+    )
+    cached = _session_lookup(session, "pack:action_hotspot_pack", cache_key)
+    if cached is not None:
+        return cached
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
+
+    shard_context_list = shard_contexts(context, session.time_strategy)
+    if application_id == 0 and len(shard_context_list) > 1:
+        shard_payloads: list[dict[str, Any]] = []
+        for shard_context in shard_context_list:
+            shard_envelope = build_action_hotspot_pack(
+                adapter,
+                shard_context,
+                source_mode=source_mode,
+                policy=policy,
+                application_id=application_id,
+                session=session,
+            )
+            warnings.extend(shard_envelope.meta.warnings)
+            shard_payloads.append(shard_envelope.to_dict()["payload"])
+        merged_payload = _merge_hotspot_shard_payloads(shard_payloads, limit=policy.limit)
+        hotspots = merged_payload.get("hotspots") or []
+        top_overview = None
+        if hotspots:
+            top_action = hotspots[0].get("action") or {}
+            top_overview = _load_matching_action_overview(
+                adapter,
+                context,
+                source_mode=source_mode,
+                action_id=int(top_action.get("id") or 0),
+                application_id=int(top_action.get("application_id") or 0),
+                action_type=str(top_action.get("type") or "TX"),
+            )
+            if top_overview:
+                hotspots[0]["overview"] = unwrap_data(top_overview) or {}
+        payload = ActionHotspotPackPayload(
+            ranking_policy={**dataclass_to_dict(policy), "time_strategy": dataclass_to_dict(session.time_strategy)},
+            hotspots=hotspots,
+            suspect_signals=merged_payload.get("suspect_signals") or [],
+            evidence=merged_payload.get("evidence") or [],
+        )
+        top_action = (hotspots[0].get("action") or {}) if hotspots else {}
+        page_links = [
+            make_console_link(
+                adapter,
+                context,
+                page_type="action_hotspot_list",
+                label="事务与接口热点列表页",
+                why_relevant="用于查看慢接口 Top、高错误接口和热点事务列表。",
+                suggested_report_section="3.3 事务与服务接口检查",
+                navigation_path=["应用", str(top_action.get("application_id") or context.biz_system_id), "事务与服务接口", "热点列表"],
+                suggested_filters={"time_window": dataclass_to_dict(context.time_window), "sort_by": policy.sort_by},
+                target_ref=_action_target_ref_for_support(top_action),
+            )
+        ]
+        if top_action:
+            page_links.append(
+                make_console_link(
+                    adapter,
+                    context,
+                    page_type="action_overview",
+                    label="热点接口详情页",
+                    why_relevant="用于查看重点接口概览、下游组件和 trace 候选。",
+                    suggested_report_section="3.3 事务与服务接口检查",
+                    navigation_path=["应用", str(top_action.get("application_id")), "事务与服务接口", str(top_action.get("id"))],
+                    suggested_filters={"action_type": top_action.get("type"), "time_window": dataclass_to_dict(context.time_window)},
+                    target_ref=_action_target_ref_for_support(top_action),
+                )
+            )
+        payload = apply_report_support(
+            payload,
+            page_links=page_links,
+            screenshot_hints=[
+                make_screenshot_hint(
+                    title="热点接口列表截图建议",
+                    page_type="action_hotspot_list",
+                    url=page_links[0]["url"],
+                    recommended_capture=["Top 请求列表", "Top 错误列表", "排序列高亮"],
+                    recommended_annotations=["圈出最慢接口", "标注错误率或 slowCount", "标注对应应用"],
+                    usage_in_report="适合用于 3.3 事务与服务接口检查 的对象排序说明。",
+                    suggested_report_section="3.3 事务与服务接口检查",
+                    target_ref=_action_target_ref_for_support(top_action),
+                    priority="high",
+                )
+            ],
+            metric_semantics=[
+                make_metric_semantic(metric_name="response_time_ms", subject_type="action", subject_key=f"action:{top_action.get('id') or 'hotspots'}", aggregation="average", unit="ms", time_window=time_window_text(context), sample_scope="selected hotspot actions"),
+                make_metric_semantic(metric_name="error_count", subject_type="action", subject_key=f"action:{top_action.get('id') or 'hotspots'}", aggregation="count", unit="count", time_window=time_window_text(context), sample_scope="selected hotspot actions"),
+            ],
+            coverage_boundary=default_coverage_boundary(adapter),
+            evidence_linkage={
+                "related_time_windows": [],
+                "related_actions": [_action_target_ref_for_support(item.get("action") or {}) for item in hotspots[:5]],
+                "related_traces": [],
+                "related_sqls": [],
+                "related_dependencies": [],
+                "recommended_next_pages": [item["page_type"] for item in page_links],
+            },
+        )
+        envelope = _pack(
+            PackType.ACTION_HOTSPOT.value,
+            context,
+            payload,
+            evidence=_coerce_evidence_list(merged_payload.get("evidence") or []),
+            warnings=warnings,
+            source_mode=source_mode,
+        )
+        return _session_store(session, "pack:action_hotspot_pack", cache_key, envelope)
 
     actions_payload = _load_action_list(adapter, context, source_mode=source_mode, application_id=application_id)
     action_rows = _extract_action_rows(actions_payload)
@@ -354,7 +552,8 @@ def build_action_hotspot_pack(
             "recommended_next_pages": [item["page_type"] for item in page_links],
         },
     )
-    return _pack(PackType.ACTION_HOTSPOT.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    envelope = _pack(PackType.ACTION_HOTSPOT.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    return _session_store(session, "pack:action_hotspot_pack", cache_key, envelope)
 
 
 def build_trace_case_pack(
@@ -364,8 +563,19 @@ def build_trace_case_pack(
     source_mode: str = "auto",
     action_ref: Optional[ActionRef] = None,
     trace_policy: Optional[TraceSelectionPolicy] = None,
+    session: Optional[BuildSession] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
     trace_policy = trace_policy or TraceSelectionPolicy()
+    cache_key = (
+        context_signature(context),
+        source_mode,
+        dataclass_to_dict(action_ref) if action_ref else None,
+        dataclass_to_dict(trace_policy),
+    )
+    cached = _session_lookup(session, "pack:trace_case_pack", cache_key)
+    if cached is not None:
+        return cached
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
 
@@ -516,38 +726,133 @@ def build_trace_case_pack(
             "recommended_next_pages": ["trace_detail"],
         },
     )
-    return _pack(PackType.TRACE_CASE.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    envelope = _pack(PackType.TRACE_CASE.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    return _session_store(session, "pack:trace_case_pack", cache_key, envelope)
 
 
-def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mode: str = "auto") -> PackEnvelope:
+def build_report_fact_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    session: Optional[BuildSession] = None,
+) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "pack:report_fact_pack", cache_key)
+    if cached is not None:
+        return cached
+
     warnings: list[WarningMessage] = []
     missing_inputs: list[str] = []
+    stats_snapshot = session.snapshot_counters()
 
-    from tingyun_adapter.domain.models.common import DatabaseComponentRef
-    from tingyun_adapter.usecases.enhancement_builders import build_page_experience_pack
-    from tingyun_adapter.usecases.extended_builders import build_slow_sql_pack, build_sql_fact_sheet
+    from tingyun_adapter.usecases.enhancement_builders import (
+        build_business_labels_pack,
+        build_comparison_signals_pack,
+        build_impact_signals_pack,
+        build_page_experience_pack,
+        build_stability_signals_pack,
+    )
+    from tingyun_adapter.usecases.extended_builders import (
+        build_external_dependency_pack,
+        build_slow_sql_pack,
+        build_topology_dependency_pack,
+    )
 
-    system_snapshot = build_system_snapshot(adapter, context, source_mode=source_mode)
-    diagnostic_pack = build_diagnostic_candidate_pack(adapter, context, source_mode=source_mode, limit=6)
-    action_hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
-    trace_case_envelope = build_trace_case_pack(adapter, context, source_mode=source_mode)
-    slow_sql = build_slow_sql_pack(adapter, context, source_mode=source_mode, limit=20)
-    page_pack = build_page_experience_pack(adapter, context, source_mode=source_mode, limit=5)
-    external_pack = adapter.build_external_dependency_pack(context, source_mode=source_mode)
-    comparison_pack = adapter.build_comparison_signals_pack(context, source_mode=source_mode, limit=8)
-    labels_pack = adapter.build_business_labels_pack(context, source_mode=source_mode, limit=8)
-    stability_pack = adapter.build_stability_signals_pack(context, source_mode=source_mode, limit=8)
-    impact_pack = adapter.build_impact_signals_pack(context, source_mode=source_mode, limit=8)
+    hotspot_limits = session.get_pool_limits("hotspots")
+    slow_sql_limits = session.get_pool_limits("slow_sql")
+    external_limits = session.get_pool_limits("external_dependencies")
+    report_limits = session.get_pool_limits("report_targets")
+
+    system_snapshot = build_system_snapshot(adapter, context, source_mode=source_mode, session=session)
+    action_hotspots = build_action_hotspot_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        policy=HotspotPolicy(limit=hotspot_limits.collection_limit),
+        session=session,
+    )
+    diagnostic_pack = build_diagnostic_candidate_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=hotspot_limits.ranking_limit,
+        session=session,
+        preloaded_snapshot=system_snapshot,
+        preloaded_hotspots=action_hotspots,
+    )
+    trace_case_envelope = build_trace_case_pack(adapter, context, source_mode=source_mode, session=session)
+    topology_pack = build_topology_dependency_pack(adapter, context, source_mode=source_mode, session=session)
+    external_pack = build_external_dependency_pack(adapter, context, source_mode=source_mode, session=session)
+    slow_sql = build_slow_sql_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=slow_sql_limits.collection_limit,
+        session=session,
+    )
+    page_pack = build_page_experience_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=report_limits.ranking_limit,
+        session=session,
+        preloaded_hotspots=action_hotspots,
+        preloaded_topology=topology_pack,
+        preloaded_external=external_pack,
+    )
     knowledge_pack = adapter.build_knowledge_context_pack(context, source_mode=source_mode, limit=5)
+    labels_pack = build_business_labels_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=hotspot_limits.ranking_limit,
+        session=session,
+        preloaded_hotspots=action_hotspots,
+        preloaded_external=external_pack,
+        preloaded_topology=topology_pack,
+    )
+    stability_pack = build_stability_signals_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=hotspot_limits.ranking_limit,
+        session=session,
+        preloaded_hotspots=action_hotspots,
+        preloaded_external=external_pack,
+        preloaded_slow_sql=slow_sql,
+    )
+    comparison_pack = build_comparison_signals_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=report_limits.ranking_limit,
+        session=session,
+        preloaded_current_hotspots=action_hotspots,
+        preloaded_current_external=external_pack,
+        preloaded_current_slow_sql=slow_sql,
+        comparison_mode=session.time_strategy.comparison_mode or "full",
+    )
+    impact_pack = build_impact_signals_pack(
+        adapter,
+        context,
+        source_mode=source_mode,
+        limit=report_limits.ranking_limit,
+        session=session,
+        preloaded_labels_envelope=labels_pack,
+        preloaded_stability_envelope=stability_pack,
+    )
 
     for envelope in (
         system_snapshot,
         diagnostic_pack,
         action_hotspots,
         trace_case_envelope,
+        topology_pack,
+        external_pack,
         slow_sql,
         page_pack,
-        external_pack,
         comparison_pack,
         labels_pack,
         stability_pack,
@@ -561,6 +866,7 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
     diagnostic_payload = diagnostic_pack.to_dict()["payload"]
     hotspot_payload = action_hotspots.to_dict()["payload"]
     trace_payload = trace_case_envelope.to_dict()["payload"]
+    topology_payload = topology_pack.to_dict()["payload"]
     slow_sql_payload = slow_sql.to_dict()["payload"]
     page_payload = page_pack.to_dict()["payload"]
     external_payload = external_pack.to_dict()["payload"]
@@ -570,7 +876,13 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
     impact_payload = impact_pack.to_dict()["payload"]
     knowledge_payload = knowledge_pack.to_dict()["payload"]
 
-    top_hotspot = (hotspot_payload.get("hotspots") or [{}])[0]
+    hotspot_rows = list(hotspot_payload.get("hotspots") or [])
+    ranking_hotspots = hotspot_rows[: hotspot_limits.ranking_limit]
+    top_hotspot = ranking_hotspots[0] if ranking_hotspots else {}
+    sql_rows = list(slow_sql_payload.get("top_sqls") or [])
+    ranking_sql_rows = sql_rows[: slow_sql_limits.ranking_limit]
+    ranking_external = list(external_payload.get("external_dependencies") or [])[: external_limits.ranking_limit]
+
     report_scope = {
         "bizSystemId": context.biz_system_id,
         "endTime": context.time_window.end_time,
@@ -587,100 +899,94 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         "top_action_response_time_ms": top_hotspot.get("action", {}).get("metrics", {}).get("response_time_ms"),
         "trace_case_action_name": trace_payload.get("trace_case", {}).get("detail_summary", {}).get("actionName"),
         "trace_case_duration_ms": trace_payload.get("trace_case", {}).get("trace", {}).get("duration_ms"),
-        "sql_candidate_count": len(slow_sql_payload.get("top_sqls") or []),
+        "sql_candidate_count": len(sql_rows),
         "page_count": len(page_payload.get("pages") or []),
+        "external_candidate_count": len(external_payload.get("external_dependencies") or []),
     }
 
-    sql_rows = list(slow_sql_payload.get("top_sqls") or [])
-    sql_fact_payloads: dict[str, dict[str, Any]] = {}
-    for row in _select_sql_enrichment_rows(sql_rows):
-        component_name = row.get("component_name") or row.get("componentName")
-        if not component_name:
-            continue
-        sql_fact = build_sql_fact_sheet(
-            adapter,
-            context,
-            source_mode=source_mode,
-            component_ref=DatabaseComponentRef(
-                biz_system_id=context.biz_system_id,
-                component_name=str(component_name),
-                component_subtype=row.get("component_subtype") or row.get("componentSubtype"),
-            ),
-            op_name=row.get("op_name_decoded") or row.get("opName"),
-            limit=5,
-        )
-        warnings.extend(sql_fact.meta.warnings)
-        missing_inputs.extend(sql_fact.meta.missing_inputs)
-        sql_fact_payload = sql_fact.to_dict()["payload"]
-        fingerprint = sql_fingerprint(
-            str(
-                (sql_fact_payload.get("sql") or {}).get("op_name_decoded")
-                or (sql_fact_payload.get("sql") or {}).get("opName")
-                or row.get("op_name_decoded")
-                or row.get("opName")
-                or ""
-            )
-        )
-        sql_fact_payloads[fingerprint] = sql_fact_payload
-
-    sql_inventory = union_sql_candidates(
+    base_sql_inventory = union_sql_candidates(
         sql_rows,
         trace_case=trace_payload.get("trace_case") or {},
-        sql_fact_payloads=sql_fact_payloads,
+        sql_fact_payloads={},
     )
     trace_registry_candidates, trace_candidate_warnings = _collect_trace_registry_candidates(
         adapter,
         context,
-        hotspot_payload,
+        {"hotspots": ranking_hotspots},
         source_mode=source_mode,
-        top_action_limit=3,
+        top_action_limit=min(hotspot_limits.deep_dive_limit, len(ranking_hotspots)),
         per_action_limit=2,
+        session=session,
     )
     warnings.extend(trace_candidate_warnings)
-    enriched_trace_case = _enrich_trace_case_with_sql(trace_payload.get("trace_case") or {}, sql_inventory.get("sql_candidates") or [])
+    enriched_trace_case = _enrich_trace_case_with_sql(
+        trace_payload.get("trace_case") or {},
+        base_sql_inventory.get("sql_candidates") or [],
+    )
     candidate_registry = build_candidate_registry(
         report_scope=report_scope,
         snapshot_payload=snapshot_payload,
         diagnostic_payload=diagnostic_payload,
-        hotspot_payload=hotspot_payload,
+        hotspot_payload={**hotspot_payload, "hotspots": hotspot_rows},
         trace_candidates=trace_registry_candidates,
         trace_case=enriched_trace_case,
-        sql_candidates=sql_inventory.get("sql_candidates") or [],
-        external_payload=external_payload,
+        sql_candidates=base_sql_inventory.get("sql_candidates") or [],
+        external_payload={**external_payload, "external_dependencies": external_payload.get("external_dependencies") or []},
         comparison_payload=comparison_payload,
         labels_payload=labels_payload,
         stability_payload=stability_payload,
         impact_payload=impact_payload,
         knowledge_payload=knowledge_payload,
     )
+    session.attach_candidate_registry(candidate_registry)
     candidate_outcomes = select_candidate_outcomes(candidate_registry)
+
     selected_target_expansions, expansion_warnings = _expand_selected_targets(
         adapter,
         context,
         source_mode=source_mode,
         targets=candidate_outcomes.get("deep_dive_targets") or [],
+        session=session,
     )
     warnings.extend(expansion_warnings)
+
+    sql_fact_payloads: dict[str, dict[str, Any]] = {}
+    for expansion in selected_target_expansions:
+        if expansion.get("pack_type") != PackType.SQL_FACT_SHEET.value:
+            continue
+        sql_fact_payload = expansion.get("payload") or {}
+        sql_payload = sql_fact_payload.get("sql") or {}
+        fingerprint = sql_fingerprint(str(sql_payload.get("op_name_decoded") or sql_payload.get("opName") or ""))
+        if fingerprint:
+            sql_fact_payloads[fingerprint] = sql_fact_payload
+
+    sql_inventory = union_sql_candidates(
+        sql_rows,
+        trace_case=enriched_trace_case,
+        sql_fact_payloads=sql_fact_payloads,
+    )
     issue_inventory = build_issue_inventory(
         summary=summary,
         snapshot_payload=snapshot_payload,
-        hotspot_payload=hotspot_payload,
+        hotspot_payload={**hotspot_payload, "hotspots": ranking_hotspots},
         trace_payload={"trace_case": enriched_trace_case},
         sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
         sql_opportunities=sql_inventory.get("sql_opportunities") or [],
     )
     screenshot_index_rows = _build_screenshot_index_rows(
         snapshot_payload,
-        hotspot_payload,
+        {**hotspot_payload, "hotspots": ranking_hotspots},
         trace_payload,
-        slow_sql_payload,
+        {**slow_sql_payload, "top_sqls": ranking_sql_rows},
         page_payload,
     )
     screenshot_index_summary = {
         "card_count": len(screenshot_index_rows),
         "direct_card_count": len([item for item in screenshot_index_rows if item.get("url_status") == "direct"]),
         "navigation_only_count": len([item for item in screenshot_index_rows if item.get("url_status") == "navigation_only"]),
-        "sections_with_screenshots": sorted({item.get("suggested_report_section") for item in screenshot_index_rows if item.get("suggested_report_section")}),
+        "sections_with_screenshots": sorted(
+            {item.get("suggested_report_section") for item in screenshot_index_rows if item.get("suggested_report_section")}
+        ),
     }
     template_mapping = build_template_mapping(
         issues=issue_inventory.get("issues") or [],
@@ -689,37 +995,14 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         sql_opportunities=sql_inventory.get("sql_opportunities") or [],
         page_boundary=page_payload.get("coverage_boundary") or snapshot_payload.get("coverage_boundary") or {},
     )
-    writer_input = build_writer_input(
-        report_scope=report_scope,
-        summary=summary,
-        coverage_boundary=page_payload.get("coverage_boundary") or snapshot_payload.get("coverage_boundary") or default_coverage_boundary(adapter),
-        issues=issue_inventory.get("issues") or [],
-        observations=issue_inventory.get("observations") or [],
-        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
-        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
-        trace_case=enriched_trace_case,
-        page_payload=page_payload,
-        screenshot_index_summary=screenshot_index_summary,
-        page_links=[],
-        screenshot_index_rows=screenshot_index_rows,
-        main_issue_selections=candidate_outcomes.get("main_issue_selections") or [],
-        deep_dive_targets=candidate_outcomes.get("deep_dive_targets") or [],
-        template_mapping=template_mapping,
-    )
-    writer_markdown = render_writer_input_markdown(writer_input)
     template_outline_markdown = render_template_outline_markdown(template_mapping)
-    sql_section_markdown = render_sql_section_markdown(
-        summary=summary,
-        slow_sql_overview=slow_sql_payload.get("operation_overview") or {},
-        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
-        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
-    )
 
     payload = ReportFactPackPayload(
         report_scope=report_scope,
         summary=summary,
         hotspots={
-            "actions": hotspot_payload.get("hotspots", []),
+            "actions": ranking_hotspots,
+            "collection_actions": hotspot_rows,
             "screenshot_index_summary": screenshot_index_summary,
         },
         components={
@@ -727,8 +1010,38 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
             "slow_sql_overview": slow_sql_payload.get("operation_overview", {}),
             "page_performance_summary": page_payload.get("performance_summary", {}),
             "external_dependency_summary": external_payload.get("protocol_summary", {}),
+            "topology_summary": topology_payload.get("detail_graph", {}),
         },
         trace_case=enriched_trace_case,
+        diagnostics={
+            "phase_1": {
+                "collection_counts": {
+                    "hotspots": len(hotspot_rows),
+                    "slow_sql": len(sql_rows),
+                    "external_dependencies": len(external_payload.get("external_dependencies") or []),
+                },
+                "ranking_counts": {
+                    "hotspots": len(ranking_hotspots),
+                    "slow_sql": len(ranking_sql_rows),
+                    "external_dependencies": len(ranking_external),
+                },
+            },
+            "phase_2": {
+                "candidate_registry_count": len(candidate_registry),
+                "main_issue_selection_count": len(candidate_outcomes.get("main_issue_selections") or []),
+                "deep_dive_target_count": len(candidate_outcomes.get("deep_dive_targets") or []),
+            },
+            "phase_3": {
+                "selected_target_expansion_count": len(selected_target_expansions),
+                "sql_fact_expansion_count": len(sql_fact_payloads),
+            },
+            "pool_limits": {
+                "hotspots": dataclass_to_dict(hotspot_limits),
+                "slow_sql": dataclass_to_dict(slow_sql_limits),
+                "external_dependencies": dataclass_to_dict(external_limits),
+            },
+            "time_strategy": dataclass_to_dict(session.time_strategy),
+        },
         issues=issue_inventory.get("legacy_issues") or [],
         observations=issue_inventory.get("observations") or [],
         issue_candidates=issue_inventory.get("issue_candidates") or [],
@@ -740,7 +1053,7 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         main_issue_selections=candidate_outcomes.get("main_issue_selections") or [],
         deep_dive_targets=candidate_outcomes.get("deep_dive_targets") or [],
         selected_target_expansions=selected_target_expansions,
-        report_writer_input=writer_input,
+        report_writer_input={},
         template_mapping=template_mapping,
         report_pack_exports={},
         drilldown_paths=trace_payload.get("drilldown_path", []) + ["Database/analysis", "component/database/actionList", "component/database/actionTraceList"],
@@ -775,9 +1088,9 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
     page_links = _aggregate_report_page_links(
         snapshot_payload,
         diagnostic_payload,
-        hotspot_payload,
+        {**hotspot_payload, "hotspots": ranking_hotspots},
         trace_payload,
-        slow_sql_payload,
+        {**slow_sql_payload, "top_sqls": ranking_sql_rows},
         page_payload,
         external_payload,
         comparison_payload,
@@ -802,12 +1115,18 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         template_mapping=template_mapping,
     )
     writer_markdown = render_writer_input_markdown(writer_input)
+    sql_section_markdown = render_sql_section_markdown(
+        summary=summary,
+        slow_sql_overview=slow_sql_payload.get("operation_overview") or {},
+        sql_main_candidates=sql_inventory.get("sql_main_candidates") or [],
+        sql_opportunities=sql_inventory.get("sql_opportunities") or [],
+    )
     screenshot_hints = _aggregate_report_screenshot_hints(
         snapshot_payload,
         diagnostic_payload,
-        hotspot_payload,
+        {**hotspot_payload, "hotspots": ranking_hotspots},
         trace_payload,
-        slow_sql_payload,
+        {**slow_sql_payload, "top_sqls": ranking_sql_rows},
         page_payload,
         external_payload,
         comparison_payload,
@@ -817,9 +1136,9 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
     metric_semantics = _aggregate_report_metric_semantics(
         snapshot_payload,
         diagnostic_payload,
-        hotspot_payload,
+        {**hotspot_payload, "hotspots": ranking_hotspots},
         trace_payload,
-        slow_sql_payload,
+        {**slow_sql_payload, "top_sqls": ranking_sql_rows},
         page_payload,
         external_payload,
         comparison_payload,
@@ -844,6 +1163,7 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         screenshot_index_rows=screenshot_index_rows,
     )
     payload.codex_review_input = codex_review_input
+    payload.report_writer_input = writer_input
     payload.report_pack_exports = report_pack_exports
     payload = apply_report_support(
         payload,
@@ -853,7 +1173,7 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         coverage_boundary=page_payload.get("coverage_boundary") or snapshot_payload.get("coverage_boundary") or default_coverage_boundary(adapter),
         evidence_linkage={
             "related_time_windows": [dataclass_to_dict(context.time_window)],
-            "related_actions": [item.get("action") for item in hotspot_payload.get("hotspots", [])[:5]],
+            "related_actions": [item.get("action") for item in ranking_hotspots[:5]],
             "related_traces": [enriched_trace_case.get("trace", {})],
             "related_sqls": (sql_inventory.get("sql_candidates") or [])[:10],
             "related_dependencies": page_payload.get("related_dependencies") or ["business_system_topology"],
@@ -878,7 +1198,7 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         all_evidence.extend(_coerce_evidence_list(sql_fact_payload.get("evidence", [])))
     for expansion in selected_target_expansions:
         all_evidence.extend(_coerce_evidence_list(expansion.get("evidence", [])))
-    return _pack(
+    envelope = _pack(
         PackType.REPORT_FACT.value,
         context,
         payload,
@@ -887,21 +1207,28 @@ def build_report_fact_pack(adapter: Any, context: AnalysisContext, *, source_mod
         source_mode=source_mode,
         missing_inputs=sorted(set(missing_inputs)),
         confidence_notes=[
-            "report_fact_pack now expands issue and SQL candidate pools before exporting writer-facing summaries.",
-            "report_pack_exports is a materialization-friendly view; downstream writers may still choose custom serialization.",
+            "report_fact_pack now collects wide summary pools first and only expands deep-dive targets after candidate registry merge.",
+            "Candidate coverage is preserved through wider summary pools while heavy detail requests are limited to selected targets.",
         ],
-        build_stats={
-            "issue_count": len(issue_inventory.get("issues") or []),
-            "observation_count": len(issue_inventory.get("observations") or []),
-            "candidate_registry_count": len(candidate_registry),
-            "main_issue_selection_count": len(candidate_outcomes.get("main_issue_selections") or []),
-            "deep_dive_target_count": len(candidate_outcomes.get("deep_dive_targets") or []),
-            "sql_candidate_count": len(sql_inventory.get("sql_candidates") or []),
-            "sql_main_count": len(sql_inventory.get("sql_main_candidates") or []),
-            "screenshot_row_count": len(screenshot_index_rows),
-            "selected_target_expansion_count": len(selected_target_expansions),
-        },
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(hotspot_rows) + len(sql_rows) + len(external_payload.get("external_dependencies") or []),
+            ranking_count=len(ranking_hotspots) + len(ranking_sql_rows) + len(ranking_external),
+            deep_dive_count=len(selected_target_expansions),
+            extra={
+                "issue_count": len(issue_inventory.get("issues") or []),
+                "observation_count": len(issue_inventory.get("observations") or []),
+                "candidate_registry_count": len(candidate_registry),
+                "main_issue_selection_count": len(candidate_outcomes.get("main_issue_selections") or []),
+                "deep_dive_target_count": len(candidate_outcomes.get("deep_dive_targets") or []),
+                "sql_candidate_count": len(sql_inventory.get("sql_candidates") or []),
+                "sql_main_count": len(sql_inventory.get("sql_main_candidates") or []),
+                "screenshot_row_count": len(screenshot_index_rows),
+                "selected_target_expansion_count": len(selected_target_expansions),
+            },
+        ),
     )
+    return _session_store(session, "pack:report_fact_pack", cache_key, envelope)
 
 
 def build_diagnostic_candidate_pack(
@@ -910,10 +1237,18 @@ def build_diagnostic_candidate_pack(
     *,
     source_mode: str = "auto",
     limit: int = 5,
+    session: Optional[BuildSession] = None,
+    preloaded_snapshot: Optional[PackEnvelope] = None,
+    preloaded_hotspots: Optional[PackEnvelope] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode, limit)
+    cached = _session_lookup(session, "pack:diagnostic_candidate_pack", cache_key)
+    if cached is not None:
+        return cached
     warnings: list[WarningMessage] = []
-    snapshot = build_system_snapshot(adapter, context, source_mode=source_mode)
-    hotspots = build_action_hotspot_pack(adapter, context, source_mode=source_mode)
+    snapshot = preloaded_snapshot or build_system_snapshot(adapter, context, source_mode=source_mode, session=session)
+    hotspots = preloaded_hotspots or build_action_hotspot_pack(adapter, context, source_mode=source_mode, session=session)
     warnings.extend(snapshot.meta.warnings)
     warnings.extend(hotspots.meta.warnings)
 
@@ -965,7 +1300,8 @@ def build_diagnostic_candidate_pack(
         *(_coerce_evidence_list(snapshot_payload.get("evidence", []))),
         *(_coerce_evidence_list(hotspot_payload.get("evidence", []))),
     ]
-    return _pack(PackType.DIAGNOSTIC_CANDIDATE.value, context, payload, evidence=all_evidence, warnings=warnings, source_mode=source_mode)
+    envelope = _pack(PackType.DIAGNOSTIC_CANDIDATE.value, context, payload, evidence=all_evidence, warnings=warnings, source_mode=source_mode)
+    return _session_store(session, "pack:diagnostic_candidate_pack", cache_key, envelope)
 
 
 def build_action_fact_sheet(
@@ -975,7 +1311,18 @@ def build_action_fact_sheet(
     source_mode: str = "auto",
     action_ref: Optional[ActionRef] = None,
     trace_limit: int = 10,
+    session: Optional[BuildSession] = None,
 ) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (
+        context_signature(context),
+        source_mode,
+        dataclass_to_dict(action_ref) if action_ref else None,
+        trace_limit,
+    )
+    cached = _session_lookup(session, "pack:action_fact_sheet", cache_key)
+    if cached is not None:
+        return cached
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
 
@@ -1151,7 +1498,8 @@ def build_action_fact_sheet(
             "recommended_next_pages": [item["page_type"] for item in page_links],
         },
     )
-    return _pack(PackType.ACTION_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    envelope = _pack(PackType.ACTION_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    return _session_store(session, "pack:action_fact_sheet", cache_key, envelope)
 
 
 def build_trace_fact_sheet(
@@ -1879,6 +2227,7 @@ def _collect_trace_registry_candidates(
     source_mode: str,
     top_action_limit: int,
     per_action_limit: int,
+    session: Optional[BuildSession] = None,
 ) -> tuple[list[dict[str, Any]], list[WarningMessage]]:
     warnings: list[WarningMessage] = []
     candidates: list[dict[str, Any]] = []
@@ -1922,6 +2271,7 @@ def _expand_selected_targets(
     *,
     source_mode: str,
     targets: list[dict[str, Any]],
+    session: Optional[BuildSession] = None,
 ) -> tuple[list[dict[str, Any]], list[WarningMessage]]:
     warnings: list[WarningMessage] = []
     expansions: list[dict[str, Any]] = []
@@ -1939,6 +2289,7 @@ def _expand_selected_targets(
                 source_mode=source_mode,
                 target_ref=target_ref,
                 pack_name=str(pack_name),
+                session=session,
             )
             if envelope is None:
                 continue
@@ -1965,12 +2316,15 @@ def _build_selected_target_pack(
     source_mode: str,
     target_ref: dict[str, Any],
     pack_name: str,
+    session: Optional[BuildSession] = None,
 ) -> PackEnvelope | None:
     from tingyun_adapter.domain.models.common import DatabaseComponentRef, TraceRef
+    from tingyun_adapter.usecases.extended_builders import build_external_dependency_pack, build_sql_fact_sheet, build_topology_dependency_pack
 
     kind = str(target_ref.get("kind") or "")
     if pack_name == "action_fact_sheet" and kind == "action":
-        return adapter.build_action_fact_sheet(
+        return build_action_fact_sheet(
+            adapter,
             context,
             source_mode=source_mode,
             action_ref=ActionRef(
@@ -1980,6 +2334,7 @@ def _build_selected_target_pack(
                 action_type=str(target_ref.get("action_type") or "TX"),
             ),
             trace_limit=5,
+            session=session,
         )
     if pack_name == "action_dependency_breakdown_pack" and kind == "action":
         return adapter.build_action_dependency_breakdown_pack(
@@ -2009,7 +2364,8 @@ def _build_selected_target_pack(
         component_name = target_ref.get("component_name")
         if not component_name:
             return None
-        return adapter.build_sql_fact_sheet(
+        return build_sql_fact_sheet(
+            adapter,
             context,
             source_mode=source_mode,
             component_ref=DatabaseComponentRef(
@@ -2019,6 +2375,7 @@ def _build_selected_target_pack(
             ),
             op_name=target_ref.get("op_name"),
             limit=5,
+            session=session,
         )
     if pack_name == "database_component_pack" and kind == "sql":
         component_name = target_ref.get("component_name")
@@ -2034,9 +2391,9 @@ def _build_selected_target_pack(
             ),
         )
     if pack_name == "external_dependency_pack":
-        return adapter.build_external_dependency_pack(context, source_mode=source_mode)
+        return build_external_dependency_pack(adapter, context, source_mode=source_mode, session=session)
     if pack_name == "topology_dependency_pack":
-        return adapter.build_topology_dependency_pack(context, source_mode=source_mode)
+        return build_topology_dependency_pack(adapter, context, source_mode=source_mode, session=session)
     if pack_name == "instance_analysis_pack" and kind == "instance":
         return adapter.build_instance_analysis_pack(
             context,
