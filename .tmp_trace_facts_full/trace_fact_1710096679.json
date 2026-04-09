@@ -1,0 +1,531 @@
+{
+  "schema_version": "v1",
+  "pack_type": "trace_fact_sheet",
+  "generated_at": "2026-04-09T11:58:08+08:00",
+  "context": {
+    "base_url": "http://169.169.173.25:8080",
+    "biz_system_id": 1065,
+    "time_window": {
+      "end_time": "2026-04-01 00:00",
+      "period_minutes": 146880
+    },
+    "auth": {
+      "token": "eyJhbG...Uo2g",
+      "token_env": "TINGYUN_TOKEN",
+      "token_present": true
+    },
+    "lang": "zh_CN",
+    "timezone": "Asia/Shanghai"
+  },
+  "payload": {
+    "selector": {
+      "biz_system_id": 1065,
+      "trace_id_numeric": "1710096679",
+      "query_timestamp": "1774932965451",
+      "action_guid": "9daa542be3521ae6",
+      "trace_guid": "9daa542be3521ae6",
+      "request_id": null
+    },
+    "trace": {
+      "biz_system_id": 1065,
+      "trace_id_numeric": "1710096679",
+      "trace_guid": "9daa542be3521ae6",
+      "action_guid": "9daa542be3521ae6",
+      "request_id": "9daa542be3521ae6",
+      "timestamp": 1774932965451,
+      "application_id": 1645,
+      "instance_id": 2746,
+      "action_id": 13837,
+      "status": "404",
+      "duration_ms": 8.423,
+      "error_count": 2,
+      "is_slow_trace": null,
+      "suspected_problems": [
+        {
+          "type": "error",
+          "actionGuid": "9daa542be3521ae6",
+          "seq": 0,
+          "count": 0,
+          "exclusiveTime": 0.0,
+          "metricName": "HTTP ERROR CODE: 404",
+          "metricType": null
+        },
+        {
+          "type": "maxExclusiveTime",
+          "actionGuid": "9daa542be3521ae6",
+          "seq": 30,
+          "count": 0,
+          "exclusiveTime": 3.975,
+          "metricName": "javax.servlet.http.HttpServlet.service",
+          "metricType": "CODE"
+        },
+        {
+          "type": "component",
+          "actionGuid": "9daa542be3521ae6",
+          "seq": 11,
+          "count": 7,
+          "exclusiveTime": 2.4789999999999996,
+          "metricName": null,
+          "metricType": "NOSQL"
+        }
+      ],
+      "topology_summary": {
+        "nodeCount": 2,
+        "lineCount": 1
+      },
+      "service_flow_summary": {
+        "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+        "serviceType": "$$application",
+        "durationTotal": 8.423,
+        "requestTotalCount": 1
+      },
+      "timeline_summary": {
+        "metricType": "CODE",
+        "metricName": "javax.servlet.ServletRequestListener.requestInitialized",
+        "exclusiveTime": 0.292,
+        "method": "requestInitialized",
+        "methodStack": null
+      },
+      "exceptions": [],
+      "logs": [],
+      "evidence": []
+    },
+    "detail_summary": {
+      "requestId": "9daa542be3521ae6",
+      "traceGuid": "9daa542be3521ae6",
+      "actionGuid": "9daa542be3521ae6",
+      "bizSystemId": 1065,
+      "bizSystemName": "集团法务",
+      "applicationId": 1645,
+      "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+      "actionId": 13837,
+      "actionName": "URI/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+      "instanceId": 2746,
+      "instanceName": "nbyd-jtfw-server2:8888",
+      "timestamp": 1774932965451,
+      "respTime": 8.423,
+      "duration": 8.423,
+      "status": "404",
+      "method": "POST",
+      "uri": "/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+      "url": "http://10.190.22.23/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+      "threadName": "http-nio-8888-exec-9",
+      "suspectedProblemList": [
+        {
+          "type": "error",
+          "actionGuid": "9daa542be3521ae6",
+          "seq": 0,
+          "count": 0,
+          "exclusiveTime": 0.0,
+          "metricName": "HTTP ERROR CODE: 404",
+          "metricType": null
+        },
+        {
+          "type": "maxExclusiveTime",
+          "actionGuid": "9daa542be3521ae6",
+          "seq": 30,
+          "count": 0,
+          "exclusiveTime": 3.975,
+          "metricName": "javax.servlet.http.HttpServlet.service",
+          "metricType": "CODE"
+        },
+        {
+          "type": "component",
+          "actionGuid": "9daa542be3521ae6",
+          "seq": 11,
+          "count": 7,
+          "exclusiveTime": 2.4789999999999996,
+          "metricName": null,
+          "metricType": "NOSQL"
+        }
+      ],
+      "topologySummary": {
+        "nodeCount": 2,
+        "lineCount": 1
+      },
+      "serviceFlowSummary": {
+        "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+        "serviceType": "$$application",
+        "durationTotal": 8.423,
+        "requestTotalCount": 1
+      },
+      "timeLineSummary": {
+        "metricType": "CODE",
+        "metricName": "javax.servlet.ServletRequestListener.requestInitialized",
+        "exclusiveTime": 0.292,
+        "method": "requestInitialized",
+        "methodStack": null
+      }
+    },
+    "call_tree_summary": {
+      "node_count": 25,
+      "action_count": 0,
+      "application_count": 0,
+      "instance_count": 0
+    },
+    "exception_summary": {
+      "count": 0,
+      "top_exception": null
+    },
+    "suspect_signals": [
+      {
+        "type": "suspected_problem_count",
+        "value": 3,
+        "level": "high",
+        "source_api": "action/trace/detail"
+      },
+      {
+        "type": "call_tree_available",
+        "value": 25,
+        "level": "info",
+        "source_api": "action/trace/callTree"
+      }
+    ],
+    "drilldown_keys": {
+      "bizSystemId": 1065,
+      "traceId": "1710096679",
+      "queryTimestamp": "1774932965451",
+      "traceGuid": "9daa542be3521ae6",
+      "actionGuid": "9daa542be3521ae6",
+      "requestId": "9daa542be3521ae6",
+      "instanceId": 2746,
+      "actionId": 13837
+    },
+    "drilldown_path": [
+      "action/trace/detail",
+      "action/trace/callTree",
+      "action/trace/detail/exceptions"
+    ],
+    "metric_semantics": [
+      {
+        "metric_name": "duration_ms",
+        "subject_type": "trace",
+        "subject_key": "trace:1710096679",
+        "aggregation": "sample",
+        "unit": "ms",
+        "time_window": "2026-04-01 00:00 / 146880m window",
+        "sample_scope": "selected trace",
+        "confidence": "medium"
+      },
+      {
+        "metric_name": "error_count",
+        "subject_type": "trace",
+        "subject_key": "trace:1710096679",
+        "aggregation": "count",
+        "unit": "count",
+        "time_window": "2026-04-01 00:00 / 146880m window",
+        "sample_scope": "selected trace",
+        "confidence": "medium"
+      }
+    ],
+    "page_links": [
+      {
+        "page_type": "trace_detail",
+        "url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "url_status": "direct",
+        "direct_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "fallback_url": "http://169.169.173.25:8080",
+        "label": "Trace 详情页",
+        "why_relevant": "用于查看时间线、异常节点、调用树与异常详情。",
+        "suggested_report_section": "3.5 请求追踪与根因分析专题",
+        "deep_link_status": "captured_page_context",
+        "navigation_path": [
+          "请求追踪",
+          "1710096679"
+        ],
+        "suggested_filters": {
+          "trace_guid": "9daa542be3521ae6",
+          "query_timestamp": "1774932965451"
+        },
+        "target_ref": {
+          "kind": "trace",
+          "trace_id_numeric": "1710096679",
+          "trace_guid": "9daa542be3521ae6"
+        },
+        "url_source": "captured_page_url",
+        "related_console_urls": [
+          "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "http://169.169.173.25:8080/web/server/background/list",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+          "http://169.169.173.25:8080/web/server/interface/list",
+          "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+          "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+          "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+          "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "http://169.169.173.25:8080/web/server/application/errorAnalysis/0/1645/ER?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request&self=_self",
+          "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+          "http://169.169.173.25:8080/web/server/system/list",
+          "http://169.169.173.25:8080/web/server/system/business",
+          "http://169.169.173.25:8080/server/system/business",
+          "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+          "http://169.169.173.25:8080/web/server/action/list",
+          "http://169.169.173.25:8080/web/server/application/home/1645",
+          "http://169.169.173.25:8080/web/server/application/home/1646",
+          "http://169.169.173.25:8080/web/server/system/business/overview/1059/0",
+          "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "http://169.169.173.25:8080"
+        ],
+        "page_context_summary": {
+          "selection_rule": "object_match>url_source_priority>page_quality>recency",
+          "candidate_count": 27,
+          "selected_source": "captured_page_url",
+          "matched_relative_paths": [
+            "instance/cpu/chart",
+            "errorList",
+            "webaction/list/backgroundList",
+            "component/chart/performanceDecompose",
+            "webaction/list/interfaceList"
+          ],
+          "selected_seen_at": "2026-04-07T14:48:43+08:00",
+          "selected_page_title": "Ting Yun"
+        }
+      }
+    ],
+    "primary_console_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+    "related_console_urls": [
+      "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+      "http://169.169.173.25:8080/web/server/background/list",
+      "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+      "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+      "http://169.169.173.25:8080/web/server/interface/list",
+      "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+      "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+      "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+      "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+      "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+      "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+      "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "http://169.169.173.25:8080/web/server/application/errorAnalysis/0/1645/ER?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request&self=_self",
+      "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+      "http://169.169.173.25:8080/web/server/system/list",
+      "http://169.169.173.25:8080/web/server/system/business",
+      "http://169.169.173.25:8080/server/system/business",
+      "http://169.169.173.25:8080/web/server/connectionpool/view",
+      "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "http://169.169.173.25:8080/web/server/action/list",
+      "http://169.169.173.25:8080/web/server/application/home/1645",
+      "http://169.169.173.25:8080/web/server/application/home/1646",
+      "http://169.169.173.25:8080/web/server/system/business/overview/1059/0",
+      "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+      "http://169.169.173.25:8080"
+    ],
+    "screenshot_hints": [
+      {
+        "title": "Trace 详情截图建议",
+        "page_type": "trace_detail",
+        "url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "recommended_capture": [
+          "trace 时间线",
+          "调用树",
+          "异常或可疑节点区域"
+        ],
+        "recommended_annotations": [
+          "圈出最长耗时段",
+          "标注 trace id",
+          "标注可疑组件节点"
+        ],
+        "usage_in_report": "适合用于 3.5 请求追踪与根因分析专题。",
+        "suggested_report_section": "3.5 请求追踪与根因分析专题",
+        "target_ref": {
+          "kind": "trace",
+          "trace_id_numeric": "1710096679",
+          "trace_guid": "9daa542be3521ae6"
+        },
+        "priority": "high"
+      }
+    ],
+    "coverage_boundary": {
+      "page_experience": {
+        "status": "partial",
+        "reason": "page_experience_pack relies on backend/topology evidence unless dedicated page-side inputs are available.",
+        "available_evidence": [
+          "user_to_application_topology",
+          "representative_request_urls",
+          "external_dependency_edges",
+          "backend_action_and_trace_correlation"
+        ],
+        "missing_evidence": [
+          "slow_pages",
+          "slow_requests",
+          "js_errors",
+          "browser_breakdown",
+          "geo_breakdown"
+        ]
+      },
+      "console_linking": {
+        "status": "base_url_fallback",
+        "reason": "Links now prefer captured real page URLs when page context exists; otherwise they still fall back to console root URLs plus navigation hints.",
+        "available_evidence": [
+          "clickable_console_root_url",
+          "captured_page_url_candidates",
+          "page_type",
+          "navigation_path",
+          "suggested_filters"
+        ],
+        "missing_evidence": [
+          "fully_stable_spa_deep_link_for_every_page"
+        ]
+      }
+    },
+    "evidence_linkage": {
+      "related_time_windows": [
+        1774932965451
+      ],
+      "related_actions": [
+        {
+          "kind": "action",
+          "action_id": 13837,
+          "application_id": 1645,
+          "biz_system_id": 1065
+        }
+      ],
+      "related_traces": [
+        {
+          "kind": "trace",
+          "trace_id_numeric": "1710096679",
+          "trace_guid": "9daa542be3521ae6"
+        }
+      ],
+      "related_sqls": [],
+      "related_dependencies": [],
+      "recommended_next_pages": [
+        "trace_detail"
+      ]
+    },
+    "evidence": [
+      {
+        "id": "trace_fact_detail",
+        "source_api": "action/trace/detail",
+        "source_path": "/server-api/action/trace/detail",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "action/trace/detail",
+          "request_params": {
+            "bizSystemId": 1065,
+            "traceId": "1710096679"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "traceId": "1710096679"
+        },
+        "response_excerpt": {
+          "requestId": "9daa542be3521ae6",
+          "traceGuid": "9daa542be3521ae6",
+          "actionGuid": "9daa542be3521ae6",
+          "bizSystemId": 1065,
+          "bizSystemName": "集团法务",
+          "applicationId": 1645,
+          "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+          "actionId": 13837,
+          "actionName": "URI/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+          "instanceId": 2746,
+          "instanceName": "nbyd-jtfw-server2:8888",
+          "timestamp": 1774932965451,
+          "respTime": 8.423,
+          "duration": 8.423,
+          "status": "404",
+          "method": "POST",
+          "uri": "/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+          "url": "http://10.190.22.23/grcv5/api/flow-mobile/v1/user-tasks/undefined",
+          "threadName": "http-nio-8888-exec-9",
+          "suspectedProblemList": [
+            {
+              "type": "error",
+              "actionGuid": "9daa542be3521ae6",
+              "seq": 0,
+              "count": 0,
+              "exclusiveTime": 0.0,
+              "metricName": "HTTP ERROR CODE: 404",
+              "metricType": null
+            },
+            {
+              "type": "maxExclusiveTime",
+              "actionGuid": "9daa542be3521ae6",
+              "seq": 30,
+              "count": 0,
+              "exclusiveTime": 3.975,
+              "metricName": "javax.servlet.http.HttpServlet.service",
+              "metricType": "CODE"
+            },
+            {
+              "type": "component",
+              "actionGuid": "9daa542be3521ae6",
+              "seq": 11,
+              "count": 7,
+              "exclusiveTime": 2.4789999999999996,
+              "metricName": null,
+              "metricType": "NOSQL"
+            }
+          ],
+          "topologySummary": {
+            "nodeCount": 2,
+            "lineCount": 1
+          },
+          "serviceFlowSummary": {
+            "serviceName": "fawuorg.springframework.boot.loader.WarLauncher",
+            "serviceType": "$$application",
+            "durationTotal": 8.423,
+            "requestTotalCount": 1
+          },
+          "timeLineSummary": {
+            "metricType": "CODE",
+            "metricName": "javax.servlet.ServletRequestListener.requestInitialized",
+            "exclusiveTime": 0.292,
+            "method": "requestInitialized",
+            "methodStack": null
+          }
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "trace_fact_call_tree",
+        "source_api": "action/trace/callTree",
+        "source_path": "/server-api/action/trace/callTree",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "action/trace/callTree",
+          "request_params": {
+            "bizSystemId": 1065,
+            "traceId": "1710096679"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "traceId": "1710096679"
+        },
+        "response_excerpt": {
+          "node_count": 25,
+          "action_count": 0,
+          "application_count": 0,
+          "instance_count": 0
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      }
+    ]
+  },
+  "meta": {
+    "adapter_version": "0.1.0",
+    "source_mode": "live",
+    "source_count": 2,
+    "evidence_count": 2,
+    "missing_inputs": [],
+    "warnings": [],
+    "confidence_notes": [],
+    "build_stats": {}
+  }
+}

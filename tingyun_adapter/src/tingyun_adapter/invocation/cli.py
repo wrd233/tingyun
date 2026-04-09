@@ -32,6 +32,8 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
             "action_fact_sheet",
             "trace_case_pack",
             "trace_fact_sheet",
+            "trace_sql_pack",
+            "trace_execution_pack",
             "report_fact_pack",
             "database_component_pack",
             "nosql_component_pack",
@@ -137,6 +139,46 @@ def main() -> int:
                     request_id=args.request_id,
                 )
             envelope = adapter.build_trace_fact_sheet(context, source_mode=args.source_mode, action_ref=action_ref, trace_ref=trace_ref)
+        elif args.build_pack == "trace_sql_pack":
+            action_ref = None
+            if args.action_id and args.application_id:
+                action_ref = ActionRef(
+                    biz_system_id=args.biz_system_id,
+                    application_id=args.application_id,
+                    action_id=args.action_id,
+                    action_type=args.action_type,
+                )
+            trace_ref = None
+            if args.trace_id or args.query_timestamp or args.trace_guid or args.action_guid or args.request_id:
+                trace_ref = TraceRef(
+                    biz_system_id=args.biz_system_id,
+                    trace_id_numeric=args.trace_id,
+                    query_timestamp=args.query_timestamp,
+                    trace_guid=args.trace_guid,
+                    action_guid=args.action_guid,
+                    request_id=args.request_id,
+                )
+            envelope = adapter.build_trace_sql_pack(context, source_mode=args.source_mode, action_ref=action_ref, trace_ref=trace_ref)
+        elif args.build_pack == "trace_execution_pack":
+            action_ref = None
+            if args.action_id and args.application_id:
+                action_ref = ActionRef(
+                    biz_system_id=args.biz_system_id,
+                    application_id=args.application_id,
+                    action_id=args.action_id,
+                    action_type=args.action_type,
+                )
+            trace_ref = None
+            if args.trace_id or args.query_timestamp or args.trace_guid or args.action_guid or args.request_id:
+                trace_ref = TraceRef(
+                    biz_system_id=args.biz_system_id,
+                    trace_id_numeric=args.trace_id,
+                    query_timestamp=args.query_timestamp,
+                    trace_guid=args.trace_guid,
+                    action_guid=args.action_guid,
+                    request_id=args.request_id,
+                )
+            envelope = adapter.build_trace_execution_pack(context, source_mode=args.source_mode, action_ref=action_ref, trace_ref=trace_ref)
         elif args.build_pack == "database_component_pack":
             component_ref = None
             if args.component_name:

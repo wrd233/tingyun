@@ -104,6 +104,26 @@ class TraceClient(BaseClient):
             },
         )
 
+    def pool_info(
+        self,
+        *,
+        metric_category: str,
+        pool_active_count: int | str,
+        pool_wait_count: int | str,
+        pool_end_time: int | str,
+    ) -> Any:
+        return self.post_json(
+            "/server-api/action/trace/detail/poolInfo",
+            {"lang": self.lang},
+            query={
+                "metricCategory": metric_category,
+                "poolActiveCount": str(pool_active_count),
+                "poolWaitCount": str(pool_wait_count),
+                "poolEndTime": str(pool_end_time),
+                "lang": self.lang,
+            },
+        )
+
     def query_agent_version_info(self, *, instance_id: int) -> Any:
         return self.post_form(
             "/server-api/action/trace/detail/queryAgentVersionInfo",

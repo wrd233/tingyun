@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from tingyun_adapter.config.settings import AdapterSettings
-from tingyun_adapter.domain.models.common import ActionRef, DatabaseComponentRef
+from tingyun_adapter.domain.models.common import ActionRef, DatabaseComponentRef, TraceRef
 from tingyun_adapter.invocation.sdk import Adapter
 from tingyun_adapter.usecases.build_session import BuildSession
 
@@ -423,6 +423,314 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertGreater(len(payload["screenshot_hints"]), 0)
         self.assertGreater(len(payload["evidence_linkage"]["related_traces"]), 0)
         self.assertEqual(payload["diagnostics"]["mode"], "full")
+
+    def test_build_trace_sql_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1062, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_trace_sql_pack(context, source_mode="sample")
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "trace_sql_pack")
+        self.assertIn("sql_summary", payload)
+        self.assertIn("sqls", payload)
+        self.assertIn("database_spans", payload)
+
+    def test_build_trace_execution_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1062, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_trace_execution_pack(context, source_mode="sample")
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "trace_execution_pack")
+        self.assertIn("call_tree_summary", payload)
+        self.assertIn("snapshot_summary", payload)
+        self.assertIn("exception_summary", payload)
+        self.assertIn("pool_summary", payload)
+
+    def test_build_trace_fact_sheet_loads_live_exceptions(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        detail = {
+            "bizSystemId": 1065,
+            "applicationId": 1645,
+            "actionId": 16000,
+            "traceId": "1716361816",
+            "traceGuid": "trace-guid-1",
+            "actionGuid": "action-guid-1",
+            "requestId": "request-guid-1",
+            "timestamp": 1775523101840,
+            "status": "404",
+            "respTime": 7.716,
+            "duration": 7.716,
+            "suspectedProblemList": [{"seq": 0, "metricType": "CODE", "metricName": "CasRedirectFilter", "exclusiveTime": 1.0}],
+        }
+        call_tree = {"data": {"nodeMap": {"action-guid-1_-1": {"metricType": "Code", "metricName": "root", "totalTime": 7.716}}}}
+        exceptions = {"data": [{"name": "HTTP ERROR CODE: 404", "msg": "status: 404", "type": "HTTP Error Code", "seq": 0, "highest": True}]}
+        orig_detail = self.adapter.trace.trace_detail
+        orig_call_tree = self.adapter.trace.call_tree
+        orig_exceptions = self.adapter.trace.trace_exceptions
+        try:
+            self.adapter.trace.trace_detail = lambda **_: detail
+            self.adapter.trace.call_tree = lambda **_: call_tree
+            self.adapter.trace.trace_exceptions = lambda **_: exceptions
+            envelope = self.adapter.build_trace_fact_sheet(
+                context,
+                source_mode="live",
+                trace_ref=TraceRef(
+                    biz_system_id=1065,
+                    trace_id_numeric="1716361816",
+                    query_timestamp="1775523101840",
+                    action_guid="action-guid-1",
+                ),
+            )
+        finally:
+            self.adapter.trace.trace_detail = orig_detail
+            self.adapter.trace.call_tree = orig_call_tree
+            self.adapter.trace.trace_exceptions = orig_exceptions
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(payload["exception_summary"]["count"], 1)
+        self.assertEqual(payload["exception_summary"]["top_exception"]["name"], "HTTP ERROR CODE: 404")
+
+    def test_build_trace_sql_pack_extracts_sqls_from_trace_detail(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        detail = {
+            "bizSystemId": 1065,
+            "bizSystemName": "示例系统",
+            "applicationId": 1645,
+            "applicationName": "示例应用",
+            "actionId": 16000,
+            "actionName": "SpringController/example (POST)",
+            "instanceId": 2746,
+            "instanceName": "demo:8888",
+            "traceId": "1716361816",
+            "traceGuid": "trace-guid-1",
+            "actionGuid": "action-guid-1",
+            "requestId": "request-guid-1",
+            "timestamp": 1775523101840,
+            "status": "200",
+            "respTime": 2176.739,
+            "duration": 2176.739,
+            "timeLine": {
+                "metricType": "CODE",
+                "metricName": "root",
+                "exclusiveTime": 1.106,
+                "subTimeLines": [
+                    {
+                        "metricType": "DATABASE",
+                        "metricName": "MySQL/10.190.22.21:3306/bpmapp_hg",
+                        "instance": "10.190.22.21:3306/bpmapp_hg",
+                        "type": "MySQL",
+                        "clasz": "com.mysql.cj.jdbc.ClientPreparedStatement",
+                        "method": "executeQuery",
+                        "exclusiveTime": 0.4,
+                        "totalTime": 0.4,
+                        "repeatTimes": 1,
+                        "sql": "select tbl.ID_VAL from HD_ID_GEN tbl where tbl.ID_NAME='SYNC_COLLECT_LOG' for update",
+                        "request": {"name": "SpringController/example (POST)"},
+                        "callerInstance": {"name": "demo:8888"},
+                        "subTimeLines": [],
+                    },
+                    {
+                        "metricType": "DATABASE",
+                        "metricName": "MySQL/10.190.22.21:3306/bpmapp_hg",
+                        "instance": "10.190.22.21:3306/bpmapp_hg",
+                        "type": "MySQL",
+                        "clasz": "com.mysql.cj.jdbc.ClientPreparedStatement",
+                        "method": "executeQuery",
+                        "exclusiveTime": 718.263,
+                        "totalTime": 718.263,
+                        "repeatTimes": 1,
+                        "sql": "select contractin0_.ID as id1_138_ from LAS_CONTRACT_INFO contractin0_",
+                        "request": {"name": "SpringController/example (POST)"},
+                        "callerInstance": {"name": "demo:8888"},
+                        "subTimeLines": [],
+                    },
+                ],
+            },
+            "databaseSqlGroups": [
+                {
+                    "averageTime": 0.4,
+                    "count": 1,
+                    "errorCount": 0,
+                    "sql": "select tbl.ID_VAL from HD_ID_GEN tbl where tbl.ID_NAME='SYNC_COLLECT_LOG' for update",
+                    "totalTime": 0.4,
+                },
+                {
+                    "averageTime": 718.193,
+                    "count": 3,
+                    "errorCount": 0,
+                    "sql": "select contractin0_.ID as id1_138_ from LAS_CONTRACT_INFO contractin0_",
+                    "totalTime": 2154.58,
+                },
+            ],
+        }
+        original_trace_detail = self.adapter.trace.trace_detail
+        original_call_tree = self.adapter.trace.call_tree
+        try:
+            self.adapter.trace.trace_detail = lambda **_: detail
+            self.adapter.trace.call_tree = lambda **_: {"data": {"nodeMap": {}}}
+            envelope = self.adapter.build_trace_sql_pack(
+                context,
+                source_mode="live",
+                trace_ref=TraceRef(
+                    biz_system_id=1065,
+                    trace_id_numeric="1716361816",
+                    query_timestamp="1775523101840",
+                    action_guid="action-guid-1",
+                ),
+            )
+        finally:
+            self.adapter.trace.trace_detail = original_trace_detail
+            self.adapter.trace.call_tree = original_call_tree
+
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "trace_sql_pack")
+        self.assertEqual(payload["sql_summary"]["sql_count"], 2)
+        self.assertEqual(payload["sql_summary"]["database_span_count"], 2)
+        self.assertEqual(payload["sqls"][0]["database_span_summary"]["span_count"], 1)
+        self.assertIn("sql_fingerprint", payload["sqls"][0])
+        self.assertEqual(payload["database_spans"][0]["metric_name"], "MySQL/10.190.22.21:3306/bpmapp_hg")
+
+    def test_build_trace_sql_pack_uses_call_tree_sql_fallback(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        detail = {
+            "bizSystemId": 1065,
+            "applicationId": 1645,
+            "actionId": 16000,
+            "traceId": "1716361816",
+            "traceGuid": "trace-guid-1",
+            "actionGuid": "action-guid-1",
+            "requestId": "request-guid-1",
+            "timestamp": 1775523101840,
+            "status": "200",
+            "respTime": 2043.972,
+            "duration": 2043.972,
+            "timeLine": {"metricType": "CODE", "metricName": "root", "subTimeLines": []},
+        }
+        call_tree = {
+            "data": {
+                "nodeMap": {
+                    "action-guid-1_1017": {
+                        "metricType": "Database",
+                        "metricName": "MySQL/10.190.22.21:3306/bpmapp_hg",
+                        "clazz": "com.fr.third.org.apache.commons.dbcp.DelegatingStatement",
+                        "method": "executeQuery",
+                        "totalTime": 0.231,
+                        "exclTime": 0.231,
+                        "execCount": 1,
+                        "seq": 1017,
+                        "param": {"instance": "10.190.22.21:3306/bpmapp_hg", "vendor": "MySQL", "operation": "select 1"},
+                        "sql": "select 1",
+                    }
+                }
+            }
+        }
+        orig_detail = self.adapter.trace.trace_detail
+        orig_call_tree = self.adapter.trace.call_tree
+        try:
+            self.adapter.trace.trace_detail = lambda **_: detail
+            self.adapter.trace.call_tree = lambda **_: call_tree
+            envelope = self.adapter.build_trace_sql_pack(
+                context,
+                source_mode="live",
+                trace_ref=TraceRef(
+                    biz_system_id=1065,
+                    trace_id_numeric="1716361816",
+                    query_timestamp="1775523101840",
+                    action_guid="action-guid-1",
+                ),
+            )
+        finally:
+            self.adapter.trace.trace_detail = orig_detail
+            self.adapter.trace.call_tree = orig_call_tree
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(payload["sql_summary"]["sql_count"], 1)
+        self.assertEqual(payload["sqls"][0]["sql"], "select 1")
+        self.assertEqual(payload["database_spans"][0]["source"], "call_tree")
+
+    def test_build_trace_execution_pack_combines_trace_sources(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        detail = {
+            "bizSystemId": 1065,
+            "applicationId": 1645,
+            "actionId": 16000,
+            "traceId": "1716361816",
+            "traceGuid": "trace-guid-1",
+            "actionGuid": "action-guid-1",
+            "requestId": "request-guid-1",
+            "timestamp": 1775523101840,
+            "status": "500",
+            "respTime": 2176.739,
+            "duration": 2176.739,
+            "suspectedProblemList": [{"seq": 1017, "metricType": "DATABASE", "metricName": "MySQL/10.190.22.21:3306/bpmapp_hg", "exclusiveTime": 718.263}],
+            "timeLine": {
+                "metricType": "CODE",
+                "metricName": "root",
+                "subTimeLines": [
+                    {
+                        "metricType": "POOL",
+                        "metricName": "10.190.22.20:6379/1/Redis-71302",
+                        "poolActiveCount": 0,
+                        "poolWaitCount": 0,
+                        "poolEndTime": 1775523101840,
+                        "totalTime": 0.1,
+                        "subTimeLines": [],
+                    }
+                ],
+            },
+        }
+        call_tree = {
+            "data": {
+                "nodeMap": {
+                    "action-guid-1_-1": {"metricType": "Code", "metricName": "root", "totalTime": 2176.739, "threadName": "http-nio-8888-exec-1"},
+                    "action-guid-1_1017": {
+                        "metricType": "Database",
+                        "metricName": "MySQL/10.190.22.21:3306/bpmapp_hg",
+                        "clazz": "com.fr.third.org.apache.commons.dbcp.DelegatingStatement",
+                        "method": "executeQuery",
+                        "totalTime": 718.263,
+                        "exclTime": 718.263,
+                        "execCount": 1,
+                        "seq": 1017,
+                        "param": {"instance": "10.190.22.21:3306/bpmapp_hg", "vendor": "MySQL", "operation": "select 1"},
+                        "sql": "select 1",
+                    },
+                },
+                "nodeTableList": [{"fullName": "com.fr.third.org.apache.commons.dbcp.DelegatingStatement.executeQuery", "count": 1, "exclTime": 718.263, "avgExclTime": 718.263, "maxExclTime": 718.263, "timeRatio": 0.33}],
+            }
+        }
+        exceptions = {"data": [{"name": "HTTP ERROR CODE: 500", "msg": "status: 500", "type": "HTTP Error Code", "seq": 0, "highest": True}]}
+        snapshot = {"data": [{"statusCode": 500, "threadName": "http-nio-8888-exec-1", "threadCount": 1, "clientIp": "10.85.100.48", "url": "http://example/tx", "duration": 2176.739, "exclusiveTime": 2174.644, "networkTotal": 0.0, "errorNames": ["HTTP ERROR CODE: 500"], "exceptions": [{"name": "HTTP ERROR CODE: 500"}], "requestHeader": {"User-Agent": "Java/1.8"}}]}
+        pool_info = {"data": {"metricCategory": "10.190.22.20:6379/1/Redis-71302", "framework": "Redisson", "databaseType": "Redis", "currentUsed": 0, "currentIdle": 0, "pools": [{"waitCount": 0}]}}
+        orig_detail = self.adapter.trace.trace_detail
+        orig_call_tree = self.adapter.trace.call_tree
+        orig_exceptions = self.adapter.trace.trace_exceptions
+        orig_snapshot = self.adapter.trace.snapshot_time_info
+        orig_pool = self.adapter.trace.pool_info
+        try:
+            self.adapter.trace.trace_detail = lambda **_: detail
+            self.adapter.trace.call_tree = lambda **_: call_tree
+            self.adapter.trace.trace_exceptions = lambda **_: exceptions
+            self.adapter.trace.snapshot_time_info = lambda **_: snapshot
+            self.adapter.trace.pool_info = lambda **_: pool_info
+            envelope = self.adapter.build_trace_execution_pack(
+                context,
+                source_mode="live",
+                trace_ref=TraceRef(
+                    biz_system_id=1065,
+                    trace_id_numeric="1716361816",
+                    query_timestamp="1775523101840",
+                    action_guid="action-guid-1",
+                ),
+            )
+        finally:
+            self.adapter.trace.trace_detail = orig_detail
+            self.adapter.trace.call_tree = orig_call_tree
+            self.adapter.trace.trace_exceptions = orig_exceptions
+            self.adapter.trace.snapshot_time_info = orig_snapshot
+            self.adapter.trace.pool_info = orig_pool
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "trace_execution_pack")
+        self.assertEqual(payload["exception_summary"]["count"], 1)
+        self.assertEqual(payload["snapshot_summary"]["status_code"], 500)
+        self.assertEqual(payload["pool_summary"]["pool_count"], 1)
+        self.assertGreater(len(payload["call_tree_hotspots"]["top_nodes"]), 0)
+        self.assertGreater(len(payload["database_spans"]), 0)
 
     def test_build_action_dependency_breakdown_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)

@@ -10,6 +10,8 @@ class PackType(str, Enum):
     DIAGNOSTIC_CANDIDATE = "diagnostic_candidate_pack"
     ACTION_FACT_SHEET = "action_fact_sheet"
     TRACE_FACT_SHEET = "trace_fact_sheet"
+    TRACE_SQL_PACK = "trace_sql_pack"
+    TRACE_EXECUTION_PACK = "trace_execution_pack"
     DATABASE_COMPONENT = "database_component_pack"
     NOSQL_COMPONENT = "nosql_component_pack"
     CONNECTION_POOL = "connection_pool_pack"

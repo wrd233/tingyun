@@ -1,0 +1,2535 @@
+{
+  "schema_version": "v1",
+  "pack_type": "stability_signals_pack",
+  "generated_at": "2026-04-09T11:14:32+08:00",
+  "context": {
+    "base_url": "http://169.169.173.25:8080",
+    "biz_system_id": 1065,
+    "time_window": {
+      "end_time": "2026-04-01 00:00",
+      "period_minutes": 146880
+    },
+    "auth": {
+      "token": "eyJhbG...Uo2g",
+      "token_env": "TINGYUN_TOKEN",
+      "token_present": true
+    },
+    "lang": "zh_CN",
+    "timezone": "Asia/Shanghai"
+  },
+  "payload": {
+    "scope": {
+      "bizSystemId": 1065,
+      "endTime": "2026-04-01 00:00",
+      "periodMinutes": 146880,
+      "sourceMode": "live",
+      "limit": 200
+    },
+    "objects": [
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13161,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/ProductIndexController.afterPropertiesSet",
+        "metrics": {
+          "response_time_ms": 2788495.0,
+          "total_response_time_ms": 16730972.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 6,
+          "count": 6
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 61,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "workhour_sensitive",
+        "instance_distribution": {
+          "instance_count": 1,
+          "trace_candidate_count": 5
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 61,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "workhour_sensitive",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "pack",
+            "value": "action_fact_sheet"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "action_fact_trace_candidates",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": []
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 31762,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrLawCheckService.lawyerEorkTimeTop10Data.dwr",
+        "metrics": {
+          "response_time_ms": 1541760.0,
+          "total_response_time_ms": 3083520.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 2,
+          "count": 2
+        },
+        "stability_class": "sporadic",
+        "repeatability_score": 22,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "workhour_sensitive",
+        "instance_distribution": {
+          "instance_count": 1,
+          "trace_candidate_count": 2
+        },
+        "burstiness": "unstable_spiky",
+        "stability_facts": {
+          "repeatability": 22,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "workhour_sensitive",
+          "burstiness": "unstable_spiky"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "pack",
+            "value": "action_fact_sheet"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "action_fact_trace_candidates",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": []
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 31342,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrLawCheckService.lawyerEorkTimeTop10Data.dwr",
+        "metrics": {
+          "response_time_ms": 1519501.0,
+          "total_response_time_ms": 4558502.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 3,
+          "count": 3
+        },
+        "stability_class": "sporadic",
+        "repeatability_score": 33,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "workhour_sensitive",
+        "instance_distribution": {
+          "instance_count": 1,
+          "trace_candidate_count": 3
+        },
+        "burstiness": "unstable_spiky",
+        "stability_facts": {
+          "repeatability": 33,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "workhour_sensitive",
+          "burstiness": "unstable_spiky"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "pack",
+            "value": "action_fact_sheet"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "action_fact_trace_candidates",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": []
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13336,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/TemplateUploadController.setTemplateService",
+        "metrics": {
+          "response_time_ms": 423614.0,
+          "total_response_time_ms": 1694454.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 2,
+          "count": 4
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 41,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "workhour_sensitive",
+        "instance_distribution": {
+          "instance_count": 1,
+          "trace_candidate_count": 5
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 41,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "workhour_sensitive",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "pack",
+            "value": "action_fact_sheet"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "action_fact_trace_candidates",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": []
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13158,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/serverapi/restapi/other/v1",
+        "metrics": {
+          "response_time_ms": 265950.0,
+          "total_response_time_ms": 1063800.0,
+          "throughput": 0.0,
+          "error_count": 1,
+          "slow_count": 1,
+          "count": 4
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 37,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "workhour_sensitive",
+        "instance_distribution": {
+          "instance_count": 1,
+          "trace_candidate_count": 5
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 37,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "workhour_sensitive",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "pack",
+            "value": "action_fact_sheet"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "action_fact_trace_candidates",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": []
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 19684,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/user/component/AttachmentController/upload",
+        "metrics": {
+          "response_time_ms": 149013.0,
+          "total_response_time_ms": 149013.0,
+          "throughput": 0.0,
+          "error_count": 1,
+          "slow_count": 1,
+          "count": 1
+        },
+        "stability_class": "sporadic",
+        "repeatability_score": 11,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "time_window_clustered",
+        "instance_distribution": {
+          "instance_count": null,
+          "trace_candidate_count": 0
+        },
+        "burstiness": "unstable_spiky",
+        "stability_facts": {
+          "repeatability": 11,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "time_window_clustered",
+          "burstiness": "unstable_spiky"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [],
+        "confidence": "low",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "trace_candidates_missing",
+          "lightweight_summary_only"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13436,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/${url.attachment}/${url.attachment.frmIndiDocs}",
+        "metrics": {
+          "response_time_ms": 8273.0,
+          "total_response_time_ms": 23512930.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 1333,
+          "count": 2842
+        },
+        "stability_class": "persistent",
+        "repeatability_score": 100,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "time_window_clustered",
+        "instance_distribution": {
+          "instance_count": null,
+          "trace_candidate_count": 0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 100,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "time_window_clustered",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "low",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "trace_candidates_missing",
+          "lightweight_summary_only"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 19286,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/user/component/AttachmentController/frmIndiDocs",
+        "metrics": {
+          "response_time_ms": 122517.0,
+          "total_response_time_ms": 245034.0,
+          "throughput": 0.0,
+          "error_count": 2,
+          "slow_count": 2,
+          "count": 2
+        },
+        "stability_class": "sporadic",
+        "repeatability_score": 22,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "time_window_clustered",
+        "instance_distribution": {
+          "instance_count": null,
+          "trace_candidate_count": 0
+        },
+        "burstiness": "unstable_spiky",
+        "stability_facts": {
+          "repeatability": 22,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "time_window_clustered",
+          "burstiness": "unstable_spiky"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [],
+        "confidence": "low",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "trace_candidates_missing",
+          "lightweight_summary_only"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 18885,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/user/component/AttachmentController/upload",
+        "metrics": {
+          "response_time_ms": 94476.0,
+          "total_response_time_ms": 377905.0,
+          "throughput": 0.0,
+          "error_count": 4,
+          "slow_count": 4,
+          "count": 4
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 44,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "time_window_clustered",
+        "instance_distribution": {
+          "instance_count": null,
+          "trace_candidate_count": 0
+        },
+        "burstiness": "unstable_spiky",
+        "stability_facts": {
+          "repeatability": 44,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "time_window_clustered",
+          "burstiness": "unstable_spiky"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern"
+        ],
+        "confidence": "low",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "trace_candidates_missing",
+          "lightweight_summary_only"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 14149,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.createUpdateWorkFlow.dwr",
+        "metrics": {
+          "response_time_ms": 89807.0,
+          "total_response_time_ms": 4849598.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 38,
+          "count": 54
+        },
+        "stability_class": "persistent",
+        "repeatability_score": 100,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "time_window_clustered",
+        "instance_distribution": {
+          "instance_count": null,
+          "trace_candidate_count": 0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 100,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "time_window_clustered",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "low",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "action_hotspot_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "action_list",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "trace_candidates_missing",
+          "lightweight_summary_only"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "external_dependency",
+          "protocol": "http",
+          "node_id": "1065_0_0_External_http_[http]"
+        },
+        "target_type": "external_dependency",
+        "display_name": "1065_0_0_External_http_[http]",
+        "metrics": {
+          "response_time_ms": 4944.0,
+          "error_rate": 13.25,
+          "throughput": 0.07,
+          "upstream_count": 3
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 60,
+        "spread_scope": "systemic_pattern",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "upstream_count": 3
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 60,
+          "spread_scope": "systemic_pattern",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "external_dependency_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "biz_detail_graph",
+          "graph_health",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": []
+      },
+      {
+        "target_ref": {
+          "kind": "external_dependency",
+          "protocol": "https",
+          "node_id": "1065_0_0_External_https_[https]"
+        },
+        "target_type": "external_dependency",
+        "display_name": "1065_0_0_External_https_[https]",
+        "metrics": {
+          "response_time_ms": 18.0,
+          "error_rate": 0.01,
+          "throughput": 0.01,
+          "upstream_count": 3
+        },
+        "stability_class": "sporadic",
+        "repeatability_score": 30,
+        "spread_scope": "systemic_pattern",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "upstream_count": 3
+        },
+        "burstiness": "unstable_spiky",
+        "stability_facts": {
+          "repeatability": 30,
+          "spread_scope": "systemic_pattern",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "unstable_spiky"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "external_dependency_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "biz_detail_graph",
+          "graph_health",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": []
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id ,a.contract_name as contract_name ,a.contract_amount_forshow as contract_amount_forshow ,a.contract_status as contract_status from las_contract_info"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS a",
+        "metrics": {
+          "response_time_ms": 1502484.0,
+          "count": 127.0,
+          "error_count": 50.0,
+          "trace_count": 81.0
+        },
+        "stability_class": "persistent",
+        "repeatability_score": 100,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 81.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 100,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.id as id ,a.contract_name as contract_name ,a.contract_amount_forshow as contract_amount_forshow ,a.contract_status as contract_status from las_contract_info a where a.deleted = ? and a.contr"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRAC",
+        "metrics": {
+          "response_time_ms": 122918.0,
+          "count": 48.0,
+          "error_count": 3.0,
+          "trace_count": 23.0
+        },
+        "stability_class": "persistent",
+        "repeatability_score": 77,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 23.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 77,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as total from legal_services_demand a left join hd_wf_form_rel b on a.id = b.beanid left join hd_wf_his_step c on c.instid=b.instid where b.formid = ? and c.steptype = ? and year(c.fin"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT COUNT(*) AS total FROM legal_services_demand a LEFT JOIN hd_wf_form_rel b ON a.ID = b.BEANID LEFT JOIN hd_wf_his_step c on c.INSTID=b.INSTID WHERE b.FORM",
+        "metrics": {
+          "response_time_ms": 45639.0,
+          "count": 5.0,
+          "error_count": 0.0,
+          "trace_count": 2.0
+        },
+        "stability_class": "sporadic",
+        "repeatability_score": 20,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 2.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 20,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? from las_contract_payment a,las_contract_info b where a.contract_id=b.id and b.deleted=? and datediff(a.collection_date,curdate()) = ?"
+        },
+        "target_type": "sql",
+        "display_name": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+        "metrics": {
+          "response_time_ms": 22252.0,
+          "count": 28.0,
+          "error_count": 0.0,
+          "trace_count": 28.0
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 65,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 28.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 65,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id ,( case when a.contract_self_code is not null and a.create_unit_id=? and a.self_code is not null then concat(a.contract_self_code,?,a.self_code) els"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID ,( CASE WHEN a.CONTRACT_SELF_CODE IS NOT NULL AND a.CREATE_UNIT_ID=? AND a.SELF_CODE IS NOT NULL THEN CONCAT",
+        "metrics": {
+          "response_time_ms": 21235.0,
+          "count": 23.0,
+          "error_count": 0.0,
+          "trace_count": 21.0
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 65,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 21.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 65,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id,a.institution_name as institution_name ,( case when a.institution_source=?&& a.institution_classification_two =? then ? when a.institution_source=?&"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID,a.INSTITUTION_NAME as INSTITUTION_NAME ,( case when a.INSTITUTION_SOURCE=?&& a.INSTITUTION_CLASSIFICATION_TW",
+        "metrics": {
+          "response_time_ms": 20858.0,
+          "count": 26.0,
+          "error_count": 0.0,
+          "trace_count": 26.0
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 65,
+        "spread_scope": "cross_application_pattern",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 26.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 65,
+          "spread_scope": "cross_application_pattern",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as total from legal_services_demand a left join hd_wf_form_rel b on a.id = b.beanid left join hd_wf_his_step c on c.instid=b.instid where b.formid = ? and c.steptype = ? and year(c.fin"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT COUNT(*) AS total FROM legal_services_demand a LEFT JOIN hd_wf_form_rel b ON a.ID = b.BEANID LEFT JOIN hd_wf_his_step c on c.INSTID=b.INSTID WHERE b.FORM",
+        "metrics": {
+          "response_time_ms": 16928.0,
+          "count": 18.0,
+          "error_count": 0.0,
+          "trace_count": 5.0
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 61,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 5.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 61,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as total from legal_services_demand a left join hd_wf_form_rel b on a.id = b.beanid left join hd_wf_his_step c on c.instid=b.instid where b.formid = ? and c.steptype = ? and year(c.fin"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT COUNT(*) AS total FROM legal_services_demand a LEFT JOIN hd_wf_form_rel b ON a.ID = b.BEANID LEFT JOIN hd_wf_his_step c on c.INSTID=b.INSTID WHERE b.FORM",
+        "metrics": {
+          "response_time_ms": 15727.0,
+          "count": 24.0,
+          "error_count": 0.0,
+          "trace_count": 6.0
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 65,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 6.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 65,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select contractin0_.id as id1_138_, contractin0_.rmb_amount as rmb_amou2_138_, contractin0_.rmb_amount_capital as rmb_amou3_138_, contractin0_.rmb_amount_forshow as rmb_amou4_138_, contractin0_.abnorm"
+        },
+        "target_type": "sql",
+        "display_name": "select contractin0_.ID as id1_138_, contractin0_.RMB_AMOUNT as rmb_amou2_138_, contractin0_.RMB_AMOUNT_CAPITAL as rmb_amou3_138_, contractin0_.RMB_AMOUNT_FORSHO",
+        "metrics": {
+          "response_time_ms": 11100.0,
+          "count": 83.0,
+          "error_count": 0.0,
+          "trace_count": 10.0
+        },
+        "stability_class": "recurring",
+        "repeatability_score": 65,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 10.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 65,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_known_pattern",
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.id as id ,( case when a.contract_self_code is not null and a.create_unit_id=? and a.self_code is not null then concat(a.contract_self_code,?,a.self_code) else a.contract_self_code end ) as co"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.ID as ID ,( CASE WHEN a.CONTRACT_SELF_CODE IS NOT NULL AND a.CREATE_UNIT_ID=? AND a.SELF_CODE IS NOT NULL THEN CONCAT(a.CONTRACT_SELF_CODE,?,a.SELF_COD",
+        "metrics": {
+          "response_time_ms": 11067.0,
+          "count": 1.0,
+          "error_count": 0.0,
+          "trace_count": 1.0
+        },
+        "stability_class": "one_off",
+        "repeatability_score": 7,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 1.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 7,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? as sname, count(c.id) as scount from las_contract_info c left join las_contract_sign_info s on c.id=s.contract_id where c.contract_status in (?) and s.sign_time>=? and s.sign_time<=? and c.cu"
+        },
+        "target_type": "sql",
+        "display_name": "select ? as sname, count(c.id) as scount from las_contract_info c left join LAS_CONTRACT_SIGN_INFO s on c.id=s.contract_id where c.contract_status in (?) and s.",
+        "metrics": {
+          "response_time_ms": 10562.0,
+          "count": 3.0,
+          "error_count": 0.0,
+          "trace_count": 3.0
+        },
+        "stability_class": "sporadic",
+        "repeatability_score": 21,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 3.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 21,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id ,( case when a.contract_self_code is not null and a.create_unit_id=? and a.self_code is not null then concat(a.contract_self_code,?,a.self_code) els"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID ,( CASE WHEN a.CONTRACT_SELF_CODE IS NOT NULL AND a.CREATE_UNIT_ID=? AND a.SELF_CODE IS NOT NULL THEN CONCAT",
+        "metrics": {
+          "response_time_ms": 8341.0,
+          "count": 1.0,
+          "error_count": 0.0,
+          "trace_count": 1.0
+        },
+        "stability_class": "one_off",
+        "repeatability_score": 7,
+        "spread_scope": "single_instance_local",
+        "time_distribution": "uniformly_distributed",
+        "instance_distribution": {
+          "trace_count": 1.0
+        },
+        "burstiness": "stable_bad",
+        "stability_facts": {
+          "repeatability": 7,
+          "spread_scope": "single_instance_local",
+          "time_distribution": "uniformly_distributed",
+          "burstiness": "stable_bad"
+        },
+        "historical_context": {
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "knowledge_seed_hints": [
+          "candidate_long_term_baseline_note"
+        ],
+        "confidence": "medium",
+        "source_basis": [
+          {
+            "kind": "pack",
+            "value": "slow_sql_pack"
+          },
+          {
+            "kind": "knowledge",
+            "value": "known_patterns"
+          }
+        ],
+        "evidence_refs": [
+          "database_analysis",
+          "database_operate_analysis",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "review_flags": [
+          "time_distribution_inferred"
+        ]
+      }
+    ],
+    "summaries": {
+      "object_count": 24,
+      "stability_class_counts": {
+        "recurring": 11,
+        "sporadic": 7,
+        "persistent": 4,
+        "one_off": 2
+      },
+      "spread_scope_counts": {
+        "single_instance_local": 13,
+        "cross_application_pattern": 9,
+        "systemic_pattern": 2
+      },
+      "knowledge_seed_hint_counts": {
+        "candidate_known_pattern": 15,
+        "candidate_long_term_baseline_note": 18
+      }
+    },
+    "knowledge_context": {
+      "knowledge_scope": {
+        "biz_system_id": 1065,
+        "knowledge_key": "biz_system_1065",
+        "knowledge_dir": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065",
+        "repository_status": "configured",
+        "read_before_infer": true
+      },
+      "confirmed_knowledge_summary": {
+        "entry_count": 0,
+        "file_entry_counts": {
+          "system_profile": 0,
+          "glossary": 0,
+          "critical_paths": 0,
+          "action_labels": 0,
+          "dependency_annotations": 0,
+          "known_patterns": 0,
+          "baseline_notes": 0,
+          "page_route_map": 0
+        },
+        "stale_entry_counts": {
+          "system_profile": 0,
+          "glossary": 0,
+          "critical_paths": 0,
+          "action_labels": 0,
+          "dependency_annotations": 0,
+          "known_patterns": 0,
+          "baseline_notes": 0,
+          "page_route_map": 0
+        },
+        "files_with_content": []
+      },
+      "pending_proposals_summary": {
+        "pending_count": 0,
+        "rejected_count": 0,
+        "obsolete_count": 0,
+        "target_file_counts": {}
+      },
+      "recent_judgment_logs": [],
+      "critical_paths": [],
+      "known_patterns": [],
+      "page_route_map": []
+    },
+    "diagnostics": {
+      "pool_limits": {
+        "hotspots": {
+          "collection_limit": 200,
+          "ranking_limit": 12,
+          "deep_dive_limit": 5
+        },
+        "external_dependencies": {
+          "collection_limit": 200,
+          "ranking_limit": 10,
+          "deep_dive_limit": 6
+        },
+        "slow_sql": {
+          "collection_limit": 200,
+          "ranking_limit": 12,
+          "deep_dive_limit": 6
+        }
+      },
+      "deep_dive_action_ids": [
+        "13158",
+        "13161",
+        "13336",
+        "31342",
+        "31762"
+      ],
+      "time_strategy": {
+        "mode": "auto_sharded_summary",
+        "shard_count": 8,
+        "shard_minutes": 20160,
+        "short_window_minutes": 43200,
+        "comparison_mode": "summary",
+        "degrade_mode": "long_window_short_comparison"
+      }
+    },
+    "input_dependencies": [
+      "action_hotspot_pack",
+      "action_fact_sheet",
+      "external_dependency_pack",
+      "slow_sql_pack",
+      "knowledge_context_pack"
+    ],
+    "evidence_refs": [
+      "action_list",
+      "action_overview",
+      "external_detail_graph",
+      "external_graph_health",
+      "slow_sql_analysis_10.190.22.21:3306",
+      "slow_sql_operate_10.190.22.21:3306",
+      "slow_sql_analysis_UnknownHost:0",
+      "slow_sql_operate_UnknownHost:0",
+      "knowledge_system_profile",
+      "knowledge_glossary",
+      "knowledge_critical_paths",
+      "knowledge_action_labels",
+      "knowledge_dependency_annotations",
+      "knowledge_known_patterns",
+      "knowledge_baseline_notes",
+      "knowledge_page_route_map",
+      "knowledge_review_queue",
+      "knowledge_judgment_log"
+    ],
+    "derivation_notes": [
+      "Stability signals describe recurrence and spread as facts, not final root cause.",
+      "Persistent or patterned behavior is exposed as a knowledge seed for later review rather than a confirmed conclusion."
+    ],
+    "evidence": [
+      {
+        "id": "action_list",
+        "source_api": "webaction/list/actionList",
+        "source_path": "/server-api/webaction/list/actionList",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "webaction/list/actionList",
+          "request_params": {
+            "bizSystemId": 1065,
+            "timeWindow": {
+              "end_time": "2025-12-24 00:00",
+              "period_minutes": 5760
+            }
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "timeWindow": {
+            "end_time": "2025-12-24 00:00",
+            "period_minutes": 5760
+          }
+        },
+        "response_excerpt": {
+          "top_rows": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "action_overview",
+        "source_api": "webaction/overview",
+        "source_path": "/server-api/webaction/overview",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "webaction/overview",
+          "request_params": {
+            "bizSystemId": 1065,
+            "timeWindow": {
+              "end_time": "2026-01-07 00:00",
+              "period_minutes": 20160
+            }
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "timeWindow": {
+            "end_time": "2026-01-07 00:00",
+            "period_minutes": 20160
+          }
+        },
+        "response_excerpt": {
+          "actionName": "SpringController/serverapi/archive/acquire/complete/contractInfo (POST)",
+          "actionAlias": "SpringController/serverapi/archive/acquire/complete/contractInfo (POST)",
+          "metricNames": [],
+          "responseTime": 50949.168,
+          "totalResponseTime": 305695,
+          "errorRate": 0.0,
+          "errorCount": 0,
+          "tps": 4.96031725560897e-06,
+          "maxTps": 0.0,
+          "instanceCount": 1,
+          "components": {
+            "NoSQL": [
+              {
+                "componentType": "NoSQL",
+                "componentSubtype": "Redis",
+                "count": 42,
+                "consumerCount": 0,
+                "producerCount": 0,
+                "topiceSize": 0,
+                "componentNameSize": 1,
+                "respTime": 0.45238096,
+                "consumerAvgTime": 0.0,
+                "producerAvgTime": 0.0
+              }
+            ],
+            "Database": [
+              {
+                "componentType": "Database",
+                "componentSubtype": "",
+                "count": 4102,
+                "consumerCount": 0,
+                "producerCount": 0,
+                "topiceSize": 0,
+                "componentNameSize": 1,
+                "respTime": 14.845685,
+                "consumerAvgTime": 0.0,
+                "producerAvgTime": 0.0
+              }
+            ]
+          },
+          "affectUserCount": 0,
+          "technology": "Apache Tomcat",
+          "language": "Java",
+          "txCount": 0,
+          "bizSystemCount": 0,
+          "applicationCount": 0,
+          "actionCalls": 6
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "external_detail_graph",
+        "source_api": "graph/queryBizDetailGraph",
+        "source_path": "/server-api/graph/queryBizDetailGraph",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "graph/queryBizDetailGraph",
+          "request_params": {
+            "bizSystemId": 1065,
+            "timeWindow": {
+              "end_time": "2025-12-24 00:00",
+              "period_minutes": 5760
+            }
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "timeWindow": {
+            "end_time": "2025-12-24 00:00",
+            "period_minutes": 5760
+          }
+        },
+        "response_excerpt": {
+          "external_dependencies": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "external_graph_health",
+        "source_api": "graph/queryGraphHealth",
+        "source_path": "/server-api/graph/queryGraphHealth",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "graph/queryGraphHealth",
+          "request_params": {
+            "bizSystemId": 1065
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065
+        },
+        "response_excerpt": {
+          "health_nodes": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_analysis_10.190.22.21:3306",
+        "source_api": "Database/analysis",
+        "source_path": "/server-api/Database/analysis",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/analysis",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "10.190.22.21:3306"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "10.190.22.21:3306"
+        },
+        "response_excerpt": {
+          "top_sqls": [
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opName": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? ) a",
+              "appName": null,
+              "respTime": 1502484.0,
+              "maxExecTime": 0.0,
+              "errorRate": 39.37,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 81,
+              "errorCount": 50,
+              "count": 127,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 190815486,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 1502484.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 1502484.0,
+              "total_response_time_ms": 190815486.0,
+              "throughput": 0.0,
+              "error_count": 50,
+              "op_name_raw": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? ) a",
+              "op_name_decoded": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? ) a",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opName": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? limit ?",
+              "appName": null,
+              "respTime": 122918.0,
+              "maxExecTime": 0.0,
+              "errorRate": 6.25,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 23,
+              "errorCount": 3,
+              "count": 48,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 5900072,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 122918.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 122918.0,
+              "total_response_time_ms": 5900072.0,
+              "throughput": 0.0,
+              "error_count": 3,
+              "op_name_raw": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? limit ?",
+              "op_name_decoded": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? limit ?",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opName": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+              "appName": null,
+              "respTime": 22252.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 7,
+              "errorCount": 0,
+              "count": 12,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 267023,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 22252.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 22252.0,
+              "total_response_time_ms": 267023.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+              "op_name_decoded": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+              "op_name_is_encoded": false
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_operate_10.190.22.21:3306",
+        "source_api": "Database/operate/analysisList",
+        "source_path": "/server-api/Database/operate/analysisList",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/operate/analysisList",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "10.190.22.21:3306"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "10.190.22.21:3306"
+        },
+        "response_excerpt": {
+          "top_operation_types": [
+            {
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opType": "legal_services_demand/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 11,
+              "successCount": 11,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 6,
+              "slowCount": 11,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 80517,
+              "avgRespTime": 7319.727,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opType": "qrtz_fired_triggers/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 2,
+              "successCount": 2,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 2,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 0,
+              "avgRespTime": 0.0,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opType": "las_legal_papers/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 8,
+              "successCount": 8,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 8,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 58,
+              "avgRespTime": 7.25,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_analysis_UnknownHost:0",
+        "source_api": "Database/analysis",
+        "source_path": "/server-api/Database/analysis",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/analysis",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "UnknownHost:0"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "UnknownHost:0"
+        },
+        "response_excerpt": {
+          "top_sqls": [
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opName": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLES WHERE ?=? AND TABLE_NAME LIKE ? AND TABLE_TYPE IN (?)",
+              "appName": null,
+              "respTime": 6.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 0,
+              "errorCount": 0,
+              "count": 18,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 109,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 6.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 6.0,
+              "total_response_time_ms": 109.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLES WHERE ?=? AND TABLE_NAME LIKE ? AND TABLE_TYPE IN (?)",
+              "op_name_decoded": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLES WHERE ?=? AND TABLE_NAME LIKE ? AND TABLE_TYPE IN (?)",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opName": "select ? from PUBLIC.FR_ERRRECORD where ? = ?",
+              "appName": null,
+              "respTime": 3.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 0,
+              "errorCount": 0,
+              "count": 36,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 106,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 3.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 3.0,
+              "total_response_time_ms": 106.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "select ? from PUBLIC.FR_ERRRECORD where ? = ?",
+              "op_name_decoded": "select ? from PUBLIC.FR_ERRRECORD where ? = ?",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opName": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLETYPES",
+              "appName": null,
+              "respTime": 3.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 0,
+              "errorCount": 0,
+              "count": 18,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 46,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 3.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 3.0,
+              "total_response_time_ms": 46.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLETYPES",
+              "op_name_decoded": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLETYPES",
+              "op_name_is_encoded": false
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_operate_UnknownHost:0",
+        "source_api": "Database/operate/analysisList",
+        "source_path": "/server-api/Database/operate/analysisList",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/operate/analysisList",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "UnknownHost:0"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "UnknownHost:0"
+        },
+        "response_excerpt": {
+          "top_operation_types": [
+            {
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opType": "information_schema.system_tabletypes/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 18,
+              "successCount": 18,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 9,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 46,
+              "avgRespTime": 2.5555556,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opType": "parseerror/CALL",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 828,
+              "successCount": 828,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 18,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 178,
+              "avgRespTime": 0.21497585,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opType": "fr_pri_track_record/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 9,
+              "successCount": 9,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 9,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 0,
+              "avgRespTime": 0.0,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_system_profile",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/system_profile.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_glossary",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/glossary.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_critical_paths",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/critical_paths.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_action_labels",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/action_labels.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_dependency_annotations",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/dependency_annotations.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_known_patterns",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/known_patterns.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_baseline_notes",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/baseline_notes.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_page_route_map",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/page_route_map.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_review_queue",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/review_queue.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "pending_count": 0,
+          "rejected_count": 0,
+          "obsolete_count": 0
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_judgment_log",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/judgment_log.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "recent_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      }
+    ]
+  },
+  "meta": {
+    "adapter_version": "0.1.0",
+    "source_mode": "live",
+    "source_count": 18,
+    "evidence_count": 18,
+    "missing_inputs": [
+      "action_labels",
+      "baseline_notes",
+      "critical_paths",
+      "dependency_annotations",
+      "glossary",
+      "judgment_log.entries",
+      "known_patterns",
+      "page_route_map",
+      "review_queue.pending",
+      "system_profile"
+    ],
+    "warnings": [
+      {
+        "code": "external_dependency_empty",
+        "message": "当前拓扑中没有识别到外部依赖节点。",
+        "source_api": "graph/queryBizDetailGraph"
+      },
+      {
+        "code": "slow_sql_empty_component",
+        "message": "没有可用的 Database 组件来分析 SQL。",
+        "source_api": "Database/list"
+      }
+    ],
+    "confidence_notes": [
+      "Repeatability and spread use simple heuristics so the output stays explainable and stable."
+    ],
+    "build_stats": {
+      "upstream_call_count": 68,
+      "cache_hit_count": 0,
+      "collection_count": 212,
+      "ranking_count": 24,
+      "deep_dive_count": 5,
+      "shard_count": 8,
+      "degrade_mode": "long_window_short_comparison",
+      "object_count": 24
+    }
+  }
+}

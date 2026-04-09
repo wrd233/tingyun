@@ -37,6 +37,8 @@ class ServiceApiTests(unittest.TestCase):
             self.assertEqual(meta["console_public_base_url"], "https://console.example.com")
             self.assertIn("screenshot_index_pack", meta["pack_types"])
             self.assertIn("knowledge_context_pack", meta["pack_types"])
+            self.assertIn("trace_sql_pack", meta["pack_types"])
+            self.assertIn("trace_execution_pack", meta["pack_types"])
 
 
 if __name__ == "__main__":

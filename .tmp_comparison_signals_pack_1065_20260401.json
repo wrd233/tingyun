@@ -1,0 +1,4257 @@
+{
+  "schema_version": "v1",
+  "pack_type": "comparison_signals_pack",
+  "generated_at": "2026-04-09T11:14:37+08:00",
+  "context": {
+    "base_url": "http://169.169.173.25:8080",
+    "biz_system_id": 1065,
+    "time_window": {
+      "end_time": "2026-04-01 00:00",
+      "period_minutes": 146880
+    },
+    "auth": {
+      "token": "eyJhbG...Uo2g",
+      "token_env": "TINGYUN_TOKEN",
+      "token_present": true
+    },
+    "lang": "zh_CN",
+    "timezone": "Asia/Shanghai"
+  },
+  "payload": {
+    "scope": {
+      "bizSystemId": 1065,
+      "endTime": "2026-04-01 00:00",
+      "periodMinutes": 146880,
+      "sourceMode": "live",
+      "limit": 200
+    },
+    "comparison_baseline": {
+      "mode": "previous_window",
+      "comparison_mode": "summary",
+      "current_window": {
+        "end_time": "2026-04-01 00:00",
+        "period_minutes": 146880
+      },
+      "comparison_current_window": {
+        "end_time": "2026-04-01 00:00",
+        "period_minutes": 43200
+      },
+      "previous_window": {
+        "end_time": "2026-03-02 00:00",
+        "period_minutes": 43200
+      },
+      "history_source": "previous_window_plus_knowledge"
+    },
+    "objects": [
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13161,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/ProductIndexController.afterPropertiesSet",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "new_risk",
+        "change_summary": "Object appears in current window but not in baseline.",
+        "delta_metrics": {
+          "response_time_ms": 2788495.0,
+          "total_response_time_ms": 16730972.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 6,
+          "count": 6
+        },
+        "comparison_facts": {
+          "change_class": "new_risk",
+          "delta_metrics": {
+            "response_time_ms": 2788495.0,
+            "total_response_time_ms": 16730972.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 6,
+            "count": 6
+          },
+          "summary": "Object appears in current window but not in baseline."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 31762,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrLawCheckService.lawyerEorkTimeTop10Data.dwr",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "new_risk",
+        "change_summary": "Object appears in current window but not in baseline.",
+        "delta_metrics": {
+          "response_time_ms": 1541760.0,
+          "total_response_time_ms": 3083520.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 2,
+          "count": 2
+        },
+        "comparison_facts": {
+          "change_class": "new_risk",
+          "delta_metrics": {
+            "response_time_ms": 1541760.0,
+            "total_response_time_ms": 3083520.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 2,
+            "count": 2
+          },
+          "summary": "Object appears in current window but not in baseline."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 31342,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrLawCheckService.lawyerEorkTimeTop10Data.dwr",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "new_risk",
+        "change_summary": "Object appears in current window but not in baseline.",
+        "delta_metrics": {
+          "response_time_ms": 1519501.0,
+          "total_response_time_ms": 4558502.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 3,
+          "count": 3
+        },
+        "comparison_facts": {
+          "change_class": "new_risk",
+          "delta_metrics": {
+            "response_time_ms": 1519501.0,
+            "total_response_time_ms": 4558502.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 3,
+            "count": 3
+          },
+          "summary": "Object appears in current window but not in baseline."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13336,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/TemplateUploadController.setTemplateService",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "new_risk",
+        "change_summary": "Object appears in current window but not in baseline.",
+        "delta_metrics": {
+          "response_time_ms": 423614.0,
+          "total_response_time_ms": 1694454.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 2,
+          "count": 4
+        },
+        "comparison_facts": {
+          "change_class": "new_risk",
+          "delta_metrics": {
+            "response_time_ms": 423614.0,
+            "total_response_time_ms": 1694454.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 2,
+            "count": 4
+          },
+          "summary": "Object appears in current window but not in baseline."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13158,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/serverapi/restapi/other/v1",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "new_risk",
+        "change_summary": "Object appears in current window but not in baseline.",
+        "delta_metrics": {
+          "response_time_ms": 265950.0,
+          "total_response_time_ms": 1063800.0,
+          "throughput": 0.0,
+          "error_count": 1,
+          "slow_count": 1,
+          "count": 4
+        },
+        "comparison_facts": {
+          "change_class": "new_risk",
+          "delta_metrics": {
+            "response_time_ms": 265950.0,
+            "total_response_time_ms": 1063800.0,
+            "throughput": 0.0,
+            "error_count": 1,
+            "slow_count": 1,
+            "count": 4
+          },
+          "summary": "Object appears in current window but not in baseline."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 19684,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/user/component/AttachmentController/upload",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "disappeared",
+        "change_summary": "Object disappeared from current window.",
+        "delta_metrics": {
+          "response_time_ms": 149013.0,
+          "total_response_time_ms": 149013.0,
+          "throughput": 0.0,
+          "error_count": 1,
+          "slow_count": 1,
+          "count": 1
+        },
+        "comparison_facts": {
+          "change_class": "disappeared",
+          "delta_metrics": {
+            "response_time_ms": 149013.0,
+            "total_response_time_ms": 149013.0,
+            "throughput": 0.0,
+            "error_count": 1,
+            "slow_count": 1,
+            "count": 1
+          },
+          "summary": "Object disappeared from current window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13436,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/${url.attachment}/${url.attachment.frmIndiDocs}",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "improved",
+        "change_summary": "Current window improved compared with the previous window.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 8275.0,
+            "previous": 8270.0,
+            "delta": 5.0,
+            "ratio": 0.0006045949214026602
+          },
+          "error_count": {
+            "current": 0.0,
+            "previous": 0.0,
+            "delta": 0.0,
+            "ratio": null
+          },
+          "count": {
+            "current": 940.0,
+            "previous": 1903.0,
+            "delta": -963.0,
+            "ratio": -0.5060430898581187
+          }
+        },
+        "comparison_facts": {
+          "change_class": "improved",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 8275.0,
+              "previous": 8270.0,
+              "delta": 5.0,
+              "ratio": 0.0006045949214026602
+            },
+            "error_count": {
+              "current": 0.0,
+              "previous": 0.0,
+              "delta": 0.0,
+              "ratio": null
+            },
+            "count": {
+              "current": 940.0,
+              "previous": 1903.0,
+              "delta": -963.0,
+              "ratio": -0.5060430898581187
+            }
+          },
+          "summary": "Current window improved compared with the previous window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 19286,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/user/component/AttachmentController/frmIndiDocs",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 18885,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/user/component/AttachmentController/upload",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 14149,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.createUpdateWorkFlow.dwr",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "disappeared",
+        "change_summary": "Object disappeared from current window.",
+        "delta_metrics": {
+          "response_time_ms": 49261.0,
+          "total_response_time_ms": 2068965.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 24,
+          "count": 42
+        },
+        "comparison_facts": {
+          "change_class": "disappeared",
+          "delta_metrics": {
+            "response_time_ms": 49261.0,
+            "total_response_time_ms": 2068965.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 24,
+            "count": 42
+          },
+          "summary": "Object disappeared from current window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "external_dependency",
+          "protocol": "http",
+          "node_id": "1065_0_0_External_http_[http]"
+        },
+        "target_type": "external_dependency",
+        "display_name": "1065_0_0_External_http_[http]",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "regressed",
+        "change_summary": "Current window is worse than the previous window on the same object key.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 5507.0,
+            "previous": 4506.0,
+            "delta": 1001.0,
+            "ratio": 0.22214824678206835
+          }
+        },
+        "comparison_facts": {
+          "change_class": "regressed",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 5507.0,
+              "previous": 4506.0,
+              "delta": 1001.0,
+              "ratio": 0.22214824678206835
+            }
+          },
+          "summary": "Current window is worse than the previous window on the same object key."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "biz_detail_graph",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "external_dependency",
+          "protocol": "https",
+          "node_id": "1065_0_0_External_https_[https]"
+        },
+        "target_type": "external_dependency",
+        "display_name": "1065_0_0_External_https_[https]",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "stable_risk",
+        "change_summary": "Object exists in both windows without a strong directional change.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 16.0,
+            "previous": 25.0,
+            "delta": -9.0,
+            "ratio": -0.36
+          }
+        },
+        "comparison_facts": {
+          "change_class": "stable_risk",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 16.0,
+              "previous": 25.0,
+              "delta": -9.0,
+              "ratio": -0.36
+            }
+          },
+          "summary": "Object exists in both windows without a strong directional change."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "biz_detail_graph",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id ,a.contract_name as contract_name ,a.contract_amount_forshow as contract_amount_forshow ,a.contract_status as contract_status from las_contract_info"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS a",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.id as id ,a.contract_name as contract_name ,a.contract_amount_forshow as contract_amount_forshow ,a.contract_status as contract_status from las_contract_info a where a.deleted = ? and a.contr"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRAC",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as total from legal_services_demand a left join hd_wf_form_rel b on a.id = b.beanid left join hd_wf_his_step c on c.instid=b.instid where b.formid = ? and c.steptype = ? and year(c.fin"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT COUNT(*) AS total FROM legal_services_demand a LEFT JOIN hd_wf_form_rel b ON a.ID = b.BEANID LEFT JOIN hd_wf_his_step c on c.INSTID=b.INSTID WHERE b.FORM",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "regressed",
+        "change_summary": "Current window is worse than the previous window on the same object key.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 6742.0,
+            "previous": 6001.0,
+            "delta": 741.0,
+            "ratio": 0.12347942009665056
+          },
+          "error_count": {
+            "current": 0.0,
+            "previous": 0.0,
+            "delta": 0.0,
+            "ratio": null
+          },
+          "count": {
+            "current": 21.0,
+            "previous": 14.0,
+            "delta": 7.0,
+            "ratio": 0.5
+          }
+        },
+        "comparison_facts": {
+          "change_class": "regressed",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 6742.0,
+              "previous": 6001.0,
+              "delta": 741.0,
+              "ratio": 0.12347942009665056
+            },
+            "error_count": {
+              "current": 0.0,
+              "previous": 0.0,
+              "delta": 0.0,
+              "ratio": null
+            },
+            "count": {
+              "current": 21.0,
+              "previous": 14.0,
+              "delta": 7.0,
+              "ratio": 0.5
+            }
+          },
+          "summary": "Current window is worse than the previous window on the same object key."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? from las_contract_payment a,las_contract_info b where a.contract_id=b.id and b.deleted=? and datediff(a.collection_date,curdate()) = ?"
+        },
+        "target_type": "sql",
+        "display_name": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id ,( case when a.contract_self_code is not null and a.create_unit_id=? and a.self_code is not null then concat(a.contract_self_code,?,a.self_code) els"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID ,( CASE WHEN a.CONTRACT_SELF_CODE IS NOT NULL AND a.CREATE_UNIT_ID=? AND a.SELF_CODE IS NOT NULL THEN CONCAT",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id,a.institution_name as institution_name ,( case when a.institution_source=?&& a.institution_classification_two =? then ? when a.institution_source=?&"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID,a.INSTITUTION_NAME as INSTITUTION_NAME ,( case when a.INSTITUTION_SOURCE=?&& a.INSTITUTION_CLASSIFICATION_TW",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "regressed",
+        "change_summary": "Current window is worse than the previous window on the same object key.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 5882.0,
+            "previous": 5628.0,
+            "delta": 254.0,
+            "ratio": 0.045131485429992894
+          },
+          "error_count": {
+            "current": 0.0,
+            "previous": 0.0,
+            "delta": 0.0,
+            "ratio": null
+          },
+          "count": {
+            "current": 365.0,
+            "previous": 35.0,
+            "delta": 330.0,
+            "ratio": 9.428571428571429
+          }
+        },
+        "comparison_facts": {
+          "change_class": "regressed",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 5882.0,
+              "previous": 5628.0,
+              "delta": 254.0,
+              "ratio": 0.045131485429992894
+            },
+            "error_count": {
+              "current": 0.0,
+              "previous": 0.0,
+              "delta": 0.0,
+              "ratio": null
+            },
+            "count": {
+              "current": 365.0,
+              "previous": 35.0,
+              "delta": 330.0,
+              "ratio": 9.428571428571429
+            }
+          },
+          "summary": "Current window is worse than the previous window on the same object key."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select contractin0_.id as id1_138_, contractin0_.rmb_amount as rmb_amou2_138_, contractin0_.rmb_amount_capital as rmb_amou3_138_, contractin0_.rmb_amount_forshow as rmb_amou4_138_, contractin0_.abnorm"
+        },
+        "target_type": "sql",
+        "display_name": "select contractin0_.ID as id1_138_, contractin0_.RMB_AMOUNT as rmb_amou2_138_, contractin0_.RMB_AMOUNT_CAPITAL as rmb_amou3_138_, contractin0_.RMB_AMOUNT_FORSHO",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.id as id ,( case when a.contract_self_code is not null and a.create_unit_id=? and a.self_code is not null then concat(a.contract_self_code,?,a.self_code) else a.contract_self_code end ) as co"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.ID as ID ,( CASE WHEN a.CONTRACT_SELF_CODE IS NOT NULL AND a.CREATE_UNIT_ID=? AND a.SELF_CODE IS NOT NULL THEN CONCAT(a.CONTRACT_SELF_CODE,?,a.SELF_COD",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? as sname, count(c.id) as scount from las_contract_info c left join las_contract_sign_info s on c.id=s.contract_id where c.contract_status in (?) and s.sign_time>=? and s.sign_time<=? and c.cu"
+        },
+        "target_type": "sql",
+        "display_name": "select ? as sname, count(c.id) as scount from las_contract_info c left join LAS_CONTRACT_SIGN_INFO s on c.id=s.contract_id where c.contract_status in (?) and s.",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "new_risk",
+        "change_summary": "Object appears in current window but not in baseline.",
+        "delta_metrics": {
+          "response_time_ms": 10562.0,
+          "error_count": 0,
+          "count": 3
+        },
+        "comparison_facts": {
+          "change_class": "new_risk",
+          "delta_metrics": {
+            "response_time_ms": 10562.0,
+            "error_count": 0,
+            "count": 3
+          },
+          "summary": "Object appears in current window but not in baseline."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? from hd_form_opinion c where c.formid = ? and c.beanid in (?"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT ? FROM HD_FORM_OPINION c WHERE c.FORMID = ? AND c.BEANID IN (?",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select * from ( select b.*, if((thistotal> ? and lasttotal is null),?,convert ( ( thistotal ? lasttotal) / convert ( lasttotal, decimal ( ?) ), decimal ( ? ) )) as totalgrowth,if((thisamount > ? and ("
+        },
+        "target_type": "sql",
+        "display_name": "SELECT * FROM ( SELECT b.*, if((thisTotal> ? AND lastTotal IS NULL),?,CONVERT ( ( thisTotal ? lastTotal) / CONVERT ( lastTotal, DECIMAL ( ?) ), DECIMAL ( ? ) ))",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "new_risk",
+        "change_summary": "Object appears in current window but not in baseline.",
+        "delta_metrics": {
+          "response_time_ms": 6490.0,
+          "error_count": 0,
+          "count": 9
+        },
+        "comparison_facts": {
+          "change_class": "new_risk",
+          "delta_metrics": {
+            "response_time_ms": 6490.0,
+            "error_count": 0,
+            "count": 9
+          },
+          "summary": "Object appears in current window but not in baseline."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.id as id,a.institution_name as institution_name ,( case when a.institution_source=?&& a.institution_classification_two =? then ? when a.institution_source=?&& a.institution_classification_two"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.ID as ID,a.INSTITUTION_NAME as INSTITUTION_NAME ,( case when a.INSTITUTION_SOURCE=?&& a.INSTITUTION_CLASSIFICATION_TWO =? then ? when a.INSTITUTION_SOU",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "improved",
+        "change_summary": "Current window improved compared with the previous window.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 5655.0,
+            "previous": 5557.0,
+            "delta": 98.0,
+            "ratio": 0.01763541479215404
+          },
+          "error_count": {
+            "current": 0.0,
+            "previous": 0.0,
+            "delta": 0.0,
+            "ratio": null
+          },
+          "count": {
+            "current": 39.0,
+            "previous": 76.0,
+            "delta": -37.0,
+            "ratio": -0.4868421052631579
+          }
+        },
+        "comparison_facts": {
+          "change_class": "improved",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 5655.0,
+              "previous": 5557.0,
+              "delta": 98.0,
+              "ratio": 0.01763541479215404
+            },
+            "error_count": {
+              "current": 0.0,
+              "previous": 0.0,
+              "delta": 0.0,
+              "ratio": null
+            },
+            "count": {
+              "current": 39.0,
+              "previous": 76.0,
+              "delta": -37.0,
+              "ratio": -0.4868421052631579
+            }
+          },
+          "summary": "Current window improved compared with the previous window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.id, a.full_name, (case all_sign_ht_count when ? then ? else sign_ht_count / all_sign_ht_count end) as countbl, (case all_sign_ht_amount when ? then ? else sign_ht_amount / all_sign_ht_amount "
+        },
+        "target_type": "sql",
+        "display_name": "select a.id, a.full_name, (case ALL_SIGN_HT_COUNT when ? then ? else SIGN_HT_COUNT / ALL_SIGN_HT_COUNT end) as countbl, (case ALL_SIGN_HT_AMOUNT when ? then ? e",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select contractar0_.id as id1_124_, contractar0_.create_dept_code as create_d2_124_, contractar0_.create_dept_id as create_d3_124_, contractar0_.create_dept_name as create_d4_124_, contractar0_.creati"
+        },
+        "target_type": "sql",
+        "display_name": "select contractar0_.ID as id1_124_, contractar0_.CREATE_DEPT_CODE as create_d2_124_, contractar0_.CREATE_DEPT_ID as create_d3_124_, contractar0_.CREATE_DEPT_NAM",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "delete from las_work_state;"
+        },
+        "target_type": "sql",
+        "display_name": "DELETE FROM LAS_WORK_STATE;",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select distinct info.id, case when info.contract_self_code is not null and info.create_unit_id=? and info.self_code is not null then concat(info.contract_self_code,?,info.self_code) else info.contract"
+        },
+        "target_type": "sql",
+        "display_name": "select DISTINCT info.ID, CASE WHEN info.CONTRACT_SELF_CODE IS NOT NULL AND info.CREATE_UNIT_ID=? AND info.SELF_CODE IS NOT NULL THEN CONCAT(info.CONTRACT_SELF_C",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (with oppositecontracts as ( select distinct contract_id from las_contract_opposite_related where opposite_id = ? ), workflowpermissions as ( select distinct list.bean"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (WITH OppositeContracts AS ( SELECT DISTINCT CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED WHERE OPPOSITE_ID = ? ), WorkflowPe",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "with oppositecontracts as ( select distinct contract_id from las_contract_opposite_related where opposite_id = ? ), workflowpermissions as ( select distinct list.bean_id as contract_id from hd_wf_comp"
+        },
+        "target_type": "sql",
+        "display_name": "WITH OppositeContracts AS ( SELECT DISTINCT CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED WHERE OPPOSITE_ID = ? ), WorkflowPermissions AS ( SELECT DISTINCT lis",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.* from las_contract_info a where ?=? and a.deleted = ? and ( ?=? and ?=? ) and ( a.creator_account_auth = ? or a.executor_account = ? or ( a.contract_status <> ? and (( exists ( select ? from"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.* FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? and ( ?=? and ?=? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ( a.CONTRACT_S",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? from bpm_todo_logo where ?=? and activity_id = null and entry_id = null order by id desc limit ?"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT ? FROM BPM_TODO_LOGO WHERE ?=? AND ACTIVITY_ID = null AND ENTRY_ID = null ORDER BY ID DESC LIMIT ?",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select * from bpm_todo_logo where receivercode = ? and activity_id in ( select s.step_id from las_flow_step s ) and seen = ? and first_seendate is not null and activity_finish_date is not null"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT * FROM bpm_todo_logo WHERE RECEIVERCODE = ? AND ACTIVITY_ID IN ( SELECT s.STEP_ID FROM LAS_FLOW_STEP s ) AND seen = ? AND FIRST_SEENDATE IS NOT NULL AND ",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(if(a.item_type = ?,null)) nbgzlxd,count(if(a.item_type = ?,null)) nbtz,count(if(a.item_type = ?,null)) ajxsqy,count(if(a.item_type = ?,null)) wbgt,count(if(a.item_type = ?,null)) zfbflgza"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT COUNT(if(a.ITEM_TYPE = ?,null)) nbgzlxd,COUNT(if(a.ITEM_TYPE = ?,null)) nbtz,COUNT(if(a.ITEM_TYPE = ?,null)) ajxsqy,COUNT(if(a.ITEM_TYPE = ?,null)) wbgt,",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "update hd_todolist set alarmdate=null, appcat=?, appid=?, bsid=?, content=null, digest=null, duedate=null, is_top=?, `link`=?, module=?, openmode=?, priority=?, receivercode=?, receivername=?, receive"
+        },
+        "target_type": "sql",
+        "display_name": "update HD_TODOLIST set ALARMDATE=null, APPCAT=?, APPID=?, BSID=?, CONTENT=null, DIGEST=null, DUEDATE=null, IS_TOP=?, `LINK`=?, MODULE=?, OPENMODE=?, PRIORITY=?,",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id,a.template_name as template_name ,a.creation_time as creation_time ,a.attach_str as attach_str ,a.contract_type_new as contract_type_new ,a.contract"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID,a.TEMPLATE_NAME as TEMPLATE_NAME ,a.CREATION_TIME as CREATION_TIME ,a.ATTACH_STR as ATTACH_STR ,a.CONTRACT_T",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? from bpm_todo_logo where receivercode = ? and seen = ? and first_seendate is not null and activity_finish_date is not null"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT ? FROM bpm_todo_logo WHERE RECEIVERCODE = ? AND seen = ? AND FIRST_SEENDATE IS NOT NULL AND ACTIVITY_FINISH_DATE IS NOT NUll",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select contractse0_.id as id1_161_, contractse0_.create_dept_code as create_d2_161_, contractse0_.create_dept_id as create_d3_161_, contractse0_.create_dept_name as create_d4_161_, contractse0_.creati"
+        },
+        "target_type": "sql",
+        "display_name": "select contractse0_.ID as id1_161_, contractse0_.CREATE_DEPT_CODE as create_d2_161_, contractse0_.CREATE_DEPT_ID as create_d3_161_, contractse0_.CREATE_DEPT_NAM",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select info.id as contractid, info.contract_name as contractname, info.signing_subject_code as signingsubjectcode, info.signing_subject_name as signingsubjectname, info.contract_self_code as contractc"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT info.id AS contractID, info.CONTRACT_NAME AS contractName, info.SIGNING_SUBJECT_CODE AS signingSubjectCode, info.SIGNING_SUBJECT_NAME AS signingSubjectNa",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "update bpm_todo_logo set activity_action_name=?, activity_finish_date=null, activity_id=?, activity_start_date=null, activity_step_start_date=null, entry_id=?, first_seendate=null, flow_name=null, flo"
+        },
+        "target_type": "sql",
+        "display_name": "update BPM_TODO_LOGO set ACTIVITY_ACTION_NAME=?, ACTIVITY_FINISH_DATE=null, ACTIVITY_ID=?, ACTIVITY_START_DATE=null, ACTIVITY_STEP_START_DATE=null, ENTRY_ID=?, ",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.* from las_contract_info a where ?=? and a.deleted = ? and ( ?=? and creation_time >= ? and creation_time <= ? and ?=? ) and ( a.creator_account_auth = ? or a.executor_account = ? or ( a.cont"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.* FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? and ( ?=? and CREATION_TIME >= ? and CREATION_TIME <= ? and ?=? ) AND ( a.CREATOR_ACCOUNT_AUTH =",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? from las_contract_archive a,hd_wf_form_rel b where a.id=b.beanid and formid=? and beanid=?"
+        },
+        "target_type": "sql",
+        "display_name": "select ? from LAS_CONTRACT_ARCHIVE a,hd_Wf_form_rel b where a.id=b.beanid and formid=? and beanid=?",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select a.id as id,a.template_name as template_name ,a.contract_type_name as contract_type_name ,a.template_type as template_type ,a.release_unit_name as release_unit_"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT a.ID as ID,a.TEMPLATE_NAME as TEMPLATE_NAME ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.TEMPLATE_TYPE as TEMPLATE_TY",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select a.id as id,a.template_name as template_name ,a.contract_type_name as contract_type_name ,a.template_type as template_type ,a.release_unit_name as release_unit_name ,a.creator_name as creator_na"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT a.ID as ID,a.TEMPLATE_NAME as TEMPLATE_NAME ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.TEMPLATE_TYPE as TEMPLATE_TYPE ,a.RELEASE_UNIT_NAME as RELEASE",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select ? from las_contract_info where contract_sys_id = ? and deleted = ?"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT ? FROM LAS_CONTRACT_INFO WHERE CONTRACT_SYS_ID = ? AND DELETED = ?",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(d.id) as total,if(sum(rmb_amount) is null,?,sum(rmb_amount)) amount from( select distinct info.id,info.is_performs, info.contract_amount, info.rmb_amount, info.contract_status ,info.abnor"
+        },
+        "target_type": "sql",
+        "display_name": "SELECT count(d.ID) as total,if(sum(RMB_AMOUNT) is null,?,sum(RMB_AMOUNT)) amount FROM( SELECT DISTINCT info.ID,info.IS_PERFORMS, info.CONTRACT_AMOUNT, info.RMB_",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "update hd_todolist set alarmdate=null, appcat=null, appid=null, bsid=?, content=null, digest=null, duedate=null, is_top=?, `link`=?, module=?, openmode=?, priority=?, receivercode=?, receivername=?, r"
+        },
+        "target_type": "sql",
+        "display_name": "update HD_TODOLIST set ALARMDATE=null, APPCAT=null, APPID=null, BSID=?, CONTENT=null, DIGEST=null, DUEDATE=null, IS_TOP=?, `LINK`=?, MODULE=?, OPENMODE=?, PRIOR",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "insufficient_baseline",
+        "change_summary": "Baseline is unavailable.",
+        "delta_metrics": {},
+        "comparison_facts": {
+          "change_class": "insufficient_baseline",
+          "delta_metrics": {},
+          "summary": "Baseline is unavailable."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13556,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/serverapi/v1/tyc/findRelation (POST)",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "improved",
+        "change_summary": "Current window improved compared with the previous window.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 53515.0,
+            "previous": 73157.0,
+            "delta": -19642.0,
+            "ratio": -0.2684910534877045
+          },
+          "error_count": {
+            "current": 0.0,
+            "previous": 0.0,
+            "delta": 0.0,
+            "ratio": null
+          },
+          "count": {
+            "current": 154.0,
+            "previous": 245.0,
+            "delta": -91.0,
+            "ratio": -0.37142857142857144
+          }
+        },
+        "comparison_facts": {
+          "change_class": "improved",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 53515.0,
+              "previous": 73157.0,
+              "delta": -19642.0,
+              "ratio": -0.2684910534877045
+            },
+            "error_count": {
+              "current": 0.0,
+              "previous": 0.0,
+              "delta": 0.0,
+              "ratio": null
+            },
+            "count": {
+              "current": 154.0,
+              "previous": 245.0,
+              "delta": -91.0,
+              "ratio": -0.37142857142857144
+            }
+          },
+          "summary": "Current window improved compared with the previous window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 13574,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/serverapi/v1/tyc/findRelation (POST)",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "improved",
+        "change_summary": "Current window improved compared with the previous window.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 63719.0,
+            "previous": 67841.0,
+            "delta": -4122.0,
+            "ratio": -0.06075971757491782
+          },
+          "error_count": {
+            "current": 0.0,
+            "previous": 0.0,
+            "delta": 0.0,
+            "ratio": null
+          },
+          "count": {
+            "current": 119.0,
+            "previous": 226.0,
+            "delta": -107.0,
+            "ratio": -0.47345132743362833
+          }
+        },
+        "comparison_facts": {
+          "change_class": "improved",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 63719.0,
+              "previous": 67841.0,
+              "delta": -4122.0,
+              "ratio": -0.06075971757491782
+            },
+            "error_count": {
+              "current": 0.0,
+              "previous": 0.0,
+              "delta": 0.0,
+              "ratio": null
+            },
+            "count": {
+              "current": 119.0,
+              "previous": 226.0,
+              "delta": -107.0,
+              "ratio": -0.47345132743362833
+            }
+          },
+          "summary": "Current window improved compared with the previous window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 19330,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrOppositeAccessService.startOppositeWorkFlow.dwr",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "disappeared",
+        "change_summary": "Object disappeared from current window.",
+        "delta_metrics": {
+          "response_time_ms": 69259.0,
+          "total_response_time_ms": 207776.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 1,
+          "count": 3
+        },
+        "comparison_facts": {
+          "change_class": "disappeared",
+          "delta_metrics": {
+            "response_time_ms": 69259.0,
+            "total_response_time_ms": 207776.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 1,
+            "count": 3
+          },
+          "summary": "Object disappeared from current window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 16223,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/${url.bpm.user.senopInfo}",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "stable_risk",
+        "change_summary": "Object exists in both windows without a strong directional change.",
+        "delta_metrics": {
+          "response_time_ms": {
+            "current": 59875.0,
+            "previous": 59064.0,
+            "delta": 811.0,
+            "ratio": 0.013730868210754437
+          },
+          "error_count": {
+            "current": 0.0,
+            "previous": 0.0,
+            "delta": 0.0,
+            "ratio": null
+          },
+          "count": {
+            "current": 1.0,
+            "previous": 2.0,
+            "delta": -1.0,
+            "ratio": -0.5
+          }
+        },
+        "comparison_facts": {
+          "change_class": "stable_risk",
+          "delta_metrics": {
+            "response_time_ms": {
+              "current": 59875.0,
+              "previous": 59064.0,
+              "delta": 811.0,
+              "ratio": 0.013730868210754437
+            },
+            "error_count": {
+              "current": 0.0,
+              "previous": 0.0,
+              "delta": 0.0,
+              "ratio": null
+            },
+            "count": {
+              "current": 1.0,
+              "previous": 2.0,
+              "delta": -1.0,
+              "ratio": -0.5
+            }
+          },
+          "summary": "Object exists in both windows without a strong directional change."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": false,
+        "trend_confidence": "low",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 18590,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrAssessEvaService.copyAssessEva.dwr",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "disappeared",
+        "change_summary": "Object disappeared from current window.",
+        "delta_metrics": {
+          "response_time_ms": 58821.0,
+          "total_response_time_ms": 176463.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 3,
+          "count": 3
+        },
+        "comparison_facts": {
+          "change_class": "disappeared",
+          "delta_metrics": {
+            "response_time_ms": 58821.0,
+            "total_response_time_ms": 176463.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 3,
+            "count": 3
+          },
+          "summary": "Object disappeared from current window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 17306,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "URI/grcv5/dwr/call/plaincall/dwrHandOverService.doHandover.dwr",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "disappeared",
+        "change_summary": "Object disappeared from current window.",
+        "delta_metrics": {
+          "response_time_ms": 58636.0,
+          "total_response_time_ms": 58636.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 1,
+          "count": 1
+        },
+        "comparison_facts": {
+          "change_class": "disappeared",
+          "delta_metrics": {
+            "response_time_ms": 58636.0,
+            "total_response_time_ms": 58636.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 1,
+            "count": 1
+          },
+          "summary": "Object disappeared from current window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1644,
+          "action_id": 16011,
+          "action_type": "TX"
+        },
+        "target_type": "action",
+        "display_name": "SpringController/${url.bpm.user.senopInfo}",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "disappeared",
+        "change_summary": "Object disappeared from current window.",
+        "delta_metrics": {
+          "response_time_ms": 52640.0,
+          "total_response_time_ms": 52640.0,
+          "throughput": 0.0,
+          "error_count": 0,
+          "slow_count": 1,
+          "count": 1
+        },
+        "comparison_facts": {
+          "change_class": "disappeared",
+          "delta_metrics": {
+            "response_time_ms": 52640.0,
+            "total_response_time_ms": 52640.0,
+            "throughput": 0.0,
+            "error_count": 0,
+            "slow_count": 1,
+            "count": 1
+          },
+          "summary": "Object disappeared from current window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "action_list",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      },
+      {
+        "target_ref": {
+          "kind": "sql",
+          "component_name": "10.190.22.21:3306",
+          "fingerprint": "select count(*) as countnum from (select entry.id as flowinstanceid,entry.flowid as flowid, entry.flowname as flowname, entry.flowtype as flowtype, entry.insttype as entrytype, entry.creator as creato"
+        },
+        "target_type": "sql",
+        "display_name": "select count(*) as countNum from (SELECT entry.ID as FLOWINSTANCEID,entry.FLOWID as FLOWID, entry.FLOWNAME as FLOWNAME, entry.FLOWTYPE as FLOWTYPE, entry.INSTTY",
+        "comparison_baseline": {
+          "mode": "previous_window",
+          "comparison_mode": "summary",
+          "current_end_time": "2026-04-01 00:00",
+          "previous_end_time": "2026-03-02 00:00"
+        },
+        "change_class": "disappeared",
+        "change_summary": "Object disappeared from current window.",
+        "delta_metrics": {
+          "response_time_ms": 6694.0,
+          "error_count": 0,
+          "count": 1
+        },
+        "comparison_facts": {
+          "change_class": "disappeared",
+          "delta_metrics": {
+            "response_time_ms": 6694.0,
+            "error_count": 0,
+            "count": 1
+          },
+          "summary": "Object disappeared from current window."
+        },
+        "historical_baseline_context": {
+          "baseline_notes": [],
+          "known_patterns": [],
+          "pending_proposals": [],
+          "recent_judgments": []
+        },
+        "missing_baseline_inputs": [],
+        "new_or_disappeared": true,
+        "trend_confidence": "medium",
+        "evidence_refs": [
+          "database_analysis",
+          "knowledge_baseline_notes",
+          "knowledge_known_patterns",
+          "knowledge_judgment_log"
+        ],
+        "source_basis": [
+          {
+            "kind": "baseline",
+            "value": "summary"
+          },
+          {
+            "kind": "knowledge",
+            "value": "baseline_notes"
+          }
+        ]
+      }
+    ],
+    "summaries": {
+      "change_class_counts": {
+        "new_risk": 7,
+        "disappeared": 7,
+        "improved": 4,
+        "insufficient_baseline": 32,
+        "regressed": 3,
+        "stable_risk": 2
+      },
+      "knowledge_hit_count": 0
+    },
+    "knowledge_context": {
+      "knowledge_scope": {
+        "biz_system_id": 1065,
+        "knowledge_key": "biz_system_1065",
+        "knowledge_dir": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065",
+        "repository_status": "configured",
+        "read_before_infer": true
+      },
+      "confirmed_knowledge_summary": {
+        "entry_count": 0,
+        "file_entry_counts": {
+          "system_profile": 0,
+          "glossary": 0,
+          "critical_paths": 0,
+          "action_labels": 0,
+          "dependency_annotations": 0,
+          "known_patterns": 0,
+          "baseline_notes": 0,
+          "page_route_map": 0
+        },
+        "stale_entry_counts": {
+          "system_profile": 0,
+          "glossary": 0,
+          "critical_paths": 0,
+          "action_labels": 0,
+          "dependency_annotations": 0,
+          "known_patterns": 0,
+          "baseline_notes": 0,
+          "page_route_map": 0
+        },
+        "files_with_content": []
+      },
+      "pending_proposals_summary": {
+        "pending_count": 0,
+        "rejected_count": 0,
+        "obsolete_count": 0,
+        "target_file_counts": {}
+      },
+      "recent_judgment_logs": [],
+      "critical_paths": [],
+      "known_patterns": [],
+      "page_route_map": []
+    },
+    "diagnostics": {
+      "comparison_mode": "summary",
+      "pool_limits": {
+        "hotspots": {
+          "collection_limit": 200,
+          "ranking_limit": 12,
+          "deep_dive_limit": 5
+        },
+        "external_dependencies": {
+          "collection_limit": 200,
+          "ranking_limit": 10,
+          "deep_dive_limit": 6
+        },
+        "slow_sql": {
+          "collection_limit": 200,
+          "ranking_limit": 12,
+          "deep_dive_limit": 6
+        }
+      },
+      "time_strategy": {
+        "mode": "auto_sharded_summary",
+        "shard_count": 8,
+        "shard_minutes": 20160,
+        "short_window_minutes": 43200,
+        "comparison_mode": "summary",
+        "degrade_mode": "long_window_short_comparison"
+      }
+    },
+    "input_dependencies": [
+      "action_hotspot_pack",
+      "external_dependency_pack",
+      "slow_sql_pack",
+      "knowledge_context_pack"
+    ],
+    "evidence_refs": [
+      "action_list",
+      "action_overview",
+      "external_detail_graph",
+      "external_graph_health",
+      "slow_sql_analysis_10.190.22.21:3306",
+      "slow_sql_operate_10.190.22.21:3306",
+      "slow_sql_analysis_UnknownHost:0",
+      "slow_sql_operate_UnknownHost:0",
+      "knowledge_system_profile",
+      "knowledge_glossary",
+      "knowledge_critical_paths",
+      "knowledge_action_labels",
+      "knowledge_dependency_annotations",
+      "knowledge_known_patterns",
+      "knowledge_baseline_notes",
+      "knowledge_page_route_map",
+      "knowledge_review_queue",
+      "knowledge_judgment_log"
+    ],
+    "derivation_notes": [
+      "Comparison uses previous_window first and augments it with persisted baseline notes and known patterns.",
+      "No long-term forecast is performed inside the adapter."
+    ],
+    "evidence": [
+      {
+        "id": "action_list",
+        "source_api": "webaction/list/actionList",
+        "source_path": "/server-api/webaction/list/actionList",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "webaction/list/actionList",
+          "request_params": {
+            "bizSystemId": 1065,
+            "timeWindow": {
+              "end_time": "2025-12-24 00:00",
+              "period_minutes": 5760
+            }
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "timeWindow": {
+            "end_time": "2025-12-24 00:00",
+            "period_minutes": 5760
+          }
+        },
+        "response_excerpt": {
+          "top_rows": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "action_overview",
+        "source_api": "webaction/overview",
+        "source_path": "/server-api/webaction/overview",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "webaction/overview",
+          "request_params": {
+            "bizSystemId": 1065,
+            "timeWindow": {
+              "end_time": "2026-01-07 00:00",
+              "period_minutes": 20160
+            }
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "timeWindow": {
+            "end_time": "2026-01-07 00:00",
+            "period_minutes": 20160
+          }
+        },
+        "response_excerpt": {
+          "actionName": "SpringController/serverapi/archive/acquire/complete/contractInfo (POST)",
+          "actionAlias": "SpringController/serverapi/archive/acquire/complete/contractInfo (POST)",
+          "metricNames": [],
+          "responseTime": 50949.168,
+          "totalResponseTime": 305695,
+          "errorRate": 0.0,
+          "errorCount": 0,
+          "tps": 4.96031725560897e-06,
+          "maxTps": 0.0,
+          "instanceCount": 1,
+          "components": {
+            "NoSQL": [
+              {
+                "componentType": "NoSQL",
+                "componentSubtype": "Redis",
+                "count": 42,
+                "consumerCount": 0,
+                "producerCount": 0,
+                "topiceSize": 0,
+                "componentNameSize": 1,
+                "respTime": 0.45238096,
+                "consumerAvgTime": 0.0,
+                "producerAvgTime": 0.0
+              }
+            ],
+            "Database": [
+              {
+                "componentType": "Database",
+                "componentSubtype": "",
+                "count": 4102,
+                "consumerCount": 0,
+                "producerCount": 0,
+                "topiceSize": 0,
+                "componentNameSize": 1,
+                "respTime": 14.845685,
+                "consumerAvgTime": 0.0,
+                "producerAvgTime": 0.0
+              }
+            ]
+          },
+          "affectUserCount": 0,
+          "technology": "Apache Tomcat",
+          "language": "Java",
+          "txCount": 0,
+          "bizSystemCount": 0,
+          "applicationCount": 0,
+          "actionCalls": 6
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "external_detail_graph",
+        "source_api": "graph/queryBizDetailGraph",
+        "source_path": "/server-api/graph/queryBizDetailGraph",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "graph/queryBizDetailGraph",
+          "request_params": {
+            "bizSystemId": 1065,
+            "timeWindow": {
+              "end_time": "2025-12-24 00:00",
+              "period_minutes": 5760
+            }
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "timeWindow": {
+            "end_time": "2025-12-24 00:00",
+            "period_minutes": 5760
+          }
+        },
+        "response_excerpt": {
+          "external_dependencies": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "external_graph_health",
+        "source_api": "graph/queryGraphHealth",
+        "source_path": "/server-api/graph/queryGraphHealth",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "graph/queryGraphHealth",
+          "request_params": {
+            "bizSystemId": 1065
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065
+        },
+        "response_excerpt": {
+          "health_nodes": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_analysis_10.190.22.21:3306",
+        "source_api": "Database/analysis",
+        "source_path": "/server-api/Database/analysis",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/analysis",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "10.190.22.21:3306"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "10.190.22.21:3306"
+        },
+        "response_excerpt": {
+          "top_sqls": [
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opName": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? ) a",
+              "appName": null,
+              "respTime": 1502484.0,
+              "maxExecTime": 0.0,
+              "errorRate": 39.37,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 81,
+              "errorCount": 50,
+              "count": 127,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 190815486,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 1502484.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 1502484.0,
+              "total_response_time_ms": 190815486.0,
+              "throughput": 0.0,
+              "error_count": 50,
+              "op_name_raw": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? ) a",
+              "op_name_decoded": "select count(*) as countNum from (SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? ) a",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opName": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? limit ?",
+              "appName": null,
+              "respTime": 122918.0,
+              "maxExecTime": 0.0,
+              "errorRate": 6.25,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 23,
+              "errorCount": 3,
+              "count": 48,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 5900072,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 122918.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 122918.0,
+              "total_response_time_ms": 5900072.0,
+              "throughput": 0.0,
+              "error_count": 3,
+              "op_name_raw": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? limit ?",
+              "op_name_decoded": "SELECT a.ID as ID ,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_AMOUNT_FORSHOW as CONTRACT_AMOUNT_FORSHOW ,a.CONTRACT_STATUS as CONTRACT_STATUS FROM LAS_CONTRACT_INFO a WHERE a.DELETED = ? AND a.CONTRACT_STATUS in (?)AND exists (SELECT rel.CONTRACT_ID FROM LAS_CONTRACT_OPPOSITE_RELATED rel WHERE rel.CONTRACT_ID = a.ID AND rel.OPPOSITE_ID = ?) AND( a.CREATOR_ACCOUNT_AUTH = ? OR a.EXECUTOR_ACCOUNT = ? OR (exists (select ids.id from HD_WF_COMPLETED ids,HD_WF_INST entry,HD_WF_LIST list where entry.ID = list.ID AND list.BEAN_ID = a.ID AND list.FORM_ID = ? AND ids.INSTID=entry.ID AND (ids.ACCOUNT = ? OR ids.INSTID in (select DISTINCT INSTID from HD_HANDOVER_PROCESSED where READABLE = ? AND TO_USERACCOUNT = ?))) )) and ?=? limit ?",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opName": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+              "appName": null,
+              "respTime": 22252.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 7,
+              "errorCount": 0,
+              "count": 12,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 267023,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 22252.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 22252.0,
+              "total_response_time_ms": 267023.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+              "op_name_decoded": "select ? from las_contract_payment a,las_contract_info b where a.CONTRACT_ID=b.ID and b.DELETED=? and DATEDIFF(a.COLLECTION_DATE,CURDATE()) = ?",
+              "op_name_is_encoded": false
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_operate_10.190.22.21:3306",
+        "source_api": "Database/operate/analysisList",
+        "source_path": "/server-api/Database/operate/analysisList",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/operate/analysisList",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "10.190.22.21:3306"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "10.190.22.21:3306"
+        },
+        "response_excerpt": {
+          "top_operation_types": [
+            {
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opType": "legal_services_demand/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 11,
+              "successCount": 11,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 6,
+              "slowCount": 11,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 80517,
+              "avgRespTime": 7319.727,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opType": "qrtz_fired_triggers/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 2,
+              "successCount": 2,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 2,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 0,
+              "avgRespTime": 0.0,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "MySQL",
+              "componentName": "10.190.22.21:3306",
+              "opType": "las_legal_papers/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 8,
+              "successCount": 8,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 8,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 58,
+              "avgRespTime": 7.25,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_analysis_UnknownHost:0",
+        "source_api": "Database/analysis",
+        "source_path": "/server-api/Database/analysis",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/analysis",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "UnknownHost:0"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "UnknownHost:0"
+        },
+        "response_excerpt": {
+          "top_sqls": [
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opName": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLES WHERE ?=? AND TABLE_NAME LIKE ? AND TABLE_TYPE IN (?)",
+              "appName": null,
+              "respTime": 6.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 0,
+              "errorCount": 0,
+              "count": 18,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 109,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 6.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 6.0,
+              "total_response_time_ms": 109.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLES WHERE ?=? AND TABLE_NAME LIKE ? AND TABLE_TYPE IN (?)",
+              "op_name_decoded": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLES WHERE ?=? AND TABLE_NAME LIKE ? AND TABLE_TYPE IN (?)",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opName": "select ? from PUBLIC.FR_ERRRECORD where ? = ?",
+              "appName": null,
+              "respTime": 3.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 0,
+              "errorCount": 0,
+              "count": 36,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 106,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 3.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 3.0,
+              "total_response_time_ms": 106.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "select ? from PUBLIC.FR_ERRRECORD where ? = ?",
+              "op_name_decoded": "select ? from PUBLIC.FR_ERRRECORD where ? = ?",
+              "op_name_is_encoded": false
+            },
+            {
+              "bizSystemName": "集团法务",
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opName": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLETYPES",
+              "appName": null,
+              "respTime": 3.0,
+              "maxExecTime": 0.0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "health": 0,
+              "healthInfo": null,
+              "traceCount": 0,
+              "errorCount": 0,
+              "count": 18,
+              "payload": 0.0,
+              "exclusiveRespTime": 0,
+              "totalResptime": 46,
+              "callMode": -1,
+              "productthrought": 0.0,
+              "productCount": 0,
+              "productPayload": 0.0,
+              "bizSystemId": 1065,
+              "applicationId": -1,
+              "instanceId": -1,
+              "instanceName": null,
+              "connTime": 3.0,
+              "connUsed": 0,
+              "actionId": 0,
+              "actionName": null,
+              "actionAlias": null,
+              "payloadUnit": null,
+              "componentNameSecondary": null,
+              "opType": null,
+              "schemas": null,
+              "callModeStr": "消费者",
+              "response_time_ms": 3.0,
+              "total_response_time_ms": 46.0,
+              "throughput": 0.0,
+              "error_count": 0,
+              "op_name_raw": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLETYPES",
+              "op_name_decoded": "SELECT ? FROM INFORMATION_SCHEMA.SYSTEM_TABLETYPES",
+              "op_name_is_encoded": false
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "slow_sql_operate_UnknownHost:0",
+        "source_api": "Database/operate/analysisList",
+        "source_path": "/server-api/Database/operate/analysisList",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "Database/operate/analysisList",
+          "request_params": {
+            "bizSystemId": 1065,
+            "componentName": "UnknownHost:0"
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "componentName": "UnknownHost:0"
+        },
+        "response_excerpt": {
+          "top_operation_types": [
+            {
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opType": "information_schema.system_tabletypes/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 18,
+              "successCount": 18,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 9,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 46,
+              "avgRespTime": 2.5555556,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opType": "parseerror/CALL",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 828,
+              "successCount": 828,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 18,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 178,
+              "avgRespTime": 0.21497585,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            },
+            {
+              "componentSubtype": "Unknown",
+              "componentName": "UnknownHost:0",
+              "opType": "fr_pri_track_record/SELECT",
+              "health": 0,
+              "actionId": 0,
+              "txActionId": 0,
+              "applicationId": 0,
+              "bizSystemId": 1065,
+              "txApplicationId": 0,
+              "count": 9,
+              "successCount": 9,
+              "maxCount": 0,
+              "actionCount": 0,
+              "actionErrorCount": 0,
+              "componentType": "Database",
+              "exceptionCount": 0,
+              "traceCount": 0,
+              "slowCount": 9,
+              "callerApplicationId": 0,
+              "callerActionId": 0,
+              "calleeApplicationId": 0,
+              "callerBizSystemId": 0,
+              "calleeBizSystemId": 0,
+              "calleeActionId": 0,
+              "totalResptime": 0,
+              "avgRespTime": 0.0,
+              "avgExclusiveRespTime": 0,
+              "exclusiveRespTime": 0,
+              "totalExclusiveRespTime": 0,
+              "respTime": 0,
+              "totalRespTime": 0,
+              "errorRate": 0.0,
+              "throught": 0.0,
+              "maxThrought": 0.0,
+              "maxRespTime": 0.0,
+              "avgActionExclusiveRespTime": 0.0,
+              "healthOrder": 0
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_system_profile",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/system_profile.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_glossary",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/glossary.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_critical_paths",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/critical_paths.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_action_labels",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/action_labels.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_dependency_annotations",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/dependency_annotations.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_known_patterns",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/known_patterns.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_baseline_notes",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/baseline_notes.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_page_route_map",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/page_route_map.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "sample_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_review_queue",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/review_queue.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "pending_count": 0,
+          "rejected_count": 0,
+          "obsolete_count": 0
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "knowledge_judgment_log",
+        "source_api": "knowledge_repository",
+        "source_path": "/Users/mac/Downloads/工作目录/听云/tingyun/tingyun_adapter/knowledge/biz_system_1065/judgment_log.json",
+        "source_method": "READ",
+        "request_signature": {},
+        "request_params": {},
+        "response_excerpt": {
+          "entry_count": 0,
+          "recent_entries": []
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      }
+    ]
+  },
+  "meta": {
+    "adapter_version": "0.1.0",
+    "source_mode": "live",
+    "source_count": 18,
+    "evidence_count": 18,
+    "missing_inputs": [
+      "action_labels",
+      "baseline_notes",
+      "critical_paths",
+      "dependency_annotations",
+      "glossary",
+      "judgment_log.entries",
+      "known_patterns",
+      "page_route_map",
+      "review_queue.pending",
+      "system_profile"
+    ],
+    "warnings": [
+      {
+        "code": "external_dependency_empty",
+        "message": "当前拓扑中没有识别到外部依赖节点。",
+        "source_api": "graph/queryBizDetailGraph"
+      },
+      {
+        "code": "slow_sql_empty_component",
+        "message": "没有可用的 Database 组件来分析 SQL。",
+        "source_api": "Database/list"
+      }
+    ],
+    "confidence_notes": [
+      "If the previous window has sparse data, comparison falls back to low-confidence deltas instead of failing."
+    ],
+    "build_stats": {
+      "upstream_call_count": 101,
+      "cache_hit_count": 14,
+      "collection_count": 212,
+      "ranking_count": 24,
+      "deep_dive_count": 0,
+      "shard_count": 8,
+      "degrade_mode": "long_window_short_comparison",
+      "comparison_mode": "summary",
+      "object_count": 55
+    }
+  }
+}

@@ -111,6 +111,53 @@ class TraceFactSheetPayload:
 
 
 @dataclass
+class TraceSQLPackPayload:
+    selector: dict[str, Any]
+    trace: dict[str, Any] = field(default_factory=dict)
+    detail_summary: dict[str, Any] = field(default_factory=dict)
+    sql_summary: dict[str, Any] = field(default_factory=dict)
+    sqls: list[dict[str, Any]] = field(default_factory=list)
+    database_spans: list[dict[str, Any]] = field(default_factory=list)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    drilldown_keys: dict[str, Any] = field(default_factory=dict)
+    drilldown_path: list[str] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
+class TraceExecutionPackPayload:
+    selector: dict[str, Any]
+    trace: dict[str, Any] = field(default_factory=dict)
+    detail_summary: dict[str, Any] = field(default_factory=dict)
+    call_tree_summary: dict[str, Any] = field(default_factory=dict)
+    call_tree_hotspots: dict[str, Any] = field(default_factory=dict)
+    snapshot_summary: dict[str, Any] = field(default_factory=dict)
+    exception_summary: dict[str, Any] = field(default_factory=dict)
+    exceptions: list[dict[str, Any]] = field(default_factory=list)
+    pool_summary: dict[str, Any] = field(default_factory=dict)
+    pool_infos: list[dict[str, Any]] = field(default_factory=list)
+    database_spans: list[dict[str, Any]] = field(default_factory=list)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    drilldown_keys: dict[str, Any] = field(default_factory=dict)
+    drilldown_path: list[str] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
 class DatabaseComponentPackPayload:
     component: dict[str, Any]
     summary: dict[str, Any] = field(default_factory=dict)

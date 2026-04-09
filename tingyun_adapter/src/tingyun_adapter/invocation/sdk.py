@@ -29,8 +29,10 @@ from tingyun_adapter.usecases.builders import (
     build_diagnostic_candidate_pack,
     build_report_fact_pack,
     build_system_snapshot,
+    build_trace_execution_pack,
     build_trace_fact_sheet,
     build_trace_case_pack,
+    build_trace_sql_pack,
 )
 from tingyun_adapter.usecases.component_builders import (
     build_connection_pool_pack,
@@ -153,6 +155,26 @@ class Adapter:
         trace_ref: TraceRef | None = None,
     ):
         return build_trace_fact_sheet(self, context, source_mode=source_mode, action_ref=action_ref, trace_ref=trace_ref)
+
+    def build_trace_sql_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        action_ref: ActionRef | None = None,
+        trace_ref: TraceRef | None = None,
+    ):
+        return build_trace_sql_pack(self, context, source_mode=source_mode, action_ref=action_ref, trace_ref=trace_ref)
+
+    def build_trace_execution_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        action_ref: ActionRef | None = None,
+        trace_ref: TraceRef | None = None,
+    ):
+        return build_trace_execution_pack(self, context, source_mode=source_mode, action_ref=action_ref, trace_ref=trace_ref)
 
     def build_report_fact_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
         return build_report_fact_pack(self, context, source_mode=source_mode)

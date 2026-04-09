@@ -25,8 +25,10 @@ from tingyun_adapter.domain.models.packs import (
     DiagnosticCandidatePackPayload,
     ReportFactPackPayload,
     SystemSnapshotPayload,
+    TraceExecutionPackPayload,
     TraceFactSheetPayload,
     TraceCasePackPayload,
+    TraceSQLPackPayload,
 )
 from tingyun_adapter.normalizers.field_normalizer import unwrap_data
 from tingyun_adapter.normalizers.metric_normalizer import normalize_metric_fields
@@ -1513,55 +1515,24 @@ def build_trace_fact_sheet(
     warnings: list[WarningMessage] = []
     evidence: list[Evidence] = []
 
-    if trace_ref and trace_ref.trace_id_numeric and trace_ref.query_timestamp and source_mode != "sample":
-        detail = adapter.trace.trace_detail(
-            biz_system_id=context.biz_system_id,
-            trace_id=trace_ref.trace_id_numeric,
-            query_timestamp=trace_ref.query_timestamp,
-            end_time=context.time_window.end_time,
-            time_period=context.time_window.period_minutes,
-        )
-        call_tree = None
-        if trace_ref.action_guid:
-            call_tree = adapter.trace.call_tree(
-                biz_system_id=context.biz_system_id,
-                trace_id=trace_ref.trace_id_numeric,
-                action_guid=trace_ref.action_guid,
-                query_timestamp=trace_ref.query_timestamp,
-                end_time=context.time_window.end_time,
-                time_period=context.time_window.period_minutes,
-            )
-        selector = dataclass_to_dict(trace_ref)
-        detail_data = unwrap_data(detail) or {}
-        call_tree_data = unwrap_data(call_tree) or {}
-        exceptions: list[dict[str, Any]] = []
-    else:
-        trace_case = build_trace_case_pack(adapter, context, source_mode=source_mode, action_ref=action_ref)
-        warnings.extend(trace_case.meta.warnings)
-        trace_payload = trace_case.to_dict()["payload"]
-        payload = TraceFactSheetPayload(
-            selector=trace_payload.get("selector", {}),
-            trace=trace_payload.get("trace_case", {}).get("trace", {}),
-            detail_summary=trace_payload.get("trace_case", {}).get("detail_summary", {}),
-            call_tree_summary=trace_payload.get("trace_case", {}).get("call_tree_summary", {}),
-            exception_summary=trace_payload.get("trace_case", {}).get("exception_summary", {}),
-            suspect_signals=trace_payload.get("suspect_signals", []),
-            drilldown_keys=_trace_fact_drilldown_keys(trace_payload.get("selector", {}), trace_payload.get("trace_case", {}).get("trace", {})),
-            drilldown_path=trace_payload.get("drilldown_path", []),
-            evidence=trace_payload.get("evidence", []),
-        )
-        payload = apply_report_support(
-            payload,
-            page_links=trace_payload.get("page_links", []),
-            screenshot_hints=trace_payload.get("screenshot_hints", []),
-            metric_semantics=trace_payload.get("metric_semantics", []),
-            coverage_boundary=trace_payload.get("coverage_boundary", default_coverage_boundary(adapter)),
-            evidence_linkage=trace_payload.get("evidence_linkage", {}),
-        )
-        evidence.extend(_coerce_evidence_list(trace_payload.get("evidence", [])))
-        return _pack(PackType.TRACE_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+    selector, detail_data, call_tree_data, exceptions, _, _, bundle_warnings = _load_trace_assets(
+        adapter,
+        context,
+        source_mode=source_mode,
+        action_ref=action_ref,
+        trace_ref=trace_ref,
+        include_call_tree=True,
+        include_exceptions=True,
+    )
+    warnings.extend(bundle_warnings)
 
-    trace = _trace_from_detail(detail_data, context.biz_system_id)
+    trace = _trace_from_detail(detail_data, context.biz_system_id) if detail_data else Trace(
+        biz_system_id=context.biz_system_id,
+        trace_id_numeric=selector.get("trace_id_numeric"),
+        trace_guid=selector.get("trace_guid"),
+        action_guid=selector.get("action_guid"),
+        request_id=selector.get("request_id"),
+    )
     detail_summary = _trace_detail_summary(detail_data)
     call_tree_summary = _call_tree_summary(call_tree_data)
     exception_summary = _exception_summary(exceptions)
@@ -1573,19 +1544,33 @@ def build_trace_fact_sheet(
                 source_api="action/trace/detail",
                 source_path="/server-api/action/trace/detail",
                 source_method="POST",
-                request_params={"bizSystemId": context.biz_system_id, "traceId": trace_ref.trace_id_numeric if trace_ref else None},
+                request_params={"bizSystemId": context.biz_system_id, "traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
                 response_excerpt=detail_summary,
             ),
+        ]
+    )
+    if call_tree_data:
+        evidence.append(
             _evidence(
                 evidence_id="trace_fact_call_tree",
                 source_api="action/trace/callTree",
                 source_path="/server-api/action/trace/callTree",
                 source_method="POST",
-                request_params={"bizSystemId": context.biz_system_id, "traceId": trace_ref.trace_id_numeric if trace_ref else None},
+                request_params={"bizSystemId": context.biz_system_id, "traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
                 response_excerpt=call_tree_summary,
-            ),
-        ]
-    )
+            )
+        )
+    if exceptions:
+        evidence.append(
+            _evidence(
+                evidence_id="trace_fact_exceptions",
+                source_api="action/trace/detail/exceptions",
+                source_path="/server-api/action/trace/detail/exceptions",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
+                response_excerpt=exception_summary,
+            )
+        )
     payload = TraceFactSheetPayload(
         selector=selector,
         trace=dataclass_to_dict(trace),
@@ -1641,6 +1626,338 @@ def build_trace_fact_sheet(
         },
     )
     return _pack(PackType.TRACE_FACT_SHEET.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+
+
+def build_trace_sql_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    action_ref: Optional[ActionRef] = None,
+    trace_ref: Optional[TraceRef] = None,
+) -> PackEnvelope:
+    warnings: list[WarningMessage] = []
+    evidence: list[Evidence] = []
+
+    selector, detail, call_tree_data, _, _, _, bundle_warnings = _load_trace_assets(
+        adapter,
+        context,
+        source_mode=source_mode,
+        action_ref=action_ref,
+        trace_ref=trace_ref,
+        include_call_tree=True,
+    )
+    warnings.extend(bundle_warnings)
+
+    trace = _trace_from_detail(detail, context.biz_system_id) if detail else Trace(
+        biz_system_id=context.biz_system_id,
+        trace_id_numeric=selector.get("trace_id_numeric"),
+        trace_guid=selector.get("trace_guid"),
+        action_guid=selector.get("action_guid"),
+        request_id=selector.get("request_id"),
+    )
+    detail_summary = _trace_detail_summary(detail)
+    detail_spans = _trace_database_spans(detail.get("timeLine") or {}, source="detail")
+    call_tree_spans = _trace_database_spans_from_call_tree(call_tree_data, source="call_tree")
+    database_spans = _merge_trace_spans(detail_spans, call_tree_spans)
+    sql_rows = _merge_trace_sql_entry_lists(_trace_sql_entries(detail), _trace_sql_entries_from_spans(call_tree_spans))
+    sqls = _merge_trace_sql_rows(sql_rows, database_spans)
+    sql_summary = _trace_sql_summary(sqls, database_spans)
+    suspect_signals = _trace_sql_signals(sql_summary, sqls, database_spans)
+
+    if not detail:
+        warnings.append(
+            WarningMessage(
+                code="missing_trace_detail",
+                message="Trace detail is empty for the selected trace.",
+                source_api="action/trace/detail",
+            )
+        )
+
+    evidence.append(
+        _evidence(
+            evidence_id="trace_sql_detail",
+            source_api="action/trace/detail",
+            source_path="/server-api/action/trace/detail",
+            source_method="POST",
+            request_params={
+                "bizSystemId": context.biz_system_id,
+                "traceId": selector.get("trace_id_numeric"),
+                "queryTimestamp": selector.get("query_timestamp"),
+            },
+            response_excerpt={
+                "detail_summary": detail_summary,
+                "sql_summary": sql_summary,
+                "top_sqls": sqls[:5],
+                "database_span_count": len(database_spans),
+            },
+        )
+    )
+
+    drilldown_keys = _trace_fact_drilldown_keys(selector, dataclass_to_dict(trace))
+    payload = TraceSQLPackPayload(
+        selector=selector,
+        trace=dataclass_to_dict(trace),
+        detail_summary=detail_summary,
+        sql_summary=sql_summary,
+        sqls=sqls,
+        database_spans=database_spans,
+        suspect_signals=suspect_signals,
+        drilldown_keys=drilldown_keys,
+        drilldown_path=["action/trace/detail"],
+        evidence=[dataclass_to_dict(item) for item in evidence],
+    )
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="trace_detail",
+            label="Trace SQL 详情页",
+            why_relevant="用于查看 trace 时间线中的 DATABASE span 与 SQL 细节。",
+            suggested_report_section="3.5 请求追踪与根因分析专题",
+            navigation_path=["请求追踪", str(trace.trace_id_numeric or selector.get("trace_id_numeric") or "")],
+            suggested_filters={"trace_guid": trace.trace_guid, "query_timestamp": selector.get("query_timestamp")},
+            target_ref={"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid},
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=[
+            make_screenshot_hint(
+                title="Trace SQL 截图建议",
+                page_type="trace_detail",
+                url=page_links[0]["url"],
+                recommended_capture=["Trace 时间线中的 DATABASE span", "SQL 聚合列表", "可疑数据库节点"],
+                recommended_annotations=["圈出最慢 SQL", "标出 trace id", "标出数据库实例"],
+                usage_in_report="适合用于 trace 深挖时补充 SQL 证据。",
+                suggested_report_section="3.5 请求追踪与根因分析专题",
+                target_ref={"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid},
+                priority="high",
+            )
+        ],
+        metric_semantics=[
+            make_metric_semantic(
+                metric_name="sql_count",
+                subject_type="trace",
+                subject_key=f"trace:{trace.trace_id_numeric or selector.get('trace_id_numeric') or 'selected'}",
+                aggregation="count",
+                unit="count",
+                time_window=time_window_text(context),
+                sample_scope="SQL operations extracted from selected trace",
+            ),
+            make_metric_semantic(
+                metric_name="database_span_count",
+                subject_type="trace",
+                subject_key=f"trace:{trace.trace_id_numeric or selector.get('trace_id_numeric') or 'selected'}",
+                aggregation="count",
+                unit="count",
+                time_window=time_window_text(context),
+                sample_scope="DATABASE spans extracted from selected trace",
+            ),
+        ],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [detail_summary.get("timestamp")],
+            "related_actions": [{"kind": "action", "action_id": trace.action_id, "application_id": trace.application_id, "biz_system_id": trace.biz_system_id}],
+            "related_traces": [{"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid}],
+            "related_sqls": sqls[:10],
+            "related_dependencies": sorted({item.get("instance") or item.get("metric_name") for item in database_spans if item.get("instance") or item.get("metric_name")}),
+            "recommended_next_pages": ["trace_detail"],
+        },
+    )
+    return _pack(PackType.TRACE_SQL_PACK.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
+
+
+def build_trace_execution_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    action_ref: Optional[ActionRef] = None,
+    trace_ref: Optional[TraceRef] = None,
+) -> PackEnvelope:
+    warnings: list[WarningMessage] = []
+    evidence: list[Evidence] = []
+
+    selector, detail_data, call_tree_data, exceptions, snapshot_rows, pool_infos, bundle_warnings = _load_trace_assets(
+        adapter,
+        context,
+        source_mode=source_mode,
+        action_ref=action_ref,
+        trace_ref=trace_ref,
+        include_call_tree=True,
+        include_exceptions=True,
+        include_snapshot=True,
+        include_pool=True,
+    )
+    warnings.extend(bundle_warnings)
+
+    trace = _trace_from_detail(detail_data, context.biz_system_id) if detail_data else Trace(
+        biz_system_id=context.biz_system_id,
+        trace_id_numeric=selector.get("trace_id_numeric"),
+        trace_guid=selector.get("trace_guid"),
+        action_guid=selector.get("action_guid"),
+        request_id=selector.get("request_id"),
+    )
+    detail_summary = _trace_detail_summary(detail_data)
+    call_tree_summary = _call_tree_summary(call_tree_data)
+    call_tree_hotspots = _trace_call_tree_hotspots(call_tree_data)
+    exception_summary = _exception_summary(exceptions)
+    snapshot_summary = _trace_snapshot_summary(snapshot_rows)
+    detail_spans = _trace_database_spans(detail_data.get("timeLine") or {}, source="detail")
+    call_tree_spans = _trace_database_spans_from_call_tree(call_tree_data, source="call_tree")
+    database_spans = _merge_trace_spans(detail_spans, call_tree_spans)
+    pool_summary = _trace_pool_summary(pool_infos)
+    suspect_signals = _trace_execution_signals(
+        detail_data,
+        call_tree_summary,
+        exception_summary,
+        snapshot_summary,
+        pool_summary,
+        database_spans,
+    )
+
+    evidence.extend(
+        [
+            _evidence(
+                evidence_id="trace_execution_detail",
+                source_api="action/trace/detail",
+                source_path="/server-api/action/trace/detail",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
+                response_excerpt=detail_summary,
+            ),
+        ]
+    )
+    if call_tree_data:
+        evidence.append(
+            _evidence(
+                evidence_id="trace_execution_call_tree",
+                source_api="action/trace/callTree",
+                source_path="/server-api/action/trace/callTree",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
+                response_excerpt={"call_tree_summary": call_tree_summary, "top_nodes": (call_tree_hotspots.get("top_nodes") or [])[:5]},
+            )
+        )
+    if exceptions:
+        evidence.append(
+            _evidence(
+                evidence_id="trace_execution_exceptions",
+                source_api="action/trace/detail/exceptions",
+                source_path="/server-api/action/trace/detail/exceptions",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
+                response_excerpt=exception_summary,
+            )
+        )
+    if snapshot_rows:
+        evidence.append(
+            _evidence(
+                evidence_id="trace_execution_snapshot",
+                source_api="action/trace/detail/snapshotTimeInfo",
+                source_path="/server-api/action/trace/detail/snapshotTimeInfo",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
+                response_excerpt=snapshot_summary,
+            )
+        )
+    if pool_infos:
+        evidence.append(
+            _evidence(
+                evidence_id="trace_execution_pool_info",
+                source_api="action/trace/detail/poolInfo",
+                source_path="/server-api/action/trace/detail/poolInfo",
+                source_method="POST",
+                request_params={"traceId": selector.get("trace_id_numeric"), "queryTimestamp": selector.get("query_timestamp")},
+                response_excerpt=pool_summary,
+            )
+        )
+
+    payload = TraceExecutionPackPayload(
+        selector=selector,
+        trace=dataclass_to_dict(trace),
+        detail_summary=detail_summary,
+        call_tree_summary=call_tree_summary,
+        call_tree_hotspots=call_tree_hotspots,
+        snapshot_summary=snapshot_summary,
+        exception_summary=exception_summary,
+        exceptions=exceptions,
+        pool_summary=pool_summary,
+        pool_infos=pool_infos,
+        database_spans=database_spans,
+        suspect_signals=suspect_signals,
+        drilldown_keys=_trace_fact_drilldown_keys(selector, dataclass_to_dict(trace)),
+        drilldown_path=[
+            "action/trace/detail",
+            "action/trace/callTree",
+            "action/trace/detail/snapshotTimeInfo",
+            "action/trace/detail/exceptions",
+            "action/trace/detail/poolInfo",
+        ],
+        evidence=[dataclass_to_dict(item) for item in evidence],
+    )
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="trace_detail",
+            label="Trace 执行详情页",
+            why_relevant="用于联查调用树、异常、snapshot 与连接池相关上下文。",
+            suggested_report_section="3.5 请求追踪与根因分析专题",
+            navigation_path=["请求追踪", str(trace.trace_id_numeric or selector.get("trace_id_numeric") or "")],
+            suggested_filters={"trace_guid": trace.trace_guid, "query_timestamp": selector.get("query_timestamp")},
+            target_ref={"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid},
+        )
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=[
+            make_screenshot_hint(
+                title="Trace 执行深挖截图建议",
+                page_type="trace_detail",
+                url=page_links[0]["url"],
+                recommended_capture=["调用树热点方法", "异常详情", "snapshot 元数据", "池/数据库相关节点"],
+                recommended_annotations=["标出最长耗时节点", "标出错误消息", "标出线程与客户端 IP"],
+                usage_in_report="适合用于 trace 深挖专题。",
+                suggested_report_section="3.5 请求追踪与根因分析专题",
+                target_ref={"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid},
+                priority="high",
+            )
+        ],
+        metric_semantics=[
+            make_metric_semantic(
+                metric_name="call_tree_node_count",
+                subject_type="trace",
+                subject_key=f"trace:{trace.trace_id_numeric or selector.get('trace_id_numeric') or 'selected'}",
+                aggregation="count",
+                unit="count",
+                time_window=time_window_text(context),
+                sample_scope="call tree nodes extracted from selected trace",
+            ),
+            make_metric_semantic(
+                metric_name="exception_count",
+                subject_type="trace",
+                subject_key=f"trace:{trace.trace_id_numeric or selector.get('trace_id_numeric') or 'selected'}",
+                aggregation="count",
+                unit="count",
+                time_window=time_window_text(context),
+                sample_scope="exception rows extracted from selected trace",
+            ),
+        ],
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [detail_summary.get("timestamp")],
+            "related_actions": [{"kind": "action", "action_id": trace.action_id, "application_id": trace.application_id, "biz_system_id": trace.biz_system_id}],
+            "related_traces": [{"kind": "trace", "trace_id_numeric": trace.trace_id_numeric, "trace_guid": trace.trace_guid}],
+            "related_sqls": database_spans[:10],
+            "related_dependencies": [item.get("metric_name") for item in database_spans[:10]] + (pool_summary.get("metric_categories") or []),
+            "recommended_next_pages": ["trace_detail"],
+        },
+    )
+    return _pack(PackType.TRACE_EXECUTION_PACK.value, context, payload, evidence=evidence, warnings=warnings, source_mode=source_mode)
 
 
 def _action_target_ref_for_support(action: dict[str, Any]) -> dict[str, Any]:
@@ -1881,6 +2198,246 @@ def _load_trace_case_from_samples(adapter: Any, context: AnalysisContext) -> dic
     }
 
 
+def _load_trace_assets(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str,
+    action_ref: Optional[ActionRef] = None,
+    trace_ref: Optional[TraceRef] = None,
+    include_call_tree: bool = False,
+    include_exceptions: bool = False,
+    include_snapshot: bool = False,
+    include_pool: bool = False,
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any], list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], list[WarningMessage]]:
+    warnings: list[WarningMessage] = []
+    selector: dict[str, Any] = {}
+    detail_data: dict[str, Any] = {}
+    call_tree_data: dict[str, Any] = {}
+    exceptions: list[dict[str, Any]] = []
+    snapshot_rows: list[dict[str, Any]] = []
+    pool_infos: list[dict[str, Any]] = []
+
+    if trace_ref and (not trace_ref.trace_id_numeric or not trace_ref.query_timestamp) and source_mode != "sample":
+        warnings.append(
+            WarningMessage(
+                code="trace_keys_incomplete",
+                message="指定 trace 时至少需要 traceId 和 queryTimestamp。",
+                source_api="action/trace/detail",
+            )
+        )
+        return selector, detail_data, call_tree_data, exceptions, snapshot_rows, pool_infos, warnings
+
+    if trace_ref and trace_ref.trace_id_numeric and trace_ref.query_timestamp and source_mode != "sample":
+        selector = dataclass_to_dict(trace_ref)
+        detail_payload = adapter.trace.trace_detail(
+            biz_system_id=context.biz_system_id,
+            trace_id=trace_ref.trace_id_numeric,
+            query_timestamp=trace_ref.query_timestamp,
+            end_time=context.time_window.end_time,
+            time_period=context.time_window.period_minutes,
+        )
+        detail_data = unwrap_data(detail_payload) or {}
+        selector = _enrich_trace_selector(selector, detail_data)
+        if include_call_tree:
+            action_guid = selector.get("action_guid") or detail_data.get("actionGuid")
+            if action_guid:
+                call_tree_payload = adapter.trace.call_tree(
+                    biz_system_id=context.biz_system_id,
+                    trace_id=selector.get("trace_id_numeric"),
+                    action_guid=action_guid,
+                    query_timestamp=selector.get("query_timestamp"),
+                    end_time=context.time_window.end_time,
+                    time_period=context.time_window.period_minutes,
+                )
+                call_tree_data = unwrap_data(call_tree_payload) or {}
+            else:
+                warnings.append(WarningMessage(code="missing_action_guid", message="Selected trace is missing actionGuid; call tree was skipped.", source_api="action/trace/callTree"))
+    elif _should_use_sample(adapter, source_mode):
+        sample = _load_trace_case_from_samples(adapter, context)
+        selector = sample.get("selector") or {"biz_system_id": context.biz_system_id}
+        detail_data = unwrap_data(sample.get("detail")) or {}
+        call_tree_data = unwrap_data(sample.get("call_tree")) or {}
+        exceptions = unwrap_data(sample.get("exceptions")) or []
+        if sample.get("warning"):
+            warnings.append(sample["warning"])
+        repo = _require_repo(adapter)
+        if include_snapshot:
+            snapshot_rows = _as_dict_list(repo.load_first_sample_response("action/trace/detail/snapshotTimeInfo") or [])
+        if include_pool:
+            sample_pool = unwrap_data(repo.load_first_sample_response("action/trace/detail/poolInfo") or {})
+            if isinstance(sample_pool, dict) and sample_pool:
+                pool_infos = [sample_pool]
+    else:
+        selector, detail_payload, call_tree_payload, _, live_warnings = _load_trace_case_live(
+            adapter,
+            context,
+            action_ref=action_ref,
+            trace_policy=TraceSelectionPolicy(),
+        )
+        warnings.extend(live_warnings)
+        detail_data = unwrap_data(detail_payload) or {}
+        call_tree_data = unwrap_data(call_tree_payload) or {}
+        selector = _enrich_trace_selector(selector, detail_data)
+
+    if include_exceptions and not _should_use_sample(adapter, source_mode):
+        exceptions = _load_trace_exceptions_live(adapter, context, selector, detail_data, call_tree_data)
+    if include_snapshot and not _should_use_sample(adapter, source_mode):
+        snapshot_rows = _load_trace_snapshot_live(adapter, context, selector)
+    if include_pool and not _should_use_sample(adapter, source_mode):
+        pool_infos = _load_trace_pool_infos_live(adapter, selector, detail_data, call_tree_data)
+    return selector, detail_data, call_tree_data, exceptions, snapshot_rows, pool_infos, warnings
+
+
+def _enrich_trace_selector(selector: dict[str, Any], detail: dict[str, Any]) -> dict[str, Any]:
+    if not detail:
+        return dict(selector)
+    keys = resolve_trace_keys(detail)
+    merged = dict(selector)
+    merged["biz_system_id"] = merged.get("biz_system_id") or detail.get("bizSystemId")
+    merged["trace_id_numeric"] = merged.get("trace_id_numeric") or keys.trace_id_numeric
+    merged["query_timestamp"] = merged.get("query_timestamp") or str(detail.get("timestamp") or "")
+    merged["trace_guid"] = merged.get("trace_guid") or keys.trace_guid
+    merged["action_guid"] = merged.get("action_guid") or keys.action_guid
+    merged["request_id"] = merged.get("request_id") or keys.request_id
+    merged["action_id"] = merged.get("action_id") or detail.get("actionId")
+    merged["application_id"] = merged.get("application_id") or detail.get("applicationId")
+    return merged
+
+
+def _load_trace_exceptions_live(
+    adapter: Any,
+    context: AnalysisContext,
+    selector: dict[str, Any],
+    detail: dict[str, Any],
+    call_tree: dict[str, Any],
+) -> list[dict[str, Any]]:
+    trace_id = selector.get("trace_id_numeric")
+    query_timestamp = selector.get("query_timestamp")
+    if not trace_id or not query_timestamp:
+        return []
+    rows: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str, str]] = set()
+    for tree_id in _trace_exception_tree_ids(selector, detail, call_tree)[:6]:
+        response = adapter.trace.trace_exceptions(
+            biz_system_id=context.biz_system_id,
+            trace_id=str(trace_id),
+            query_timestamp=str(query_timestamp),
+            tree_id=str(tree_id),
+            end_time=context.time_window.end_time,
+            time_period=context.time_window.period_minutes,
+        )
+        for item in _as_dict_list(unwrap_data(response) or []):
+            key = (
+                str(item.get("name") or ""),
+                str(item.get("msg") or ""),
+                str(item.get("type") or ""),
+                str(item.get("seq") or ""),
+            )
+            if key in seen:
+                continue
+            rows.append(item)
+            seen.add(key)
+    return rows
+
+
+def _load_trace_snapshot_live(adapter: Any, context: AnalysisContext, selector: dict[str, Any]) -> list[dict[str, Any]]:
+    trace_id = selector.get("trace_id_numeric")
+    query_timestamp = selector.get("query_timestamp")
+    if not trace_id or not query_timestamp:
+        return []
+    response = adapter.trace.snapshot_time_info(
+        biz_system_id=context.biz_system_id,
+        trace_id=str(trace_id),
+        query_timestamp=str(query_timestamp),
+        end_time=context.time_window.end_time,
+        time_period=context.time_window.period_minutes,
+    )
+    return _as_dict_list(unwrap_data(response) or [])
+
+
+def _load_trace_pool_infos_live(
+    adapter: Any,
+    selector: dict[str, Any],
+    detail: dict[str, Any],
+    call_tree: dict[str, Any],
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for ref in _trace_pool_refs(detail, call_tree)[:5]:
+        metric_category = str(ref.get("metric_category") or "")
+        if not metric_category or metric_category in seen:
+            continue
+        response = adapter.trace.pool_info(
+            metric_category=metric_category,
+            pool_active_count=ref.get("pool_active_count") or 0,
+            pool_wait_count=ref.get("pool_wait_count") or 0,
+            pool_end_time=ref.get("pool_end_time") or selector.get("query_timestamp") or 0,
+        )
+        info = unwrap_data(response) or {}
+        if isinstance(info, dict) and info:
+            rows.append(info)
+            seen.add(metric_category)
+    return rows
+
+
+def _trace_exception_tree_ids(selector: dict[str, Any], detail: dict[str, Any], call_tree: dict[str, Any]) -> list[str]:
+    action_guid = str(selector.get("action_guid") or detail.get("actionGuid") or "")
+    candidates: list[str] = []
+    if action_guid:
+        candidates.append(f"{action_guid}_-1")
+    for item in detail.get("suspectedProblemList") or []:
+        seq = item.get("seq")
+        if action_guid and seq is not None:
+            candidates.append(f"{action_guid}_{seq}")
+    node_map = call_tree.get("nodeMap") if isinstance(call_tree, dict) else {}
+    if isinstance(node_map, dict):
+        for key in node_map.keys():
+            if isinstance(key, str) and key.endswith("_-1"):
+                candidates.append(key)
+    return _unique_strings([item for item in candidates if item])
+
+
+def _trace_pool_refs(detail: dict[str, Any], call_tree: dict[str, Any]) -> list[dict[str, Any]]:
+    refs: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str, str]] = set()
+
+    def capture(node: dict[str, Any]) -> None:
+        metric_type = str(node.get("metricType") or "").upper()
+        if metric_type != "POOL":
+            return
+        metric_category = str(node.get("metricName") or "")
+        pool_active_count = node.get("poolActiveCount")
+        pool_wait_count = node.get("poolWaitCount")
+        pool_end_time = node.get("poolEndTime")
+        key = (metric_category, str(pool_active_count), str(pool_wait_count), str(pool_end_time))
+        if not metric_category or key in seen:
+            return
+        refs.append(
+            {
+                "metric_category": metric_category,
+                "pool_active_count": _int_or_zero(pool_active_count),
+                "pool_wait_count": _int_or_zero(pool_wait_count),
+                "pool_end_time": pool_end_time,
+            }
+        )
+        seen.add(key)
+
+    def visit_timeline(node: Any) -> None:
+        if isinstance(node, dict):
+            capture(node)
+            for child in node.get("subTimeLines") or []:
+                visit_timeline(child)
+
+    visit_timeline(detail.get("timeLine") or {})
+    node_map = call_tree.get("nodeMap") if isinstance(call_tree, dict) else {}
+    if isinstance(node_map, dict):
+        for value in node_map.values():
+            if isinstance(value, dict):
+                capture(value)
+    return refs
+
+
 def _trace_from_detail(detail: dict[str, Any], fallback_biz_system_id: int) -> Trace:
     keys = resolve_trace_keys(detail)
     return Trace(
@@ -1950,9 +2507,24 @@ def _call_tree_summary(call_tree: dict[str, Any]) -> dict[str, Any]:
 def _exception_summary(exceptions: Any) -> dict[str, Any]:
     if not isinstance(exceptions, list):
         return {}
+    type_counts: dict[str, int] = {}
+    name_counts: dict[str, int] = {}
+    highest = 0
+    for item in exceptions:
+        if not isinstance(item, dict):
+            continue
+        error_type = str(item.get("type") or "unknown")
+        type_counts[error_type] = type_counts.get(error_type, 0) + 1
+        name = str(item.get("name") or "unknown")
+        name_counts[name] = name_counts.get(name, 0) + 1
+        if item.get("highest"):
+            highest += 1
     return {
         "count": len(exceptions),
         "top_exception": exceptions[0] if exceptions else None,
+        "highest_count": highest,
+        "type_counts": type_counts,
+        "name_counts": name_counts,
     }
 
 
@@ -2200,6 +2772,442 @@ def _trace_sql_binding_strength(detail: dict[str, Any]) -> str:
     if ratio >= 0.1:
         return "medium"
     return "weak"
+
+
+def _trace_sql_entries(detail: dict[str, Any]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str, str, str]] = set()
+
+    def visit(node: Any) -> None:
+        if isinstance(node, dict):
+            sql_text = _trace_sql_text(node)
+            looks_aggregated = sql_text and any(key in node for key in ("averageTime", "count", "errorCount"))
+            if looks_aggregated:
+                key = (
+                    sql_text,
+                    str(node.get("averageTime")),
+                    str(node.get("count")),
+                    str(node.get("errorCount")),
+                    str(node.get("totalTime")),
+                )
+                if key not in seen:
+                    rows.append(
+                        {
+                            "sql": sql_text,
+                            "sql_fingerprint": sql_fingerprint(sql_text),
+                            "average_time_ms": _numeric(node.get("averageTime")),
+                            "count": _int_or_zero(node.get("count")),
+                            "error_count": _int_or_zero(node.get("errorCount")),
+                            "total_time_ms": _numeric(node.get("totalTime")),
+                        }
+                    )
+                    seen.add(key)
+            for value in node.values():
+                visit(value)
+        elif isinstance(node, list):
+            for item in node:
+                visit(item)
+
+    visit(detail)
+    return rows
+
+
+def _trace_database_spans(timeline: dict[str, Any], *, source: str = "detail") -> list[dict[str, Any]]:
+    spans: list[dict[str, Any]] = []
+
+    def visit(node: Any) -> None:
+        if not isinstance(node, dict):
+            return
+        metric_type = str(node.get("metricType") or "").upper()
+        sql_text = _trace_sql_text(node)
+        if metric_type == "DATABASE" and sql_text:
+            spans.append(
+                {
+                    "sql": sql_text,
+                    "sql_fingerprint": sql_fingerprint(sql_text),
+                    "metric_name": node.get("metricName"),
+                    "instance": node.get("instance") or ((node.get("param") or {}).get("instance")),
+                    "database_type": node.get("type") or ((node.get("param") or {}).get("vendor")),
+                    "class_name": node.get("clasz"),
+                    "method_name": node.get("method"),
+                    "exclusive_time_ms": _numeric(node.get("exclusiveTime")),
+                    "total_time_ms": _numeric(node.get("totalTime")),
+                    "repeat_times": _int_or_zero(node.get("repeatTimes")),
+                    "handle_rows": node.get("handleRows"),
+                    "seq": node.get("seq"),
+                    "request_name": ((node.get("request") or {}).get("name")),
+                    "caller_instance_name": ((node.get("callerInstance") or {}).get("name")),
+                    "source": source,
+                }
+            )
+        for child in node.get("subTimeLines") or []:
+            visit(child)
+
+    visit(timeline)
+    return spans
+
+
+def _trace_database_spans_from_call_tree(call_tree: dict[str, Any], *, source: str = "call_tree") -> list[dict[str, Any]]:
+    spans: list[dict[str, Any]] = []
+    node_map = call_tree.get("nodeMap") if isinstance(call_tree, dict) else {}
+    if not isinstance(node_map, dict):
+        return spans
+    for node_id, node in node_map.items():
+        if not isinstance(node, dict):
+            continue
+        metric_type = str(node.get("metricType") or "").upper()
+        sql_text = _trace_sql_text(node)
+        if metric_type != "DATABASE" or not sql_text:
+            continue
+        spans.append(
+            {
+                "node_id": node_id,
+                "sql": sql_text,
+                "sql_fingerprint": sql_fingerprint(sql_text),
+                "metric_name": node.get("metricName"),
+                "instance": ((node.get("param") or {}).get("instance")) or node.get("instance"),
+                "database_type": ((node.get("param") or {}).get("vendor")) or node.get("type"),
+                "class_name": node.get("clazz") or node.get("className"),
+                "method_name": node.get("method") or node.get("methodName"),
+                "exclusive_time_ms": _numeric(node.get("exclTime") or node.get("exclusiveTime")),
+                "total_time_ms": _numeric(node.get("totalTime")),
+                "repeat_times": _int_or_zero(node.get("execCount") or node.get("repeatTimes")),
+                "handle_rows": node.get("handleRows"),
+                "seq": node.get("seq"),
+                "request_name": node.get("actionName"),
+                "caller_instance_name": node.get("threadName"),
+                "source": source,
+            }
+        )
+    return spans
+
+
+def _merge_trace_spans(*span_groups: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str, str, str, str]] = set()
+    for spans in span_groups:
+        for span in spans or []:
+            key = (
+                str(span.get("source") or ""),
+                str(span.get("node_id") or ""),
+                str(span.get("seq") or ""),
+                str(span.get("metric_name") or ""),
+                str(span.get("sql_fingerprint") or ""),
+                str(span.get("total_time_ms") or ""),
+            )
+            if key in seen:
+                continue
+            merged.append(span)
+            seen.add(key)
+    merged.sort(key=lambda item: (_numeric(item.get("total_time_ms")) or 0.0, _numeric(item.get("exclusive_time_ms")) or 0.0), reverse=True)
+    return merged
+
+
+def _merge_trace_sql_entry_lists(*row_groups: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str, str, str]] = set()
+    for rows in row_groups:
+        for row in rows or []:
+            key = (
+                str(row.get("sql_fingerprint") or ""),
+                str(row.get("average_time_ms") or ""),
+                str(row.get("count") or ""),
+                str(row.get("error_count") or ""),
+                str(row.get("total_time_ms") or ""),
+            )
+            if key in seen:
+                continue
+            merged.append(row)
+            seen.add(key)
+    return merged
+
+
+def _trace_sql_entries_from_spans(spans: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    grouped: dict[str, dict[str, Any]] = {}
+    for span in spans:
+        sql_text = str(span.get("sql") or "")
+        if not sql_text:
+            continue
+        fingerprint = sql_fingerprint(sql_text)
+        item = grouped.setdefault(
+            fingerprint,
+            {
+                "sql": sql_text,
+                "sql_fingerprint": fingerprint,
+                "average_time_ms": 0.0,
+                "count": 0,
+                "error_count": 0,
+                "total_time_ms": 0.0,
+            },
+        )
+        total_time = _numeric(span.get("total_time_ms")) or 0.0
+        item["count"] = int(item.get("count") or 0) + max(_int_or_zero(span.get("repeat_times")), 1)
+        item["total_time_ms"] = round((_numeric(item.get("total_time_ms")) or 0.0) + total_time, 3)
+    rows = list(grouped.values())
+    for item in rows:
+        count = _int_or_zero(item.get("count"))
+        total_time = _numeric(item.get("total_time_ms")) or 0.0
+        item["average_time_ms"] = round(total_time / count, 3) if count else None
+    rows.sort(key=lambda item: (_numeric(item.get("total_time_ms")) or 0.0, _numeric(item.get("average_time_ms")) or 0.0), reverse=True)
+    return rows
+
+
+def _merge_trace_sql_rows(sql_rows: list[dict[str, Any]], database_spans: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    grouped: dict[str, dict[str, Any]] = {}
+
+    def ensure(sql_text: str) -> dict[str, Any]:
+        fingerprint = sql_fingerprint(sql_text)
+        item = grouped.get(fingerprint)
+        if item is None:
+            item = {
+                "sql": sql_text,
+                "sql_fingerprint": fingerprint,
+                "average_time_ms": None,
+                "count": 0,
+                "error_count": 0,
+                "total_time_ms": None,
+                "database_span_summary": {
+                    "span_count": 0,
+                    "instances": [],
+                    "exclusive_time_ms_total": 0.0,
+                    "total_time_ms_max": None,
+                    "top_span": None,
+                },
+            }
+            grouped[fingerprint] = item
+        return item
+
+    for row in sql_rows:
+        item = ensure(str(row.get("sql") or ""))
+        item["average_time_ms"] = row.get("average_time_ms")
+        item["count"] = row.get("count") or 0
+        item["error_count"] = row.get("error_count") or 0
+        item["total_time_ms"] = row.get("total_time_ms")
+
+    for span in database_spans:
+        sql_text = str(span.get("sql") or "")
+        if not sql_text:
+            continue
+        item = ensure(sql_text)
+        span_summary = item["database_span_summary"]
+        span_summary["span_count"] = int(span_summary.get("span_count") or 0) + 1
+        exclusive = _numeric(span.get("exclusive_time_ms")) or 0.0
+        span_summary["exclusive_time_ms_total"] = round((_numeric(span_summary.get("exclusive_time_ms_total")) or 0.0) + exclusive, 3)
+        total_time = _numeric(span.get("total_time_ms"))
+        current_max = _numeric(span_summary.get("total_time_ms_max"))
+        if total_time is not None and (current_max is None or total_time > current_max):
+            span_summary["total_time_ms_max"] = total_time
+        instance = span.get("instance")
+        if instance and instance not in span_summary["instances"]:
+            span_summary["instances"].append(instance)
+        top_span = span_summary.get("top_span")
+        if top_span is None or (_numeric(span.get("total_time_ms")) or 0.0) > (_numeric(top_span.get("total_time_ms")) or 0.0):
+            span_summary["top_span"] = span
+
+    merged = list(grouped.values())
+    merged.sort(
+        key=lambda item: (
+            _numeric(item.get("total_time_ms")) or 0.0,
+            _numeric((item.get("database_span_summary") or {}).get("exclusive_time_ms_total")) or 0.0,
+            _numeric(item.get("average_time_ms")) or 0.0,
+        ),
+        reverse=True,
+    )
+    return merged
+
+
+def _trace_sql_summary(sqls: list[dict[str, Any]], database_spans: list[dict[str, Any]]) -> dict[str, Any]:
+    total_sql_time = sum(_numeric(item.get("total_time_ms")) or 0.0 for item in sqls)
+    total_span_exclusive = sum(_numeric(item.get("exclusive_time_ms")) or 0.0 for item in database_spans)
+    return {
+        "sql_count": len(sqls),
+        "database_span_count": len(database_spans),
+        "sql_with_errors": sum(1 for item in sqls if (_int_or_zero(item.get("error_count")) or 0) > 0),
+        "total_sql_time_ms": round(total_sql_time, 3) if sqls else 0.0,
+        "total_database_exclusive_time_ms": round(total_span_exclusive, 3) if database_spans else 0.0,
+        "top_sql_fingerprint": sqls[0].get("sql_fingerprint") if sqls else None,
+        "top_sql_text": sqls[0].get("sql") if sqls else None,
+    }
+
+
+def _trace_sql_signals(sql_summary: dict[str, Any], sqls: list[dict[str, Any]], database_spans: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    signals: list[dict[str, Any]] = []
+    if sql_summary.get("sql_count"):
+        signals.append(_signal("trace_sql_count", sql_summary.get("sql_count"), level="info", source="action/trace/detail"))
+    if sql_summary.get("database_span_count"):
+        signals.append(_signal("trace_database_span_count", sql_summary.get("database_span_count"), level="info", source="action/trace/detail"))
+    if sqls:
+        top = sqls[0]
+        total_time = _numeric(top.get("total_time_ms"))
+        if total_time and total_time >= 500:
+            signals.append(_signal("trace_top_sql_total_time_ms", total_time, level="high", source="action/trace/detail"))
+        if (_int_or_zero(top.get("error_count")) or 0) > 0:
+            signals.append(_signal("trace_top_sql_error_count", top.get("error_count"), level="medium", source="action/trace/detail"))
+    if database_spans:
+        top_span = max(database_spans, key=lambda item: _numeric(item.get("total_time_ms")) or 0.0)
+        span_total = _numeric(top_span.get("total_time_ms"))
+        if span_total and span_total >= 300:
+            signals.append(_signal("trace_top_database_span_ms", span_total, level="medium", source="action/trace/detail"))
+    return signals
+
+
+def _trace_call_tree_hotspots(call_tree: dict[str, Any]) -> dict[str, Any]:
+    node_map = call_tree.get("nodeMap") if isinstance(call_tree, dict) else {}
+    node_table = call_tree.get("nodeTableList") if isinstance(call_tree, dict) else []
+    metric_type_counts: dict[str, int] = {}
+    top_nodes: list[dict[str, Any]] = []
+    if isinstance(node_map, dict):
+        for node_id, node in node_map.items():
+            if not isinstance(node, dict):
+                continue
+            metric_type = str(node.get("metricType") or "unknown")
+            metric_type_counts[metric_type] = metric_type_counts.get(metric_type, 0) + 1
+            top_nodes.append(
+                {
+                    "node_id": node_id,
+                    "metric_type": metric_type,
+                    "metric_name": node.get("metricName"),
+                    "class_name": node.get("clazz") or node.get("className"),
+                    "method_name": node.get("method") or node.get("methodName"),
+                    "thread_name": node.get("threadName"),
+                    "total_time_ms": _numeric(node.get("totalTime")),
+                    "exclusive_time_ms": _numeric(node.get("exclTime") or node.get("exclusiveTime")),
+                    "sql": _trace_sql_text(node) or None,
+                }
+            )
+    top_nodes = sorted(top_nodes, key=lambda item: (_numeric(item.get("total_time_ms")) or 0.0, _numeric(item.get("exclusive_time_ms")) or 0.0), reverse=True)[:10]
+    top_methods = []
+    if isinstance(node_table, list):
+        for item in node_table[:10]:
+            if not isinstance(item, dict):
+                continue
+            top_methods.append(
+                {
+                    "full_name": item.get("fullName"),
+                    "count": item.get("count"),
+                    "exclusive_time_ms": _numeric(item.get("exclTime")),
+                    "avg_exclusive_time_ms": _numeric(item.get("avgExclTime")),
+                    "max_exclusive_time_ms": _numeric(item.get("maxExclTime")),
+                    "time_ratio": _numeric(item.get("timeRatio")),
+                }
+            )
+    return {
+        "node_count": len(node_map) if isinstance(node_map, dict) else 0,
+        "metric_type_counts": metric_type_counts,
+        "top_nodes": top_nodes,
+        "top_methods": top_methods,
+    }
+
+
+def _trace_snapshot_summary(snapshot_rows: list[dict[str, Any]]) -> dict[str, Any]:
+    if not snapshot_rows:
+        return {}
+    row = snapshot_rows[0]
+    return {
+        "row_count": len(snapshot_rows),
+        "status_code": row.get("statusCode"),
+        "thread_name": row.get("threadName"),
+        "thread_count": row.get("threadCount"),
+        "client_ip": row.get("clientIp"),
+        "url": row.get("url"),
+        "duration_ms": _numeric(row.get("duration") or row.get("responseTime")),
+        "exclusive_time_ms": _numeric(row.get("exclusiveTime")),
+        "network_total_ms": _numeric(row.get("networkTotal")),
+        "error_names": row.get("errorNames") or [],
+        "exception_count": len(row.get("exceptions") or []),
+        "request_header_keys": sorted((row.get("requestHeader") or {}).keys()),
+    }
+
+
+def _trace_pool_summary(pool_infos: list[dict[str, Any]]) -> dict[str, Any]:
+    if not pool_infos:
+        return {"pool_count": 0, "metric_categories": []}
+    metric_categories = [item.get("metricCategory") for item in pool_infos if item.get("metricCategory")]
+    frameworks = sorted({str(item.get("framework") or "") for item in pool_infos if item.get("framework")})
+    database_types = sorted({str(item.get("databaseType") or "") for item in pool_infos if item.get("databaseType")})
+    max_current_used = max((_int_or_zero(item.get("currentUsed")) for item in pool_infos), default=0)
+    max_current_idle = max((_int_or_zero(item.get("currentIdle")) for item in pool_infos), default=0)
+    max_wait_count = 0
+    for item in pool_infos:
+        for pool in item.get("pools") or []:
+            if isinstance(pool, dict):
+                max_wait_count = max(max_wait_count, _int_or_zero(pool.get("waitCount")))
+    return {
+        "pool_count": len(pool_infos),
+        "metric_categories": metric_categories,
+        "frameworks": frameworks,
+        "database_types": database_types,
+        "max_current_used": max_current_used,
+        "max_current_idle": max_current_idle,
+        "max_wait_count": max_wait_count,
+    }
+
+
+def _trace_execution_signals(
+    detail: dict[str, Any],
+    call_tree_summary: dict[str, Any],
+    exception_summary: dict[str, Any],
+    snapshot_summary: dict[str, Any],
+    pool_summary: dict[str, Any],
+    database_spans: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    signals = _trace_suspect_signals(detail, call_tree_summary, exception_summary)
+    if snapshot_summary.get("status_code") and int(snapshot_summary.get("status_code")) >= 400:
+        signals.append(_signal("trace_snapshot_status_code", snapshot_summary.get("status_code"), level="high", source="action/trace/detail/snapshotTimeInfo"))
+    if snapshot_summary.get("exception_count"):
+        signals.append(_signal("trace_snapshot_exception_count", snapshot_summary.get("exception_count"), level="high", source="action/trace/detail/snapshotTimeInfo"))
+    if pool_summary.get("max_wait_count"):
+        signals.append(_signal("trace_pool_wait_count", pool_summary.get("max_wait_count"), level="medium", source="action/trace/detail/poolInfo"))
+    if pool_summary.get("max_current_used"):
+        signals.append(_signal("trace_pool_current_used", pool_summary.get("max_current_used"), level="info", source="action/trace/detail/poolInfo"))
+    if database_spans:
+        top_span = database_spans[0]
+        signals.append(_signal("trace_database_span_count", len(database_spans), level="info", source="action/trace/callTree"))
+        if (_numeric(top_span.get("total_time_ms")) or 0.0) >= 300:
+            signals.append(_signal("trace_top_database_span_ms", top_span.get("total_time_ms"), level="medium", source="action/trace/callTree"))
+    return signals
+
+
+def _trace_sql_text(node: dict[str, Any]) -> str:
+    candidates = [
+        node.get("sql"),
+        node.get("showInfo"),
+        node.get("operation"),
+        ((node.get("param") or {}).get("operation")),
+    ]
+    for candidate in candidates:
+        text = str(candidate or "").strip()
+        if _looks_like_sql(text):
+            return text
+    return ""
+
+
+def _looks_like_sql(text: str) -> bool:
+    if not text:
+        return False
+    head = text.lstrip().upper()
+    return head.startswith(("SELECT ", "UPDATE ", "DELETE ", "INSERT ", "WITH ", "CALL ", "MERGE ", "REPLACE "))
+
+
+def _as_dict_list(value: Any) -> list[dict[str, Any]]:
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, dict)]
+    if isinstance(value, dict):
+        content = value.get("content")
+        if isinstance(content, list):
+            return [item for item in content if isinstance(item, dict)]
+    return []
+
+
+def _unique_strings(items: list[str]) -> list[str]:
+    seen: set[str] = set()
+    unique: list[str] = []
+    for item in items:
+        if not item or item in seen:
+            continue
+        unique.append(item)
+        seen.add(item)
+    return unique
 
 
 def _select_sql_enrichment_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:

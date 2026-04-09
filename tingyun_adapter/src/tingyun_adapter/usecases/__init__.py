@@ -6,6 +6,8 @@ from tingyun_adapter.usecases.builders import (
     build_system_snapshot,
     build_trace_fact_sheet,
     build_trace_case_pack,
+    build_trace_execution_pack,
+    build_trace_sql_pack,
 )
 from tingyun_adapter.usecases.component_builders import (
     build_connection_pool_pack,
@@ -38,4 +40,6 @@ __all__ = [
     "build_topology_dependency_pack",
     "build_trace_fact_sheet",
     "build_trace_case_pack",
+    "build_trace_execution_pack",
+    "build_trace_sql_pack",
 ]

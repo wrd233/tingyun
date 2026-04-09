@@ -56,6 +56,26 @@ class NextStageBuilderTests(unittest.TestCase):
         self.assertIn("suspect_signals", payload)
         self.assertIn("drilldown_keys", payload)
 
+    def test_build_trace_sql_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1062, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_trace_sql_pack(context, source_mode="sample")
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "trace_sql_pack")
+        self.assertIn("sql_summary", payload)
+        self.assertIn("sqls", payload)
+        self.assertIn("database_spans", payload)
+        self.assertIn("drilldown_keys", payload)
+
+    def test_build_trace_execution_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1062, end_time="2026-04-03 12:20", period_minutes=30)
+        envelope = self.adapter.build_trace_execution_pack(context, source_mode="sample")
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "trace_execution_pack")
+        self.assertIn("call_tree_summary", payload)
+        self.assertIn("snapshot_summary", payload)
+        self.assertIn("exception_summary", payload)
+        self.assertIn("pool_summary", payload)
+
 
 if __name__ == "__main__":
     unittest.main()

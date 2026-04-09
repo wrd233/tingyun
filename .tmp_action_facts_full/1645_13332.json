@@ -1,0 +1,1079 @@
+{
+  "schema_version": "v1",
+  "pack_type": "action_fact_sheet",
+  "generated_at": "2026-04-09T11:38:36+08:00",
+  "context": {
+    "base_url": "http://169.169.173.25:8080",
+    "biz_system_id": 1065,
+    "time_window": {
+      "end_time": "2026-04-01 00:00",
+      "period_minutes": 146880
+    },
+    "auth": {
+      "token": "eyJhbG...Uo2g",
+      "token_env": "TINGYUN_TOKEN",
+      "token_present": true
+    },
+    "lang": "zh_CN",
+    "timezone": "Asia/Shanghai"
+  },
+  "payload": {
+    "action_ref": {
+      "biz_system_id": 1065,
+      "application_id": 1645,
+      "action_id": 13332,
+      "action_type": "TX"
+    },
+    "action": {
+      "id": 13332,
+      "biz_system_id": 1065,
+      "application_id": 1645,
+      "type": "TX",
+      "name": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+      "alias": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+      "metrics": {
+        "response_time_ms": 6375.0,
+        "total_response_time_ms": 141583664.0,
+        "throughput": 0.0,
+        "error_count": 62,
+        "slow_count": 7060,
+        "count": 22208
+      },
+      "component_summary": {
+        "NoSQL": [
+          {
+            "componentType": "NoSQL",
+            "componentSubtype": "Redis",
+            "count": 289221,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 8,
+            "respTime": 0.26844522,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ],
+        "External": [
+          {
+            "componentType": "External",
+            "componentSubtype": "",
+            "count": 5838,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 2,
+            "respTime": 2164.9492,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ],
+        "Database": [
+          {
+            "componentType": "Database",
+            "componentSubtype": "",
+            "count": 362700,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 1,
+            "respTime": 0.6726082,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ]
+      },
+      "trace_summary": {
+        "trace_candidate_count": 5
+      },
+      "evidence": []
+    },
+    "overview": {
+      "actionName": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+      "actionAlias": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+      "metricNames": [],
+      "responseTime": 6375.345,
+      "totalResponseTime": 141583664,
+      "errorRate": 0.27917868,
+      "errorCount": 62,
+      "tps": 0.002519970992580056,
+      "maxTps": 0.0,
+      "instanceCount": 3,
+      "components": {
+        "NoSQL": [
+          {
+            "componentType": "NoSQL",
+            "componentSubtype": "Redis",
+            "count": 289221,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 8,
+            "respTime": 0.26844522,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ],
+        "External": [
+          {
+            "componentType": "External",
+            "componentSubtype": "",
+            "count": 5838,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 2,
+            "respTime": 2164.9492,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ],
+        "Database": [
+          {
+            "componentType": "Database",
+            "componentSubtype": "",
+            "count": 362700,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 1,
+            "respTime": 0.6726082,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ]
+      },
+      "affectUserCount": 0,
+      "technology": "Apache Tomcat",
+      "language": "Java",
+      "txCount": 0,
+      "bizSystemCount": 0,
+      "applicationCount": 0,
+      "actionCalls": 22208
+    },
+    "suspect_signals": [
+      {
+        "type": "high_response_time_ms",
+        "value": 6375.0,
+        "level": "high",
+        "source_api": "webaction/list/actionList"
+      },
+      {
+        "type": "slow_count_present",
+        "value": 7060,
+        "level": "medium",
+        "source_api": "webaction/list/actionList"
+      },
+      {
+        "type": "error_count_present",
+        "value": 62,
+        "level": "high",
+        "source_api": "webaction/list/actionList"
+      },
+      {
+        "type": "downstream_component_present",
+        "value": "NoSQL",
+        "level": "info",
+        "source_api": "webaction/overview"
+      },
+      {
+        "type": "downstream_component_present",
+        "value": "External",
+        "level": "info",
+        "source_api": "webaction/overview"
+      },
+      {
+        "type": "downstream_component_present",
+        "value": "Database",
+        "level": "info",
+        "source_api": "webaction/overview"
+      },
+      {
+        "type": "slow_trace_candidate_present",
+        "value": 3869.932,
+        "level": "medium",
+        "source_api": "graph/query/overview"
+      }
+    ],
+    "trace_candidates": [
+      {
+        "trace_id_numeric": "1715659568",
+        "trace_guid": "e9e8ae17967e908c",
+        "action_guid": "e9e8ae17967e908c",
+        "query_timestamp": "1774964801160",
+        "timestamp": 1774964801160,
+        "duration_ms": 3869.932,
+        "error_count": 5,
+        "status": true,
+        "suspect_signals": [
+          {
+            "type": "trace_candidate_duration_high_ms",
+            "value": 3869.932,
+            "level": "medium",
+            "source_api": "graph/query/overview"
+          },
+          {
+            "type": "trace_candidate_error_count",
+            "value": 5,
+            "level": "high",
+            "source_api": "graph/query/overview"
+          },
+          {
+            "type": "trace_candidate_marked_slow",
+            "value": true,
+            "level": "medium",
+            "source_api": "graph/query/overview"
+          }
+        ]
+      },
+      {
+        "trace_id_numeric": "1715190514",
+        "trace_guid": "5e03ff0cca9d3dde",
+        "action_guid": "5e03ff0cca9d3dde",
+        "query_timestamp": "1774960656383",
+        "timestamp": 1774960656383,
+        "duration_ms": 3282.138,
+        "error_count": 5,
+        "status": true,
+        "suspect_signals": [
+          {
+            "type": "trace_candidate_duration_high_ms",
+            "value": 3282.138,
+            "level": "medium",
+            "source_api": "graph/query/overview"
+          },
+          {
+            "type": "trace_candidate_error_count",
+            "value": 5,
+            "level": "high",
+            "source_api": "graph/query/overview"
+          },
+          {
+            "type": "trace_candidate_marked_slow",
+            "value": true,
+            "level": "medium",
+            "source_api": "graph/query/overview"
+          }
+        ]
+      },
+      {
+        "trace_id_numeric": "1715190283",
+        "trace_guid": "1e8658fdcc28e866",
+        "action_guid": "1e8658fdcc28e866",
+        "query_timestamp": "1774960656375",
+        "timestamp": 1774960656375,
+        "duration_ms": 346.346,
+        "error_count": 5,
+        "status": true,
+        "suspect_signals": [
+          {
+            "type": "trace_candidate_error_count",
+            "value": 5,
+            "level": "high",
+            "source_api": "graph/query/overview"
+          }
+        ]
+      },
+      {
+        "trace_id_numeric": "1715190319",
+        "trace_guid": "ea95d4ff59973ed5",
+        "action_guid": "ea95d4ff59973ed5",
+        "query_timestamp": "1774960656364",
+        "timestamp": 1774960656364,
+        "duration_ms": 300.303,
+        "error_count": 5,
+        "status": true,
+        "suspect_signals": [
+          {
+            "type": "trace_candidate_error_count",
+            "value": 5,
+            "level": "high",
+            "source_api": "graph/query/overview"
+          }
+        ]
+      },
+      {
+        "trace_id_numeric": "1715190280",
+        "trace_guid": "d60cd9dd70d95340",
+        "action_guid": "d60cd9dd70d95340",
+        "query_timestamp": "1774960656362",
+        "timestamp": 1774960656362,
+        "duration_ms": 173.929,
+        "error_count": 5,
+        "status": true,
+        "suspect_signals": [
+          {
+            "type": "trace_candidate_error_count",
+            "value": 5,
+            "level": "high",
+            "source_api": "graph/query/overview"
+          }
+        ]
+      }
+    ],
+    "downstream_components": {
+      "NoSQL": {
+        "component_count": 1,
+        "top_rows": [
+          {
+            "componentType": "NoSQL",
+            "componentSubtype": "Redis",
+            "count": 289221,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 8,
+            "respTime": 0.26844522,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ]
+      },
+      "External": {
+        "component_count": 1,
+        "top_rows": [
+          {
+            "componentType": "External",
+            "componentSubtype": "",
+            "count": 5838,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 2,
+            "respTime": 2164.9492,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ]
+      },
+      "Database": {
+        "component_count": 1,
+        "top_rows": [
+          {
+            "componentType": "Database",
+            "componentSubtype": "",
+            "count": 362700,
+            "consumerCount": 0,
+            "producerCount": 0,
+            "topiceSize": 0,
+            "componentNameSize": 1,
+            "respTime": 0.6726082,
+            "consumerAvgTime": 0.0,
+            "producerAvgTime": 0.0
+          }
+        ]
+      }
+    },
+    "drilldown_keys": {
+      "bizSystemId": 1065,
+      "applicationId": 1645,
+      "actionId": 13332,
+      "actionType": "TX",
+      "traceCandidateKeys": [
+        {
+          "traceId": "1715659568",
+          "queryTimestamp": "1774964801160",
+          "traceGuid": "e9e8ae17967e908c",
+          "actionGuid": "e9e8ae17967e908c"
+        },
+        {
+          "traceId": "1715190514",
+          "queryTimestamp": "1774960656383",
+          "traceGuid": "5e03ff0cca9d3dde",
+          "actionGuid": "5e03ff0cca9d3dde"
+        },
+        {
+          "traceId": "1715190283",
+          "queryTimestamp": "1774960656375",
+          "traceGuid": "1e8658fdcc28e866",
+          "actionGuid": "1e8658fdcc28e866"
+        }
+      ]
+    },
+    "drilldown_path": [
+      "webaction/list/actionList",
+      "webaction/overview",
+      "graph/query/overview?trace_current_overview",
+      "action/trace/detail"
+    ],
+    "metric_semantics": [
+      {
+        "metric_name": "response_time_ms",
+        "subject_type": "action",
+        "subject_key": "action:13332",
+        "aggregation": "average",
+        "unit": "ms",
+        "time_window": "2026-04-01 00:00 / 146880m window",
+        "sample_scope": "selected action in requested business scope",
+        "confidence": "medium"
+      },
+      {
+        "metric_name": "error_rate",
+        "subject_type": "action",
+        "subject_key": "action:13332",
+        "aggregation": "average",
+        "unit": "%",
+        "time_window": "2026-04-01 00:00 / 146880m window",
+        "sample_scope": "selected action in requested business scope",
+        "confidence": "medium"
+      },
+      {
+        "metric_name": "throughput",
+        "subject_type": "action",
+        "subject_key": "action:13332",
+        "aggregation": "average",
+        "unit": "tps",
+        "time_window": "2026-04-01 00:00 / 146880m window",
+        "sample_scope": "selected action in requested business scope",
+        "confidence": "medium"
+      }
+    ],
+    "page_links": [
+      {
+        "page_type": "action_overview",
+        "url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+        "url_status": "direct",
+        "direct_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+        "fallback_url": "http://169.169.173.25:8080",
+        "label": "接口/事务详情页",
+        "why_relevant": "用于查看接口概览、错误、下游组件和关联 trace。",
+        "suggested_report_section": "3.3 事务与服务接口检查",
+        "deep_link_status": "captured_page_context",
+        "navigation_path": [
+          "应用",
+          "1645",
+          "事务与服务接口",
+          "13332"
+        ],
+        "suggested_filters": {
+          "action_type": "TX",
+          "time_window": {
+            "end_time": "2026-04-01 00:00",
+            "period_minutes": 146880
+          }
+        },
+        "target_ref": {
+          "kind": "action",
+          "biz_system_id": 1065,
+          "application_id": 1645,
+          "action_id": 13332,
+          "action_type": "TX"
+        },
+        "url_source": "captured_page_url",
+        "related_console_urls": [
+          "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+          "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "http://169.169.173.25:8080/web/server/interface/list",
+          "http://169.169.173.25:8080/web/server/background/list",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+          "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+          "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+          "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "http://169.169.173.25:8080/web/server/application/errorAnalysis/0/1645/ER?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request&self=_self",
+          "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+          "http://169.169.173.25:8080/web/server/system/list",
+          "http://169.169.173.25:8080/web/server/system/business",
+          "http://169.169.173.25:8080/server/system/business",
+          "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+          "http://169.169.173.25:8080/web/server/action/list",
+          "http://169.169.173.25:8080/web/server/application/home/1645",
+          "http://169.169.173.25:8080/web/server/application/home/1646",
+          "http://169.169.173.25:8080/web/server/system/business/overview/1059/0",
+          "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "http://169.169.173.25:8080"
+        ],
+        "page_context_summary": {
+          "selection_rule": "object_match>url_source_priority>page_quality>recency",
+          "candidate_count": 27,
+          "selected_source": "captured_page_url",
+          "matched_relative_paths": [
+            "webaction/threadAnalysisList",
+            "instance/cpu/chart",
+            "errorList",
+            "webaction/list/interfaceList",
+            "webaction/list/backgroundList"
+          ],
+          "selected_seen_at": "2026-04-07T14:49:12+08:00",
+          "selected_page_title": "Ting Yun"
+        }
+      },
+      {
+        "page_type": "trace_detail",
+        "url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "url_status": "direct",
+        "direct_url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "fallback_url": "http://169.169.173.25:8080",
+        "label": "相关 Trace 页",
+        "why_relevant": "用于查看该接口的代表性 trace、瓶颈段和可疑节点。",
+        "suggested_report_section": "3.5 请求追踪与根因分析专题",
+        "deep_link_status": "captured_page_context",
+        "navigation_path": [
+          "请求追踪",
+          "1715659568"
+        ],
+        "suggested_filters": {
+          "trace_guid": "e9e8ae17967e908c",
+          "time_window": {
+            "end_time": "2026-04-01 00:00",
+            "period_minutes": 146880
+          }
+        },
+        "target_ref": {
+          "kind": "trace",
+          "trace_id_numeric": "1715659568",
+          "trace_guid": "e9e8ae17967e908c"
+        },
+        "url_source": "captured_page_url",
+        "related_console_urls": [
+          "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+          "http://169.169.173.25:8080/web/server/background/list",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+          "http://169.169.173.25:8080/web/server/interface/list",
+          "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+          "http://169.169.173.25:8080/web/server/system/overview/1065",
+          "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+          "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+          "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+          "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+          "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+          "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+          "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+          "http://169.169.173.25:8080/web/server/application/errorAnalysis/0/1645/ER?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request&self=_self",
+          "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+          "http://169.169.173.25:8080/web/server/system/list",
+          "http://169.169.173.25:8080/web/server/system/business",
+          "http://169.169.173.25:8080/server/system/business",
+          "http://169.169.173.25:8080/web/server/connectionpool/view",
+          "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+          "http://169.169.173.25:8080/web/server/action/list",
+          "http://169.169.173.25:8080/web/server/application/home/1645",
+          "http://169.169.173.25:8080/web/server/application/home/1646",
+          "http://169.169.173.25:8080/web/server/system/business/overview/1059/0",
+          "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+          "http://169.169.173.25:8080"
+        ],
+        "page_context_summary": {
+          "selection_rule": "object_match>url_source_priority>page_quality>recency",
+          "candidate_count": 27,
+          "selected_source": "captured_page_url",
+          "matched_relative_paths": [
+            "instance/cpu/chart",
+            "errorList",
+            "webaction/list/backgroundList",
+            "component/chart/performanceDecompose",
+            "webaction/list/interfaceList"
+          ],
+          "selected_seen_at": "2026-04-07T14:48:43+08:00",
+          "selected_page_title": "Ting Yun"
+        }
+      }
+    ],
+    "primary_console_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+    "related_console_urls": [
+      "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+      "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+      "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+      "http://169.169.173.25:8080/web/server/interface/list",
+      "http://169.169.173.25:8080/web/server/background/list",
+      "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+      "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+      "http://169.169.173.25:8080/web/server/system/overview/1065",
+      "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+      "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+      "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+      "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13537&actionTypes=BG",
+      "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+      "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1645&actionIds=13278&actionTypes=TX",
+      "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+      "http://169.169.173.25:8080/web/server/application/errorAnalysis/0/1645/ER?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request&self=_self",
+      "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+      "http://169.169.173.25:8080/web/server/system/list",
+      "http://169.169.173.25:8080/web/server/system/business",
+      "http://169.169.173.25:8080/server/system/business",
+      "http://169.169.173.25:8080/web/server/connectionpool/view",
+      "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+      "http://169.169.173.25:8080/web/server/action/list",
+      "http://169.169.173.25:8080/web/server/application/home/1645",
+      "http://169.169.173.25:8080/web/server/application/home/1646",
+      "http://169.169.173.25:8080/web/server/system/business/overview/1059/0",
+      "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+      "http://169.169.173.25:8080"
+    ],
+    "screenshot_hints": [
+      {
+        "title": "接口详情截图建议",
+        "page_type": "action_overview",
+        "url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+        "recommended_capture": [
+          "接口概览卡片",
+          "下游组件分解",
+          "关联 trace 列表"
+        ],
+        "recommended_annotations": [
+          "标注接口名称",
+          "标注平均响应时间/错误率",
+          "标注主要下游组件"
+        ],
+        "usage_in_report": "适合用于 3.3 事务与服务接口检查。",
+        "suggested_report_section": "3.3 事务与服务接口检查",
+        "target_ref": {
+          "kind": "action",
+          "action_id": 13332,
+          "application_id": 1645
+        },
+        "priority": "high"
+      },
+      {
+        "title": "接口关联 Trace 截图建议",
+        "page_type": "trace_detail",
+        "url": "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "recommended_capture": [
+          "trace 时间线",
+          "可疑节点",
+          "调用树"
+        ],
+        "recommended_annotations": [
+          "圈出最长耗时段",
+          "标注 trace id",
+          "标注数据库/依赖节点"
+        ],
+        "usage_in_report": "适合用于 3.5 请求追踪与根因分析专题 或 3.3 接口章节的样本说明。",
+        "suggested_report_section": "3.5 请求追踪与根因分析专题",
+        "target_ref": {
+          "kind": "trace",
+          "trace_id_numeric": "1715659568"
+        },
+        "priority": "high"
+      }
+    ],
+    "coverage_boundary": {
+      "page_experience": {
+        "status": "partial",
+        "reason": "page_experience_pack relies on backend/topology evidence unless dedicated page-side inputs are available.",
+        "available_evidence": [
+          "user_to_application_topology",
+          "representative_request_urls",
+          "external_dependency_edges",
+          "backend_action_and_trace_correlation"
+        ],
+        "missing_evidence": [
+          "slow_pages",
+          "slow_requests",
+          "js_errors",
+          "browser_breakdown",
+          "geo_breakdown"
+        ]
+      },
+      "console_linking": {
+        "status": "base_url_fallback",
+        "reason": "Links now prefer captured real page URLs when page context exists; otherwise they still fall back to console root URLs plus navigation hints.",
+        "available_evidence": [
+          "clickable_console_root_url",
+          "captured_page_url_candidates",
+          "page_type",
+          "navigation_path",
+          "suggested_filters"
+        ],
+        "missing_evidence": [
+          "fully_stable_spa_deep_link_for_every_page"
+        ]
+      }
+    },
+    "evidence_linkage": {
+      "related_time_windows": [
+        1774964801160,
+        1774960656383,
+        1774960656375,
+        1774960656364,
+        1774960656362
+      ],
+      "related_actions": [
+        {
+          "kind": "action",
+          "action_id": 13332,
+          "application_id": 1645,
+          "biz_system_id": 1065
+        }
+      ],
+      "related_traces": [
+        {
+          "trace_id_numeric": "1715659568",
+          "trace_guid": "e9e8ae17967e908c",
+          "action_guid": "e9e8ae17967e908c",
+          "query_timestamp": "1774964801160",
+          "timestamp": 1774964801160,
+          "duration_ms": 3869.932,
+          "error_count": 5,
+          "status": true,
+          "suspect_signals": [
+            {
+              "type": "trace_candidate_duration_high_ms",
+              "value": 3869.932,
+              "level": "medium",
+              "source_api": "graph/query/overview"
+            },
+            {
+              "type": "trace_candidate_error_count",
+              "value": 5,
+              "level": "high",
+              "source_api": "graph/query/overview"
+            },
+            {
+              "type": "trace_candidate_marked_slow",
+              "value": true,
+              "level": "medium",
+              "source_api": "graph/query/overview"
+            }
+          ]
+        },
+        {
+          "trace_id_numeric": "1715190514",
+          "trace_guid": "5e03ff0cca9d3dde",
+          "action_guid": "5e03ff0cca9d3dde",
+          "query_timestamp": "1774960656383",
+          "timestamp": 1774960656383,
+          "duration_ms": 3282.138,
+          "error_count": 5,
+          "status": true,
+          "suspect_signals": [
+            {
+              "type": "trace_candidate_duration_high_ms",
+              "value": 3282.138,
+              "level": "medium",
+              "source_api": "graph/query/overview"
+            },
+            {
+              "type": "trace_candidate_error_count",
+              "value": 5,
+              "level": "high",
+              "source_api": "graph/query/overview"
+            },
+            {
+              "type": "trace_candidate_marked_slow",
+              "value": true,
+              "level": "medium",
+              "source_api": "graph/query/overview"
+            }
+          ]
+        },
+        {
+          "trace_id_numeric": "1715190283",
+          "trace_guid": "1e8658fdcc28e866",
+          "action_guid": "1e8658fdcc28e866",
+          "query_timestamp": "1774960656375",
+          "timestamp": 1774960656375,
+          "duration_ms": 346.346,
+          "error_count": 5,
+          "status": true,
+          "suspect_signals": [
+            {
+              "type": "trace_candidate_error_count",
+              "value": 5,
+              "level": "high",
+              "source_api": "graph/query/overview"
+            }
+          ]
+        },
+        {
+          "trace_id_numeric": "1715190319",
+          "trace_guid": "ea95d4ff59973ed5",
+          "action_guid": "ea95d4ff59973ed5",
+          "query_timestamp": "1774960656364",
+          "timestamp": 1774960656364,
+          "duration_ms": 300.303,
+          "error_count": 5,
+          "status": true,
+          "suspect_signals": [
+            {
+              "type": "trace_candidate_error_count",
+              "value": 5,
+              "level": "high",
+              "source_api": "graph/query/overview"
+            }
+          ]
+        },
+        {
+          "trace_id_numeric": "1715190280",
+          "trace_guid": "d60cd9dd70d95340",
+          "action_guid": "d60cd9dd70d95340",
+          "query_timestamp": "1774960656362",
+          "timestamp": 1774960656362,
+          "duration_ms": 173.929,
+          "error_count": 5,
+          "status": true,
+          "suspect_signals": [
+            {
+              "type": "trace_candidate_error_count",
+              "value": 5,
+              "level": "high",
+              "source_api": "graph/query/overview"
+            }
+          ]
+        }
+      ],
+      "related_sqls": [],
+      "related_dependencies": [
+        "NoSQL",
+        "External",
+        "Database"
+      ],
+      "recommended_next_pages": [
+        "action_overview",
+        "trace_detail"
+      ]
+    },
+    "evidence": [
+      {
+        "id": "action_fact_action_list",
+        "source_api": "webaction/list/actionList",
+        "source_path": "/server-api/webaction/list/actionList",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "webaction/list/actionList",
+          "request_params": {
+            "bizSystemId": 1065,
+            "actionId": 13332
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "actionId": 13332
+        },
+        "response_excerpt": {
+          "actionId": 13332,
+          "actionName": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+          "applicationId": 1645,
+          "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+          "alias": null,
+          "actionAlias": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+          "health": -1,
+          "response": 6375,
+          "throught": 0.0,
+          "maxThrought": 0.0,
+          "error": 0.28,
+          "timePercentage": 7.18,
+          "errorCount": 62,
+          "slowCount": 7060,
+          "totalResponse": 141583664,
+          "healthOrder": 0,
+          "count": 22208,
+          "actionType": "TX",
+          "favorite": false,
+          "healthInfo": null,
+          "pureAlias": null,
+          "response_time_ms": 6375.0,
+          "total_response_time_ms": 141583664.0,
+          "throughput": 0.0,
+          "error_count": 62,
+          "slow_count": 7060
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "action_fact_overview",
+        "source_api": "webaction/overview",
+        "source_path": "/server-api/webaction/overview",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "webaction/overview",
+          "request_params": {
+            "bizSystemId": 1065,
+            "actionId": 13332
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "actionId": 13332
+        },
+        "response_excerpt": {
+          "actionName": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+          "actionAlias": "SpringController/${url.attachment}/${url.attachment.upload} (POST)",
+          "metricNames": [],
+          "responseTime": 6375.345,
+          "totalResponseTime": 141583664,
+          "errorRate": 0.27917868,
+          "errorCount": 62,
+          "tps": 0.002519970992580056,
+          "maxTps": 0.0,
+          "instanceCount": 3,
+          "components": {
+            "NoSQL": [
+              {
+                "componentType": "NoSQL",
+                "componentSubtype": "Redis",
+                "count": 289221,
+                "consumerCount": 0,
+                "producerCount": 0,
+                "topiceSize": 0,
+                "componentNameSize": 8,
+                "respTime": 0.26844522,
+                "consumerAvgTime": 0.0,
+                "producerAvgTime": 0.0
+              }
+            ],
+            "External": [
+              {
+                "componentType": "External",
+                "componentSubtype": "",
+                "count": 5838,
+                "consumerCount": 0,
+                "producerCount": 0,
+                "topiceSize": 0,
+                "componentNameSize": 2,
+                "respTime": 2164.9492,
+                "consumerAvgTime": 0.0,
+                "producerAvgTime": 0.0
+              }
+            ],
+            "Database": [
+              {
+                "componentType": "Database",
+                "componentSubtype": "",
+                "count": 362700,
+                "consumerCount": 0,
+                "producerCount": 0,
+                "topiceSize": 0,
+                "componentNameSize": 1,
+                "respTime": 0.6726082,
+                "consumerAvgTime": 0.0,
+                "producerAvgTime": 0.0
+              }
+            ]
+          },
+          "affectUserCount": 0,
+          "technology": "Apache Tomcat",
+          "language": "Java",
+          "txCount": 0,
+          "bizSystemCount": 0,
+          "applicationCount": 0,
+          "actionCalls": 22208
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      },
+      {
+        "id": "action_fact_trace_candidates",
+        "source_api": "graph/query/overview",
+        "source_path": "/server-api/graph/query/overview?trace_current_overview",
+        "source_method": "POST",
+        "request_signature": {
+          "source_api": "graph/query/overview",
+          "request_params": {
+            "bizSystemId": 1065,
+            "actionId": 13332
+          }
+        },
+        "request_params": {
+          "bizSystemId": 1065,
+          "actionId": 13332
+        },
+        "response_excerpt": {
+          "trace_candidates": [
+            {
+              "trace_id_numeric": "1715659568",
+              "trace_guid": "e9e8ae17967e908c",
+              "action_guid": "e9e8ae17967e908c",
+              "query_timestamp": "1774964801160",
+              "timestamp": 1774964801160,
+              "duration_ms": 3869.932,
+              "error_count": 5,
+              "status": true,
+              "suspect_signals": [
+                {
+                  "type": "trace_candidate_duration_high_ms",
+                  "value": 3869.932,
+                  "level": "medium",
+                  "source_api": "graph/query/overview"
+                },
+                {
+                  "type": "trace_candidate_error_count",
+                  "value": 5,
+                  "level": "high",
+                  "source_api": "graph/query/overview"
+                },
+                {
+                  "type": "trace_candidate_marked_slow",
+                  "value": true,
+                  "level": "medium",
+                  "source_api": "graph/query/overview"
+                }
+              ]
+            },
+            {
+              "trace_id_numeric": "1715190514",
+              "trace_guid": "5e03ff0cca9d3dde",
+              "action_guid": "5e03ff0cca9d3dde",
+              "query_timestamp": "1774960656383",
+              "timestamp": 1774960656383,
+              "duration_ms": 3282.138,
+              "error_count": 5,
+              "status": true,
+              "suspect_signals": [
+                {
+                  "type": "trace_candidate_duration_high_ms",
+                  "value": 3282.138,
+                  "level": "medium",
+                  "source_api": "graph/query/overview"
+                },
+                {
+                  "type": "trace_candidate_error_count",
+                  "value": 5,
+                  "level": "high",
+                  "source_api": "graph/query/overview"
+                },
+                {
+                  "type": "trace_candidate_marked_slow",
+                  "value": true,
+                  "level": "medium",
+                  "source_api": "graph/query/overview"
+                }
+              ]
+            },
+            {
+              "trace_id_numeric": "1715190283",
+              "trace_guid": "1e8658fdcc28e866",
+              "action_guid": "1e8658fdcc28e866",
+              "query_timestamp": "1774960656375",
+              "timestamp": 1774960656375,
+              "duration_ms": 346.346,
+              "error_count": 5,
+              "status": true,
+              "suspect_signals": [
+                {
+                  "type": "trace_candidate_error_count",
+                  "value": 5,
+                  "level": "high",
+                  "source_api": "graph/query/overview"
+                }
+              ]
+            }
+          ]
+        },
+        "extracted_fields": {},
+        "captured_at": null,
+        "confidence": 1.0
+      }
+    ]
+  },
+  "meta": {
+    "adapter_version": "0.1.0",
+    "source_mode": "live",
+    "source_count": 3,
+    "evidence_count": 3,
+    "missing_inputs": [],
+    "warnings": [],
+    "confidence_notes": [],
+    "build_stats": {}
+  }
+}

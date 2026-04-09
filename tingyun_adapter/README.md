@@ -35,6 +35,8 @@
   - `external_dependency_pack`
   - `slow_sql_pack`
   - `sql_fact_sheet`
+  - `trace_sql_pack`
+  - `trace_execution_pack`
   - `action_dependency_breakdown_pack`
 - 阶段 7
   - `business_labels_pack`
@@ -633,11 +635,65 @@ PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
 
 ### `trace_fact_sheet`
 
+给定 `traceId + queryTimestamp (+ actionGuid)` 时，当前会优先走 live trace 明细，并补抓 `action/trace/detail/exceptions`，不再只保留空的异常摘要。
+
 ```bash
 cd /Users/wangrundong/work/mywork/tingyun_adapter
 PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
   --build-pack trace_fact_sheet \
   --biz-system-id 1062 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `trace_sql_pack`
+
+给定 `traceId + queryTimestamp (+ actionGuid)`，抽取该 trace 中的 SQL 清单、每条 SQL 的耗时/次数/错误，以及对应的 `DATABASE span` 摘要。
+
+当前策略：
+
+- 优先从 `action/trace/detail` 的 SQL 聚合项中抽取
+- 如果 `detail` 没有可用 SQL，则回退到 `action/trace/callTree` 的 `DATABASE` 节点继续抽取
+- 输出会同时保留 `sqls` 和逐条 `database_spans`
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack trace_sql_pack \
+  --biz-system-id 1062 \
+  --trace-id 1716361816 \
+  --query-timestamp 1775523101840 \
+  --action-guid 'sample-action-guid' \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `trace_execution_pack`
+
+给定 `traceId + queryTimestamp (+ actionGuid)`，把 trace 深挖常用素材合并成一个 pack：
+
+- `detail_summary`
+- `call_tree_summary`
+- `call_tree_hotspots`
+- `snapshot_summary`
+- `exception_summary`
+- `exceptions`
+- `pool_summary`
+- `pool_infos`
+- `database_spans`
+
+适合用于“高响应时间 / 高错误请求”的深挖取证，而不是只看单一摘要。
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack trace_execution_pack \
+  --biz-system-id 1062 \
+  --trace-id 1716361816 \
+  --query-timestamp 1775523101840 \
+  --action-guid 'sample-action-guid' \
   --end-time '2026-04-03 12:20' \
   --period-minutes 30 \
   --source-mode sample
