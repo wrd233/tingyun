@@ -44,6 +44,7 @@
 - `nosql_component_pack`
 - `connection_pool_pack`
 - `instance_analysis_pack`
+- `deployment_inventory_pack`
 - `topology_dependency_pack`
 - `external_dependency_pack`
 - `slow_sql_pack`
@@ -115,6 +116,19 @@
 
 - 看连接池是否紧张
 - 看使用率、等待连接、连接时间
+
+### `deployment_inventory_pack`
+
+适合：
+
+- 先整理“服务名 / 技术栈 / 主机 IP”
+- 先整理“数据库或 Redis 类型 / 地址 / 被哪些应用使用”
+- 给上层报告或 ChatGPT 提供部署盘点基础素材
+
+注意：
+
+- 它是 APM 观测视角的 deployment inventory
+- 不是完整 CMDB，不保证静态硬件规格和精确 OS 版本
 
 ## 5. adapter 的边界
 

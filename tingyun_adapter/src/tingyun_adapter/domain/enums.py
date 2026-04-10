@@ -16,6 +16,7 @@ class PackType(str, Enum):
     NOSQL_COMPONENT = "nosql_component_pack"
     CONNECTION_POOL = "connection_pool_pack"
     INSTANCE_ANALYSIS = "instance_analysis_pack"
+    DEPLOYMENT_INVENTORY = "deployment_inventory_pack"
     TOPOLOGY_DEPENDENCY = "topology_dependency_pack"
     EXTERNAL_DEPENDENCY = "external_dependency_pack"
     SLOW_SQL = "slow_sql_pack"

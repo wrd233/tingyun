@@ -16,6 +16,7 @@ from tingyun_adapter.domain.models.common import (
 from tingyun_adapter.domain.models.entities import Action, Instance
 from tingyun_adapter.domain.models.packs import (
     ActionDependencyBreakdownPackPayload,
+    DeploymentInventoryPackPayload,
     ExternalDependencyPackPayload,
     InstanceAnalysisPackPayload,
     SlowSQLPackPayload,
@@ -43,6 +44,7 @@ from tingyun_adapter.usecases.component_builders import (
     _decoded_operation_rows,
     _extract_content_rows,
     _find_sample_pair,
+    _load_connection_list,
     _load_database_analysis,
     _load_database_impacted_actions,
     _load_database_list,
@@ -264,6 +266,288 @@ def build_instance_analysis_pack(
         warnings=warnings,
         source_mode=source_mode,
     )
+
+
+def build_deployment_inventory_pack(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str = "auto",
+    session: Optional[BuildSession] = None,
+) -> PackEnvelope:
+    session = session or BuildSession(context=context, source_mode=source_mode)
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "pack:deployment_inventory_pack", cache_key)
+    if cached is not None:
+        return cached
+
+    stats_snapshot = session.snapshot_counters()
+    warnings: list[WarningMessage] = []
+    evidence: list[Evidence] = []
+
+    overview = _load_business_overview(adapter, context, source_mode=source_mode)
+    application_rows = _cached_application_overview_rows(
+        adapter,
+        context,
+        source_mode=source_mode,
+        session=session,
+        overview=overview,
+    )
+    application_ids = _deployment_application_ids(overview, application_rows)
+    if not application_ids:
+        warnings.append(
+            WarningMessage(
+                code="deployment_inventory_applications_empty",
+                message="没有解析出业务系统下的应用清单。",
+                source_api="application/business/overview",
+            )
+        )
+
+    instance_rows_by_app: dict[int, list[dict[str, Any]]] = {}
+    all_instance_rows: list[dict[str, Any]] = []
+    for application_id in application_ids:
+        rows = _cached_instance_rows(
+            adapter,
+            context,
+            application_id=application_id,
+            source_mode=source_mode,
+            session=session,
+        )
+        instance_rows_by_app[application_id] = rows
+        all_instance_rows.extend(rows)
+
+    service_inventory, service_host_rows, application_name_map = _build_service_inventory(application_rows, instance_rows_by_app)
+    host_inventory = _build_host_inventory(service_host_rows)
+
+    connection_rows = _cached_connection_rows(adapter, context, source_mode=source_mode, session=session)
+    component_inventory, component_usage_rows = _build_component_inventory(
+        connection_rows,
+        application_name_map=application_name_map,
+        instance_rows_by_app=instance_rows_by_app,
+    )
+
+    if not service_inventory:
+        warnings.append(
+            WarningMessage(
+                code="deployment_inventory_service_empty",
+                message="没有整理出服务部署清单，可能缺少应用概览或实例列表。",
+                source_api="graph/query/overview",
+            )
+        )
+    if not component_inventory:
+        warnings.append(
+            WarningMessage(
+                code="deployment_inventory_components_empty",
+                message="没有整理出数据库/Redis 组件清单，可能缺少连接池注册数据。",
+                source_api="connection/list",
+            )
+        )
+
+    biz_system_name = overview.get("bizSystemName") or _biz_system_name_from_application_rows(application_rows) or f"biz_system_{context.biz_system_id}"
+    summary = {
+        "application_count": len(service_inventory),
+        "instance_count": len(all_instance_rows),
+        "host_count": len(host_inventory),
+        "service_host_row_count": len(service_host_rows),
+        "database_component_count": len([item for item in component_inventory if item.get("component_type") == "database"]),
+        "nosql_component_count": len([item for item in component_inventory if item.get("component_type") == "nosql"]),
+        "detected_technologies": _unique_strings([item.get("technology") for item in service_inventory]),
+        "detected_languages": _unique_strings([item.get("language") for item in service_inventory]),
+        "detected_component_subtypes": _unique_strings([item.get("component_subtype") for item in component_inventory]),
+        "service_inventory_coverage": {
+            "has_service_name": len([item for item in service_inventory if item.get("service_name")]),
+            "has_technology": len([item for item in service_inventory if item.get("technology")]),
+            "has_host_ip": len([item for item in service_host_rows if item.get("host_ip")]),
+        },
+        "component_inventory_coverage": {
+            "has_address": len([item for item in component_inventory if item.get("address")]),
+            "has_application_usage": len([item for item in component_inventory if item.get("used_by_applications")]),
+        },
+    }
+    diagnostics = {
+        "service_inventory_basis": ["graph/query/overview(application_overview)", "application/instance/select"],
+        "component_inventory_basis": ["connection/list"],
+        "supported_inventory_depth": [
+            "service_name",
+            "language",
+            "technology",
+            "application_to_instance_mapping",
+            "host_ip",
+            "host_name",
+            "database_or_redis_type",
+            "component_address",
+            "component_to_application_mapping",
+            "connection_framework",
+        ],
+        "known_gaps": [
+            "static_host_sizing_not_stable",
+            "precise_os_distribution_not_stable",
+            "infra_roles_without_agent_not_visible",
+        ],
+        "field_coverage": {
+            "service_name_and_technology_and_host_ip": any(
+                item.get("service_name") and (item.get("technology") or item.get("language")) and item.get("host_ip")
+                for item in service_host_rows
+            ),
+            "database_or_redis_and_address_and_used_by_applications": any(
+                item.get("component_subtype") and item.get("address") and item.get("used_by_applications")
+                for item in component_inventory
+            ),
+        },
+    }
+
+    evidence.extend(
+        [
+            _evidence(
+                evidence_id="deployment_business_overview",
+                source_api="application/business/overview",
+                source_path=f"/server-api/application/business/overview/{context.biz_system_id}",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "timeWindow": dataclass_to_dict(context.time_window)},
+                response_excerpt={
+                    "bizSystemName": overview.get("bizSystemName"),
+                    "applicationIds": overview.get("applicationIds"),
+                    "instanceIds": overview.get("instanceIds"),
+                    "hostCount": overview.get("hostCount"),
+                },
+            ),
+            _evidence(
+                evidence_id="deployment_application_overview",
+                source_api="graph/query/overview",
+                source_path="/server-api/graph/query/overview?application_overview",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "metric": "application_overview", "timeWindow": dataclass_to_dict(context.time_window)},
+                response_excerpt={"applications": application_rows[:10]},
+            ),
+            _evidence(
+                evidence_id="deployment_instance_select",
+                source_api="application/instance/select",
+                source_path="/server-api/application/instance/select",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id, "applicationIds": application_ids},
+                response_excerpt={"service_host_rows": service_host_rows[:10]},
+            ),
+            _evidence(
+                evidence_id="deployment_connection_list",
+                source_api="connection/list",
+                source_path="/server-api/connection/list",
+                source_method="POST",
+                request_params={"bizSystemId": context.biz_system_id},
+                response_excerpt={"component_inventory": component_inventory[:10]},
+            ),
+        ]
+    )
+
+    payload = DeploymentInventoryPackPayload(
+        biz_system={"id": context.biz_system_id, "name": biz_system_name},
+        summary=summary,
+        service_inventory=service_inventory,
+        service_host_rows=service_host_rows,
+        host_inventory=host_inventory,
+        component_inventory=component_inventory,
+        component_usage_rows=component_usage_rows,
+        diagnostics=diagnostics,
+        suspect_signals=_deployment_inventory_signals(
+            overview=overview,
+            service_inventory=service_inventory,
+            service_host_rows=service_host_rows,
+            component_inventory=component_inventory,
+        ),
+        evidence=[dataclass_to_dict(item) for item in evidence],
+    )
+    biz_ref = {"kind": "biz_system", "biz_system_id": context.biz_system_id}
+    page_links = [
+        make_console_link(
+            adapter,
+            context,
+            page_type="business_topology",
+            label="业务系统拓扑页",
+            why_relevant="用于复核应用、主机和数据库/Redis 依赖关系。",
+            suggested_report_section="1.1 部署盘点",
+            navigation_path=["业务系统", "拓扑"],
+            suggested_filters={"bizSystemId": context.biz_system_id},
+            target_ref=biz_ref,
+        ),
+        make_console_link(
+            adapter,
+            context,
+            page_type="connection_pool_overview",
+            label="连接池概览页",
+            why_relevant="用于复核数据库/Redis 地址、连接框架和应用使用关系。",
+            suggested_report_section="1.1 部署盘点",
+            navigation_path=["业务系统", "连接池"],
+            suggested_filters={"bizSystemId": context.biz_system_id},
+            target_ref=biz_ref,
+        ),
+    ]
+    screenshot_hints = [
+        make_screenshot_hint(
+            title="部署盘点截图建议",
+            page_type="business_topology",
+            url=page_links[0]["url"],
+            recommended_capture=["应用与组件拓扑", "关键应用节点", "数据库/Redis 依赖节点"],
+            recommended_annotations=["标出服务节点", "标出数据库或 Redis 地址", "标出主机数量和关键依赖"],
+            usage_in_report="可用于部署结构和监控覆盖范围说明。",
+            suggested_report_section="1.1 部署盘点",
+            target_ref=biz_ref,
+            priority="medium",
+        )
+    ]
+    metric_semantics = [
+        make_metric_semantic(
+            metric_name="application_count",
+            subject_type="biz_system",
+            subject_key=f"biz_system:{context.biz_system_id}",
+            aggregation="count",
+            unit="count",
+            time_window=time_window_text(context),
+            sample_scope="deployment inventory services",
+        ),
+        make_metric_semantic(
+            metric_name="host_count",
+            subject_type="biz_system",
+            subject_key=f"biz_system:{context.biz_system_id}",
+            aggregation="count",
+            unit="count",
+            time_window=time_window_text(context),
+            sample_scope="deployment inventory monitored hosts",
+        ),
+    ]
+    payload = apply_report_support(
+        payload,
+        page_links=page_links,
+        screenshot_hints=screenshot_hints,
+        metric_semantics=metric_semantics,
+        coverage_boundary=default_coverage_boundary(adapter),
+        evidence_linkage={
+            "related_time_windows": [dataclass_to_dict(context.time_window)],
+            "related_actions": [],
+            "related_traces": [],
+            "related_sqls": [],
+            "related_dependencies": component_inventory[:10],
+            "recommended_next_pages": page_links,
+        },
+    )
+    envelope = _pack(
+        PackType.DEPLOYMENT_INVENTORY.value,
+        context,
+        payload,
+        evidence=evidence,
+        warnings=warnings,
+        source_mode=source_mode,
+        build_stats=session.build_stats(
+            stats_snapshot,
+            collection_count=len(service_inventory) + len(component_inventory),
+            ranking_count=len(service_inventory) + len(component_inventory),
+            deep_dive_count=0,
+            extra={
+                "service_count": len(service_inventory),
+                "host_count": len(host_inventory),
+                "component_count": len(component_inventory),
+            },
+        ),
+    )
+    return _session_store(session, "pack:deployment_inventory_pack", cache_key, envelope)
 
 
 def _cached_database_component_rows(
@@ -1556,6 +1840,59 @@ def _load_business_overview(adapter: Any, context: AnalysisContext, *, source_mo
     ) or {}
 
 
+def _load_application_overview(adapter: Any, context: AnalysisContext, *, source_mode: str) -> Any:
+    if _should_use_sample(adapter, source_mode):
+        _req, resp, _warning = _find_sample_pair(
+            adapter,
+            "graph/query/overview",
+            matcher=lambda body, _resp: body.get("metric") == "application_overview",
+        )
+        return resp
+    return adapter.graph.query_overview(
+        metric="application_overview",
+        payload={
+            "endTime": context.time_window.end_time,
+            "labels": {"health": [], "problems": [], "technology": []},
+            "lang": context.lang,
+            "metric": "application_overview",
+            "timePeriod": context.time_window.period_minutes,
+            "zoomTime": True,
+        },
+    )
+
+
+def _cached_application_overview_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str,
+    session: Optional[BuildSession],
+    overview: Optional[dict[str, Any]] = None,
+) -> list[dict[str, Any]]:
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "raw:application_overview_rows", cache_key)
+    if cached is not None:
+        return cached
+    overview = overview or {}
+    application_ids = {str(item) for item in (overview.get("applicationIds") or []) if item is not None}
+    rows: list[dict[str, Any]] = []
+    for row in _extract_content_rows(_load_application_overview(adapter, context, source_mode=source_mode)):
+        normalized = normalize_metric_fields(dict(row))
+        system_id = normalized.get("systemId")
+        application_id = normalized.get("applicationId")
+        if str(system_id) == str(context.biz_system_id) or (application_ids and str(application_id) in application_ids):
+            rows.append(normalized)
+    rows.sort(
+        key=lambda row: (
+            _numeric(row.get("totalCount")) or 0.0,
+            _numeric(row.get("throughput")) or 0.0,
+            _numeric(row.get("responseP50")) or 0.0,
+        ),
+        reverse=True,
+    )
+    return _session_store(session, "raw:application_overview_rows", cache_key, rows)
+
+
 def _resolve_application_id(
     adapter: Any,
     context: AnalysisContext,
@@ -1607,6 +1944,37 @@ def _load_instance_select(adapter: Any, context: AnalysisContext, *, source_mode
         end_time=context.time_window.end_time,
         time_period=context.time_window.period_minutes,
     )
+
+
+def _cached_instance_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    application_id: int,
+    source_mode: str,
+    session: Optional[BuildSession],
+) -> list[dict[str, Any]]:
+    cache_key = (context_signature(context), application_id, source_mode)
+    cached = _session_lookup(session, "raw:instance_rows", cache_key)
+    if cached is not None:
+        return cached
+    rows = [normalize_metric_fields(dict(row)) for row in _extract_content_rows(_load_instance_select(adapter, context, source_mode=source_mode, application_id=application_id))]
+    return _session_store(session, "raw:instance_rows", cache_key, rows)
+
+
+def _cached_connection_rows(
+    adapter: Any,
+    context: AnalysisContext,
+    *,
+    source_mode: str,
+    session: Optional[BuildSession],
+) -> list[dict[str, Any]]:
+    cache_key = (context_signature(context), source_mode)
+    cached = _session_lookup(session, "raw:connection_rows", cache_key)
+    if cached is not None:
+        return cached
+    rows = [normalize_metric_fields(dict(row)) for row in _extract_content_rows(_load_connection_list(adapter, context, source_mode=source_mode)[0])]
+    return _session_store(session, "raw:connection_rows", cache_key, rows)
 
 
 def _load_instance_cpu_chart(
@@ -1676,8 +2044,9 @@ def _instance_dict_from_row(row: dict[str, Any], application_id: int) -> dict[st
         id=int(row.get("id")),
         application_id=application_id,
         name=name,
-        host_ip=parsed.get("host_ip"),
-        host_name=parsed.get("host_name"),
+        host_ip=str(row.get("hostIp") or row.get("instanceIp") or parsed.get("host_ip") or "") or None,
+        host_name=str(row.get("hostName") or parsed.get("host_name") or "") or None,
+        os=str(row.get("os") or "") or None,
     )
     return dataclass_to_dict(instance)
 
@@ -1703,6 +2072,275 @@ def _instance_analysis_signals(summary: dict[str, Any], cpu_chart: dict[str, Any
         signals.append(_signal("instance_count", summary.get("instance_count"), level="info", source="application/instance/select"))
     if not jvm_chart.get("point_count"):
         signals.append(_signal("instance_jvm_chart_empty", True, level="medium", source="instance/jvm/chart"))
+    return signals
+
+
+def _deployment_application_ids(overview: dict[str, Any], application_rows: list[dict[str, Any]]) -> list[int]:
+    values: list[int] = []
+    for item in overview.get("applicationIds") or []:
+        try:
+            values.append(int(item))
+        except (TypeError, ValueError):
+            continue
+    if values:
+        return sorted(dict.fromkeys(values))
+    for row in application_rows:
+        try:
+            values.append(int(row.get("applicationId")))
+        except (TypeError, ValueError):
+            continue
+    return sorted(dict.fromkeys(values))
+
+
+def _build_service_inventory(
+    application_rows: list[dict[str, Any]],
+    instance_rows_by_app: dict[int, list[dict[str, Any]]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], dict[int, str]]:
+    app_rows_by_id: dict[int, dict[str, Any]] = {}
+    for row in application_rows:
+        try:
+            app_rows_by_id[int(row.get("applicationId"))] = row
+        except (TypeError, ValueError):
+            continue
+
+    application_name_map: dict[int, str] = {}
+    service_inventory: list[dict[str, Any]] = []
+    service_host_rows: list[dict[str, Any]] = []
+
+    for application_id in sorted(set(app_rows_by_id) | set(instance_rows_by_app)):
+        app_row = app_rows_by_id.get(application_id, {})
+        instances = list(instance_rows_by_app.get(application_id) or [])
+        service_name = str(app_row.get("applicationName") or f"application:{application_id}")
+        application_name_map[application_id] = service_name
+        language = app_row.get("language")
+        technology = app_row.get("tech")
+        process_names = _unique_strings([row.get("processName") for row in instances])
+        host_ips = _unique_strings([row.get("hostIp") or row.get("instanceIp") for row in instances])
+        host_names = _unique_strings([row.get("hostName") for row in instances])
+        os_types = _unique_strings([row.get("os") for row in instances])
+
+        for row in instances:
+            parsed = _parse_instance_name(row.get("name"))
+            service_host_rows.append(
+                {
+                    "application_id": application_id,
+                    "service_name": service_name,
+                    "language": language,
+                    "technology": technology,
+                    "instance_id": row.get("id"),
+                    "instance_name": row.get("name"),
+                    "host_ip": row.get("hostIp") or row.get("instanceIp") or parsed.get("host_ip"),
+                    "host_name": row.get("hostName") or parsed.get("host_name"),
+                    "process_name": row.get("processName"),
+                    "os": row.get("os"),
+                }
+            )
+
+        service_inventory.append(
+            {
+                "application_id": application_id,
+                "service_name": service_name,
+                "language": language,
+                "technology": technology,
+                "tech_stack": " / ".join([item for item in (language, technology) if item]),
+                "instance_count": len(instances),
+                "host_count": len(host_ips or host_names),
+                "host_ips": host_ips,
+                "host_names": host_names,
+                "instance_ids": [row.get("id") for row in instances if row.get("id") is not None],
+                "process_names": process_names,
+                "os_types": os_types,
+                "request_count": app_row.get("totalCount"),
+                "throughput": app_row.get("throughput"),
+                "response_p50_ms": app_row.get("responseP50"),
+            }
+        )
+
+    service_inventory.sort(
+        key=lambda item: (
+            _numeric(item.get("request_count")) or 0.0,
+            _numeric(item.get("throughput")) or 0.0,
+            item.get("service_name") or "",
+        ),
+        reverse=True,
+    )
+    service_host_rows.sort(key=lambda item: (item.get("service_name") or "", item.get("host_ip") or "", str(item.get("instance_id") or "")))
+    return service_inventory, service_host_rows, application_name_map
+
+
+def _build_host_inventory(service_host_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    host_map: dict[str, dict[str, Any]] = {}
+    for row in service_host_rows:
+        host_key = str(row.get("host_ip") or row.get("host_name") or row.get("instance_name") or "")
+        if not host_key:
+            continue
+        host = host_map.setdefault(
+            host_key,
+            {
+                "host_ip": row.get("host_ip"),
+                "host_name": row.get("host_name"),
+                "os_types": [],
+                "services": [],
+                "application_ids": [],
+                "instance_ids": [],
+                "process_names": [],
+            },
+        )
+        host["os_types"] = _merge_unique_values(host.get("os_types"), [row.get("os")])
+        host["services"] = _merge_unique_values(host.get("services"), [row.get("service_name")])
+        host["application_ids"] = _merge_unique_values(host.get("application_ids"), [row.get("application_id")])
+        host["instance_ids"] = _merge_unique_values(host.get("instance_ids"), [row.get("instance_id")])
+        host["process_names"] = _merge_unique_values(host.get("process_names"), [row.get("process_name")])
+    return sorted(host_map.values(), key=lambda item: (item.get("host_ip") or "", item.get("host_name") or ""))
+
+
+def _build_component_inventory(
+    connection_rows: list[dict[str, Any]],
+    *,
+    application_name_map: dict[int, str],
+    instance_rows_by_app: dict[int, list[dict[str, Any]]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    instance_lookup: dict[tuple[int, int], dict[str, Any]] = {}
+    for application_id, rows in instance_rows_by_app.items():
+        for row in rows:
+            try:
+                instance_lookup[(application_id, int(row.get("id")))] = row
+            except (TypeError, ValueError):
+                continue
+
+    component_map: dict[tuple[str, str, str], dict[str, Any]] = {}
+    usage_rows: list[dict[str, Any]] = []
+    for row in connection_rows:
+        component_subtype = str(row.get("databaseType") or "")
+        address = str(row.get("addressSplit") or row.get("address") or "")
+        if not component_subtype or not address:
+            continue
+        component_type = _inventory_component_type(component_subtype)
+        database_name = str(row.get("databaseName") or "") or None
+        endpoint = _component_endpoint(address, database_name)
+        framework = row.get("framework")
+        application_id = int(row.get("applicationId")) if row.get("applicationId") not in (None, "") else None
+        instance_id = int(row.get("instanceId")) if row.get("instanceId") not in (None, "") else None
+        application_name = application_name_map.get(application_id or -1) or (f"application:{application_id}" if application_id is not None else None)
+        instance_row = instance_lookup.get((application_id or -1, instance_id or -1), {})
+
+        usage_row = {
+            "component_type": component_type,
+            "component_subtype": component_subtype,
+            "component_endpoint": endpoint,
+            "address": address,
+            "database_name": database_name,
+            "application_id": application_id,
+            "application_name": application_name,
+            "instance_id": instance_id,
+            "instance_name": instance_row.get("name"),
+            "host_ip": instance_row.get("hostIp") or instance_row.get("instanceIp"),
+            "host_name": instance_row.get("hostName"),
+            "framework": framework,
+            "metric_category": row.get("metricCategory"),
+        }
+        usage_rows.append(usage_row)
+
+        key = (component_type, component_subtype, endpoint)
+        component = component_map.setdefault(
+            key,
+            {
+                "component_type": component_type,
+                "component_subtype": component_subtype,
+                "address": address,
+                "database_name": database_name,
+                "component_endpoint": endpoint,
+                "frameworks": [],
+                "used_by_applications": [],
+                "used_by_application_ids": [],
+                "used_by_instances": [],
+                "used_by_instance_ids": [],
+                "used_by_hosts": [],
+                "metric_categories": [],
+            },
+        )
+        component["frameworks"] = _merge_unique_values(component.get("frameworks"), [framework])
+        component["used_by_applications"] = _merge_unique_values(component.get("used_by_applications"), [application_name])
+        component["used_by_application_ids"] = _merge_unique_values(component.get("used_by_application_ids"), [application_id])
+        component["used_by_instances"] = _merge_unique_values(component.get("used_by_instances"), [instance_row.get("name")])
+        component["used_by_instance_ids"] = _merge_unique_values(component.get("used_by_instance_ids"), [instance_id])
+        component["used_by_hosts"] = _merge_unique_values(component.get("used_by_hosts"), [instance_row.get("hostIp") or instance_row.get("instanceIp")])
+        component["metric_categories"] = _merge_unique_values(component.get("metric_categories"), [row.get("metricCategory")])
+        component["usage_application_count"] = len(component["used_by_application_ids"])
+        component["usage_instance_count"] = len(component["used_by_instance_ids"])
+
+    component_inventory = sorted(component_map.values(), key=lambda item: (item.get("component_type") or "", item.get("component_endpoint") or ""))
+    usage_rows.sort(key=lambda item: (item.get("component_type") or "", item.get("component_endpoint") or "", item.get("application_name") or ""))
+    return component_inventory, usage_rows
+
+
+def _inventory_component_type(component_subtype: str) -> str:
+    lowered = component_subtype.strip().lower()
+    if lowered in {"redis", "mongodb", "memcached", "cassandra", "hbase", "elasticsearch"}:
+        return "nosql"
+    return "database"
+
+
+def _component_endpoint(address: str, database_name: Optional[str]) -> str:
+    if database_name and f"/{database_name}" not in address:
+        return f"{address}/{database_name}"
+    return address
+
+
+def _biz_system_name_from_application_rows(application_rows: list[dict[str, Any]]) -> Optional[str]:
+    if not application_rows:
+        return None
+    system_id = application_rows[0].get("systemId")
+    return f"biz_system_{system_id}" if system_id is not None else None
+
+
+def _merge_unique_values(existing: list[Any], additions: list[Any]) -> list[Any]:
+    merged = list(existing or [])
+    seen = {repr(item) for item in merged}
+    for item in additions:
+        if item in (None, "", []):
+            continue
+        marker = repr(item)
+        if marker in seen:
+            continue
+        seen.add(marker)
+        merged.append(item)
+    return merged
+
+
+def _unique_strings(items: list[Any]) -> list[str]:
+    values: list[str] = []
+    seen: set[str] = set()
+    for item in items:
+        if item in (None, ""):
+            continue
+        value = str(item)
+        if value in seen:
+            continue
+        seen.add(value)
+        values.append(value)
+    return values
+
+
+def _deployment_inventory_signals(
+    *,
+    overview: dict[str, Any],
+    service_inventory: list[dict[str, Any]],
+    service_host_rows: list[dict[str, Any]],
+    component_inventory: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    signals: list[dict[str, Any]] = []
+    host_count = overview.get("hostCount")
+    if host_count is not None:
+        signals.append(_signal("monitored_host_count", host_count, level="info", source="application/business/overview"))
+    if any(not item.get("host_ip") for item in service_host_rows):
+        signals.append(_signal("service_host_ip_partial_missing", True, level="medium", source="application/instance/select"))
+    if not component_inventory:
+        signals.append(_signal("database_or_redis_inventory_missing", True, level="high", source="connection/list"))
+    signals.append(_signal("static_host_sizing_unavailable", True, level="info", source="deployment_inventory_pack"))
+    signals.append(_signal("precise_os_distribution_unavailable", True, level="info", source="deployment_inventory_pack"))
+    if service_inventory:
+        signals.append(_signal("service_inventory_count", len(service_inventory), level="info", source="graph/query/overview"))
     return signals
 
 

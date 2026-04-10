@@ -30,6 +30,7 @@ PACK_TYPES = {
     "nosql_component_pack",
     "connection_pool_pack",
     "instance_analysis_pack",
+    "deployment_inventory_pack",
     "topology_dependency_pack",
     "external_dependency_pack",
     "slow_sql_pack",
@@ -380,6 +381,8 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                     application_id=request.application_id,
                     instance_id=request.instance_id,
                 )
+            elif pack_type == "deployment_inventory_pack":
+                envelope = adapter.build_deployment_inventory_pack(context, source_mode=request.source_mode)
             elif pack_type == "topology_dependency_pack":
                 envelope = adapter.build_topology_dependency_pack(context, source_mode=request.source_mode)
             elif pack_type == "external_dependency_pack":

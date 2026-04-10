@@ -39,6 +39,7 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
             "nosql_component_pack",
             "connection_pool_pack",
             "instance_analysis_pack",
+            "deployment_inventory_pack",
             "topology_dependency_pack",
             "external_dependency_pack",
             "slow_sql_pack",
@@ -214,6 +215,8 @@ def main() -> int:
                 application_id=args.application_id,
                 instance_id=args.instance_id,
             )
+        elif args.build_pack == "deployment_inventory_pack":
+            envelope = adapter.build_deployment_inventory_pack(context, source_mode=args.source_mode)
         elif args.build_pack == "topology_dependency_pack":
             envelope = adapter.build_topology_dependency_pack(context, source_mode=args.source_mode)
         elif args.build_pack == "external_dependency_pack":

@@ -16,6 +16,7 @@ from tingyun_adapter.usecases.component_builders import (
 )
 from tingyun_adapter.usecases.extended_builders import (
     build_action_dependency_breakdown_pack,
+    build_deployment_inventory_pack,
     build_external_dependency_pack,
     build_instance_analysis_pack,
     build_slow_sql_pack,
@@ -29,6 +30,7 @@ __all__ = [
     "build_action_fact_sheet",
     "build_connection_pool_pack",
     "build_database_component_pack",
+    "build_deployment_inventory_pack",
     "build_diagnostic_candidate_pack",
     "build_external_dependency_pack",
     "build_instance_analysis_pack",

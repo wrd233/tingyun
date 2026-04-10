@@ -39,6 +39,7 @@ class ServiceApiTests(unittest.TestCase):
             self.assertIn("knowledge_context_pack", meta["pack_types"])
             self.assertIn("trace_sql_pack", meta["pack_types"])
             self.assertIn("trace_execution_pack", meta["pack_types"])
+            self.assertIn("deployment_inventory_pack", meta["pack_types"])
 
 
 if __name__ == "__main__":

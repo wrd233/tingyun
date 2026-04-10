@@ -233,6 +233,27 @@ class InstanceAnalysisPackPayload:
 
 
 @dataclass
+class DeploymentInventoryPackPayload:
+    biz_system: dict[str, Any]
+    summary: dict[str, Any] = field(default_factory=dict)
+    service_inventory: list[dict[str, Any]] = field(default_factory=list)
+    service_host_rows: list[dict[str, Any]] = field(default_factory=list)
+    host_inventory: list[dict[str, Any]] = field(default_factory=list)
+    component_inventory: list[dict[str, Any]] = field(default_factory=list)
+    component_usage_rows: list[dict[str, Any]] = field(default_factory=list)
+    diagnostics: dict[str, Any] = field(default_factory=dict)
+    suspect_signals: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
 class TopologyDependencyPackPayload:
     biz_system: dict[str, Any]
     business_graph: dict[str, Any] = field(default_factory=dict)

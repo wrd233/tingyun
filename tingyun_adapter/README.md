@@ -31,6 +31,7 @@
   - 基础访问节流
 - 阶段 6
   - `instance_analysis_pack`
+  - `deployment_inventory_pack`
   - `topology_dependency_pack`
   - `external_dependency_pack`
   - `slow_sql_pack`
@@ -721,6 +722,31 @@ PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
   --build-pack instance_analysis_pack \
   --biz-system-id 1059 \
   --application-id 1648 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+### `deployment_inventory_pack`
+
+用于把“服务名 + 技术栈 + 主机 IP”与“数据库/Redis 类型 + 地址 + 被哪些应用使用”归并成单一部署盘点包。
+
+当前适合回答：
+
+- 当前业务系统监控覆盖了多少个应用、实例、宿主机
+- 每个服务跑在哪些主机/IP 上，技术栈是什么
+- 当前识别到了哪些数据库 / Redis 组件，它们的地址是什么，被哪些应用使用
+
+当前边界：
+
+- 不是 CMDB，不保证列出所有未接入 APM 的基础设施角色
+- 不稳定提供“几核 / 多大内存 / 多大磁盘 / ARM/x86 / 精确 OS 发行版”这类静态资产规格
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter
+PYTHONPATH=./src python3 -m tingyun_adapter.invocation.cli \
+  --build-pack deployment_inventory_pack \
+  --biz-system-id 1065 \
   --end-time '2026-04-03 12:20' \
   --period-minutes 30 \
   --source-mode sample

@@ -381,6 +381,153 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertEqual(payload["summary"]["instance_count"], 3)
         self.assertGreater(payload["cpu_chart"]["point_count"], 0)
 
+    def test_build_deployment_inventory_pack_merges_service_and_component_inventory(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
+        orig_business_overview = self.adapter.application.business_overview
+        orig_query_overview = self.adapter.graph.query_overview
+        orig_list_instances = self.adapter.instance.list_instances
+        orig_list_pools = self.adapter.connection.list_pools
+        try:
+            self.adapter.application.business_overview = lambda **_: {
+                "data": {
+                    "bizSystemId": 1065,
+                    "bizSystemName": "集团法务",
+                    "applicationIds": [1644, 1645],
+                    "instanceIds": [2745, 2746, 2747],
+                    "hostCount": 2,
+                }
+            }
+            self.adapter.graph.query_overview = lambda **_: {
+                "data": [
+                    {
+                        "systemId": 1065,
+                        "applicationId": 1644,
+                        "applicationName": "com.nbport.zgb.manage.ManageWebApplication",
+                        "language": "Java",
+                        "tech": "Undertow",
+                        "totalCount": 1000,
+                        "throughput": 2.4,
+                        "responseP50": 12.3,
+                    },
+                    {
+                        "systemId": 1065,
+                        "applicationId": 1645,
+                        "applicationName": "com.nbport.zgb.manage.ManageServiceApplication",
+                        "language": "Java",
+                        "tech": "Netty",
+                        "totalCount": 800,
+                        "throughput": 1.2,
+                        "responseP50": 8.1,
+                    },
+                ]
+            }
+
+            def _instances(**kwargs):
+                app_id = kwargs["application_id"]
+                if app_id == 1644:
+                    return {
+                        "data": [
+                            {
+                                "id": 2745,
+                                "name": "app1:8080(10.190.71.31)",
+                                "hostIp": "10.190.71.31",
+                                "hostName": "app1",
+                                "instanceIp": "10.190.71.31",
+                                "processName": "java: ManageWebApplication",
+                                "os": "linux",
+                            }
+                        ]
+                    }
+                return {
+                    "data": [
+                        {
+                            "id": 2746,
+                            "name": "app2:8080(10.190.71.32)",
+                            "hostIp": "10.190.71.32",
+                            "hostName": "app2",
+                            "instanceIp": "10.190.71.32",
+                            "processName": "java: ManageServiceApplication",
+                            "os": "linux",
+                        },
+                        {
+                            "id": 2747,
+                            "name": "app3:8080(10.190.71.33)",
+                            "hostIp": "10.190.71.33",
+                            "hostName": "app3",
+                            "instanceIp": "10.190.71.33",
+                            "processName": "java: ManageServiceApplication",
+                            "os": "linux",
+                        },
+                    ]
+                }
+
+            self.adapter.instance.list_instances = _instances
+            self.adapter.connection.list_pools = lambda **_: {
+                "data": {
+                    "content": [
+                        {
+                            "addressSplit": "10.190.71.39:54321",
+                            "databaseName": "legal",
+                            "databaseType": "Kingbase",
+                            "framework": "HikariCP",
+                            "metricCategory": "kingbase-pool",
+                            "applicationId": 1644,
+                            "instanceId": 2745,
+                        },
+                        {
+                            "addressSplit": "10.190.71.38:6379",
+                            "databaseName": "0",
+                            "databaseType": "Redis",
+                            "framework": "Redisson",
+                            "metricCategory": "redis-pool",
+                            "applicationId": 1644,
+                            "instanceId": 2745,
+                        },
+                        {
+                            "addressSplit": "10.190.71.38:6379",
+                            "databaseName": "0",
+                            "databaseType": "Redis",
+                            "framework": "Redisson",
+                            "metricCategory": "redis-pool",
+                            "applicationId": 1645,
+                            "instanceId": 2746,
+                        },
+                    ]
+                }
+            }
+
+            envelope = self.adapter.build_deployment_inventory_pack(context, source_mode="live")
+        finally:
+            self.adapter.application.business_overview = orig_business_overview
+            self.adapter.graph.query_overview = orig_query_overview
+            self.adapter.instance.list_instances = orig_list_instances
+            self.adapter.connection.list_pools = orig_list_pools
+
+        data = envelope.to_dict()
+        payload = data["payload"]
+        self.assertEqual(envelope.pack_type, "deployment_inventory_pack")
+        self.assertEqual(payload["biz_system"]["id"], 1065)
+        self.assertEqual(payload["summary"]["application_count"], 2)
+        self.assertEqual(payload["summary"]["host_count"], 3)
+        self.assertTrue(payload["diagnostics"]["field_coverage"]["service_name_and_technology_and_host_ip"])
+        self.assertTrue(payload["diagnostics"]["field_coverage"]["database_or_redis_and_address_and_used_by_applications"])
+        self.assertGreater(len(payload["service_inventory"]), 0)
+        self.assertGreater(len(payload["service_host_rows"]), 0)
+        self.assertGreater(len(payload["host_inventory"]), 0)
+        self.assertGreater(len(payload["component_inventory"]), 0)
+        self.assertGreater(len(payload["component_usage_rows"]), 0)
+        self.assertGreater(len(payload["page_links"]), 0)
+        self.assertGreater(len(payload["metric_semantics"]), 0)
+        self.assertIn("component_count", data["meta"]["build_stats"])
+        subtypes = {item.get("component_subtype") for item in payload["component_inventory"]}
+        self.assertIn("Kingbase", subtypes)
+        self.assertIn("Redis", subtypes)
+        redis_component = next(item for item in payload["component_inventory"] if item.get("component_subtype") == "Redis")
+        self.assertEqual(sorted(redis_component["used_by_applications"]), sorted(["com.nbport.zgb.manage.ManageWebApplication", "com.nbport.zgb.manage.ManageServiceApplication"]))
+        service = payload["service_inventory"][0]
+        self.assertIn("tech_stack", service)
+        self.assertGreater(len(service["host_ips"]), 0)
+
     def test_build_topology_dependency_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1059, end_time="2026-04-03 12:20", period_minutes=30)
         envelope = self.adapter.build_topology_dependency_pack(context, source_mode="sample")

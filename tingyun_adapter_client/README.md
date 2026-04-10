@@ -210,6 +210,30 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-report-pack \
 - client 现在会把 `queryTimestamp` 统一按字符串发给远端服务，避免 `trace_fact_sheet` 调用时出现 `422`
 - 如果要调用 `sql_fact_sheet`，现在也可以通过 `--op-name` 传入 SQL 操作名
 
+### 11. 构建 `deployment_inventory_pack`
+
+如果目标是先把“服务部署清单”和“数据库 / Redis 使用清单”整理出来，而不是先做性能诊断，可以直接调用这个 pack：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-pack \
+  --pack-type deployment_inventory_pack \
+  --biz-system-id 1065 \
+  --end-time '2026-04-03 12:20' \
+  --period-minutes 30 \
+  --source-mode sample
+```
+
+它会优先整理：
+
+- 服务名 / 技术栈 / 宿主机 IP
+- 数据库或 Redis 类型 / 地址 / 被哪些应用使用
+
+当前仍不等同于 CMDB：
+
+- 不能保证列全未接入 APM 的 Nginx / Nacos / DB 主备角色
+- 不稳定提供主机静态规格和精确 OS 发行版
+
 ## 适合下游怎么消费
 
 如果目标是正式巡检报告，而不是只看 JSON，建议优先关注 pack 里的这些字段：
@@ -238,6 +262,7 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-report-pack \
 3. 对重点对象继续调用：
    - `action_fact_sheet`
    - `trace_fact_sheet`
+   - `deployment_inventory_pack`
    - `database_component_pack`
    - `nosql_component_pack`
    - `connection_pool_pack`

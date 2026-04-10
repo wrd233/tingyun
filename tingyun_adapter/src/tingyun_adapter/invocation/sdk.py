@@ -53,6 +53,7 @@ from tingyun_adapter.usecases.knowledge_builders import (
 )
 from tingyun_adapter.usecases.extended_builders import (
     build_action_dependency_breakdown_pack,
+    build_deployment_inventory_pack,
     build_external_dependency_pack,
     build_instance_analysis_pack,
     build_slow_sql_pack,
@@ -221,6 +222,9 @@ class Adapter:
             application_id=application_id,
             instance_id=instance_id,
         )
+
+    def build_deployment_inventory_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
+        return build_deployment_inventory_pack(self, context, source_mode=source_mode)
 
     def build_topology_dependency_pack(self, context: AnalysisContext, *, source_mode: str = "auto"):
         return build_topology_dependency_pack(self, context, source_mode=source_mode)
