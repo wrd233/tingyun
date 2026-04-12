@@ -90,6 +90,7 @@
 - 系统 / 批次语义：[system-and-batch-semantics.md](/Users/wangrundong/work/mywork/docs/architecture/system-and-batch-semantics.md)
 - 输出术语统一：[report-output-terms.md](/Users/wangrundong/work/mywork/docs/reporting/report-output-terms.md)
 - APM 导出到主表流水线：[apm-export-tables-to-master-tables.md](/Users/wangrundong/work/mywork/docs/workflows/apm-export-tables-to-master-tables.md)
+- Deep-dive 阶段与主表衔接：[deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
 
 历史设计与阶段文档统一放在 [docs/decisions/](/Users/wangrundong/work/mywork/docs/decisions/)，不作为当前事实来源。
 

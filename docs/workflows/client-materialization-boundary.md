@@ -36,7 +36,8 @@ diagnostics/
 ├── 00_raw_exports/
 ├── 01_prepared_tables/
 ├── 02_master_tables/
-└── 03_evidence_indexes/
+├── 03_evidence_indexes/
+└── 04_deep_dive/
 ```
 
 如果需要把数据库 SQL / NoSQL 操作导出真正落盘到 `00_raw_exports/`，当前 client 已补了一个专门入口：
@@ -52,3 +53,9 @@ diagnostics/
 - `00_raw_exports/nosql/<component_key>/component_analysis_export_nosql__SQL_.xls`
 
 如果某次结果要转为长期示例，应从批次目录挑选稳定子集，再迁到 `samples/`。
+
+当前 `materialize-master-tables` 在生成 `02_master_tables/` 与 `03_evidence_indexes/` 的同时，也会初始化 `04_deep_dive/`：
+
+- 创建 `deep_dive_registry.csv`
+- 初始化 `request/`、`sql/`、`interface_cluster/`、`application/`、`dependency/`、`shared/`
+- 给主表补齐 `selected_for_deep_dive / deep_dive_count / deep_dive_status / latest_deep_dive_id / latest_deep_dive_at` 等摘要字段

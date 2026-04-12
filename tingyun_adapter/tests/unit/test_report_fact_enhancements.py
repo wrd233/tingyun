@@ -326,6 +326,10 @@ class ReportFactEnhancementTests(unittest.TestCase):
         self.assertIn("trace", deep_dive_types)
         self.assertIn("sql", deep_dive_types)
         self.assertIn("dependency", deep_dive_types)
+        sql_target = next(item for item in outcomes["deep_dive_targets"] if item["candidate_type"] == "sql")
+        self.assertEqual(sql_target["source_master_table"], "sql_master.csv")
+        self.assertEqual(sql_target["object_type"], "sql")
+        self.assertTrue(sql_target["selected_for_deep_dive"])
 
 
 if __name__ == "__main__":

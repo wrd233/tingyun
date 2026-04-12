@@ -12,6 +12,7 @@
 补充说明文档：
 
 - [adapter-internal-boundaries.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-internal-boundaries.md)
+- [deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
 - [system-and-batch-semantics.md](/Users/wangrundong/work/mywork/docs/architecture/system-and-batch-semantics.md)
 - [directory-responsibilities.md](/Users/wangrundong/work/mywork/docs/architecture/directory-responsibilities.md)
 

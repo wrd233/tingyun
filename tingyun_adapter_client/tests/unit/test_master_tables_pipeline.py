@@ -8,6 +8,7 @@ from pathlib import Path
 
 from tingyun_adapter_client.master_tables_pipeline import (
     build_export_registry,
+    initialize_deep_dive_bundle,
     materialize_master_tables,
     prepare_master_table_inputs,
 )
@@ -137,10 +138,38 @@ class MasterTablesPipelineTests(unittest.TestCase):
             content = request_master.read_text(encoding="utf-8")
             self.assertIn("followup_status", content)
             self.assertIn("待确认", content)
+            self.assertIn("selected_for_deep_dive", content)
+            self.assertIn("deep_dive_status", content)
             sql_evidence = diagnostics / "03_evidence_indexes" / "sql_evidence_index.csv"
             self.assertTrue(sql_evidence.exists())
             nosql_prepared = diagnostics / "01_prepared_tables" / "nosql_prepared.csv"
             self.assertIn("source_component_key", nosql_prepared.read_text(encoding="utf-8"))
+            deep_dive_registry = diagnostics / "04_deep_dive" / "deep_dive_registry.csv"
+            self.assertTrue(deep_dive_registry.exists())
+
+    def test_initialize_deep_dive_bundle_creates_registry_and_bundle_files(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            diagnostics = Path(tmpdir) / "diagnostics"
+            manifest = initialize_deep_dive_bundle(
+                diagnostics,
+                system_key="bizsystem_1065",
+                batch_key="2026-04-12-check",
+                object_id="db_main:abc123",
+                object_type="sql",
+                source_master_table="sql_master.csv",
+                deep_dive_id="sql-dd-001",
+                deep_dive_kind="sql_bottleneck",
+                deep_dive_scope="core_path",
+                pack_source="sql_fact_sheet;database_component_pack",
+                summary="首轮补 trace 与组件上下文。",
+            )
+            bundle_dir = Path(manifest["bundle_path"])
+            self.assertTrue((bundle_dir / "summary.json").exists())
+            self.assertTrue((bundle_dir / "evidence_index.csv").exists())
+            self.assertTrue((bundle_dir / "page_links.json").exists())
+            registry = (diagnostics / "04_deep_dive" / "deep_dive_registry.csv").read_text(encoding="utf-8")
+            self.assertIn("sql-dd-001", registry)
+            self.assertIn("sql_master.csv", registry)
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@
 
 因此，本版文档不再把流程理解为“原始导出 → 归一基础表 → 首轮筛选表 → 主表”，而是调整为：
 
-> **原始导出 → 代码生成准备表（归一 + 首轮筛选注记）→ 主表 → 证据索引 / 写作派生产物**
+> **原始导出 → 代码生成准备表（归一 + 首轮筛选注记）→ 主表 → 证据索引 → deep-dive 附属层 / 写作派生产物**
 
 也就是说，主表前的那一层，仍然保留全量记录，但已经同时完成：
 
@@ -24,6 +24,16 @@
 - 首轮筛选标记；
 - 候选对象初步收束；
 - 主表物化准备。
+
+而主表之后的 deep-dive 阶段应继续围绕主表对象展开，采用：
+
+- `02_master_tables/` 承载对象级状态摘要
+- `03_evidence_indexes/` 承载证据索引摘要
+- `04_deep_dive/` 承载一对象多 bundle 的深挖目录
+
+deep-dive 的正式结构补充说明见：
+
+- [deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
 
 ## 2. 当前可直接拿到的几份列表，以及我对它们的基本判断
 

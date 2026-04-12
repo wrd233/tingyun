@@ -107,6 +107,6 @@ PYTHONPATH=./src python3 -m tingyun_adapter.service.http_api
 ## 关键文档
 
 - [adapter-internal-boundaries.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-internal-boundaries.md)
+- [deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
 - [report-output-terms.md](/Users/wangrundong/work/mywork/docs/reporting/report-output-terms.md)
 - [adapter-service-local-and-public.md](/Users/wangrundong/work/mywork/docs/workflows/adapter-service-local-and-public.md)
-- [reporting-experience-and-gap-analysis.md](/Users/wangrundong/work/mywork/docs/reporting/reporting-experience-and-gap-analysis.md)

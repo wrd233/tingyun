@@ -202,7 +202,7 @@
 
 围绕 APM 导出列表，我当前采用的主线已经进一步收敛为：
 
-`00_raw_exports -> 01_prepared_tables -> 02_master_tables -> 03_evidence_indexes`
+`00_raw_exports -> 01_prepared_tables -> 02_master_tables -> 03_evidence_indexes -> 04_deep_dive`
 
 其中：
 
@@ -214,11 +214,14 @@
   - 数量受控、适合人工持续更新的主表工作底稿
 - `03_evidence_indexes/`
   - 与主表稳定关联的证据索引
+- `04_deep_dive/`
+  - 面向第二阶段的 deep-dive registry 与 bundle 目录，一对多挂接到主表对象
 
 这里有两个关键边界：
 
 1. 首轮筛选必须由代码执行，而不是交给大模型阅读 CSV 临时判断。
 2. report bundle 仍然是下游派生产物，不能反过来替代主表成为主线对象。
+3. deep-dive 结果应当通过 `deep_dive_registry.csv + bundle_path + 主表回写字段` 挂回主表，而不是散落为临时文档。
 
 ## 8. 证据沉淀与截图占位
 

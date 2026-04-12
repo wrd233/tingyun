@@ -7,6 +7,7 @@ from collections import defaultdict
 from typing import Any
 
 from tingyun_adapter.usecases.analysis_rules import BACKGROUND_KEYWORDS, CORE_BUSINESS_KEYWORDS, SUPPORT_KEYWORDS
+from tingyun_adapter.usecases.deep_dive_protocol import build_deep_dive_seed
 
 
 ISSUE_PRIORITY_ORDER = {
@@ -462,7 +463,12 @@ def select_candidate_outcomes(candidate_registry: list[dict[str, Any]]) -> dict[
         "main_issue_selections": main_issue_selections[:8],
         "observation_candidates": observation_candidates[:12],
         "sql_opportunity_candidates": sql_opportunity_candidates[:12],
-        "deep_dive_targets": _prioritize_deep_dive_targets(_ensure_deep_dive_coverage(deep_dive_targets, expandable_candidates), limit=6),
+        "deep_dive_targets": _attach_deep_dive_protocol(
+            _prioritize_deep_dive_targets(
+                _ensure_deep_dive_coverage(deep_dive_targets, expandable_candidates),
+                limit=6,
+            )
+        ),
     }
 
 
@@ -1336,6 +1342,18 @@ def _render_candidate_markdown(items: list[dict[str, Any]], *, fallback: str) ->
             f"- {item.get('display_name')} | 类型: {item.get('candidate_type')} | 来源: {','.join(item.get('source_packs') or [])} | hints: {','.join(item.get('review_hints') or [])} | 推荐深挖: {','.join(item.get('recommended_next_packs') or [])}"
         )
     return lines
+
+
+def _attach_deep_dive_protocol(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    enriched: list[dict[str, Any]] = []
+    for item in items:
+        enriched.append(
+            {
+                **item,
+                **build_deep_dive_seed(item),
+            }
+        )
+    return enriched
 
 
 def _csv_export(rows: list[dict[str, Any]], columns: list[str]) -> dict[str, Any]:

@@ -117,7 +117,8 @@ diagnostics/
 ├── 00_raw_exports/
 ├── 01_prepared_tables/
 ├── 02_master_tables/
-└── 03_evidence_indexes/
+├── 03_evidence_indexes/
+└── 04_deep_dive/
 ```
 
 如果要先把 SQL / NoSQL 原始导出按组件落到 `00_raw_exports/`，可以先运行：
@@ -163,6 +164,11 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli materialize-master-tables
   --batch-key <batch_key>
 ```
 
+这一步现在还会同时做两件事情：
+
+- 初始化 `04_deep_dive/deep_dive_registry.csv` 和对象类型目录
+- 给 `request_master.csv`、`sql_master.csv`、`interface_cluster_master.csv` 等主表补齐 deep-dive 摘要字段
+
 也可以直接运行模块脚本：
 
 - `python3 -m tingyun_adapter_client.prepare_master_table_inputs --rules-file <screening_rules.json>`
@@ -173,3 +179,4 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli materialize-master-tables
 - [machine-a-machine-b-collaboration.md](/Users/wangrundong/work/mywork/docs/workflows/machine-a-machine-b-collaboration.md)
 - [client-materialization-boundary.md](/Users/wangrundong/work/mywork/docs/workflows/client-materialization-boundary.md)
 - [machine-b-agent-adapter-usage.md](/Users/wangrundong/work/mywork/docs/workflows/machine-b-agent-adapter-usage.md)
+- [deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)

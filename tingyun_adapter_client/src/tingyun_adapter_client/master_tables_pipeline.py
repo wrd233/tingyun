@@ -177,6 +177,7 @@ NOSQL_PREPARED_COLUMNS = [
 MASTER_COLUMNS = {
     "application_master.csv": [
         "object_id",
+        "object_type",
         "system_key",
         "batch_key",
         "application_name",
@@ -193,12 +194,21 @@ MASTER_COLUMNS = {
         "screening_score",
         "screening_reason",
         "selected_for_master",
+        "selected_for_deep_dive",
         "followup_status",
         "followup_note",
+        "deep_dive_count",
+        "deep_dive_status",
+        "latest_deep_dive_id",
+        "latest_deep_dive_at",
+        "evidence_status",
+        "related_object_ids",
+        "report_group_hint",
         "writing_note",
     ],
     "request_master.csv": [
         "object_id",
+        "object_type",
         "system_key",
         "batch_key",
         "canonical_name",
@@ -225,8 +235,13 @@ MASTER_COLUMNS = {
         "screening_score",
         "screening_reason",
         "selected_for_master",
+        "selected_for_deep_dive",
         "followup_status",
         "followup_note",
+        "deep_dive_count",
+        "deep_dive_status",
+        "latest_deep_dive_id",
+        "latest_deep_dive_at",
         "evidence_status",
         "related_sql_count",
         "related_object_ids",
@@ -235,6 +250,7 @@ MASTER_COLUMNS = {
     ],
     "interface_cluster_master.csv": [
         "object_id",
+        "object_type",
         "system_key",
         "batch_key",
         "cluster_name",
@@ -251,13 +267,21 @@ MASTER_COLUMNS = {
         "screening_score",
         "screening_reason",
         "selected_for_master",
+        "selected_for_deep_dive",
         "followup_status",
         "followup_note",
+        "deep_dive_count",
+        "deep_dive_status",
+        "latest_deep_dive_id",
+        "latest_deep_dive_at",
+        "evidence_status",
+        "related_object_ids",
         "report_group_hint",
         "writing_note",
     ],
     "sql_master.csv": [
         "object_id",
+        "object_type",
         "system_key",
         "batch_key",
         "source_db_key",
@@ -277,15 +301,22 @@ MASTER_COLUMNS = {
         "selected_by_global_rank",
         "selected_by_db_rank",
         "selected_for_master",
+        "selected_for_deep_dive",
         "followup_status",
         "followup_note",
+        "deep_dive_count",
+        "deep_dive_status",
+        "latest_deep_dive_id",
+        "latest_deep_dive_at",
         "evidence_status",
         "related_request_ids",
+        "related_object_ids",
         "report_group_hint",
         "writing_note",
     ],
     "nosql_master.csv": [
         "object_id",
+        "object_type",
         "system_key",
         "batch_key",
         "source_component_key",
@@ -303,8 +334,16 @@ MASTER_COLUMNS = {
         "screening_score",
         "screening_reason",
         "selected_for_master",
+        "selected_for_deep_dive",
         "followup_status",
         "followup_note",
+        "deep_dive_count",
+        "deep_dive_status",
+        "latest_deep_dive_id",
+        "latest_deep_dive_at",
+        "evidence_status",
+        "related_object_ids",
+        "report_group_hint",
         "writing_note",
     ],
 }
@@ -332,6 +371,42 @@ EVIDENCE_INDEX_COLUMNS = {
         "related_request_ids",
         "writing_note",
     ],
+}
+
+DEEP_DIVE_REGISTRY_COLUMNS = [
+    "deep_dive_id",
+    "object_id",
+    "object_type",
+    "system_key",
+    "batch_key",
+    "source_master_table",
+    "deep_dive_kind",
+    "deep_dive_scope",
+    "pack_source",
+    "status",
+    "summary",
+    "evidence_count",
+    "page_link_count",
+    "screenshot_hint_count",
+    "generated_at",
+    "bundle_path",
+    "related_object_ids",
+    "suspected_cluster_key",
+    "report_group_hint",
+]
+
+DEEP_DIVE_BUNDLE_TYPES = [
+    "request",
+    "sql",
+    "interface_cluster",
+    "application",
+    "dependency",
+    "shared",
+]
+
+DEEP_DIVE_BUNDLE_FILE_COLUMNS = {
+    "evidence_index.csv": ["evidence_id", "evidence_type", "source_pack", "source_ref", "summary", "status"],
+    "screenshot_hints.csv": ["screenshot_purpose", "page_url", "suggested_area", "subject", "usage_note"],
 }
 
 DEFAULT_RULES = {
@@ -493,33 +568,54 @@ def materialize_master_tables(
     prepared_root = diagnostics_root / "01_prepared_tables"
     master_root = diagnostics_root / "02_master_tables"
     evidence_root = diagnostics_root / "03_evidence_indexes"
+    deep_dive_root = diagnostics_root / "04_deep_dive"
     master_root.mkdir(parents=True, exist_ok=True)
     evidence_root.mkdir(parents=True, exist_ok=True)
 
     outputs: list[str] = []
     row_counts: dict[str, int] = {}
 
-    application_master = _materialize_master(prepared_root / "application_prepared.csv", MASTER_COLUMNS["application_master.csv"])
+    application_master = _materialize_master(
+        prepared_root / "application_prepared.csv",
+        MASTER_COLUMNS["application_master.csv"],
+        object_type="application",
+    )
     _write_csv(master_root / "application_master.csv", MASTER_COLUMNS["application_master.csv"], application_master)
     outputs.append("application_master.csv")
     row_counts["application_master"] = len(application_master)
 
-    request_master = _materialize_master(prepared_root / "request_prepared.csv", MASTER_COLUMNS["request_master.csv"])
+    request_master = _materialize_master(
+        prepared_root / "request_prepared.csv",
+        MASTER_COLUMNS["request_master.csv"],
+        object_type="request",
+    )
     _write_csv(master_root / "request_master.csv", MASTER_COLUMNS["request_master.csv"], request_master)
     outputs.append("request_master.csv")
     row_counts["request_master"] = len(request_master)
 
-    interface_master = _materialize_master(prepared_root / "interface_cluster_prepared.csv", MASTER_COLUMNS["interface_cluster_master.csv"])
+    interface_master = _materialize_master(
+        prepared_root / "interface_cluster_prepared.csv",
+        MASTER_COLUMNS["interface_cluster_master.csv"],
+        object_type="interface_cluster",
+    )
     _write_csv(master_root / "interface_cluster_master.csv", MASTER_COLUMNS["interface_cluster_master.csv"], interface_master)
     outputs.append("interface_cluster_master.csv")
     row_counts["interface_cluster_master"] = len(interface_master)
 
-    sql_master = _materialize_master(prepared_root / "sql_prepared_full.csv", MASTER_COLUMNS["sql_master.csv"])
+    sql_master = _materialize_master(
+        prepared_root / "sql_prepared_full.csv",
+        MASTER_COLUMNS["sql_master.csv"],
+        object_type="sql",
+    )
     _write_csv(master_root / "sql_master.csv", MASTER_COLUMNS["sql_master.csv"], sql_master)
     outputs.append("sql_master.csv")
     row_counts["sql_master"] = len(sql_master)
 
-    nosql_master = _materialize_master(prepared_root / "nosql_prepared.csv", MASTER_COLUMNS["nosql_master.csv"])
+    nosql_master = _materialize_master(
+        prepared_root / "nosql_prepared.csv",
+        MASTER_COLUMNS["nosql_master.csv"],
+        object_type="nosql",
+    )
     _write_csv(master_root / "nosql_master.csv", MASTER_COLUMNS["nosql_master.csv"], nosql_master)
     outputs.append("nosql_master.csv")
     row_counts["nosql_master"] = len(nosql_master)
@@ -560,15 +656,183 @@ def materialize_master_tables(
     outputs.append("sql_evidence_index.csv")
     row_counts["sql_evidence_index"] = len(sql_evidence_rows)
 
+    deep_dive_summary = initialize_deep_dive_workspace(
+        diagnostics_root,
+        system_key=system_key,
+        batch_key=batch_key,
+    )
+    sync_summary = sync_master_tables_with_deep_dive_registry(
+        diagnostics_root,
+        system_key=system_key,
+        batch_key=batch_key,
+    )
+    outputs.append(str((deep_dive_root / "deep_dive_registry.csv").relative_to(diagnostics_root)))
+    row_counts["deep_dive_registry"] = sync_summary["registry_count"]
+
     summary = {
         "system_key": system_key,
         "batch_key": batch_key,
         "diagnostics_dir": str(diagnostics_root),
         "outputs": outputs,
         "row_counts": row_counts,
+        "deep_dive_workspace": deep_dive_summary,
+        "deep_dive_sync": sync_summary,
     }
     _write_json(master_root / "materialization_summary.json", summary)
     return summary
+
+
+def initialize_deep_dive_workspace(
+    diagnostics_dir: str | Path,
+    *,
+    system_key: str,
+    batch_key: str,
+) -> dict[str, Any]:
+    diagnostics_root = Path(diagnostics_dir).expanduser().resolve()
+    deep_dive_root = diagnostics_root / "04_deep_dive"
+    deep_dive_root.mkdir(parents=True, exist_ok=True)
+
+    created_dirs: list[str] = []
+    for object_type in DEEP_DIVE_BUNDLE_TYPES:
+        target_dir = deep_dive_root / object_type
+        target_dir.mkdir(parents=True, exist_ok=True)
+        created_dirs.append(str(target_dir.relative_to(diagnostics_root)))
+
+    registry_path = deep_dive_root / "deep_dive_registry.csv"
+    if not registry_path.exists():
+        _write_csv(registry_path, DEEP_DIVE_REGISTRY_COLUMNS, [])
+
+    return {
+        "system_key": system_key,
+        "batch_key": batch_key,
+        "root": str(deep_dive_root),
+        "registry_path": str(registry_path),
+        "bundle_directories": created_dirs,
+    }
+
+
+def initialize_deep_dive_bundle(
+    diagnostics_dir: str | Path,
+    *,
+    system_key: str,
+    batch_key: str,
+    object_id: str,
+    object_type: str,
+    source_master_table: str,
+    deep_dive_id: str,
+    deep_dive_kind: str,
+    deep_dive_scope: str,
+    pack_source: str,
+    summary: str = "",
+    status: str = "initialized",
+    generated_at: str | None = None,
+    related_object_ids: str = "",
+    suspected_cluster_key: str = "",
+    report_group_hint: str = "",
+) -> dict[str, Any]:
+    diagnostics_root = Path(diagnostics_dir).expanduser().resolve()
+    initialize_deep_dive_workspace(diagnostics_root, system_key=system_key, batch_key=batch_key)
+    deep_dive_root = diagnostics_root / "04_deep_dive"
+    object_dir = deep_dive_root / _bundle_object_dir(object_type) / _sanitize_path_segment(object_id)
+    bundle_dir = object_dir / _sanitize_path_segment(deep_dive_id)
+    bundle_dir.mkdir(parents=True, exist_ok=True)
+    (bundle_dir / "pack_payloads").mkdir(parents=True, exist_ok=True)
+
+    manifest = {
+        "deep_dive_id": deep_dive_id,
+        "object_id": object_id,
+        "object_type": object_type,
+        "system_key": system_key,
+        "batch_key": batch_key,
+        "source_master_table": source_master_table,
+        "deep_dive_kind": deep_dive_kind,
+        "deep_dive_scope": deep_dive_scope,
+        "pack_source": pack_source,
+        "status": status,
+        "summary": summary,
+        "generated_at": generated_at or datetime.now(timezone.utc).isoformat(),
+        "bundle_path": str(bundle_dir),
+        "related_object_ids": related_object_ids,
+        "suspected_cluster_key": suspected_cluster_key,
+        "report_group_hint": report_group_hint,
+    }
+    _write_json(bundle_dir / "summary.json", manifest)
+    _write_json(bundle_dir / "page_links.json", {"page_links": []})
+    _write_json(bundle_dir / "related_objects.json", {"related_object_ids": _split_semicolon_list(related_object_ids)})
+    _write_csv(bundle_dir / "evidence_index.csv", DEEP_DIVE_BUNDLE_FILE_COLUMNS["evidence_index.csv"], [])
+    _write_csv(bundle_dir / "screenshot_hints.csv", DEEP_DIVE_BUNDLE_FILE_COLUMNS["screenshot_hints.csv"], [])
+    (bundle_dir / "notes.md").write_text("# Notes\n\n", encoding="utf-8")
+
+    registry_path = deep_dive_root / "deep_dive_registry.csv"
+    registry_rows = _read_csv_rows(registry_path) if registry_path.exists() else []
+    if not any(str(item.get("deep_dive_id") or "") == deep_dive_id for item in registry_rows):
+        registry_rows.append(
+            {
+                "deep_dive_id": deep_dive_id,
+                "object_id": object_id,
+                "object_type": object_type,
+                "system_key": system_key,
+                "batch_key": batch_key,
+                "source_master_table": source_master_table,
+                "deep_dive_kind": deep_dive_kind,
+                "deep_dive_scope": deep_dive_scope,
+                "pack_source": pack_source,
+                "status": status,
+                "summary": summary,
+                "evidence_count": "0",
+                "page_link_count": "0",
+                "screenshot_hint_count": "0",
+                "generated_at": manifest["generated_at"],
+                "bundle_path": str(bundle_dir),
+                "related_object_ids": related_object_ids,
+                "suspected_cluster_key": suspected_cluster_key,
+                "report_group_hint": report_group_hint,
+            }
+        )
+        _write_csv(registry_path, DEEP_DIVE_REGISTRY_COLUMNS, registry_rows)
+
+    return manifest
+
+
+def sync_master_tables_with_deep_dive_registry(
+    diagnostics_dir: str | Path,
+    *,
+    system_key: str,
+    batch_key: str,
+) -> dict[str, Any]:
+    diagnostics_root = Path(diagnostics_dir).expanduser().resolve()
+    initialize_deep_dive_workspace(diagnostics_root, system_key=system_key, batch_key=batch_key)
+    deep_dive_root = diagnostics_root / "04_deep_dive"
+    registry_path = deep_dive_root / "deep_dive_registry.csv"
+    registry_rows = _read_csv_rows(registry_path) if registry_path.exists() else []
+    registry_index = _index_deep_dive_registry(registry_rows)
+
+    updated_files: list[str] = []
+    object_types = {
+        "application_master.csv": "application",
+        "request_master.csv": "request",
+        "interface_cluster_master.csv": "interface_cluster",
+        "sql_master.csv": "sql",
+        "nosql_master.csv": "nosql",
+    }
+    for filename, object_type in object_types.items():
+        master_path = diagnostics_root / "02_master_tables" / filename
+        if not master_path.exists():
+            continue
+        rows = _read_csv_rows(master_path)
+        synced_rows = [
+            _apply_deep_dive_registry_state(row, object_type, registry_index.get(str(row.get("object_id") or ""), []))
+            for row in rows
+        ]
+        _write_csv(master_path, MASTER_COLUMNS[filename], synced_rows)
+        updated_files.append(filename)
+
+    return {
+        "system_key": system_key,
+        "batch_key": batch_key,
+        "registry_count": len(registry_rows),
+        "updated_master_tables": updated_files,
+    }
 
 
 def build_export_registry(
@@ -1183,7 +1447,7 @@ def _load_component_operation_xls_strings(path: Path, *, kind: str) -> tuple[lis
     return rows, warning
 
 
-def _materialize_master(prepared_path: Path, columns: list[str]) -> list[dict[str, Any]]:
+def _materialize_master(prepared_path: Path, columns: list[str], *, object_type: str) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     if not prepared_path.exists():
         return rows
@@ -1191,12 +1455,26 @@ def _materialize_master(prepared_path: Path, columns: list[str]) -> list[dict[st
         if not _is_true(raw.get("selected_for_master")):
             continue
         row = {column: str(raw.get(column, "") or "") for column in columns}
+        if "object_type" in row and not row["object_type"]:
+            row["object_type"] = object_type
+        if "selected_for_deep_dive" in row and not row["selected_for_deep_dive"]:
+            row["selected_for_deep_dive"] = "true" if _default_selected_for_deep_dive(row) else "false"
         if "followup_status" in row and not row["followup_status"]:
             row["followup_status"] = "待确认"
+        if "deep_dive_count" in row and not row["deep_dive_count"]:
+            row["deep_dive_count"] = "0"
+        if "deep_dive_status" in row and not row["deep_dive_status"]:
+            row["deep_dive_status"] = "not_started" if _is_true(row.get("selected_for_deep_dive")) else "not_selected"
+        if "latest_deep_dive_id" in row and not row["latest_deep_dive_id"]:
+            row["latest_deep_dive_id"] = ""
+        if "latest_deep_dive_at" in row and not row["latest_deep_dive_at"]:
+            row["latest_deep_dive_at"] = ""
         if "evidence_status" in row and not row["evidence_status"]:
             row["evidence_status"] = "待补证据"
         if "related_sql_count" in row and not row["related_sql_count"]:
             row["related_sql_count"] = "0"
+        if "related_object_ids" in row and not row["related_object_ids"] and row.get("related_request_ids"):
+            row["related_object_ids"] = row["related_request_ids"]
         rows.append(row)
     return rows
 
@@ -1320,6 +1598,19 @@ def _is_true(value: Any) -> bool:
     return str(value or "").strip().lower() in {"1", "true", "yes", "y"}
 
 
+def _default_selected_for_deep_dive(row: dict[str, Any]) -> bool:
+    if not _is_true(row.get("selected_for_master")):
+        return False
+    followup_status = str(row.get("followup_status") or "").strip()
+    evidence_status = str(row.get("evidence_status") or "").strip()
+    if followup_status in {"继续深挖", "待确认", "保留观察"}:
+        return True
+    if evidence_status in {"待补证据", "待补充"}:
+        return True
+    screening_score = _to_float(row.get("screening_score")) or 0
+    return screening_score > 0
+
+
 def _hash_id(text: str) -> str:
     return hashlib.sha1(text.encode("utf-8")).hexdigest()[:20]
 
@@ -1378,3 +1669,85 @@ def _guess_mime_type(path: Path) -> str:
     if path.suffix.lower() == ".xls":
         return "application/vnd.ms-excel"
     return "application/octet-stream"
+
+
+def _bundle_object_dir(object_type: str) -> str:
+    return object_type if object_type in DEEP_DIVE_BUNDLE_TYPES else "shared"
+
+
+def _sanitize_path_segment(value: str) -> str:
+    text = str(value or "").strip()
+    if not text:
+        return "unknown"
+    return re.sub(r"[^a-zA-Z0-9._-]+", "_", text)
+
+
+def _split_semicolon_list(value: str) -> list[str]:
+    return [item for item in (part.strip() for part in str(value or "").split(";")) if item]
+
+
+def _index_deep_dive_registry(rows: list[dict[str, str]]) -> dict[str, list[dict[str, str]]]:
+    indexed: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for row in rows:
+        indexed[str(row.get("object_id") or "")].append(row)
+    for items in indexed.values():
+        items.sort(key=lambda row: str(row.get("generated_at") or ""), reverse=True)
+    return indexed
+
+
+def _apply_deep_dive_registry_state(row: dict[str, str], object_type: str, registry_rows: list[dict[str, str]]) -> dict[str, str]:
+    updated = dict(row)
+    updated["object_type"] = updated.get("object_type") or object_type
+    related_from_row = _split_semicolon_list(updated.get("related_object_ids", ""))
+    if not related_from_row and updated.get("related_request_ids"):
+        related_from_row = _split_semicolon_list(updated.get("related_request_ids", ""))
+
+    related_from_registry: list[str] = []
+    statuses: list[str] = []
+    latest_id = ""
+    latest_at = ""
+    report_group_hint = updated.get("report_group_hint", "")
+    for entry in registry_rows:
+        statuses.append(str(entry.get("status") or ""))
+        generated_at = str(entry.get("generated_at") or "")
+        if not latest_at or generated_at > latest_at:
+            latest_at = generated_at
+            latest_id = str(entry.get("deep_dive_id") or "")
+        related_from_registry.extend(_split_semicolon_list(str(entry.get("related_object_ids") or "")))
+        if not report_group_hint:
+            report_group_hint = str(entry.get("report_group_hint") or "")
+
+    updated["selected_for_deep_dive"] = "true" if registry_rows or _default_selected_for_deep_dive(updated) else "false"
+    updated["deep_dive_count"] = str(len(registry_rows))
+    updated["latest_deep_dive_id"] = latest_id
+    updated["latest_deep_dive_at"] = latest_at
+    updated["deep_dive_status"] = _rollup_deep_dive_status(statuses, selected=_is_true(updated.get("selected_for_deep_dive")))
+    updated["evidence_status"] = updated.get("evidence_status") or "待补证据"
+    updated["related_object_ids"] = ";".join(_unique_strings(related_from_row + related_from_registry))
+    updated["report_group_hint"] = report_group_hint
+    return updated
+
+
+def _rollup_deep_dive_status(statuses: list[str], *, selected: bool) -> str:
+    normalized = {str(item or "").strip() for item in statuses if str(item or "").strip()}
+    if "in_progress" in normalized:
+        return "in_progress"
+    if "completed" in normalized:
+        return "completed"
+    if "deferred" in normalized:
+        return "deferred"
+    if "queued" in normalized or "initialized" in normalized or "planned" in normalized:
+        return "queued"
+    return "not_started" if selected else "not_selected"
+
+
+def _unique_strings(items: list[str]) -> list[str]:
+    result: list[str] = []
+    seen: set[str] = set()
+    for item in items:
+        text = str(item or "").strip()
+        if not text or text in seen:
+            continue
+        seen.add(text)
+        result.append(text)
+    return result

@@ -32,5 +32,6 @@
 当前与 diagnostics / 主表流水线最相关的补充文档：
 
 - `workflows/apm-export-tables-to-master-tables.md`
+- `architecture/deep-dive-stage-and-adapter-bridge.md`
 
 `decisions/` 保留历史阶段上下文、legacy 设计和阶段判断，不作为当前事实来源。当前仓库以三份主设计文档及其补充文档为准。
