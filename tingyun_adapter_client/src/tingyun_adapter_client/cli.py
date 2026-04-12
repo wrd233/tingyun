@@ -7,6 +7,7 @@ from typing import Any
 
 from .config import RemoteClientSettings
 from .http_client import AdapterRemoteClient
+from .master_tables_pipeline import materialize_master_tables, prepare_master_table_inputs
 from .report_pack_builder import build_report_pack
 
 
@@ -50,6 +51,23 @@ def _build_parser() -> argparse.ArgumentParser:
     build_report.add_argument("--source-mode")
     build_report.add_argument("--limit", type=int, default=5)
     build_report.add_argument("--output-dir", default="./report_pack")
+
+    prepare_tables = subparsers.add_parser(
+        "prepare-master-table-inputs",
+        help="Build 01_prepared_tables from diagnostics raw exports.",
+    )
+    prepare_tables.add_argument("--diagnostics-dir", required=True)
+    prepare_tables.add_argument("--system-key", required=True)
+    prepare_tables.add_argument("--batch-key", required=True)
+    prepare_tables.add_argument("--rules-file")
+
+    materialize_tables = subparsers.add_parser(
+        "materialize-master-tables",
+        help="Build 02_master_tables and 03_evidence_indexes from prepared tables.",
+    )
+    materialize_tables.add_argument("--diagnostics-dir", required=True)
+    materialize_tables.add_argument("--system-key", required=True)
+    materialize_tables.add_argument("--batch-key", required=True)
     return parser
 
 
@@ -113,6 +131,14 @@ def _load_proposals(path: str) -> list[dict[str, Any]]:
     raise RuntimeError("proposal file must be a JSON list or a JSON object with a 'proposals' list")
 
 
+def _load_json_dict(path: str) -> dict[str, Any]:
+    with Path(path).expanduser().open("r", encoding="utf-8") as handle:
+        loaded = json.load(handle)
+    if not isinstance(loaded, dict):
+        raise RuntimeError("rules file must be a JSON object")
+    return loaded
+
+
 def main() -> None:
     parser = _build_parser()
     args = parser.parse_args()
@@ -146,13 +172,33 @@ def main() -> None:
                 ]
             ),
         )
+    elif args.command == "prepare-master-table-inputs":
+        payload = prepare_master_table_inputs(
+            args.diagnostics_dir,
+            system_key=args.system_key,
+            batch_key=args.batch_key,
+            rules=_load_json_dict(args.rules_file) if args.rules_file else None,
+        )
+    elif args.command == "materialize-master-tables":
+        payload = materialize_master_tables(
+            args.diagnostics_dir,
+            system_key=args.system_key,
+            batch_key=args.batch_key,
+        )
     else:
         payload = {
             "service_base_url": settings.service_base_url,
             "config_path": settings.config_path,
             "has_service_api_key": bool(settings.service_api_key),
             "default_source_mode": settings.default_source_mode,
-            "commands": ["healthz", "meta", "build-pack", "build-report-pack"],
+            "commands": [
+                "healthz",
+                "meta",
+                "build-pack",
+                "build-report-pack",
+                "prepare-master-table-inputs",
+                "materialize-master-tables",
+            ],
         }
 
     print(json.dumps(payload, ensure_ascii=False, indent=2))

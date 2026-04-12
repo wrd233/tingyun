@@ -25,4 +25,18 @@
 
 `artifacts/monitored_systems/<system_key>/<batch_key>/reports/`
 
+如果当前批次需要保留 APM 导出列表到主表的中间流水线，建议放在：
+
+`artifacts/monitored_systems/<system_key>/<batch_key>/diagnostics/`
+
+并使用以下层级：
+
+```text
+diagnostics/
+├── 00_raw_exports/
+├── 01_prepared_tables/
+├── 02_master_tables/
+└── 03_evidence_indexes/
+```
+
 如果某次结果要转为长期示例，应从批次目录挑选稳定子集，再迁到 `samples/`。

@@ -73,6 +73,26 @@ class ClientCliTests(unittest.TestCase):
         self.assertEqual(args.end_time, "2026-03-31")
         self.assertEqual(args.limit, 6)
 
+    def test_prepare_master_table_inputs_parser_accepts_diagnostics_context(self) -> None:
+        parser = _build_parser()
+        args = parser.parse_args(
+            [
+                "prepare-master-table-inputs",
+                "--diagnostics-dir",
+                "./diagnostics",
+                "--system-key",
+                "bizsystem_1065",
+                "--batch-key",
+                "2026-04-12-check",
+                "--rules-file",
+                "./screening_rules.json",
+            ]
+        )
+        self.assertEqual(args.command, "prepare-master-table-inputs")
+        self.assertEqual(args.system_key, "bizsystem_1065")
+        self.assertEqual(args.batch_key, "2026-04-12-check")
+        self.assertEqual(args.rules_file, "./screening_rules.json")
+
 
 if __name__ == "__main__":
     unittest.main()

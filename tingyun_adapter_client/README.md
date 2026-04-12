@@ -108,6 +108,44 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli build-report-pack \
   --output-dir /Users/wangrundong/work/mywork/artifacts/monitored_systems/<system_key>/<batch_key>/report_materials/report_pack
 ```
 
+## APM 导出到主表流水线
+
+围绕 diagnostics 目录，当前新增了一条和现有导出能力兼容的主表流水线：
+
+```text
+diagnostics/
+├── 00_raw_exports/
+├── 01_prepared_tables/
+├── 02_master_tables/
+└── 03_evidence_indexes/
+```
+
+推荐使用现有总 CLI：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli prepare-master-table-inputs \
+  --diagnostics-dir /Users/wangrundong/work/mywork/artifacts/monitored_systems/<system_key>/<batch_key>/diagnostics \
+  --system-key <system_key> \
+  --batch-key <batch_key> \
+  --rules-file /Users/wangrundong/work/mywork/artifacts/monitored_systems/<system_key>/<batch_key>/diagnostics/screening_rules.json
+```
+
+然后再物化主表和证据索引：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli materialize-master-tables \
+  --diagnostics-dir /Users/wangrundong/work/mywork/artifacts/monitored_systems/<system_key>/<batch_key>/diagnostics \
+  --system-key <system_key> \
+  --batch-key <batch_key>
+```
+
+也可以直接运行模块脚本：
+
+- `python3 -m tingyun_adapter_client.prepare_master_table_inputs --rules-file <screening_rules.json>`
+- `python3 -m tingyun_adapter_client.materialize_master_tables`
+
 ## 相关文档
 
 - [machine-a-machine-b-collaboration.md](/Users/wangrundong/work/mywork/docs/workflows/machine-a-machine-b-collaboration.md)

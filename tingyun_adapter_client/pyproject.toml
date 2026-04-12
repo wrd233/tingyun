@@ -12,6 +12,8 @@ dependencies = []
 
 [project.scripts]
 tingyun-adapter-client = "tingyun_adapter_client.cli:main"
+tingyun-prepare-master-table-inputs = "tingyun_adapter_client.prepare_master_table_inputs:main"
+tingyun-materialize-master-tables = "tingyun_adapter_client.materialize_master_tables:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

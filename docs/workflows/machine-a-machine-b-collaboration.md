@@ -38,3 +38,10 @@
 - `evidence/`
 - `report_materials/`
 - `reports/`
+
+其中 `diagnostics/` 如果承载 APM 导出到主表的流水线，内部建议继续固定为：
+
+- `00_raw_exports/`
+- `01_prepared_tables/`
+- `02_master_tables/`
+- `03_evidence_indexes/`
