@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Any
+
 from tingyun_adapter.clients.application_client import ApplicationClient
 from tingyun_adapter.clients.connection_client import ConnectionClient
 from tingyun_adapter.clients.database_client import DatabaseClient
@@ -47,6 +49,7 @@ from tingyun_adapter.usecases.enhancement_builders import (
     build_screenshot_index_pack,
     build_stability_signals_pack,
 )
+from tingyun_adapter.usecases.export_builders import build_data_export_pack
 from tingyun_adapter.usecases.knowledge_builders import (
     build_knowledge_context_pack,
     build_knowledge_update_proposal_pack,
@@ -294,6 +297,28 @@ class Adapter:
 
     def build_page_experience_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
         return build_page_experience_pack(self, context, source_mode=source_mode, limit=limit)
+
+    def build_data_export_pack(
+        self,
+        context: AnalysisContext,
+        *,
+        source_mode: str = "auto",
+        export_kind: str | None = None,
+        export_params: dict[str, Any] | None = None,
+        execute_export: bool = False,
+        include_file_content: bool = True,
+        max_export_bytes: int = 5_000_000,
+    ):
+        return build_data_export_pack(
+            self,
+            context,
+            source_mode=source_mode,
+            export_kind=export_kind,
+            export_params=export_params,
+            execute_export=execute_export,
+            include_file_content=include_file_content,
+            max_export_bytes=max_export_bytes,
+        )
 
     def build_screenshot_index_pack(self, context: AnalysisContext, *, source_mode: str = "auto", limit: int = 10):
         return build_screenshot_index_pack(self, context, source_mode=source_mode, limit=limit)

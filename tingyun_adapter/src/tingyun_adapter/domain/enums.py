@@ -28,6 +28,7 @@ class PackType(str, Enum):
     IMPACT_SIGNALS = "impact_signals_pack"
     COMPARISON_SIGNALS = "comparison_signals_pack"
     PAGE_EXPERIENCE = "page_experience_pack"
+    DATA_EXPORT = "data_export_pack"
     SCREENSHOT_INDEX = "screenshot_index_pack"
     KNOWLEDGE_CONTEXT = "knowledge_context_pack"
     KNOWLEDGE_UPDATE_PROPOSAL = "knowledge_update_proposal_pack"

@@ -50,6 +50,7 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
             "impact_signals_pack",
             "comparison_signals_pack",
             "page_experience_pack",
+            "data_export_pack",
             "screenshot_index_pack",
             "knowledge_context_pack",
             "knowledge_update_proposal_pack",
@@ -72,6 +73,11 @@ def build_parser(settings: AdapterSettings) -> argparse.ArgumentParser:
     parser.add_argument("--action-guid")
     parser.add_argument("--request-id")
     parser.add_argument("--op-name")
+    parser.add_argument("--export-kind")
+    parser.add_argument("--export-params-file")
+    parser.add_argument("--execute-export", action=argparse.BooleanOptionalAction, default=False)
+    parser.add_argument("--include-file-content", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--max-export-bytes", type=int, default=5_000_000)
     parser.add_argument("--proposal-file")
     parser.add_argument("--persist-proposals", action=argparse.BooleanOptionalAction, default=True)
     parser.add_argument("--limit", type=int, default=5)
@@ -274,6 +280,22 @@ def main() -> int:
             envelope = adapter.build_comparison_signals_pack(context, source_mode=args.source_mode, limit=args.limit)
         elif args.build_pack == "page_experience_pack":
             envelope = adapter.build_page_experience_pack(context, source_mode=args.source_mode, limit=args.limit)
+        elif args.build_pack == "data_export_pack":
+            export_params = {}
+            if args.export_params_file:
+                loaded = _load_json_file(args.export_params_file)
+                if not isinstance(loaded, dict):
+                    raise SystemExit("--export-params-file must contain a JSON object")
+                export_params = dict(loaded)
+            envelope = adapter.build_data_export_pack(
+                context,
+                source_mode=args.source_mode,
+                export_kind=args.export_kind,
+                export_params=export_params,
+                execute_export=args.execute_export,
+                include_file_content=args.include_file_content,
+                max_export_bytes=args.max_export_bytes,
+            )
         elif args.build_pack == "screenshot_index_pack":
             envelope = adapter.build_screenshot_index_pack(context, source_mode=args.source_mode, limit=args.limit)
         elif args.build_pack == "knowledge_context_pack":

@@ -16,6 +16,7 @@ dependencies = [
 
 [project.scripts]
 tingyun-adapter = "tingyun_adapter.invocation.cli:main"
+tingyun-adapter-export = "tingyun_adapter.invocation.export_runner:main"
 tingyun-adapter-service = "tingyun_adapter.service.http_api:main"
 
 [tool.setuptools]

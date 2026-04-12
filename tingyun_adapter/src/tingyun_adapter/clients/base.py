@@ -38,10 +38,14 @@ class BaseClient:
             "Content-Type": content_type,
         }
 
-    def post_form(self, path: str, form: dict[str, Any], query: Optional[dict[str, Any]] = None) -> Any:
+    def _build_url(self, path: str, query: Optional[dict[str, Any]] = None) -> str:
         url = f"{self.base_url}{path}"
         if query:
             url = f"{url}?{urlencode(query, doseq=True)}"
+        return url
+
+    def post_form(self, path: str, form: dict[str, Any], query: Optional[dict[str, Any]] = None) -> Any:
+        url = self._build_url(path, query)
         request = Request(
             url,
             data=urlencode(form, doseq=True).encode("utf-8"),
@@ -51,9 +55,7 @@ class BaseClient:
         return self._execute(request)
 
     def post_json(self, path: str, payload: dict[str, Any], query: Optional[dict[str, Any]] = None) -> Any:
-        url = f"{self.base_url}{path}"
-        if query:
-            url = f"{url}?{urlencode(query, doseq=True)}"
+        url = self._build_url(path, query)
         request = Request(
             url,
             data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
@@ -63,14 +65,50 @@ class BaseClient:
         return self._execute(request)
 
     def get(self, path: str, query: Optional[dict[str, Any]] = None) -> Any:
-        url = f"{self.base_url}{path}"
-        if query:
-            url = f"{url}?{urlencode(query, doseq=True)}"
+        url = self._build_url(path, query)
         request = Request(url, headers=self._headers("application/json"), method="GET")
         return self._execute(request)
+
+    def post_form_raw(self, path: str, form: dict[str, Any], query: Optional[dict[str, Any]] = None) -> dict[str, Any]:
+        url = self._build_url(path, query)
+        request = Request(
+            url,
+            data=urlencode(form, doseq=True).encode("utf-8"),
+            headers=self._headers("application/x-www-form-urlencoded"),
+            method="POST",
+        )
+        return self._execute_raw(request)
+
+    def post_json_raw(self, path: str, payload: dict[str, Any], query: Optional[dict[str, Any]] = None) -> dict[str, Any]:
+        url = self._build_url(path, query)
+        request = Request(
+            url,
+            data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+            headers=self._headers("application/json"),
+            method="POST",
+        )
+        return self._execute_raw(request)
+
+    def get_raw(self, path: str, query: Optional[dict[str, Any]] = None, *, content_type: str = "application/json") -> dict[str, Any]:
+        url = self._build_url(path, query)
+        request = Request(url, headers=self._headers(content_type), method="GET")
+        return self._execute_raw(request)
 
     def _execute(self, request: Request) -> Any:
         with urlopen(request, timeout=self.timeout) as response:
             charset = response.headers.get_content_charset() or "utf-8"
             body = response.read().decode(charset, errors="replace")
         return json.loads(body)
+
+    def _execute_raw(self, request: Request) -> dict[str, Any]:
+        with urlopen(request, timeout=self.timeout) as response:
+            body = response.read()
+            headers = {key: value for key, value in response.headers.items()}
+            return {
+                "status": getattr(response, "status", None),
+                "url": response.geturl(),
+                "headers": headers,
+                "mime_type": response.headers.get_content_type(),
+                "charset": response.headers.get_content_charset(),
+                "body_bytes": body,
+            }

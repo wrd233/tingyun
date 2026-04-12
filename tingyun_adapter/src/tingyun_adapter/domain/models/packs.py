@@ -458,6 +458,25 @@ class PageExperiencePackPayload:
 
 
 @dataclass
+class DataExportPackPayload:
+    scope: dict[str, Any]
+    available_exports: list[dict[str, Any]] = field(default_factory=list)
+    selected_export: dict[str, Any] = field(default_factory=dict)
+    execution: dict[str, Any] = field(default_factory=dict)
+    diagnostics: dict[str, Any] = field(default_factory=dict)
+    page_links: list[dict[str, Any]] = field(default_factory=list)
+    primary_console_url: str | None = None
+    related_console_urls: list[str] = field(default_factory=list)
+    screenshot_hints: list[dict[str, Any]] = field(default_factory=list)
+    metric_semantics: list[dict[str, Any]] = field(default_factory=list)
+    coverage_boundary: dict[str, Any] = field(default_factory=dict)
+    evidence_linkage: dict[str, Any] = field(default_factory=dict)
+    input_dependencies: list[str] = field(default_factory=list)
+    derivation_notes: list[str] = field(default_factory=list)
+    evidence: list[dict[str, Any]] = field(default_factory=list)
+
+
+@dataclass
 class ScreenshotIndexPackPayload:
     scope: dict[str, Any]
     screenshot_cards: list[dict[str, Any]] = field(default_factory=list)

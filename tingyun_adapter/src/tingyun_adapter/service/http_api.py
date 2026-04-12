@@ -41,6 +41,7 @@ PACK_TYPES = {
     "impact_signals_pack",
     "comparison_signals_pack",
     "page_experience_pack",
+    "data_export_pack",
     "screenshot_index_pack",
     "knowledge_context_pack",
     "knowledge_update_proposal_pack",
@@ -96,6 +97,11 @@ class BuildPackRequest(BaseModel):
     action_guid: Optional[str] = Field(None, alias="actionGuid")
     request_id: Optional[str] = Field(None, alias="requestId")
     op_name: Optional[str] = Field(None, alias="opName")
+    export_kind: Optional[str] = Field(None, alias="exportKind")
+    export_params: dict[str, Any] = Field(default_factory=dict, alias="exportParams")
+    execute_export: bool = Field(False, alias="executeExport")
+    include_file_content: bool = Field(True, alias="includeFileContent")
+    max_export_bytes: int = Field(5_000_000, alias="maxExportBytes")
     proposal_items: list[dict[str, Any]] = Field(default_factory=list, alias="proposalItems")
     persist_proposals: bool = Field(True, alias="persistProposals")
 
@@ -440,6 +446,16 @@ def create_app(*, config_path: Optional[str] = None) -> FastAPI:
                 envelope = adapter.build_comparison_signals_pack(context, source_mode=request.source_mode, limit=request.limit)
             elif pack_type == "page_experience_pack":
                 envelope = adapter.build_page_experience_pack(context, source_mode=request.source_mode, limit=request.limit)
+            elif pack_type == "data_export_pack":
+                envelope = adapter.build_data_export_pack(
+                    context,
+                    source_mode=request.source_mode,
+                    export_kind=request.export_kind,
+                    export_params=request.export_params,
+                    execute_export=request.execute_export,
+                    include_file_content=request.include_file_content,
+                    max_export_bytes=request.max_export_bytes,
+                )
             elif pack_type == "screenshot_index_pack":
                 envelope = adapter.build_screenshot_index_pack(context, source_mode=request.source_mode, limit=request.limit)
             elif pack_type == "knowledge_context_pack":

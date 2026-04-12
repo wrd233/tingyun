@@ -23,6 +23,7 @@ from tingyun_adapter.usecases.extended_builders import (
     build_sql_fact_sheet,
     build_topology_dependency_pack,
 )
+from tingyun_adapter.usecases.export_builders import build_data_export_pack
 
 __all__ = [
     "build_action_hotspot_pack",
@@ -31,6 +32,7 @@ __all__ = [
     "build_connection_pool_pack",
     "build_database_component_pack",
     "build_deployment_inventory_pack",
+    "build_data_export_pack",
     "build_diagnostic_candidate_pack",
     "build_external_dependency_pack",
     "build_instance_analysis_pack",

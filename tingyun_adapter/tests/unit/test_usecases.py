@@ -951,6 +951,22 @@ class UsecaseBuilderTests(unittest.TestCase):
         self.assertIn("knowledge_context", payload)
         self.assertIn("candidate_action_links", payload["pages"][0])
 
+    def test_build_data_export_pack_from_samples(self) -> None:
+        context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-12 12:50", period_minutes=2880)
+        envelope = self.adapter.build_data_export_pack(
+            context,
+            source_mode="sample",
+            export_kind="action_list_export",
+            export_params={"sortField": "response"},
+        )
+        payload = envelope.to_dict()["payload"]
+        self.assertEqual(envelope.pack_type, "data_export_pack")
+        self.assertGreaterEqual(len(payload["available_exports"]), 4)
+        self.assertEqual(payload["selected_export"]["export_key"], "action_list_export")
+        self.assertEqual(payload["selected_export"]["resolved_request"]["query"]["downloadFile"], "true")
+        self.assertEqual(payload["selected_export"]["resolved_request"]["query"]["sortField"], "response")
+        self.assertEqual(payload["execution"]["status"], "ready")
+
     def test_build_screenshot_index_pack_from_samples(self) -> None:
         context = self.adapter.build_context(biz_system_id=1065, end_time="2026-04-03 12:20", period_minutes=30)
         envelope = self.adapter.build_screenshot_index_pack(context, source_mode="sample", limit=5)

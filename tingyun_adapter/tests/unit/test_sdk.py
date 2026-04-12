@@ -22,6 +22,10 @@ class AdapterSdkTests(unittest.TestCase):
         adapter = Adapter(AdapterSettings(knowledge_dir=str(ROOT / "knowledge")))
         self.assertIsNotNone(adapter.knowledge_repository)
 
+    def test_adapter_exposes_data_export_pack_builder(self) -> None:
+        adapter = Adapter(AdapterSettings())
+        self.assertTrue(callable(getattr(adapter, "build_data_export_pack")))
+
 
 if __name__ == "__main__":
     unittest.main()
