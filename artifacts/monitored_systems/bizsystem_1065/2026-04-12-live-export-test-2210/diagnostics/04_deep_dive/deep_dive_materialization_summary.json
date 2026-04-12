@@ -2,24 +2,31 @@
   "system_key": "bizsystem_1065",
   "batch_key": "2026-04-12-live-export-test-2210",
   "diagnostics_dir": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics",
-  "source_json": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/report_materials/deep_dive_source/manual_sql_deep_dive_source.json",
-  "source_target_count": 1,
-  "source_expansion_count": 1,
-  "materialized_count": 1,
+  "source_json": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/report_materials/deep_dive_source/manual_request_interface_deep_dive_source.json",
+  "source_target_count": 2,
+  "source_expansion_count": 2,
+  "materialized_count": 2,
   "materialized_bundles": [
     {
-      "deep_dive_id": "dd_20260412T162340Z_24fdde55",
-      "object_id": "db_mysql_10_190_22_21_3306:552c1e9df1dc18f9",
-      "object_type": "sql",
-      "source_master_table": "sql_master.csv",
-      "bundle_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/04_deep_dive/sql/db_mysql_10_190_22_21_3306_552c1e9df1dc18f9/dd_20260412T162340Z_24fdde55"
+      "deep_dive_id": "dd_20260412T164534Z_6ecd3c15",
+      "object_id": "a51a601346fbd06946b9",
+      "object_type": "request",
+      "source_master_table": "request_master.csv",
+      "bundle_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/04_deep_dive/request/a51a601346fbd06946b9/dd_20260412T164534Z_6ecd3c15"
+    },
+    {
+      "deep_dive_id": "dd_20260412T164534Z_fe440d42",
+      "object_id": "d17d51846f00ca15e0fa",
+      "object_type": "interface_cluster",
+      "source_master_table": "interface_cluster_master.csv",
+      "bundle_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/04_deep_dive/interface_cluster/d17d51846f00ca15e0fa/dd_20260412T164534Z_fe440d42"
     }
   ],
   "warnings": [],
   "deep_dive_sync": {
     "system_key": "bizsystem_1065",
     "batch_key": "2026-04-12-live-export-test-2210",
-    "registry_count": 1,
+    "registry_count": 3,
     "updated_master_tables": [
       "application_master.csv",
       "request_master.csv",
@@ -33,6 +40,7 @@
     "batch_key": "2026-04-12-live-export-test-2210",
     "updated_evidence_indexes": [
       "request_evidence_index.csv",
+      "interface_cluster_evidence_index.csv",
       "sql_evidence_index.csv"
     ]
   }

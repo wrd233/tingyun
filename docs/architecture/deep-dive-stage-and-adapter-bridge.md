@@ -178,9 +178,11 @@ deep-dive 现在明确采用“一对象对多 bundle”的组织方式，而不
 - 给主表补齐 deep-dive 摘要字段默认值
 - 提供 deep-dive bundle 初始化与 registry 同步辅助函数
 
-当前 client 还新增了一个最小闭环入口：
+当前 client 侧的正式 deep-dive 物化入口已经补齐为：
 
-- `materialize-deep-dive`
+- `python3 -m tingyun_adapter_client.materialize_deep_dive`
+- `tingyun-materialize-deep-dive`
+- `python3 -m tingyun_adapter_client.cli materialize-deep-dive`
 
 它会从 `report_fact_pack.json` 或 review bundle JSON 中读取：
 

@@ -14,9 +14,11 @@
   "row_counts": {
     "application": 3,
     "request": 136,
-    "interface_cluster": 0,
+    "interface_cluster": 136,
     "sql": 681,
     "nosql": 10
   },
-  "warnings": []
+  "warnings": [
+    "interface_cluster_prepared.csv was synthesized from request_prepared rows because no interface_list raw export was available."
+  ]
 }

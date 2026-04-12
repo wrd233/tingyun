@@ -9,18 +9,20 @@
     "sql_master.csv",
     "nosql_master.csv",
     "request_evidence_index.csv",
+    "interface_cluster_evidence_index.csv",
     "sql_evidence_index.csv",
     "04_deep_dive/deep_dive_registry.csv"
   ],
   "row_counts": {
     "application_master": 0,
     "request_master": 11,
-    "interface_cluster_master": 0,
+    "interface_cluster_master": 11,
     "sql_master": 20,
     "nosql_master": 4,
     "request_evidence_index": 11,
+    "interface_cluster_evidence_index": 11,
     "sql_evidence_index": 20,
-    "deep_dive_registry": 0
+    "deep_dive_registry": 1
   },
   "deep_dive_workspace": {
     "system_key": "bizsystem_1065",
@@ -39,13 +41,22 @@
   "deep_dive_sync": {
     "system_key": "bizsystem_1065",
     "batch_key": "2026-04-12-live-export-test-2210",
-    "registry_count": 0,
+    "registry_count": 1,
     "updated_master_tables": [
       "application_master.csv",
       "request_master.csv",
       "interface_cluster_master.csv",
       "sql_master.csv",
       "nosql_master.csv"
+    ]
+  },
+  "deep_dive_evidence_sync": {
+    "system_key": "bizsystem_1065",
+    "batch_key": "2026-04-12-live-export-test-2210",
+    "updated_evidence_indexes": [
+      "request_evidence_index.csv",
+      "interface_cluster_evidence_index.csv",
+      "sql_evidence_index.csv"
     ]
   }
 }

@@ -38,4 +38,10 @@
 
 - `workflows/client-materialization-boundary.md`
 
+当前 deep-dive 的正式触发入口以 client 侧三个等价入口为准：
+
+- `python3 -m tingyun_adapter_client.materialize_deep_dive`
+- `tingyun-materialize-deep-dive`
+- `python3 -m tingyun_adapter_client.cli materialize-deep-dive`
+
 `decisions/` 保留历史阶段上下文、legacy 设计和阶段判断，不作为当前事实来源。当前仓库以三份主设计文档及其补充文档为准。

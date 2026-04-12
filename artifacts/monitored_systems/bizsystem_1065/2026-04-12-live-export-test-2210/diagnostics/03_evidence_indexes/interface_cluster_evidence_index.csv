@@ -1,0 +1,12 @@
+object_id,object_type,latest_deep_dive_id,deep_dive_status,followup_status,evidence_status,page_link_count,trace_link_count,screenshot_hint_status,related_request_ids,writing_note
+d17d51846f00ca15e0fa,interface_cluster,dd_20260412T164534Z_fe440d42,completed,待确认,已挂接deep-dive,2,5,已生成,a51a601346fbd06946b9;12022f8d4ec046881933,
+a083731eab251606014b,interface_cluster,,not_selected,待确认,待补证据,,,待补充,0684a645d1e73aea20b5,
+81839d1f4437c8f2ac8a,interface_cluster,,not_selected,待确认,待补证据,,,待补充,6f5e8628e32d3d6d1200;c11a4fb9a6752e5637db,
+d17d51846f00ca15e0fa,interface_cluster,dd_20260412T164534Z_fe440d42,completed,待确认,已挂接deep-dive,2,5,已生成,a51a601346fbd06946b9;12022f8d4ec046881933,
+9960ff7be2d025d826c7,interface_cluster,,not_selected,待确认,待补证据,,,待补充,28d1956820d265217f2c,
+81839d1f4437c8f2ac8a,interface_cluster,,not_selected,待确认,待补证据,,,待补充,6f5e8628e32d3d6d1200;c11a4fb9a6752e5637db,
+f4d935ee6933554cffd4,interface_cluster,,not_selected,待确认,待补证据,,,待补充,e5a178c42192683e0ef9;f1e72ab86b2260f2fff0,
+f4d935ee6933554cffd4,interface_cluster,,not_selected,待确认,待补证据,,,待补充,e5a178c42192683e0ef9;f1e72ab86b2260f2fff0,
+9bbef21c569749d1014e,interface_cluster,,not_selected,待确认,待补证据,,,待补充,8997ed1c6cbe749c9852;e2e1e5d990a69638f638,
+9bbef21c569749d1014e,interface_cluster,,not_selected,待确认,待补证据,,,待补充,8997ed1c6cbe749c9852;e2e1e5d990a69638f638,
+d05228f35523118f6776,interface_cluster,,not_selected,待确认,待补证据,,,待补充,f86098a2cb59bcfc5cb1,

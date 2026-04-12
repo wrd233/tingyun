@@ -1,5 +1,5 @@
 object_id,object_type,latest_deep_dive_id,deep_dive_status,followup_status,evidence_status,page_link_count,trace_link_count,screenshot_hint_status,related_object_ids,writing_note
-a51a601346fbd06946b9,request,,not_selected,待确认,待补证据,,,待补充,,
+a51a601346fbd06946b9,request,dd_20260412T164534Z_6ecd3c15,completed,待确认,已挂接deep-dive,2,5,已生成,,
 0684a645d1e73aea20b5,request,,not_selected,待确认,待补证据,,,待补充,,
 6f5e8628e32d3d6d1200,request,,not_selected,待确认,待补证据,,,待补充,,
 12022f8d4ec046881933,request,,not_selected,待确认,待补证据,,,待补充,,

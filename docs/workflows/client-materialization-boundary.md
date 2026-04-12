@@ -60,9 +60,13 @@ diagnostics/
 - 初始化 `request/`、`sql/`、`interface_cluster/`、`application/`、`dependency/`、`shared/`
 - 给主表补齐 `selected_for_deep_dive / deep_dive_count / deep_dive_status / latest_deep_dive_id / latest_deep_dive_at` 等摘要字段
 
+如果某个批次没有拿到 `interface_list_export`，当前 client 会从 `request_prepared.csv` 合成最小 `interface_cluster_prepared.csv / interface_cluster_master.csv`，避免 interface_cluster 的 deep-dive 在第一阶段对象层面直接断掉。
+
 如果本地已经有 `report_fact_pack.json` 或 review bundle JSON，当前 client 还支持继续执行：
 
-- `materialize-deep-dive`
+- `python3 -m tingyun_adapter_client.materialize_deep_dive`
+- `tingyun-materialize-deep-dive`
+- `python3 -m tingyun_adapter_client.cli materialize-deep-dive`
 
 它会读取：
 
@@ -76,4 +80,4 @@ diagnostics/
 - `04_deep_dive/sql/<object_id>/<deep_dive_id>/`
 - `04_deep_dive/interface_cluster/<object_id>/<deep_dive_id>/`
 
-同时把 `latest_deep_dive_id / deep_dive_status / page_link_count / trace_link_count / screenshot_hint_status` 回写到主表和证据索引。
+同时把 `latest_deep_dive_id / deep_dive_status / page_link_count / trace_link_count / screenshot_hint_status` 回写到主表和证据索引，包括 `request_evidence_index.csv / interface_cluster_evidence_index.csv / sql_evidence_index.csv`。

@@ -14,6 +14,7 @@ dependencies = ["xlrd>=2.0,<3"]
 tingyun-adapter-client = "tingyun_adapter_client.cli:main"
 tingyun-prepare-master-table-inputs = "tingyun_adapter_client.prepare_master_table_inputs:main"
 tingyun-materialize-master-tables = "tingyun_adapter_client.materialize_master_tables:main"
+tingyun-materialize-deep-dive = "tingyun_adapter_client.materialize_deep_dive:main"
 tingyun-export-component-analysis-raw = "tingyun_adapter_client.component_analysis_exports:main"
 
 [tool.setuptools]

@@ -1,0 +1,27 @@
+{
+  "deep_dive_id": "dd_20260412T164534Z_6ecd3c15",
+  "object_id": "a51a601346fbd06946b9",
+  "object_type": "request",
+  "system_key": "bizsystem_1065",
+  "batch_key": "2026-04-12-live-export-test-2210",
+  "source_master_table": "request_master.csv",
+  "deep_dive_kind": "request_context",
+  "deep_dive_scope": "local",
+  "pack_source": "action_fact_sheet",
+  "status": "materialized",
+  "summary": "manual_request_action_fact_sheet_validation",
+  "generated_at": "2026-04-12T16:45:34.577783+00:00",
+  "bundle_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/04_deep_dive/request/a51a601346fbd06946b9/dd_20260412T164534Z_6ecd3c15",
+  "related_object_ids": [
+    "d17d51846f00ca15e0fa",
+    "request_hint:13223",
+    "dependency_hint:NoSQL",
+    "dependency_hint:Database"
+  ],
+  "suspected_cluster_key": "request:d17d51846f00ca15",
+  "report_group_hint": "request:local:manual-validation",
+  "evidence_count": 8,
+  "page_link_count": 2,
+  "screenshot_hint_count": 2,
+  "trace_link_count": 5
+}

@@ -1,0 +1,9 @@
+evidence_id,evidence_type,source_pack,source_ref,summary,status
+action_fact_action_list,webaction/list/actionList,action_fact_sheet,/server-api/webaction/list/actionList,webaction/list/actionList,available
+action_fact_overview,webaction/overview,action_fact_sheet,/server-api/webaction/overview,webaction/overview,available
+action_fact_trace_candidates,graph/query/overview,action_fact_sheet,/server-api/graph/query/overview?trace_current_overview,graph/query/overview,available
+trace-link-1841805886,trace_link,action_fact_sheet,1841805886,1841805886,available
+trace-link-1841381785,trace_link,action_fact_sheet,1841381785,1841381785,available
+trace-link-1840816956,trace_link,action_fact_sheet,1840816956,1840816956,available
+trace-link-1840737369,trace_link,action_fact_sheet,1840737369,1840737369,available
+trace-link-1840736838,trace_link,action_fact_sheet,1840736838,1840736838,available

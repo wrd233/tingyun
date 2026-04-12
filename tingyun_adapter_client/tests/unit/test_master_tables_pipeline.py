@@ -148,6 +148,49 @@ class MasterTablesPipelineTests(unittest.TestCase):
             deep_dive_registry = diagnostics / "04_deep_dive" / "deep_dive_registry.csv"
             self.assertTrue(deep_dive_registry.exists())
 
+    def test_prepare_and_materialize_pipeline_synthesizes_interface_cluster_from_request_rows(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            diagnostics = Path(tmpdir) / "diagnostics"
+            raw = diagnostics / "00_raw_exports"
+            self._write_csv(
+                raw / "action" / "action_list_export__actionList-demo.csv",
+                ["事务别名", "名称", "平均响应时间(ms)", "总耗时(ms)", "耗时百分比(%)", "请求数", "吞吐率(tps)", "错误率(%)", "错误数", "慢次数", "应用"],
+                [["alias/demo", "URI/demo/request", "2400", "240000", "15", "100", "1.2", "2.5", "6", "20", "demo-app"]],
+            )
+            self._write_json(
+                raw / "action" / "action_list_export__summary.json",
+                {"case_key": "action_list_export", "selected_export": {"export_key": "action_list_export"}},
+            )
+            self._write_csv(
+                raw / "request" / "graph_overview_export_request__request_overview-demo.csv",
+                ["事务名称", "应用名称", "Apdex", "响应时间中位数(ms)", "响应时间 P75 (ms)", "响应时间 P95 (ms)", "响应时间 P99 (ms)", "平均请求时间", "吞吐率 (/s)", "请求数", "错误率(%)", "错误次数", "慢次数", "异常次数", "请求类型"],
+                [["URI/demo/request", "demo-app", "0.70", "100", "200", "500", "900", "2400", "1.2", "100", "2.5", "6", "20", "3", "Web请求"]],
+            )
+            self._write_json(
+                raw / "request" / "graph_overview_export_request__summary.json",
+                {"case_key": "graph_overview_export_request", "selected_export": {"export_key": "graph_overview_export"}},
+            )
+
+            prepare_summary = prepare_master_table_inputs(
+                diagnostics,
+                system_key="bizsystem_1065",
+                batch_key="2026-04-12-check",
+            )
+            self.assertEqual(prepare_summary["row_counts"]["interface_cluster"], 1)
+            self.assertTrue(any("synthesized from request_prepared" in item for item in prepare_summary["warnings"]))
+
+            materialize_summary = materialize_master_tables(
+                diagnostics,
+                system_key="bizsystem_1065",
+                batch_key="2026-04-12-check",
+            )
+            self.assertIn("interface_cluster_evidence_index.csv", materialize_summary["outputs"])
+            interface_master = (diagnostics / "02_master_tables" / "interface_cluster_master.csv").read_text(encoding="utf-8")
+            self.assertIn("URI/demo/request", interface_master)
+            self.assertIn("related_request_count", interface_master)
+            interface_evidence = diagnostics / "03_evidence_indexes" / "interface_cluster_evidence_index.csv"
+            self.assertTrue(interface_evidence.exists())
+
     def test_initialize_deep_dive_bundle_creates_registry_and_bundle_files(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             diagnostics = Path(tmpdir) / "diagnostics"
@@ -274,9 +317,53 @@ class MasterTablesPipelineTests(unittest.TestCase):
                 ]],
             )
             self._write_csv(
+                master_root / "interface_cluster_master.csv",
+                [
+                    "object_id",
+                    "object_type",
+                    "system_key",
+                    "batch_key",
+                    "cluster_name",
+                    "application_name",
+                    "total_time_ms",
+                    "avg_rt_ms",
+                    "request_count",
+                    "tps",
+                    "error_rate_pct",
+                    "error_count",
+                    "related_request_count",
+                    "related_request_ids",
+                    "bucket_hits",
+                    "screening_score",
+                    "screening_reason",
+                    "selected_for_master",
+                    "selected_for_deep_dive",
+                    "followup_status",
+                    "followup_note",
+                    "deep_dive_count",
+                    "deep_dive_status",
+                    "latest_deep_dive_id",
+                    "latest_deep_dive_at",
+                    "evidence_status",
+                    "related_object_ids",
+                    "report_group_hint",
+                    "writing_note",
+                ],
+                [[
+                    "if-1", "interface_cluster", "bizsystem_1065", "2026-04-12-check", "URI/demo/request", "demo-app",
+                    "240000", "2400", "100", "1.2", "2.5", "6", "1", "req-1", "high_avg_rt", "2", "平均响应时间命中筛选阈值",
+                    "true", "true", "待确认", "", "0", "not_started", "", "", "待补证据", "req-1", "", ""
+                ]],
+            )
+            self._write_csv(
                 evidence_root / "request_evidence_index.csv",
                 ["object_id", "object_type", "latest_deep_dive_id", "deep_dive_status", "followup_status", "evidence_status", "page_link_count", "trace_link_count", "screenshot_hint_status", "related_object_ids", "writing_note"],
                 [["req-1", "request", "", "", "待确认", "待补证据", "", "", "待补充", "", ""]],
+            )
+            self._write_csv(
+                evidence_root / "interface_cluster_evidence_index.csv",
+                ["object_id", "object_type", "latest_deep_dive_id", "deep_dive_status", "followup_status", "evidence_status", "page_link_count", "trace_link_count", "screenshot_hint_status", "related_request_ids", "writing_note"],
+                [["if-1", "interface_cluster", "", "", "待确认", "待补证据", "", "", "待补充", "req-1", ""]],
             )
             self._write_csv(
                 evidence_root / "sql_evidence_index.csv",
@@ -311,6 +398,17 @@ class MasterTablesPipelineTests(unittest.TestCase):
                             "impact_scope": "cross_object",
                             "evidence_strength": "strong",
                         },
+                        {
+                            "candidate_key": "interface:1",
+                            "object_type": "interface_cluster",
+                            "source_master_table": "interface_cluster_master.csv",
+                            "deep_dive_kind": "interface_cluster_context",
+                            "deep_dive_scope": "local",
+                            "display_name": "URI/demo/request",
+                            "selection_reason": "需要继续查看接口簇上下文。",
+                            "pack_source": "action_fact_sheet",
+                            "master_match_hints": {"cluster_name": "URI/demo/request", "display_name": "URI/demo/request"},
+                        },
                     ],
                     "selected_target_expansions": [
                         {
@@ -337,6 +435,18 @@ class MasterTablesPipelineTests(unittest.TestCase):
                             },
                             "evidence": [{"id": "sql-1", "source_api": "sql/detail", "source_path": "/sql/detail"}],
                         },
+                        {
+                            "candidate_key": "interface:1",
+                            "candidate_type": "interface_cluster",
+                            "pack_type": "action_fact_sheet",
+                            "payload": {
+                                "action": {"name": "URI/demo/request"},
+                                "page_links": [{"url": "http://example/interface/1", "page_type": "action_detail"}],
+                                "screenshot_hints": [{"purpose": "说明接口簇上下文", "url": "http://example/interface/1"}],
+                                "evidence_linkage": {"related_traces": [{"trace_id_numeric": "3", "actionName": "URI/demo/request"}]},
+                            },
+                            "evidence": [{"id": "if-1", "source_api": "action/detail", "source_path": "/action/detail"}],
+                        },
                     ],
                 },
             )
@@ -347,15 +457,21 @@ class MasterTablesPipelineTests(unittest.TestCase):
                 batch_key="2026-04-12-check",
                 source_json=source_json,
             )
-            self.assertEqual(summary["materialized_count"], 2)
+            self.assertEqual(summary["materialized_count"], 3)
             registry_path = diagnostics / "04_deep_dive" / "deep_dive_registry.csv"
             registry_text = registry_path.read_text(encoding="utf-8")
             self.assertIn("request_master.csv", registry_text)
+            self.assertIn("interface_cluster_master.csv", registry_text)
             self.assertIn("sql_master.csv", registry_text)
             request_master_text = (master_root / "request_master.csv").read_text(encoding="utf-8")
             self.assertIn("deep_dive_count", request_master_text)
             self.assertIn("completed", request_master_text)
             self.assertIn("已挂接deep-dive", request_master_text)
+            interface_master_text = (master_root / "interface_cluster_master.csv").read_text(encoding="utf-8")
+            self.assertIn("completed", interface_master_text)
+            interface_evidence_text = (evidence_root / "interface_cluster_evidence_index.csv").read_text(encoding="utf-8")
+            self.assertIn("latest_deep_dive_id", interface_evidence_text)
+            self.assertIn("已生成", interface_evidence_text)
             request_evidence_text = (evidence_root / "request_evidence_index.csv").read_text(encoding="utf-8")
             self.assertIn("latest_deep_dive_id", request_evidence_text)
             self.assertIn("已生成", request_evidence_text)

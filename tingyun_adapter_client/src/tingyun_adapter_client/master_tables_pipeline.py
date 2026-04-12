@@ -367,6 +367,19 @@ EVIDENCE_INDEX_COLUMNS = {
         "related_object_ids",
         "writing_note",
     ],
+    "interface_cluster_evidence_index.csv": [
+        "object_id",
+        "object_type",
+        "latest_deep_dive_id",
+        "deep_dive_status",
+        "followup_status",
+        "evidence_status",
+        "page_link_count",
+        "trace_link_count",
+        "screenshot_hint_status",
+        "related_request_ids",
+        "writing_note",
+    ],
     "sql_evidence_index.csv": [
         "object_id",
         "object_type",
@@ -542,6 +555,14 @@ def prepare_master_table_inputs(
     output_files.append("request_prepared.csv")
 
     interface_rows = _prepare_interface_rows(grouped["interface_cluster"], system_key, batch_key, effective_rules["interface_cluster"])
+    if not interface_rows and request_rows:
+        interface_rows = _synthesize_interface_rows_from_request_rows(
+            request_rows,
+            system_key=system_key,
+            batch_key=batch_key,
+            rules=effective_rules["interface_cluster"],
+        )
+        warnings.append("interface_cluster_prepared.csv was synthesized from request_prepared rows because no interface_list raw export was available.")
     _write_csv(prepared_root / "interface_cluster_prepared.csv", INTERFACE_PREPARED_COLUMNS, interface_rows)
     output_files.append("interface_cluster_prepared.csv")
 
@@ -617,6 +638,7 @@ def materialize_master_tables(
         MASTER_COLUMNS["interface_cluster_master.csv"],
         object_type="interface_cluster",
     )
+    interface_master = _enrich_interface_master_rows(interface_master, request_master)
     _write_csv(master_root / "interface_cluster_master.csv", MASTER_COLUMNS["interface_cluster_master.csv"], interface_master)
     outputs.append("interface_cluster_master.csv")
     row_counts["interface_cluster_master"] = len(interface_master)
@@ -658,6 +680,30 @@ def materialize_master_tables(
     _write_csv(evidence_root / "request_evidence_index.csv", EVIDENCE_INDEX_COLUMNS["request_evidence_index.csv"], request_evidence_rows)
     outputs.append("request_evidence_index.csv")
     row_counts["request_evidence_index"] = len(request_evidence_rows)
+
+    interface_evidence_rows = [
+        {
+            "object_id": row["object_id"],
+            "object_type": "interface_cluster",
+            "latest_deep_dive_id": row.get("latest_deep_dive_id", ""),
+            "deep_dive_status": row.get("deep_dive_status", ""),
+            "followup_status": row["followup_status"],
+            "evidence_status": row.get("evidence_status", "待补证据"),
+            "page_link_count": "",
+            "trace_link_count": "",
+            "screenshot_hint_status": "待补充",
+            "related_request_ids": row.get("related_request_ids", ""),
+            "writing_note": row.get("writing_note", ""),
+        }
+        for row in interface_master
+    ]
+    _write_csv(
+        evidence_root / "interface_cluster_evidence_index.csv",
+        EVIDENCE_INDEX_COLUMNS["interface_cluster_evidence_index.csv"],
+        interface_evidence_rows,
+    )
+    outputs.append("interface_cluster_evidence_index.csv")
+    row_counts["interface_cluster_evidence_index"] = len(interface_evidence_rows)
 
     sql_evidence_rows = [
         {
@@ -976,7 +1022,11 @@ def sync_evidence_indexes_with_deep_dive_registry(
     registry_index = _index_deep_dive_registry(registry_rows)
     updated_files: list[str] = []
 
-    for filename, object_type in {"request_evidence_index.csv": "request", "sql_evidence_index.csv": "sql"}.items():
+    for filename, object_type in {
+        "request_evidence_index.csv": "request",
+        "interface_cluster_evidence_index.csv": "interface_cluster",
+        "sql_evidence_index.csv": "sql",
+    }.items():
         evidence_path = diagnostics_root / "03_evidence_indexes" / filename
         if not evidence_path.exists():
             continue
@@ -1357,6 +1407,65 @@ def _prepare_interface_rows(
     return rows
 
 
+def _synthesize_interface_rows_from_request_rows(
+    request_rows: list[dict[str, Any]],
+    *,
+    system_key: str,
+    batch_key: str,
+    rules: dict[str, Any],
+) -> list[dict[str, Any]]:
+    grouped: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+    for row in request_rows:
+        cluster_name = str(row.get("canonical_name") or row.get("display_name") or "").strip()
+        application_name = str(row.get("application_name") or "").strip()
+        if not cluster_name:
+            continue
+        grouped[(cluster_name, application_name)].append(row)
+
+    rows: list[dict[str, Any]] = []
+    for (cluster_name, application_name), members in grouped.items():
+        request_count = sum(_to_float(item.get("request_count")) or 0.0 for item in members)
+        total_time_ms = sum(_to_float(item.get("total_time_ms")) or 0.0 for item in members)
+        tps = sum(_to_float(item.get("tps")) or 0.0 for item in members)
+        error_count = sum(_to_float(item.get("error_count")) or 0.0 for item in members)
+        avg_rt_ms = total_time_ms / request_count if request_count else max((_to_float(item.get("avg_rt_ms")) or 0.0) for item in members)
+        error_rate_pct = (error_count / request_count * 100.0) if request_count else max((_to_float(item.get("error_rate_pct")) or 0.0) for item in members)
+        buckets: list[str] = []
+        if avg_rt_ms and avg_rt_ms >= rules["high_avg_rt_ms"]:
+            buckets.append("high_avg_rt")
+        if total_time_ms and total_time_ms >= rules["high_total_time_ms"]:
+            buckets.append("high_total_time")
+        if error_rate_pct and error_rate_pct >= rules["high_error_rate_pct"]:
+            buckets.append("high_error_rate")
+        screening_score = len(buckets)
+        rows.append(
+            {
+                "object_id": _hash_id(f"interface-cluster:{cluster_name}"),
+                "object_type": "interface_cluster",
+                "system_key": system_key,
+                "batch_key": batch_key,
+                "cluster_name": cluster_name,
+                "application_name": application_name,
+                "total_time_ms": _stringify_number(total_time_ms),
+                "avg_rt_ms": _stringify_number(avg_rt_ms),
+                "request_count": _stringify_number(request_count),
+                "tps": _stringify_number(tps),
+                "error_rate_pct": _stringify_number(error_rate_pct),
+                "error_count": _stringify_number(error_count),
+                "bucket_hits": ";".join(buckets),
+                "screening_score": str(screening_score),
+                "screening_reason": "; ".join(_reason_text(buckets)),
+                "selected_for_master": "false",
+                "source_case_key": "synthesized_from_request_prepared",
+                "source_export_key": "synthesized_from_request_prepared",
+                "source_file": "01_prepared_tables/request_prepared.csv",
+                "source_summary_file": "",
+            }
+        )
+    _mark_top_n(rows, rules["top_n"])
+    return rows
+
+
 def _prepare_sql_rows(
     entries: list[dict[str, Any]],
     system_key: str,
@@ -1639,6 +1748,27 @@ def _materialize_master(prepared_path: Path, columns: list[str], *, object_type:
     return rows
 
 
+def _enrich_interface_master_rows(
+    interface_rows: list[dict[str, str]],
+    request_rows: list[dict[str, str]],
+) -> list[dict[str, str]]:
+    request_groups: dict[str, list[dict[str, str]]] = defaultdict(list)
+    for request in request_rows:
+        cluster_name = str(request.get("canonical_name") or request.get("display_name") or "").strip()
+        if cluster_name:
+            request_groups[cluster_name].append(request)
+    for row in interface_rows:
+        group = request_groups.get(str(row.get("cluster_name") or "").strip(), [])
+        related_ids = [str(item.get("object_id") or "") for item in group if str(item.get("object_id") or "")]
+        if "related_request_count" in row:
+            row["related_request_count"] = str(len(related_ids))
+        if "related_request_ids" in row:
+            row["related_request_ids"] = ";".join(related_ids)
+        if "related_object_ids" in row and not row.get("related_object_ids"):
+            row["related_object_ids"] = ";".join(related_ids)
+    return interface_rows
+
+
 def _load_deep_dive_source_payload(path: Path) -> dict[str, Any]:
     loaded = _load_json(path)
     if isinstance(loaded.get("payload"), dict) and (
@@ -1746,12 +1876,19 @@ def _match_request_master_row(
     source_master_table: str,
 ) -> dict[str, str] | None:
     names: list[str] = []
+    application_names: list[str] = []
     hints = seed.get("master_match_hints") or {}
     names.extend(
         [
             str(hints.get("action_name") or ""),
             str(hints.get("display_name") or ""),
             str(((hints.get("target_ref") or {}).get("action_name")) or ""),
+        ]
+    )
+    application_names.extend(
+        [
+            str(hints.get("application_name") or ""),
+            str(((hints.get("target_ref") or {}).get("application_name")) or ""),
         ]
     )
     for expansion in expansions:
@@ -1765,10 +1902,17 @@ def _match_request_master_row(
                 str((payload.get("action") or {}).get("name") or ""),
             ]
         )
+        application_names.append(str((payload.get("action") or {}).get("application_name") or ""))
     normalized_names = [item for item in (_normalize_request_name(name) for name in names) if item]
+    normalized_apps = [item for item in (str(name).strip() for name in application_names) if item]
     if not normalized_names:
         return None
-    for row in rows:
+    preferred_rows = rows
+    if normalized_apps:
+        matching_apps = [row for row in rows if str(row.get("application_name") or "").strip() in normalized_apps]
+        if matching_apps:
+            preferred_rows = matching_apps
+    for row in preferred_rows:
         row_candidates = {
             _normalize_request_name(str(row.get("canonical_name") or "")),
             _normalize_request_name(str(row.get("display_name") or "")),
@@ -1829,11 +1973,19 @@ def _match_interface_master_row(
 ) -> dict[str, str] | None:
     hints = seed.get("master_match_hints") or {}
     names = [str(hints.get("display_name") or ""), str(hints.get("cluster_name") or "")]
+    application_names = [str(hints.get("application_name") or "")]
     for expansion in expansions:
         payload = expansion.get("payload") or {}
         names.append(str((payload.get("selector") or {}).get("clusterName") or ""))
+        application_names.append(str((payload.get("action") or {}).get("application_name") or ""))
     normalized_names = [item for item in (_normalize_request_name(name) for name in names) if item]
-    for row in rows:
+    normalized_apps = [item for item in (str(name).strip() for name in application_names) if item]
+    preferred_rows = rows
+    if normalized_apps:
+        matching_apps = [row for row in rows if str(row.get("application_name") or "").strip() in normalized_apps]
+        if matching_apps:
+            preferred_rows = matching_apps
+    for row in preferred_rows:
         row_candidates = {
             _normalize_request_name(str(row.get("cluster_name") or "")),
             _normalize_request_name(str(row.get("application_name") or "")),
