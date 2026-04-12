@@ -169,6 +169,29 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.cli materialize-master-tables
 - 初始化 `04_deep_dive/deep_dive_registry.csv` 和对象类型目录
 - 给 `request_master.csv`、`sql_master.csv`、`interface_cluster_master.csv` 等主表补齐 deep-dive 摘要字段
 
+如果当前已经拿到 `report_fact_pack.json`、review bundle JSON，或者任何包含：
+
+- `deep_dive_targets`
+- `selected_target_expansions`
+
+的 JSON 文件，还可以继续把 deep-dive 真正落到 diagnostics 主线里：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli materialize-deep-dive \
+  --diagnostics-dir /Users/wangrundong/work/mywork/artifacts/monitored_systems/<system_key>/<batch_key>/diagnostics \
+  --system-key <system_key> \
+  --batch-key <batch_key> \
+  --source-json /Users/wangrundong/work/mywork/artifacts/monitored_systems/<system_key>/<batch_key>/report_materials/report_pack/04_raw/report_fact_pack.json
+```
+
+这一步会做四件事：
+
+- 读取 `deep_dive_targets + selected_target_expansions`
+- 匹配 `request_master.csv / sql_master.csv / interface_cluster_master.csv`
+- 落 `04_deep_dive/deep_dive_registry.csv` 和真实 bundle 目录
+- 回写主表与 `request_evidence_index.csv / sql_evidence_index.csv`
+
 也可以直接运行模块脚本：
 
 - `python3 -m tingyun_adapter_client.prepare_master_table_inputs --rules-file <screening_rules.json>`

@@ -178,6 +178,29 @@ deep-dive 现在明确采用“一对象对多 bundle”的组织方式，而不
 - 给主表补齐 deep-dive 摘要字段默认值
 - 提供 deep-dive bundle 初始化与 registry 同步辅助函数
 
+当前 client 还新增了一个最小闭环入口：
+
+- `materialize-deep-dive`
+
+它会从 `report_fact_pack.json` 或 review bundle JSON 中读取：
+
+- `deep_dive_targets`
+- `selected_target_expansions`
+
+并完成：
+
+- seed 匹配到 master table
+- registry 落盘
+- bundle 目录物化
+- master table 回写
+- evidence index 回写
+
+当前优先支持的对象类型是：
+
+- `request`
+- `sql`
+- `interface_cluster`
+
 ## 8. 当前仍然保留的 adapter 缺口
 
 1. adapter 还没有在 pack 构建阶段直接产出“精确等于 master table object_id”的回写键

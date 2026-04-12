@@ -8,7 +8,7 @@ from typing import Any
 from .component_analysis_exports import export_component_analysis_raw
 from .config import RemoteClientSettings
 from .http_client import AdapterRemoteClient
-from .master_tables_pipeline import materialize_master_tables, prepare_master_table_inputs
+from .master_tables_pipeline import materialize_deep_dive_from_source, materialize_master_tables, prepare_master_table_inputs
 from .report_pack_builder import build_report_pack
 
 
@@ -83,6 +83,15 @@ def _build_parser() -> argparse.ArgumentParser:
     materialize_tables.add_argument("--diagnostics-dir", required=True)
     materialize_tables.add_argument("--system-key", required=True)
     materialize_tables.add_argument("--batch-key", required=True)
+
+    materialize_deep_dive = subparsers.add_parser(
+        "materialize-deep-dive",
+        help="Build 04_deep_dive bundles and sync master/evidence indexes from report_fact/review JSON.",
+    )
+    materialize_deep_dive.add_argument("--diagnostics-dir", required=True)
+    materialize_deep_dive.add_argument("--system-key", required=True)
+    materialize_deep_dive.add_argument("--batch-key", required=True)
+    materialize_deep_dive.add_argument("--source-json", required=True)
     return parser
 
 
@@ -221,6 +230,13 @@ def main() -> None:
             system_key=args.system_key,
             batch_key=args.batch_key,
         )
+    elif args.command == "materialize-deep-dive":
+        payload = materialize_deep_dive_from_source(
+            args.diagnostics_dir,
+            system_key=args.system_key,
+            batch_key=args.batch_key,
+            source_json=args.source_json,
+        )
     else:
         payload = {
             "service_base_url": settings.service_base_url,
@@ -235,6 +251,7 @@ def main() -> None:
                 "export-component-analysis-raw",
                 "prepare-master-table-inputs",
                 "materialize-master-tables",
+                "materialize-deep-dive",
             ],
         }
 

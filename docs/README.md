@@ -34,4 +34,8 @@
 - `workflows/apm-export-tables-to-master-tables.md`
 - `architecture/deep-dive-stage-and-adapter-bridge.md`
 
+如果要接手 deep-dive 的落盘与回写，建议再读：
+
+- `workflows/client-materialization-boundary.md`
+
 `decisions/` 保留历史阶段上下文、legacy 设计和阶段判断，不作为当前事实来源。当前仓库以三份主设计文档及其补充文档为准。

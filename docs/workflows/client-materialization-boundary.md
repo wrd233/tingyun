@@ -59,3 +59,21 @@ diagnostics/
 - 创建 `deep_dive_registry.csv`
 - 初始化 `request/`、`sql/`、`interface_cluster/`、`application/`、`dependency/`、`shared/`
 - 给主表补齐 `selected_for_deep_dive / deep_dive_count / deep_dive_status / latest_deep_dive_id / latest_deep_dive_at` 等摘要字段
+
+如果本地已经有 `report_fact_pack.json` 或 review bundle JSON，当前 client 还支持继续执行：
+
+- `materialize-deep-dive`
+
+它会读取：
+
+- `deep_dive_targets`
+- `selected_target_expansions`
+
+并把它们真正落为：
+
+- `04_deep_dive/deep_dive_registry.csv`
+- `04_deep_dive/request/<object_id>/<deep_dive_id>/`
+- `04_deep_dive/sql/<object_id>/<deep_dive_id>/`
+- `04_deep_dive/interface_cluster/<object_id>/<deep_dive_id>/`
+
+同时把 `latest_deep_dive_id / deep_dive_status / page_link_count / trace_link_count / screenshot_hint_status` 回写到主表和证据索引。

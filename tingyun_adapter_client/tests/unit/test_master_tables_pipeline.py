@@ -9,6 +9,7 @@ from pathlib import Path
 from tingyun_adapter_client.master_tables_pipeline import (
     build_export_registry,
     initialize_deep_dive_bundle,
+    materialize_deep_dive_from_source,
     materialize_master_tables,
     prepare_master_table_inputs,
 )
@@ -170,6 +171,194 @@ class MasterTablesPipelineTests(unittest.TestCase):
             registry = (diagnostics / "04_deep_dive" / "deep_dive_registry.csv").read_text(encoding="utf-8")
             self.assertIn("sql-dd-001", registry)
             self.assertIn("sql_master.csv", registry)
+
+    def test_materialize_deep_dive_from_source_updates_registry_master_and_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            diagnostics = Path(tmpdir) / "diagnostics"
+            master_root = diagnostics / "02_master_tables"
+            evidence_root = diagnostics / "03_evidence_indexes"
+            master_root.mkdir(parents=True, exist_ok=True)
+            evidence_root.mkdir(parents=True, exist_ok=True)
+
+            self._write_csv(
+                master_root / "request_master.csv",
+                [
+                    "object_id",
+                    "object_type",
+                    "system_key",
+                    "batch_key",
+                    "canonical_name",
+                    "display_name",
+                    "alias_name",
+                    "application_name",
+                    "request_type",
+                    "interface_cluster_key",
+                    "avg_rt_ms",
+                    "p50_ms",
+                    "p75_ms",
+                    "p95_ms",
+                    "p99_ms",
+                    "apdex",
+                    "total_time_ms",
+                    "time_share_pct",
+                    "request_count",
+                    "tps",
+                    "error_rate_pct",
+                    "error_count",
+                    "slow_count",
+                    "exception_count",
+                    "bucket_hits",
+                    "screening_score",
+                    "screening_reason",
+                    "selected_for_master",
+                    "selected_for_deep_dive",
+                    "followup_status",
+                    "followup_note",
+                    "deep_dive_count",
+                    "deep_dive_status",
+                    "latest_deep_dive_id",
+                    "latest_deep_dive_at",
+                    "evidence_status",
+                    "related_sql_count",
+                    "related_object_ids",
+                    "report_group_hint",
+                    "writing_note",
+                ],
+                [[
+                    "req-1", "request", "bizsystem_1065", "2026-04-12-check", "URI/demo/request", "URI/demo/request", "", "demo-app",
+                    "Web请求", "cluster-1", "2400", "100", "200", "500", "900", "0.7", "240000", "15", "100", "1.2", "2.5", "6", "20", "3",
+                    "high_avg_rt", "3", "平均响应时间命中筛选阈值", "true", "true", "待确认", "", "0", "not_started", "", "", "待补证据", "0", "", "", ""
+                ]],
+            )
+            self._write_csv(
+                master_root / "sql_master.csv",
+                [
+                    "object_id",
+                    "object_type",
+                    "system_key",
+                    "batch_key",
+                    "source_db_key",
+                    "source_db_name",
+                    "sql_group_key",
+                    "representative_sql",
+                    "query_object_hint",
+                    "avg_rt_ms",
+                    "total_time_ms",
+                    "qps",
+                    "exec_count",
+                    "error_count",
+                    "slow_count",
+                    "bucket_hits",
+                    "screening_score",
+                    "screening_reason",
+                    "selected_by_global_rank",
+                    "selected_by_db_rank",
+                    "selected_for_master",
+                    "selected_for_deep_dive",
+                    "followup_status",
+                    "followup_note",
+                    "deep_dive_count",
+                    "deep_dive_status",
+                    "latest_deep_dive_id",
+                    "latest_deep_dive_at",
+                    "evidence_status",
+                    "related_request_ids",
+                    "related_object_ids",
+                    "report_group_hint",
+                    "writing_note",
+                ],
+                [[
+                    "sql-1", "sql", "bizsystem_1065", "2026-04-12-check", "db_main", "main-db", "sql-group-1", "SELECT * FROM orders", "orders",
+                    "1800", "36000", "1.2", "20", "0", "5", "high_avg_rt", "3", "平均响应时间命中筛选阈值", "true", "true", "true", "true",
+                    "待确认", "", "0", "not_started", "", "", "待补证据", "", "", "", ""
+                ]],
+            )
+            self._write_csv(
+                evidence_root / "request_evidence_index.csv",
+                ["object_id", "object_type", "latest_deep_dive_id", "deep_dive_status", "followup_status", "evidence_status", "page_link_count", "trace_link_count", "screenshot_hint_status", "related_object_ids", "writing_note"],
+                [["req-1", "request", "", "", "待确认", "待补证据", "", "", "待补充", "", ""]],
+            )
+            self._write_csv(
+                evidence_root / "sql_evidence_index.csv",
+                ["object_id", "object_type", "latest_deep_dive_id", "deep_dive_status", "followup_status", "evidence_status", "page_link_count", "trace_link_count", "screenshot_hint_status", "related_request_ids", "writing_note"],
+                [["sql-1", "sql", "", "", "待确认", "待补证据", "", "", "待补充", "", ""]],
+            )
+
+            source_json = diagnostics / "deep_dive_source.json"
+            self._write_json(
+                source_json,
+                {
+                    "deep_dive_targets": [
+                        {
+                            "candidate_key": "trace:1",
+                            "candidate_type": "trace",
+                            "target_ref": {"kind": "trace", "trace_id_numeric": "1"},
+                            "display_name": "1",
+                            "selection_reason": "需要继续查看 request 代表 trace。",
+                            "source_packs": ["trace_case_pack"],
+                            "recommended_next_packs": ["trace_fact_sheet"],
+                            "impact_scope": "core_path",
+                            "evidence_strength": "strong",
+                        },
+                        {
+                            "candidate_key": "sql:1",
+                            "candidate_type": "sql",
+                            "target_ref": {"kind": "sql", "component_name": "db_main", "op_name": "SELECT * FROM orders"},
+                            "display_name": "sql:1",
+                            "selection_reason": "需要继续查看 SQL 细节。",
+                            "source_packs": ["slow_sql_pack"],
+                            "recommended_next_packs": ["sql_fact_sheet", "database_component_pack"],
+                            "impact_scope": "cross_object",
+                            "evidence_strength": "strong",
+                        },
+                    ],
+                    "selected_target_expansions": [
+                        {
+                            "candidate_key": "trace:1",
+                            "candidate_type": "trace",
+                            "pack_type": "trace_fact_sheet",
+                            "payload": {
+                                "detail_summary": {"actionName": "URI/demo/request"},
+                                "page_links": [{"url": "http://example/request/1", "page_type": "trace_detail"}],
+                                "screenshot_hints": [{"purpose": "说明 request trace", "url": "http://example/request/1"}],
+                                "evidence_linkage": {"related_traces": [{"trace_id_numeric": "1", "actionName": "URI/demo/request"}]},
+                            },
+                            "evidence": [{"id": "trace-1", "source_api": "trace/detail", "source_path": "/trace/detail"}],
+                        },
+                        {
+                            "candidate_key": "sql:1",
+                            "candidate_type": "sql",
+                            "pack_type": "sql_fact_sheet",
+                            "payload": {
+                                "selector": {"opName": "SELECT * FROM orders"},
+                                "page_links": [{"url": "http://example/sql/1", "page_type": "sql_detail"}],
+                                "screenshot_hints": [{"purpose": "说明 SQL 明细", "url": "http://example/sql/1"}],
+                                "evidence_linkage": {"related_traces": [{"trace_id_numeric": "2", "actionName": "URI/demo/request"}]},
+                            },
+                            "evidence": [{"id": "sql-1", "source_api": "sql/detail", "source_path": "/sql/detail"}],
+                        },
+                    ],
+                },
+            )
+
+            summary = materialize_deep_dive_from_source(
+                diagnostics,
+                system_key="bizsystem_1065",
+                batch_key="2026-04-12-check",
+                source_json=source_json,
+            )
+            self.assertEqual(summary["materialized_count"], 2)
+            registry_path = diagnostics / "04_deep_dive" / "deep_dive_registry.csv"
+            registry_text = registry_path.read_text(encoding="utf-8")
+            self.assertIn("request_master.csv", registry_text)
+            self.assertIn("sql_master.csv", registry_text)
+            request_master_text = (master_root / "request_master.csv").read_text(encoding="utf-8")
+            self.assertIn("deep_dive_count", request_master_text)
+            self.assertIn("completed", request_master_text)
+            self.assertIn("已挂接deep-dive", request_master_text)
+            request_evidence_text = (evidence_root / "request_evidence_index.csv").read_text(encoding="utf-8")
+            self.assertIn("latest_deep_dive_id", request_evidence_text)
+            self.assertIn("已生成", request_evidence_text)
 
 
 if __name__ == "__main__":

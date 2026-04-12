@@ -1,0 +1,26 @@
+{
+  "deep_dive_id": "dd_20260412T162340Z_24fdde55",
+  "object_id": "db_mysql_10_190_22_21_3306:552c1e9df1dc18f9",
+  "object_type": "sql",
+  "system_key": "bizsystem_1065",
+  "batch_key": "2026-04-12-live-export-test-2210",
+  "source_master_table": "sql_master.csv",
+  "deep_dive_kind": "sql_bottleneck",
+  "deep_dive_scope": "local",
+  "pack_source": "sql_fact_sheet",
+  "status": "materialized",
+  "summary": "manual_sql_fact_sheet_validation",
+  "generated_at": "2026-04-12T16:23:40.299328+00:00",
+  "bundle_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/04_deep_dive/sql/db_mysql_10_190_22_21_3306_552c1e9df1dc18f9/dd_20260412T162340Z_24fdde55",
+  "related_object_ids": [
+    "request_hint:13526",
+    "request_hint:13900",
+    "sql_hint:552c1e9df1dc"
+  ],
+  "suspected_cluster_key": "sql:db_mysql_10_190_22_21_3306",
+  "report_group_hint": "sql:local:manual-validation",
+  "evidence_count": 4,
+  "page_link_count": 2,
+  "screenshot_hint_count": 2,
+  "trace_link_count": 0
+}

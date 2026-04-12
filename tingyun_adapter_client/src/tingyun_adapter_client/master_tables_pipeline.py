@@ -13,6 +13,11 @@ from typing import Any
 
 from .xls_parsing import parse_component_operation_xls
 
+try:
+    from tingyun_adapter.usecases.deep_dive_protocol import build_deep_dive_seed as _adapter_build_deep_dive_seed
+except Exception:  # pragma: no cover - optional cross-project import
+    _adapter_build_deep_dive_seed = None
+
 
 CSV_EXPORT_PATTERNS = {
     "application": "graph_overview_export_application__*.csv",
@@ -352,6 +357,8 @@ EVIDENCE_INDEX_COLUMNS = {
     "request_evidence_index.csv": [
         "object_id",
         "object_type",
+        "latest_deep_dive_id",
+        "deep_dive_status",
         "followup_status",
         "evidence_status",
         "page_link_count",
@@ -363,6 +370,8 @@ EVIDENCE_INDEX_COLUMNS = {
     "sql_evidence_index.csv": [
         "object_id",
         "object_type",
+        "latest_deep_dive_id",
+        "deep_dive_status",
         "followup_status",
         "evidence_status",
         "page_link_count",
@@ -408,6 +417,16 @@ DEEP_DIVE_BUNDLE_FILE_COLUMNS = {
     "evidence_index.csv": ["evidence_id", "evidence_type", "source_pack", "source_ref", "summary", "status"],
     "screenshot_hints.csv": ["screenshot_purpose", "page_url", "suggested_area", "subject", "usage_note"],
 }
+
+MASTER_FILE_BY_OBJECT_TYPE = {
+    "application": "application_master.csv",
+    "request": "request_master.csv",
+    "interface_cluster": "interface_cluster_master.csv",
+    "sql": "sql_master.csv",
+    "nosql": "nosql_master.csv",
+}
+
+SUPPORTED_DEEP_DIVE_OBJECT_TYPES = {"request", "sql", "interface_cluster"}
 
 DEFAULT_RULES = {
     "application": {
@@ -624,6 +643,8 @@ def materialize_master_tables(
         {
             "object_id": row["object_id"],
             "object_type": "request",
+            "latest_deep_dive_id": row.get("latest_deep_dive_id", ""),
+            "deep_dive_status": row.get("deep_dive_status", ""),
             "followup_status": row["followup_status"],
             "evidence_status": row.get("evidence_status", "待补证据"),
             "page_link_count": "",
@@ -642,6 +663,8 @@ def materialize_master_tables(
         {
             "object_id": row["object_id"],
             "object_type": "sql",
+            "latest_deep_dive_id": row.get("latest_deep_dive_id", ""),
+            "deep_dive_status": row.get("deep_dive_status", ""),
             "followup_status": row["followup_status"],
             "evidence_status": row.get("evidence_status", "待补证据"),
             "page_link_count": "",
@@ -666,6 +689,11 @@ def materialize_master_tables(
         system_key=system_key,
         batch_key=batch_key,
     )
+    evidence_sync_summary = sync_evidence_indexes_with_deep_dive_registry(
+        diagnostics_root,
+        system_key=system_key,
+        batch_key=batch_key,
+    )
     outputs.append(str((deep_dive_root / "deep_dive_registry.csv").relative_to(diagnostics_root)))
     row_counts["deep_dive_registry"] = sync_summary["registry_count"]
 
@@ -677,6 +705,7 @@ def materialize_master_tables(
         "row_counts": row_counts,
         "deep_dive_workspace": deep_dive_summary,
         "deep_dive_sync": sync_summary,
+        "deep_dive_evidence_sync": evidence_sync_summary,
     }
     _write_json(master_root / "materialization_summary.json", summary)
     return summary
@@ -832,6 +861,137 @@ def sync_master_tables_with_deep_dive_registry(
         "batch_key": batch_key,
         "registry_count": len(registry_rows),
         "updated_master_tables": updated_files,
+    }
+
+
+def materialize_deep_dive_from_source(
+    diagnostics_dir: str | Path,
+    *,
+    system_key: str,
+    batch_key: str,
+    source_json: str | Path,
+) -> dict[str, Any]:
+    diagnostics_root = Path(diagnostics_dir).expanduser().resolve()
+    source_path = Path(source_json).expanduser().resolve()
+    source_payload = _load_deep_dive_source_payload(source_path)
+    targets = list(source_payload.get("deep_dive_targets") or [])
+    expansions = list(source_payload.get("selected_target_expansions") or [])
+    expansions_by_key = _group_expansions_by_candidate_key(expansions)
+
+    initialize_deep_dive_workspace(diagnostics_root, system_key=system_key, batch_key=batch_key)
+    registry_rows = _read_csv_rows(diagnostics_root / "04_deep_dive" / "deep_dive_registry.csv")
+    materialized: list[dict[str, Any]] = []
+    warnings: list[str] = []
+
+    for target in targets:
+        seed = _coerce_deep_dive_seed(target)
+        object_type = str(seed.get("object_type") or "")
+        if object_type not in SUPPORTED_DEEP_DIVE_OBJECT_TYPES:
+            warnings.append(f"Skipped deep-dive target {target.get('candidate_key') or target.get('display_name')}: unsupported object_type={object_type}")
+            continue
+        matched = _match_seed_to_master_object(diagnostics_root, seed, expansions_by_key.get(str(target.get("candidate_key") or ""), []))
+        if matched is None:
+            warnings.append(f"Skipped deep-dive target {target.get('candidate_key') or target.get('display_name')}: no matching master-table object")
+            continue
+        object_id = matched["object_id"]
+        source_master_table = matched["source_master_table"]
+        bundle_input = _build_bundle_input(target, seed, expansions_by_key.get(str(target.get("candidate_key") or ""), []))
+        existing = _find_existing_deep_dive_row(
+            registry_rows,
+            object_id=object_id,
+            deep_dive_kind=str(seed.get("deep_dive_kind") or ""),
+            pack_source=str(bundle_input["pack_source"]),
+            summary=str(bundle_input["summary"]),
+        )
+        deep_dive_id = str(existing.get("deep_dive_id") or "") if existing else _new_deep_dive_id(target, object_id)
+        generated_at = str(existing.get("generated_at") or "") if existing else datetime.now(timezone.utc).isoformat()
+        manifest = initialize_deep_dive_bundle(
+            diagnostics_root,
+            system_key=system_key,
+            batch_key=batch_key,
+            object_id=object_id,
+            object_type=object_type,
+            source_master_table=source_master_table,
+            deep_dive_id=deep_dive_id,
+            deep_dive_kind=str(seed.get("deep_dive_kind") or ""),
+            deep_dive_scope=str(seed.get("deep_dive_scope") or "local"),
+            pack_source=str(bundle_input["pack_source"]),
+            summary=str(bundle_input["summary"]),
+            status=str(bundle_input["status"]),
+            generated_at=generated_at,
+            related_object_ids=";".join(seed.get("related_object_ids") or []),
+            suspected_cluster_key=str(seed.get("suspected_cluster_key") or ""),
+            report_group_hint=str(seed.get("report_group_hint") or ""),
+        )
+        _write_bundle_contents(
+            Path(manifest["bundle_path"]),
+            bundle_input=bundle_input,
+        )
+        materialized.append(
+            {
+                "deep_dive_id": deep_dive_id,
+                "object_id": object_id,
+                "object_type": object_type,
+                "source_master_table": source_master_table,
+                "bundle_path": manifest["bundle_path"],
+            }
+        )
+        registry_rows = _read_csv_rows(diagnostics_root / "04_deep_dive" / "deep_dive_registry.csv")
+
+    sync_summary = sync_master_tables_with_deep_dive_registry(
+        diagnostics_root,
+        system_key=system_key,
+        batch_key=batch_key,
+    )
+    evidence_sync_summary = sync_evidence_indexes_with_deep_dive_registry(
+        diagnostics_root,
+        system_key=system_key,
+        batch_key=batch_key,
+    )
+    summary = {
+        "system_key": system_key,
+        "batch_key": batch_key,
+        "diagnostics_dir": str(diagnostics_root),
+        "source_json": str(source_path),
+        "source_target_count": len(targets),
+        "source_expansion_count": len(expansions),
+        "materialized_count": len(materialized),
+        "materialized_bundles": materialized,
+        "warnings": warnings,
+        "deep_dive_sync": sync_summary,
+        "deep_dive_evidence_sync": evidence_sync_summary,
+    }
+    _write_json(diagnostics_root / "04_deep_dive" / "deep_dive_materialization_summary.json", summary)
+    return summary
+
+
+def sync_evidence_indexes_with_deep_dive_registry(
+    diagnostics_dir: str | Path,
+    *,
+    system_key: str,
+    batch_key: str,
+) -> dict[str, Any]:
+    diagnostics_root = Path(diagnostics_dir).expanduser().resolve()
+    registry_rows = _read_csv_rows(diagnostics_root / "04_deep_dive" / "deep_dive_registry.csv")
+    registry_index = _index_deep_dive_registry(registry_rows)
+    updated_files: list[str] = []
+
+    for filename, object_type in {"request_evidence_index.csv": "request", "sql_evidence_index.csv": "sql"}.items():
+        evidence_path = diagnostics_root / "03_evidence_indexes" / filename
+        if not evidence_path.exists():
+            continue
+        rows = _read_csv_rows(evidence_path)
+        updated_rows = [
+            _apply_deep_dive_evidence_state(row, object_type, registry_index.get(str(row.get("object_id") or ""), []))
+            for row in rows
+        ]
+        _write_csv(evidence_path, EVIDENCE_INDEX_COLUMNS[filename], updated_rows)
+        updated_files.append(filename)
+
+    return {
+        "system_key": system_key,
+        "batch_key": batch_key,
+        "updated_evidence_indexes": updated_files,
     }
 
 
@@ -1479,6 +1639,433 @@ def _materialize_master(prepared_path: Path, columns: list[str], *, object_type:
     return rows
 
 
+def _load_deep_dive_source_payload(path: Path) -> dict[str, Any]:
+    loaded = _load_json(path)
+    if isinstance(loaded.get("payload"), dict) and (
+        "deep_dive_targets" in loaded.get("payload", {}) or "selected_target_expansions" in loaded.get("payload", {})
+    ):
+        return dict(loaded["payload"])
+    if "deep_dive_targets" in loaded or "selected_target_expansions" in loaded:
+        return dict(loaded)
+    raise RuntimeError(f"{path} does not contain deep_dive_targets / selected_target_expansions")
+
+
+def _group_expansions_by_candidate_key(expansions: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for item in expansions:
+        grouped[str(item.get("candidate_key") or "")].append(item)
+    return grouped
+
+
+def _coerce_deep_dive_seed(target: dict[str, Any]) -> dict[str, Any]:
+    if all(key in target for key in ("object_type", "source_master_table", "deep_dive_kind")):
+        seed = {
+            "object_type": target.get("object_type"),
+            "source_master_table": target.get("source_master_table"),
+            "deep_dive_kind": target.get("deep_dive_kind"),
+            "deep_dive_scope": target.get("deep_dive_scope") or target.get("impact_scope") or "local",
+            "pack_source": target.get("pack_source") or ";".join(target.get("source_packs") or []),
+            "master_match_hints": target.get("master_match_hints") or {},
+            "suspected_cluster_key": target.get("suspected_cluster_key") or "",
+            "related_object_ids": target.get("related_object_ids") or [],
+            "report_group_hint": target.get("report_group_hint") or "",
+        }
+        if isinstance(seed["related_object_ids"], str):
+            seed["related_object_ids"] = _split_semicolon_list(str(seed["related_object_ids"]))
+        return seed
+    if _adapter_build_deep_dive_seed is not None:
+        return dict(_adapter_build_deep_dive_seed(target))
+    return _fallback_deep_dive_seed(target)
+
+
+def _fallback_deep_dive_seed(target: dict[str, Any]) -> dict[str, Any]:
+    candidate_type = str(target.get("candidate_type") or "")
+    target_ref = target.get("target_ref") or {}
+    object_type = "request"
+    source_master_table = "request_master.csv"
+    deep_dive_kind = "request_context"
+    if candidate_type == "sql" or str(target_ref.get("kind") or "") == "sql":
+        object_type = "sql"
+        source_master_table = "sql_master.csv"
+        deep_dive_kind = "sql_bottleneck"
+    elif candidate_type == "interface_cluster":
+        object_type = "interface_cluster"
+        source_master_table = "interface_cluster_master.csv"
+        deep_dive_kind = "interface_cluster_context"
+    elif candidate_type == "trace":
+        deep_dive_kind = "trace_primary"
+    match_hints: dict[str, Any] = {
+        "candidate_key": target.get("candidate_key"),
+        "display_name": target.get("display_name"),
+        "target_ref": target_ref,
+    }
+    if object_type == "sql":
+        match_hints["sql_text"] = target_ref.get("op_name") or target.get("display_name")
+        match_hints["component_name"] = target_ref.get("component_name")
+    else:
+        match_hints["action_name"] = target_ref.get("action_name") or target.get("display_name")
+    return {
+        "object_type": object_type,
+        "source_master_table": source_master_table,
+        "deep_dive_kind": deep_dive_kind,
+        "deep_dive_scope": target.get("deep_dive_scope") or target.get("impact_scope") or "local",
+        "pack_source": target.get("pack_source") or ";".join(target.get("source_packs") or target.get("recommended_next_packs") or []),
+        "master_match_hints": match_hints,
+        "suspected_cluster_key": f"{object_type}:{_hash_id(str(target.get('candidate_key') or target.get('display_name') or 'unknown'))[:10]}",
+        "related_object_ids": [],
+        "report_group_hint": f"{object_type}:{target.get('impact_scope') or 'local'}:{target.get('evidence_strength') or 'weak'}",
+    }
+
+
+def _match_seed_to_master_object(
+    diagnostics_root: Path,
+    seed: dict[str, Any],
+    expansions: list[dict[str, Any]],
+) -> dict[str, str] | None:
+    object_type = str(seed.get("object_type") or "")
+    filename = MASTER_FILE_BY_OBJECT_TYPE.get(object_type, "")
+    if not filename:
+        return None
+    master_path = diagnostics_root / "02_master_tables" / filename
+    if not master_path.exists():
+        return None
+    rows = _read_csv_rows(master_path)
+    if object_type == "request":
+        return _match_request_master_row(rows, seed, expansions, filename)
+    if object_type == "sql":
+        return _match_sql_master_row(rows, seed, expansions, filename)
+    if object_type == "interface_cluster":
+        return _match_interface_master_row(rows, seed, expansions, filename)
+    return None
+
+
+def _match_request_master_row(
+    rows: list[dict[str, str]],
+    seed: dict[str, Any],
+    expansions: list[dict[str, Any]],
+    source_master_table: str,
+) -> dict[str, str] | None:
+    names: list[str] = []
+    hints = seed.get("master_match_hints") or {}
+    names.extend(
+        [
+            str(hints.get("action_name") or ""),
+            str(hints.get("display_name") or ""),
+            str(((hints.get("target_ref") or {}).get("action_name")) or ""),
+        ]
+    )
+    for expansion in expansions:
+        payload = expansion.get("payload") or {}
+        detail = payload.get("detail_summary") or {}
+        trace = payload.get("trace") or {}
+        names.extend(
+            [
+                str(detail.get("actionName") or ""),
+                str(trace.get("actionName") or ""),
+                str((payload.get("action") or {}).get("name") or ""),
+            ]
+        )
+    normalized_names = [item for item in (_normalize_request_name(name) for name in names) if item]
+    if not normalized_names:
+        return None
+    for row in rows:
+        row_candidates = {
+            _normalize_request_name(str(row.get("canonical_name") or "")),
+            _normalize_request_name(str(row.get("display_name") or "")),
+            _normalize_request_name(str(row.get("alias_name") or "")),
+        }
+        row_candidates.discard("")
+        if any(name in row_candidates for name in normalized_names):
+            return {"object_id": str(row.get("object_id") or ""), "source_master_table": source_master_table}
+        if any(any(name in candidate or candidate in name for candidate in row_candidates) for name in normalized_names):
+            return {"object_id": str(row.get("object_id") or ""), "source_master_table": source_master_table}
+    return None
+
+
+def _match_sql_master_row(
+    rows: list[dict[str, str]],
+    seed: dict[str, Any],
+    expansions: list[dict[str, Any]],
+    source_master_table: str,
+) -> dict[str, str] | None:
+    sql_texts: list[str] = []
+    hints = seed.get("master_match_hints") or {}
+    target_ref = hints.get("target_ref") or {}
+    sql_texts.extend(
+        [
+            str(hints.get("sql_text") or ""),
+            str(hints.get("display_name") or ""),
+            str(target_ref.get("op_name") or ""),
+        ]
+    )
+    for expansion in expansions:
+        payload = expansion.get("payload") or {}
+        selector = payload.get("selector") or {}
+        sql_payload = payload.get("sql") or {}
+        sql_texts.extend(
+            [
+                str(selector.get("opName") or ""),
+                str(sql_payload.get("op_name_decoded") or ""),
+                str(sql_payload.get("opName") or ""),
+            ]
+        )
+    normalized_texts = [item for item in (_normalize_sql_text(text) for text in sql_texts) if item and not item.startswith("sql:")]
+    if not normalized_texts:
+        return None
+    for row in rows:
+        row_text = _normalize_sql_text(str(row.get("representative_sql") or ""))
+        if not row_text:
+            continue
+        if any(text == row_text or text in row_text or row_text in text for text in normalized_texts):
+            return {"object_id": str(row.get("object_id") or ""), "source_master_table": source_master_table}
+    return None
+
+
+def _match_interface_master_row(
+    rows: list[dict[str, str]],
+    seed: dict[str, Any],
+    expansions: list[dict[str, Any]],
+    source_master_table: str,
+) -> dict[str, str] | None:
+    hints = seed.get("master_match_hints") or {}
+    names = [str(hints.get("display_name") or ""), str(hints.get("cluster_name") or "")]
+    for expansion in expansions:
+        payload = expansion.get("payload") or {}
+        names.append(str((payload.get("selector") or {}).get("clusterName") or ""))
+    normalized_names = [item for item in (_normalize_request_name(name) for name in names) if item]
+    for row in rows:
+        row_candidates = {
+            _normalize_request_name(str(row.get("cluster_name") or "")),
+            _normalize_request_name(str(row.get("application_name") or "")),
+        }
+        row_candidates.discard("")
+        if any(name in row_candidates for name in normalized_names):
+            return {"object_id": str(row.get("object_id") or ""), "source_master_table": source_master_table}
+    return None
+
+
+def _build_bundle_input(
+    target: dict[str, Any],
+    seed: dict[str, Any],
+    expansions: list[dict[str, Any]],
+) -> dict[str, Any]:
+    page_links: list[dict[str, Any]] = []
+    screenshot_hints: list[dict[str, Any]] = []
+    evidence_rows: list[dict[str, Any]] = []
+    related_object_ids = list(seed.get("related_object_ids") or [])
+    pack_sources: list[str] = [part for part in str(seed.get("pack_source") or "").split(";") if part]
+
+    for expansion in expansions:
+        pack_type = str(expansion.get("pack_type") or "")
+        if pack_type:
+            pack_sources.append(pack_type)
+        payload = expansion.get("payload") or {}
+        page_links.extend(payload.get("page_links") or [])
+        screenshot_hints.extend(payload.get("screenshot_hints") or [])
+        evidence_rows.extend(_bundle_evidence_rows_for_expansion(expansion))
+        related_object_ids.extend(_related_object_hints_from_payload(payload))
+
+    page_links = _dedupe_json_items(page_links)
+    screenshot_hints = _dedupe_json_items(screenshot_hints)
+    evidence_rows = _dedupe_evidence_rows(evidence_rows)
+    related_object_ids = _unique_strings(related_object_ids)
+    return {
+        "status": "materialized" if expansions else "seeded",
+        "summary": str(target.get("selection_reason") or target.get("display_name") or ""),
+        "pack_source": ";".join(_unique_strings(pack_sources)),
+        "page_links": page_links,
+        "screenshot_hints": screenshot_hints,
+        "evidence_rows": evidence_rows,
+        "related_object_ids": related_object_ids,
+        "screenshot_hint_count": len(screenshot_hints),
+        "page_link_count": len(page_links),
+        "evidence_count": len(evidence_rows),
+        "trace_link_count": len([row for row in evidence_rows if row.get("evidence_type") in {"trace", "trace_link"}]),
+    }
+
+
+def _write_bundle_contents(bundle_dir: Path, *, bundle_input: dict[str, Any]) -> None:
+    _write_json(bundle_dir / "page_links.json", {"page_links": bundle_input["page_links"]})
+    _write_json(bundle_dir / "related_objects.json", {"related_object_ids": bundle_input["related_object_ids"]})
+    _write_csv(bundle_dir / "evidence_index.csv", DEEP_DIVE_BUNDLE_FILE_COLUMNS["evidence_index.csv"], bundle_input["evidence_rows"])
+    _write_csv(
+        bundle_dir / "screenshot_hints.csv",
+        DEEP_DIVE_BUNDLE_FILE_COLUMNS["screenshot_hints.csv"],
+        [_normalize_screenshot_hint_row(item) for item in bundle_input["screenshot_hints"]],
+    )
+    summary_payload = _load_json(bundle_dir / "summary.json")
+    summary_payload.update(
+        {
+            "status": bundle_input["status"],
+            "summary": bundle_input["summary"],
+            "evidence_count": bundle_input["evidence_count"],
+            "page_link_count": bundle_input["page_link_count"],
+            "screenshot_hint_count": bundle_input["screenshot_hint_count"],
+            "trace_link_count": bundle_input["trace_link_count"],
+            "related_object_ids": bundle_input["related_object_ids"],
+            "pack_source": bundle_input["pack_source"],
+        }
+    )
+    _write_json(bundle_dir / "summary.json", summary_payload)
+    (bundle_dir / "notes.md").write_text(
+        "# Notes\n\n"
+        f"- status: `{bundle_input['status']}`\n"
+        f"- page_link_count: `{bundle_input['page_link_count']}`\n"
+        f"- trace_link_count: `{bundle_input['trace_link_count']}`\n"
+        f"- screenshot_hint_count: `{bundle_input['screenshot_hint_count']}`\n",
+        encoding="utf-8",
+    )
+    _update_registry_row_from_bundle(bundle_dir, summary_payload)
+
+
+def _bundle_evidence_rows_for_expansion(expansion: dict[str, Any]) -> list[dict[str, Any]]:
+    pack_type = str(expansion.get("pack_type") or "")
+    payload = expansion.get("payload") or {}
+    evidence = list(expansion.get("evidence") or []) + list(payload.get("evidence") or [])
+    rows: list[dict[str, Any]] = []
+    for index, item in enumerate(evidence, start=1):
+        source_ref = str(item.get("source_path") or item.get("source_api") or item.get("id") or "")
+        summary = str(item.get("summary") or item.get("source_api") or item.get("id") or f"evidence-{index}")
+        rows.append(
+            {
+                "evidence_id": str(item.get("id") or f"{pack_type or 'pack'}-{index}"),
+                "evidence_type": str(item.get("type") or item.get("source_api") or "evidence"),
+                "source_pack": pack_type,
+                "source_ref": source_ref,
+                "summary": summary,
+                "status": "available",
+            }
+        )
+    for trace in ((payload.get("evidence_linkage") or {}).get("related_traces") or []):
+        trace_ref = str(trace.get("trace_id_numeric") or trace.get("traceGuid") or trace.get("requestId") or "")
+        rows.append(
+            {
+                "evidence_id": f"trace-link-{trace_ref or _hash_id(json.dumps(trace, ensure_ascii=False, sort_keys=True))[:8]}",
+                "evidence_type": "trace_link",
+                "source_pack": pack_type,
+                "source_ref": trace_ref,
+                "summary": str(trace.get("actionName") or trace_ref or "related trace"),
+                "status": "available",
+            }
+        )
+    return rows
+
+
+def _related_object_hints_from_payload(payload: dict[str, Any]) -> list[str]:
+    hints: list[str] = []
+    evidence_linkage = payload.get("evidence_linkage") or {}
+    for action in evidence_linkage.get("related_actions") or []:
+        action_id = action.get("actionId") or action.get("action_id")
+        action_name = action.get("actionName") or action.get("action_name")
+        if action_id or action_name:
+            hints.append(f"request_hint:{action_id or action_name}")
+    for sql in evidence_linkage.get("related_sqls") or []:
+        op_name = sql.get("opName") or sql.get("op_name_decoded") or sql.get("sql_text")
+        if op_name:
+            hints.append(f"sql_hint:{_hash_id(_normalize_sql_text(str(op_name)))[:12]}")
+    for dep in evidence_linkage.get("related_dependencies") or []:
+        if dep:
+            hints.append(f"dependency_hint:{dep}")
+    return hints
+
+
+def _normalize_screenshot_hint_row(item: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "screenshot_purpose": str(item.get("purpose") or item.get("screenshot_purpose") or item.get("summary") or ""),
+        "page_url": str(item.get("url") or item.get("page_url") or item.get("direct_url") or ""),
+        "suggested_area": str(item.get("suggested_area") or item.get("capture_area") or item.get("suggested_capture") or ""),
+        "subject": str(item.get("subject") or item.get("object_name") or item.get("display_name") or ""),
+        "usage_note": str(item.get("usage_note") or item.get("why_relevant") or item.get("note") or ""),
+    }
+
+
+def _find_existing_deep_dive_row(
+    registry_rows: list[dict[str, str]],
+    *,
+    object_id: str,
+    deep_dive_kind: str,
+    pack_source: str,
+    summary: str,
+) -> dict[str, str] | None:
+    for row in registry_rows:
+        if (
+            str(row.get("object_id") or "") == object_id
+            and str(row.get("deep_dive_kind") or "") == deep_dive_kind
+            and str(row.get("pack_source") or "") == pack_source
+            and str(row.get("summary") or "") == summary
+        ):
+            return row
+    return None
+
+
+def _new_deep_dive_id(target: dict[str, Any], object_id: str) -> str:
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    seed = f"{target.get('candidate_key') or target.get('display_name') or object_id}:{timestamp}"
+    return f"dd_{timestamp}_{_hash_id(seed)[:8]}"
+
+
+def _update_registry_row_from_bundle(bundle_dir: Path, summary_payload: dict[str, Any]) -> None:
+    diagnostics_root = bundle_dir.parents[3]
+    registry_path = diagnostics_root / "04_deep_dive" / "deep_dive_registry.csv"
+    registry_rows = _read_csv_rows(registry_path)
+    updated_rows: list[dict[str, str]] = []
+    for row in registry_rows:
+        if str(row.get("deep_dive_id") or "") != str(summary_payload.get("deep_dive_id") or ""):
+            updated_rows.append(row)
+            continue
+        merged = dict(row)
+        merged["status"] = str(summary_payload.get("status") or row.get("status") or "")
+        merged["summary"] = str(summary_payload.get("summary") or row.get("summary") or "")
+        merged["evidence_count"] = str(summary_payload.get("evidence_count") or "0")
+        merged["page_link_count"] = str(summary_payload.get("page_link_count") or "0")
+        merged["screenshot_hint_count"] = str(summary_payload.get("screenshot_hint_count") or "0")
+        merged["bundle_path"] = str(bundle_dir)
+        merged["related_object_ids"] = ";".join(summary_payload.get("related_object_ids") or [])
+        merged["report_group_hint"] = str(summary_payload.get("report_group_hint") or row.get("report_group_hint") or "")
+        updated_rows.append(merged)
+    _write_csv(registry_path, DEEP_DIVE_REGISTRY_COLUMNS, updated_rows)
+
+
+def _apply_deep_dive_evidence_state(
+    row: dict[str, str],
+    object_type: str,
+    registry_rows: list[dict[str, str]],
+) -> dict[str, str]:
+    updated = dict(row)
+    latest_entry = registry_rows[0] if registry_rows else {}
+    page_link_count = 0
+    trace_link_count = 0
+    screenshot_hint_count = 0
+    for entry in registry_rows:
+        page_link_count += _safe_int(entry.get("page_link_count"))
+        screenshot_hint_count += _safe_int(entry.get("screenshot_hint_count"))
+        bundle_path = Path(str(entry.get("bundle_path") or ""))
+        if bundle_path.exists():
+            evidence_index_path = bundle_path / "evidence_index.csv"
+            if evidence_index_path.exists():
+                trace_link_count += len(
+                    [
+                        item
+                        for item in _read_csv_rows(evidence_index_path)
+                        if str(item.get("evidence_type") or "") in {"trace", "trace_link"}
+                    ]
+                )
+    updated["latest_deep_dive_id"] = str(latest_entry.get("deep_dive_id") or "")
+    updated["deep_dive_status"] = _rollup_deep_dive_status(
+        [str(item.get("status") or "") for item in registry_rows],
+        selected=bool(registry_rows),
+    )
+    updated["page_link_count"] = str(page_link_count) if page_link_count else ""
+    updated["trace_link_count"] = str(trace_link_count) if trace_link_count else ""
+    updated["screenshot_hint_status"] = "已生成" if screenshot_hint_count > 0 else "待补充"
+    if registry_rows:
+        updated["evidence_status"] = "已挂接deep-dive"
+    if object_type == "sql" and not updated.get("related_request_ids") and latest_entry.get("related_object_ids"):
+        related_ids = [item.replace("request_hint:", "") for item in _split_semicolon_list(str(latest_entry.get("related_object_ids") or "")) if item.startswith("request_hint:")]
+        updated["related_request_ids"] = ";".join(related_ids)
+    return updated
+
+
 def _read_csv_rows(path: Path) -> list[dict[str, str]]:
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
@@ -1585,6 +2172,13 @@ def _to_float(value: Any) -> float | None:
         return None
 
 
+def _safe_int(value: Any) -> int:
+    number = _to_float(value)
+    if number is None:
+        return 0
+    return int(number)
+
+
 def _stringify_number(value: Any) -> str:
     number = _to_float(value)
     if number is None:
@@ -1617,6 +2211,12 @@ def _hash_id(text: str) -> str:
 
 def _normalize_sql_text(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip()).lower()
+
+
+def _normalize_request_name(text: str) -> str:
+    value = str(text or "").strip().lower()
+    value = re.sub(r"^uri/", "", value)
+    return re.sub(r"\s+", " ", value)
 
 
 def _query_object_hint(sql_text: str) -> str:
@@ -1722,7 +2322,7 @@ def _apply_deep_dive_registry_state(row: dict[str, str], object_type: str, regis
     updated["latest_deep_dive_id"] = latest_id
     updated["latest_deep_dive_at"] = latest_at
     updated["deep_dive_status"] = _rollup_deep_dive_status(statuses, selected=_is_true(updated.get("selected_for_deep_dive")))
-    updated["evidence_status"] = updated.get("evidence_status") or "待补证据"
+    updated["evidence_status"] = "已挂接deep-dive" if registry_rows else (updated.get("evidence_status") or "待补证据")
     updated["related_object_ids"] = ";".join(_unique_strings(related_from_row + related_from_registry))
     updated["report_group_hint"] = report_group_hint
     return updated
@@ -1732,11 +2332,11 @@ def _rollup_deep_dive_status(statuses: list[str], *, selected: bool) -> str:
     normalized = {str(item or "").strip() for item in statuses if str(item or "").strip()}
     if "in_progress" in normalized:
         return "in_progress"
-    if "completed" in normalized:
+    if "materialized" in normalized or "completed" in normalized:
         return "completed"
     if "deferred" in normalized:
         return "deferred"
-    if "queued" in normalized or "initialized" in normalized or "planned" in normalized:
+    if "queued" in normalized or "initialized" in normalized or "planned" in normalized or "seeded" in normalized:
         return "queued"
     return "not_started" if selected else "not_selected"
 
@@ -1750,4 +2350,32 @@ def _unique_strings(items: list[str]) -> list[str]:
             continue
         seen.add(text)
         result.append(text)
+    return result
+
+
+def _dedupe_json_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    result: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for item in items:
+        key = json.dumps(item, ensure_ascii=False, sort_keys=True)
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(item)
+    return result
+
+
+def _dedupe_evidence_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    result: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str]] = set()
+    for row in rows:
+        key = (
+            str(row.get("evidence_type") or ""),
+            str(row.get("source_pack") or ""),
+            str(row.get("source_ref") or ""),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(row)
     return result

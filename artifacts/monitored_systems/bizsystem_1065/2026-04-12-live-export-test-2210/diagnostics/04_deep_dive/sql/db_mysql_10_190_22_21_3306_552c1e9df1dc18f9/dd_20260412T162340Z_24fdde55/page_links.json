@@ -1,0 +1,167 @@
+{
+  "page_links": [
+    {
+      "page_type": "sql_detail",
+      "url": "http://169.169.173.25:8080/web/server/action/list",
+      "url_status": "direct",
+      "direct_url": "http://169.169.173.25:8080/web/server/action/list",
+      "fallback_url": "http://169.169.173.25:8080",
+      "label": "SQL 详情页",
+      "why_relevant": "用于查看单条 SQL 的耗时、错误和调用者。",
+      "suggested_report_section": "3.4 SQL 检查",
+      "deep_link_status": "captured_page_context",
+      "navigation_path": [
+        "业务系统",
+        "数据库组件",
+        "10.190.22.21:3306",
+        "SQL 详情"
+      ],
+      "suggested_filters": {
+        "componentName": "10.190.22.21:3306",
+        "componentSubtype": "MySQL",
+        "opName": "SELECT * FROM bpm_todo_logo WHERE RECEIVERCODE = ? AND ACTIVITY_ID IN ( SELECT s.STEP_ID FROM LAS_FLOW_STEP s ) AND seen = ? AND FIRST_SEENDATE IS NOT NULL AND ACTIVITY_FINISH_DATE IS NOT NUll"
+      },
+      "target_ref": {
+        "kind": "sql",
+        "component_name": "10.190.22.21:3306",
+        "component_subtype": "MySQL",
+        "op_name": "SELECT * FROM bpm_todo_logo WHERE RECEIVERCODE = ? AND ACTIVITY_ID IN ( SELECT s.STEP_ID FROM LAS_FLOW_STEP s ) AND seen = ? AND FIRST_SEENDATE IS NOT NULL AND ACTIVITY_FINISH_DATE IS NOT NUll"
+      },
+      "url_source": "captured_page_url",
+      "related_console_urls": [
+        "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "http://169.169.173.25:8080/web/server/component/Database/list",
+        "http://169.169.173.25:8080/web/server/background/list",
+        "http://169.169.173.25:8080/web/server/interface/list",
+        "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+        "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+        "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+        "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+        "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "http://169.169.173.25:8080/web/server/error",
+        "http://169.169.173.25:8080/web/server/component/MQ/list",
+        "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+        "http://169.169.173.25:8080/web/server/component/NoSQL/list",
+        "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+        "http://169.169.173.25:8080/web/server/application/menuList?systemIds=1065",
+        "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+        "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+        "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1644&actionIds=13174&actionTypes=TX",
+        "http://169.169.173.25:8080/server/system/business",
+        "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+        "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+        "http://169.169.173.25:8080/web/server/application/errorAnalysis/0/1645/ER?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request&self=_self",
+        "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+        "http://169.169.173.25:8080/web/server/system/list",
+        "http://169.169.173.25:8080/web/server/system/business",
+        "http://169.169.173.25:8080/web/server/connectionpool/view",
+        "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "http://169.169.173.25:8080/web/server/application/home/1645",
+        "http://169.169.173.25:8080/web/server/application/home/1646",
+        "http://169.169.173.25:8080/web/server/system/business/overview/1059/0",
+        "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+        "http://169.169.173.25:8080/web/server/actiontrace",
+        "http://169.169.173.25:8080/web/server/application/menuList",
+        "http://169.169.173.25:8080"
+      ],
+      "page_context_summary": {
+        "selection_rule": "object_match>url_source_priority>page_quality>recency",
+        "candidate_count": 37,
+        "selected_source": "captured_page_url",
+        "matched_relative_paths": [
+          "Database/analysis/download",
+          "connection/database/chart",
+          "instance/cpu/chart",
+          "webaction/performance/breakdown/chart",
+          "Database/list"
+        ],
+        "selected_seen_at": "2026-04-12T12:50:47+08:00",
+        "selected_page_title": "Ting Yun"
+      }
+    },
+    {
+      "page_type": "sql_related_actions",
+      "url": "http://169.169.173.25:8080/web/server/action/list",
+      "url_status": "direct",
+      "direct_url": "http://169.169.173.25:8080/web/server/action/list",
+      "fallback_url": "http://169.169.173.25:8080",
+      "label": "SQL 调用者页",
+      "why_relevant": "用于查看受该 SQL 影响的事务或接口。",
+      "suggested_report_section": "3.4 SQL 检查",
+      "deep_link_status": "captured_page_context",
+      "navigation_path": [
+        "业务系统",
+        "数据库组件",
+        "10.190.22.21:3306",
+        "SQL 调用者"
+      ],
+      "suggested_filters": {
+        "componentName": "10.190.22.21:3306",
+        "opName": "SELECT * FROM bpm_todo_logo WHERE RECEIVERCODE = ? AND ACTIVITY_ID IN ( SELECT s.STEP_ID FROM LAS_FLOW_STEP s ) AND seen = ? AND FIRST_SEENDATE IS NOT NULL AND ACTIVITY_FINISH_DATE IS NOT NUll"
+      },
+      "target_ref": {
+        "kind": "sql",
+        "component_name": "10.190.22.21:3306",
+        "component_subtype": "MySQL",
+        "op_name": "SELECT * FROM bpm_todo_logo WHERE RECEIVERCODE = ? AND ACTIVITY_ID IN ( SELECT s.STEP_ID FROM LAS_FLOW_STEP s ) AND seen = ? AND FIRST_SEENDATE IS NOT NULL AND ACTIVITY_FINISH_DATE IS NOT NUll"
+      },
+      "url_source": "captured_page_url",
+      "related_console_urls": [
+        "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "http://169.169.173.25:8080/web/server/trace-detail/tx/1065/1779409120?timestamp=1775523101840",
+        "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "http://169.169.173.25:8080/web/server/component/Database/list",
+        "http://169.169.173.25:8080/web/server/background/list",
+        "http://169.169.173.25:8080/web/server/interface/list",
+        "http://169.169.173.25:8080/web/server/background/overview/1065/1645/13537",
+        "http://169.169.173.25:8080/web/server/interface/overview/1065/1644/13167/0",
+        "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13229/0",
+        "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+        "http://169.169.173.25:8080/web/server/system/overview/1065",
+        "http://169.169.173.25:8080/web/server/error",
+        "http://169.169.173.25:8080/web/server/component/MQ/list",
+        "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+        "http://169.169.173.25:8080/web/server/component/NoSQL/list",
+        "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+        "http://169.169.173.25:8080/web/server/application/menuList?systemIds=1065",
+        "http://169.169.173.25:8080/web/server/application/response/0/1645?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request",
+        "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+        "http://169.169.173.25:8080/web/server/actiontrace?systemIds=1065&applicationIds=1644&actionIds=13174&actionTypes=TX",
+        "http://169.169.173.25:8080/server/system/business",
+        "http://169.169.173.25:8080/web/server/trace-detail/bg/1065/1777807607?timestamp=1775509200018",
+        "http://169.169.173.25:8080/web/server/interface/overview/1065/1646/13330/0",
+        "http://169.169.173.25:8080/web/server/request/detail?id=16000&systemId=0&applicationId=1645&actionTypes=TX;IF",
+        "http://169.169.173.25:8080/web/server/application/errorAnalysis/0/1645/ER?start=1775502000000&end=1775523600000&id=16000&requestType=TX;IF&type=request&self=_self",
+        "http://169.169.173.25:8080/web/server/component/NoSQL/overview?bizSystemId=1065&_tab=overview",
+        "http://169.169.173.25:8080/web/server/system/list",
+        "http://169.169.173.25:8080/web/server/system/business",
+        "http://169.169.173.25:8080/web/server/connectionpool/view",
+        "http://169.169.173.25:8080/web/server/error/1065/1645/0/13278/VVJJL2dyY3Y1L2R3ci9jYWxsL3BsYWluY2FsbC9kd3JQcm9kdWN0QnVzaW5lc3NMaXN0U2VydmljZS5maW5kQnVzaW5lc3NMaXN0LmR3cg",
+        "http://169.169.173.25:8080/web/server/application/home/1645",
+        "http://169.169.173.25:8080/web/server/application/home/1646",
+        "http://169.169.173.25:8080/web/server/system/business/overview/1059/0",
+        "http://169.169.173.25:8080/web/server/request/detail?systemId=0&applicationId=1645&id=16000&actionTypes=TX;IF",
+        "http://169.169.173.25:8080/web/server/actiontrace",
+        "http://169.169.173.25:8080/web/server/application/menuList",
+        "http://169.169.173.25:8080"
+      ],
+      "page_context_summary": {
+        "selection_rule": "object_match>url_source_priority>page_quality>recency",
+        "candidate_count": 37,
+        "selected_source": "captured_page_url",
+        "matched_relative_paths": [
+          "Database/analysis/download",
+          "connection/database/chart",
+          "instance/cpu/chart",
+          "webaction/performance/breakdown/chart",
+          "Database/list"
+        ],
+        "selected_seen_at": "2026-04-12T12:50:47+08:00",
+        "selected_page_title": "Ting Yun"
+      }
+    }
+  ]
+}

@@ -117,6 +117,26 @@ class ClientCliTests(unittest.TestCase):
         self.assertEqual(args.database_components_file, "./database_components.json")
         self.assertEqual(args.nosql_components_file, "./nosql_components.json")
 
+    def test_materialize_deep_dive_parser_accepts_source_json(self) -> None:
+        parser = _build_parser()
+        args = parser.parse_args(
+            [
+                "materialize-deep-dive",
+                "--diagnostics-dir",
+                "./diagnostics",
+                "--system-key",
+                "bizsystem_1065",
+                "--batch-key",
+                "2026-04-12-check",
+                "--source-json",
+                "./report_bundle.json",
+            ]
+        )
+        self.assertEqual(args.command, "materialize-deep-dive")
+        self.assertEqual(args.system_key, "bizsystem_1065")
+        self.assertEqual(args.batch_key, "2026-04-12-check")
+        self.assertEqual(args.source_json, "./report_bundle.json")
+
 
 if __name__ == "__main__":
     unittest.main()

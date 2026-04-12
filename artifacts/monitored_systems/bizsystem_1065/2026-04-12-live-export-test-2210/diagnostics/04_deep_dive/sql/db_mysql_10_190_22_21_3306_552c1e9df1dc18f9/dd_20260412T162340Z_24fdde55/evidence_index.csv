@@ -1,0 +1,5 @@
+evidence_id,evidence_type,source_pack,source_ref,summary,status
+sql_fact_analysis,Database/analysis,sql_fact_sheet,/server-api/Database/analysis,Database/analysis,available
+sql_fact_operate,Database/operate/analysisList,sql_fact_sheet,/server-api/Database/operate/analysisList,Database/operate/analysisList,available
+sql_fact_actions,component/database/actionList,sql_fact_sheet,/server-api/component/database/actionList,component/database/actionList,available
+sql_fact_traces,component/database/actionTraceList,sql_fact_sheet,/server-api/component/database/actionTraceList,component/database/actionTraceList,available
