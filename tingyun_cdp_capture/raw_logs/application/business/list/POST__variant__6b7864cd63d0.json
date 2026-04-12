@@ -1,25 +1,39 @@
 {
   "capture": {
-    "captured_at": "2026-04-07T14:44:16+08:00",
+    "captured_at": "2026-04-12T12:11:24+08:00",
     "completeness_score": 774,
     "first_seen_at": "2026-04-07T14:44:06+08:00",
-    "last_seen_at": "2026-04-07T14:44:16+08:00",
+    "last_seen_at": "2026-04-12T12:11:24+08:00",
     "page_context": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
       "document_url": "http://169.169.173.25:8080/web/server/system/list",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/system/list",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:44:16+08:00",
+      "request_timestamp": "2026-04-12T12:11:24+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "page_context_summary": {
       "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
+          "document_url": "http://169.169.173.25:8080/web/server/system/list",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/system/list",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:11:24+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
         {
           "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
           "document_url": "http://169.169.173.25:8080/web/server/system/list",
@@ -38,56 +52,70 @@
       "latest": {
         "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
         "document_url": "http://169.169.173.25:8080/web/server/system/list",
-        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/system/list",
         "initiator_type": "script",
         "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-07T14:44:16+08:00",
+        "request_timestamp": "2026-04-12T12:11:24+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
-        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       },
       "latest_non_empty": {
         "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
         "document_url": "http://169.169.173.25:8080/web/server/system/list",
-        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/system/list",
         "initiator_type": "script",
         "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-07T14:44:16+08:00",
+        "request_timestamp": "2026-04-12T12:11:24+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
-        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       }
     },
     "raw_log_file": "application/business/list/POST__variant__6b7864cd63d0.json",
     "resource_type": "XHR",
-    "seen_count": 2,
-    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-    "wall_time": 1775544256.337832
+    "seen_count": 3,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967083.570608
   },
   "method": "POST",
   "metric": null,
   "page_context": {
     "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
     "document_url": "http://169.169.173.25:8080/web/server/system/list",
-    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
     "frame_url": "http://169.169.173.25:8080/web/server/system/list",
     "initiator_type": "script",
     "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
     "page_title": "Ting Yun",
     "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
     "request_method": "POST",
-    "request_timestamp": "2026-04-07T14:44:16+08:00",
+    "request_timestamp": "2026-04-12T12:11:24+08:00",
     "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
-    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
   },
   "page_context_summary": {
     "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
+        "document_url": "http://169.169.173.25:8080/web/server/system/list",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/system/list",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:11:24+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
       {
         "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
         "document_url": "http://169.169.173.25:8080/web/server/system/list",
@@ -106,37 +134,37 @@
     "latest": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
       "document_url": "http://169.169.173.25:8080/web/server/system/list",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/system/list",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:44:16+08:00",
+      "request_timestamp": "2026-04-12T12:11:24+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "latest_non_empty": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
       "document_url": "http://169.169.173.25:8080/web/server/system/list",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/system/list",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:44:16+08:00",
+      "request_timestamp": "2026-04-12T12:11:24+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     }
   },
   "path": "/server-api/application/business/list",
   "relative_path": "application/business/list",
   "request": {
     "body": {
-      "endTime": "2026-04-07 14:44",
+      "endTime": "2026-04-12 12:11",
       "lang": "zh_CN",
       "timePeriod": "2880"
     },
@@ -149,8 +177,8 @@
     "content_type": "application/x-www-form-urlencoded",
     "headers": {
       "Accept": "application/json, text/plain, */*",
-      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
-      "BuiltInRequestId": "58efe995-72c8-7f92-6b3d-98931326fdf6",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "55cce435-9c34-979a-ba89-179b7196b119",
       "Content-Type": "application/x-www-form-urlencoded",
       "Referer": "http://169.169.173.25:8080/web/server/system/list",
       "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
@@ -165,21 +193,21 @@
     "page_context": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/system/list",
       "document_url": "http://169.169.173.25:8080/web/server/system/list",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/system/list",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:44:16+08:00",
+      "request_timestamp": "2026-04-12T12:11:24+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/application/business/list",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "path": "/server-api/application/business/list",
     "query": {},
     "query_normalized": {},
-    "raw_post_data": "timePeriod=2880&endTime=2026-04-07%2014:44&lang=zh_CN",
+    "raw_post_data": "timePeriod=2880&endTime=2026-04-12%2012:11&lang=zh_CN",
     "url": "http://169.169.173.25:8080/server-api/application/business/list"
   },
   "response": {
@@ -189,14 +217,14 @@
         "content": [
           {
             "actionIds": [],
-            "apdex": 0.982,
+            "apdex": 0.988,
             "applicationCount": 1,
             "applicationIds": [],
             "bizSystemId": 1059,
             "bizSystemName": "铃与堆场",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 0.01,
+            "error": 0.0,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -210,16 +238,16 @@
             "instanceCount": 3,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 102,
+            "response": 86,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 5070,
+            "slowCount": 4546,
             "successCount": 0,
-            "throught": 5.78
+            "throught": 9.04
           },
           {
             "actionIds": [],
-            "apdex": 0.666,
+            "apdex": 0.787,
             "applicationCount": 7,
             "applicationIds": [],
             "bizSystemId": 1060,
@@ -240,23 +268,23 @@
             "instanceCount": 13,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 822,
+            "response": 813,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 216,
+            "slowCount": 223,
             "successCount": 0,
             "throught": 0.04
           },
           {
             "actionIds": [],
-            "apdex": 0.5,
+            "apdex": 0.775,
             "applicationCount": 7,
             "applicationIds": [],
             "bizSystemId": 1061,
             "bizSystemName": "浙港办",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 28.57,
+            "error": 4.55,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -270,7 +298,7 @@
             "instanceCount": 21,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 969,
+            "response": 211,
             "rightOprt": 1,
             "showDelete": false,
             "slowCount": 0,
@@ -286,7 +314,7 @@
             "bizSystemName": "共用应用",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 2.19,
+            "error": 2.2,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -300,12 +328,12 @@
             "instanceCount": 4,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 118,
+            "response": 120,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 24998,
+            "slowCount": 24859,
             "successCount": 0,
-            "throught": 37.03
+            "throught": 36.3
           },
           {
             "actionIds": [],
@@ -316,7 +344,7 @@
             "bizSystemName": "default",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 0.13,
+            "error": 0.24,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -330,12 +358,12 @@
             "instanceCount": 10,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 47,
+            "response": 53,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 58,
+            "slowCount": 108,
             "successCount": 0,
-            "throught": 0.15
+            "throught": 0.13
           },
           {
             "actionIds": [],
@@ -363,20 +391,20 @@
             "response": 23,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 2100,
+            "slowCount": 2669,
             "successCount": 0,
-            "throught": 60.76
+            "throught": 59.27
           },
           {
             "actionIds": [],
-            "apdex": 0.9,
+            "apdex": 0.912,
             "applicationCount": 3,
             "applicationIds": [],
             "bizSystemId": 1065,
             "bizSystemName": "集团法务",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 0.82,
+            "error": 0.42,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -390,24 +418,24 @@
             "instanceCount": 3,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 77,
+            "response": 90,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 2909,
+            "slowCount": 1901,
             "successCount": 0,
-            "throught": 3.57
+            "throught": 1.72
           },
           {
             "actionIds": [],
-            "apdex": 0.0,
-            "applicationCount": 0,
+            "apdex": 0.998,
+            "applicationCount": 1,
             "applicationIds": [],
             "bizSystemId": 1066,
             "bizSystemName": "信创OA",
             "containerCount": 0,
-            "dataCenterCount": 0,
-            "error": 0.0,
-            "hasData": false,
+            "dataCenterCount": 1,
+            "error": 0.16,
+            "hasData": true,
             "health": 0,
             "healthInfo": {
               "eventLevel": 0,
@@ -416,16 +444,16 @@
               "targetValue": null
             },
             "healthOrder": 0,
-            "hostCount": 0,
-            "instanceCount": 0,
+            "hostCount": 1,
+            "instanceCount": 1,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 0,
+            "response": 7,
             "rightOprt": 1,
             "showDelete": false,
             "slowCount": 0,
             "successCount": 0,
-            "throught": 0.0
+            "throught": 0.11
           }
         ],
         "fastQuery": false,
@@ -440,14 +468,14 @@
         "content": [
           {
             "actionIds": [],
-            "apdex": 0.982,
+            "apdex": 0.988,
             "applicationCount": 1,
             "applicationIds": [],
             "bizSystemId": 1059,
             "bizSystemName": "铃与堆场",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 0.01,
+            "error": 0.0,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -461,16 +489,16 @@
             "instanceCount": 3,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 102,
+            "response": 86,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 5070,
+            "slowCount": 4546,
             "successCount": 0,
-            "throught": 5.78
+            "throught": 9.04
           },
           {
             "actionIds": [],
-            "apdex": 0.666,
+            "apdex": 0.787,
             "applicationCount": 7,
             "applicationIds": [],
             "bizSystemId": 1060,
@@ -491,23 +519,23 @@
             "instanceCount": 13,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 822,
+            "response": 813,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 216,
+            "slowCount": 223,
             "successCount": 0,
             "throught": 0.04
           },
           {
             "actionIds": [],
-            "apdex": 0.5,
+            "apdex": 0.775,
             "applicationCount": 7,
             "applicationIds": [],
             "bizSystemId": 1061,
             "bizSystemName": "浙港办",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 28.57,
+            "error": 4.55,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -521,7 +549,7 @@
             "instanceCount": 21,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 969,
+            "response": 211,
             "rightOprt": 1,
             "showDelete": false,
             "slowCount": 0,
@@ -537,7 +565,7 @@
             "bizSystemName": "共用应用",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 2.19,
+            "error": 2.2,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -551,12 +579,12 @@
             "instanceCount": 4,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 118,
+            "response": 120,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 24998,
+            "slowCount": 24859,
             "successCount": 0,
-            "throught": 37.03
+            "throught": 36.3
           },
           {
             "actionIds": [],
@@ -567,7 +595,7 @@
             "bizSystemName": "default",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 0.13,
+            "error": 0.24,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -581,12 +609,12 @@
             "instanceCount": 10,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 47,
+            "response": 53,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 58,
+            "slowCount": 108,
             "successCount": 0,
-            "throught": 0.15
+            "throught": 0.13
           },
           {
             "actionIds": [],
@@ -614,20 +642,20 @@
             "response": 23,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 2100,
+            "slowCount": 2669,
             "successCount": 0,
-            "throught": 60.76
+            "throught": 59.27
           },
           {
             "actionIds": [],
-            "apdex": 0.9,
+            "apdex": 0.912,
             "applicationCount": 3,
             "applicationIds": [],
             "bizSystemId": 1065,
             "bizSystemName": "集团法务",
             "containerCount": 0,
             "dataCenterCount": 1,
-            "error": 0.82,
+            "error": 0.42,
             "hasData": true,
             "health": 0,
             "healthInfo": {
@@ -641,24 +669,24 @@
             "instanceCount": 3,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 77,
+            "response": 90,
             "rightOprt": 1,
             "showDelete": false,
-            "slowCount": 2909,
+            "slowCount": 1901,
             "successCount": 0,
-            "throught": 3.57
+            "throught": 1.72
           },
           {
             "actionIds": [],
-            "apdex": 0.0,
-            "applicationCount": 0,
+            "apdex": 0.998,
+            "applicationCount": 1,
             "applicationIds": [],
             "bizSystemId": 1066,
             "bizSystemName": "信创OA",
             "containerCount": 0,
-            "dataCenterCount": 0,
-            "error": 0.0,
-            "hasData": false,
+            "dataCenterCount": 1,
+            "error": 0.16,
+            "hasData": true,
             "health": 0,
             "healthInfo": {
               "eventLevel": 0,
@@ -667,30 +695,30 @@
               "targetValue": null
             },
             "healthOrder": 0,
-            "hostCount": 0,
-            "instanceCount": 0,
+            "hostCount": 1,
+            "instanceCount": 1,
             "instanceIds": [],
             "maxThrought": 0.0,
-            "response": 0,
+            "response": 7,
             "rightOprt": 1,
             "showDelete": false,
             "slowCount": 0,
             "successCount": 0,
-            "throught": 0.0
+            "throught": 0.11
           }
         ],
         "fastQuery": false,
         "totalElements": 8
       }
     },
-    "encoded_data_length": 1346,
+    "encoded_data_length": 1347,
     "error": null,
     "headers": {
       "Connection": "keep-alive",
       "Content-Encoding": "gzip",
       "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
       "Content-Type": "application/json",
-      "Date": "Tue, 07 Apr 2026 06:44:04 GMT",
+      "Date": "Sun, 12 Apr 2026 04:11:07 GMT",
       "Referrer-Policy": "strict-origin-when-cross-origin",
       "Server": "nginx",
       "Transfer-Encoding": "chunked",

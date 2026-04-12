@@ -1,0 +1,529 @@
+{
+  "capture": {
+    "captured_at": "2026-04-12T12:11:21+08:00",
+    "completeness_score": 531,
+    "first_seen_at": "2026-04-12T12:11:21+08:00",
+    "last_seen_at": "2026-04-12T12:11:21+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+      "document_url": "http://169.169.173.25:8080/web/server/system/business",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:11:21+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+          "document_url": "http://169.169.173.25:8080/web/server/system/business",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:11:21+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+        "document_url": "http://169.169.173.25:8080/web/server/system/business",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:11:21+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+        "document_url": "http://169.169.173.25:8080/web/server/system/business",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:11:21+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    },
+    "raw_log_file": "graph/queryGraphHealth/POST__variant__8a203f32f3ca.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967080.808025
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+    "document_url": "http://169.169.173.25:8080/web/server/system/business",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-12T12:11:21+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+        "document_url": "http://169.169.173.25:8080/web/server/system/business",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:11:21+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+      "document_url": "http://169.169.173.25:8080/web/server/system/business",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:11:21+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+      "document_url": "http://169.169.173.25:8080/web/server/system/business",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:11:21+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    }
+  },
+  "path": "/server-api/graph/queryGraphHealth",
+  "relative_path": "graph/queryGraphHealth",
+  "request": {
+    "body": {
+      "endTime": "2026-04-12 12:11",
+      "lang": "zh_CN",
+      "nodeIds": {
+        "1059_0_0_0_0_[铃与堆场]": 13,
+        "1060_0_0_0_0_[外理理货]": 13,
+        "1061_0_0_0_0_[浙港办]": 13,
+        "1062_0_0_0_0_[共用应用]": 13,
+        "1063_0_0_0_0_[default]": 13,
+        "1064_0_0_0_0_[信创-浙港通]": 13,
+        "1065_0_0_0_0_[集团法务]": 13,
+        "1066_0_0_0_0_[信创OA]": 13
+      },
+      "timePeriod": 30
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "nodeIds": {
+        "1059_0_0_0_0_[铃与堆场]": 13,
+        "1060_0_0_0_0_[外理理货]": 13,
+        "1061_0_0_0_0_[浙港办]": 13,
+        "1062_0_0_0_0_[共用应用]": 13,
+        "1063_0_0_0_0_[default]": 13,
+        "1064_0_0_0_0_[信创-浙港通]": 13,
+        "1065_0_0_0_0_[集团法务]": 13,
+        "1066_0_0_0_0_[信创OA]": 13
+      },
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "d6a726fd-091d-9e2e-56d1-18fcc4e3901c",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/system/business",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/system/business",
+      "document_url": "http://169.169.173.25:8080/web/server/system/business",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/system/business",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:11:21+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "path": "/server-api/graph/queryGraphHealth",
+    "query": {
+      "lang": "zh_CN"
+    },
+    "query_normalized": {
+      "lang": "zh_CN"
+    },
+    "raw_post_data": "{\"nodeIds\":{\"1059_0_0_0_0_[铃与堆场]\":13,\"1061_0_0_0_0_[浙港办]\":13,\"1062_0_0_0_0_[共用应用]\":13,\"1063_0_0_0_0_[default]\":13,\"1064_0_0_0_0_[信创-浙港通]\":13,\"1065_0_0_0_0_[集团法务]\":13,\"1066_0_0_0_0_[信创OA]\":13,\"1060_0_0_0_0_[外理理货]\":13},\"timePeriod\":30,\"endTime\":\"2026-04-12 12:11\",\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/graph/queryGraphHealth?lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "code": 200,
+      "data": {
+        "content": [
+          {
+            "bizSystemId": "1059",
+            "bizSystemIdAndTargetType": "1059_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1059",
+              "targetValue": null
+            },
+            "id": "1059_0_0_0_0_[铃与堆场]",
+            "nodeType": 13,
+            "targetName": "1059",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1061",
+            "bizSystemIdAndTargetType": "1061_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1061",
+              "targetValue": null
+            },
+            "id": "1061_0_0_0_0_[浙港办]",
+            "nodeType": 13,
+            "targetName": "1061",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1062",
+            "bizSystemIdAndTargetType": "1062_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1062",
+              "targetValue": null
+            },
+            "id": "1062_0_0_0_0_[共用应用]",
+            "nodeType": 13,
+            "targetName": "1062",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1063",
+            "bizSystemIdAndTargetType": "1063_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1063",
+              "targetValue": null
+            },
+            "id": "1063_0_0_0_0_[default]",
+            "nodeType": 13,
+            "targetName": "1063",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1064",
+            "bizSystemIdAndTargetType": "1064_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1064",
+              "targetValue": null
+            },
+            "id": "1064_0_0_0_0_[信创-浙港通]",
+            "nodeType": 13,
+            "targetName": "1064",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1065",
+            "bizSystemIdAndTargetType": "1065_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1065",
+              "targetValue": null
+            },
+            "id": "1065_0_0_0_0_[集团法务]",
+            "nodeType": 13,
+            "targetName": "1065",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1066",
+            "bizSystemIdAndTargetType": "1066_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1066",
+              "targetValue": null
+            },
+            "id": "1066_0_0_0_0_[信创OA]",
+            "nodeType": 13,
+            "targetName": "1066",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1060",
+            "bizSystemIdAndTargetType": "1060_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1060",
+              "targetValue": null
+            },
+            "id": "1060_0_0_0_0_[外理理货]",
+            "nodeType": 13,
+            "targetName": "1060",
+            "targetType": "SBZ"
+          }
+        ],
+        "fastQuery": false,
+        "totalElements": 8
+      }
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "code": 200,
+      "data": {
+        "content": [
+          {
+            "bizSystemId": "1059",
+            "bizSystemIdAndTargetType": "1059_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1059",
+              "targetValue": null
+            },
+            "id": "1059_0_0_0_0_[铃与堆场]",
+            "nodeType": 13,
+            "targetName": "1059",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1061",
+            "bizSystemIdAndTargetType": "1061_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1061",
+              "targetValue": null
+            },
+            "id": "1061_0_0_0_0_[浙港办]",
+            "nodeType": 13,
+            "targetName": "1061",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1062",
+            "bizSystemIdAndTargetType": "1062_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1062",
+              "targetValue": null
+            },
+            "id": "1062_0_0_0_0_[共用应用]",
+            "nodeType": 13,
+            "targetName": "1062",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1063",
+            "bizSystemIdAndTargetType": "1063_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1063",
+              "targetValue": null
+            },
+            "id": "1063_0_0_0_0_[default]",
+            "nodeType": 13,
+            "targetName": "1063",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1064",
+            "bizSystemIdAndTargetType": "1064_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1064",
+              "targetValue": null
+            },
+            "id": "1064_0_0_0_0_[信创-浙港通]",
+            "nodeType": 13,
+            "targetName": "1064",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1065",
+            "bizSystemIdAndTargetType": "1065_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1065",
+              "targetValue": null
+            },
+            "id": "1065_0_0_0_0_[集团法务]",
+            "nodeType": 13,
+            "targetName": "1065",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1066",
+            "bizSystemIdAndTargetType": "1066_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1066",
+              "targetValue": null
+            },
+            "id": "1066_0_0_0_0_[信创OA]",
+            "nodeType": 13,
+            "targetName": "1066",
+            "targetType": "SBZ"
+          },
+          {
+            "bizSystemId": "1060",
+            "bizSystemIdAndTargetType": "1060_SBZ",
+            "health": 0,
+            "healthFill": "#43AA93",
+            "healthInfo": {
+              "eventLevel": 0,
+              "healthStartTime": null,
+              "targetName": "1060",
+              "targetValue": null
+            },
+            "id": "1060_0_0_0_0_[外理理货]",
+            "nodeType": 13,
+            "targetName": "1060",
+            "targetType": "SBZ"
+          }
+        ],
+        "fastQuery": false,
+        "totalElements": 8
+      }
+    },
+    "encoded_data_length": 1103,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Sun, 12 Apr 2026 04:11:04 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "nodeIds": {
+        "1059_0_0_0_0_[铃与堆场]": 13,
+        "1060_0_0_0_0_[外理理货]": 13,
+        "1061_0_0_0_0_[浙港办]": 13,
+        "1062_0_0_0_0_[共用应用]": 13,
+        "1063_0_0_0_0_[default]": 13,
+        "1064_0_0_0_0_[信创-浙港通]": 13,
+        "1065_0_0_0_0_[集团法务]": 13,
+        "1066_0_0_0_0_[信创OA]": 13
+      },
+      "timePeriod": "<DYNAMIC_NUMBER>"
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN"
+    },
+    "relative_path": "graph/queryGraphHealth"
+  }
+}

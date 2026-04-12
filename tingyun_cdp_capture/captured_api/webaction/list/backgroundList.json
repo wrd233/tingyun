@@ -1,15 +1,15 @@
 {
-  "count_seen": 1,
+  "count_seen": 2,
   "first_seen": "2026-04-07T14:49:32+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 1
+    "http://169.169.173.25:8080": 2
   },
-  "last_seen": "2026-04-07T14:49:32+08:00",
+  "last_seen": "2026-04-12T12:12:27+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [
             "body.applicationId",
             "body.bizSystemId",
@@ -49,20 +49,34 @@
           }
         }
       ],
-      "count_seen": 1,
+      "count_seen": 2,
       "first_seen": "2026-04-07T14:49:32+08:00",
       "inference_basis": [
         "path=webaction/list/backgroundList"
       ],
       "inferred_purpose": "Likely related to list",
-      "last_seen": "2026-04-07T14:49:32+08:00",
+      "last_seen": "2026-04-12T12:12:27+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 1
+        "application/json": 2
       },
       "observed_metrics": [],
       "page_context_summary": {
         "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+            "document_url": "http://169.169.173.25:8080/web/server/background/list",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:27+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
           {
             "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
             "document_url": "http://169.169.173.25:8080/web/server/background/list",
@@ -81,35 +95,35 @@
         "latest": {
           "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
           "document_url": "http://169.169.173.25:8080/web/server/background/list",
-          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/background/list",
           "initiator_type": "script",
           "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-07T14:49:32+08:00",
+          "request_timestamp": "2026-04-12T12:12:27+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
-          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         },
         "latest_non_empty": {
           "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
           "document_url": "http://169.169.173.25:8080/web/server/background/list",
-          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/background/list",
           "initiator_type": "script",
           "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-07T14:49:32+08:00",
+          "request_timestamp": "2026-04-12T12:12:27+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
-          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         }
       },
       "query_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -152,7 +166,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 1
+        "XHR": 2
       },
       "sample_requests": [
         {
@@ -189,6 +203,42 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-07T14:49:32+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList"
+        },
+        {
+          "body": {
+            "applicationId": "0",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-12 12:12",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "response",
+            "timePeriod": "2880"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/background/list",
+            "document_url": "http://169.169.173.25:8080/web/server/background/list",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/background/list",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:27+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:12:27+08:00",
           "url": "http://169.169.173.25:8080/server-api/webaction/list/backgroundList"
         }
       ],
@@ -364,10 +414,522 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionId": 13900,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/lawyerWorkStateJobDetail",
+                  "response": 1227986,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13526,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/lawyerWorkStateJobDetail",
+                  "response": 1161932,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13899,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/userClassifiedTaskJobDetail",
+                  "response": 941877,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13815,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/lawyerWorkInfoStateJobDetail",
+                  "response": 846040,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13535,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/reportContractJobDetail",
+                  "response": 437710,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13473,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/edrmsArchiveJobDeTail",
+                  "response": 28091,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13822,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/lawFirmsAssessmentJobDetail",
+                  "response": 8764,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13540,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/lawFirmsAssessmentJobDetail",
+                  "response": 8412,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13821,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/oppositeGrowthJobDetail",
+                  "response": 4961,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 15949,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/reportContractLxJobDetail",
+                  "response": 4860,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13807,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/edrmsArchiveJobDeTail",
+                  "response": 4656,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13538,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/oppositeGrowthJobDetail",
+                  "response": 4286,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13812,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/performJobDetail",
+                  "response": 3549,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13820,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/continueContractInfoSignJobDetail",
+                  "response": 1132,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13537,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/continueContractInfoSignJobDetail",
+                  "response": 1057,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13530,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/selectGroupTaskJobDetail",
+                  "response": 599,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13813,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/compareFileCleanTaskJobDetail",
+                  "response": 402,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13534,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/caseStatusProcessRemindOneJobDetail",
+                  "response": 401,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13897,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/productRemindTaskJobDetail",
+                  "response": 265,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13525,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/AssessMentContJobDetail",
+                  "response": 66,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13536,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/caseExecuteProcessRemindJobDetail",
+                  "response": 57,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13823,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/reportContractJfJobDetail",
+                  "response": 29,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13819,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/caseExecuteProcessRemindJobDetail",
+                  "response": 18,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31869,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "response": 15,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31910,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "response": 10,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31874,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "response": 9,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31747,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "response": 9,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31909,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "response": 8,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13814,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/AssessMentContJobDetail",
+                  "response": 8,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31734,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/*",
+                  "response": 8,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13533,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/learningApplyJobDetail",
+                  "response": 8,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31868,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "response": 7,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13544,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/reportContractJfJobDetail",
+                  "response": 7,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31746,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "response": 7,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31749,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "response": 7,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31748,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "response": 6,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31826,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "response": 6,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31864,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "response": 6,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31863,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "response": 6,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13520,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+                  "response": 5,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31867,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "response": 5,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31825,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "response": 5,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31865,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "response": 5,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31870,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "response": 5,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 31736,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/*",
+                  "response": 5,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13355,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "Job/DEFAULT/tempfileCleanrJobDetail",
+                  "response": 5,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13213,
+                  "applicationId": 1645,
+                  "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server2:8888",
+                  "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+                  "response": 0,
+                  "throught": 0.0
+                },
+                {
+                  "actionId": 13212,
+                  "applicationId": 1644,
+                  "applicationName": "org.springframework.boot.loader.WarLauncher",
+                  "error": 0.0,
+                  "instanceName": "nbyd-jtfw-server1:8888",
+                  "name": "SpringSchedule/com.hd.rcugrc.register.TaskAppRegister/timerRegister",
+                  "response": 0,
+                  "throught": 0.0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 48
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:12:10 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 1
+        "200": 2
       }
     }
   },

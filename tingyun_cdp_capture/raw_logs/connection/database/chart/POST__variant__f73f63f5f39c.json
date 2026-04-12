@@ -1,0 +1,1242 @@
+{
+  "capture": {
+    "captured_at": "2026-04-12T12:12:49+08:00",
+    "completeness_score": 1416,
+    "first_seen_at": "2026-04-12T12:12:49+08:00",
+    "last_seen_at": "2026-04-12T12:12:49+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:49+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:12:49+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:49+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:49+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    },
+    "raw_log_file": "connection/database/chart/POST__variant__f73f63f5f39c.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967169.099625
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-12T12:12:49+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:49+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:49+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:49+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    }
+  },
+  "path": "/server-api/connection/database/chart",
+  "relative_path": "connection/database/chart",
+  "request": {
+    "body": {
+      "bizSystemId": "1065",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "OP",
+      "endTime": "2026-04-12 12:12",
+      "lang": "zh_CN",
+      "timePeriod": "2880"
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "OP",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "20823e98-1ba0-40c0-2363-d7aa2008b6a5",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:49+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/connection/database/chart",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "path": "/server-api/connection/database/chart",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&lang=zh_CN",
+    "url": "http://169.169.173.25:8080/server-api/connection/database/chart"
+  },
+  "response": {
+    "body": {
+      "code": 200,
+      "data": {
+        "overviews": {
+          "avg": 0.0
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "tooltip": "{\"title\":\"04-10 12:00--04-10 12:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775793600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 12:30--04-10 13:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775795400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 13:00--04-10 13:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775797200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 13:30--04-10 14:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775799000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 14:00--04-10 14:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775800800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 14:30--04-10 15:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775802600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 15:00--04-10 15:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775804400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 15:30--04-10 16:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775806200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 16:00--04-10 16:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775808000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 16:30--04-10 17:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775809800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 17:00--04-10 17:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775811600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 17:30--04-10 18:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775813400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 18:00--04-10 18:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775815200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 18:30--04-10 19:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775817000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 19:00--04-10 19:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775818800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 19:30--04-10 20:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775820600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 20:00--04-10 20:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775822400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 20:30--04-10 21:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775824200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 21:00--04-10 21:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775826000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 21:30--04-10 22:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775827800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 22:00--04-10 22:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775829600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 22:30--04-10 23:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775831400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 23:00--04-10 23:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775833200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 23:30--04-11 00:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775835000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 00:00--04-11 00:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775836800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 00:30--04-11 01:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775838600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 01:00--04-11 01:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775840400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 01:30--04-11 02:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775842200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 02:00--04-11 02:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775844000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 02:30--04-11 03:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775845800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 03:00--04-11 03:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775847600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 03:30--04-11 04:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775849400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 04:00--04-11 04:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775851200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 04:30--04-11 05:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775853000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 05:00--04-11 05:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775854800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 05:30--04-11 06:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775856600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 06:00--04-11 06:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775858400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 06:30--04-11 07:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775860200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 07:00--04-11 07:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775862000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 07:30--04-11 08:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775863800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 08:00--04-11 08:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775865600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 08:30--04-11 09:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775867400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 09:00--04-11 09:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775869200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 09:30--04-11 10:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775871000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 10:00--04-11 10:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775872800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 10:30--04-11 11:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775874600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 11:00--04-11 11:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775876400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 11:30--04-11 12:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775878200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 12:00--04-11 12:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775880000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 12:30--04-11 13:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775881800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 13:00--04-11 13:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775883600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 13:30--04-11 14:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775885400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 14:00--04-11 14:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775887200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 14:30--04-11 15:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775889000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 15:00--04-11 15:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775890800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 15:30--04-11 16:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775892600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 16:00--04-11 16:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775894400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 16:30--04-11 17:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775896200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 17:00--04-11 17:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775898000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 17:30--04-11 18:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775899800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 18:00--04-11 18:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775901600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 18:30--04-11 19:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775903400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 19:00--04-11 19:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775905200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 19:30--04-11 20:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775907000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 20:00--04-11 20:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775908800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 20:30--04-11 21:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775910600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 21:00--04-11 21:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775912400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 21:30--04-11 22:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775914200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 22:00--04-11 22:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775916000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 22:30--04-11 23:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775917800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 23:00--04-11 23:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775919600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 23:30--04-12 00:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775921400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 00:00--04-12 00:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775923200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 01:00--04-12 01:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775926800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 01:30--04-12 02:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775928600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 02:00--04-12 02:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775930400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 02:30--04-12 03:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775932200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 03:00--04-12 03:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775934000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 03:30--04-12 04:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775935800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 04:00--04-12 04:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775937600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 04:30--04-12 05:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775939400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 05:00--04-12 05:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775941200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 05:30--04-12 06:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775943000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 06:00--04-12 06:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775944800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 06:30--04-12 07:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775946600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 07:00--04-12 07:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775948400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 07:30--04-12 08:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775950200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 08:00--04-12 08:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775952000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 08:30--04-12 09:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775953800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 09:00--04-12 09:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775955600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 09:30--04-12 10:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775957400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 10:00--04-12 10:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775959200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 10:30--04-12 11:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775961000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 11:00--04-12 11:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775962800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 11:30--04-12 12:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775964600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 12:00--04-12 12:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775966400000,
+                "y": 0.0
+              }
+            ],
+            "name": "Connection time",
+            "type": "line",
+            "yAxis": 0,
+            "zIndex": 0
+          }
+        ],
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": "ms"
+          }
+        ]
+      }
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "code": 200,
+      "data": {
+        "overviews": {
+          "avg": 0.0
+        },
+        "series": [
+          {
+            "data": [
+              {
+                "tooltip": "{\"title\":\"04-10 12:00--04-10 12:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775793600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 12:30--04-10 13:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775795400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 13:00--04-10 13:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775797200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 13:30--04-10 14:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775799000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 14:00--04-10 14:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775800800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 14:30--04-10 15:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775802600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 15:00--04-10 15:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775804400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 15:30--04-10 16:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775806200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 16:00--04-10 16:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775808000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 16:30--04-10 17:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775809800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 17:00--04-10 17:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775811600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 17:30--04-10 18:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775813400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 18:00--04-10 18:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775815200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 18:30--04-10 19:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775817000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 19:00--04-10 19:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775818800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 19:30--04-10 20:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775820600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 20:00--04-10 20:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775822400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 20:30--04-10 21:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775824200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 21:00--04-10 21:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775826000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 21:30--04-10 22:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775827800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 22:00--04-10 22:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775829600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 22:30--04-10 23:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775831400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 23:00--04-10 23:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775833200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-10 23:30--04-11 00:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775835000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 00:00--04-11 00:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775836800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 00:30--04-11 01:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775838600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 01:00--04-11 01:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775840400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 01:30--04-11 02:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775842200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 02:00--04-11 02:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775844000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 02:30--04-11 03:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775845800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 03:00--04-11 03:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775847600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 03:30--04-11 04:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775849400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 04:00--04-11 04:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775851200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 04:30--04-11 05:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775853000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 05:00--04-11 05:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775854800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 05:30--04-11 06:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775856600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 06:00--04-11 06:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775858400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 06:30--04-11 07:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775860200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 07:00--04-11 07:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775862000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 07:30--04-11 08:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775863800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 08:00--04-11 08:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775865600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 08:30--04-11 09:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775867400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 09:00--04-11 09:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775869200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 09:30--04-11 10:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775871000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 10:00--04-11 10:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775872800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 10:30--04-11 11:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775874600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 11:00--04-11 11:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775876400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 11:30--04-11 12:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775878200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 12:00--04-11 12:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775880000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 12:30--04-11 13:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775881800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 13:00--04-11 13:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775883600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 13:30--04-11 14:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775885400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 14:00--04-11 14:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775887200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 14:30--04-11 15:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775889000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 15:00--04-11 15:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775890800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 15:30--04-11 16:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775892600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 16:00--04-11 16:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775894400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 16:30--04-11 17:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775896200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 17:00--04-11 17:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775898000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 17:30--04-11 18:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775899800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 18:00--04-11 18:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775901600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 18:30--04-11 19:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775903400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 19:00--04-11 19:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775905200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 19:30--04-11 20:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775907000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 20:00--04-11 20:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775908800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 20:30--04-11 21:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775910600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 21:00--04-11 21:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775912400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 21:30--04-11 22:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775914200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 22:00--04-11 22:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775916000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 22:30--04-11 23:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775917800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 23:00--04-11 23:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775919600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-11 23:30--04-12 00:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775921400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 00:00--04-12 00:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775923200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 01:00--04-12 01:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775926800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 01:30--04-12 02:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775928600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 02:00--04-12 02:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775930400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 02:30--04-12 03:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775932200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 03:00--04-12 03:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775934000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 03:30--04-12 04:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775935800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 04:00--04-12 04:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775937600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 04:30--04-12 05:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775939400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 05:00--04-12 05:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775941200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 05:30--04-12 06:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775943000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 06:00--04-12 06:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775944800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 06:30--04-12 07:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775946600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 07:00--04-12 07:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775948400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 07:30--04-12 08:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775950200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 08:00--04-12 08:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775952000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 08:30--04-12 09:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775953800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 09:00--04-12 09:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775955600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 09:30--04-12 10:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775957400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 10:00--04-12 10:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775959200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 10:30--04-12 11:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775961000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 11:00--04-12 11:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775962800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 11:30--04-12 12:00\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775964600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04-12 12:00--04-12 12:30\",\"data\":[{\"title\":\"Connection time\",\"value\":0.00,\"unit\":\"ms\",\"scale\":2}]}",
+                "x": 1775966400000,
+                "y": 0.0
+              }
+            ],
+            "name": "Connection time",
+            "type": "line",
+            "yAxis": 0,
+            "zIndex": 0
+          }
+        ],
+        "yAxis": [
+          {
+            "opposite": false,
+            "tickUnit": "ms"
+          }
+        ]
+      }
+    },
+    "encoded_data_length": 1755,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Sun, 12 Apr 2026 04:12:32 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "OP",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "connection/database/chart"
+  }
+}

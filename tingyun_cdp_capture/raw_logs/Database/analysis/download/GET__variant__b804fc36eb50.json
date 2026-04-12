@@ -1,0 +1,247 @@
+{
+  "capture": {
+    "captured_at": "2026-04-12T12:12:43+08:00",
+    "completeness_score": 645,
+    "first_seen_at": "2026-04-12T12:12:43+08:00",
+    "last_seen_at": "2026-04-12T12:12:43+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "GET",
+      "request_timestamp": "2026-04-12T12:12:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "GET",
+          "request_timestamp": "2026-04-12T12:12:43+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "GET",
+        "request_timestamp": "2026-04-12T12:12:43+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "GET",
+        "request_timestamp": "2026-04-12T12:12:43+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    },
+    "raw_log_file": "Database/analysis/download/GET__variant__b804fc36eb50.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967163.228755
+  },
+  "method": "GET",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "GET",
+    "request_timestamp": "2026-04-12T12:12:43+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "GET",
+        "request_timestamp": "2026-04-12T12:12:43+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "GET",
+      "request_timestamp": "2026-04-12T12:12:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "GET",
+      "request_timestamp": "2026-04-12T12:12:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    }
+  },
+  "path": "/server-api/Database/analysis/download",
+  "relative_path": "Database/analysis/download",
+  "request": {
+    "body": null,
+    "body_kind": "none",
+    "body_normalized": null,
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "847e2ac4-bb26-451b-5911-fed93f3b80be",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "GET",
+      "request_timestamp": "2026-04-12T12:12:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "path": "/server-api/Database/analysis/download",
+    "query": {
+      "bizSystemId": "1065",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "OP",
+      "endTime": "2026-04-12 12:12",
+      "limit": "true",
+      "pageNumber": "1",
+      "pageSize": "10000",
+      "sortDirection": "DESC",
+      "sortField": "respTime",
+      "timePeriod": "2880"
+    },
+    "query_normalized": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "OP",
+      "endTime": "<DATETIME>",
+      "limit": "true",
+      "pageNumber": "1",
+      "pageSize": "10000",
+      "sortDirection": "DESC",
+      "sortField": "respTime",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "raw_post_data": null,
+    "url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC"
+  },
+  "response": {
+    "body": null,
+    "body_capture_error": null,
+    "body_kind": "none",
+    "body_redacted": null,
+    "encoded_data_length": 622538,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Disposition": "attachment; filename=SQLåæ.xls",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/vnd.ms-excel",
+      "Date": "Sun, 12 Apr 2026 04:12:26 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/vnd.ms-excel",
+    "status": 200
+  },
+  "signature": {
+    "body": null,
+    "method": "GET",
+    "query": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "OP",
+      "endTime": "<DATETIME>",
+      "limit": "true",
+      "pageNumber": "1",
+      "pageSize": "10000",
+      "sortDirection": "DESC",
+      "sortField": "respTime",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "relative_path": "Database/analysis/download"
+  }
+}

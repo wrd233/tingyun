@@ -1,0 +1,2897 @@
+{
+  "capture": {
+    "captured_at": "2026-04-12T12:12:39+08:00",
+    "completeness_score": 3743,
+    "first_seen_at": "2026-04-12T12:12:38+08:00",
+    "last_seen_at": "2026-04-12T12:12:39+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:12:39+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:39+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:39+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    },
+    "raw_log_file": "graph/component/queryDataBaseGraph/POST__variant__223c3bbc4b7d.json",
+    "resource_type": "XHR",
+    "seen_count": 2,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967159.481405
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-12T12:12:39+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:39+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    }
+  },
+  "path": "/server-api/graph/component/queryDataBaseGraph",
+  "relative_path": "graph/component/queryDataBaseGraph",
+  "request": {
+    "body": {
+      "bizSystemId": "1065",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "endTime": "2026-04-12 12:12",
+      "lang": "zh_CN",
+      "timePeriod": "2880"
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "c00a5ec1-81c8-44ec-452f-cebe5df91ffb",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "path": "/server-api/graph/component/queryDataBaseGraph",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "timePeriod=2880&endTime=2026-04-12%2012:12&bizSystemId=1065&componentSubtype=MySQL&componentType=Database&componentName=10.190.22.21:3306&lang=zh_CN",
+    "url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph"
+  },
+  "response": {
+    "body": {
+      "data": {
+        "layout": "tree",
+        "linkeDataArray": [
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13938_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr]",
+            "maxEexcTime": 119,
+            "response": 6.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13329_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr]",
+            "maxEexcTime": 22,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13532_1645_0_0_[SpringController/serverapi/restapi/other/v1/download-attachments/{code}]",
+            "maxEexcTime": 283,
+            "response": 0.0,
+            "throught": 0.1,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13251_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr]",
+            "maxEexcTime": 10,
+            "response": 1.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13533_1644_0_0_[Job/DEFAULT/learningApplyJobDetail]",
+            "maxEexcTime": 5,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13328_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr]",
+            "maxEexcTime": 19,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13248_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr]",
+            "maxEexcTime": 21,
+            "response": 11.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]",
+            "maxEexcTime": 46,
+            "response": 46.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13535_1644_0_0_[Job/DEFAULT/reportContractJobDetail]",
+            "maxEexcTime": 7541,
+            "response": 6.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13937_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "maxEexcTime": 4,
+            "response": 2.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]",
+            "maxEexcTime": 14965,
+            "response": 371.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13534_1645_0_0_[Job/DEFAULT/caseStatusProcessRemindOneJobDetail]",
+            "maxEexcTime": 394,
+            "response": 30.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13666_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13560_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr]",
+            "maxEexcTime": 27,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13911_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13561_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr]",
+            "maxEexcTime": 8919,
+            "response": 95.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_15046_1644_0_0_[URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14083_1644_0_0_[URI/grcv5/user/product/dataStatistics/statistics.jsp]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13284_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr]",
+            "maxEexcTime": 426,
+            "response": 81.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13562_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr]",
+            "maxEexcTime": 4062,
+            "response": 254.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13665_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "maxEexcTime": 3183,
+            "response": 2.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14655_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "maxEexcTime": 35,
+            "response": 6.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13741_1644_0_0_[URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm]",
+            "maxEexcTime": 1,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13193_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr]",
+            "maxEexcTime": 1,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]",
+            "maxEexcTime": 1,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13463_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr]",
+            "maxEexcTime": 55,
+            "response": 3.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]",
+            "maxEexcTime": 2228,
+            "response": 171.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13462_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr]",
+            "maxEexcTime": 77,
+            "response": 15.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13403_1644_0_0_[URI/grcv5/wp/contractInfo/lasContractInfoList.htm]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 1,
+            "errorRate": 20.0,
+            "from": "1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]",
+            "maxEexcTime": 1,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]",
+            "maxEexcTime": 927,
+            "response": 9.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13192_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 2,
+            "errorRate": 20.0,
+            "from": "1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]",
+            "maxEexcTime": 4,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13194_1644_0_0_[URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr]",
+            "maxEexcTime": 3,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13460_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr]",
+            "maxEexcTime": 1,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14343_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr]",
+            "maxEexcTime": 124,
+            "response": 16.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13401_1644_0_0_[SpringController/${url.workflow.state2}]",
+            "maxEexcTime": 63,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13400_1644_0_0_[URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr]",
+            "maxEexcTime": 63,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]",
+            "maxEexcTime": 3,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13461_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr]",
+            "maxEexcTime": 4,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14342_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr]",
+            "maxEexcTime": 4,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13491_1645_0_0_[SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf]",
+            "maxEexcTime": 44,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13853_1644_0_0_[URI/grcv5/wp/selector/G_1_templateSelector.htm]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13797_1644_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "maxEexcTime": 6109,
+            "response": 2.0,
+            "throught": 0.06,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13153_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr]",
+            "maxEexcTime": 21,
+            "response": 8.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13852_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)]",
+            "maxEexcTime": 30,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13228_1645_0_0_[SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}]",
+            "maxEexcTime": 21,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13608_1645_0_0_[SpringController/${url.workflow.view}]",
+            "maxEexcTime": 5943,
+            "response": 5.0,
+            "throught": 0.08,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          }
+        ],
+        "nodeDataArray": [
+          {
+            "figure": "Circle",
+            "fill": "#43AA93",
+            "graphId": 9517,
+            "hidId": 9517,
+            "id": "1065_0_0_Database_MySQL_[10.190.22.21:3306]",
+            "info": {
+              "health": 0,
+              "healthInfo": {
+                "eventLevel": 0,
+                "healthStartTime": null,
+                "targetName": "MySQL/10.190.22.21:3306",
+                "targetValue": null
+              },
+              "name": "10.190.22.21:3306",
+              "subType": 2
+            },
+            "loc": "73 230",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_0_0_Database_MySQL_[10.190.22.21:3306]@2",
+            "show": 1,
+            "type": 14,
+            "x": "73",
+            "y": "230"
+          },
+          {
+            "graphId": 9516,
+            "hidId": 9516,
+            "id": "1065_13938_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr",
+              "subType": 1
+            },
+            "loc": "68 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13938_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "68",
+            "y": "4"
+          },
+          {
+            "graphId": 9519,
+            "hidId": 9519,
+            "id": "1065_13329_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr",
+              "subType": 1
+            },
+            "loc": "278 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13329_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "278",
+            "y": "4"
+          },
+          {
+            "graphId": 9521,
+            "hidId": 9521,
+            "id": "1065_13532_1645_0_0_[SpringController/serverapi/restapi/other/v1/download-attachments/{code}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/serverapi/restapi/other/v1/download-attachments/{code}",
+              "subType": 1
+            },
+            "loc": "488 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13532_1645_0_0_[SpringController/serverapi/restapi/other/v1/download-attachments/{code}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "488",
+            "y": "4"
+          },
+          {
+            "graphId": 9520,
+            "hidId": 9520,
+            "id": "1065_13251_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr",
+              "subType": 1
+            },
+            "loc": "1118 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13251_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "1118",
+            "y": "4"
+          },
+          {
+            "graphId": 9935,
+            "hidId": 9935,
+            "id": "1065_13533_1644_0_0_[Job/DEFAULT/learningApplyJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/learningApplyJobDetail",
+              "subType": 1
+            },
+            "loc": "914.5138227706818 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13533_1644_0_0_[Job/DEFAULT/learningApplyJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "914.5138227706818",
+            "y": "4"
+          },
+          {
+            "graphId": 10173,
+            "hidId": 10173,
+            "id": "1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9523,
+            "hidId": 9523,
+            "id": "1065_13328_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr",
+              "subType": 1
+            },
+            "loc": "2804.739681674176 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13328_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2804.739681674176",
+            "y": "4"
+          },
+          {
+            "graphId": 9524,
+            "hidId": 9524,
+            "id": "1065_13248_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr",
+              "subType": 1
+            },
+            "loc": "1557.311318304407 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13248_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "1557.311318304407",
+            "y": "4"
+          },
+          {
+            "graphId": 10176,
+            "hidId": 10176,
+            "id": "1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9956,
+            "hidId": 9956,
+            "id": "1065_13535_1644_0_0_[Job/DEFAULT/reportContractJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/reportContractJobDetail",
+              "subType": 1
+            },
+            "loc": "1985.1511451034091 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13535_1644_0_0_[Job/DEFAULT/reportContractJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "1985.1511451034091",
+            "y": "4"
+          },
+          {
+            "graphId": 9526,
+            "hidId": 9526,
+            "id": "1065_13937_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr",
+              "subType": 1
+            },
+            "loc": "2202.9909719024113 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13937_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2202.9909719024113",
+            "y": "4"
+          },
+          {
+            "graphId": 9527,
+            "hidId": 9527,
+            "id": "1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)",
+              "subType": 1
+            },
+            "loc": "4499.423378851282 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4499.423378851282",
+            "y": "4"
+          },
+          {
+            "graphId": 9955,
+            "hidId": 9955,
+            "id": "1065_13534_1645_0_0_[Job/DEFAULT/caseStatusProcessRemindOneJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/caseStatusProcessRemindOneJobDetail",
+              "subType": 1
+            },
+            "loc": "2631.8808017531715 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13534_1645_0_0_[Job/DEFAULT/caseStatusProcessRemindOneJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2631.8808017531715",
+            "y": "4"
+          },
+          {
+            "graphId": 9528,
+            "hidId": 9528,
+            "id": "1065_13666_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr",
+              "subType": 1
+            },
+            "loc": "2850.770631603931 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13666_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2850.770631603931",
+            "y": "4"
+          },
+          {
+            "graphId": 9529,
+            "hidId": 9529,
+            "id": "1065_13560_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr",
+              "subType": 1
+            },
+            "loc": "6599.423378851282 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13560_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "6599.423378851282",
+            "y": "4"
+          },
+          {
+            "graphId": 9530,
+            "hidId": 9530,
+            "id": "1065_13911_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr",
+              "subType": 1
+            },
+            "loc": "7019.423378851282 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13911_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7019.423378851282",
+            "y": "4"
+          },
+          {
+            "graphId": 9532,
+            "hidId": 9532,
+            "id": "1065_13561_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr",
+              "subType": 1
+            },
+            "loc": "7658.719045022529 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13561_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7658.719045022529",
+            "y": "4"
+          },
+          {
+            "graphId": 9965,
+            "hidId": 9965,
+            "id": "1065_15046_1644_0_0_[URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm",
+              "subType": 1
+            },
+            "loc": "3700.362487821879 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_15046_1644_0_0_[URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "3700.362487821879",
+            "y": "4"
+          },
+          {
+            "graphId": 9531,
+            "hidId": 9531,
+            "id": "1065_14083_1644_0_0_[URI/grcv5/user/product/dataStatistics/statistics.jsp]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/user/product/dataStatistics/statistics.jsp",
+              "subType": 1
+            },
+            "loc": "3923.096180421348 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14083_1644_0_0_[URI/grcv5/user/product/dataStatistics/statistics.jsp]@2",
+            "show": 1,
+            "type": 12,
+            "x": "3923.096180421348",
+            "y": "4"
+          },
+          {
+            "graphId": 9535,
+            "hidId": 9535,
+            "id": "1065_13284_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr",
+              "subType": 1
+            },
+            "loc": "9556.066404586703 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13284_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9556.066404586703",
+            "y": "4"
+          },
+          {
+            "graphId": 9533,
+            "hidId": 9533,
+            "id": "1065_13562_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr",
+              "subType": 1
+            },
+            "loc": "9766.066404586703 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13562_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9766.066404586703",
+            "y": "4"
+          },
+          {
+            "graphId": 9536,
+            "hidId": 9536,
+            "id": "1065_13665_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}",
+              "subType": 1
+            },
+            "loc": "4556.238016802869 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13665_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4556.238016802869",
+            "y": "4"
+          },
+          {
+            "graphId": 9534,
+            "hidId": 9534,
+            "id": "1065_14655_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr",
+              "subType": 1
+            },
+            "loc": "4766.238016802869 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14655_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4766.238016802869",
+            "y": "4"
+          },
+          {
+            "graphId": 9538,
+            "hidId": 9538,
+            "id": "1065_13741_1644_0_0_[URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm",
+              "subType": 1
+            },
+            "loc": "4980.555863316227 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13741_1644_0_0_[URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4980.555863316227",
+            "y": "4"
+          },
+          {
+            "graphId": 9537,
+            "hidId": 9537,
+            "id": "1065_13193_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr",
+              "subType": 1
+            },
+            "loc": "5194.873709829585 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13193_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "5194.873709829585",
+            "y": "4"
+          },
+          {
+            "graphId": 10174,
+            "hidId": 10174,
+            "id": "1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9541,
+            "hidId": 9541,
+            "id": "1065_13463_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr",
+              "subType": 1
+            },
+            "loc": "5614.873709829585 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13463_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "5614.873709829585",
+            "y": "4"
+          },
+          {
+            "graphId": 10175,
+            "hidId": 10175,
+            "id": "1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9551,
+            "hidId": 9551,
+            "id": "1065_13462_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr",
+              "subType": 1
+            },
+            "loc": "6034.873709829585 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13462_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "6034.873709829585",
+            "y": "4"
+          },
+          {
+            "graphId": 9545,
+            "hidId": 9545,
+            "id": "1065_13403_1644_0_0_[URI/grcv5/wp/contractInfo/lasContractInfoList.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/contractInfo/lasContractInfoList.htm",
+              "subType": 1
+            },
+            "loc": "6246.37755335222 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13403_1644_0_0_[URI/grcv5/wp/contractInfo/lasContractInfoList.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "6246.37755335222",
+            "y": "4"
+          },
+          {
+            "graphId": 10177,
+            "hidId": 10177,
+            "id": "1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 10178,
+            "hidId": 10178,
+            "id": "1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 10180,
+            "hidId": 10180,
+            "id": "1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/reportContractLxJobDetail",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9546,
+            "hidId": 9546,
+            "id": "1065_13192_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr",
+              "subType": 1
+            },
+            "loc": "7140.168743621646 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13192_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7140.168743621646",
+            "y": "4"
+          },
+          {
+            "graphId": 10179,
+            "hidId": 10179,
+            "id": "1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9549,
+            "hidId": 9549,
+            "id": "1065_13194_1644_0_0_[URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr",
+              "subType": 1
+            },
+            "loc": "7596.776436770432 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13194_1644_0_0_[URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7596.776436770432",
+            "y": "4"
+          },
+          {
+            "graphId": 9552,
+            "hidId": 9552,
+            "id": "1065_13460_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr",
+              "subType": 1
+            },
+            "loc": "5781.174528365998 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13460_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "5781.174528365998",
+            "y": "4"
+          },
+          {
+            "graphId": 9548,
+            "hidId": 9548,
+            "id": "1065_14343_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr",
+              "subType": 1
+            },
+            "loc": "8016.776436770432 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14343_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8016.776436770432",
+            "y": "4"
+          },
+          {
+            "graphId": 9553,
+            "hidId": 9553,
+            "id": "1065_13401_1644_0_0_[SpringController/${url.workflow.state2}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.workflow.state2}",
+              "subType": 1
+            },
+            "loc": "8226.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13401_1644_0_0_[SpringController/${url.workflow.state2}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8226.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9561,
+            "hidId": 9561,
+            "id": "1065_13400_1644_0_0_[URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr",
+              "subType": 1
+            },
+            "loc": "8436.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13400_1644_0_0_[URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8436.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 10181,
+            "hidId": 10181,
+            "id": "1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9554,
+            "hidId": 9554,
+            "id": "1065_13461_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr",
+              "subType": 1
+            },
+            "loc": "8856.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13461_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8856.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9557,
+            "hidId": 9557,
+            "id": "1065_14342_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr",
+              "subType": 1
+            },
+            "loc": "9066.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14342_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9066.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9556,
+            "hidId": 9556,
+            "id": "1065_13491_1645_0_0_[SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf",
+              "subType": 1
+            },
+            "loc": "9276.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13491_1645_0_0_[SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9276.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9555,
+            "hidId": 9555,
+            "id": "1065_13853_1644_0_0_[URI/grcv5/wp/selector/G_1_templateSelector.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/selector/G_1_templateSelector.htm",
+              "subType": 1
+            },
+            "loc": "9490.734282673438 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13853_1644_0_0_[URI/grcv5/wp/selector/G_1_templateSelector.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9490.734282673438",
+            "y": "4"
+          },
+          {
+            "graphId": 9558,
+            "hidId": 9558,
+            "id": "1065_13797_1644_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}",
+              "subType": 1
+            },
+            "loc": "9704.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13797_1644_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9704.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9559,
+            "hidId": 9559,
+            "id": "1065_13153_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr",
+              "subType": 1
+            },
+            "loc": "9914.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13153_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9914.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9562,
+            "hidId": 9562,
+            "id": "1065_13852_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)",
+              "subType": 1
+            },
+            "loc": "10124.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13852_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)]@2",
+            "show": 1,
+            "type": 12,
+            "x": "10124.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9565,
+            "hidId": 9565,
+            "id": "1065_13228_1645_0_0_[SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+              "subType": 1
+            },
+            "loc": "10334.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13228_1645_0_0_[SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "10334.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9563,
+            "hidId": 9563,
+            "id": "1065_13608_1645_0_0_[SpringController/${url.workflow.view}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.workflow.view}",
+              "subType": 1
+            },
+            "loc": "10544.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13608_1645_0_0_[SpringController/${url.workflow.view}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "10544.692128576446",
+            "y": "4"
+          }
+        ],
+        "scale": "1",
+        "topoNodeLimitInfos": [
+          {
+            "limitCount": 50,
+            "totalCount": 548,
+            "type": "ACTION"
+          }
+        ]
+      },
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": {
+        "layout": "tree",
+        "linkeDataArray": [
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13938_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr]",
+            "maxEexcTime": 119,
+            "response": 6.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13329_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr]",
+            "maxEexcTime": 22,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13532_1645_0_0_[SpringController/serverapi/restapi/other/v1/download-attachments/{code}]",
+            "maxEexcTime": 283,
+            "response": 0.0,
+            "throught": 0.1,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13251_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr]",
+            "maxEexcTime": 10,
+            "response": 1.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13533_1644_0_0_[Job/DEFAULT/learningApplyJobDetail]",
+            "maxEexcTime": 5,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13328_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr]",
+            "maxEexcTime": 19,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13248_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr]",
+            "maxEexcTime": 21,
+            "response": 11.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]",
+            "maxEexcTime": 46,
+            "response": 46.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13535_1644_0_0_[Job/DEFAULT/reportContractJobDetail]",
+            "maxEexcTime": 7541,
+            "response": 6.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13937_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "maxEexcTime": 4,
+            "response": 2.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]",
+            "maxEexcTime": 14965,
+            "response": 371.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13534_1645_0_0_[Job/DEFAULT/caseStatusProcessRemindOneJobDetail]",
+            "maxEexcTime": 394,
+            "response": 30.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13666_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13560_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr]",
+            "maxEexcTime": 27,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13911_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13561_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr]",
+            "maxEexcTime": 8919,
+            "response": 95.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_15046_1644_0_0_[URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14083_1644_0_0_[URI/grcv5/user/product/dataStatistics/statistics.jsp]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13284_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr]",
+            "maxEexcTime": 426,
+            "response": 81.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13562_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr]",
+            "maxEexcTime": 4062,
+            "response": 254.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13665_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "maxEexcTime": 3183,
+            "response": 2.0,
+            "throught": 0.01,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14655_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "maxEexcTime": 35,
+            "response": 6.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13741_1644_0_0_[URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm]",
+            "maxEexcTime": 1,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13193_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr]",
+            "maxEexcTime": 1,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]",
+            "maxEexcTime": 1,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13463_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr]",
+            "maxEexcTime": 55,
+            "response": 3.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]",
+            "maxEexcTime": 2228,
+            "response": 171.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13462_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr]",
+            "maxEexcTime": 77,
+            "response": 15.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13403_1644_0_0_[URI/grcv5/wp/contractInfo/lasContractInfoList.htm]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 1,
+            "errorRate": 20.0,
+            "from": "1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]",
+            "maxEexcTime": 1,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]",
+            "maxEexcTime": 927,
+            "response": 9.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13192_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr]",
+            "maxEexcTime": 0,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 2,
+            "errorRate": 20.0,
+            "from": "1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]",
+            "maxEexcTime": 4,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13194_1644_0_0_[URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr]",
+            "maxEexcTime": 3,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13460_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr]",
+            "maxEexcTime": 1,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14343_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr]",
+            "maxEexcTime": 124,
+            "response": 16.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13401_1644_0_0_[SpringController/${url.workflow.state2}]",
+            "maxEexcTime": 63,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13400_1644_0_0_[URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr]",
+            "maxEexcTime": 63,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]",
+            "maxEexcTime": 3,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13461_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr]",
+            "maxEexcTime": 4,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_14342_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr]",
+            "maxEexcTime": 4,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13491_1645_0_0_[SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf]",
+            "maxEexcTime": 44,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13853_1644_0_0_[URI/grcv5/wp/selector/G_1_templateSelector.htm]",
+            "maxEexcTime": 2,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13797_1644_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "maxEexcTime": 6109,
+            "response": 2.0,
+            "throught": 0.06,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13153_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr]",
+            "maxEexcTime": 21,
+            "response": 8.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13852_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)]",
+            "maxEexcTime": 30,
+            "response": 1.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13228_1645_0_0_[SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}]",
+            "maxEexcTime": 21,
+            "response": 0.0,
+            "throught": 0.0,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          },
+          {
+            "errorCount": 0,
+            "errorRate": 0.0,
+            "from": "1065_13608_1645_0_0_[SpringController/${url.workflow.view}]",
+            "maxEexcTime": 5943,
+            "response": 5.0,
+            "throught": 0.08,
+            "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
+          }
+        ],
+        "nodeDataArray": [
+          {
+            "figure": "Circle",
+            "fill": "#43AA93",
+            "graphId": 9517,
+            "hidId": 9517,
+            "id": "1065_0_0_Database_MySQL_[10.190.22.21:3306]",
+            "info": {
+              "health": 0,
+              "healthInfo": {
+                "eventLevel": 0,
+                "healthStartTime": null,
+                "targetName": "MySQL/10.190.22.21:3306",
+                "targetValue": null
+              },
+              "name": "10.190.22.21:3306",
+              "subType": 2
+            },
+            "loc": "73 230",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_0_0_Database_MySQL_[10.190.22.21:3306]@2",
+            "show": 1,
+            "type": 14,
+            "x": "73",
+            "y": "230"
+          },
+          {
+            "graphId": 9516,
+            "hidId": 9516,
+            "id": "1065_13938_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr",
+              "subType": 1
+            },
+            "loc": "68 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13938_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHdWorkflowService.startCommunication.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "68",
+            "y": "4"
+          },
+          {
+            "graphId": 9519,
+            "hidId": 9519,
+            "id": "1065_13329_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr",
+              "subType": 1
+            },
+            "loc": "278 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13329_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findOppConfigInfoByAppId.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "278",
+            "y": "4"
+          },
+          {
+            "graphId": 9521,
+            "hidId": 9521,
+            "id": "1065_13532_1645_0_0_[SpringController/serverapi/restapi/other/v1/download-attachments/{code}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/serverapi/restapi/other/v1/download-attachments/{code}",
+              "subType": 1
+            },
+            "loc": "488 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13532_1645_0_0_[SpringController/serverapi/restapi/other/v1/download-attachments/{code}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "488",
+            "y": "4"
+          },
+          {
+            "graphId": 9520,
+            "hidId": 9520,
+            "id": "1065_13251_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr",
+              "subType": 1
+            },
+            "loc": "1118 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13251_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractUpdateService.getUpdateInfo.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "1118",
+            "y": "4"
+          },
+          {
+            "graphId": 9935,
+            "hidId": 9935,
+            "id": "1065_13533_1644_0_0_[Job/DEFAULT/learningApplyJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/learningApplyJobDetail",
+              "subType": 1
+            },
+            "loc": "914.5138227706818 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13533_1644_0_0_[Job/DEFAULT/learningApplyJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "914.5138227706818",
+            "y": "4"
+          },
+          {
+            "graphId": 10173,
+            "hidId": 10173,
+            "id": "1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9523,
+            "hidId": 9523,
+            "id": "1065_13328_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr",
+              "subType": 1
+            },
+            "loc": "2804.739681674176 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13328_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrLasContractAppConfigService.findConfigInfoByUnitCode.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2804.739681674176",
+            "y": "4"
+          },
+          {
+            "graphId": 9524,
+            "hidId": 9524,
+            "id": "1065_13248_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr",
+              "subType": 1
+            },
+            "loc": "1557.311318304407 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13248_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractInfoService.getDictFlag.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "1557.311318304407",
+            "y": "4"
+          },
+          {
+            "graphId": 10176,
+            "hidId": 10176,
+            "id": "1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9956,
+            "hidId": 9956,
+            "id": "1065_13535_1644_0_0_[Job/DEFAULT/reportContractJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/reportContractJobDetail",
+              "subType": 1
+            },
+            "loc": "1985.1511451034091 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13535_1644_0_0_[Job/DEFAULT/reportContractJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "1985.1511451034091",
+            "y": "4"
+          },
+          {
+            "graphId": 9526,
+            "hidId": 9526,
+            "id": "1065_13937_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr",
+              "subType": 1
+            },
+            "loc": "2202.9909719024113 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13937_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2202.9909719024113",
+            "y": "4"
+          },
+          {
+            "graphId": 9527,
+            "hidId": 9527,
+            "id": "1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)",
+              "subType": 1
+            },
+            "loc": "4499.423378851282 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4499.423378851282",
+            "y": "4"
+          },
+          {
+            "graphId": 9955,
+            "hidId": 9955,
+            "id": "1065_13534_1645_0_0_[Job/DEFAULT/caseStatusProcessRemindOneJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/caseStatusProcessRemindOneJobDetail",
+              "subType": 1
+            },
+            "loc": "2631.8808017531715 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13534_1645_0_0_[Job/DEFAULT/caseStatusProcessRemindOneJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2631.8808017531715",
+            "y": "4"
+          },
+          {
+            "graphId": 9528,
+            "hidId": 9528,
+            "id": "1065_13666_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr",
+              "subType": 1
+            },
+            "loc": "2850.770631603931 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13666_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrLegDemandEditService.getOneMenu.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "2850.770631603931",
+            "y": "4"
+          },
+          {
+            "graphId": 9529,
+            "hidId": 9529,
+            "id": "1065_13560_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr",
+              "subType": 1
+            },
+            "loc": "6599.423378851282 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13560_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.hasOtherInfo.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "6599.423378851282",
+            "y": "4"
+          },
+          {
+            "graphId": 9530,
+            "hidId": 9530,
+            "id": "1065_13911_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr",
+              "subType": 1
+            },
+            "loc": "7019.423378851282 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13911_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrProductCommonUtilsService.findFlowSean.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7019.423378851282",
+            "y": "4"
+          },
+          {
+            "graphId": 9532,
+            "hidId": 9532,
+            "id": "1065_13561_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr",
+              "subType": 1
+            },
+            "loc": "7658.719045022529 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13561_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContactViewService.getStatusById.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7658.719045022529",
+            "y": "4"
+          },
+          {
+            "graphId": 9965,
+            "hidId": 9965,
+            "id": "1065_15046_1644_0_0_[URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm",
+              "subType": 1
+            },
+            "loc": "3700.362487821879 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_15046_1644_0_0_[URI/grcv5/wp/G_1_YW/G_1_HELPLIST.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "3700.362487821879",
+            "y": "4"
+          },
+          {
+            "graphId": 9531,
+            "hidId": 9531,
+            "id": "1065_14083_1644_0_0_[URI/grcv5/user/product/dataStatistics/statistics.jsp]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/user/product/dataStatistics/statistics.jsp",
+              "subType": 1
+            },
+            "loc": "3923.096180421348 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14083_1644_0_0_[URI/grcv5/user/product/dataStatistics/statistics.jsp]@2",
+            "show": 1,
+            "type": 12,
+            "x": "3923.096180421348",
+            "y": "4"
+          },
+          {
+            "graphId": 9535,
+            "hidId": 9535,
+            "id": "1065_13284_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr",
+              "subType": 1
+            },
+            "loc": "9556.066404586703 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13284_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrQuickLinkService.findDraftListByAccount.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9556.066404586703",
+            "y": "4"
+          },
+          {
+            "graphId": 9533,
+            "hidId": 9533,
+            "id": "1065_13562_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr",
+              "subType": 1
+            },
+            "loc": "9766.066404586703 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13562_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrContractSignInfoService.findContractExecutor.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9766.066404586703",
+            "y": "4"
+          },
+          {
+            "graphId": 9536,
+            "hidId": 9536,
+            "id": "1065_13665_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}",
+              "subType": 1
+            },
+            "loc": "4556.238016802869 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13665_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4556.238016802869",
+            "y": "4"
+          },
+          {
+            "graphId": 9534,
+            "hidId": 9534,
+            "id": "1065_14655_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr",
+              "subType": 1
+            },
+            "loc": "4766.238016802869 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14655_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroups.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4766.238016802869",
+            "y": "4"
+          },
+          {
+            "graphId": 9538,
+            "hidId": 9538,
+            "id": "1065_13741_1644_0_0_[URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm",
+              "subType": 1
+            },
+            "loc": "4980.555863316227 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13741_1644_0_0_[URI/grcv5/wp/G_1_legalServicesDemand/G_1_legalServicesDemandList.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "4980.555863316227",
+            "y": "4"
+          },
+          {
+            "graphId": 9537,
+            "hidId": 9537,
+            "id": "1065_13193_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr",
+              "subType": 1
+            },
+            "loc": "5194.873709829585 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13193_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.getGroupUserAppUserAndUserGroups.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "5194.873709829585",
+            "y": "4"
+          },
+          {
+            "graphId": 10174,
+            "hidId": 10174,
+            "id": "1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9541,
+            "hidId": 9541,
+            "id": "1065_13463_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr",
+              "subType": 1
+            },
+            "loc": "5614.873709829585 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13463_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.assignUsers.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "5614.873709829585",
+            "y": "4"
+          },
+          {
+            "graphId": 10175,
+            "hidId": 10175,
+            "id": "1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9551,
+            "hidId": 9551,
+            "id": "1065_13462_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr",
+              "subType": 1
+            },
+            "loc": "6034.873709829585 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13462_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrUserGroupService.searchGroupUsers.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "6034.873709829585",
+            "y": "4"
+          },
+          {
+            "graphId": 9545,
+            "hidId": 9545,
+            "id": "1065_13403_1644_0_0_[URI/grcv5/wp/contractInfo/lasContractInfoList.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/contractInfo/lasContractInfoList.htm",
+              "subType": 1
+            },
+            "loc": "6246.37755335222 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13403_1644_0_0_[URI/grcv5/wp/contractInfo/lasContractInfoList.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "6246.37755335222",
+            "y": "4"
+          },
+          {
+            "graphId": 10177,
+            "hidId": 10177,
+            "id": "1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 10178,
+            "hidId": 10178,
+            "id": "1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 10180,
+            "hidId": 10180,
+            "id": "1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/reportContractLxJobDetail",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9546,
+            "hidId": 9546,
+            "id": "1065_13192_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr",
+              "subType": 1
+            },
+            "loc": "7140.168743621646 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13192_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrHierarchySwitchService.resourceTypeEnabled.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7140.168743621646",
+            "y": "4"
+          },
+          {
+            "graphId": 10179,
+            "hidId": 10179,
+            "id": "1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]",
+            "info": {
+              "actionType": "BG",
+              "bizSystemId": 1065,
+              "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9549,
+            "hidId": 9549,
+            "id": "1065_13194_1644_0_0_[URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr",
+              "subType": 1
+            },
+            "loc": "7596.776436770432 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13194_1644_0_0_[URI/grcv5/dwr/call/plaincall/groupService.getTenantUserTreeNodes.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "7596.776436770432",
+            "y": "4"
+          },
+          {
+            "graphId": 9552,
+            "hidId": 9552,
+            "id": "1065_13460_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr",
+              "subType": 1
+            },
+            "loc": "5781.174528365998 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13460_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getRolesTreeNode.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "5781.174528365998",
+            "y": "4"
+          },
+          {
+            "graphId": 9548,
+            "hidId": 9548,
+            "id": "1065_14343_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr",
+              "subType": 1
+            },
+            "loc": "8016.776436770432 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14343_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.saveDockingTable.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8016.776436770432",
+            "y": "4"
+          },
+          {
+            "graphId": 9553,
+            "hidId": 9553,
+            "id": "1065_13401_1644_0_0_[SpringController/${url.workflow.state2}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.workflow.state2}",
+              "subType": 1
+            },
+            "loc": "8226.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13401_1644_0_0_[SpringController/${url.workflow.state2}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8226.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9561,
+            "hidId": 9561,
+            "id": "1065_13400_1644_0_0_[URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr",
+              "subType": 1
+            },
+            "loc": "8436.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13400_1644_0_0_[URI/grcv5/dwr/call/plaincall/hdCommunicationLogService.findCommunicationLogsByInstId.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8436.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 10181,
+            "hidId": 10181,
+            "id": "1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr",
+              "subType": 1
+            },
+            "settingKey": "NoSQL10.190.22.21:3306@1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "0",
+            "y": "0"
+          },
+          {
+            "graphId": 9554,
+            "hidId": 9554,
+            "id": "1065_13461_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr",
+              "subType": 1
+            },
+            "loc": "8856.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13461_1644_0_0_[URI/grcv5/dwr/call/plaincall/roleService.getAuthorizedUsers.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "8856.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9557,
+            "hidId": 9557,
+            "id": "1065_14342_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr",
+              "subType": 1
+            },
+            "loc": "9066.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_14342_1645_0_0_[URI/grcv5/dwr/call/plaincall/dwrOppDockingService.oppositeDocking.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9066.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9556,
+            "hidId": 9556,
+            "id": "1065_13491_1645_0_0_[SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf",
+              "subType": 1
+            },
+            "loc": "9276.776436770433 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13491_1645_0_0_[SpringController/${url.attachment}/${url.attachment.download}/previewAnnexPdf]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9276.776436770433",
+            "y": "4"
+          },
+          {
+            "graphId": 9555,
+            "hidId": 9555,
+            "id": "1065_13853_1644_0_0_[URI/grcv5/wp/selector/G_1_templateSelector.htm]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/wp/selector/G_1_templateSelector.htm",
+              "subType": 1
+            },
+            "loc": "9490.734282673438 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13853_1644_0_0_[URI/grcv5/wp/selector/G_1_templateSelector.htm]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9490.734282673438",
+            "y": "4"
+          },
+          {
+            "graphId": 9558,
+            "hidId": 9558,
+            "id": "1065_13797_1644_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}",
+              "subType": 1
+            },
+            "loc": "9704.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13797_1644_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/task-form-process/pages/inform/{id}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9704.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9559,
+            "hidId": 9559,
+            "id": "1065_13153_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr",
+              "subType": 1
+            },
+            "loc": "9914.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13153_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrProuductUpUserService.idEncrypt.dwr]@2",
+            "show": 1,
+            "type": 12,
+            "x": "9914.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9562,
+            "hidId": 9562,
+            "id": "1065_13852_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)",
+              "subType": 1
+            },
+            "loc": "10124.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13852_1645_0_0_[SpringController/${url.rest.prefix.flowmobileapi.v1}/user-tasks/inform (POST)]@2",
+            "show": 1,
+            "type": 12,
+            "x": "10124.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9565,
+            "hidId": 9565,
+            "id": "1065_13228_1645_0_0_[SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}",
+              "subType": 1
+            },
+            "loc": "10334.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13228_1645_0_0_[SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "10334.692128576446",
+            "y": "4"
+          },
+          {
+            "graphId": 9563,
+            "hidId": 9563,
+            "id": "1065_13608_1645_0_0_[SpringController/${url.workflow.view}]",
+            "info": {
+              "actionType": "TX",
+              "bizSystemId": 1065,
+              "name": "SpringController/${url.workflow.view}",
+              "subType": 1
+            },
+            "loc": "10544.692128576446 4",
+            "settingKey": "NoSQL10.190.22.21:3306@1065_13608_1645_0_0_[SpringController/${url.workflow.view}]@2",
+            "show": 1,
+            "type": 12,
+            "x": "10544.692128576446",
+            "y": "4"
+          }
+        ],
+        "scale": "1",
+        "topoNodeLimitInfos": [
+          {
+            "limitCount": 50,
+            "totalCount": 548,
+            "type": "ACTION"
+          }
+        ]
+      },
+      "status": 200
+    },
+    "encoded_data_length": 4263,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Sun, 12 Apr 2026 04:12:23 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "endTime": "<DATETIME>",
+      "lang": "zh_CN",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "graph/component/queryDataBaseGraph"
+  }
+}

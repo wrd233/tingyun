@@ -1,0 +1,387 @@
+{
+  "capture": {
+    "captured_at": "2026-04-12T12:12:47+08:00",
+    "completeness_score": 400,
+    "first_seen_at": "2026-04-12T12:12:47+08:00",
+    "last_seen_at": "2026-04-12T12:12:47+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:47+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:47+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:47+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    },
+    "raw_log_file": "sqlErrorList/POST__variant__af2b7c00b0ba.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967167.50511
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-12T12:12:47+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:12:47+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:47+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:47+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    }
+  },
+  "path": "/server-api/sqlErrorList",
+  "relative_path": "sqlErrorList",
+  "request": {
+    "body": {
+      "bizSystemId": "1065",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "COMP",
+      "endTime": "2026-04-12 12:12",
+      "errorName": "java.sql.SQLSyntaxErrorException",
+      "lang": "zh_CN",
+      "sortDirection": "DESC",
+      "sortField": "respTime",
+      "timePeriod": "2880"
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "COMP",
+      "endTime": "<DATETIME>",
+      "errorName": "<REDACTED>",
+      "lang": "zh_CN",
+      "sortDirection": "DESC",
+      "sortField": "respTime",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "e7a0ce01-5c63-99d4-6ad4-e37006bf35e8",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:12:47+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/sqlErrorList",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "path": "/server-api/sqlErrorList",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=COMP&componentName=10.190.22.21:3306&componentSubtype=MySQL&sortDirection=DESC&sortField=respTime&errorName=java.sql.SQLSyntaxErrorException&lang=zh_CN",
+    "url": "http://169.169.173.25:8080/server-api/sqlErrorList"
+  },
+  "response": {
+    "body": {
+      "code": 200,
+      "data": {
+        "content": [
+          {
+            "count": 2,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?hai%?%hong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 2,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?h%?%hong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?m%?%huan? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?na%?%dong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?n%?%dong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 24,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "SELECT ? FROM LAS_CONTRACT_PAYMENT p,LAS_CONTRACT_INFO c WHERE c.CONTRACT_STATUS in (?) AND p.CONTRACT_ID = c.ID AND DATE_FORMAT(p.PAY_DATE,?)=DATE_FORMATdate_sub(SYSDATE(),interval ? day),?)",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?nan%?%dong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 2,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?ha%?%hong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 24,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "SELECT ? FROM LAS_CONTRACT_PAYMENT p,LAS_CONTRACT_INFO c WHERE c.CONTRACT_STATUS in (?) AND p.CONTRACT_ID = c.ID AND DATE_FORMAT(p.PAY_DATE,?)=DATE_FORMATdate_sub(SYSDATE(),interval ? day)%Y-%m-%d?",
+            "traceDetaileCount": 0
+          }
+        ],
+        "fastQuery": false,
+        "totalElements": 9
+      }
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "code": 200,
+      "data": {
+        "content": [
+          {
+            "count": 2,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?hai%?%hong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 2,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?h%?%hong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?m%?%huan? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?na%?%dong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?n%?%dong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 24,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "SELECT ? FROM LAS_CONTRACT_PAYMENT p,LAS_CONTRACT_INFO c WHERE c.CONTRACT_STATUS in (?) AND p.CONTRACT_ID = c.ID AND DATE_FORMAT(p.PAY_DATE,?)=DATE_FORMATdate_sub(SYSDATE(),interval ? day),?)",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 1,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?nan%?%dong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 2,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "select count(*) as countNum from (SELECT a.ID as ID,a.CONTRACT_NAME as CONTRACT_NAME ,a.CONTRACT_SELF_CODE as CONTRACT_SELF_CODE ,a.CONTRACT_TYPE_NAME as CONTRACT_TYPE_NAME ,a.CREATE_DEPT_NAME as CREATE_DEPT_NAME ,a.CREATOR_NAME as CREATOR_NAME FROM LAS_CONTRACT_INFO a WHERE ?=? AND a.DELETED = ? AND (a.IS_IAM = ? or a.IS_IAM is null) AND ( a.CONTRACT_NAME like ?ha%?%hong? ) AND ( a.CREATOR_ACCOUNT_AUTH = ? or a.EXECUTOR_ACCOUNT = ? or ?=? or a.ID in ( SELECT info.ID FROM LAS_CONTRACT_INFO info INNER JOIN ( SELECT list.BEAN_ID FROM HD_WF_COMPLETED ids INNER JOIN HD_WF_INST entry ON ids.INSTID = entry.ID INNER JOIN HD_WF_LIST list ON entry.ID = list.ID WHERE ? = ? AND list.FORM_ID = ? AND ids.ACCOUNT = ? ) wf ON info.id = wf.bean_id ) ) ) a",
+            "traceDetaileCount": 0
+          },
+          {
+            "count": 24,
+            "duration": 0,
+            "errorRate": 0.0,
+            "operation": "SELECT ? FROM LAS_CONTRACT_PAYMENT p,LAS_CONTRACT_INFO c WHERE c.CONTRACT_STATUS in (?) AND p.CONTRACT_ID = c.ID AND DATE_FORMAT(p.PAY_DATE,?)=DATE_FORMATdate_sub(SYSDATE(),interval ? day)%Y-%m-%d?",
+            "traceDetaileCount": 0
+          }
+        ],
+        "fastQuery": false,
+        "totalElements": 9
+      }
+    },
+    "encoded_data_length": 1301,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Sun, 12 Apr 2026 04:12:31 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "bizSystemId": "<DYNAMIC>",
+      "componentName": "10.190.22.21:3306",
+      "componentSubtype": "MySQL",
+      "componentType": "Database",
+      "dataType": "COMP",
+      "endTime": "<DATETIME>",
+      "errorName": "<REDACTED>",
+      "lang": "zh_CN",
+      "sortDirection": "DESC",
+      "sortField": "respTime",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "sqlErrorList"
+  }
+}

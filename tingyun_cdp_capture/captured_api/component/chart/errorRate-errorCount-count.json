@@ -1,15 +1,15 @@
 {
-  "count_seen": 1,
+  "count_seen": 2,
   "first_seen": "2026-04-03T20:00:20+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 1
+    "http://169.169.173.25:8080": 2
   },
-  "last_seen": "2026-04-03T20:00:20+08:00",
+  "last_seen": "2026-04-12T12:12:47+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -57,21 +57,67 @@
           }
         }
       ],
-      "count_seen": 1,
+      "count_seen": 2,
       "first_seen": "2026-04-03T20:00:20+08:00",
       "inference_basis": [
         "path=component/chart/errorRate-errorCount-count"
       ],
       "inferred_purpose": "Likely related to component/chart/errorRate-errorCount-count",
-      "last_seen": "2026-04-03T20:00:20+08:00",
+      "last_seen": "2026-04-12T12:12:47+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 1
+        "application/json": 2
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:47+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/chart/errorRate-errorCount-count",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/component/chart/errorRate-errorCount-count",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/component/chart/errorRate-errorCount-count",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -116,7 +162,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 1
+        "XHR": 2
       },
       "sample_requests": [
         {
@@ -142,6 +188,45 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-03T20:00:20+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/chart/errorRate-errorCount-count"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-12 12:12",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "2880"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:47+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/chart/errorRate-errorCount-count",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:12:47+08:00",
           "url": "http://169.169.173.25:8080/server-api/component/chart/errorRate-errorCount-count"
         }
       ],
@@ -845,10 +930,2096 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 12:00-04/10 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15154.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775793600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 12:30-04/10 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":49147.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775795400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 13:00-04/10 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":178521.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775797200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 13:30-04/10 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":160742.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775799000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 14:00-04/10 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":122768.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775800800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 14:30-04/10 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":95978.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775802600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 15:00-04/10 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":109867.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775804400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 15:30-04/10 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":100138.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775806200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 16:00-04/10 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":122194.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775808000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 16:30-04/10 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":55618.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775809800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 17:00-04/10 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":60657.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775811600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 17:30-04/10 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15707.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775813400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 18:00-04/10 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":19164.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775815200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 18:30-04/10 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10747.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775817000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 19:00-04/10 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12744.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775818800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 19:30-04/10 20:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3000.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775820600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 20:00-04/10 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2936.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775822400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 20:30-04/10 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":17004.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775824200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 21:00-04/10 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":8221.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775826000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 21:30-04/10 22:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13663.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775827800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 22:00-04/10 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":9694.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775829600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 22:30-04/10 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2897.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775831400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 23:00-04/10 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6927.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775833200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 23:30-04/11 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":787.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775835000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 00:00-04/11 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1745.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775836800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 00:30-04/11 01:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":816.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775838600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.14",
+                      "tooltip": "{\"title\":\"04/11 01:00-04/11 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.14,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11321.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":16.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.14,
+                      "x": 1775840400000,
+                      "y": 0.14
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 01:30-04/11 02:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775842200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 02:00-04/11 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5577.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775844000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 02:30-04/11 03:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3368.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775845800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 03:00-04/11 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2797.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775847600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 03:30-04/11 04:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775849400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 04:00-04/11 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775851200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 04:30-04/11 05:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1490.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775853000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 05:00-04/11 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6607.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775854800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 05:30-04/11 06:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6285.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775856600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 06:00-04/11 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4900.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775858400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 06:30-04/11 07:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2519.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775860200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 07:00-04/11 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11058.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775862000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 07:30-04/11 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":777.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775863800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 08:00-04/11 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5590.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775865600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 08:30-04/11 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4706.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775867400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 09:00-04/11 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13170.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775869200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.02",
+                      "tooltip": "{\"title\":\"04/11 09:30-04/11 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.02,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6089.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.02,
+                      "x": 1775871000000,
+                      "y": 0.02
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 10:00-04/11 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":26535.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775872800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 10:30-04/11 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":27133.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775874600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 11:00-04/11 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":23764.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775876400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 11:30-04/11 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14165.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775878200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 12:00-04/11 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5367.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775880000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 12:30-04/11 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10433.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775881800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 13:00-04/11 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11119.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775883600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 13:30-04/11 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15749.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775885400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 14:00-04/11 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4679.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775887200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 14:30-04/11 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5444.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775889000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 15:00-04/11 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6036.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775890800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 15:30-04/11 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11550.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775892600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 16:00-04/11 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4621.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775894400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 16:30-04/11 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3884.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775896200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 17:00-04/11 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":20127.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775898000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 17:30-04/11 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4584.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775899800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 18:00-04/11 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":35388.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775901600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 18:30-04/11 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3820.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775903400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 19:00-04/11 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2884.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775905200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 19:30-04/11 20:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1944.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775907000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 20:00-04/11 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4878.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775908800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 20:30-04/11 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3527.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775910600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 21:00-04/11 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12990.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775912400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 21:30-04/11 22:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2818.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775914200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 22:00-04/11 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2375.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775916000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 22:30-04/11 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3049.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775917800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 23:00-04/11 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3244.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775919600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 23:30-04/12 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":441.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775921400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 00:00-04/12 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775923200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.95",
+                      "tooltip": "{\"title\":\"04/12 01:00-04/12 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.95,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3370.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":32.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.95,
+                      "x": 1775926800000,
+                      "y": 0.95
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 01:30-04/12 02:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775928600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 02:00-04/12 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2311.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775930400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 02:30-04/12 03:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775932200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 03:00-04/12 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":35.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775934000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 03:30-04/12 04:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775935800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 04:00-04/12 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775937600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 04:30-04/12 05:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":156.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775939400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 05:00-04/12 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14296.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775941200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 05:30-04/12 06:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2624.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775943000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 06:00-04/12 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6977.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775944800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 06:30-04/12 07:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1070.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775946600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 07:00-04/12 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":163.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775948400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 07:30-04/12 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":692.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775950200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 08:00-04/12 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1602.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775952000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.02",
+                      "tooltip": "{\"title\":\"04/12 08:30-04/12 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.02,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13026.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.02,
+                      "x": 1775953800000,
+                      "y": 0.02
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 09:00-04/12 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":19148.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775955600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 09:30-04/12 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18743.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775957400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.06",
+                      "tooltip": "{\"title\":\"04/12 10:00-04/12 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.06,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12292.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.06,
+                      "x": 1775959200000,
+                      "y": 0.06
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 10:30-04/12 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3219.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775961000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 11:00-04/12 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5074.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775962800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 11:30-04/12 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12098.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775964600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 12:00-04/12 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":852.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775966400000,
+                      "y": 0.0
+                    }
+                  ],
+                  "name": "错误率",
+                  "type": "line",
+                  "xAxis": 0,
+                  "yAxis": 0,
+                  "zIndex": 10
+                },
+                {
+                  "color": "#DF5D56",
+                  "data": [
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 12:00-04/10 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15154.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775793600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 12:30-04/10 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":49147.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775795400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04/10 13:00-04/10 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":178521.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775797200000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04/10 13:30-04/10 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":160742.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775799000000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04/10 14:00-04/10 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":122768.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775800800000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 14:30-04/10 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":95978.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775802600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 15:00-04/10 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":109867.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775804400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 15:30-04/10 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":100138.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775806200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04/10 16:00-04/10 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":122194.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775808000000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 16:30-04/10 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":55618.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775809800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 17:00-04/10 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":60657.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775811600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 17:30-04/10 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15707.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775813400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 18:00-04/10 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":19164.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775815200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 18:30-04/10 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10747.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775817000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 19:00-04/10 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12744.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775818800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 19:30-04/10 20:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3000.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775820600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 20:00-04/10 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2936.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775822400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 20:30-04/10 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":17004.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775824200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 21:00-04/10 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":8221.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775826000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 21:30-04/10 22:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13663.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775827800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 22:00-04/10 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":9694.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775829600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 22:30-04/10 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2897.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775831400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 23:00-04/10 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6927.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775833200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/10 23:30-04/11 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":787.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775835000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 00:00-04/11 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1745.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775836800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 00:30-04/11 01:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":816.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775838600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "16.00",
+                      "tooltip": "{\"title\":\"04/11 01:00-04/11 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.14,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11321.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":16.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 16.0,
+                      "x": 1775840400000,
+                      "y": 16.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 01:30-04/11 02:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775842200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 02:00-04/11 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5577.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775844000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 02:30-04/11 03:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3368.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775845800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 03:00-04/11 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2797.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775847600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 03:30-04/11 04:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775849400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 04:00-04/11 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775851200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 04:30-04/11 05:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1490.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775853000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 05:00-04/11 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6607.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775854800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 05:30-04/11 06:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6285.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775856600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 06:00-04/11 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4900.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775858400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 06:30-04/11 07:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2519.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775860200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 07:00-04/11 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11058.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775862000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 07:30-04/11 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":777.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775863800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 08:00-04/11 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5590.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775865600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 08:30-04/11 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4706.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775867400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 09:00-04/11 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13170.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775869200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "1.00",
+                      "tooltip": "{\"title\":\"04/11 09:30-04/11 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.02,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6089.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1.0,
+                      "x": 1775871000000,
+                      "y": 1.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 10:00-04/11 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":26535.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775872800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 10:30-04/11 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":27133.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775874600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 11:00-04/11 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":23764.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775876400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 11:30-04/11 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14165.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775878200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 12:00-04/11 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5367.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775880000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 12:30-04/11 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10433.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775881800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 13:00-04/11 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11119.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775883600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 13:30-04/11 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15749.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775885400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 14:00-04/11 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4679.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775887200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 14:30-04/11 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5444.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775889000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 15:00-04/11 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6036.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775890800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 15:30-04/11 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11550.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775892600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 16:00-04/11 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4621.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775894400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 16:30-04/11 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3884.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775896200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 17:00-04/11 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":20127.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775898000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 17:30-04/11 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4584.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775899800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 18:00-04/11 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":35388.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775901600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 18:30-04/11 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3820.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775903400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 19:00-04/11 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2884.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775905200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 19:30-04/11 20:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1944.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775907000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 20:00-04/11 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4878.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775908800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 20:30-04/11 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3527.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775910600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 21:00-04/11 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12990.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775912400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 21:30-04/11 22:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2818.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775914200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 22:00-04/11 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2375.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775916000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 22:30-04/11 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3049.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775917800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 23:00-04/11 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3244.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775919600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/11 23:30-04/12 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":441.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775921400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 00:00-04/12 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775923200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "32.00",
+                      "tooltip": "{\"title\":\"04/12 01:00-04/12 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.95,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3370.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":32.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 32.0,
+                      "x": 1775926800000,
+                      "y": 32.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 01:30-04/12 02:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775928600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 02:00-04/12 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2311.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775930400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 02:30-04/12 03:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775932200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 03:00-04/12 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":35.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775934000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 03:30-04/12 04:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775935800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 04:00-04/12 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775937600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 04:30-04/12 05:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":156.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775939400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 05:00-04/12 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14296.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775941200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 05:30-04/12 06:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2624.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775943000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 06:00-04/12 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6977.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775944800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 06:30-04/12 07:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1070.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775946600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 07:00-04/12 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":163.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775948400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 07:30-04/12 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":692.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775950200000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 08:00-04/12 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1602.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775952000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "3.00",
+                      "tooltip": "{\"title\":\"04/12 08:30-04/12 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.02,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13026.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3.0,
+                      "x": 1775953800000,
+                      "y": 3.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 09:00-04/12 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":19148.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775955600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 09:30-04/12 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18743.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775957400000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "7.00",
+                      "tooltip": "{\"title\":\"04/12 10:00-04/12 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.06,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12292.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 7.0,
+                      "x": 1775959200000,
+                      "y": 7.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 10:30-04/12 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3219.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775961000000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 11:00-04/12 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5074.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775962800000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 11:30-04/12 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12098.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775964600000,
+                      "y": 0.0
+                    },
+                    {
+                      "display": "0.00",
+                      "tooltip": "{\"title\":\"04/12 12:00-04/12 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":852.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 0.0,
+                      "x": 1775966400000,
+                      "y": 0.0
+                    }
+                  ],
+                  "grouping": false,
+                  "name": "错误数",
+                  "type": "column",
+                  "xAxis": 0,
+                  "yAxis": 1,
+                  "zIndex": 9
+                },
+                {
+                  "data": [
+                    {
+                      "display": "15154.00",
+                      "tooltip": "{\"title\":\"04/10 12:00-04/10 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15154.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 15154.0,
+                      "x": 1775793600000,
+                      "y": 15154.0
+                    },
+                    {
+                      "display": "49147.00",
+                      "tooltip": "{\"title\":\"04/10 12:30-04/10 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":49147.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 49147.0,
+                      "x": 1775795400000,
+                      "y": 49147.0
+                    },
+                    {
+                      "display": "178521.00",
+                      "tooltip": "{\"title\":\"04/10 13:00-04/10 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":178521.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 178521.0,
+                      "x": 1775797200000,
+                      "y": 178521.0
+                    },
+                    {
+                      "display": "160742.00",
+                      "tooltip": "{\"title\":\"04/10 13:30-04/10 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":160742.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 160742.0,
+                      "x": 1775799000000,
+                      "y": 160742.0
+                    },
+                    {
+                      "display": "122768.00",
+                      "tooltip": "{\"title\":\"04/10 14:00-04/10 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":122768.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 122768.0,
+                      "x": 1775800800000,
+                      "y": 122768.0
+                    },
+                    {
+                      "display": "95978.00",
+                      "tooltip": "{\"title\":\"04/10 14:30-04/10 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":95978.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 95978.0,
+                      "x": 1775802600000,
+                      "y": 95978.0
+                    },
+                    {
+                      "display": "109867.00",
+                      "tooltip": "{\"title\":\"04/10 15:00-04/10 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":109867.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 109867.0,
+                      "x": 1775804400000,
+                      "y": 109867.0
+                    },
+                    {
+                      "display": "100138.00",
+                      "tooltip": "{\"title\":\"04/10 15:30-04/10 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":100138.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 100138.0,
+                      "x": 1775806200000,
+                      "y": 100138.0
+                    },
+                    {
+                      "display": "122194.00",
+                      "tooltip": "{\"title\":\"04/10 16:00-04/10 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":122194.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 122194.0,
+                      "x": 1775808000000,
+                      "y": 122194.0
+                    },
+                    {
+                      "display": "55618.00",
+                      "tooltip": "{\"title\":\"04/10 16:30-04/10 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":55618.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 55618.0,
+                      "x": 1775809800000,
+                      "y": 55618.0
+                    },
+                    {
+                      "display": "60657.00",
+                      "tooltip": "{\"title\":\"04/10 17:00-04/10 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":60657.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 60657.0,
+                      "x": 1775811600000,
+                      "y": 60657.0
+                    },
+                    {
+                      "display": "15707.00",
+                      "tooltip": "{\"title\":\"04/10 17:30-04/10 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15707.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 15707.0,
+                      "x": 1775813400000,
+                      "y": 15707.0
+                    },
+                    {
+                      "display": "19164.00",
+                      "tooltip": "{\"title\":\"04/10 18:00-04/10 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":19164.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 19164.0,
+                      "x": 1775815200000,
+                      "y": 19164.0
+                    },
+                    {
+                      "display": "10747.00",
+                      "tooltip": "{\"title\":\"04/10 18:30-04/10 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10747.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 10747.0,
+                      "x": 1775817000000,
+                      "y": 10747.0
+                    },
+                    {
+                      "display": "12744.00",
+                      "tooltip": "{\"title\":\"04/10 19:00-04/10 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12744.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 12744.0,
+                      "x": 1775818800000,
+                      "y": 12744.0
+                    },
+                    {
+                      "display": "3000.00",
+                      "tooltip": "{\"title\":\"04/10 19:30-04/10 20:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3000.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3000.0,
+                      "x": 1775820600000,
+                      "y": 3000.0
+                    },
+                    {
+                      "display": "2936.00",
+                      "tooltip": "{\"title\":\"04/10 20:00-04/10 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2936.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2936.0,
+                      "x": 1775822400000,
+                      "y": 2936.0
+                    },
+                    {
+                      "display": "17004.00",
+                      "tooltip": "{\"title\":\"04/10 20:30-04/10 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":17004.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 17004.0,
+                      "x": 1775824200000,
+                      "y": 17004.0
+                    },
+                    {
+                      "display": "8221.00",
+                      "tooltip": "{\"title\":\"04/10 21:00-04/10 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":8221.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 8221.0,
+                      "x": 1775826000000,
+                      "y": 8221.0
+                    },
+                    {
+                      "display": "13663.00",
+                      "tooltip": "{\"title\":\"04/10 21:30-04/10 22:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13663.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 13663.0,
+                      "x": 1775827800000,
+                      "y": 13663.0
+                    },
+                    {
+                      "display": "9694.00",
+                      "tooltip": "{\"title\":\"04/10 22:00-04/10 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":9694.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 9694.0,
+                      "x": 1775829600000,
+                      "y": 9694.0
+                    },
+                    {
+                      "display": "2897.00",
+                      "tooltip": "{\"title\":\"04/10 22:30-04/10 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2897.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2897.0,
+                      "x": 1775831400000,
+                      "y": 2897.0
+                    },
+                    {
+                      "display": "6927.00",
+                      "tooltip": "{\"title\":\"04/10 23:00-04/10 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6927.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 6927.0,
+                      "x": 1775833200000,
+                      "y": 6927.0
+                    },
+                    {
+                      "display": "787.00",
+                      "tooltip": "{\"title\":\"04/10 23:30-04/11 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":787.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 787.0,
+                      "x": 1775835000000,
+                      "y": 787.0
+                    },
+                    {
+                      "display": "1745.00",
+                      "tooltip": "{\"title\":\"04/11 00:00-04/11 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1745.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1745.0,
+                      "x": 1775836800000,
+                      "y": 1745.0
+                    },
+                    {
+                      "display": "816.00",
+                      "tooltip": "{\"title\":\"04/11 00:30-04/11 01:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":816.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 816.0,
+                      "x": 1775838600000,
+                      "y": 816.0
+                    },
+                    {
+                      "display": "11321.00",
+                      "tooltip": "{\"title\":\"04/11 01:00-04/11 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.14,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11321.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":16.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 11321.0,
+                      "x": 1775840400000,
+                      "y": 11321.0
+                    },
+                    {
+                      "display": "18.00",
+                      "tooltip": "{\"title\":\"04/11 01:30-04/11 02:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 18.0,
+                      "x": 1775842200000,
+                      "y": 18.0
+                    },
+                    {
+                      "display": "5577.00",
+                      "tooltip": "{\"title\":\"04/11 02:00-04/11 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5577.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 5577.0,
+                      "x": 1775844000000,
+                      "y": 5577.0
+                    },
+                    {
+                      "display": "3368.00",
+                      "tooltip": "{\"title\":\"04/11 02:30-04/11 03:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3368.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3368.0,
+                      "x": 1775845800000,
+                      "y": 3368.0
+                    },
+                    {
+                      "display": "2797.00",
+                      "tooltip": "{\"title\":\"04/11 03:00-04/11 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2797.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2797.0,
+                      "x": 1775847600000,
+                      "y": 2797.0
+                    },
+                    {
+                      "display": "2.00",
+                      "tooltip": "{\"title\":\"04/11 03:30-04/11 04:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2.0,
+                      "x": 1775849400000,
+                      "y": 2.0
+                    },
+                    {
+                      "display": "8.00",
+                      "tooltip": "{\"title\":\"04/11 04:00-04/11 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":8.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 8.0,
+                      "x": 1775851200000,
+                      "y": 8.0
+                    },
+                    {
+                      "display": "1490.00",
+                      "tooltip": "{\"title\":\"04/11 04:30-04/11 05:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1490.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1490.0,
+                      "x": 1775853000000,
+                      "y": 1490.0
+                    },
+                    {
+                      "display": "6607.00",
+                      "tooltip": "{\"title\":\"04/11 05:00-04/11 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6607.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 6607.0,
+                      "x": 1775854800000,
+                      "y": 6607.0
+                    },
+                    {
+                      "display": "6285.00",
+                      "tooltip": "{\"title\":\"04/11 05:30-04/11 06:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6285.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 6285.0,
+                      "x": 1775856600000,
+                      "y": 6285.0
+                    },
+                    {
+                      "display": "4900.00",
+                      "tooltip": "{\"title\":\"04/11 06:00-04/11 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4900.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 4900.0,
+                      "x": 1775858400000,
+                      "y": 4900.0
+                    },
+                    {
+                      "display": "2519.00",
+                      "tooltip": "{\"title\":\"04/11 06:30-04/11 07:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2519.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2519.0,
+                      "x": 1775860200000,
+                      "y": 2519.0
+                    },
+                    {
+                      "display": "11058.00",
+                      "tooltip": "{\"title\":\"04/11 07:00-04/11 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11058.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 11058.0,
+                      "x": 1775862000000,
+                      "y": 11058.0
+                    },
+                    {
+                      "display": "777.00",
+                      "tooltip": "{\"title\":\"04/11 07:30-04/11 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":777.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 777.0,
+                      "x": 1775863800000,
+                      "y": 777.0
+                    },
+                    {
+                      "display": "5590.00",
+                      "tooltip": "{\"title\":\"04/11 08:00-04/11 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5590.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 5590.0,
+                      "x": 1775865600000,
+                      "y": 5590.0
+                    },
+                    {
+                      "display": "4706.00",
+                      "tooltip": "{\"title\":\"04/11 08:30-04/11 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4706.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 4706.0,
+                      "x": 1775867400000,
+                      "y": 4706.0
+                    },
+                    {
+                      "display": "13170.00",
+                      "tooltip": "{\"title\":\"04/11 09:00-04/11 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13170.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 13170.0,
+                      "x": 1775869200000,
+                      "y": 13170.0
+                    },
+                    {
+                      "display": "6089.00",
+                      "tooltip": "{\"title\":\"04/11 09:30-04/11 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.02,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6089.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":1.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 6089.0,
+                      "x": 1775871000000,
+                      "y": 6089.0
+                    },
+                    {
+                      "display": "26535.00",
+                      "tooltip": "{\"title\":\"04/11 10:00-04/11 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":26535.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 26535.0,
+                      "x": 1775872800000,
+                      "y": 26535.0
+                    },
+                    {
+                      "display": "27133.00",
+                      "tooltip": "{\"title\":\"04/11 10:30-04/11 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":27133.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 27133.0,
+                      "x": 1775874600000,
+                      "y": 27133.0
+                    },
+                    {
+                      "display": "23764.00",
+                      "tooltip": "{\"title\":\"04/11 11:00-04/11 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":23764.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 23764.0,
+                      "x": 1775876400000,
+                      "y": 23764.0
+                    },
+                    {
+                      "display": "14165.00",
+                      "tooltip": "{\"title\":\"04/11 11:30-04/11 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14165.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 14165.0,
+                      "x": 1775878200000,
+                      "y": 14165.0
+                    },
+                    {
+                      "display": "5367.00",
+                      "tooltip": "{\"title\":\"04/11 12:00-04/11 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5367.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 5367.0,
+                      "x": 1775880000000,
+                      "y": 5367.0
+                    },
+                    {
+                      "display": "10433.00",
+                      "tooltip": "{\"title\":\"04/11 12:30-04/11 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10433.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 10433.0,
+                      "x": 1775881800000,
+                      "y": 10433.0
+                    },
+                    {
+                      "display": "11119.00",
+                      "tooltip": "{\"title\":\"04/11 13:00-04/11 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11119.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 11119.0,
+                      "x": 1775883600000,
+                      "y": 11119.0
+                    },
+                    {
+                      "display": "15749.00",
+                      "tooltip": "{\"title\":\"04/11 13:30-04/11 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15749.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 15749.0,
+                      "x": 1775885400000,
+                      "y": 15749.0
+                    },
+                    {
+                      "display": "4679.00",
+                      "tooltip": "{\"title\":\"04/11 14:00-04/11 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4679.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 4679.0,
+                      "x": 1775887200000,
+                      "y": 4679.0
+                    },
+                    {
+                      "display": "5444.00",
+                      "tooltip": "{\"title\":\"04/11 14:30-04/11 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5444.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 5444.0,
+                      "x": 1775889000000,
+                      "y": 5444.0
+                    },
+                    {
+                      "display": "6036.00",
+                      "tooltip": "{\"title\":\"04/11 15:00-04/11 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6036.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 6036.0,
+                      "x": 1775890800000,
+                      "y": 6036.0
+                    },
+                    {
+                      "display": "11550.00",
+                      "tooltip": "{\"title\":\"04/11 15:30-04/11 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":11550.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 11550.0,
+                      "x": 1775892600000,
+                      "y": 11550.0
+                    },
+                    {
+                      "display": "4621.00",
+                      "tooltip": "{\"title\":\"04/11 16:00-04/11 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4621.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 4621.0,
+                      "x": 1775894400000,
+                      "y": 4621.0
+                    },
+                    {
+                      "display": "3884.00",
+                      "tooltip": "{\"title\":\"04/11 16:30-04/11 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3884.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3884.0,
+                      "x": 1775896200000,
+                      "y": 3884.0
+                    },
+                    {
+                      "display": "20127.00",
+                      "tooltip": "{\"title\":\"04/11 17:00-04/11 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":20127.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 20127.0,
+                      "x": 1775898000000,
+                      "y": 20127.0
+                    },
+                    {
+                      "display": "4584.00",
+                      "tooltip": "{\"title\":\"04/11 17:30-04/11 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4584.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 4584.0,
+                      "x": 1775899800000,
+                      "y": 4584.0
+                    },
+                    {
+                      "display": "35388.00",
+                      "tooltip": "{\"title\":\"04/11 18:00-04/11 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":35388.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 35388.0,
+                      "x": 1775901600000,
+                      "y": 35388.0
+                    },
+                    {
+                      "display": "3820.00",
+                      "tooltip": "{\"title\":\"04/11 18:30-04/11 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3820.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3820.0,
+                      "x": 1775903400000,
+                      "y": 3820.0
+                    },
+                    {
+                      "display": "2884.00",
+                      "tooltip": "{\"title\":\"04/11 19:00-04/11 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2884.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2884.0,
+                      "x": 1775905200000,
+                      "y": 2884.0
+                    },
+                    {
+                      "display": "1944.00",
+                      "tooltip": "{\"title\":\"04/11 19:30-04/11 20:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1944.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1944.0,
+                      "x": 1775907000000,
+                      "y": 1944.0
+                    },
+                    {
+                      "display": "4878.00",
+                      "tooltip": "{\"title\":\"04/11 20:00-04/11 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":4878.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 4878.0,
+                      "x": 1775908800000,
+                      "y": 4878.0
+                    },
+                    {
+                      "display": "3527.00",
+                      "tooltip": "{\"title\":\"04/11 20:30-04/11 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3527.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3527.0,
+                      "x": 1775910600000,
+                      "y": 3527.0
+                    },
+                    {
+                      "display": "12990.00",
+                      "tooltip": "{\"title\":\"04/11 21:00-04/11 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12990.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 12990.0,
+                      "x": 1775912400000,
+                      "y": 12990.0
+                    },
+                    {
+                      "display": "2818.00",
+                      "tooltip": "{\"title\":\"04/11 21:30-04/11 22:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2818.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2818.0,
+                      "x": 1775914200000,
+                      "y": 2818.0
+                    },
+                    {
+                      "display": "2375.00",
+                      "tooltip": "{\"title\":\"04/11 22:00-04/11 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2375.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2375.0,
+                      "x": 1775916000000,
+                      "y": 2375.0
+                    },
+                    {
+                      "display": "3049.00",
+                      "tooltip": "{\"title\":\"04/11 22:30-04/11 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3049.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3049.0,
+                      "x": 1775917800000,
+                      "y": 3049.0
+                    },
+                    {
+                      "display": "3244.00",
+                      "tooltip": "{\"title\":\"04/11 23:00-04/11 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3244.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3244.0,
+                      "x": 1775919600000,
+                      "y": 3244.0
+                    },
+                    {
+                      "display": "441.00",
+                      "tooltip": "{\"title\":\"04/11 23:30-04/12 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":441.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 441.0,
+                      "x": 1775921400000,
+                      "y": 441.0
+                    },
+                    {
+                      "display": "14.00",
+                      "tooltip": "{\"title\":\"04/12 00:00-04/12 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 14.0,
+                      "x": 1775923200000,
+                      "y": 14.0
+                    },
+                    {
+                      "display": "3370.00",
+                      "tooltip": "{\"title\":\"04/12 01:00-04/12 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.95,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3370.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":32.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3370.0,
+                      "x": 1775926800000,
+                      "y": 3370.0
+                    },
+                    {
+                      "display": "15.00",
+                      "tooltip": "{\"title\":\"04/12 01:30-04/12 02:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":15.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 15.0,
+                      "x": 1775928600000,
+                      "y": 15.0
+                    },
+                    {
+                      "display": "2311.00",
+                      "tooltip": "{\"title\":\"04/12 02:00-04/12 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2311.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2311.0,
+                      "x": 1775930400000,
+                      "y": 2311.0
+                    },
+                    {
+                      "display": "2294.00",
+                      "tooltip": "{\"title\":\"04/12 02:30-04/12 03:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2294.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2294.0,
+                      "x": 1775932200000,
+                      "y": 2294.0
+                    },
+                    {
+                      "display": "35.00",
+                      "tooltip": "{\"title\":\"04/12 03:00-04/12 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":35.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 35.0,
+                      "x": 1775934000000,
+                      "y": 35.0
+                    },
+                    {
+                      "display": "10.00",
+                      "tooltip": "{\"title\":\"04/12 03:30-04/12 04:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":10.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 10.0,
+                      "x": 1775935800000,
+                      "y": 10.0
+                    },
+                    {
+                      "display": "18.00",
+                      "tooltip": "{\"title\":\"04/12 04:00-04/12 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 18.0,
+                      "x": 1775937600000,
+                      "y": 18.0
+                    },
+                    {
+                      "display": "156.00",
+                      "tooltip": "{\"title\":\"04/12 04:30-04/12 05:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":156.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 156.0,
+                      "x": 1775939400000,
+                      "y": 156.0
+                    },
+                    {
+                      "display": "14296.00",
+                      "tooltip": "{\"title\":\"04/12 05:00-04/12 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":14296.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 14296.0,
+                      "x": 1775941200000,
+                      "y": 14296.0
+                    },
+                    {
+                      "display": "2624.00",
+                      "tooltip": "{\"title\":\"04/12 05:30-04/12 06:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":2624.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 2624.0,
+                      "x": 1775943000000,
+                      "y": 2624.0
+                    },
+                    {
+                      "display": "6977.00",
+                      "tooltip": "{\"title\":\"04/12 06:00-04/12 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":6977.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 6977.0,
+                      "x": 1775944800000,
+                      "y": 6977.0
+                    },
+                    {
+                      "display": "1070.00",
+                      "tooltip": "{\"title\":\"04/12 06:30-04/12 07:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1070.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1070.0,
+                      "x": 1775946600000,
+                      "y": 1070.0
+                    },
+                    {
+                      "display": "163.00",
+                      "tooltip": "{\"title\":\"04/12 07:00-04/12 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":163.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 163.0,
+                      "x": 1775948400000,
+                      "y": 163.0
+                    },
+                    {
+                      "display": "692.00",
+                      "tooltip": "{\"title\":\"04/12 07:30-04/12 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":692.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 692.0,
+                      "x": 1775950200000,
+                      "y": 692.0
+                    },
+                    {
+                      "display": "1602.00",
+                      "tooltip": "{\"title\":\"04/12 08:00-04/12 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":1602.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 1602.0,
+                      "x": 1775952000000,
+                      "y": 1602.0
+                    },
+                    {
+                      "display": "13026.00",
+                      "tooltip": "{\"title\":\"04/12 08:30-04/12 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.02,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":13026.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":3.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 13026.0,
+                      "x": 1775953800000,
+                      "y": 13026.0
+                    },
+                    {
+                      "display": "19148.00",
+                      "tooltip": "{\"title\":\"04/12 09:00-04/12 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":19148.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 19148.0,
+                      "x": 1775955600000,
+                      "y": 19148.0
+                    },
+                    {
+                      "display": "18743.00",
+                      "tooltip": "{\"title\":\"04/12 09:30-04/12 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":18743.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 18743.0,
+                      "x": 1775957400000,
+                      "y": 18743.0
+                    },
+                    {
+                      "display": "12292.00",
+                      "tooltip": "{\"title\":\"04/12 10:00-04/12 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.06,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12292.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":7.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 12292.0,
+                      "x": 1775959200000,
+                      "y": 12292.0
+                    },
+                    {
+                      "display": "3219.00",
+                      "tooltip": "{\"title\":\"04/12 10:30-04/12 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":3219.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 3219.0,
+                      "x": 1775961000000,
+                      "y": 3219.0
+                    },
+                    {
+                      "display": "5074.00",
+                      "tooltip": "{\"title\":\"04/12 11:00-04/12 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":5074.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 5074.0,
+                      "x": 1775962800000,
+                      "y": 5074.0
+                    },
+                    {
+                      "display": "12098.00",
+                      "tooltip": "{\"title\":\"04/12 11:30-04/12 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":12098.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 12098.0,
+                      "x": 1775964600000,
+                      "y": 12098.0
+                    },
+                    {
+                      "display": "852.00",
+                      "tooltip": "{\"title\":\"04/12 12:00-04/12 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"总次数\",\"value\":852.00,\"unit\":\"\",\"scale\":0},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":0}]}",
+                      "value": 852.0,
+                      "x": 1775966400000,
+                      "y": 852.0
+                    }
+                  ],
+                  "grouping": false,
+                  "name": "总次数",
+                  "type": "column",
+                  "xAxis": 0,
+                  "yAxis": 1,
+                  "zIndex": 8
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "%"
+                },
+                {
+                  "opposite": true,
+                  "tickUnit": ""
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:12:30 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 1
+        "200": 2
       }
     }
   },

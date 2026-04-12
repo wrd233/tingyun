@@ -1,15 +1,15 @@
 {
-  "count_seen": 2,
+  "count_seen": 3,
   "first_seen": "2026-04-03T15:42:37+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 2
+    "http://169.169.173.25:8080": 3
   },
-  "last_seen": "2026-04-07T14:49:01+08:00",
+  "last_seen": "2026-04-12T12:13:04+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 3,
           "dynamic_fields": [
             "body.actionId",
             "body.applicationId",
@@ -57,20 +57,34 @@
           }
         }
       ],
-      "count_seen": 2,
+      "count_seen": 3,
       "first_seen": "2026-04-03T15:42:37+08:00",
       "inference_basis": [
         "path=webaction/actionChart"
       ],
       "inferred_purpose": "Likely related to webaction/actionChart",
-      "last_seen": "2026-04-07T14:49:01+08:00",
+      "last_seen": "2026-04-12T12:13:04+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 2
+        "application/json": 3
       },
       "observed_metrics": [],
       "page_context_summary": {
         "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:13:04+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/actionChart",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
           {
             "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
             "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
@@ -87,37 +101,37 @@
           }
         ],
         "latest": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-          "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-          "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+          "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
           "initiator_type": "script",
           "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-07T14:49:01+08:00",
+          "request_timestamp": "2026-04-12T12:13:04+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/webaction/actionChart",
-          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         },
         "latest_non_empty": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-          "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-          "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-          "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+          "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
           "initiator_type": "script",
           "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-07T14:49:01+08:00",
+          "request_timestamp": "2026-04-12T12:13:04+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/webaction/actionChart",
-          "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         }
       },
       "query_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 3,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -164,7 +178,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 2
+        "XHR": 3
       },
       "sample_requests": [
         {
@@ -227,6 +241,44 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-07T14:49:01+08:00",
+          "url": "http://169.169.173.25:8080/server-api/webaction/actionChart"
+        },
+        {
+          "body": {
+            "actionChartTypes": "RESPONSE, COUNT",
+            "actionId": "13174",
+            "actionType": "TX",
+            "applicationId": "1644",
+            "beginTime": "2026-04-10 12:13",
+            "bizSystemId": "1065",
+            "endTime": "2026-04-12 12:13",
+            "lang": "zh_CN",
+            "timePeriod": "2880"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+            "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:13:04+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/webaction/actionChart",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:13:04+08:00",
           "url": "http://169.169.173.25:8080/server-api/webaction/actionChart"
         }
       ],
@@ -1092,10 +1144,771 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "series": [
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-10 12:00--04-10 12:30\",\"data\":[{\"title\":\"响应时间\",\"value\":331,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":68,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775793600000,
+                      "y": 331.44
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 12:30--04-10 13:00\",\"data\":[{\"title\":\"响应时间\",\"value\":185,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":289,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775795400000,
+                      "y": 184.8
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 13:00--04-10 13:30\",\"data\":[{\"title\":\"响应时间\",\"value\":510,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":891,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775797200000,
+                      "y": 509.58
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 13:30--04-10 14:00\",\"data\":[{\"title\":\"响应时间\",\"value\":218,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1291,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775799000000,
+                      "y": 217.58
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 14:00--04-10 14:30\",\"data\":[{\"title\":\"响应时间\",\"value\":214,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":827,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775800800000,
+                      "y": 214.4
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 14:30--04-10 15:00\",\"data\":[{\"title\":\"响应时间\",\"value\":217,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":800,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775802600000,
+                      "y": 217.26
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 15:00--04-10 15:30\",\"data\":[{\"title\":\"响应时间\",\"value\":258,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1207,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775804400000,
+                      "y": 258.08
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 15:30--04-10 16:00\",\"data\":[{\"title\":\"响应时间\",\"value\":171,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1124,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775806200000,
+                      "y": 170.83
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 16:00--04-10 16:30\",\"data\":[{\"title\":\"响应时间\",\"value\":228,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":913,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775808000000,
+                      "y": 227.77
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 16:30--04-10 17:00\",\"data\":[{\"title\":\"响应时间\",\"value\":204,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":454,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775809800000,
+                      "y": 204.49
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 17:00--04-10 17:30\",\"data\":[{\"title\":\"响应时间\",\"value\":307,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":345,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775811600000,
+                      "y": 307.18
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 17:30--04-10 18:00\",\"data\":[{\"title\":\"响应时间\",\"value\":471,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":140,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775813400000,
+                      "y": 471.12
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 18:00--04-10 18:30\",\"data\":[{\"title\":\"响应时间\",\"value\":278,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":32,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775815200000,
+                      "y": 277.5
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 18:30--04-10 19:00\",\"data\":[{\"title\":\"响应时间\",\"value\":192,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":38,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775817000000,
+                      "y": 191.82
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 19:00--04-10 19:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4783,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775818800000,
+                      "y": 4783.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 20:00--04-10 20:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4826,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775822400000,
+                      "y": 4826.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 20:30--04-10 21:00\",\"data\":[{\"title\":\"响应时间\",\"value\":133,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775824200000,
+                      "y": 133.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 21:00--04-10 21:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4802,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775826000000,
+                      "y": 4802.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 22:00--04-10 22:30\",\"data\":[{\"title\":\"响应时间\",\"value\":218,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":39,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775829600000,
+                      "y": 218.31
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 22:30--04-10 23:00\",\"data\":[{\"title\":\"响应时间\",\"value\":257,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":9,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775831400000,
+                      "y": 256.89
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 23:00--04-10 23:30\",\"data\":[{\"title\":\"响应时间\",\"value\":701,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775833200000,
+                      "y": 701.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 23:30--04-11 00:00\",\"data\":[{\"title\":\"响应时间\",\"value\":213,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":5,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775835000000,
+                      "y": 213.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 00:00--04-11 00:30\",\"data\":[{\"title\":\"响应时间\",\"value\":73113,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775836800000,
+                      "y": 73113.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 01:00--04-11 01:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4758,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":55,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775840400000,
+                      "y": 4758.35
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 02:00--04-11 02:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4714,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775844000000,
+                      "y": 4714.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 05:00--04-11 05:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4751,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775854800000,
+                      "y": 4751.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 06:00--04-11 06:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4733,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775858400000,
+                      "y": 4733.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 07:00--04-11 07:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4744,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775862000000,
+                      "y": 4744.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 08:00--04-11 08:30\",\"data\":[{\"title\":\"响应时间\",\"value\":372,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":18,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775865600000,
+                      "y": 371.67
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 09:00--04-11 09:30\",\"data\":[{\"title\":\"响应时间\",\"value\":1002,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":6,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775869200000,
+                      "y": 1001.5
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 09:30--04-11 10:00\",\"data\":[{\"title\":\"响应时间\",\"value\":267,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":3,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775871000000,
+                      "y": 266.67
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 10:00--04-11 10:30\",\"data\":[{\"title\":\"响应时间\",\"value\":498,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":16,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775872800000,
+                      "y": 497.75
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 10:30--04-11 11:00\",\"data\":[{\"title\":\"响应时间\",\"value\":177,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775874600000,
+                      "y": 177.1
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 11:00--04-11 11:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4772,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775876400000,
+                      "y": 4772.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 11:30--04-11 12:00\",\"data\":[{\"title\":\"响应时间\",\"value\":262,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":4,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775878200000,
+                      "y": 261.5
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 12:00--04-11 12:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4814,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775880000000,
+                      "y": 4814.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 12:30--04-11 13:00\",\"data\":[{\"title\":\"响应时间\",\"value\":4,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775881800000,
+                      "y": 3.8
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 13:00--04-11 13:30\",\"data\":[{\"title\":\"响应时间\",\"value\":3283,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":80,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775883600000,
+                      "y": 3283.31
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 13:30--04-11 14:00\",\"data\":[{\"title\":\"响应时间\",\"value\":134,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":12,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775885400000,
+                      "y": 134.08
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 14:00--04-11 14:30\",\"data\":[{\"title\":\"响应时间\",\"value\":291,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":20,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775887200000,
+                      "y": 290.75
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 14:30--04-11 15:00\",\"data\":[{\"title\":\"响应时间\",\"value\":88,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":34,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775889000000,
+                      "y": 87.91
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 15:00--04-11 15:30\",\"data\":[{\"title\":\"响应时间\",\"value\":860,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":6,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775890800000,
+                      "y": 860.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 15:30--04-11 16:00\",\"data\":[{\"title\":\"响应时间\",\"value\":227,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":15,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775892600000,
+                      "y": 227.33
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 16:00--04-11 16:30\",\"data\":[{\"title\":\"响应时间\",\"value\":339,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":18,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775894400000,
+                      "y": 339.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 16:30--04-11 17:00\",\"data\":[{\"title\":\"响应时间\",\"value\":51,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":27,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775896200000,
+                      "y": 51.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 17:00--04-11 17:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4696,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775898000000,
+                      "y": 4696.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 17:30--04-11 18:00\",\"data\":[{\"title\":\"响应时间\",\"value\":70,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":6,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775899800000,
+                      "y": 70.17
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 18:00--04-11 18:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4765,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775901600000,
+                      "y": 4765.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 18:30--04-11 19:00\",\"data\":[{\"title\":\"响应时间\",\"value\":112,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":8,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775903400000,
+                      "y": 112.38
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 19:00--04-11 19:30\",\"data\":[{\"title\":\"响应时间\",\"value\":438,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":14,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775905200000,
+                      "y": 437.64
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 20:00--04-11 20:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4667,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775908800000,
+                      "y": 4667.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 21:00--04-11 21:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4762,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775912400000,
+                      "y": 4762.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 22:00--04-11 22:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4780,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775916000000,
+                      "y": 4780.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 23:00--04-11 23:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4725,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775919600000,
+                      "y": 4725.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 00:00--04-12 00:30\",\"data\":[{\"title\":\"响应时间\",\"value\":71791,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775923200000,
+                      "y": 71791.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 01:00--04-12 01:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4771,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":55,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775926800000,
+                      "y": 4770.69
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 02:00--04-12 02:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4847,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775930400000,
+                      "y": 4847.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 03:00--04-12 03:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4828,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775934000000,
+                      "y": 4828.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 04:00--04-12 04:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4696,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775937600000,
+                      "y": 4696.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 05:00--04-12 05:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4816,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775941200000,
+                      "y": 4816.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 06:00--04-12 06:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4748,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775944800000,
+                      "y": 4748.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 07:00--04-12 07:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4860,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775948400000,
+                      "y": 4860.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 08:00--04-12 08:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4754,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775952000000,
+                      "y": 4754.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 08:30--04-12 09:00\",\"data\":[{\"title\":\"响应时间\",\"value\":296,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":40,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775953800000,
+                      "y": 295.83
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 09:00--04-12 09:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4750,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775955600000,
+                      "y": 4750.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 10:00--04-12 10:30\",\"data\":[{\"title\":\"响应时间\",\"value\":154,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":66,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775959200000,
+                      "y": 153.97
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 10:30--04-12 11:00\",\"data\":[{\"title\":\"响应时间\",\"value\":83,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":7,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775961000000,
+                      "y": 83.43
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 11:00--04-12 11:30\",\"data\":[{\"title\":\"响应时间\",\"value\":4722,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775962800000,
+                      "y": 4722.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 11:30--04-12 12:00\",\"data\":[{\"title\":\"响应时间\",\"value\":48,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":11,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775964600000,
+                      "y": 48.45
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 12:00--04-12 12:30\",\"data\":[{\"title\":\"响应时间\",\"value\":1188,\"unit\":\"ms\",\"scale\":0},{\"title\":\"请求数\",\"value\":4,\"unit\":\"\",\"scale\":0}]}",
+                      "x": 1775966400000,
+                      "y": 1188.25
+                    }
+                  ],
+                  "name": "响应时间",
+                  "params": {
+                    "chartType": "RESPONSE"
+                  },
+                  "type": "line",
+                  "yAxis": 0,
+                  "zIndex": 100
+                },
+                {
+                  "data": [
+                    {
+                      "tooltip": "{\"title\":\"04-10 12:00--04-10 12:30\",\"data\":[{\"title\":\"请求数\",\"value\":68,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":331,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775793600000,
+                      "y": 68.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 12:30--04-10 13:00\",\"data\":[{\"title\":\"请求数\",\"value\":289,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":185,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775795400000,
+                      "y": 289.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 13:00--04-10 13:30\",\"data\":[{\"title\":\"请求数\",\"value\":891,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":510,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775797200000,
+                      "y": 891.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 13:30--04-10 14:00\",\"data\":[{\"title\":\"请求数\",\"value\":1291,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":218,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775799000000,
+                      "y": 1291.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 14:00--04-10 14:30\",\"data\":[{\"title\":\"请求数\",\"value\":827,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":214,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775800800000,
+                      "y": 827.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 14:30--04-10 15:00\",\"data\":[{\"title\":\"请求数\",\"value\":800,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":217,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775802600000,
+                      "y": 800.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 15:00--04-10 15:30\",\"data\":[{\"title\":\"请求数\",\"value\":1207,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":258,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775804400000,
+                      "y": 1207.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 15:30--04-10 16:00\",\"data\":[{\"title\":\"请求数\",\"value\":1124,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":171,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775806200000,
+                      "y": 1124.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 16:00--04-10 16:30\",\"data\":[{\"title\":\"请求数\",\"value\":913,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":228,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775808000000,
+                      "y": 913.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 16:30--04-10 17:00\",\"data\":[{\"title\":\"请求数\",\"value\":454,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":204,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775809800000,
+                      "y": 454.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 17:00--04-10 17:30\",\"data\":[{\"title\":\"请求数\",\"value\":345,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":307,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775811600000,
+                      "y": 345.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 17:30--04-10 18:00\",\"data\":[{\"title\":\"请求数\",\"value\":140,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":471,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775813400000,
+                      "y": 140.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 18:00--04-10 18:30\",\"data\":[{\"title\":\"请求数\",\"value\":32,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":278,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775815200000,
+                      "y": 32.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 18:30--04-10 19:00\",\"data\":[{\"title\":\"请求数\",\"value\":38,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":192,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775817000000,
+                      "y": 38.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 19:00--04-10 19:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4783,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775818800000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 20:00--04-10 20:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4826,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775822400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 20:30--04-10 21:00\",\"data\":[{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":133,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775824200000,
+                      "y": 10.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 21:00--04-10 21:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4802,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775826000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 22:00--04-10 22:30\",\"data\":[{\"title\":\"请求数\",\"value\":39,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":218,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775829600000,
+                      "y": 39.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 22:30--04-10 23:00\",\"data\":[{\"title\":\"请求数\",\"value\":9,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":257,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775831400000,
+                      "y": 9.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 23:00--04-10 23:30\",\"data\":[{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":701,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775833200000,
+                      "y": 10.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-10 23:30--04-11 00:00\",\"data\":[{\"title\":\"请求数\",\"value\":5,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":213,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775835000000,
+                      "y": 5.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 00:00--04-11 00:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":73113,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775836800000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 01:00--04-11 01:30\",\"data\":[{\"title\":\"请求数\",\"value\":55,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4758,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775840400000,
+                      "y": 55.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 02:00--04-11 02:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4714,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775844000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 05:00--04-11 05:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4751,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775854800000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 06:00--04-11 06:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4733,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775858400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 07:00--04-11 07:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4744,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775862000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 08:00--04-11 08:30\",\"data\":[{\"title\":\"请求数\",\"value\":18,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":372,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775865600000,
+                      "y": 18.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 09:00--04-11 09:30\",\"data\":[{\"title\":\"请求数\",\"value\":6,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":1002,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775869200000,
+                      "y": 6.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 09:30--04-11 10:00\",\"data\":[{\"title\":\"请求数\",\"value\":3,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":267,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775871000000,
+                      "y": 3.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 10:00--04-11 10:30\",\"data\":[{\"title\":\"请求数\",\"value\":16,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":498,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775872800000,
+                      "y": 16.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 10:30--04-11 11:00\",\"data\":[{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":177,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775874600000,
+                      "y": 10.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 11:00--04-11 11:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4772,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775876400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 11:30--04-11 12:00\",\"data\":[{\"title\":\"请求数\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":262,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775878200000,
+                      "y": 4.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 12:00--04-11 12:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4814,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775880000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 12:30--04-11 13:00\",\"data\":[{\"title\":\"请求数\",\"value\":10,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775881800000,
+                      "y": 10.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 13:00--04-11 13:30\",\"data\":[{\"title\":\"请求数\",\"value\":80,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":3283,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775883600000,
+                      "y": 80.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 13:30--04-11 14:00\",\"data\":[{\"title\":\"请求数\",\"value\":12,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":134,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775885400000,
+                      "y": 12.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 14:00--04-11 14:30\",\"data\":[{\"title\":\"请求数\",\"value\":20,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":291,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775887200000,
+                      "y": 20.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 14:30--04-11 15:00\",\"data\":[{\"title\":\"请求数\",\"value\":34,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":88,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775889000000,
+                      "y": 34.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 15:00--04-11 15:30\",\"data\":[{\"title\":\"请求数\",\"value\":6,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":860,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775890800000,
+                      "y": 6.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 15:30--04-11 16:00\",\"data\":[{\"title\":\"请求数\",\"value\":15,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":227,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775892600000,
+                      "y": 15.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 16:00--04-11 16:30\",\"data\":[{\"title\":\"请求数\",\"value\":18,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":339,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775894400000,
+                      "y": 18.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 16:30--04-11 17:00\",\"data\":[{\"title\":\"请求数\",\"value\":27,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":51,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775896200000,
+                      "y": 27.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 17:00--04-11 17:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4696,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775898000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 17:30--04-11 18:00\",\"data\":[{\"title\":\"请求数\",\"value\":6,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":70,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775899800000,
+                      "y": 6.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 18:00--04-11 18:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4765,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775901600000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 18:30--04-11 19:00\",\"data\":[{\"title\":\"请求数\",\"value\":8,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":112,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775903400000,
+                      "y": 8.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 19:00--04-11 19:30\",\"data\":[{\"title\":\"请求数\",\"value\":14,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":438,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775905200000,
+                      "y": 14.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 20:00--04-11 20:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4667,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775908800000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 21:00--04-11 21:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4762,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775912400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 22:00--04-11 22:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4780,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775916000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-11 23:00--04-11 23:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4725,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775919600000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 00:00--04-12 00:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":71791,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775923200000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 01:00--04-12 01:30\",\"data\":[{\"title\":\"请求数\",\"value\":55,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4771,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775926800000,
+                      "y": 55.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 02:00--04-12 02:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4847,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775930400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 03:00--04-12 03:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4828,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775934000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 04:00--04-12 04:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4696,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775937600000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 05:00--04-12 05:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4816,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775941200000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 06:00--04-12 06:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4748,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775944800000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 07:00--04-12 07:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4860,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775948400000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 08:00--04-12 08:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4754,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775952000000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 08:30--04-12 09:00\",\"data\":[{\"title\":\"请求数\",\"value\":40,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":296,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775953800000,
+                      "y": 40.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 09:00--04-12 09:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4750,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775955600000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 10:00--04-12 10:30\",\"data\":[{\"title\":\"请求数\",\"value\":66,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":154,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775959200000,
+                      "y": 66.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 10:30--04-12 11:00\",\"data\":[{\"title\":\"请求数\",\"value\":7,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":83,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775961000000,
+                      "y": 7.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 11:00--04-12 11:30\",\"data\":[{\"title\":\"请求数\",\"value\":1,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":4722,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775962800000,
+                      "y": 1.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 11:30--04-12 12:00\",\"data\":[{\"title\":\"请求数\",\"value\":11,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":48,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775964600000,
+                      "y": 11.0
+                    },
+                    {
+                      "tooltip": "{\"title\":\"04-12 12:00--04-12 12:30\",\"data\":[{\"title\":\"请求数\",\"value\":4,\"unit\":\"\",\"scale\":0},{\"title\":\"响应时间\",\"value\":1188,\"unit\":\"ms\",\"scale\":0}]}",
+                      "x": 1775966400000,
+                      "y": 4.0
+                    }
+                  ],
+                  "name": "请求数",
+                  "params": {
+                    "chartType": "COUNT"
+                  },
+                  "type": "column",
+                  "yAxis": 1,
+                  "zIndex": 0
+                }
+              ],
+              "yAxis": [
+                {
+                  "opposite": false,
+                  "tickUnit": "ms"
+                },
+                {
+                  "opposite": true
+                }
+              ]
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:12:47 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 2
+        "200": 3
       }
     }
   },

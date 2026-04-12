@@ -1,25 +1,39 @@
 {
   "capture": {
-    "captured_at": "2026-04-07T14:49:11+08:00",
-    "completeness_score": 1347,
+    "captured_at": "2026-04-12T12:13:01+08:00",
+    "completeness_score": 1972,
     "first_seen_at": "2026-04-07T14:48:55+08:00",
-    "last_seen_at": "2026-04-07T14:49:11+08:00",
+    "last_seen_at": "2026-04-12T12:13:01+08:00",
     "page_context": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:49:11+08:00",
+      "request_timestamp": "2026-04-12T12:13:01+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "page_context_summary": {
       "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+          "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:13:01+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
         {
           "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
           "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
@@ -36,58 +50,72 @@
         }
       ],
       "latest": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-        "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-        "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
         "initiator_type": "script",
         "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-07T14:49:11+08:00",
+        "request_timestamp": "2026-04-12T12:13:01+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
-        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       },
       "latest_non_empty": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-        "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-        "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
         "initiator_type": "script",
         "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-07T14:49:11+08:00",
+        "request_timestamp": "2026-04-12T12:13:01+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
-        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       }
     },
     "raw_log_file": "webaction/charts/error/POST__variant__a2544ea9310d.json",
     "resource_type": "XHR",
-    "seen_count": 3,
-    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-    "wall_time": 1775544551.23254
+    "seen_count": 4,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967180.724083
   },
   "method": "POST",
   "metric": null,
   "page_context": {
-    "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-    "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-    "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+    "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+    "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
     "initiator_type": "script",
     "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
     "page_title": "Ting Yun",
     "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
     "request_method": "POST",
-    "request_timestamp": "2026-04-07T14:49:11+08:00",
+    "request_timestamp": "2026-04-12T12:13:01+08:00",
     "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
-    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
   },
   "page_context_summary": {
     "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:13:01+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
       {
         "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
         "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
@@ -104,45 +132,45 @@
       }
     ],
     "latest": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:49:11+08:00",
+      "request_timestamp": "2026-04-12T12:13:01+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "latest_non_empty": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:49:11+08:00",
+      "request_timestamp": "2026-04-12T12:13:01+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     }
   },
   "path": "/server-api/webaction/charts/error",
   "relative_path": "webaction/charts/error",
   "request": {
     "body": {
-      "actionId": "13278",
+      "actionId": "13174",
       "actionType": "TX",
-      "applicationId": "1645",
+      "applicationId": "1644",
       "bizSystemId": "1065",
-      "endTime": "2026-04-07 14:46",
+      "endTime": "2026-04-12 12:13",
       "lang": "zh_CN",
-      "timePeriod": "706"
+      "timePeriod": "2880"
     },
     "body_kind": "form",
     "body_normalized": {
@@ -157,10 +185,10 @@
     "content_type": "application/x-www-form-urlencoded",
     "headers": {
       "Accept": "application/json, text/plain, */*",
-      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
-      "BuiltInRequestId": "0c6453d4-aaf4-cfdc-c033-498e0c0b1616",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "1837abac-137e-92d1-2624-1cd81f3dcad5",
       "Content-Type": "application/x-www-form-urlencoded",
-      "Referer": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+      "Referer": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
       "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
     },
     "headers_template": {
@@ -171,23 +199,23 @@
     },
     "host_base": "http://169.169.173.25:8080",
     "page_context": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1645/13278",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "document_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/action/overview/1065/1644/13174",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:49:11+08:00",
+      "request_timestamp": "2026-04-12T12:13:01+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/webaction/charts/error",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "path": "/server-api/webaction/charts/error",
     "query": {},
     "query_normalized": {},
-    "raw_post_data": "timePeriod=706&endTime=2026-04-07%2014:46&bizSystemId=1065&applicationId=1645&actionId=13278&actionType=TX&lang=zh_CN",
+    "raw_post_data": "timePeriod=2880&endTime=2026-04-12%2012:13&bizSystemId=1065&applicationId=1644&actionId=13174&actionType=TX&lang=zh_CN",
     "url": "http://169.169.173.25:8080/server-api/webaction/charts/error"
   },
   "response": {
@@ -203,223 +231,353 @@
           {
             "data": [
               {
-                "tooltip": "{\"title\":\"04/07 07:30-04/07 07:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518200000,
+                "tooltip": "{\"title\":\"04/10 12:00-04/10 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775793600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:40-04/07 07:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518800000,
+                "tooltip": "{\"title\":\"04/10 12:30-04/10 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775795400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:50-04/07 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775519400000,
+                "tooltip": "{\"title\":\"04/10 13:00-04/10 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775797200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:00-04/07 08:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520000000,
+                "tooltip": "{\"title\":\"04/10 13:30-04/10 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775799000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:10-04/07 08:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520600000,
+                "tooltip": "{\"title\":\"04/10 14:00-04/10 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775800800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:20-04/07 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521200000,
+                "tooltip": "{\"title\":\"04/10 14:30-04/10 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775802600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:30-04/07 08:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521800000,
+                "tooltip": "{\"title\":\"04/10 15:00-04/10 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775804400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:40-04/07 08:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775522400000,
+                "tooltip": "{\"title\":\"04/10 15:30-04/10 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775806200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:50-04/07 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523000000,
+                "tooltip": "{\"title\":\"04/10 16:00-04/10 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775808000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:00-04/07 09:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523600000,
+                "tooltip": "{\"title\":\"04/10 16:30-04/10 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775809800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:10-04/07 09:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524200000,
+                "tooltip": "{\"title\":\"04/10 17:00-04/10 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775811600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:20-04/07 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524800000,
+                "tooltip": "{\"title\":\"04/10 17:30-04/10 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775813400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:30-04/07 09:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775525400000,
+                "tooltip": "{\"title\":\"04/10 18:00-04/10 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775815200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:40-04/07 09:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526000000,
+                "tooltip": "{\"title\":\"04/10 18:30-04/10 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775817000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:50-04/07 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526600000,
+                "tooltip": "{\"title\":\"04/10 19:00-04/10 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775818800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:00-04/07 10:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527200000,
+                "tooltip": "{\"title\":\"04/10 20:00-04/10 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775822400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:10-04/07 10:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527800000,
+                "tooltip": "{\"title\":\"04/10 20:30-04/10 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775824200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:20-04/07 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775528400000,
+                "tooltip": "{\"title\":\"04/10 21:00-04/10 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775826000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:30-04/07 10:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529000000,
+                "tooltip": "{\"title\":\"04/10 22:00-04/10 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775829600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:40-04/07 10:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529600000,
+                "tooltip": "{\"title\":\"04/10 22:30-04/10 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775831400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:50-04/07 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530200000,
+                "tooltip": "{\"title\":\"04/10 23:00-04/10 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775833200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:00-04/07 11:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530800000,
+                "tooltip": "{\"title\":\"04/10 23:30-04/11 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775835000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:10-04/07 11:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775531400000,
+                "tooltip": "{\"title\":\"04/11 00:00-04/11 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775836800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:20-04/07 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532000000,
+                "tooltip": "{\"title\":\"04/11 01:00-04/11 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775840400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:30-04/07 11:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532600000,
+                "tooltip": "{\"title\":\"04/11 02:00-04/11 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775844000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:40-04/07 11:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533200000,
+                "tooltip": "{\"title\":\"04/11 05:00-04/11 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775854800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:50-04/07 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533800000,
+                "tooltip": "{\"title\":\"04/11 06:00-04/11 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775858400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:00-04/07 12:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775534400000,
+                "tooltip": "{\"title\":\"04/11 07:00-04/11 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775862000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:10-04/07 12:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535000000,
+                "tooltip": "{\"title\":\"04/11 08:00-04/11 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775865600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:20-04/07 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535600000,
+                "tooltip": "{\"title\":\"04/11 09:00-04/11 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775869200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:30-04/07 12:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536200000,
+                "tooltip": "{\"title\":\"04/11 09:30-04/11 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775871000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:40-04/07 12:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536800000,
+                "tooltip": "{\"title\":\"04/11 10:00-04/11 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775872800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:50-04/07 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775537400000,
+                "tooltip": "{\"title\":\"04/11 10:30-04/11 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775874600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:00-04/07 13:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538000000,
+                "tooltip": "{\"title\":\"04/11 11:00-04/11 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775876400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:10-04/07 13:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538600000,
+                "tooltip": "{\"title\":\"04/11 11:30-04/11 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775878200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:20-04/07 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539200000,
+                "tooltip": "{\"title\":\"04/11 12:00-04/11 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775880000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:30-04/07 13:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539800000,
+                "tooltip": "{\"title\":\"04/11 12:30-04/11 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775881800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:40-04/07 13:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775540400000,
+                "tooltip": "{\"title\":\"04/11 13:00-04/11 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775883600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:50-04/07 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541000000,
+                "tooltip": "{\"title\":\"04/11 13:30-04/11 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775885400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:00-04/07 14:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541600000,
+                "tooltip": "{\"title\":\"04/11 14:00-04/11 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775887200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:10-04/07 14:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542200000,
+                "tooltip": "{\"title\":\"04/11 14:30-04/11 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775889000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:20-04/07 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542800000,
+                "tooltip": "{\"title\":\"04/11 15:00-04/11 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775890800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:30-04/07 14:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775543400000,
+                "tooltip": "{\"title\":\"04/11 15:30-04/11 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775892600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:40-04/07 14:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775544000000,
+                "tooltip": "{\"title\":\"04/11 16:00-04/11 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775894400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 16:30-04/11 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775896200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:00-04/11 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775898000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:30-04/11 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775899800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:00-04/11 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775901600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:30-04/11 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775903400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 19:00-04/11 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775905200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 20:00-04/11 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775908800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 21:00-04/11 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775912400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 22:00-04/11 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775916000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 23:00-04/11 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775919600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 00:00-04/12 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775923200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 01:00-04/12 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775926800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 02:00-04/12 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775930400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 03:00-04/12 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775934000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 04:00-04/12 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775937600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 05:00-04/12 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775941200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 06:00-04/12 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775944800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 07:00-04/12 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775948400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:00-04/12 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775952000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:30-04/12 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775953800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 09:00-04/12 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775955600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:00-04/12 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775959200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:30-04/12 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775961000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:00-04/12 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775962800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:30-04/12 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775964600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 12:00-04/12 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775966400000,
                 "y": 0.0
               }
             ],
@@ -431,223 +589,353 @@
           {
             "data": [
               {
-                "tooltip": "{\"title\":\"04/07 07:30-04/07 07:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518200000,
+                "tooltip": "{\"title\":\"04/10 12:00-04/10 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775793600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:40-04/07 07:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518800000,
+                "tooltip": "{\"title\":\"04/10 12:30-04/10 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775795400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:50-04/07 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775519400000,
+                "tooltip": "{\"title\":\"04/10 13:00-04/10 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775797200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:00-04/07 08:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520000000,
+                "tooltip": "{\"title\":\"04/10 13:30-04/10 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775799000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:10-04/07 08:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520600000,
+                "tooltip": "{\"title\":\"04/10 14:00-04/10 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775800800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:20-04/07 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521200000,
+                "tooltip": "{\"title\":\"04/10 14:30-04/10 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775802600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:30-04/07 08:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521800000,
+                "tooltip": "{\"title\":\"04/10 15:00-04/10 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775804400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:40-04/07 08:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775522400000,
+                "tooltip": "{\"title\":\"04/10 15:30-04/10 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775806200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:50-04/07 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523000000,
+                "tooltip": "{\"title\":\"04/10 16:00-04/10 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775808000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:00-04/07 09:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523600000,
+                "tooltip": "{\"title\":\"04/10 16:30-04/10 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775809800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:10-04/07 09:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524200000,
+                "tooltip": "{\"title\":\"04/10 17:00-04/10 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775811600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:20-04/07 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524800000,
+                "tooltip": "{\"title\":\"04/10 17:30-04/10 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775813400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:30-04/07 09:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775525400000,
+                "tooltip": "{\"title\":\"04/10 18:00-04/10 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775815200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:40-04/07 09:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526000000,
+                "tooltip": "{\"title\":\"04/10 18:30-04/10 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775817000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:50-04/07 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526600000,
+                "tooltip": "{\"title\":\"04/10 19:00-04/10 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775818800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:00-04/07 10:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527200000,
+                "tooltip": "{\"title\":\"04/10 20:00-04/10 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775822400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:10-04/07 10:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527800000,
+                "tooltip": "{\"title\":\"04/10 20:30-04/10 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775824200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:20-04/07 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775528400000,
+                "tooltip": "{\"title\":\"04/10 21:00-04/10 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775826000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:30-04/07 10:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529000000,
+                "tooltip": "{\"title\":\"04/10 22:00-04/10 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775829600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:40-04/07 10:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529600000,
+                "tooltip": "{\"title\":\"04/10 22:30-04/10 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775831400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:50-04/07 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530200000,
+                "tooltip": "{\"title\":\"04/10 23:00-04/10 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775833200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:00-04/07 11:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530800000,
+                "tooltip": "{\"title\":\"04/10 23:30-04/11 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775835000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:10-04/07 11:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775531400000,
+                "tooltip": "{\"title\":\"04/11 00:00-04/11 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775836800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:20-04/07 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532000000,
+                "tooltip": "{\"title\":\"04/11 01:00-04/11 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775840400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:30-04/07 11:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532600000,
+                "tooltip": "{\"title\":\"04/11 02:00-04/11 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775844000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:40-04/07 11:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533200000,
+                "tooltip": "{\"title\":\"04/11 05:00-04/11 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775854800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:50-04/07 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533800000,
+                "tooltip": "{\"title\":\"04/11 06:00-04/11 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775858400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:00-04/07 12:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775534400000,
+                "tooltip": "{\"title\":\"04/11 07:00-04/11 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775862000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:10-04/07 12:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535000000,
+                "tooltip": "{\"title\":\"04/11 08:00-04/11 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775865600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:20-04/07 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535600000,
+                "tooltip": "{\"title\":\"04/11 09:00-04/11 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775869200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:30-04/07 12:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536200000,
+                "tooltip": "{\"title\":\"04/11 09:30-04/11 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775871000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:40-04/07 12:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536800000,
+                "tooltip": "{\"title\":\"04/11 10:00-04/11 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775872800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:50-04/07 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775537400000,
+                "tooltip": "{\"title\":\"04/11 10:30-04/11 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775874600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:00-04/07 13:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538000000,
+                "tooltip": "{\"title\":\"04/11 11:00-04/11 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775876400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:10-04/07 13:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538600000,
+                "tooltip": "{\"title\":\"04/11 11:30-04/11 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775878200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:20-04/07 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539200000,
+                "tooltip": "{\"title\":\"04/11 12:00-04/11 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775880000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:30-04/07 13:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539800000,
+                "tooltip": "{\"title\":\"04/11 12:30-04/11 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775881800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:40-04/07 13:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775540400000,
+                "tooltip": "{\"title\":\"04/11 13:00-04/11 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775883600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:50-04/07 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541000000,
+                "tooltip": "{\"title\":\"04/11 13:30-04/11 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775885400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:00-04/07 14:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541600000,
+                "tooltip": "{\"title\":\"04/11 14:00-04/11 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775887200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:10-04/07 14:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542200000,
+                "tooltip": "{\"title\":\"04/11 14:30-04/11 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775889000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:20-04/07 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542800000,
+                "tooltip": "{\"title\":\"04/11 15:00-04/11 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775890800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:30-04/07 14:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775543400000,
+                "tooltip": "{\"title\":\"04/11 15:30-04/11 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775892600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:40-04/07 14:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775544000000,
+                "tooltip": "{\"title\":\"04/11 16:00-04/11 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775894400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 16:30-04/11 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775896200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:00-04/11 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775898000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:30-04/11 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775899800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:00-04/11 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775901600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:30-04/11 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775903400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 19:00-04/11 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775905200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 20:00-04/11 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775908800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 21:00-04/11 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775912400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 22:00-04/11 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775916000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 23:00-04/11 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775919600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 00:00-04/12 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775923200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 01:00-04/12 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775926800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 02:00-04/12 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775930400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 03:00-04/12 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775934000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 04:00-04/12 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775937600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 05:00-04/12 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775941200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 06:00-04/12 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775944800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 07:00-04/12 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775948400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:00-04/12 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775952000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:30-04/12 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775953800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 09:00-04/12 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775955600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:00-04/12 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775959200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:30-04/12 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775961000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:00-04/12 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775962800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:30-04/12 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775964600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 12:00-04/12 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775966400000,
                 "y": 0.0
               }
             ],
@@ -682,223 +970,353 @@
           {
             "data": [
               {
-                "tooltip": "{\"title\":\"04/07 07:30-04/07 07:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518200000,
+                "tooltip": "{\"title\":\"04/10 12:00-04/10 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775793600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:40-04/07 07:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518800000,
+                "tooltip": "{\"title\":\"04/10 12:30-04/10 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775795400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:50-04/07 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775519400000,
+                "tooltip": "{\"title\":\"04/10 13:00-04/10 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775797200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:00-04/07 08:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520000000,
+                "tooltip": "{\"title\":\"04/10 13:30-04/10 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775799000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:10-04/07 08:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520600000,
+                "tooltip": "{\"title\":\"04/10 14:00-04/10 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775800800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:20-04/07 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521200000,
+                "tooltip": "{\"title\":\"04/10 14:30-04/10 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775802600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:30-04/07 08:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521800000,
+                "tooltip": "{\"title\":\"04/10 15:00-04/10 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775804400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:40-04/07 08:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775522400000,
+                "tooltip": "{\"title\":\"04/10 15:30-04/10 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775806200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:50-04/07 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523000000,
+                "tooltip": "{\"title\":\"04/10 16:00-04/10 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775808000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:00-04/07 09:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523600000,
+                "tooltip": "{\"title\":\"04/10 16:30-04/10 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775809800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:10-04/07 09:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524200000,
+                "tooltip": "{\"title\":\"04/10 17:00-04/10 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775811600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:20-04/07 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524800000,
+                "tooltip": "{\"title\":\"04/10 17:30-04/10 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775813400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:30-04/07 09:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775525400000,
+                "tooltip": "{\"title\":\"04/10 18:00-04/10 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775815200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:40-04/07 09:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526000000,
+                "tooltip": "{\"title\":\"04/10 18:30-04/10 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775817000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:50-04/07 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526600000,
+                "tooltip": "{\"title\":\"04/10 19:00-04/10 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775818800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:00-04/07 10:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527200000,
+                "tooltip": "{\"title\":\"04/10 20:00-04/10 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775822400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:10-04/07 10:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527800000,
+                "tooltip": "{\"title\":\"04/10 20:30-04/10 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775824200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:20-04/07 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775528400000,
+                "tooltip": "{\"title\":\"04/10 21:00-04/10 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775826000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:30-04/07 10:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529000000,
+                "tooltip": "{\"title\":\"04/10 22:00-04/10 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775829600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:40-04/07 10:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529600000,
+                "tooltip": "{\"title\":\"04/10 22:30-04/10 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775831400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:50-04/07 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530200000,
+                "tooltip": "{\"title\":\"04/10 23:00-04/10 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775833200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:00-04/07 11:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530800000,
+                "tooltip": "{\"title\":\"04/10 23:30-04/11 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775835000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:10-04/07 11:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775531400000,
+                "tooltip": "{\"title\":\"04/11 00:00-04/11 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775836800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:20-04/07 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532000000,
+                "tooltip": "{\"title\":\"04/11 01:00-04/11 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775840400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:30-04/07 11:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532600000,
+                "tooltip": "{\"title\":\"04/11 02:00-04/11 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775844000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:40-04/07 11:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533200000,
+                "tooltip": "{\"title\":\"04/11 05:00-04/11 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775854800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:50-04/07 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533800000,
+                "tooltip": "{\"title\":\"04/11 06:00-04/11 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775858400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:00-04/07 12:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775534400000,
+                "tooltip": "{\"title\":\"04/11 07:00-04/11 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775862000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:10-04/07 12:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535000000,
+                "tooltip": "{\"title\":\"04/11 08:00-04/11 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775865600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:20-04/07 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535600000,
+                "tooltip": "{\"title\":\"04/11 09:00-04/11 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775869200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:30-04/07 12:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536200000,
+                "tooltip": "{\"title\":\"04/11 09:30-04/11 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775871000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:40-04/07 12:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536800000,
+                "tooltip": "{\"title\":\"04/11 10:00-04/11 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775872800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:50-04/07 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775537400000,
+                "tooltip": "{\"title\":\"04/11 10:30-04/11 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775874600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:00-04/07 13:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538000000,
+                "tooltip": "{\"title\":\"04/11 11:00-04/11 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775876400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:10-04/07 13:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538600000,
+                "tooltip": "{\"title\":\"04/11 11:30-04/11 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775878200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:20-04/07 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539200000,
+                "tooltip": "{\"title\":\"04/11 12:00-04/11 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775880000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:30-04/07 13:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539800000,
+                "tooltip": "{\"title\":\"04/11 12:30-04/11 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775881800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:40-04/07 13:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775540400000,
+                "tooltip": "{\"title\":\"04/11 13:00-04/11 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775883600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:50-04/07 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541000000,
+                "tooltip": "{\"title\":\"04/11 13:30-04/11 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775885400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:00-04/07 14:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541600000,
+                "tooltip": "{\"title\":\"04/11 14:00-04/11 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775887200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:10-04/07 14:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542200000,
+                "tooltip": "{\"title\":\"04/11 14:30-04/11 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775889000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:20-04/07 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542800000,
+                "tooltip": "{\"title\":\"04/11 15:00-04/11 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775890800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:30-04/07 14:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775543400000,
+                "tooltip": "{\"title\":\"04/11 15:30-04/11 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775892600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:40-04/07 14:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775544000000,
+                "tooltip": "{\"title\":\"04/11 16:00-04/11 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775894400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 16:30-04/11 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775896200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:00-04/11 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775898000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:30-04/11 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775899800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:00-04/11 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775901600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:30-04/11 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775903400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 19:00-04/11 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775905200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 20:00-04/11 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775908800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 21:00-04/11 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775912400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 22:00-04/11 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775916000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 23:00-04/11 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775919600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 00:00-04/12 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775923200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 01:00-04/12 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775926800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 02:00-04/12 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775930400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 03:00-04/12 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775934000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 04:00-04/12 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775937600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 05:00-04/12 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775941200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 06:00-04/12 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775944800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 07:00-04/12 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775948400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:00-04/12 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775952000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:30-04/12 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775953800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 09:00-04/12 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775955600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:00-04/12 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775959200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:30-04/12 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775961000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:00-04/12 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775962800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:30-04/12 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775964600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 12:00-04/12 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775966400000,
                 "y": 0.0
               }
             ],
@@ -910,223 +1328,353 @@
           {
             "data": [
               {
-                "tooltip": "{\"title\":\"04/07 07:30-04/07 07:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518200000,
+                "tooltip": "{\"title\":\"04/10 12:00-04/10 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775793600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:40-04/07 07:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775518800000,
+                "tooltip": "{\"title\":\"04/10 12:30-04/10 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775795400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 07:50-04/07 08:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775519400000,
+                "tooltip": "{\"title\":\"04/10 13:00-04/10 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775797200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:00-04/07 08:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520000000,
+                "tooltip": "{\"title\":\"04/10 13:30-04/10 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775799000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:10-04/07 08:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775520600000,
+                "tooltip": "{\"title\":\"04/10 14:00-04/10 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775800800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:20-04/07 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521200000,
+                "tooltip": "{\"title\":\"04/10 14:30-04/10 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775802600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:30-04/07 08:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775521800000,
+                "tooltip": "{\"title\":\"04/10 15:00-04/10 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775804400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:40-04/07 08:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775522400000,
+                "tooltip": "{\"title\":\"04/10 15:30-04/10 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775806200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 08:50-04/07 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523000000,
+                "tooltip": "{\"title\":\"04/10 16:00-04/10 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775808000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:00-04/07 09:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775523600000,
+                "tooltip": "{\"title\":\"04/10 16:30-04/10 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775809800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:10-04/07 09:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524200000,
+                "tooltip": "{\"title\":\"04/10 17:00-04/10 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775811600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:20-04/07 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775524800000,
+                "tooltip": "{\"title\":\"04/10 17:30-04/10 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775813400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:30-04/07 09:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775525400000,
+                "tooltip": "{\"title\":\"04/10 18:00-04/10 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775815200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:40-04/07 09:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526000000,
+                "tooltip": "{\"title\":\"04/10 18:30-04/10 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775817000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 09:50-04/07 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775526600000,
+                "tooltip": "{\"title\":\"04/10 19:00-04/10 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775818800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:00-04/07 10:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527200000,
+                "tooltip": "{\"title\":\"04/10 20:00-04/10 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775822400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:10-04/07 10:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775527800000,
+                "tooltip": "{\"title\":\"04/10 20:30-04/10 21:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775824200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:20-04/07 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775528400000,
+                "tooltip": "{\"title\":\"04/10 21:00-04/10 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775826000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:30-04/07 10:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529000000,
+                "tooltip": "{\"title\":\"04/10 22:00-04/10 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775829600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:40-04/07 10:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775529600000,
+                "tooltip": "{\"title\":\"04/10 22:30-04/10 23:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775831400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 10:50-04/07 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530200000,
+                "tooltip": "{\"title\":\"04/10 23:00-04/10 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775833200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:00-04/07 11:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775530800000,
+                "tooltip": "{\"title\":\"04/10 23:30-04/11 00:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775835000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:10-04/07 11:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775531400000,
+                "tooltip": "{\"title\":\"04/11 00:00-04/11 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775836800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:20-04/07 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532000000,
+                "tooltip": "{\"title\":\"04/11 01:00-04/11 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775840400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:30-04/07 11:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775532600000,
+                "tooltip": "{\"title\":\"04/11 02:00-04/11 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775844000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:40-04/07 11:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533200000,
+                "tooltip": "{\"title\":\"04/11 05:00-04/11 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775854800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 11:50-04/07 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775533800000,
+                "tooltip": "{\"title\":\"04/11 06:00-04/11 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775858400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:00-04/07 12:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775534400000,
+                "tooltip": "{\"title\":\"04/11 07:00-04/11 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775862000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:10-04/07 12:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535000000,
+                "tooltip": "{\"title\":\"04/11 08:00-04/11 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775865600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:20-04/07 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775535600000,
+                "tooltip": "{\"title\":\"04/11 09:00-04/11 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775869200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:30-04/07 12:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536200000,
+                "tooltip": "{\"title\":\"04/11 09:30-04/11 10:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775871000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:40-04/07 12:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775536800000,
+                "tooltip": "{\"title\":\"04/11 10:00-04/11 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775872800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 12:50-04/07 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775537400000,
+                "tooltip": "{\"title\":\"04/11 10:30-04/11 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775874600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:00-04/07 13:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538000000,
+                "tooltip": "{\"title\":\"04/11 11:00-04/11 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775876400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:10-04/07 13:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775538600000,
+                "tooltip": "{\"title\":\"04/11 11:30-04/11 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775878200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:20-04/07 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539200000,
+                "tooltip": "{\"title\":\"04/11 12:00-04/11 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775880000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:30-04/07 13:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775539800000,
+                "tooltip": "{\"title\":\"04/11 12:30-04/11 13:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775881800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:40-04/07 13:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775540400000,
+                "tooltip": "{\"title\":\"04/11 13:00-04/11 13:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775883600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 13:50-04/07 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541000000,
+                "tooltip": "{\"title\":\"04/11 13:30-04/11 14:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775885400000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:00-04/07 14:10\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775541600000,
+                "tooltip": "{\"title\":\"04/11 14:00-04/11 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775887200000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:10-04/07 14:20\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542200000,
+                "tooltip": "{\"title\":\"04/11 14:30-04/11 15:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775889000000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:20-04/07 14:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775542800000,
+                "tooltip": "{\"title\":\"04/11 15:00-04/11 15:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775890800000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:30-04/07 14:40\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775543400000,
+                "tooltip": "{\"title\":\"04/11 15:30-04/11 16:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775892600000,
                 "y": 0.0
               },
               {
-                "tooltip": "{\"title\":\"04/07 14:40-04/07 14:50\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
-                "x": 1775544000000,
+                "tooltip": "{\"title\":\"04/11 16:00-04/11 16:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775894400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 16:30-04/11 17:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775896200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:00-04/11 17:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775898000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 17:30-04/11 18:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775899800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:00-04/11 18:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775901600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 18:30-04/11 19:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775903400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 19:00-04/11 19:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775905200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 20:00-04/11 20:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775908800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 21:00-04/11 21:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775912400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 22:00-04/11 22:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775916000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/11 23:00-04/11 23:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775919600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 00:00-04/12 00:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775923200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 01:00-04/12 01:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775926800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 02:00-04/12 02:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775930400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 03:00-04/12 03:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775934000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 04:00-04/12 04:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775937600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 05:00-04/12 05:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775941200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 06:00-04/12 06:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775944800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 07:00-04/12 07:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775948400000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:00-04/12 08:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775952000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 08:30-04/12 09:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775953800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 09:00-04/12 09:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775955600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:00-04/12 10:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775959200000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 10:30-04/12 11:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775961000000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:00-04/12 11:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775962800000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 11:30-04/12 12:00\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775964600000,
+                "y": 0.0
+              },
+              {
+                "tooltip": "{\"title\":\"04/12 12:00-04/12 12:30\",\"data\":[{\"title\":\"错误率\",\"value\":0.00,\"unit\":\"%\",\"scale\":2},{\"title\":\"错误数\",\"value\":0.00,\"unit\":\"\",\"scale\":2}]}",
+                "x": 1775966400000,
                 "y": 0.0
               }
             ],
@@ -1147,14 +1695,14 @@
         ]
       }
     },
-    "encoded_data_length": 1434,
+    "encoded_data_length": 1795,
     "error": null,
     "headers": {
       "Connection": "keep-alive",
       "Content-Encoding": "gzip",
       "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
       "Content-Type": "application/json",
-      "Date": "Tue, 07 Apr 2026 06:48:59 GMT",
+      "Date": "Sun, 12 Apr 2026 04:12:44 GMT",
       "Referrer-Policy": "strict-origin-when-cross-origin",
       "Server": "nginx",
       "Transfer-Encoding": "chunked",

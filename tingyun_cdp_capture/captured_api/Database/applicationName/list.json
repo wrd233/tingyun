@@ -1,15 +1,15 @@
 {
-  "count_seen": 2,
+  "count_seen": 3,
   "first_seen": "2026-04-03T20:00:22+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 2
+    "http://169.169.173.25:8080": 3
   },
-  "last_seen": "2026-04-03T20:00:41+08:00",
+  "last_seen": "2026-04-12T12:12:39+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 3,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -60,21 +60,67 @@
           }
         }
       ],
-      "count_seen": 2,
+      "count_seen": 3,
       "first_seen": "2026-04-03T20:00:22+08:00",
       "inference_basis": [
         "path=Database/applicationName/list"
       ],
       "inferred_purpose": "Likely related to list",
-      "last_seen": "2026-04-03T20:00:41+08:00",
+      "last_seen": "2026-04-12T12:12:39+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 2
+        "application/json": 3
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:39+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/Database/applicationName/list",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:12:39+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/Database/applicationName/list",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:12:39+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/Database/applicationName/list",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 3,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -120,7 +166,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 2
+        "XHR": 3
       },
       "sample_requests": [
         {
@@ -173,6 +219,46 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-03T20:00:41+08:00",
+          "url": "http://169.169.173.25:8080/server-api/Database/applicationName/list"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-12 12:12",
+            "lang": "zh_CN",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "1000",
+            "timePeriod": "2880"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:39+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/Database/applicationName/list",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:12:39+08:00",
           "url": "http://169.169.173.25:8080/server-api/Database/applicationName/list"
         }
       ],
@@ -392,10 +478,118 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": null,
+                  "actionId": 0,
+                  "actionName": null,
+                  "appName": "fawuorg.springframework.boot.loader.WarLauncher",
+                  "applicationId": 1645,
+                  "bizSystemId": 0,
+                  "bizSystemName": null,
+                  "callMode": 0,
+                  "callModeStr": "生产者",
+                  "componentName": null,
+                  "componentNameSecondary": null,
+                  "componentSubtype": null,
+                  "connTime": 0.0,
+                  "connUsed": 0,
+                  "count": 0,
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "exclusiveRespTime": 0,
+                  "health": 0,
+                  "healthInfo": null,
+                  "instanceId": 0,
+                  "instanceName": null,
+                  "maxExecTime": 0.0,
+                  "maxThrought": 0.0,
+                  "opName": null,
+                  "opType": null,
+                  "payload": 0.0,
+                  "payloadUnit": null,
+                  "productCount": 0,
+                  "productPayload": 0.0,
+                  "productthrought": 0.0,
+                  "respTime": 0.0,
+                  "schemas": null,
+                  "throught": 0.0,
+                  "totalResptime": 0,
+                  "traceCount": 0
+                },
+                {
+                  "actionAlias": null,
+                  "actionId": 0,
+                  "actionName": null,
+                  "appName": "org.springframework.boot.loader.WarLauncher",
+                  "applicationId": 1644,
+                  "bizSystemId": 0,
+                  "bizSystemName": null,
+                  "callMode": 0,
+                  "callModeStr": "生产者",
+                  "componentName": null,
+                  "componentNameSecondary": null,
+                  "componentSubtype": null,
+                  "connTime": 0.0,
+                  "connUsed": 0,
+                  "count": 0,
+                  "errorCount": 0,
+                  "errorRate": 0.0,
+                  "exclusiveRespTime": 0,
+                  "health": 0,
+                  "healthInfo": null,
+                  "instanceId": 0,
+                  "instanceName": null,
+                  "maxExecTime": 0.0,
+                  "maxThrought": 0.0,
+                  "opName": null,
+                  "opType": null,
+                  "payload": 0.0,
+                  "payloadUnit": null,
+                  "productCount": 0,
+                  "productPayload": 0.0,
+                  "productthrought": 0.0,
+                  "respTime": 0.0,
+                  "schemas": null,
+                  "throught": 0.0,
+                  "totalResptime": 0,
+                  "traceCount": 0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 2
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:12:23 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 2
+        "200": 3
       }
     }
   },

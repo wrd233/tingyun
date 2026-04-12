@@ -1,25 +1,39 @@
 {
   "capture": {
-    "captured_at": "2026-04-07T14:45:21+08:00",
-    "completeness_score": 1987,
+    "captured_at": "2026-04-12T12:11:28+08:00",
+    "completeness_score": 2114,
     "first_seen_at": "2026-04-07T14:44:23+08:00",
-    "last_seen_at": "2026-04-07T14:45:21+08:00",
+    "last_seen_at": "2026-04-12T12:11:28+08:00",
     "page_context": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:45:21+08:00",
+      "request_timestamp": "2026-04-12T12:11:28+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "page_context_summary": {
       "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
+          "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:11:28+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
         {
           "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
           "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
@@ -38,56 +52,70 @@
       "latest": {
         "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
         "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
-        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
         "initiator_type": "script",
         "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-07T14:45:21+08:00",
+        "request_timestamp": "2026-04-12T12:11:28+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
-        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       },
       "latest_non_empty": {
         "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
         "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
-        "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
         "initiator_type": "script",
         "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-07T14:45:21+08:00",
+        "request_timestamp": "2026-04-12T12:11:28+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
-        "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       }
     },
     "raw_log_file": "graph/query/overview/POST__application_overview__3903ff6af3cb.json",
     "resource_type": "XHR",
-    "seen_count": 2,
-    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
-    "wall_time": 1775544320.84993
+    "seen_count": 3,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775967088.148931
   },
   "method": "POST",
   "metric": "application_overview",
   "page_context": {
     "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
     "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
-    "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
     "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
     "initiator_type": "script",
     "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
     "page_title": "Ting Yun",
     "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
     "request_method": "POST",
-    "request_timestamp": "2026-04-07T14:45:21+08:00",
+    "request_timestamp": "2026-04-12T12:11:28+08:00",
     "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
-    "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
   },
   "page_context_summary": {
     "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
+        "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:11:28+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
       {
         "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
         "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
@@ -106,37 +134,37 @@
     "latest": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:45:21+08:00",
+      "request_timestamp": "2026-04-12T12:11:28+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "latest_non_empty": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:45:21+08:00",
+      "request_timestamp": "2026-04-12T12:11:28+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     }
   },
   "path": "/server-api/graph/query/overview",
   "relative_path": "graph/query/overview",
   "request": {
     "body": {
-      "endTime": "2026-04-07 14:45",
+      "endTime": "2026-04-12 12:11",
       "labels": {
         "health": [],
         "problems": [],
@@ -163,8 +191,8 @@
     "content_type": "application/json",
     "headers": {
       "Accept": "application/json, text/plain, */*",
-      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJiYjNhZjk5My1jM2IwLTQxNDUtYTQ4YS0yZGQ0ZDBiOTAzMWIiLCJpZCI6Ijg3MTU4NjE0LWY0OTYtNDU3Ni1hYjUwLTU2MjQzMjljNDUyOCIsIm5hbWUiOiJkY2EyZmE5ZC1iYzY1LTQwNTItYmEzMC1iMTZhMjZhODZiNWIiLCJjb2RlIjoiNjA4OTI3NTQtNzAyMS00ODIwLTkwZGItNTEzMDYyMzYwNGEzIiwiYWdyZWVtZW50SWQiOiIwODZhNzFmYy0wZjM5LTRlMjQtODhjZS1kYjMwNTYxNGEzNTgiLCJ0eXBlIjoiNzFkNzMxMDktM2M5Ni00OTUyLWExYWQtOWM3ZTkwMGNmODcyIiwicmlnaHRSYW5nZSI6ImExNWM5N2FiLWIwOGYtNDA5Ny1iNzg5LTQ1MDgzZGEyMmUwMSIsInJhbmRvbSI6ImQxZDk0NGI1LTk4N2YtNDU4NC1iOTFjLTFhMTI3M2QxOTQwZiJ9.UJ2kwUsQpvvzzhpQhAcuhSsk_Fo4UhI20PPhj9jjTTBY0GzD3Ifdd6OVg_ZoDaoR_zDQG_LA_5pHs-Cwm--EefS6yka-LX8fRz2t5mXndyJig0e7d5Urf5MBy6LKi3AYAsi77_iX9sRkFR7W0iorFbKmJ0zvGV2akNzyjhivhKvhxA9qu_-Ms5cPZqSMxi5SNShgtykm6sm8xhiKsKhU1BGISj3RpEA8Xrd6yasQ1c-7ASQ8fLmLCDC0PpB95eOpNpzHfYmmPGKjNa11LMICIhiVT8jwfGQW0A0t7pZhn1BgZvkFlfqdB5rIyS2c8_rhTyyq5AFRIOrh0cnw3pozfA",
-      "BuiltInRequestId": "62039d8e-46ce-c6a2-6762-3edb0b290ad7",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "f50ad14b-5a25-23fd-825f-93f5434f7662",
       "Content-Type": "application/json",
       "Referer": "http://169.169.173.25:8080/web/server/application/menuList",
       "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
@@ -179,16 +207,16 @@
     "page_context": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
-      "frame_id": "6631CA6E4A2BA61E53DD54C4A17EBC18",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
       "initiator_type": "script",
       "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-07T14:45:21+08:00",
+      "request_timestamp": "2026-04-12T12:11:28+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN",
-      "tab_target_id": "6631CA6E4A2BA61E53DD54C4A17EBC18"
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "path": "/server-api/graph/query/overview",
     "query": {
@@ -199,7 +227,7 @@
       "application_overview": "",
       "lang": "zh_CN"
     },
-    "raw_post_data": "{\"timePeriod\":2880,\"endTime\":\"2026-04-07 14:45\",\"metric\":\"application_overview\",\"zoomTime\":true,\"labels\":{\"technology\":[],\"health\":[],\"problems\":[]},\"lang\":\"zh_CN\"}",
+    "raw_post_data": "{\"timePeriod\":2880,\"endTime\":\"2026-04-12 12:11\",\"metric\":\"application_overview\",\"zoomTime\":true,\"labels\":{\"technology\":[],\"health\":[],\"problems\":[]},\"lang\":\"zh_CN\"}",
     "url": "http://169.169.173.25:8080/server-api/graph/query/overview?application_overview&lang=zh_CN"
   },
   "response": {
@@ -209,8 +237,8 @@
           "apdex": 1.0,
           "applicationId": 1627,
           "applicationName": "com.nbport.tt.wportal.WebPortalServiceApplication",
-          "errorRate": 0.00172144,
-          "errorTotalCount": 1,
+          "errorRate": 0.00672766,
+          "errorTotalCount": 3,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -219,20 +247,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 3.19,
+          "responseP50": 3.16,
           "score": 100,
-          "slowCount": 7,
+          "slowCount": 9,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 0.33617477,
-          "totalCount": 58091
+          "throughput": 0.25805556,
+          "totalCount": 44592
         },
         {
-          "apdex": null,
+          "apdex": 0.75,
           "applicationId": 1607,
           "applicationName": "com.nbport.zgb.login.LoginWebApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -241,20 +269,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 17.09,
+          "score": 84,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Undertow",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 2.315e-05,
+          "totalCount": 4
         },
         {
           "apdex": 1.0,
           "applicationId": 1628,
           "applicationName": "com.nbport.tt.wmanage.WebManageServiceApplication",
-          "errorRate": 0.02358212,
-          "errorTotalCount": 6,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -263,13 +291,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 2.7,
+          "responseP50": 2.2,
           "score": 100,
-          "slowCount": 6,
+          "slowCount": 0,
           "systemId": 1063,
           "tech": "Undertow",
-          "throughput": 0.14723958,
-          "totalCount": 25443
+          "throughput": 0.13064815,
+          "totalCount": 22576
         },
         {
           "apdex": null,
@@ -294,11 +322,11 @@
           "totalCount": 0
         },
         {
-          "apdex": 0.985,
+          "apdex": 0.987,
           "applicationId": 1645,
           "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
-          "errorRate": 0.29838232,
-          "errorTotalCount": 1210,
+          "errorRate": 0.24625388,
+          "errorTotalCount": 306,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -307,13 +335,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 4.73,
+          "responseP50": 4.27,
           "score": 100,
-          "slowCount": 1391,
+          "slowCount": 443,
           "systemId": 1065,
           "tech": "Apache Tomcat",
-          "throughput": 2.34675926,
-          "totalCount": 405520
+          "throughput": 0.7191088,
+          "totalCount": 124262
         },
         {
           "apdex": null,
@@ -341,8 +369,8 @@
           "apdex": 0.974,
           "applicationId": 1606,
           "applicationName": "com.alibaba.nacos.Nacos",
-          "errorRate": 2.19463232,
-          "errorTotalCount": 140522,
+          "errorRate": 2.1953546,
+          "errorTotalCount": 137725,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -353,18 +381,18 @@
           "language": "Java",
           "responseP50": 0.51,
           "score": 100,
-          "slowCount": 25007,
+          "slowCount": 24859,
           "systemId": 1062,
           "tech": "Java",
-          "throughput": 37.05431713,
-          "totalCount": 6402986
+          "throughput": 36.30482639,
+          "totalCount": 6273474
         },
         {
           "apdex": 0.999,
           "applicationId": 1626,
           "applicationName": "com.nbport.tt.portal.PortalWebApplication",
-          "errorRate": 0.06036853,
-          "errorTotalCount": 784,
+          "errorRate": 0.05876031,
+          "errorTotalCount": 801,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -373,20 +401,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 7.19,
+          "responseP50": 6.92,
           "score": 100,
-          "slowCount": 107,
+          "slowCount": 35,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 7.51556713,
-          "totalCount": 1298690
+          "throughput": 7.88868634,
+          "totalCount": 1363165
         },
         {
-          "apdex": 0.968,
+          "apdex": 0.977,
           "applicationId": 1644,
           "applicationName": "org.springframework.boot.loader.WarLauncher",
-          "errorRate": 1.82870239,
-          "errorTotalCount": 3862,
+          "errorRate": 0.55997398,
+          "errorTotalCount": 947,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -395,20 +423,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 4.82,
+          "responseP50": 4.83,
           "score": 100,
-          "slowCount": 949,
+          "slowCount": 1064,
           "systemId": 1065,
           "tech": "Apache Tomcat",
-          "throughput": 1.22215278,
-          "totalCount": 211188
+          "throughput": 0.97867477,
+          "totalCount": 169115
         },
         {
-          "apdex": 0.982,
+          "apdex": 0.988,
           "applicationId": 1648,
           "applicationName": "com.alibaba.dubbo.container.Main",
-          "errorRate": 0.00970017,
-          "errorTotalCount": 97,
+          "errorRate": 0.00275144,
+          "errorTotalCount": 43,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -417,13 +445,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 7.57,
+          "responseP50": 13.65,
           "score": 100,
-          "slowCount": 5073,
+          "slowCount": 4546,
           "systemId": 1059,
           "tech": "Jetty",
-          "throughput": 5.78693287,
-          "totalCount": 999982
+          "throughput": 9.04408565,
+          "totalCount": 1562818
         },
         {
           "apdex": null,
@@ -448,6 +476,28 @@
           "totalCount": 0
         },
         {
+          "apdex": 0.998,
+          "applicationId": 1647,
+          "applicationName": "[xinchuangOA]-ycplatform_鏅烘収宸ヤ綔鍙板厷鏀垮姙鍏郴缁焈Archetype Created Web Application",
+          "errorRate": 0.1606967,
+          "errorTotalCount": 31,
+          "health": 0,
+          "healthInfo": {
+            "eventLevel": 0,
+            "healthStartTime": null,
+            "targetName": "1647",
+            "targetValue": null
+          },
+          "language": "Java",
+          "responseP50": 2.85,
+          "score": 100,
+          "slowCount": 0,
+          "systemId": 1066,
+          "tech": "TongWeb",
+          "throughput": 0.11163773,
+          "totalCount": 19291
+        },
+        {
           "apdex": null,
           "applicationId": 1640,
           "applicationName": "testcom.nbport.zgb.message.MessageWebApplication",
@@ -470,11 +520,11 @@
           "totalCount": 0
         },
         {
-          "apdex": 0.999,
+          "apdex": 1.0,
           "applicationId": 1630,
           "applicationName": "com.nbport.tt.wportal.WebPortalWebApplication",
-          "errorRate": 0.05408329,
-          "errorTotalCount": 27,
+          "errorRate": 0.02689112,
+          "errorTotalCount": 10,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -483,13 +533,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 8.32,
+          "responseP50": 9.41,
           "score": 100,
-          "slowCount": 12,
+          "slowCount": 8,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 0.28890625,
-          "totalCount": 49923
+          "throughput": 0.21520255,
+          "totalCount": 37187
         },
         {
           "apdex": 1.0,
@@ -505,13 +555,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 4.13,
+          "responseP50": 4.23,
           "score": 100,
-          "slowCount": 40,
+          "slowCount": 41,
           "systemId": 1064,
           "tech": "Java",
-          "throughput": 1.01469907,
-          "totalCount": 175340
+          "throughput": 0.94750579,
+          "totalCount": 163729
         },
         {
           "apdex": 0.5,
@@ -527,7 +577,7 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 57.67,
+          "responseP50": 38.44,
           "score": 40,
           "slowCount": 0,
           "systemId": 1063,
@@ -536,11 +586,11 @@
           "totalCount": 4
         },
         {
-          "apdex": 0.749,
+          "apdex": 0.774,
           "applicationId": 1646,
           "applicationName": "fawucn.keking.ServerMain",
-          "errorRate": 0.05333333,
-          "errorTotalCount": 2,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -549,20 +599,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 8.9,
-          "score": 84,
-          "slowCount": 588,
+          "responseP50": 12.75,
+          "score": 86,
+          "slowCount": 394,
           "systemId": 1065,
           "tech": "Jetty",
-          "throughput": 0.02170139,
-          "totalCount": 3750
+          "throughput": 0.01884838,
+          "totalCount": 3257
         },
         {
           "apdex": 1.0,
           "applicationId": 1624,
           "applicationName": "com.nbport.tt.manage.ManageServiceApplication",
-          "errorRate": 0.00046346,
-          "errorTotalCount": 15,
+          "errorRate": 6.588e-05,
+          "errorTotalCount": 2,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -571,13 +621,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 2.75,
+          "responseP50": 2.64,
           "score": 100,
-          "slowCount": 38,
+          "slowCount": 46,
           "systemId": 1064,
           "tech": "Netty",
-          "throughput": 18.7297338,
-          "totalCount": 3236498
+          "throughput": 17.56938657,
+          "totalCount": 3035990
         },
         {
           "apdex": 0.999,
@@ -593,20 +643,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 49.14,
+          "responseP50": 48.31,
           "score": 100,
-          "slowCount": 1746,
+          "slowCount": 2456,
           "systemId": 1064,
           "tech": "Netty",
-          "throughput": 11.43031829,
-          "totalCount": 1975159
+          "throughput": 11.08737269,
+          "totalCount": 1915898
         },
         {
-          "apdex": null,
+          "apdex": 1.0,
           "applicationId": 1610,
           "applicationName": "com.nbport.zgb.message.MessageWebApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -615,13 +665,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 1.5,
+          "score": 100,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Undertow",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 1.157e-05,
+          "totalCount": 2
         },
         {
           "apdex": null,
@@ -646,7 +696,7 @@
           "totalCount": 0
         },
         {
-          "apdex": 0.0,
+          "apdex": 0.364,
           "applicationId": 1613,
           "applicationName": "@classpath.txt",
           "errorRate": 0.0,
@@ -659,20 +709,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 20746.27,
+          "responseP50": 6234.86,
           "score": 40,
-          "slowCount": 216,
+          "slowCount": 223,
           "systemId": 1060,
           "tech": "Apache Tomcat",
-          "throughput": 0.00125,
-          "totalCount": 216
+          "throughput": 0.00207755,
+          "totalCount": 359
         },
         {
-          "apdex": 0.516,
+          "apdex": 0.509,
           "applicationId": 1639,
           "applicationName": "testcom.nbport.zgb.message.MessageServiceApplication",
-          "errorRate": 48.4375,
-          "errorTotalCount": 31,
+          "errorRate": 49.09090909,
+          "errorTotalCount": 54,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -681,13 +731,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 162.18,
-          "score": 14,
-          "slowCount": 31,
+          "responseP50": 86.5,
+          "score": 13,
+          "slowCount": 54,
           "systemId": 1063,
           "tech": "Apache Tomcat",
-          "throughput": 0.00037037,
-          "totalCount": 64
+          "throughput": 0.00063657,
+          "totalCount": 110
         },
         {
           "apdex": 1.0,
@@ -703,20 +753,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 24.03,
+          "responseP50": 14.83,
           "score": 100,
-          "slowCount": 150,
+          "slowCount": 74,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 20.49822338,
-          "totalCount": 3542093
+          "throughput": 19.530625,
+          "totalCount": 3374892
         },
         {
-          "apdex": null,
+          "apdex": 0.9,
           "applicationId": 1612,
           "applicationName": "com.nbport.zgb.portal.PortalWebApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -725,13 +775,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 113.53,
+          "score": 96,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Undertow",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 8.681e-05,
+          "totalCount": 15
         },
         {
           "apdex": null,
@@ -756,11 +806,11 @@
           "totalCount": 0
         },
         {
-          "apdex": null,
+          "apdex": 1.0,
           "applicationId": 1611,
           "applicationName": "com.nbport.zgb.portal.PortalServiceApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -769,20 +819,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 10.98,
+          "score": 100,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Netty",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 0.00030671,
+          "totalCount": 53
         },
         {
-          "apdex": 0.997,
+          "apdex": 0.999,
           "applicationId": 1623,
           "applicationName": "com.nbport.tt.portal.PortalServiceApplication",
-          "errorRate": 0.26197441,
-          "errorTotalCount": 480,
+          "errorRate": 0.14828913,
+          "errorTotalCount": 455,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -791,16 +841,16 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 0.81,
+          "responseP50": 0.82,
           "score": 100,
           "slowCount": 0,
           "systemId": 1064,
           "tech": "Netty",
-          "throughput": 1.06032407,
-          "totalCount": 183224
+          "throughput": 1.77565394,
+          "totalCount": 306833
         },
         {
-          "apdex": 0.53,
+          "apdex": 0.55,
           "applicationId": 1638,
           "applicationName": "testcom.nbport.zgb.portal.PortalWebApplication",
           "errorRate": 0.0,
@@ -813,13 +863,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 151.37,
-          "score": 56,
-          "slowCount": 31,
+          "responseP50": 64.87,
+          "score": 59,
+          "slowCount": 54,
           "systemId": 1063,
           "tech": "Apache Tomcat",
-          "throughput": 0.00038194,
-          "totalCount": 66
+          "throughput": 0.00069444,
+          "totalCount": 120
         },
         {
           "apdex": 1.0,
@@ -835,13 +885,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 33.37,
+          "responseP50": 32.78,
           "score": 100,
           "slowCount": 0,
           "systemId": 1063,
           "tech": "Apache Tomcat",
-          "throughput": 0.00019097,
-          "totalCount": 33
+          "throughput": 0.00034722,
+          "totalCount": 60
         },
         {
           "apdex": null,
@@ -879,7 +929,7 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 0.51,
+          "responseP50": 0.5,
           "score": 100,
           "slowCount": 0,
           "systemId": 1060,
@@ -923,7 +973,7 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 437.89,
+          "responseP50": 86.5,
           "score": 40,
           "slowCount": 0,
           "systemId": 1061,
@@ -967,8 +1017,8 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 1526.17,
-          "score": 79,
+          "responseP50": 1577.14,
+          "score": 78,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Netty",
@@ -994,8 +1044,8 @@
           "slowCount": 0,
           "systemId": 1060,
           "tech": "Apache Tomcat",
-          "throughput": 0.03487269,
-          "totalCount": 6026
+          "throughput": 0.03487847,
+          "totalCount": 6027
         },
         {
           "apdex": null,
@@ -1020,7 +1070,7 @@
           "totalCount": 0
         }
       ],
-      "requestId": "62039d8e-46ce-c6a2-6762-3edb0b290ad7",
+      "requestId": "f50ad14b-5a25-23fd-825f-93f5434f7662",
       "status": 200
     },
     "body_capture_error": null,
@@ -1031,8 +1081,8 @@
           "apdex": 1.0,
           "applicationId": 1627,
           "applicationName": "com.nbport.tt.wportal.WebPortalServiceApplication",
-          "errorRate": 0.00172144,
-          "errorTotalCount": 1,
+          "errorRate": 0.00672766,
+          "errorTotalCount": 3,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1041,20 +1091,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 3.19,
+          "responseP50": 3.16,
           "score": 100,
-          "slowCount": 7,
+          "slowCount": 9,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 0.33617477,
-          "totalCount": 58091
+          "throughput": 0.25805556,
+          "totalCount": 44592
         },
         {
-          "apdex": null,
+          "apdex": 0.75,
           "applicationId": 1607,
           "applicationName": "com.nbport.zgb.login.LoginWebApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1063,20 +1113,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 17.09,
+          "score": 84,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Undertow",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 2.315e-05,
+          "totalCount": 4
         },
         {
           "apdex": 1.0,
           "applicationId": 1628,
           "applicationName": "com.nbport.tt.wmanage.WebManageServiceApplication",
-          "errorRate": 0.02358212,
-          "errorTotalCount": 6,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1085,13 +1135,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 2.7,
+          "responseP50": 2.2,
           "score": 100,
-          "slowCount": 6,
+          "slowCount": 0,
           "systemId": 1063,
           "tech": "Undertow",
-          "throughput": 0.14723958,
-          "totalCount": 25443
+          "throughput": 0.13064815,
+          "totalCount": 22576
         },
         {
           "apdex": null,
@@ -1116,11 +1166,11 @@
           "totalCount": 0
         },
         {
-          "apdex": 0.985,
+          "apdex": 0.987,
           "applicationId": 1645,
           "applicationName": "fawuorg.springframework.boot.loader.WarLauncher",
-          "errorRate": 0.29838232,
-          "errorTotalCount": 1210,
+          "errorRate": 0.24625388,
+          "errorTotalCount": 306,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1129,13 +1179,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 4.73,
+          "responseP50": 4.27,
           "score": 100,
-          "slowCount": 1391,
+          "slowCount": 443,
           "systemId": 1065,
           "tech": "Apache Tomcat",
-          "throughput": 2.34675926,
-          "totalCount": 405520
+          "throughput": 0.7191088,
+          "totalCount": 124262
         },
         {
           "apdex": null,
@@ -1163,8 +1213,8 @@
           "apdex": 0.974,
           "applicationId": 1606,
           "applicationName": "com.alibaba.nacos.Nacos",
-          "errorRate": 2.19463232,
-          "errorTotalCount": 140522,
+          "errorRate": 2.1953546,
+          "errorTotalCount": 137725,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1175,18 +1225,18 @@
           "language": "Java",
           "responseP50": 0.51,
           "score": 100,
-          "slowCount": 25007,
+          "slowCount": 24859,
           "systemId": 1062,
           "tech": "Java",
-          "throughput": 37.05431713,
-          "totalCount": 6402986
+          "throughput": 36.30482639,
+          "totalCount": 6273474
         },
         {
           "apdex": 0.999,
           "applicationId": 1626,
           "applicationName": "com.nbport.tt.portal.PortalWebApplication",
-          "errorRate": 0.06036853,
-          "errorTotalCount": 784,
+          "errorRate": 0.05876031,
+          "errorTotalCount": 801,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1195,20 +1245,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 7.19,
+          "responseP50": 6.92,
           "score": 100,
-          "slowCount": 107,
+          "slowCount": 35,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 7.51556713,
-          "totalCount": 1298690
+          "throughput": 7.88868634,
+          "totalCount": 1363165
         },
         {
-          "apdex": 0.968,
+          "apdex": 0.977,
           "applicationId": 1644,
           "applicationName": "org.springframework.boot.loader.WarLauncher",
-          "errorRate": 1.82870239,
-          "errorTotalCount": 3862,
+          "errorRate": 0.55997398,
+          "errorTotalCount": 947,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1217,20 +1267,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 4.82,
+          "responseP50": 4.83,
           "score": 100,
-          "slowCount": 949,
+          "slowCount": 1064,
           "systemId": 1065,
           "tech": "Apache Tomcat",
-          "throughput": 1.22215278,
-          "totalCount": 211188
+          "throughput": 0.97867477,
+          "totalCount": 169115
         },
         {
-          "apdex": 0.982,
+          "apdex": 0.988,
           "applicationId": 1648,
           "applicationName": "com.alibaba.dubbo.container.Main",
-          "errorRate": 0.00970017,
-          "errorTotalCount": 97,
+          "errorRate": 0.00275144,
+          "errorTotalCount": 43,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1239,13 +1289,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 7.57,
+          "responseP50": 13.65,
           "score": 100,
-          "slowCount": 5073,
+          "slowCount": 4546,
           "systemId": 1059,
           "tech": "Jetty",
-          "throughput": 5.78693287,
-          "totalCount": 999982
+          "throughput": 9.04408565,
+          "totalCount": 1562818
         },
         {
           "apdex": null,
@@ -1270,6 +1320,28 @@
           "totalCount": 0
         },
         {
+          "apdex": 0.998,
+          "applicationId": 1647,
+          "applicationName": "[xinchuangOA]-ycplatform_鏅烘収宸ヤ綔鍙板厷鏀垮姙鍏郴缁焈Archetype Created Web Application",
+          "errorRate": 0.1606967,
+          "errorTotalCount": 31,
+          "health": 0,
+          "healthInfo": {
+            "eventLevel": 0,
+            "healthStartTime": null,
+            "targetName": "1647",
+            "targetValue": null
+          },
+          "language": "Java",
+          "responseP50": 2.85,
+          "score": 100,
+          "slowCount": 0,
+          "systemId": 1066,
+          "tech": "TongWeb",
+          "throughput": 0.11163773,
+          "totalCount": 19291
+        },
+        {
           "apdex": null,
           "applicationId": 1640,
           "applicationName": "testcom.nbport.zgb.message.MessageWebApplication",
@@ -1292,11 +1364,11 @@
           "totalCount": 0
         },
         {
-          "apdex": 0.999,
+          "apdex": 1.0,
           "applicationId": 1630,
           "applicationName": "com.nbport.tt.wportal.WebPortalWebApplication",
-          "errorRate": 0.05408329,
-          "errorTotalCount": 27,
+          "errorRate": 0.02689112,
+          "errorTotalCount": 10,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1305,13 +1377,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 8.32,
+          "responseP50": 9.41,
           "score": 100,
-          "slowCount": 12,
+          "slowCount": 8,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 0.28890625,
-          "totalCount": 49923
+          "throughput": 0.21520255,
+          "totalCount": 37187
         },
         {
           "apdex": 1.0,
@@ -1327,13 +1399,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 4.13,
+          "responseP50": 4.23,
           "score": 100,
-          "slowCount": 40,
+          "slowCount": 41,
           "systemId": 1064,
           "tech": "Java",
-          "throughput": 1.01469907,
-          "totalCount": 175340
+          "throughput": 0.94750579,
+          "totalCount": 163729
         },
         {
           "apdex": 0.5,
@@ -1349,7 +1421,7 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 57.67,
+          "responseP50": 38.44,
           "score": 40,
           "slowCount": 0,
           "systemId": 1063,
@@ -1358,11 +1430,11 @@
           "totalCount": 4
         },
         {
-          "apdex": 0.749,
+          "apdex": 0.774,
           "applicationId": 1646,
           "applicationName": "<REDACTED>",
-          "errorRate": 0.05333333,
-          "errorTotalCount": 2,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1371,20 +1443,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 8.9,
-          "score": 84,
-          "slowCount": 588,
+          "responseP50": 12.75,
+          "score": 86,
+          "slowCount": 394,
           "systemId": 1065,
           "tech": "Jetty",
-          "throughput": 0.02170139,
-          "totalCount": 3750
+          "throughput": 0.01884838,
+          "totalCount": 3257
         },
         {
           "apdex": 1.0,
           "applicationId": 1624,
           "applicationName": "com.nbport.tt.manage.ManageServiceApplication",
-          "errorRate": 0.00046346,
-          "errorTotalCount": 15,
+          "errorRate": 6.588e-05,
+          "errorTotalCount": 2,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1393,13 +1465,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 2.75,
+          "responseP50": 2.64,
           "score": 100,
-          "slowCount": 38,
+          "slowCount": 46,
           "systemId": 1064,
           "tech": "Netty",
-          "throughput": 18.7297338,
-          "totalCount": 3236498
+          "throughput": 17.56938657,
+          "totalCount": 3035990
         },
         {
           "apdex": 0.999,
@@ -1415,20 +1487,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 49.14,
+          "responseP50": 48.31,
           "score": 100,
-          "slowCount": 1746,
+          "slowCount": 2456,
           "systemId": 1064,
           "tech": "Netty",
-          "throughput": 11.43031829,
-          "totalCount": 1975159
+          "throughput": 11.08737269,
+          "totalCount": 1915898
         },
         {
-          "apdex": null,
+          "apdex": 1.0,
           "applicationId": 1610,
           "applicationName": "com.nbport.zgb.message.MessageWebApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1437,13 +1509,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 1.5,
+          "score": 100,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Undertow",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 1.157e-05,
+          "totalCount": 2
         },
         {
           "apdex": null,
@@ -1468,7 +1540,7 @@
           "totalCount": 0
         },
         {
-          "apdex": 0.0,
+          "apdex": 0.364,
           "applicationId": 1613,
           "applicationName": "@classpath.txt",
           "errorRate": 0.0,
@@ -1481,20 +1553,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 20746.27,
+          "responseP50": 6234.86,
           "score": 40,
-          "slowCount": 216,
+          "slowCount": 223,
           "systemId": 1060,
           "tech": "Apache Tomcat",
-          "throughput": 0.00125,
-          "totalCount": 216
+          "throughput": 0.00207755,
+          "totalCount": 359
         },
         {
-          "apdex": 0.516,
+          "apdex": 0.509,
           "applicationId": 1639,
           "applicationName": "testcom.nbport.zgb.message.MessageServiceApplication",
-          "errorRate": 48.4375,
-          "errorTotalCount": 31,
+          "errorRate": 49.09090909,
+          "errorTotalCount": 54,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1503,13 +1575,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 162.18,
-          "score": 14,
-          "slowCount": 31,
+          "responseP50": 86.5,
+          "score": 13,
+          "slowCount": 54,
           "systemId": 1063,
           "tech": "Apache Tomcat",
-          "throughput": 0.00037037,
-          "totalCount": 64
+          "throughput": 0.00063657,
+          "totalCount": 110
         },
         {
           "apdex": 1.0,
@@ -1525,20 +1597,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 24.03,
+          "responseP50": 14.83,
           "score": 100,
-          "slowCount": 150,
+          "slowCount": 74,
           "systemId": 1064,
           "tech": "Undertow",
-          "throughput": 20.49822338,
-          "totalCount": 3542093
+          "throughput": 19.530625,
+          "totalCount": 3374892
         },
         {
-          "apdex": null,
+          "apdex": 0.9,
           "applicationId": 1612,
           "applicationName": "com.nbport.zgb.portal.PortalWebApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1547,13 +1619,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 113.53,
+          "score": 96,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Undertow",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 8.681e-05,
+          "totalCount": 15
         },
         {
           "apdex": null,
@@ -1578,11 +1650,11 @@
           "totalCount": 0
         },
         {
-          "apdex": null,
+          "apdex": 1.0,
           "applicationId": 1611,
           "applicationName": "com.nbport.zgb.portal.PortalServiceApplication",
-          "errorRate": null,
-          "errorTotalCount": null,
+          "errorRate": 0.0,
+          "errorTotalCount": 0,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1591,20 +1663,20 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": null,
-          "score": null,
+          "responseP50": 10.98,
+          "score": 100,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Netty",
-          "throughput": null,
-          "totalCount": 0
+          "throughput": 0.00030671,
+          "totalCount": 53
         },
         {
-          "apdex": 0.997,
+          "apdex": 0.999,
           "applicationId": 1623,
           "applicationName": "com.nbport.tt.portal.PortalServiceApplication",
-          "errorRate": 0.26197441,
-          "errorTotalCount": 480,
+          "errorRate": 0.14828913,
+          "errorTotalCount": 455,
           "health": 0,
           "healthInfo": {
             "eventLevel": 0,
@@ -1613,16 +1685,16 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 0.81,
+          "responseP50": 0.82,
           "score": 100,
           "slowCount": 0,
           "systemId": 1064,
           "tech": "Netty",
-          "throughput": 1.06032407,
-          "totalCount": 183224
+          "throughput": 1.77565394,
+          "totalCount": 306833
         },
         {
-          "apdex": 0.53,
+          "apdex": 0.55,
           "applicationId": 1638,
           "applicationName": "testcom.nbport.zgb.portal.PortalWebApplication",
           "errorRate": 0.0,
@@ -1635,13 +1707,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 151.37,
-          "score": 56,
-          "slowCount": 31,
+          "responseP50": 64.87,
+          "score": 59,
+          "slowCount": 54,
           "systemId": 1063,
           "tech": "Apache Tomcat",
-          "throughput": 0.00038194,
-          "totalCount": 66
+          "throughput": 0.00069444,
+          "totalCount": 120
         },
         {
           "apdex": 1.0,
@@ -1657,13 +1729,13 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 33.37,
+          "responseP50": 32.78,
           "score": 100,
           "slowCount": 0,
           "systemId": 1063,
           "tech": "Apache Tomcat",
-          "throughput": 0.00019097,
-          "totalCount": 33
+          "throughput": 0.00034722,
+          "totalCount": 60
         },
         {
           "apdex": null,
@@ -1701,7 +1773,7 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 0.51,
+          "responseP50": 0.5,
           "score": 100,
           "slowCount": 0,
           "systemId": 1060,
@@ -1745,7 +1817,7 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 437.89,
+          "responseP50": 86.5,
           "score": 40,
           "slowCount": 0,
           "systemId": 1061,
@@ -1789,8 +1861,8 @@
             "targetValue": null
           },
           "language": "Java",
-          "responseP50": 1526.17,
-          "score": 79,
+          "responseP50": 1577.14,
+          "score": 78,
           "slowCount": 0,
           "systemId": 1061,
           "tech": "Netty",
@@ -1816,8 +1888,8 @@
           "slowCount": 0,
           "systemId": 1060,
           "tech": "Apache Tomcat",
-          "throughput": 0.03487269,
-          "totalCount": 6026
+          "throughput": 0.03487847,
+          "totalCount": 6027
         },
         {
           "apdex": null,
@@ -1842,17 +1914,17 @@
           "totalCount": 0
         }
       ],
-      "requestId": "62039d8e-46ce-c6a2-6762-3edb0b290ad7",
+      "requestId": "f50ad14b-5a25-23fd-825f-93f5434f7662",
       "status": 200
     },
-    "encoded_data_length": 2408,
+    "encoded_data_length": 2628,
     "error": null,
     "headers": {
       "Connection": "keep-alive",
       "Content-Encoding": "gzip",
       "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
       "Content-Type": "application/json",
-      "Date": "Tue, 07 Apr 2026 06:45:08 GMT",
+      "Date": "Sun, 12 Apr 2026 04:11:11 GMT",
       "Referrer-Policy": "strict-origin-when-cross-origin",
       "Server": "nginx",
       "Transfer-Encoding": "chunked",
