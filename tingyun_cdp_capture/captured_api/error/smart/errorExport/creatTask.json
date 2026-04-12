@@ -1,0 +1,291 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-12T12:51:20+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-12T12:51:20+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-10 12:51",
+            "bizSystemId": 1065,
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-12 12:51",
+            "errorLevel": "ER",
+            "exportColumns": "1,2,3,4,5,13,6,7,8,10",
+            "filterParams": [
+              {
+                "key": "应用",
+                "type": 0,
+                "value": "全部"
+              },
+              {
+                "key": "实例",
+                "type": 3,
+                "value": "全部"
+              }
+            ],
+            "localeOptionContent": "Last 2 days",
+            "serviceGroupId": 0,
+            "timePeriod": 2880
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC_NUMBER>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"exportColumns\":\"1,2,3,4,5,13,6,7,8,10\",\"filterParams\":[{\"key\":\"应用\",\"type\":0,\"value\":\"全部\"},{\"key\":\"实例\",\"type\":3,\"value\":\"全部\"}],\"localeOptionContent\":\"Last 2 days\",\"serviceGroupId\":\"<DYNAMIC_NUMBER>\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "exportColumns",
+              "filterParams",
+              "localeOptionContent",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC_NUMBER>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "exportColumns": "1,2,3,4,5,13,6,7,8,10",
+            "filterParams": [
+              {
+                "key": "应用",
+                "type": 0,
+                "value": "全部"
+              },
+              {
+                "key": "实例",
+                "type": 3,
+                "value": "全部"
+              }
+            ],
+            "localeOptionContent": "Last 2 days",
+            "serviceGroupId": "<DYNAMIC_NUMBER>",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-12T12:51:20+08:00",
+      "inference_basis": [
+        "path=error/smart/errorExport/creatTask"
+      ],
+      "inferred_purpose": "Likely related to error",
+      "last_seen": "2026-04-12T12:51:20+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/error",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/error",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:51:20+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/creatTask",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/error",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/error",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:51:20+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/creatTask",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/error",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/error",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:51:20+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/creatTask",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      },
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "beginTime": "2026-04-10 12:51",
+          "bizSystemId": 1065,
+          "bizSystemName": "集团法务",
+          "endTime": "2026-04-12 12:51",
+          "errorLevel": "ER",
+          "exportColumns": "1,2,3,4,5,13,6,7,8,10",
+          "filterParams": [
+            {
+              "key": "应用",
+              "type": 0,
+              "value": "全部"
+            },
+            {
+              "key": "实例",
+              "type": 3,
+              "value": "全部"
+            }
+          ],
+          "localeOptionContent": "Last 2 days",
+          "serviceGroupId": 0,
+          "timePeriod": 2880
+        },
+        "dynamic_fields": [
+          "body.beginTime",
+          "body.bizSystemId",
+          "body.endTime",
+          "body.serviceGroupId",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/error/smart/errorExport/creatTask -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'Content-Type: application/json' --data-raw '{\"beginTime\":\"2026-04-10 12:51\",\"bizSystemId\":1065,\"bizSystemName\":\"集团法务\",\"endTime\":\"2026-04-12 12:51\",\"errorLevel\":\"ER\",\"exportColumns\":\"1,2,3,4,5,13,6,7,8,10\",\"filterParams\":[{\"key\":\"应用\",\"type\":0,\"value\":\"全部\"},{\"key\":\"实例\",\"type\":3,\"value\":\"全部\"}],\"localeOptionContent\":\"Last 2 days\",\"serviceGroupId\":0,\"timePeriod\":2880}'",
+        "url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/creatTask"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "Content-Type": "application/json"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "beginTime": "2026-04-10 12:51",
+            "bizSystemId": 1065,
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-12 12:51",
+            "errorLevel": "ER",
+            "exportColumns": "1,2,3,4,5,13,6,7,8,10",
+            "filterParams": [
+              {
+                "key": "应用",
+                "type": 0,
+                "value": "全部"
+              },
+              {
+                "key": "实例",
+                "type": 3,
+                "value": "全部"
+              }
+            ],
+            "localeOptionContent": "Last 2 days",
+            "serviceGroupId": 0,
+            "timePeriod": 2880
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "Content-Type": "application/json"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/error",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/error",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:51:20+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/creatTask",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:51:20+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/creatTask"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "data": {
+              "message": "success"
+            },
+            "status": 200
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:51:03 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/error/smart/errorExport/creatTask",
+  "relative_path": "error/smart/errorExport/creatTask"
+}

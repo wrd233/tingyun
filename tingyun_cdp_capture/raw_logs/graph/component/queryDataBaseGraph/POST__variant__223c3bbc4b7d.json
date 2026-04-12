@@ -1,11 +1,11 @@
 {
   "capture": {
-    "captured_at": "2026-04-12T12:12:39+08:00",
-    "completeness_score": 3743,
+    "captured_at": "2026-04-12T12:50:43+08:00",
+    "completeness_score": 3770,
     "first_seen_at": "2026-04-12T12:12:38+08:00",
-    "last_seen_at": "2026-04-12T12:12:39+08:00",
+    "last_seen_at": "2026-04-12T12:50:43+08:00",
     "page_context": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -14,12 +14,26 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "page_context_summary": {
       "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:50:43+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
         {
           "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -36,7 +50,7 @@
         }
       ],
       "latest": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
         "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -45,12 +59,12 @@
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-12T12:12:39+08:00",
+        "request_timestamp": "2026-04-12T12:50:43+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
         "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       },
       "latest_non_empty": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
         "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -59,21 +73,21 @@
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-12T12:12:39+08:00",
+        "request_timestamp": "2026-04-12T12:50:43+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
         "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       }
     },
     "raw_log_file": "graph/component/queryDataBaseGraph/POST__variant__223c3bbc4b7d.json",
     "resource_type": "XHR",
-    "seen_count": 2,
+    "seen_count": 4,
     "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
-    "wall_time": 1775967159.481405
+    "wall_time": 1775969443.478853
   },
   "method": "POST",
   "metric": null,
   "page_context": {
-    "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
     "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
     "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
     "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -82,12 +96,26 @@
     "page_title": "Ting Yun",
     "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
     "request_method": "POST",
-    "request_timestamp": "2026-04-12T12:12:39+08:00",
+    "request_timestamp": "2026-04-12T12:50:43+08:00",
     "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
     "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
   },
   "page_context_summary": {
     "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:50:43+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
       {
         "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -104,7 +132,7 @@
       }
     ],
     "latest": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -113,12 +141,12 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "latest_non_empty": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -127,7 +155,7 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     }
@@ -140,7 +168,7 @@
       "componentName": "10.190.22.21:3306",
       "componentSubtype": "MySQL",
       "componentType": "Database",
-      "endTime": "2026-04-12 12:12",
+      "endTime": "2026-04-12 12:50",
       "lang": "zh_CN",
       "timePeriod": "2880"
     },
@@ -158,7 +186,7 @@
     "headers": {
       "Accept": "application/json, text/plain, */*",
       "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
-      "BuiltInRequestId": "c00a5ec1-81c8-44ec-452f-cebe5df91ffb",
+      "BuiltInRequestId": "24cb4b3c-5f22-9a30-9390-e41c6a7829c5",
       "Content-Type": "application/x-www-form-urlencoded",
       "Referer": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
@@ -171,7 +199,7 @@
     },
     "host_base": "http://169.169.173.25:8080",
     "page_context": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -180,14 +208,14 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:39+08:00",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "path": "/server-api/graph/component/queryDataBaseGraph",
     "query": {},
     "query_normalized": {},
-    "raw_post_data": "timePeriod=2880&endTime=2026-04-12%2012:12&bizSystemId=1065&componentSubtype=MySQL&componentType=Database&componentName=10.190.22.21:3306&lang=zh_CN",
+    "raw_post_data": "timePeriod=2880&endTime=2026-04-12%2012:50&bizSystemId=1065&componentSubtype=MySQL&componentType=Database&componentName=10.190.22.21:3306&lang=zh_CN",
     "url": "http://169.169.173.25:8080/server-api/graph/component/queryDataBaseGraph"
   },
   "response": {
@@ -299,7 +327,7 @@
             "errorRate": 0.0,
             "from": "1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]",
             "maxEexcTime": 14965,
-            "response": 371.0,
+            "response": 369.0,
             "throught": 0.01,
             "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
           },
@@ -766,11 +794,12 @@
               "name": "URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp",
               "subType": 1
             },
+            "loc": "1134.1694819228853 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "1134.1694819228853",
+            "y": "4"
           },
           {
             "graphId": 9523,
@@ -816,11 +845,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr",
               "subType": 1
             },
+            "loc": "1767.311318304407 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "1767.311318304407",
+            "y": "4"
           },
           {
             "graphId": 9956,
@@ -1104,11 +1134,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr",
               "subType": 1
             },
+            "loc": "5404.873709829585 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "5404.873709829585",
+            "y": "4"
           },
           {
             "graphId": 9541,
@@ -1137,11 +1168,12 @@
               "name": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
               "subType": 1
             },
+            "loc": "5824.873709829585 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "5824.873709829585",
+            "y": "4"
           },
           {
             "graphId": 9551,
@@ -1187,11 +1219,12 @@
               "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
               "subType": 1
             },
+            "loc": "6476.185243449248 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "6476.185243449248",
+            "y": "4"
           },
           {
             "graphId": 10178,
@@ -1203,11 +1236,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr",
               "subType": 1
             },
+            "loc": "6704.489090023641 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "6704.489090023641",
+            "y": "4"
           },
           {
             "graphId": 10180,
@@ -1219,11 +1253,12 @@
               "name": "Job/DEFAULT/reportContractLxJobDetail",
               "subType": 1
             },
+            "loc": "6922.328916822644 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "6922.328916822644",
+            "y": "4"
           },
           {
             "graphId": 9546,
@@ -1252,11 +1287,12 @@
               "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
               "subType": 1
             },
+            "loc": "7368.472590196039 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "7368.472590196039",
+            "y": "4"
           },
           {
             "graphId": 9549,
@@ -1353,11 +1389,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr",
               "subType": 1
             },
+            "loc": "8646.776436770433 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "8646.776436770433",
+            "y": "4"
           },
           {
             "graphId": 9554,
@@ -1634,7 +1671,7 @@
             "errorRate": 0.0,
             "from": "1065_13331_1645_0_0_[SpringController/${url.attachment}/${url.attachment.updateAttachValid} (POST)]",
             "maxEexcTime": 14965,
-            "response": 371.0,
+            "response": 369.0,
             "throught": 0.01,
             "to": "1065_0_0_Database_MySQL_[10.190.22.21:3306]"
           },
@@ -2101,11 +2138,12 @@
               "name": "URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp",
               "subType": 1
             },
+            "loc": "1134.1694819228853 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_32129_1644_0_0_[URI/grcv5/user/product/dataStatistics/subpage/knowledge.jsp]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "1134.1694819228853",
+            "y": "4"
           },
           {
             "graphId": 9523,
@@ -2151,11 +2189,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr",
               "subType": 1
             },
+            "loc": "1767.311318304407 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_32130_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrKnowledgeService.getKnowPath.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "1767.311318304407",
+            "y": "4"
           },
           {
             "graphId": 9956,
@@ -2439,11 +2478,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr",
               "subType": 1
             },
+            "loc": "5404.873709829585 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_18992_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCurrentYearQuantity.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "5404.873709829585",
+            "y": "4"
           },
           {
             "graphId": 9541,
@@ -2472,11 +2512,12 @@
               "name": "SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)",
               "subType": 1
             },
+            "loc": "5824.873709829585 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_16000_1645_0_0_[SpringController/serverapi/cj/rest/dataCenter/collectContractClose (POST)]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "5824.873709829585",
+            "y": "4"
           },
           {
             "graphId": 9551,
@@ -2522,11 +2563,12 @@
               "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
               "subType": 1
             },
+            "loc": "6476.185243449248 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_31825_1645_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_275]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "6476.185243449248",
+            "y": "4"
           },
           {
             "graphId": 10178,
@@ -2538,11 +2580,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr",
               "subType": 1
             },
+            "loc": "6704.489090023641 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_18993_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getZdzbData.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "6704.489090023641",
+            "y": "4"
           },
           {
             "graphId": 10180,
@@ -2554,11 +2597,12 @@
               "name": "Job/DEFAULT/reportContractLxJobDetail",
               "subType": 1
             },
+            "loc": "6922.328916822644 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_15949_1644_0_0_[Job/DEFAULT/reportContractLxJobDetail]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "6922.328916822644",
+            "y": "4"
           },
           {
             "graphId": 9546,
@@ -2587,11 +2631,12 @@
               "name": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
               "subType": 1
             },
+            "loc": "7368.472590196039 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_31826_1644_0_0_[Job/DEFAULT/OVERDUE_REMINDJobDetail_267]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "7368.472590196039",
+            "y": "4"
           },
           {
             "graphId": 9549,
@@ -2688,11 +2733,12 @@
               "name": "URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr",
               "subType": 1
             },
+            "loc": "8646.776436770433 4",
             "settingKey": "NoSQL10.190.22.21:3306@1065_18994_1644_0_0_[URI/grcv5/dwr/call/plaincall/dwrNonLawsuitService.getCaseStage.dwr]@2",
             "show": 1,
             "type": 12,
-            "x": "0",
-            "y": "0"
+            "x": "8646.776436770433",
+            "y": "4"
           },
           {
             "graphId": 9554,
@@ -2859,14 +2905,14 @@
       },
       "status": 200
     },
-    "encoded_data_length": 4263,
+    "encoded_data_length": 4378,
     "error": null,
     "headers": {
       "Connection": "keep-alive",
       "Content-Encoding": "gzip",
       "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
       "Content-Type": "application/json",
-      "Date": "Sun, 12 Apr 2026 04:12:23 GMT",
+      "Date": "Sun, 12 Apr 2026 04:50:27 GMT",
       "Referrer-Policy": "strict-origin-when-cross-origin",
       "Server": "nginx",
       "Transfer-Encoding": "chunked",

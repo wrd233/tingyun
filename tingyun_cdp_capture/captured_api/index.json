@@ -1,7 +1,7 @@
 {
   "endpoints": [
     {
-      "count_seen": 5,
+      "count_seen": 6,
       "file": "Database/actionName/list.json",
       "methods": [
         "POST"
@@ -13,7 +13,7 @@
       "relative_path": "Database/actionName/list"
     },
     {
-      "count_seen": 3,
+      "count_seen": 4,
       "file": "Database/analysis.json",
       "methods": [
         "POST"
@@ -25,7 +25,7 @@
       "relative_path": "Database/analysis"
     },
     {
-      "count_seen": 1,
+      "count_seen": 3,
       "file": "Database/analysis/download.json",
       "methods": [
         "GET"
@@ -37,7 +37,7 @@
       "relative_path": "Database/analysis/download"
     },
     {
-      "count_seen": 3,
+      "count_seen": 4,
       "file": "Database/applicationName/list.json",
       "methods": [
         "POST"
@@ -49,7 +49,7 @@
       "relative_path": "Database/applicationName/list"
     },
     {
-      "count_seen": 15,
+      "count_seen": 21,
       "file": "Database/componentName/list.json",
       "methods": [
         "POST"
@@ -61,7 +61,7 @@
       "relative_path": "Database/componentName/list"
     },
     {
-      "count_seen": 3,
+      "count_seen": 4,
       "file": "Database/info.json",
       "methods": [
         "POST"
@@ -73,7 +73,7 @@
       "relative_path": "Database/info"
     },
     {
-      "count_seen": 4,
+      "count_seen": 5,
       "file": "Database/list.json",
       "methods": [
         "POST"
@@ -85,7 +85,7 @@
       "relative_path": "Database/list"
     },
     {
-      "count_seen": 4,
+      "count_seen": 5,
       "file": "Database/list/health.json",
       "methods": [
         "POST"
@@ -109,7 +109,7 @@
       "relative_path": "Database/operate/analysisList"
     },
     {
-      "count_seen": 1,
+      "count_seen": 5,
       "file": "MQ/list.json",
       "methods": [
         "POST"
@@ -121,7 +121,7 @@
       "relative_path": "MQ/list"
     },
     {
-      "count_seen": 1,
+      "count_seen": 2,
       "file": "NoSQL/actionName/list.json",
       "methods": [
         "POST"
@@ -133,7 +133,7 @@
       "relative_path": "NoSQL/actionName/list"
     },
     {
-      "count_seen": 1,
+      "count_seen": 2,
       "file": "NoSQL/analysis.json",
       "methods": [
         "POST"
@@ -145,7 +145,7 @@
       "relative_path": "NoSQL/analysis"
     },
     {
-      "count_seen": 2,
+      "count_seen": 3,
       "file": "NoSQL/applicationName/list.json",
       "methods": [
         "POST"
@@ -157,7 +157,7 @@
       "relative_path": "NoSQL/applicationName/list"
     },
     {
-      "count_seen": 8,
+      "count_seen": 12,
       "file": "NoSQL/componentName/list.json",
       "methods": [
         "POST"
@@ -169,7 +169,7 @@
       "relative_path": "NoSQL/componentName/list"
     },
     {
-      "count_seen": 1,
+      "count_seen": 2,
       "file": "NoSQL/errorTypeAmount.json",
       "methods": [
         "POST"
@@ -181,7 +181,7 @@
       "relative_path": "NoSQL/errorTypeAmount"
     },
     {
-      "count_seen": 2,
+      "count_seen": 3,
       "file": "NoSQL/list.json",
       "methods": [
         "POST"
@@ -193,7 +193,7 @@
       "relative_path": "NoSQL/list"
     },
     {
-      "count_seen": 2,
+      "count_seen": 3,
       "file": "NoSQL/list/health.json",
       "methods": [
         "POST"
@@ -205,7 +205,7 @@
       "relative_path": "NoSQL/list/health"
     },
     {
-      "count_seen": 4,
+      "count_seen": 5,
       "file": "NoSQL/overview.json",
       "methods": [
         "POST"
@@ -457,7 +457,7 @@
       "relative_path": "application/app/list/score"
     },
     {
-      "count_seen": 27,
+      "count_seen": 31,
       "file": "application/app/select.json",
       "methods": [
         "POST"
@@ -505,7 +505,7 @@
       "relative_path": "application/business/overview/1065"
     },
     {
-      "count_seen": 53,
+      "count_seen": 61,
       "file": "application/business/systemConfList.json",
       "methods": [
         "POST"
@@ -601,7 +601,7 @@
       "relative_path": "application/get/1648"
     },
     {
-      "count_seen": 18,
+      "count_seen": 20,
       "file": "application/instance/select.json",
       "methods": [
         "POST"
@@ -613,7 +613,7 @@
       "relative_path": "application/instance/select"
     },
     {
-      "count_seen": 2,
+      "count_seen": 3,
       "file": "component/chart/errorRate-errorCount-count.json",
       "methods": [
         "POST"
@@ -625,7 +625,7 @@
       "relative_path": "component/chart/errorRate-errorCount-count"
     },
     {
-      "count_seen": 5,
+      "count_seen": 7,
       "file": "component/chart/exceptionCount.json",
       "methods": [
         "POST"
@@ -649,7 +649,7 @@
       "relative_path": "component/chart/performanceDecompose"
     },
     {
-      "count_seen": 5,
+      "count_seen": 7,
       "file": "component/chart/respTime.json",
       "methods": [
         "POST"
@@ -673,7 +673,7 @@
       "relative_path": "component/chart/respTime-throughput"
     },
     {
-      "count_seen": 3,
+      "count_seen": 4,
       "file": "component/chart/respTime-throughput-database.json",
       "methods": [
         "POST"
@@ -685,7 +685,7 @@
       "relative_path": "component/chart/respTime-throughput-database"
     },
     {
-      "count_seen": 5,
+      "count_seen": 7,
       "file": "component/chart/throughput.json",
       "methods": [
         "POST"
@@ -709,7 +709,7 @@
       "relative_path": "component/chart/time-consuming-percentage"
     },
     {
-      "count_seen": 3,
+      "count_seen": 4,
       "file": "component/database/actionList.json",
       "methods": [
         "POST"
@@ -721,7 +721,7 @@
       "relative_path": "component/database/actionList"
     },
     {
-      "count_seen": 3,
+      "count_seen": 4,
       "file": "component/database/actionTraceList.json",
       "methods": [
         "POST"
@@ -733,7 +733,7 @@
       "relative_path": "component/database/actionTraceList"
     },
     {
-      "count_seen": 4,
+      "count_seen": 6,
       "file": "component/database/action_item_list.json",
       "methods": [
         "POST"
@@ -745,7 +745,7 @@
       "relative_path": "component/database/action_item_list"
     },
     {
-      "count_seen": 1,
+      "count_seen": 2,
       "file": "component/database/errorActionTraceList.json",
       "methods": [
         "POST"
@@ -757,7 +757,7 @@
       "relative_path": "component/database/errorActionTraceList"
     },
     {
-      "count_seen": 3,
+      "count_seen": 6,
       "file": "component/database/errorDataItem.json",
       "methods": [
         "POST"
@@ -769,7 +769,7 @@
       "relative_path": "component/database/errorDataItem"
     },
     {
-      "count_seen": 2,
+      "count_seen": 3,
       "file": "component/database/errorList.json",
       "methods": [
         "POST"
@@ -841,7 +841,7 @@
       "relative_path": "conifg/table/svrExtTable/app-server-thread-list-two"
     },
     {
-      "count_seen": 5,
+      "count_seen": 6,
       "file": "conifg/table/svrExtTable/server-new-error.json",
       "methods": [
         "GET"
@@ -937,7 +937,7 @@
       "relative_path": "data/business/graph/graphList"
     },
     {
-      "count_seen": 18,
+      "count_seen": 20,
       "file": "data/business/graph/updateGraphSettingList.json",
       "methods": [
         "POST"
@@ -1009,7 +1009,7 @@
       "relative_path": "data/logTrace/searchLogTrace"
     },
     {
-      "count_seen": 7,
+      "count_seen": 9,
       "file": "error/smart/action/list.json",
       "methods": [
         "POST"
@@ -1021,7 +1021,7 @@
       "relative_path": "error/smart/action/list"
     },
     {
-      "count_seen": 5,
+      "count_seen": 7,
       "file": "error/smart/errorAPMData/list.json",
       "methods": [
         "POST"
@@ -1045,7 +1045,7 @@
       "relative_path": "error/smart/errorAndException/detail"
     },
     {
-      "count_seen": 7,
+      "count_seen": 9,
       "file": "error/smart/errorAndException/list.json",
       "methods": [
         "POST"
@@ -1057,7 +1057,7 @@
       "relative_path": "error/smart/errorAndException/list"
     },
     {
-      "count_seen": 5,
+      "count_seen": 7,
       "file": "error/smart/errorDecompose/chart.json",
       "methods": [
         "POST"
@@ -1069,7 +1069,31 @@
       "relative_path": "error/smart/errorDecompose/chart"
     },
     {
-      "count_seen": 9,
+      "count_seen": 1,
+      "file": "error/smart/errorExport/List.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorExport/List",
+      "purposes": {
+        "POST": "Likely related to error"
+      },
+      "relative_path": "error/smart/errorExport/List"
+    },
+    {
+      "count_seen": 1,
+      "file": "error/smart/errorExport/creatTask.json",
+      "methods": [
+        "POST"
+      ],
+      "path": "/server-api/error/smart/errorExport/creatTask",
+      "purposes": {
+        "POST": "Likely related to error"
+      },
+      "relative_path": "error/smart/errorExport/creatTask"
+    },
+    {
+      "count_seen": 11,
       "file": "error/smart/errorFilter/list.json",
       "methods": [
         "POST"
@@ -1081,7 +1105,7 @@
       "relative_path": "error/smart/errorFilter/list"
     },
     {
-      "count_seen": 5,
+      "count_seen": 7,
       "file": "error/smart/errorRate/chart.json",
       "methods": [
         "POST"
@@ -1093,7 +1117,7 @@
       "relative_path": "error/smart/errorRate/chart"
     },
     {
-      "count_seen": 5,
+      "count_seen": 7,
       "file": "error/smart/errorUserData/list.json",
       "methods": [
         "POST"
@@ -1153,7 +1177,7 @@
       "relative_path": "error/smart/exceptionTrend/chart"
     },
     {
-      "count_seen": 3,
+      "count_seen": 4,
       "file": "errorList.json",
       "methods": [
         "POST"
@@ -1201,7 +1225,7 @@
       "relative_path": "graph/application/receive"
     },
     {
-      "count_seen": 4,
+      "count_seen": 6,
       "file": "graph/component/queryDataBaseGraph.json",
       "methods": [
         "POST"
@@ -1213,7 +1237,7 @@
       "relative_path": "graph/component/queryDataBaseGraph"
     },
     {
-      "count_seen": 4,
+      "count_seen": 5,
       "file": "graph/component/queryNosqlGraph.json",
       "methods": [
         "POST"
@@ -1225,7 +1249,7 @@
       "relative_path": "graph/component/queryNosqlGraph"
     },
     {
-      "count_seen": 2,
+      "count_seen": 4,
       "file": "graph/download/overview.json",
       "methods": [
         "POST"
@@ -1273,7 +1297,7 @@
       "relative_path": "graph/query/diagram"
     },
     {
-      "count_seen": 272,
+      "count_seen": 276,
       "file": "graph/query/overview.json",
       "methods": [
         "POST"
@@ -1333,7 +1357,7 @@
       "relative_path": "graph/queryGraphHealth"
     },
     {
-      "count_seen": 18,
+      "count_seen": 20,
       "file": "graph/saveTopoLayout.json",
       "methods": [
         "POST"
@@ -1345,7 +1369,7 @@
       "relative_path": "graph/saveTopoLayout"
     },
     {
-      "count_seen": 16,
+      "count_seen": 18,
       "file": "graph/saveTopoScale.json",
       "methods": [
         "POST"
@@ -1357,7 +1381,7 @@
       "relative_path": "graph/saveTopoScale"
     },
     {
-      "count_seen": 87,
+      "count_seen": 90,
       "file": "graph/suggestions.json",
       "methods": [
         "POST"
@@ -1393,7 +1417,7 @@
       "relative_path": "health/healthLevelStatistics"
     },
     {
-      "count_seen": 27,
+      "count_seen": 29,
       "file": "health/simpleTrace.json",
       "methods": [
         "POST"
@@ -1429,7 +1453,7 @@
       "relative_path": "instance/jvm/chart"
     },
     {
-      "count_seen": 1,
+      "count_seen": 2,
       "file": "rootCauseErrorList.json",
       "methods": [
         "POST"
@@ -1489,7 +1513,7 @@
       "relative_path": "setting/action/is/followed/20441"
     },
     {
-      "count_seen": 5,
+      "count_seen": 6,
       "file": "settings/search_filter/read.json",
       "methods": [
         "POST"
@@ -1501,7 +1525,7 @@
       "relative_path": "settings/search_filter/read"
     },
     {
-      "count_seen": 1,
+      "count_seen": 2,
       "file": "sqlErrorList.json",
       "methods": [
         "POST"
@@ -1657,7 +1681,7 @@
       "relative_path": "webaction/list/actionItemLists"
     },
     {
-      "count_seen": 16,
+      "count_seen": 17,
       "file": "webaction/list/actionList.json",
       "methods": [
         "GET",
@@ -1671,7 +1695,7 @@
       "relative_path": "webaction/list/actionList"
     },
     {
-      "count_seen": 22,
+      "count_seen": 23,
       "file": "webaction/list/actionList/health.json",
       "methods": [
         "POST"
@@ -1683,7 +1707,7 @@
       "relative_path": "webaction/list/actionList/health"
     },
     {
-      "count_seen": 2,
+      "count_seen": 3,
       "file": "webaction/list/backgroundList.json",
       "methods": [
         "POST"
@@ -1695,7 +1719,7 @@
       "relative_path": "webaction/list/backgroundList"
     },
     {
-      "count_seen": 8,
+      "count_seen": 10,
       "file": "webaction/list/interfaceList.json",
       "methods": [
         "GET",
@@ -1781,6 +1805,6 @@
       "relative_path": "webaction/threadAnalysisList"
     }
   ],
-  "generated_at": "2026-04-12T12:13:47+08:00",
-  "total_endpoint_paths": 148
+  "generated_at": "2026-04-12T12:51:37+08:00",
+  "total_endpoint_paths": 150
 }

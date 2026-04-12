@@ -1,15 +1,15 @@
 {
-  "count_seen": 1,
+  "count_seen": 2,
   "first_seen": "2026-04-12T12:12:47+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 1
+    "http://169.169.173.25:8080": 2
   },
-  "last_seen": "2026-04-12T12:12:47+08:00",
+  "last_seen": "2026-04-12T12:50:45+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -67,20 +67,34 @@
           }
         }
       ],
-      "count_seen": 1,
+      "count_seen": 2,
       "first_seen": "2026-04-12T12:12:47+08:00",
       "inference_basis": [
         "path=component/database/errorActionTraceList"
       ],
       "inferred_purpose": "Likely related to component/database/errorActionTraceList",
-      "last_seen": "2026-04-12T12:12:47+08:00",
+      "last_seen": "2026-04-12T12:50:45+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 1
+        "application/json": 2
       },
       "observed_metrics": [],
       "page_context_summary": {
         "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:45+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/database/errorActionTraceList",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
           {
             "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
             "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -97,7 +111,7 @@
           }
         ],
         "latest": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -106,12 +120,12 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_timestamp": "2026-04-12T12:50:45+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/component/database/errorActionTraceList",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         },
         "latest_non_empty": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -120,14 +134,14 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_timestamp": "2026-04-12T12:50:45+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/component/database/errorActionTraceList",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         }
       },
       "query_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -176,7 +190,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 1
+        "XHR": 2
       },
       "sample_requests": [
         {
@@ -219,6 +233,48 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-12T12:12:47+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/database/errorActionTraceList"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-12 12:50",
+            "errorName": "<REDACTED>",
+            "lang": "zh_CN",
+            "perOrError": "true",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "sqlErrorEnable": "true",
+            "timePeriod": "2880"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:45+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/database/errorActionTraceList",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:50:45+08:00",
           "url": "http://169.169.173.25:8080/server-api/component/database/errorActionTraceList"
         }
       ],
@@ -952,10 +1008,740 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "actionCount": 1,
+                  "actionGuid": "6c29c6e225ad7371",
+                  "actionId": 31874,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "actionTimestamp": 1775926800009,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "actionCount": 1,
+                  "actionGuid": "30c3bec6014e501c",
+                  "actionId": 31867,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "actionTimestamp": 1775926800098,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "691f51ff623c4e3e",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800150,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "d4b34e82ef1ac8f5",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400198,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "cac6f1826ec56951",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800528,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "2dca1c970921bd81",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400218,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "actionCount": 1,
+                  "actionGuid": "434445ceb920f202",
+                  "actionId": 31863,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "actionTimestamp": 1775926800486,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "48f7d32ff797f91f",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800554,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "b9dca658ac3cbdb6",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800541,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "actionCount": 1,
+                  "actionGuid": "12cbc22955e1b318",
+                  "actionId": 31746,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "actionTimestamp": 1775840400031,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "5af52cd6de251e24",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800639,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "962752f1071e2864",
+                  "actionId": 13278,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775959261803,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "7f97f1c85d84ddfd",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800194,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "actionCount": 1,
+                  "actionGuid": "ecf69638212f210d",
+                  "actionId": 31867,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "actionTimestamp": 1775926800513,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "actionCount": 1,
+                  "actionGuid": "dded54104005f104",
+                  "actionId": 31869,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "actionTimestamp": 1775926800460,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "actionCount": 1,
+                  "actionGuid": "558bac7149e8bac9",
+                  "actionId": 31749,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "actionTimestamp": 1775926800420,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "da72a41deba9a58c",
+                  "actionId": 13278,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775960726775,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "actionCount": 1,
+                  "actionGuid": "a8f065287af0ccb6",
+                  "actionId": 31747,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "actionTimestamp": 1775926800499,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "665483eb0decc184",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400132,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "actionCount": 1,
+                  "actionGuid": "ecbed3808a021eb3",
+                  "actionId": 31863,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "actionTimestamp": 1775926800080,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "408becf0c4bfe7fa",
+                  "actionId": 13278,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775960726926,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "71758605ce3a146f",
+                  "actionId": 13174,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775954638186,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "actionCount": 1,
+                  "actionGuid": "a60e36b2ef1c9d75",
+                  "actionId": 31909,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "actionTimestamp": 1775926800033,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "474525710f804a71",
+                  "actionId": 13278,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775960726844,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "actionCount": 1,
+                  "actionGuid": "e2648fb566b82b8c",
+                  "actionId": 31869,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "actionTimestamp": 1775926800039,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "actionCount": 1,
+                  "actionGuid": "5a7d5d8d1d2f4385",
+                  "actionId": 31870,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "actionTimestamp": 1775926800087,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "actionCount": 1,
+                  "actionGuid": "300c820769fd1755",
+                  "actionId": 31826,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "actionTimestamp": 1775926800017,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "c13a6d225e4c3eac",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800580,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "50c229d8ddc3ac69",
+                  "actionId": 13278,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775959653912,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "9d2ae9a8ba43d818",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400179,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "ef3b24389c8b0e35",
+                  "actionId": 13174,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775954638011,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "05a8c8a2c1fea945",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400210,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "actionCount": 1,
+                  "actionGuid": "420f5b6b71cedf59",
+                  "actionId": 31865,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_279",
+                  "actionTimestamp": 1775840400101,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "a2a82f2049cc2f2c",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800169,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "93f7074e1348f438",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800175,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "actionCount": 1,
+                  "actionGuid": "5955cf42f36918dc",
+                  "actionId": 31748,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "actionTimestamp": 1775840400068,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "e84d02381450a14c",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400192,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "9a2820bc826c6425",
+                  "actionId": 13278,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775959261739,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "ddecd6fa860ab39c",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400172,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "actionCount": 1,
+                  "actionGuid": "02f262f582559aa9",
+                  "actionId": 31826,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "actionTimestamp": 1775926800433,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "a19abe40c3871c91",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800568,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "0e6eec909376a7ec",
+                  "actionId": 13174,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775954638137,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "actionCount": 1,
+                  "actionGuid": "e9831316296cacec",
+                  "actionId": 31864,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_271",
+                  "actionTimestamp": 1775840400037,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "actionCount": 1,
+                  "actionGuid": "37ac038ad65a00c3",
+                  "actionId": 31749,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_265",
+                  "actionTimestamp": 1775840400009,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "996ec9c8ad64759b",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800123,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "actionCount": 1,
+                  "actionGuid": "a9bdf8211b668b02",
+                  "actionId": 31910,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "actionTimestamp": 1775926800057,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "7d13bd6860ffccf8",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800593,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "525d92eedd0241bb",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800156,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "36ef4c92233c2a89",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800187,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "534cf62c9487e71a",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800655,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "actionCount": 1,
+                  "actionGuid": "0189975f60154ea5",
+                  "actionId": 31747,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_277",
+                  "actionTimestamp": 1775840400089,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "c2b40b99da2c60e8",
+                  "actionId": 31736,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775926800129,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionCount": 1,
+                  "actionGuid": "9803ae99161263a7",
+                  "actionId": 13278,
+                  "actionName": "URI/grcv5/dwr/call/plaincall/dwrProductBusinessListService.findBusinessList.dwr",
+                  "actionTimestamp": 1775959261644,
+                  "actionType": "TX",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "actionCount": 1,
+                  "actionGuid": "0fbe719561a54418",
+                  "actionId": 31868,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_267",
+                  "actionTimestamp": 1775840400017,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "actionCount": 1,
+                  "actionGuid": "667a0e67dff37323",
+                  "actionId": 31825,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_275",
+                  "actionTimestamp": 1775840400075,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "actionCount": 1,
+                  "actionGuid": "089fb9a8aadec3a5",
+                  "actionId": 31746,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_269",
+                  "actionTimestamp": 1775926800447,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "actionCount": 1,
+                  "actionGuid": "b183f5d40926fe5f",
+                  "actionId": 31748,
+                  "actionName": "Job/DEFAULT/OVERDUE_REMINDJobDetail_273",
+                  "actionTimestamp": 1775926800473,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                },
+                {
+                  "actionAlias": "Job/DEFAULT/*",
+                  "actionCount": 1,
+                  "actionGuid": "ba37086ae2f98574",
+                  "actionId": 31734,
+                  "actionName": "Job/DEFAULT/*",
+                  "actionTimestamp": 1775840400126,
+                  "actionType": "BG",
+                  "apmData": null,
+                  "pureAlias": null,
+                  "respTimeMicro": 0.0
+                }
+              ],
+              "fastQuery": false,
+              "pageNumber": 1,
+              "pageSize": 100,
+              "totalElements": 58
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:50:28 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 1
+        "200": 2
       }
     }
   },

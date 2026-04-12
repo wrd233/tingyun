@@ -1,15 +1,15 @@
 {
-  "count_seen": 5,
+  "count_seen": 6,
   "first_seen": "2026-04-03T15:41:36+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 5
+    "http://169.169.173.25:8080": 6
   },
-  "last_seen": "2026-04-12T12:11:58+08:00",
+  "last_seen": "2026-04-12T12:50:09+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 5,
+          "count_seen": 6,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN",
@@ -29,21 +29,35 @@
           }
         }
       ],
-      "count_seen": 5,
+      "count_seen": 6,
       "first_seen": "2026-04-03T15:41:36+08:00",
       "inference_basis": [
         "path=settings/search_filter/read",
         "query params present"
       ],
       "inferred_purpose": "Likely related to settings/search_filter/read",
-      "last_seen": "2026-04-12T12:11:58+08:00",
+      "last_seen": "2026-04-12T12:50:09+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 5
+        "application/json": 6
       },
       "observed_metrics": [],
       "page_context_summary": {
         "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:09+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/settings/search_filter/read?lang=zh_CN",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
           {
             "captured_page_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
             "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
@@ -74,7 +88,7 @@
           }
         ],
         "latest": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
@@ -83,12 +97,12 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:11:58+08:00",
+          "request_timestamp": "2026-04-12T12:50:09+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/settings/search_filter/read?lang=zh_CN",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         },
         "latest_non_empty": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
@@ -97,14 +111,14 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:11:58+08:00",
+          "request_timestamp": "2026-04-12T12:50:09+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/settings/search_filter/read?lang=zh_CN",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         }
       },
       "query_variants": [
         {
-          "count_seen": 5,
+          "count_seen": 6,
           "dynamic_fields": [],
           "example": {
             "lang": "zh_CN"
@@ -145,7 +159,7 @@
         "Content-Type": "application/json"
       },
       "resource_types": {
-        "XHR": 5
+        "XHR": 6
       },
       "sample_requests": [
         {
@@ -307,7 +321,7 @@
         }
       ],
       "status_codes": {
-        "200": 5
+        "200": 6
       }
     }
   },

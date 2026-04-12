@@ -1,11 +1,11 @@
 {
   "capture": {
-    "captured_at": "2026-04-12T12:12:32+08:00",
+    "captured_at": "2026-04-12T12:50:40+08:00",
     "completeness_score": 322,
     "first_seen_at": "2026-04-12T12:12:32+08:00",
-    "last_seen_at": "2026-04-12T12:12:32+08:00",
+    "last_seen_at": "2026-04-12T12:50:40+08:00",
     "page_context": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -14,12 +14,26 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:32+08:00",
+      "request_timestamp": "2026-04-12T12:50:40+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "page_context_summary": {
       "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:50:40+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
         {
           "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -36,7 +50,7 @@
         }
       ],
       "latest": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
         "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -45,12 +59,12 @@
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-12T12:12:32+08:00",
+        "request_timestamp": "2026-04-12T12:50:40+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
         "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       },
       "latest_non_empty": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
         "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -59,21 +73,21 @@
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-12T12:12:32+08:00",
+        "request_timestamp": "2026-04-12T12:50:40+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
         "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       }
     },
     "raw_log_file": "Database/list/health/POST__variant__e6f547498465.json",
     "resource_type": "XHR",
-    "seen_count": 1,
+    "seen_count": 2,
     "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
-    "wall_time": 1775967152.866304
+    "wall_time": 1775969440.922279
   },
   "method": "POST",
   "metric": null,
   "page_context": {
-    "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+    "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
     "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
     "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
     "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -82,12 +96,26 @@
     "page_title": "Ting Yun",
     "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
     "request_method": "POST",
-    "request_timestamp": "2026-04-12T12:12:32+08:00",
+    "request_timestamp": "2026-04-12T12:50:40+08:00",
     "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
     "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
   },
   "page_context_summary": {
     "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:50:40+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
       {
         "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -104,7 +132,7 @@
       }
     ],
     "latest": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -113,12 +141,12 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:32+08:00",
+      "request_timestamp": "2026-04-12T12:50:40+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "latest_non_empty": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -127,7 +155,7 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:32+08:00",
+      "request_timestamp": "2026-04-12T12:50:40+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     }
@@ -139,7 +167,7 @@
       "bizSystemId": 1065,
       "componentType": "Database",
       "dataType": "Database",
-      "endTime": "2026-04-12 12:12",
+      "endTime": "2026-04-12 12:50",
       "healthComponentNames": [
         "MySQL/10.190.22.21:3306"
       ],
@@ -162,7 +190,7 @@
     "headers": {
       "Accept": "application/json, text/plain, */*",
       "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
-      "BuiltInRequestId": "d846ad9e-101c-73a7-06a7-6ea7351720b9",
+      "BuiltInRequestId": "716c7a15-2bb1-5b46-0e0e-640e6f12c0d6",
       "Content-Type": "application/json",
       "Referer": "http://169.169.173.25:8080/web/server/component/Database/list",
       "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
@@ -175,7 +203,7 @@
     },
     "host_base": "http://169.169.173.25:8080",
     "page_context": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/list",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/list",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/list",
@@ -184,7 +212,7 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:32+08:00",
+      "request_timestamp": "2026-04-12T12:50:40+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
@@ -195,7 +223,7 @@
     "query_normalized": {
       "lang": "zh_CN"
     },
-    "raw_post_data": "{\"componentType\":\"Database\",\"bizSystemId\":1065,\"endTime\":\"2026-04-12 12:12\",\"timePeriod\":2880,\"dataType\":\"Database\",\"healthComponentNames\":[\"MySQL/10.190.22.21:3306\"],\"lang\":\"zh_CN\"}",
+    "raw_post_data": "{\"componentType\":\"Database\",\"bizSystemId\":1065,\"endTime\":\"2026-04-12 12:50\",\"timePeriod\":2880,\"dataType\":\"Database\",\"healthComponentNames\":[\"MySQL/10.190.22.21:3306\"],\"lang\":\"zh_CN\"}",
     "url": "http://169.169.173.25:8080/server-api/Database/list/health?lang=zh_CN"
   },
   "response": {
@@ -312,7 +340,7 @@
       "Content-Encoding": "gzip",
       "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
       "Content-Type": "application/json",
-      "Date": "Sun, 12 Apr 2026 04:12:16 GMT",
+      "Date": "Sun, 12 Apr 2026 04:50:24 GMT",
       "Referrer-Policy": "strict-origin-when-cross-origin",
       "Server": "nginx",
       "Transfer-Encoding": "chunked",

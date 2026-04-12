@@ -1,15 +1,15 @@
 {
-  "count_seen": 1,
+  "count_seen": 2,
   "first_seen": "2026-04-12T12:12:47+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 1
+    "http://169.169.173.25:8080": 2
   },
-  "last_seen": "2026-04-12T12:12:47+08:00",
+  "last_seen": "2026-04-12T12:50:45+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -61,20 +61,34 @@
           }
         }
       ],
-      "count_seen": 1,
+      "count_seen": 2,
       "first_seen": "2026-04-12T12:12:47+08:00",
       "inference_basis": [
         "path=rootCauseErrorList"
       ],
       "inferred_purpose": "Likely related to rootCauseErrorList",
-      "last_seen": "2026-04-12T12:12:47+08:00",
+      "last_seen": "2026-04-12T12:50:45+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 1
+        "application/json": 2
       },
       "observed_metrics": [],
       "page_context_summary": {
         "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:45+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/rootCauseErrorList",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
           {
             "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
             "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -91,7 +105,7 @@
           }
         ],
         "latest": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -100,12 +114,12 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_timestamp": "2026-04-12T12:50:45+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/rootCauseErrorList",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         },
         "latest_non_empty": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -114,14 +128,14 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_timestamp": "2026-04-12T12:50:45+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/rootCauseErrorList",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         }
       },
       "query_variants": [
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -168,7 +182,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 1
+        "XHR": 2
       },
       "sample_requests": [
         {
@@ -209,6 +223,46 @@
           "query": {},
           "resource_type": "XHR",
           "seen_at": "2026-04-12T12:12:47+08:00",
+          "url": "http://169.169.173.25:8080/server-api/rootCauseErrorList"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-12 12:50",
+            "errorName": "<REDACTED>",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "2880"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:45+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/rootCauseErrorList",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:50:45+08:00",
           "url": "http://169.169.173.25:8080/server-api/rootCauseErrorList"
         }
       ],
@@ -307,10 +361,105 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "count": 24,
+                  "duration": 0,
+                  "errorRate": 41.38,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')%Y-%m-%d')' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 24,
+                  "duration": 0,
+                  "errorRate": 41.38,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '),'%Y-%m-%d')' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 2,
+                  "duration": 0,
+                  "errorRate": 3.45,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'h%' OR a.CONTRACT_SELF_CODE like '%hong'h%' ) AND ( a.CREATOR_ACCOUNT_AUTH = 'ZJ' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 2,
+                  "duration": 0,
+                  "errorRate": 3.45,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ha%' OR a.CONTRACT_SELF_CODE like '%hong'ha%' ) AND ( a.CREATOR_ACCOUNT_AUTH = '' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 2,
+                  "duration": 0,
+                  "errorRate": 3.45,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'hai%' OR a.CONTRACT_SELF_CODE like '%hong'hai%' ) AND ( a.CREATOR_ACCOUNT_AUTH =' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 1,
+                  "duration": 0,
+                  "errorRate": 1.72,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm%' OR a.CONTRACT_SELF_CODE like '%huan'm%' ) AND ( a.CREATOR_ACCOUNT_AUTH = 'ZJ' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 1,
+                  "duration": 0,
+                  "errorRate": 1.72,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'na%' OR a.CONTRACT_SELF_CODE like '%dong'na%' ) AND ( a.CREATOR_ACCOUNT_AUTH = '' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 1,
+                  "duration": 0,
+                  "errorRate": 1.72,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'n%' OR a.CONTRACT_SELF_CODE like '%dong'n%' ) AND ( a.CREATOR_ACCOUNT_AUTH = 'ZJ' at line *",
+                  "traceDetaileCount": 0
+                },
+                {
+                  "count": 1,
+                  "duration": 0,
+                  "errorRate": 1.72,
+                  "message": "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nan%' OR a.CONTRACT_SELF_CODE like '%dong'nan%' ) AND ( a.CREATOR_ACCOUNT_AUTH =' at line *",
+                  "traceDetaileCount": 0
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 9
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:50:28 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 1
+        "200": 2
       }
     }
   },

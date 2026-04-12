@@ -1,0 +1,1002 @@
+{
+  "capture": {
+    "captured_at": "2026-04-12T12:50:43+08:00",
+    "completeness_score": 623,
+    "first_seen_at": "2026-04-12T12:50:43+08:00",
+    "last_seen_at": "2026-04-12T12:50:43+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:50:43+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:50:43+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:50:43+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    },
+    "raw_log_file": "data/business/graph/updateGraphSettingList/POST__variant__3b89e3b2603e.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775969443.366083
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+    "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-12T12:50:43+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:50:43+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    }
+  },
+  "path": "/server-api/data/business/graph/updateGraphSettingList",
+  "relative_path": "data/business/graph/updateGraphSettingList",
+  "request": {
+    "body": {
+      "graphSettings": [
+        {
+          "id": 9517,
+          "xaxes": "73",
+          "yaxes": "230"
+        },
+        {
+          "id": 9516,
+          "xaxes": "68",
+          "yaxes": "4"
+        },
+        {
+          "id": 9519,
+          "xaxes": "278",
+          "yaxes": "4"
+        },
+        {
+          "id": 9521,
+          "xaxes": "488",
+          "yaxes": "4"
+        },
+        {
+          "id": 9520,
+          "xaxes": "1118",
+          "yaxes": "4"
+        },
+        {
+          "id": 9935,
+          "xaxes": "914.5138227706818",
+          "yaxes": "4"
+        },
+        {
+          "id": 10173,
+          "xaxes": "1134.1694819228853",
+          "yaxes": "4"
+        },
+        {
+          "id": 9523,
+          "xaxes": "2804.739681674176",
+          "yaxes": "4"
+        },
+        {
+          "id": 9524,
+          "xaxes": "1557.311318304407",
+          "yaxes": "4"
+        },
+        {
+          "id": 10176,
+          "xaxes": "1767.311318304407",
+          "yaxes": "4"
+        },
+        {
+          "id": 9956,
+          "xaxes": "1985.1511451034091",
+          "yaxes": "4"
+        },
+        {
+          "id": 9526,
+          "xaxes": "2202.9909719024113",
+          "yaxes": "4"
+        },
+        {
+          "id": 9527,
+          "xaxes": "4499.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": 9955,
+          "xaxes": "2631.8808017531715",
+          "yaxes": "4"
+        },
+        {
+          "id": 9528,
+          "xaxes": "2850.770631603931",
+          "yaxes": "4"
+        },
+        {
+          "id": 9529,
+          "xaxes": "6599.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": 9530,
+          "xaxes": "7019.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": 9532,
+          "xaxes": "7658.719045022529",
+          "yaxes": "4"
+        },
+        {
+          "id": 9965,
+          "xaxes": "3700.362487821879",
+          "yaxes": "4"
+        },
+        {
+          "id": 9531,
+          "xaxes": "3923.096180421348",
+          "yaxes": "4"
+        },
+        {
+          "id": 9535,
+          "xaxes": "9556.066404586703",
+          "yaxes": "4"
+        },
+        {
+          "id": 9533,
+          "xaxes": "9766.066404586703",
+          "yaxes": "4"
+        },
+        {
+          "id": 9536,
+          "xaxes": "4556.238016802869",
+          "yaxes": "4"
+        },
+        {
+          "id": 9534,
+          "xaxes": "4766.238016802869",
+          "yaxes": "4"
+        },
+        {
+          "id": 9538,
+          "xaxes": "4980.555863316227",
+          "yaxes": "4"
+        },
+        {
+          "id": 9537,
+          "xaxes": "5194.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": 10174,
+          "xaxes": "5404.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": 9541,
+          "xaxes": "5614.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": 10175,
+          "xaxes": "5824.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": 9551,
+          "xaxes": "6034.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": 9545,
+          "xaxes": "6246.37755335222",
+          "yaxes": "4"
+        },
+        {
+          "id": 10177,
+          "xaxes": "6476.185243449248",
+          "yaxes": "4"
+        },
+        {
+          "id": 10178,
+          "xaxes": "6704.489090023641",
+          "yaxes": "4"
+        },
+        {
+          "id": 10180,
+          "xaxes": "6922.328916822644",
+          "yaxes": "4"
+        },
+        {
+          "id": 9546,
+          "xaxes": "7140.168743621646",
+          "yaxes": "4"
+        },
+        {
+          "id": 10179,
+          "xaxes": "7368.472590196039",
+          "yaxes": "4"
+        },
+        {
+          "id": 9549,
+          "xaxes": "7596.776436770432",
+          "yaxes": "4"
+        },
+        {
+          "id": 9552,
+          "xaxes": "5781.174528365998",
+          "yaxes": "4"
+        },
+        {
+          "id": 9548,
+          "xaxes": "8016.776436770432",
+          "yaxes": "4"
+        },
+        {
+          "id": 9553,
+          "xaxes": "8226.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": 9561,
+          "xaxes": "8436.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": 10181,
+          "xaxes": "8646.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": 9554,
+          "xaxes": "8856.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": 9557,
+          "xaxes": "9066.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": 9556,
+          "xaxes": "9276.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": 9555,
+          "xaxes": "9490.734282673438",
+          "yaxes": "4"
+        },
+        {
+          "id": 9558,
+          "xaxes": "9704.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": 9559,
+          "xaxes": "9914.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": 9562,
+          "xaxes": "10124.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": 9565,
+          "xaxes": "10334.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": 9563,
+          "xaxes": "10544.692128576446",
+          "yaxes": "4"
+        }
+      ],
+      "lang": "zh_CN"
+    },
+    "body_kind": "json",
+    "body_normalized": {
+      "graphSettings": [
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "73",
+          "yaxes": "230"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "68",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "278",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "488",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1118",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "914.5138227706818",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1134.1694819228853",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2804.739681674176",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1557.311318304407",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1767.311318304407",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1985.1511451034091",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2202.9909719024113",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4499.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2631.8808017531715",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2850.770631603931",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6599.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7019.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7658.719045022529",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "3700.362487821879",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "3923.096180421348",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9556.066404586703",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9766.066404586703",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4556.238016802869",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4766.238016802869",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4980.555863316227",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5194.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5404.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5614.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5824.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6034.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6246.37755335222",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6476.185243449248",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6704.489090023641",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6922.328916822644",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7140.168743621646",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7368.472590196039",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7596.776436770432",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5781.174528365998",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8016.776436770432",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8226.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8436.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8646.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8856.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9066.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9276.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9490.734282673438",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9704.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9914.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "10124.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "10334.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "10544.692128576446",
+          "yaxes": "4"
+        }
+      ],
+      "lang": "zh_CN"
+    },
+    "content_type": "application/json",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "16d7e32e-fa12-dc7c-5b40-6fc5da823017",
+      "Content-Type": "application/json",
+      "Referer": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/json"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:50:43+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "path": "/server-api/data/business/graph/updateGraphSettingList",
+    "query": {
+      "lang": "zh_CN"
+    },
+    "query_normalized": {
+      "lang": "zh_CN"
+    },
+    "raw_post_data": "{\"graphSettings\":[{\"id\":9517,\"xaxes\":\"73\",\"yaxes\":\"230\"},{\"id\":9516,\"xaxes\":\"68\",\"yaxes\":\"4\"},{\"id\":9519,\"xaxes\":\"278\",\"yaxes\":\"4\"},{\"id\":9521,\"xaxes\":\"488\",\"yaxes\":\"4\"},{\"id\":9520,\"xaxes\":\"1118\",\"yaxes\":\"4\"},{\"id\":9935,\"xaxes\":\"914.5138227706818\",\"yaxes\":\"4\"},{\"id\":10173,\"xaxes\":\"1134.1694819228853\",\"yaxes\":\"4\"},{\"id\":9523,\"xaxes\":\"2804.739681674176\",\"yaxes\":\"4\"},{\"id\":9524,\"xaxes\":\"1557.311318304407\",\"yaxes\":\"4\"},{\"id\":10176,\"xaxes\":\"1767.311318304407\",\"yaxes\":\"4\"},{\"id\":9956,\"xaxes\":\"1985.1511451034091\",\"yaxes\":\"4\"},{\"id\":9526,\"xaxes\":\"2202.9909719024113\",\"yaxes\":\"4\"},{\"id\":9527,\"xaxes\":\"4499.423378851282\",\"yaxes\":\"4\"},{\"id\":9955,\"xaxes\":\"2631.8808017531715\",\"yaxes\":\"4\"},{\"id\":9528,\"xaxes\":\"2850.770631603931\",\"yaxes\":\"4\"},{\"id\":9529,\"xaxes\":\"6599.423378851282\",\"yaxes\":\"4\"},{\"id\":9530,\"xaxes\":\"7019.423378851282\",\"yaxes\":\"4\"},{\"id\":9532,\"xaxes\":\"7658.719045022529\",\"yaxes\":\"4\"},{\"id\":9965,\"xaxes\":\"3700.362487821879\",\"yaxes\":\"4\"},{\"id\":9531,\"xaxes\":\"3923.096180421348\",\"yaxes\":\"4\"},{\"id\":9535,\"xaxes\":\"9556.066404586703\",\"yaxes\":\"4\"},{\"id\":9533,\"xaxes\":\"9766.066404586703\",\"yaxes\":\"4\"},{\"id\":9536,\"xaxes\":\"4556.238016802869\",\"yaxes\":\"4\"},{\"id\":9534,\"xaxes\":\"4766.238016802869\",\"yaxes\":\"4\"},{\"id\":9538,\"xaxes\":\"4980.555863316227\",\"yaxes\":\"4\"},{\"id\":9537,\"xaxes\":\"5194.873709829585\",\"yaxes\":\"4\"},{\"id\":10174,\"xaxes\":\"5404.873709829585\",\"yaxes\":\"4\"},{\"id\":9541,\"xaxes\":\"5614.873709829585\",\"yaxes\":\"4\"},{\"id\":10175,\"xaxes\":\"5824.873709829585\",\"yaxes\":\"4\"},{\"id\":9551,\"xaxes\":\"6034.873709829585\",\"yaxes\":\"4\"},{\"id\":9545,\"xaxes\":\"6246.37755335222\",\"yaxes\":\"4\"},{\"id\":10177,\"xaxes\":\"6476.185243449248\",\"yaxes\":\"4\"},{\"id\":10178,\"xaxes\":\"6704.489090023641\",\"yaxes\":\"4\"},{\"id\":10180,\"xaxes\":\"6922.328916822644\",\"yaxes\":\"4\"},{\"id\":9546,\"xaxes\":\"7140.168743621646\",\"yaxes\":\"4\"},{\"id\":10179,\"xaxes\":\"7368.472590196039\",\"yaxes\":\"4\"},{\"id\":9549,\"xaxes\":\"7596.776436770432\",\"yaxes\":\"4\"},{\"id\":9552,\"xaxes\":\"5781.174528365998\",\"yaxes\":\"4\"},{\"id\":9548,\"xaxes\":\"8016.776436770432\",\"yaxes\":\"4\"},{\"id\":9553,\"xaxes\":\"8226.776436770433\",\"yaxes\":\"4\"},{\"id\":9561,\"xaxes\":\"8436.776436770433\",\"yaxes\":\"4\"},{\"id\":10181,\"xaxes\":\"8646.776436770433\",\"yaxes\":\"4\"},{\"id\":9554,\"xaxes\":\"8856.776436770433\",\"yaxes\":\"4\"},{\"id\":9557,\"xaxes\":\"9066.776436770433\",\"yaxes\":\"4\"},{\"id\":9556,\"xaxes\":\"9276.776436770433\",\"yaxes\":\"4\"},{\"id\":9555,\"xaxes\":\"9490.734282673438\",\"yaxes\":\"4\"},{\"id\":9558,\"xaxes\":\"9704.692128576446\",\"yaxes\":\"4\"},{\"id\":9559,\"xaxes\":\"9914.692128576446\",\"yaxes\":\"4\"},{\"id\":9562,\"xaxes\":\"10124.692128576446\",\"yaxes\":\"4\"},{\"id\":9565,\"xaxes\":\"10334.692128576446\",\"yaxes\":\"4\"},{\"id\":9563,\"xaxes\":\"10544.692128576446\",\"yaxes\":\"4\"}],\"lang\":\"zh_CN\"}",
+    "url": "http://169.169.173.25:8080/server-api/data/business/graph/updateGraphSettingList?lang=zh_CN"
+  },
+  "response": {
+    "body": {
+      "data": {
+        "message": "ok"
+      },
+      "status": 200
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "data": {
+        "message": "ok"
+      },
+      "status": 200
+    },
+    "encoded_data_length": 710,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Sun, 12 Apr 2026 04:50:26 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "graphSettings": [
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "73",
+          "yaxes": "230"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "68",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "278",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "488",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1118",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "914.5138227706818",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1134.1694819228853",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2804.739681674176",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1557.311318304407",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1767.311318304407",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "1985.1511451034091",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2202.9909719024113",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4499.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2631.8808017531715",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "2850.770631603931",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6599.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7019.423378851282",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7658.719045022529",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "3700.362487821879",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "3923.096180421348",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9556.066404586703",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9766.066404586703",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4556.238016802869",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4766.238016802869",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "4980.555863316227",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5194.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5404.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5614.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5824.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6034.873709829585",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6246.37755335222",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6476.185243449248",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6704.489090023641",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "6922.328916822644",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7140.168743621646",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7368.472590196039",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "7596.776436770432",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "5781.174528365998",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8016.776436770432",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8226.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8436.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8646.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "8856.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9066.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9276.776436770433",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9490.734282673438",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9704.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "9914.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "10124.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "10334.692128576446",
+          "yaxes": "4"
+        },
+        {
+          "id": "<DYNAMIC_NUMBER>",
+          "xaxes": "10544.692128576446",
+          "yaxes": "4"
+        }
+      ],
+      "lang": "zh_CN"
+    },
+    "method": "POST",
+    "query": {
+      "lang": "zh_CN"
+    },
+    "relative_path": "data/business/graph/updateGraphSettingList"
+  }
+}

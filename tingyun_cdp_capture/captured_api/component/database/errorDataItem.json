@@ -1,15 +1,15 @@
 {
-  "count_seen": 3,
+  "count_seen": 6,
   "first_seen": "2026-04-12T12:12:47+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 3
+    "http://169.169.173.25:8080": 6
   },
-  "last_seen": "2026-04-12T12:12:47+08:00",
+  "last_seen": "2026-04-12T12:50:45+08:00",
   "methods": {
     "POST": {
       "body_variants": [
         {
-          "count_seen": 2,
+          "count_seen": 4,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -64,7 +64,7 @@
           }
         },
         {
-          "count_seen": 1,
+          "count_seen": 2,
           "dynamic_fields": [
             "body.bizSystemId",
             "body.endTime",
@@ -118,20 +118,34 @@
           }
         }
       ],
-      "count_seen": 3,
+      "count_seen": 6,
       "first_seen": "2026-04-12T12:12:47+08:00",
       "inference_basis": [
         "path=component/database/errorDataItem"
       ],
       "inferred_purpose": "Likely related to component/database/errorDataItem",
-      "last_seen": "2026-04-12T12:12:47+08:00",
+      "last_seen": "2026-04-12T12:50:45+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 3
+        "application/json": 6
       },
       "observed_metrics": [],
       "page_context_summary": {
         "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:45+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/database/errorDataItem",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
           {
             "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
             "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -148,7 +162,7 @@
           }
         ],
         "latest": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -157,12 +171,12 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_timestamp": "2026-04-12T12:50:45+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/component/database/errorDataItem",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         },
         "latest_non_empty": {
-          "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
           "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -171,14 +185,14 @@
           "page_title": "Ting Yun",
           "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
           "request_method": "POST",
-          "request_timestamp": "2026-04-12T12:12:47+08:00",
+          "request_timestamp": "2026-04-12T12:50:45+08:00",
           "request_url": "http://169.169.173.25:8080/server-api/component/database/errorDataItem",
           "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
         }
       },
       "query_variants": [
         {
-          "count_seen": 3,
+          "count_seen": 6,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -226,7 +240,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 3
+        "XHR": 6
       },
       "sample_requests": [
         {
@@ -310,6 +324,47 @@
           "resource_type": "XHR",
           "seen_at": "2026-04-12T12:12:47+08:00",
           "url": "http://169.169.173.25:8080/server-api/component/database/errorDataItem"
+        },
+        {
+          "body": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "COMP",
+            "endTime": "2026-04-12 12:50",
+            "errorMode": "DatabaseException",
+            "errorName": "<REDACTED>",
+            "lang": "zh_CN",
+            "sortDirection": "DESC",
+            "sortField": "actionCount",
+            "timePeriod": "2880"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:45+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/component/database/errorDataItem",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:50:45+08:00",
+          "url": "http://169.169.173.25:8080/server-api/component/database/errorDataItem"
         }
       ],
       "sample_responses": [
@@ -345,10 +400,43 @@
           },
           "mime_type": "application/json",
           "status": 200
+        },
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [],
+              "fastQuery": false,
+              "pageNumber": 1,
+              "pageSize": 2147483647,
+              "totalElements": 0
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:50:28 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
         }
       ],
       "status_codes": {
-        "200": 3
+        "200": 6
       }
     }
   },

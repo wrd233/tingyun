@@ -1,0 +1,232 @@
+{
+  "count_seen": 1,
+  "first_seen": "2026-04-12T12:51:22+08:00",
+  "hosts_seen": {
+    "http://169.169.173.25:8080": 1
+  },
+  "last_seen": "2026-04-12T12:51:22+08:00",
+  "methods": {
+    "POST": {
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {
+            "lang": "zh_CN"
+          },
+          "key": "{\"lang\":\"zh_CN\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "lang"
+            ]
+          },
+          "normalized_example": {
+            "lang": "zh_CN"
+          }
+        }
+      ],
+      "count_seen": 1,
+      "first_seen": "2026-04-12T12:51:22+08:00",
+      "inference_basis": [
+        "path=error/smart/errorExport/List"
+      ],
+      "inferred_purpose": "Likely related to error",
+      "last_seen": "2026-04-12T12:51:22+08:00",
+      "method": "POST",
+      "mime_types": {
+        "application/json": 1
+      },
+      "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/error",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/error",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:51:22+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/List",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/error",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/error",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:51:22+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/List",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/error",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/error",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:51:22+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/List",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      },
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [],
+          "example": {},
+          "key": "{}",
+          "metadata": {
+            "keys": [],
+            "signature": []
+          },
+          "normalized_example": {}
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "lang": "zh_CN"
+        },
+        "dynamic_fields": [],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "sample_curl": "curl http://169.169.173.25:8080/server-api/error/smart/errorExport/List -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/x-www-form-urlencoded' --data-raw lang=zh_CN",
+        "url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/List"
+      },
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "resource_types": {
+        "XHR": 1
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "lang": "zh_CN"
+          },
+          "body_kind": "form",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/error",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/error",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:51:22+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/List",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {},
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:51:22+08:00",
+          "url": "http://169.169.173.25:8080/server-api/error/smart/errorExport/List"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": {
+            "code": 200,
+            "data": {
+              "content": [
+                {
+                  "agreementId": 2033,
+                  "bizSystemId": 1065,
+                  "bizSystemName": "集团法务",
+                  "columnFormat": "1,2,3,4,5,13,6,7,8,10",
+                  "ctime": 1775969464000,
+                  "cuser": 2,
+                  "endTime": 1775969460000,
+                  "excelName": "错误分析",
+                  "fileFormat": "CSV",
+                  "filterConditions": "[{\"count\":0,\"key\":\"应用\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":0,\"value\":\"全部\"},{\"count\":0,\"key\":\"实例\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":3,\"value\":\"全部\"}]",
+                  "id": "8aIkU_ANtaklal2kj-iwbA",
+                  "mtime": 1775969464000,
+                  "name": "错误分析",
+                  "startTime": 1775796660000,
+                  "status": 2,
+                  "title": "序号,开始出现时间,最后发生时间,持续时长,错误类型,错误名称,影响用户数,次数,发生频率,占比,应用"
+                },
+                {
+                  "agreementId": 2033,
+                  "bizSystemId": 1065,
+                  "bizSystemName": "集团法务",
+                  "columnFormat": "1,2,3,4,5,13,6,7,8,10",
+                  "ctime": 1775698107000,
+                  "cuser": 2,
+                  "endTime": 1774937460000,
+                  "excelName": "错误分析",
+                  "fileFormat": "CSV",
+                  "filterConditions": "[{\"count\":0,\"key\":\"应用\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":0,\"value\":\"全部\"},{\"count\":0,\"key\":\"实例\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":3,\"value\":\"全部\"}]",
+                  "id": "F9uJ8cl4yBLTMv1S15eInA",
+                  "mtime": 1775698107000,
+                  "name": "错误分析",
+                  "startTime": 1766211060000,
+                  "status": 2,
+                  "title": "序号,开始出现时间,最后发生时间,持续时长,错误类型,错误名称,影响用户数,次数,发生频率,占比,应用"
+                }
+              ],
+              "fastQuery": false,
+              "totalElements": 2
+            }
+          },
+          "body_capture_error": null,
+          "body_kind": "json",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Encoding": "gzip",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/json",
+            "Date": "Sun, 12 Apr 2026 04:51:05 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "Vary": "Accept-Encoding",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/json",
+          "status": 200
+        }
+      ],
+      "status_codes": {
+        "200": 1
+      }
+    }
+  },
+  "path": "/server-api/error/smart/errorExport/List",
+  "relative_path": "error/smart/errorExport/List"
+}

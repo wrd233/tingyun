@@ -1,13 +1,70 @@
 {
-  "count_seen": 5,
+  "count_seen": 7,
   "first_seen": "2026-04-03T20:02:20+08:00",
   "hosts_seen": {
-    "http://169.169.173.25:8080": 5
+    "http://169.169.173.25:8080": 7
   },
-  "last_seen": "2026-04-03T20:02:46+08:00",
+  "last_seen": "2026-04-12T12:51:15+08:00",
   "methods": {
     "POST": {
       "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.groupByActionId",
+            "body.groupByUserId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-10 12:51",
+            "bizSystemId": "1063",
+            "bizSystemName": "default",
+            "endTime": "2026-04-12 12:51",
+            "errorLevel": "ER",
+            "errorModes": "Uncaught Exception",
+            "errorNames": "b3JnLnNwcmluZ2ZyYW1ld29yay5qZGJjLkJhZFNxbEdyYW1tYXJFeGNlcHRpb24=,Y24uaHV0b29sLmNvcmUuaW8uSU9SdW50aW1lRXhjZXB0aW9u",
+            "groupByActionId": "false",
+            "groupByUserId": "true",
+            "lang": "zh_CN",
+            "localeOptionContent": "Last 2 days",
+            "timePeriod": "2880"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"default\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorModes\":\"Uncaught Exception\",\"errorNames\":\"b3JnLnNwcmluZ2ZyYW1ld29yay5qZGJjLkJhZFNxbEdyYW1tYXJFeGNlcHRpb24=,Y24uaHV0b29sLmNvcmUuaW8uSU9SdW50aW1lRXhjZXB0aW9u\",\"groupByActionId\":\"<DYNAMIC>\",\"groupByUserId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"Last 2 days\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorModes",
+              "errorNames",
+              "groupByActionId",
+              "groupByUserId",
+              "lang",
+              "localeOptionContent",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "default",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorModes": "Uncaught Exception",
+            "errorNames": "b3JnLnNwcmluZ2ZyYW1ld29yay5qZGJjLkJhZFNxbEdyYW1tYXJFeGNlcHRpb24=,Y24uaHV0b29sLmNvcmUuaW8uSU9SdW50aW1lRXhjZXB0aW9u",
+            "groupByActionId": "<DYNAMIC>",
+            "groupByUserId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "Last 2 days",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
         {
           "count_seen": 3,
           "dynamic_fields": [
@@ -62,6 +119,67 @@
             "groupByUserId": "<DYNAMIC>",
             "lang": "zh_CN",
             "localeOptionContent": "undefined",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.beginTime",
+            "body.bizSystemId",
+            "body.endTime",
+            "body.groupByActionId",
+            "body.groupByUserId",
+            "body.serviceGroupId",
+            "body.timePeriod"
+          ],
+          "example": {
+            "beginTime": "2026-04-10 12:51",
+            "bizSystemId": "1065",
+            "bizSystemName": "集团法务",
+            "endTime": "2026-04-12 12:51",
+            "errorLevel": "ER",
+            "errorModes": "Uncaught Exception,HTTP Error Code",
+            "errorNames": "b3JnLnNwcmluZ2ZyYW1ld29yay53ZWIudXRpbC5OZXN0ZWRTZXJ2bGV0RXhjZXB0aW9u,SFRUUCBFUlJPUiBDT0RFOiA0MDQ=,SFRUUCBFUlJPUiBDT0RFOiA0MTU=,b3JnLmFwYWNoZS5jYXRhbGluYS5jb25uZWN0b3IuQ2xpZW50QWJvcnRFeGNlcHRpb24=,SFRUUCBFUlJPUiBDT0RFOiA1MDA=,SFRUUCBFUlJPUiBDT0RFOiA0MDA=",
+            "groupByActionId": "false",
+            "groupByUserId": "true",
+            "lang": "zh_CN",
+            "localeOptionContent": "Last 2 days",
+            "serviceGroupId": "0",
+            "timePeriod": "2880"
+          },
+          "key": "{\"beginTime\":\"<DATETIME>\",\"bizSystemId\":\"<DYNAMIC>\",\"bizSystemName\":\"集团法务\",\"endTime\":\"<DATETIME>\",\"errorLevel\":\"ER\",\"errorModes\":\"Uncaught Exception,HTTP Error Code\",\"errorNames\":\"b3JnLnNwcmluZ2ZyYW1ld29yay53ZWIudXRpbC5OZXN0ZWRTZXJ2bGV0RXhjZXB0aW9u,SFRUUCBFUlJPUiBDT0RFOiA0MDQ=,SFRUUCBFUlJPUiBDT0RFOiA0MTU=,b3JnLmFwYWNoZS5jYXRhbGluYS5jb25uZWN0b3IuQ2xpZW50QWJvcnRFeGNlcHRpb24=,SFRUUCBFUlJPUiBDT0RFOiA1MDA=,SFRUUCBFUlJPUiBDT0RFOiA0MDA=\",\"groupByActionId\":\"<DYNAMIC>\",\"groupByUserId\":\"<DYNAMIC>\",\"lang\":\"zh_CN\",\"localeOptionContent\":\"Last 2 days\",\"serviceGroupId\":\"<DYNAMIC>\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "kind": "form",
+            "top_level_keys": [
+              "beginTime",
+              "bizSystemId",
+              "bizSystemName",
+              "endTime",
+              "errorLevel",
+              "errorModes",
+              "errorNames",
+              "groupByActionId",
+              "groupByUserId",
+              "lang",
+              "localeOptionContent",
+              "serviceGroupId",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "beginTime": "<DATETIME>",
+            "bizSystemId": "<DYNAMIC>",
+            "bizSystemName": "集团法务",
+            "endTime": "<DATETIME>",
+            "errorLevel": "ER",
+            "errorModes": "Uncaught Exception,HTTP Error Code",
+            "errorNames": "b3JnLnNwcmluZ2ZyYW1ld29yay53ZWIudXRpbC5OZXN0ZWRTZXJ2bGV0RXhjZXB0aW9u,SFRUUCBFUlJPUiBDT0RFOiA0MDQ=,SFRUUCBFUlJPUiBDT0RFOiA0MTU=,b3JnLmFwYWNoZS5jYXRhbGluYS5jb25uZWN0b3IuQ2xpZW50QWJvcnRFeGNlcHRpb24=,SFRUUCBFUlJPUiBDT0RFOiA1MDA=,SFRUUCBFUlJPUiBDT0RFOiA0MDA=",
+            "groupByActionId": "<DYNAMIC>",
+            "groupByUserId": "<DYNAMIC>",
+            "lang": "zh_CN",
+            "localeOptionContent": "Last 2 days",
+            "serviceGroupId": "<DYNAMIC>",
             "timePeriod": "<DYNAMIC>"
           }
         },
@@ -126,21 +244,67 @@
           }
         }
       ],
-      "count_seen": 5,
+      "count_seen": 7,
       "first_seen": "2026-04-03T20:02:20+08:00",
       "inference_basis": [
         "path=error/smart/errorUserData/list"
       ],
       "inferred_purpose": "Likely related to error / list",
-      "last_seen": "2026-04-03T20:02:46+08:00",
+      "last_seen": "2026-04-12T12:51:15+08:00",
       "method": "POST",
       "mime_types": {
-        "application/json": 5
+        "application/json": 7
       },
       "observed_metrics": [],
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/error",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/error",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:51:15+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorUserData/list",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/error",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/error",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:51:15+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorUserData/list",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/error",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/error",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:51:15+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorUserData/list",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      },
       "query_variants": [
         {
-          "count_seen": 5,
+          "count_seen": 7,
           "dynamic_fields": [],
           "example": {},
           "key": "{}",
@@ -190,7 +354,7 @@
         "Content-Type": "application/x-www-form-urlencoded"
       },
       "resource_types": {
-        "XHR": 5
+        "XHR": 7
       },
       "sample_requests": [
         {
@@ -372,7 +536,7 @@
         }
       ],
       "status_codes": {
-        "200": 5
+        "200": 7
       }
     }
   },

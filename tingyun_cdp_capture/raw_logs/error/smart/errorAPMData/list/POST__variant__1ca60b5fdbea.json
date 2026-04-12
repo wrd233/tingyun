@@ -1,0 +1,262 @@
+{
+  "capture": {
+    "captured_at": "2026-04-12T12:51:07+08:00",
+    "completeness_score": 234,
+    "first_seen_at": "2026-04-12T12:51:07+08:00",
+    "last_seen_at": "2026-04-12T12:51:07+08:00",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/error",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/error",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:51:07+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "page_context_summary": {
+      "candidates": [
+        {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/error",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/error",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:51:07+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      ],
+      "latest": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/error",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/error",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:51:07+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      "latest_non_empty": {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/error",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/error",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:51:07+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    },
+    "raw_log_file": "error/smart/errorAPMData/list/POST__variant__1ca60b5fdbea.json",
+    "resource_type": "XHR",
+    "seen_count": 1,
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "wall_time": 1775969467.138888
+  },
+  "method": "POST",
+  "metric": null,
+  "page_context": {
+    "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+    "document_url": "http://169.169.173.25:8080/web/server/error",
+    "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+    "frame_url": "http://169.169.173.25:8080/web/server/error",
+    "initiator_type": "script",
+    "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+    "page_title": "Ting Yun",
+    "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+    "request_method": "POST",
+    "request_timestamp": "2026-04-12T12:51:07+08:00",
+    "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+    "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+  },
+  "page_context_summary": {
+    "candidates": [
+      {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/error",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/error",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:51:07+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      }
+    ],
+    "latest": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/error",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/error",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:51:07+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "latest_non_empty": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/error",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/error",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:51:07+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    }
+  },
+  "path": "/server-api/error/smart/errorAPMData/list",
+  "relative_path": "error/smart/errorAPMData/list",
+  "request": {
+    "body": {
+      "beginTime": "2026-04-10 12:51",
+      "bizSystemId": "1063",
+      "bizSystemName": "default",
+      "dataItem": "true",
+      "endTime": "2026-04-12 12:51",
+      "errorLevel": "ER",
+      "errorModes": "Uncaught Exception",
+      "errorNames": "b3JnLnNwcmluZ2ZyYW1ld29yay5qZGJjLkJhZFNxbEdyYW1tYXJFeGNlcHRpb24=,Y24uaHV0b29sLmNvcmUuaW8uSU9SdW50aW1lRXhjZXB0aW9u",
+      "groupByActionId": "false",
+      "lang": "zh_CN",
+      "localeOptionContent": "Last 2 days",
+      "timePeriod": "2880"
+    },
+    "body_kind": "form",
+    "body_normalized": {
+      "beginTime": "<DATETIME>",
+      "bizSystemId": "<DYNAMIC>",
+      "bizSystemName": "default",
+      "dataItem": "true",
+      "endTime": "<DATETIME>",
+      "errorLevel": "ER",
+      "errorModes": "Uncaught Exception",
+      "errorNames": "b3JnLnNwcmluZ2ZyYW1ld29yay5qZGJjLkJhZFNxbEdyYW1tYXJFeGNlcHRpb24=,Y24uaHV0b29sLmNvcmUuaW8uSU9SdW50aW1lRXhjZXB0aW9u",
+      "groupByActionId": "<DYNAMIC>",
+      "lang": "zh_CN",
+      "localeOptionContent": "Last 2 days",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "content_type": "application/x-www-form-urlencoded",
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlYTY1YTljZS1kMGYxLTQ0ZmYtYWQ0OC1lODY3MDUwNWMxYzIiLCJpZCI6IjQ1MDliMzQ3LTMxNDUtNDdkYS05ZGZlLTE0MzZkMDhhYzA0MyIsIm5hbWUiOiI4MGU3ZjU4ZS02NjA3LTRkNzUtYmM4ZC0wMzRkMTgwMzQ0YTYiLCJjb2RlIjoiZTgzYmZiMzYtODZjNy00OWNlLTkyOTUtY2ZkZjliZGUyYmVkIiwiYWdyZWVtZW50SWQiOiI4YTY5NDc0NS04YjkzLTRiNWQtOGQ1My0yNmU3OGQwYzg5YjAiLCJ0eXBlIjoiN2EwZDdmZTItNWEwMS00N2I2LWFmZDQtMWE5ZDFkYjJkNTE2IiwicmlnaHRSYW5nZSI6Ijg2ZDNhM2UyLTUwMmMtNDA0Yi1hYzAwLWU5OGExNGE2ZGNmZCIsInJhbmRvbSI6IjhmYWIxODAzLWZiZjAtNDNkMi05MGQ0LTcxNWU5MjAwOTczYSJ9.EwIKFV7oML4YlbRXMLIw-Mpg2wGbvB1bbvygAjaYaI7K2cwQgzXIZTh4bhZj5JFtmcJcliomjzTPULPkaEz-pvd7XdU_RpjryXx7MxLxgaD95hR0Ibc09PzhdVn3wG3UivJlwfshUHjbJNcymoXfMbtV8Apmb-Ywt8ZOIV13Vupn9Bg6Fm5R1LvZOfP3TrmldXmlOpKBqhVaM-Drtjg2BgXQEw36rj5TQRoJ-03VeyFEDxiSEk_DwtCeDPUegmOe_-n_nzQqalpPOJH-mJeOJBQbA3NQW4O7HkdrY1DuhGbFtiSejMmn1Ln4R_5sCKWR9SEOv1898NPl_nqC3JKLMQ",
+      "BuiltInRequestId": "9d3f8cb2-3229-916d-fb33-fcc5ac90e9a9",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Referer": "http://169.169.173.25:8080/web/server/error",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36"
+    },
+    "headers_template": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer ${TOKEN}",
+      "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "host_base": "http://169.169.173.25:8080",
+    "page_context": {
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+      "document_url": "http://169.169.173.25:8080/web/server/error",
+      "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+      "frame_url": "http://169.169.173.25:8080/web/server/error",
+      "initiator_type": "script",
+      "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+      "page_title": "Ting Yun",
+      "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+      "request_method": "POST",
+      "request_timestamp": "2026-04-12T12:51:07+08:00",
+      "request_url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list",
+      "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+    },
+    "path": "/server-api/error/smart/errorAPMData/list",
+    "query": {},
+    "query_normalized": {},
+    "raw_post_data": "bizSystemId=1063&bizSystemName=default&timePeriod=2880&endTime=2026-04-12%2012:51&beginTime=2026-04-10%2012:51&localeOptionContent=Last%202%20days&errorLevel=ER&errorNames=b3JnLnNwcmluZ2ZyYW1ld29yay5qZGJjLkJhZFNxbEdyYW1tYXJFeGNlcHRpb24=,Y24uaHV0b29sLmNvcmUuaW8uSU9SdW50aW1lRXhjZXB0aW9u&errorModes=Uncaught%20Exception&groupByActionId=false&dataItem=true&lang=zh_CN",
+    "url": "http://169.169.173.25:8080/server-api/error/smart/errorAPMData/list"
+  },
+  "response": {
+    "body": {
+      "code": 200,
+      "data": {
+        "content": [],
+        "fastQuery": false,
+        "totalElements": 0
+      }
+    },
+    "body_capture_error": null,
+    "body_kind": "json",
+    "body_redacted": {
+      "code": 200,
+      "data": {
+        "content": [],
+        "fastQuery": false,
+        "totalElements": 0
+      }
+    },
+    "encoded_data_length": 739,
+    "error": null,
+    "headers": {
+      "Connection": "keep-alive",
+      "Content-Encoding": "gzip",
+      "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+      "Content-Type": "application/json",
+      "Date": "Sun, 12 Apr 2026 04:50:50 GMT",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Server": "nginx",
+      "Transfer-Encoding": "chunked",
+      "Vary": "Accept-Encoding",
+      "X-Content-Type-Options": "nosniff",
+      "X-Download-Options": "noopen",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-XSS-Protection": "1"
+    },
+    "mime_type": "application/json",
+    "status": 200
+  },
+  "signature": {
+    "body": {
+      "beginTime": "<DATETIME>",
+      "bizSystemId": "<DYNAMIC>",
+      "bizSystemName": "default",
+      "dataItem": "true",
+      "endTime": "<DATETIME>",
+      "errorLevel": "ER",
+      "errorModes": "Uncaught Exception",
+      "errorNames": "b3JnLnNwcmluZ2ZyYW1ld29yay5qZGJjLkJhZFNxbEdyYW1tYXJFeGNlcHRpb24=,Y24uaHV0b29sLmNvcmUuaW8uSU9SdW50aW1lRXhjZXB0aW9u",
+      "groupByActionId": "<DYNAMIC>",
+      "lang": "zh_CN",
+      "localeOptionContent": "Last 2 days",
+      "timePeriod": "<DYNAMIC>"
+    },
+    "method": "POST",
+    "query": {},
+    "relative_path": "error/smart/errorAPMData/list"
+  }
+}

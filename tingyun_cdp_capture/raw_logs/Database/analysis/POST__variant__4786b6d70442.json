@@ -3,7 +3,7 @@
     "captured_at": "2026-04-12T12:12:40+08:00",
     "completeness_score": 84613,
     "first_seen_at": "2026-04-12T12:12:40+08:00",
-    "last_seen_at": "2026-04-12T12:12:40+08:00",
+    "last_seen_at": "2026-04-12T12:50:46+08:00",
     "page_context": {
       "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -21,6 +21,20 @@
     "page_context_summary": {
       "candidates": [
         {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:50:46+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/Database/analysis",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        {
           "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
           "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
@@ -36,7 +50,7 @@
         }
       ],
       "latest": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
         "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -45,12 +59,12 @@
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-12T12:12:40+08:00",
+        "request_timestamp": "2026-04-12T12:50:46+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/Database/analysis",
         "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       },
       "latest_non_empty": {
-        "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
         "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
         "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -59,14 +73,14 @@
         "page_title": "Ting Yun",
         "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
         "request_method": "POST",
-        "request_timestamp": "2026-04-12T12:12:40+08:00",
+        "request_timestamp": "2026-04-12T12:50:46+08:00",
         "request_url": "http://169.169.173.25:8080/server-api/Database/analysis",
         "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
       }
     },
     "raw_log_file": "Database/analysis/POST__variant__4786b6d70442.json",
     "resource_type": "XHR",
-    "seen_count": 1,
+    "seen_count": 2,
     "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012",
     "wall_time": 1775967159.499275
   },
@@ -89,6 +103,20 @@
   "page_context_summary": {
     "candidates": [
       {
+        "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+        "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+        "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+        "initiator_type": "script",
+        "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+        "page_title": "Ting Yun",
+        "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+        "request_method": "POST",
+        "request_timestamp": "2026-04-12T12:50:46+08:00",
+        "request_url": "http://169.169.173.25:8080/server-api/Database/analysis",
+        "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+      },
+      {
         "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
         "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
         "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
@@ -104,7 +132,7 @@
       }
     ],
     "latest": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -113,12 +141,12 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:40+08:00",
+      "request_timestamp": "2026-04-12T12:50:46+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/Database/analysis",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     },
     "latest_non_empty": {
-      "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+      "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
       "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
       "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
       "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
@@ -127,7 +155,7 @@
       "page_title": "Ting Yun",
       "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
       "request_method": "POST",
-      "request_timestamp": "2026-04-12T12:12:40+08:00",
+      "request_timestamp": "2026-04-12T12:50:46+08:00",
       "request_url": "http://169.169.173.25:8080/server-api/Database/analysis",
       "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
     }
