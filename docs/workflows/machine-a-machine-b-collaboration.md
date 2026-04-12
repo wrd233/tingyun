@@ -1,5 +1,7 @@
 # Machine A / Machine B Collaboration
 
+顶层架构与协作主说明以 [project-overall-architecture-and-collaboration.md](/Users/wangrundong/work/mywork/docs/architecture/project-overall-architecture-and-collaboration.md) 为准；本文件只补充机器 A / 机器 B 的协作边界与落盘方式。
+
 ## 机器 A
 
 主要职责：

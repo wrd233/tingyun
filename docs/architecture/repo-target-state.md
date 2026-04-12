@@ -541,7 +541,8 @@ artifacts/monitored_systems/<system_key>/<batch_key>/reports/
 重构完成后，我希望至少存在以下几类架构文档：
 
 - `repo-target-state.md`：仓库目标状态总说明；
-- `three-main-projects.md`：capture / adapter / client 三大工程协作关系；
+- `project-overall-architecture-and-collaboration.md`：当前顶层架构与协作主文档；
+- `three-main-projects.md`：三大主工程协作的跳转页或补充索引；
 - `adapter-internal-boundaries.md`：adapter 内部目录与 usecases 职责边界；
 - `system-and-batch-semantics.md`：系统级与批次级语义说明；
 - `directory-responsibilities.md`：关键目录职责总表。
@@ -560,9 +561,9 @@ artifacts/monitored_systems/<system_key>/<batch_key>/reports/
 重构完成后，我希望至少存在以下几类报告文档：
 
 - `report-output-terms.md`：pack / writer input / export view / bundle / final report 的统一解释；
-- `report-material-structure.md`：对象主表、证据索引、writer input 的结构关系；
+- `final-deliverable-and-report-expression.md`：当前最终交付物形态与报告表达主文档；
 - `evidence-and-screenshot-guidelines.md`：证据、URL、截图占位规则；
-- `final-deliverable-shape.md`：最终交付物形态说明。
+- `final-deliverable-shape.md`：旧入口的跳转页。
 
 ### 11.6 目录级 README 或索引文件
 

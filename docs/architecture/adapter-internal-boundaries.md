@@ -1,5 +1,7 @@
 # Adapter Internal Boundaries
 
+本文件是 adapter 内部边界补充文档；上位设计以 [adapter-design-and-intermediate-artifacts.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-design-and-intermediate-artifacts.md) 为准。
+
 `tingyun_adapter/src/tingyun_adapter/` 继续按工程能力分层，但解释方式已经统一到“诊断中间层”语义，而不是简单接口镜像。
 
 ## 目录职责

@@ -1,7 +1,7 @@
 # Decisions
 
-`decisions/` 保存历史阶段交付和关键设计快照。
+`decisions/` 保存历史阶段交付、legacy 设计和关键设计快照。
 
 这些文档主要解释演进过程，不作为当前目录语义的唯一事实来源。
 
-如果历史文档里的旧路径、旧命名与当前仓库不一致，请以 `docs/architecture/`、`docs/workflows/`、`docs/reporting/` 中的现状说明为准。
+如果历史文档里的旧路径、旧命名与当前仓库不一致，请以三份当前主设计文档和 `docs/architecture/`、`docs/reporting/` 中的现状说明为准。

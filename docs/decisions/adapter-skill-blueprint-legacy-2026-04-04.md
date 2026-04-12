@@ -1,3 +1,7 @@
+# Legacy Notice
+
+**仅用于历史参考，不代表当前设计。当前主设计请以 [project-overall-architecture-and-collaboration.md](/Users/wangrundong/work/mywork/docs/architecture/project-overall-architecture-and-collaboration.md) 和 [adapter-design-and-intermediate-artifacts.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-design-and-intermediate-artifacts.md) 为准。**
+
 # 听云 Adapter + Skill 建设蓝图与 Adapter 设计文档
 
 生成时间：2026-04-04  

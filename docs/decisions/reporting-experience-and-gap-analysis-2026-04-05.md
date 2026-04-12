@@ -1,3 +1,7 @@
+# Legacy Notice
+
+**这是历史经验与阶段判断，当前主设计以 [final-deliverable-and-report-expression.md](/Users/wangrundong/work/mywork/docs/reporting/final-deliverable-and-report-expression.md) 为准。**
+
 # 听云巡检报告建设经验、能力缺口与后续思路
 
 生成时间：2026-04-05  

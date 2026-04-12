@@ -1,5 +1,7 @@
 # Report Output Terms
 
+本文件用于统一术语；当前定义以 [final-deliverable-and-report-expression.md](/Users/wangrundong/work/mywork/docs/reporting/final-deliverable-and-report-expression.md) 与 [adapter-design-and-intermediate-artifacts.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-design-and-intermediate-artifacts.md) 为准。
+
 仓库中的报告相关术语统一如下：
 
 1. `pack`

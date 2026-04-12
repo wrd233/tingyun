@@ -1,10 +1,14 @@
+# Legacy Notice
+
+**这不是当前主设计文档。当前 adapter 设计以 [adapter-design-and-intermediate-artifacts.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-design-and-intermediate-artifacts.md) 为准；本文件仅用于历史参考。**
+
 # 听云 Adapter 项目架构设计文档
 
 生成时间：2026-04-04  
 项目目录：`/Users/wangrundong/work/mywork/tingyun_adapter`  
 关联文档：
 
-- `docs/workflows/adapter-skill-blueprint.md`
+- `docs/decisions/adapter-skill-blueprint-legacy-2026-04-04.md`
 - `docs/workflows/capture-system-skeleton-diagnostic-playbook.md`
 - `knowledge/monitored_systems/bizsystem_1065/context/manual_context_and_component_mapping.md`
 - `docs/workflows/capture-api-analysis-priority.md`

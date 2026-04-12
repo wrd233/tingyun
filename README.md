@@ -78,19 +78,28 @@
 - `artifacts/`：当前或历史批次的本地运行产物，默认忽略
 - 主工程目录：只保留代码、最小运行入口、工程自身 README
 
-## 入口文档
+## 当前主设计入口
+
+- 项目整体架构与协作：[project-overall-architecture-and-collaboration.md](/Users/wangrundong/work/mywork/docs/architecture/project-overall-architecture-and-collaboration.md)
+- Adapter 设计思路与中间产物：[adapter-design-and-intermediate-artifacts.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-design-and-intermediate-artifacts.md)
+- 最终交付物形态与报告表达：[final-deliverable-and-report-expression.md](/Users/wangrundong/work/mywork/docs/reporting/final-deliverable-and-report-expression.md)
+
+补充文档：
 
 - 仓库目标状态：[repo-target-state.md](/Users/wangrundong/work/mywork/docs/architecture/repo-target-state.md)
-- 三大主工程协作：[three-main-projects.md](/Users/wangrundong/work/mywork/docs/architecture/three-main-projects.md)
 - 系统 / 批次语义：[system-and-batch-semantics.md](/Users/wangrundong/work/mywork/docs/architecture/system-and-batch-semantics.md)
 - 输出术语统一：[report-output-terms.md](/Users/wangrundong/work/mywork/docs/reporting/report-output-terms.md)
+
+历史设计与阶段文档统一放在 [docs/decisions/](/Users/wangrundong/work/mywork/docs/decisions/)，不作为当前事实来源。
 
 ## 最小阅读顺序
 
 1. 先读本文件了解顶层边界。
-2. 再读 [docs/architecture/three-main-projects.md](/Users/wangrundong/work/mywork/docs/architecture/three-main-projects.md) 看 capture / adapter / client 主链路。
-3. 如果要接手具体系统，读 `knowledge/monitored_systems/<system_key>/`。
-4. 如果要接手某次诊断，读 `artifacts/monitored_systems/<system_key>/<batch_key>/` 或对应 `samples/`。
+2. 再读 [project-overall-architecture-and-collaboration.md](/Users/wangrundong/work/mywork/docs/architecture/project-overall-architecture-and-collaboration.md) 看 capture / adapter / client 主链路。
+3. 如果要接手 adapter 设计，读 [adapter-design-and-intermediate-artifacts.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-design-and-intermediate-artifacts.md)。
+4. 如果要接手报告交付，读 [final-deliverable-and-report-expression.md](/Users/wangrundong/work/mywork/docs/reporting/final-deliverable-and-report-expression.md)。
+5. 如果要接手具体系统，读 `knowledge/monitored_systems/<system_key>/`。
+6. 如果要接手某次诊断，读 `artifacts/monitored_systems/<system_key>/<batch_key>/` 或对应 `samples/`。
 
 ## 配置文件
 
