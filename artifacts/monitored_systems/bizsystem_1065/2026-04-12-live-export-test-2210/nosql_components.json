@@ -1,0 +1,11 @@
+[
+  {
+    "component_type": "NoSQL",
+    "component_name": "10.190.22.20:6379/1",
+    "component_subtype": "Redis",
+    "source_component_key": "nosql_redis_10_190_22_20_6379_1",
+    "source_component_name": "10.190.22.20:6379/1",
+    "source_component_subtype": "Redis",
+    "discovery_mode": "manual:component_pack_probe"
+  }
+]

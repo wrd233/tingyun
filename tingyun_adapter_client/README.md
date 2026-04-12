@@ -120,6 +120,28 @@ diagnostics/
 └── 03_evidence_indexes/
 ```
 
+如果要先把 SQL / NoSQL 原始导出按组件落到 `00_raw_exports/`，可以先运行：
+
+```bash
+cd /Users/wangrundong/work/mywork/tingyun_adapter_client
+PYTHONPATH=./src python3 -m tingyun_adapter_client.cli export-component-analysis-raw \
+  --diagnostics-dir /Users/wangrundong/work/mywork/artifacts/monitored_systems/<system_key>/<batch_key>/diagnostics \
+  --biz-system-id 1065 \
+  --end-time '2026-04-12 22:15' \
+  --period-minutes 2880 \
+  --source-mode live
+```
+
+默认会优先通过 `database_component_pack` / `nosql_component_pack` 自动发现一个主组件，再调用现有 `data_export_pack` 落出：
+
+- `00_raw_exports/sql_database/<db_key>/component_analysis_export_database__SQL_.xls`
+- `00_raw_exports/nosql/<component_key>/component_analysis_export_nosql__SQL_.xls`
+
+如果你已经拿到了明确组件清单，也可以改用：
+
+- `--database-components-file <database_components.json>`
+- `--nosql-components-file <nosql_components.json>`
+
 推荐使用现有总 CLI：
 
 ```bash

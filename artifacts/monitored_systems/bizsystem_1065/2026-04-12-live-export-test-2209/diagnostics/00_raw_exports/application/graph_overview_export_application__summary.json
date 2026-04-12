@@ -1,0 +1,573 @@
+{
+  "case_key": "graph_overview_export_application",
+  "system_key": "bizsystem_1065",
+  "batch_key": "2026-04-12-live-export-test-2209",
+  "selected_export": {
+    "export_key": "graph_overview_export",
+    "label": "概览图表导出",
+    "category": "graph",
+    "execution_mode": "direct_download",
+    "parameter_schema": [
+      {
+        "name": "metric",
+        "location": "query+body",
+        "type": "string",
+        "required": true,
+        "description": "导出指标，可为 application_overview 或 request_overview",
+        "default": "request_overview",
+        "default_from_context": null,
+        "resolved_default": "request_overview"
+      },
+      {
+        "name": "endTime",
+        "location": "body",
+        "type": "string",
+        "required": true,
+        "description": "结束时间",
+        "default": null,
+        "default_from_context": "end_time",
+        "resolved_default": "2026-04-12 22:09"
+      },
+      {
+        "name": "timePeriod",
+        "location": "body",
+        "type": "integer",
+        "required": true,
+        "description": "统计周期，单位分钟",
+        "default": null,
+        "default_from_context": "period_minutes",
+        "resolved_default": 30
+      },
+      {
+        "name": "labels",
+        "location": "body",
+        "type": "object",
+        "required": false,
+        "description": "图表标签条件，支持 systemIds / actionTypes / technology / health / problems",
+        "default": {},
+        "default_from_context": null,
+        "resolved_default": {}
+      },
+      {
+        "name": "zoomTime",
+        "location": "body",
+        "type": "boolean",
+        "required": false,
+        "description": "是否放大时间窗",
+        "default": true,
+        "default_from_context": null,
+        "resolved_default": true
+      }
+    ],
+    "parameter_overrides": {
+      "metric": "application_overview"
+    },
+    "resolved_request": {
+      "method": "POST",
+      "path": "/server-api/graph/download/overview",
+      "query": {
+        "application_overview": ""
+      },
+      "body": {
+        "endTime": "2026-04-12 22:09",
+        "labels": {
+          "systemIds": [
+            "1065"
+          ]
+        },
+        "metric": "application_overview",
+        "timePeriod": 30,
+        "zoomTime": true
+      },
+      "content_type": "application/json",
+      "required_headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "Content-Type": "application/json"
+      }
+    },
+    "suggested_filename": "graph_overview_export_application_overview_2026_04_12_22_09.bin",
+    "captured_support": {
+      "captured": true,
+      "count_seen": 4,
+      "mime_types": {
+        "application/octet-stream": 4
+      },
+      "inferred_purpose": "Likely used to query application overview related data",
+      "inference_basis": [
+        "body.metric=application_overview",
+        "body.labels present",
+        "time range fields present"
+      ],
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "Content-Type": "application/json"
+      },
+      "query_variants": [
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "application_overview": ""
+          },
+          "key": "{\"application_overview\":\"\"}",
+          "metadata": {
+            "keys": [
+              "application_overview"
+            ],
+            "signature": [
+              "application_overview"
+            ]
+          },
+          "normalized_example": {
+            "application_overview": ""
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [],
+          "example": {
+            "request_overview": ""
+          },
+          "key": "{\"request_overview\":\"\"}",
+          "metadata": {
+            "keys": [
+              "request_overview"
+            ],
+            "signature": [
+              "request_overview"
+            ]
+          },
+          "normalized_example": {
+            "request_overview": ""
+          }
+        }
+      ],
+      "body_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.systemIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-12 12:11",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "systemIds": [
+                "1065"
+              ]
+            },
+            "metric": "request_overview",
+            "timePeriod": 2880
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"TX,IF\"],\"systemIds\":[\"<DYNAMIC>\"]},\"metric\":\"request_overview\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "metric",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "systemIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "metric": "request_overview",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-12 12:50",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "metric": "request_overview",
+            "timePeriod": 2880
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"actionTypes\":[\"TX,IF\"]},\"metric\":\"request_overview\",\"timePeriod\":\"<DYNAMIC_NUMBER>\"}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "metric",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ]
+            },
+            "metric": "request_overview",
+            "timePeriod": "<DYNAMIC_NUMBER>"
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-12 12:50",
+            "labels": {
+              "health": [],
+              "problems": [],
+              "technology": []
+            },
+            "metric": "application_overview",
+            "timePeriod": 2880,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"health\":[],\"problems\":[],\"technology\":[]},\"metric\":\"application_overview\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "health": [],
+              "problems": [],
+              "technology": []
+            },
+            "metric": "application_overview",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        },
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "body.endTime",
+            "body.labels.systemIds[0]",
+            "body.timePeriod"
+          ],
+          "example": {
+            "endTime": "2026-04-12 12:11",
+            "labels": {
+              "systemIds": [
+                "1065"
+              ]
+            },
+            "metric": "application_overview",
+            "timePeriod": 2880,
+            "zoomTime": true
+          },
+          "key": "{\"endTime\":\"<DATETIME>\",\"labels\":{\"systemIds\":[\"<DYNAMIC>\"]},\"metric\":\"application_overview\",\"timePeriod\":\"<DYNAMIC_NUMBER>\",\"zoomTime\":true}",
+          "metadata": {
+            "kind": "json",
+            "top_level_keys": [
+              "endTime",
+              "labels",
+              "metric",
+              "timePeriod",
+              "zoomTime"
+            ]
+          },
+          "normalized_example": {
+            "endTime": "<DATETIME>",
+            "labels": {
+              "systemIds": [
+                "<DYNAMIC>"
+              ]
+            },
+            "metric": "application_overview",
+            "timePeriod": "<DYNAMIC_NUMBER>",
+            "zoomTime": true
+          }
+        }
+      ],
+      "replay": {
+        "body_template": {
+          "endTime": "2026-04-12 12:11",
+          "labels": {
+            "systemIds": [
+              "1065"
+            ]
+          },
+          "metric": "application_overview",
+          "timePeriod": 2880,
+          "zoomTime": true
+        },
+        "dynamic_fields": [
+          "body.endTime",
+          "body.labels.systemIds[0]",
+          "body.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/graph/download/overview?application_overview' -X POST -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'Content-Type: application/json' --data-raw '{\"endTime\":\"2026-04-12 12:11\",\"labels\":{\"systemIds\":[\"1065\"]},\"metric\":\"application_overview\",\"timePeriod\":2880,\"zoomTime\":true}'",
+        "url": "http://169.169.173.25:8080/server-api/graph/download/overview?application_overview"
+      },
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:22+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/download/overview?application_overview",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:50:18+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/download/overview?request_overview",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+            "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:03+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/download/overview?request_overview",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:50:22+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/download/overview?application_overview",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/application/menuList",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/application/menuList",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "POST",
+          "request_timestamp": "2026-04-12T12:50:22+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/graph/download/overview?application_overview",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      },
+      "sample_requests": [
+        {
+          "body": {
+            "endTime": "2026-04-12 12:11",
+            "labels": {
+              "systemIds": [
+                "1065"
+              ]
+            },
+            "metric": "application_overview",
+            "timePeriod": 2880,
+            "zoomTime": true
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "Content-Type": "application/json"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/application/menuList?systemIds=1065",
+            "document_url": "http://169.169.173.25:8080/web/server/application/menuList?systemIds=1065",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/application/menuList?systemIds=1065",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:11:38+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/download/overview?application_overview",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {
+            "application_overview": ""
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:11:38+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/download/overview?application_overview"
+        },
+        {
+          "body": {
+            "endTime": "2026-04-12 12:11",
+            "labels": {
+              "actionTypes": [
+                "TX,IF"
+              ],
+              "systemIds": [
+                "1065"
+              ]
+            },
+            "metric": "request_overview",
+            "timePeriod": 2880
+          },
+          "body_kind": "json",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "Content-Type": "application/json"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+            "document_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/request/list?actionTypes=TX%3BIF&systemIds=1065",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "POST",
+            "request_timestamp": "2026-04-12T12:12:03+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/graph/download/overview?request_overview",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {
+            "request_overview": ""
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:12:03+08:00",
+          "url": "http://169.169.173.25:8080/server-api/graph/download/overview?request_overview"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": null,
+          "body_capture_error": "skip_by_mime_type:application/octet-stream",
+          "body_kind": "none",
+          "error": null,
+          "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Disposition",
+            "Connection": "keep-alive",
+            "Content-Disposition": "attachment;  filename=application_overview-1775967081516.csv",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/octet-stream;charset=utf-8",
+            "Date": "Sun, 12 Apr 2026 04:11:21 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/octet-stream",
+          "status": 200
+        }
+      ]
+    }
+  },
+  "execution": {
+    "requested": true,
+    "executed": true,
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/octet-stream",
+    "byte_size": 460,
+    "suggested_filename": "application_overview-1776003044736.csv",
+    "sha1": "01533b42039dbeb2961e2b31df39eddb9d1b8117",
+    "headers": {
+      "Server": "nginx",
+      "Date": "Sun, 12 Apr 2026 14:10:44 GMT",
+      "Content-Type": "application/octet-stream;charset=utf-8",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Access-Control-Expose-Headers": "Content-Disposition",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Disposition": "attachment;  filename=application_overview-1776003044736.csv",
+      "Content-Security-Policy": "upgrade-insecure-requests;content *;img-src * ",
+      "X-Content-Type-Options": "nosniff",
+      "X-XSS-Protection": "1",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-Download-Options": "noopen",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "content_included": true,
+    "content_base64": "77u/IuWBpeW6t+W6piIsIuW6lOeUqOWQjeensCIsIkFwZGV4Iiwi6K+E5YiGIiwicmVzcG9uc2VQNTAiLCLlkJ7lkJDnjocgKC9zKSIsIuivt+axguaVsCIsIumUmeivr+eOhyglKSIsIumUmeivr+asoeaVsCIsIuaFouasoeaVsCIKIuato+W4uCIsImZhd3Vvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QubG9hZGVyLldhckxhdW5jaGVyIiwiMC45OTQ3MDE5ODY3NTQ5NjY5IiwiMTAwIiwiMy40NzY4NzY5MzQ5ODQ1MjAzIiwiMC40MiIsIjc1NSIsIjAuMjYiLCIyIiwiMSIKIuato+W4uCIsIm9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC5sb2FkZXIuV2FyTGF1bmNoZXIiLCIwLjk4OTgwNzgwNDMwOTg0MjciLCIxMDAiLCI0LjAwNDgyNDcxNjcxMzg4MSIsIjAuOTUiLCIxNzE3IiwiMC4zNSIsIjYiLCI0Igoi5q2j5bi4IiwiZmF3dWNuLmtla2luZy5TZXJ2ZXJNYWluIiwiIiwiIiwiIiwiIiwiMCIsIiIsIiIsIjAiCg=="
+  },
+  "diagnostics": {
+    "available_export_count": 6,
+    "direct_download_count": 4,
+    "task_export_count": 2,
+    "captured_export_count": 6,
+    "selected_export_kind": "graph_overview_export"
+  },
+  "generated_at": "2026-04-12T22:11:01+08:00",
+  "context": {
+    "base_url": "http://169.169.173.25:8080",
+    "biz_system_id": 1065,
+    "time_window": {
+      "end_time": "2026-04-12 22:09",
+      "period_minutes": 30
+    },
+    "auth": {
+      "token": "eyJhbG...orIA",
+      "token_env": "TINGYUN_TOKEN",
+      "token_present": true
+    },
+    "lang": "zh_CN",
+    "timezone": "Asia/Shanghai"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "component_type": "Database",
+    "component_name": "10.190.22.21:3306",
+    "component_subtype": "MySQL",
+    "source_component_key": "db_mysql_10_190_22_21_3306",
+    "source_component_name": "10.190.22.21:3306",
+    "source_component_subtype": "MySQL",
+    "source_db_key": "db_mysql_10_190_22_21_3306",
+    "source_db_name": "10.190.22.21:3306",
+    "schemas": ["bpmapp_hg", "bpmou_hg", "bpmdef_hg"],
+    "discovery_mode": "manual:user_reference"
+  }
+]

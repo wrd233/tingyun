@@ -1,0 +1,23 @@
+{
+  "system_key": "bizsystem_1065",
+  "batch_key": "2026-04-12-live-export-test-2210",
+  "diagnostics_dir": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics",
+  "outputs": [
+    "application_master.csv",
+    "request_master.csv",
+    "interface_cluster_master.csv",
+    "sql_master.csv",
+    "nosql_master.csv",
+    "request_evidence_index.csv",
+    "sql_evidence_index.csv"
+  ],
+  "row_counts": {
+    "application_master": 0,
+    "request_master": 11,
+    "interface_cluster_master": 0,
+    "sql_master": 20,
+    "nosql_master": 2,
+    "request_evidence_index": 11,
+    "sql_evidence_index": 20
+  }
+}

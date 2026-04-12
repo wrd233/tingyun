@@ -1,0 +1,579 @@
+{
+  "case_key": "component_analysis_export_nosql",
+  "biz_system_id": 1065,
+  "component_type": "NoSQL",
+  "source_component_key": "nosql_redis_10_190_22_20_6379_1",
+  "source_component_name": "10.190.22.20:6379/1",
+  "source_component_subtype": "Redis",
+  "source_db_key": "",
+  "source_db_name": "",
+  "schemas": [],
+  "discovery_mode": "manual:component_pack_probe",
+  "component_pack_summary": {},
+  "selected_export": {
+    "export_key": "component_analysis_export",
+    "label": "组件操作分析导出",
+    "category": "component",
+    "execution_mode": "direct_download",
+    "parameter_schema": [
+      {
+        "name": "componentType",
+        "location": "query",
+        "type": "string",
+        "required": true,
+        "description": "组件类型，可为 Database 或 NoSQL",
+        "default": "Database",
+        "default_from_context": null,
+        "resolved_default": "Database"
+      },
+      {
+        "name": "bizSystemId",
+        "location": "query",
+        "type": "integer",
+        "required": true,
+        "description": "业务系统 ID",
+        "default": null,
+        "default_from_context": "biz_system_id",
+        "resolved_default": 1065
+      },
+      {
+        "name": "endTime",
+        "location": "query",
+        "type": "string",
+        "required": true,
+        "description": "结束时间",
+        "default": null,
+        "default_from_context": "end_time",
+        "resolved_default": "2026-04-12 22:15"
+      },
+      {
+        "name": "timePeriod",
+        "location": "query",
+        "type": "integer",
+        "required": true,
+        "description": "统计周期，单位分钟",
+        "default": null,
+        "default_from_context": "period_minutes",
+        "resolved_default": 2880
+      },
+      {
+        "name": "dataType",
+        "location": "query",
+        "type": "string",
+        "required": false,
+        "description": "数据层级，通常为 OP",
+        "default": "OP",
+        "default_from_context": null,
+        "resolved_default": "OP"
+      },
+      {
+        "name": "componentName",
+        "location": "query",
+        "type": "string",
+        "required": true,
+        "description": "组件名，如数据库地址或 Redis 地址",
+        "default": null,
+        "default_from_context": null,
+        "resolved_default": null
+      },
+      {
+        "name": "componentSubtype",
+        "location": "query",
+        "type": "string",
+        "required": true,
+        "description": "组件子类型，如 MySQL/Redis",
+        "default": null,
+        "default_from_context": null,
+        "resolved_default": null
+      },
+      {
+        "name": "pageSize",
+        "location": "query",
+        "type": "integer",
+        "required": false,
+        "description": "导出分页大小",
+        "default": 10000,
+        "default_from_context": null,
+        "resolved_default": 10000
+      },
+      {
+        "name": "pageNumber",
+        "location": "query",
+        "type": "integer",
+        "required": false,
+        "description": "导出页码",
+        "default": 1,
+        "default_from_context": null,
+        "resolved_default": 1
+      },
+      {
+        "name": "limit",
+        "location": "query",
+        "type": "boolean",
+        "required": false,
+        "description": "是否启用分页限制",
+        "default": true,
+        "default_from_context": null,
+        "resolved_default": true
+      },
+      {
+        "name": "sortField",
+        "location": "query",
+        "type": "string",
+        "required": false,
+        "description": "排序字段",
+        "default": "respTime",
+        "default_from_context": null,
+        "resolved_default": "respTime"
+      },
+      {
+        "name": "sortDirection",
+        "location": "query",
+        "type": "string",
+        "required": false,
+        "description": "排序方向",
+        "default": "DESC",
+        "default_from_context": null,
+        "resolved_default": "DESC"
+      }
+    ],
+    "parameter_overrides": {
+      "dataType": "OP",
+      "pageSize": 10000,
+      "pageNumber": 1,
+      "limit": true,
+      "sortField": "respTime",
+      "sortDirection": "DESC",
+      "componentType": "NoSQL",
+      "componentName": "10.190.22.20:6379/1",
+      "componentSubtype": "Redis"
+    },
+    "resolved_request": {
+      "method": "GET",
+      "path": "/server-api/Database/analysis/download",
+      "query": {
+        "componentType": "NoSQL",
+        "bizSystemId": 1065,
+        "endTime": "2026-04-12 22:15",
+        "timePeriod": 2880,
+        "dataType": "OP",
+        "componentName": "10.190.22.20:6379/1",
+        "componentSubtype": "Redis",
+        "pageSize": 10000,
+        "pageNumber": 1,
+        "limit": "true",
+        "sortField": "respTime",
+        "sortDirection": "DESC"
+      },
+      "body": null,
+      "content_type": "application/json",
+      "required_headers": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      }
+    },
+    "suggested_filename": "component_analysis_export_NoSQL_Redis_2026_04_12_22_15.xls",
+    "captured_support": {
+      "captured": true,
+      "count_seen": 3,
+      "mime_types": {
+        "application/vnd.ms-excel": 3
+      },
+      "inferred_purpose": "Likely related to Database/analysis/download",
+      "inference_basis": [
+        "path=Database/analysis/download",
+        "query params present"
+      ],
+      "request_headers_template": {
+        "Accept": "application/json, text/plain, */*",
+        "Authorization": "Bearer ${TOKEN}",
+        "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+        "Content-Type": "application/json"
+      },
+      "query_variants": [
+        {
+          "count_seen": 1,
+          "dynamic_fields": [
+            "query.bizSystemId",
+            "query.endTime",
+            "query.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "2026-04-12 12:50",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "10000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "2880"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.20:6379/5\",\"componentSubtype\":\"Redis\",\"componentType\":\"NoSQL\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"limit\":\"true\",\"pageNumber\":\"1\",\"pageSize\":\"10000\",\"sortDirection\":\"DESC\",\"sortField\":\"respTime\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "limit",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ],
+            "signature": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "limit",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.20:6379/5",
+            "componentSubtype": "Redis",
+            "componentType": "NoSQL",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "10000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "<DYNAMIC>"
+          }
+        },
+        {
+          "count_seen": 2,
+          "dynamic_fields": [
+            "query.bizSystemId",
+            "query.endTime",
+            "query.timePeriod"
+          ],
+          "example": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-12 12:12",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "10000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "2880"
+          },
+          "key": "{\"bizSystemId\":\"<DYNAMIC>\",\"componentName\":\"10.190.22.21:3306\",\"componentSubtype\":\"MySQL\",\"componentType\":\"Database\",\"dataType\":\"OP\",\"endTime\":\"<DATETIME>\",\"limit\":\"true\",\"pageNumber\":\"1\",\"pageSize\":\"10000\",\"sortDirection\":\"DESC\",\"sortField\":\"respTime\",\"timePeriod\":\"<DYNAMIC>\"}",
+          "metadata": {
+            "keys": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "limit",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ],
+            "signature": [
+              "bizSystemId",
+              "componentName",
+              "componentSubtype",
+              "componentType",
+              "dataType",
+              "endTime",
+              "limit",
+              "pageNumber",
+              "pageSize",
+              "sortDirection",
+              "sortField",
+              "timePeriod"
+            ]
+          },
+          "normalized_example": {
+            "bizSystemId": "<DYNAMIC>",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "<DATETIME>",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "10000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "<DYNAMIC>"
+          }
+        }
+      ],
+      "body_variants": [],
+      "replay": {
+        "body_template": null,
+        "dynamic_fields": [
+          "query.bizSystemId",
+          "query.endTime",
+          "query.timePeriod"
+        ],
+        "required_headers": {
+          "Accept": "application/json, text/plain, */*",
+          "Authorization": "Bearer ${TOKEN}",
+          "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+          "Content-Type": "application/json"
+        },
+        "sample_curl": "curl 'http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC' -X GET -H 'Accept: application/json, text/plain, */*' -H 'Authorization: Bearer ${TOKEN}' -H 'BuiltInRequestId: ${BUILTIN_REQUEST_ID}' -H 'Content-Type: application/json'",
+        "url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC"
+      },
+      "page_context_summary": {
+        "candidates": [
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "GET",
+            "request_timestamp": "2026-04-12T12:50:57+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=NoSQL&bizSystemId=1065&endTime=2026-04-12%2012:50&timePeriod=2880&dataType=OP&componentName=10.190.22.20:6379/5&componentSubtype=Redis&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "GET",
+            "request_timestamp": "2026-04-12T12:50:47+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:50&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "GET",
+            "request_timestamp": "2026-04-12T12:12:43+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          }
+        ],
+        "latest": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "GET",
+          "request_timestamp": "2026-04-12T12:50:57+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=NoSQL&bizSystemId=1065&endTime=2026-04-12%2012:50&timePeriod=2880&dataType=OP&componentName=10.190.22.20:6379/5&componentSubtype=Redis&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        },
+        "latest_non_empty": {
+          "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+          "document_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+          "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+          "frame_url": "http://169.169.173.25:8080/web/server/component/NoSQL/overview",
+          "initiator_type": "script",
+          "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+          "page_title": "Ting Yun",
+          "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+          "request_method": "GET",
+          "request_timestamp": "2026-04-12T12:50:57+08:00",
+          "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=NoSQL&bizSystemId=1065&endTime=2026-04-12%2012:50&timePeriod=2880&dataType=OP&componentName=10.190.22.20:6379/5&componentSubtype=Redis&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+          "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+        }
+      },
+      "sample_requests": [
+        {
+          "body": null,
+          "body_kind": "none",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "GET",
+            "request_timestamp": "2026-04-12T12:12:43+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-12 12:12",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "10000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "2880"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:12:43+08:00",
+          "url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:12&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC"
+        },
+        {
+          "body": null,
+          "body_kind": "none",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Authorization": "Bearer ${TOKEN}",
+            "BuiltInRequestId": "${BUILTIN_REQUEST_ID}",
+            "Content-Type": "application/json"
+          },
+          "page_context": {
+            "captured_page_url": "http://169.169.173.25:8080/web/server/action/list",
+            "document_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "frame_id": "BC445BB47E6300CB4581AD58C6D5C012",
+            "frame_url": "http://169.169.173.25:8080/web/server/component/Database/overview",
+            "initiator_type": "script",
+            "initiator_url": "http://169.169.173.25:8080/web/polyfills.9e75170d3f99d987eb57.js",
+            "page_title": "Ting Yun",
+            "referrer": "http://169.169.173.25:8080/alarm-web/nalarm/topo",
+            "request_method": "GET",
+            "request_timestamp": "2026-04-12T12:50:47+08:00",
+            "request_url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:50&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC",
+            "tab_target_id": "BC445BB47E6300CB4581AD58C6D5C012"
+          },
+          "query": {
+            "bizSystemId": "1065",
+            "componentName": "10.190.22.21:3306",
+            "componentSubtype": "MySQL",
+            "componentType": "Database",
+            "dataType": "OP",
+            "endTime": "2026-04-12 12:50",
+            "limit": "true",
+            "pageNumber": "1",
+            "pageSize": "10000",
+            "sortDirection": "DESC",
+            "sortField": "respTime",
+            "timePeriod": "2880"
+          },
+          "resource_type": "XHR",
+          "seen_at": "2026-04-12T12:50:47+08:00",
+          "url": "http://169.169.173.25:8080/server-api/Database/analysis/download?componentType=Database&bizSystemId=1065&endTime=2026-04-12%2012:50&timePeriod=2880&dataType=OP&componentName=10.190.22.21:3306&componentSubtype=MySQL&pageSize=10000&pageNumber=1&limit=true&sortField=respTime&sortDirection=DESC"
+        }
+      ],
+      "sample_responses": [
+        {
+          "body": null,
+          "body_capture_error": null,
+          "body_kind": "none",
+          "error": null,
+          "headers": {
+            "Connection": "keep-alive",
+            "Content-Disposition": "attachment; filename=SQLåæ.xls",
+            "Content-Security-Policy": "script-src * 'unsafe-inline' 'unsafe-eval', upgrade-insecure-requests;content *;img-src *",
+            "Content-Type": "application/vnd.ms-excel",
+            "Date": "Sun, 12 Apr 2026 04:12:26 GMT",
+            "Referrer-Policy": "strict-origin-when-cross-origin",
+            "Server": "nginx",
+            "Transfer-Encoding": "chunked",
+            "X-Content-Type-Options": "nosniff",
+            "X-Download-Options": "noopen",
+            "X-Frame-Options": "DENY",
+            "X-Permitted-Cross-Domain-Policies": "none",
+            "X-XSS-Protection": "1"
+          },
+          "mime_type": "application/vnd.ms-excel",
+          "status": 200
+        }
+      ]
+    }
+  },
+  "execution": {
+    "requested": true,
+    "executed": true,
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/vnd.ms-excel",
+    "byte_size": 5632,
+    "suggested_filename": "SQLåæ.xls",
+    "sha1": "4d99080d74e75912e0e60ce4271ed65101ce2264",
+    "headers": {
+      "Server": "nginx",
+      "Date": "Sun, 12 Apr 2026 14:28:18 GMT",
+      "Content-Type": "application/vnd.ms-excel",
+      "Transfer-Encoding": "chunked",
+      "Connection": "close",
+      "Content-Disposition": "attachment; filename=SQLåæ.xls",
+      "Content-Security-Policy": "upgrade-insecure-requests;content *;img-src * ",
+      "X-Content-Type-Options": "nosniff",
+      "X-XSS-Protection": "1",
+      "X-Frame-Options": "DENY",
+      "X-Permitted-Cross-Domain-Policies": "none",
+      "X-Download-Options": "noopen",
+      "Referrer-Policy": "strict-origin-when-cross-origin"
+    },
+    "content_included": true,
+    "content_base64": "0M8R4KGxGuEAAAAAAAAAAAAAAAAAAAAAOwADAP7/CQAGAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAEAAAAgAAAAEAAAD+////AAAAAAEAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9SAG8AbwB0ACAARQBuAHQAcgB5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFgAFAf//////////AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAADgAAAAAAAFcAbwByAGsAYgBvAG8AawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAIB////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANkNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7////9/////v///wQAAAAFAAAABgAAAAcAAAAIAAAACQAAAP7/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AQAAAAIAAAADAAAABAAAAAUAAAAGAAAABwAAAAgAAAAJAAAACgAAAAsAAAAMAAAADQAAAA4AAAAPAAAAEAAAABEAAAASAAAAEwAAABQAAAAVAAAAFgAAABcAAAAYAAAAGQAAABoAAAAbAAAAHAAAAB0AAAAeAAAAHwAAACAAAAAhAAAAIgAAACMAAAAkAAAAJQAAACYAAAAnAAAAKAAAACkAAAAqAAAAKwAAACwAAAAtAAAALgAAAC8AAAAwAAAAMQAAADIAAAAzAAAANAAAADUAAAA2AAAANwAAAP7///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8JCBAAAAYFANMQzAdBAAAABgAAAOEAAgCwBMEAAgAAAOIAAABcAHAABwAAdGluZ3l1biAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEIAAgCwBGEBAgAAAD0BAgAAAJwAAgAOABkAAgAAABIAAgAAABMAAgAAAK8BAgAAALwBAgAAAD0AEgBoAQ4BXDq+IzgAAAAAAAEAWAJAAAIAAACNAAIAAAAiAAIAAAAOAAIAAQC3AQIAAADaAAIAAAAxABUAyAAAAP9/kAEAAAAAAAAFAEFyaWFsMQAVAMgAAAD/f5ABAAAAAAAABQBBcmlhbDEAFQDIAAAA/3+QAQAAAAAAAAUAQXJpYWwxABUAyAAAAP9/kAEAAAAAAAAFAEFyaWFsMQAVAMgAAAASALwCAAAAAAAABQBBcmlhbB4EGgAFABUAACIkIiMsIyMwXyk7KCIkIiMsIyMwKR4EHwAGABoAACIkIiMsIyMwXyk7W1JlZF0oIiQiIywjIzApHgQgAAcAGwAAIiQiIywjIzAuMDBfKTsoIiQiIywjIzAuMDApHgQlAAgAIAAAIiQiIywjIzAuMDBfKTtbUmVkXSgiJCIjLCMjMC4wMCkeBDUAKgAwAABfKCIkIiogIywjIzBfKTtfKCIkIiogKCMsIyMwKTtfKCIkIiogIi0iXyk7XyhAXykeBCwAKQAnAABfKCogIywjIzBfKTtfKCogKCMsIyMwKTtfKCogIi0iXyk7XyhAXykeBD0ALAA4AABfKCIkIiogIywjIzAuMDBfKTtfKCIkIiogKCMsIyMwLjAwKTtfKCIkIiogIi0iPz9fKTtfKEBfKR4ENAArAC8AAF8oKiAjLCMjMC4wMF8pO18oKiAoIywjIzAuMDApO18oKiAiLSI/P18pO18oQF8p4AAUAAAAAAD1/yAAAAAAAAAAAAAAAMAg4AAUAAEAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAEAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAIAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAIAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAD1/yAAAPQAAAAAAAAAAMAg4AAUAAAAAAABACAAAAAAAAAAAAAAAMAg4AAUAAEAKwD1/yAAAPgAAAAAAAAAAMAg4AAUAAEAKQD1/yAAAPgAAAAAAAAAAMAg4AAUAAEALAD1/yAAAPgAAAAAAAAAAMAg4AAUAAEAKgD1/yAAAPgAAAAAAAAAAMAg4AAUAAEACQD1/yAAAPgAAAAAAAAAAMAg4AAUAAUAAAABABoAADgREQgECAQABAkgkwIEABCAA/+TAgQAEYAG/5MCBAASgAT/kwIEABOAB/+TAgQAAIAA/5MCBAAUgAX/YAECAAAAhQASAA4HAAAAAAUBUwBRAEwABlKQZ4wABAABAAEArgEEAAEAAQQXAAgAAQAAAAAAAAD8AGMBWAAAAC0AAAACAAGPXvdTAwAAU1FMCgABc15HV81UlF72ZfSVKABtAHMAKQAJAAHNVJReO2D2ZfSVKABtAHMAKQAIAAEeVBBUh3MoAHEAcABzACkABwABUwBRAEwAZ2JMiCFrcGUEAAEZle+LIWtwZQMAAWJhIWtwZQEAADEFAABITVNFVAMAADAuMAUAADEwMzAzBAAAMC4xNwUAADI5MTU1AQAAMAEAADIEAABIU0VUBQAANDI4NDIEAAAwLjk1BgAAMTY0NDE2AQAAMwcAAFBVQkxJU0gEAAA2NzEyAQAANAcAAFBFWFBJUkUFAAA0MTI1NAQAADEuMDYGAAAxODM1MDQBAAA1BAAAU0FERAEAADkDAAAyMTYBAAA2BAAARVZBTAMAADEwOAEAADcDAABERUwCAAAxNwEAADgGAABSRU5BTUUCAAAyMAQAAEhERUwCAAAxMAQAAFNSRU0CAAAxNv8AMgAIAHkFAAAMAAAA6gUAAH0AAAAbBgAArgAAAFMGAADmAAAAigYAAB0BAAC3BgAASgEAAAoAAAAJCBAAAAYQALsNzAfBAAAABgAAAAsCFAAAAAAAAAAAAAsAAAAAAAAAjg0AAA0AAgABAAwAAgBkAA8AAgABABEAAgAAABAACAD8qfHSTWJQP18AAgABACoAAgAAACsAAgAAAIIAAgABAIAACAAAAAAAAAAAACUCBAAAAP8AgQACAMEEFAAAABUAAACDAAIAAACEAAIAAAChACIAAQBkAAEAAQABAAIALAEsAQAAAAAAAOA/AAAAAAAA4D8BAFUAAgAUAAACDgAAAAAACwAAAAAACAAAAAgCEAAAAAAACACQAQAAAABAAQ8ACAIQAAEAAAAIAP8AAAAAAAABDwAIAhAAAgAAAAgA/wAAAAAAAAEPAAgCEAADAAAACAD/AAAAAAAAAQ8ACAIQAAQAAAAIAP8AAAAAAAABDwAIAhAABQAAAAgA/wAAAAAAAAEPAAgCEAAGAAAACAD/AAAAAAAAAQ8ACAIQAAcAAAAIAP8AAAAAAAABDwAIAhAACAAAAAgA/wAAAAAAAAEPAAgCEAAJAAAACAD/AAAAAAAAAQ8ACAIQAAoAAAAIAP8AAAAAAAABDwD9AAoAAAAAABUAAAAAAP0ACgAAAAEAFQABAAAA/QAKAAAAAgAVAAIAAAD9AAoAAAADABUAAwAAAP0ACgAAAAQAFQAEAAAA/QAKAAAABQAVAAUAAAD9AAoAAAAGABUABgAAAP0ACgAAAAcAFQAHAAAA/QAKAAEAAAAPAAgAAAD9AAoAAQABAA8ACQAAAP0ACgABAAIADwAKAAAA/QAKAAEAAwAPAAsAAAD9AAoAAQAEAA8ADAAAAP0ACgABAAUADwANAAAA/QAKAAEABgAPAA4AAAD9AAoAAQAHAA8ADgAAAP0ACgACAAAADwAPAAAA/QAKAAIAAQAPABAAAAD9AAoAAgACAA8ACgAAAP0ACgACAAMADwARAAAA/QAKAAIABAAPABIAAAD9AAoAAgAFAA8AEwAAAP0ACgACAAYADwAOAAAA/QAKAAIABwAPAA4AAAD9AAoAAwAAAA8AFAAAAP0ACgADAAEADwAVAAAA/QAKAAMAAgAPAAoAAAD9AAoAAwADAA8AFgAAAP0ACgADAAQADwAMAAAA/QAKAAMABQAPAA0AAAD9AAoAAwAGAA8ADgAAAP0ACgADAAcADwAOAAAA/QAKAAQAAAAPABcAAAD9AAoABAABAA8AGAAAAP0ACgAEAAIADwAKAAAA/QAKAAQAAwAPABkAAAD9AAoABAAEAA8AGgAAAP0ACgAEAAUADwAbAAAA/QAKAAQABgAPAA4AAAD9AAoABAAHAA8ADgAAAP0ACgAFAAAADwAcAAAA/QAKAAUAAQAPAB0AAAD9AAoABQACAA8ACgAAAP0ACgAFAAMADwAeAAAA/QAKAAUABAAPAAoAAAD9AAoABQAFAA8AHwAAAP0ACgAFAAYADwAOAAAA/QAKAAUABwAPAA4AAAD9AAoABgAAAA8AIAAAAP0ACgAGAAEADwAhAAAA/QAKAAYAAgAPAAoAAAD9AAoABgADAA8AFAAAAP0ACgAGAAQADwAKAAAA/QAKAAYABQAPACIAAAD9AAoABgAGAA8ADgAAAP0ACgAGAAcADwAOAAAA/QAKAAcAAAAPACMAAAD9AAoABwABAA8AJAAAAP0ACgAHAAIADwAKAAAA/QAKAAcAAwAPAA4AAAD9AAoABwAEAA8ACgAAAP0ACgAHAAUADwAlAAAA/QAKAAcABgAPAA4AAAD9AAoABwAHAA8ADgAAAP0ACgAIAAAADwAmAAAA/QAKAAgAAQAPACcAAAD9AAoACAACAA8ACgAAAP0ACgAIAAMADwAOAAAA/QAKAAgABAAPAAoAAAD9AAoACAAFAA8AKAAAAP0ACgAIAAYADwAOAAAA/QAKAAgABwAPAA4AAAD9AAoACQAAAA8AHgAAAP0ACgAJAAEADwApAAAA/QAKAAkAAgAPAAoAAAD9AAoACQADAA8ADgAAAP0ACgAJAAQADwAKAAAA/QAKAAkABQAPABcAAAD9AAoACQAGAA8ADgAAAP0ACgAJAAcADwAOAAAA/QAKAAoAAAAPACoAAAD9AAoACgABAA8AKwAAAP0ACgAKAAIADwAKAAAA/QAKAAoAAwAPAA4AAAD9AAoACgAEAA8ACgAAAP0ACgAKAAUADwAsAAAA/QAKAAoABgAPAA4AAAD9AAoACgAHAA8ADgAAANcAGgCsBQAAyABwAHAAcABwAHAAcABwAHAAcABwAD4CEgC2BgAAAABAAAAAAAAAAAAAAAAdAA8AAwAAAAAAAAEAAAAAAAAACgAAAP///////////////////////////////////////////////////w=="
+  },
+  "generated_at": "2026-04-12T22:28:35+08:00",
+  "context": {
+    "base_url": "http://169.169.173.25:8080",
+    "biz_system_id": 1065,
+    "time_window": {
+      "end_time": "2026-04-12 22:15",
+      "period_minutes": 2880
+    },
+    "auth": {
+      "token": "eyJhbG...orIA",
+      "token_env": "TINGYUN_TOKEN",
+      "token_present": true
+    },
+    "lang": "zh_CN",
+    "timezone": "Asia/Shanghai"
+  },
+  "written_files": [
+    "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/00_raw_exports/nosql/nosql_redis_10_190_22_20_6379_1/component_analysis_export_nosql__SQL_.xls"
+  ]
+}

@@ -1,0 +1,3 @@
+object_id,system_key,batch_key,source_component_key,source_component_name,source_component_subtype,command_name,representative_command,avg_rt_ms,total_time_ms,qps,exec_count,error_count,slow_count,bucket_hits,screening_score,screening_reason,selected_for_master,followup_status,followup_note,writing_note
+e2003ad61c8b17828cf8,bizsystem_1065,2026-04-12-live-export-test-2210,nosql_redis_10_190_22_20_6379_1,10.190.22.20:6379/1,Redis,PUBLISH,PUBLISH,164416,,,,,,high_avg_rt,1,平均响应时间命中筛选阈值,true,待确认,,
+269f97a98ab758a8969b,bizsystem_1065,2026-04-12-live-export-test-2210,nosql_redis_10_190_22_20_6379_1,10.190.22.20:6379/1,Redis,RENAME,RENAME,183504,,,,,,high_avg_rt,1,平均响应时间命中筛选阈值,true,待确认,,

@@ -93,6 +93,30 @@ class ClientCliTests(unittest.TestCase):
         self.assertEqual(args.batch_key, "2026-04-12-check")
         self.assertEqual(args.rules_file, "./screening_rules.json")
 
+    def test_export_component_analysis_raw_parser_accepts_component_files(self) -> None:
+        parser = _build_parser()
+        args = parser.parse_args(
+            [
+                "export-component-analysis-raw",
+                "--diagnostics-dir",
+                "./diagnostics",
+                "--biz-system-id",
+                "1065",
+                "--end-time",
+                "2026-04-12 22:15",
+                "--period-minutes",
+                "2880",
+                "--database-components-file",
+                "./database_components.json",
+                "--nosql-components-file",
+                "./nosql_components.json",
+            ]
+        )
+        self.assertEqual(args.command, "export-component-analysis-raw")
+        self.assertEqual(args.biz_system_id, 1065)
+        self.assertEqual(args.database_components_file, "./database_components.json")
+        self.assertEqual(args.nosql_components_file, "./nosql_components.json")
+
 
 if __name__ == "__main__":
     unittest.main()

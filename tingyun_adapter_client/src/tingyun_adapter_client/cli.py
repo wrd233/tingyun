@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .component_analysis_exports import export_component_analysis_raw
 from .config import RemoteClientSettings
 from .http_client import AdapterRemoteClient
 from .master_tables_pipeline import materialize_master_tables, prepare_master_table_inputs
@@ -51,6 +52,20 @@ def _build_parser() -> argparse.ArgumentParser:
     build_report.add_argument("--source-mode")
     build_report.add_argument("--limit", type=int, default=5)
     build_report.add_argument("--output-dir", default="./report_pack")
+
+    export_component_analysis = subparsers.add_parser(
+        "export-component-analysis-raw",
+        help="Export SQL/NoSQL component analysis files into diagnostics/00_raw_exports.",
+    )
+    export_component_analysis.add_argument("--diagnostics-dir", required=True)
+    export_component_analysis.add_argument("--biz-system-id", type=int, required=True)
+    export_component_analysis.add_argument("--end-time", required=True)
+    export_component_analysis.add_argument("--period-minutes", type=int, default=2880)
+    export_component_analysis.add_argument("--source-mode")
+    export_component_analysis.add_argument("--include-sql", action=argparse.BooleanOptionalAction, default=True)
+    export_component_analysis.add_argument("--include-nosql", action=argparse.BooleanOptionalAction, default=True)
+    export_component_analysis.add_argument("--database-components-file")
+    export_component_analysis.add_argument("--nosql-components-file")
 
     prepare_tables = subparsers.add_parser(
         "prepare-master-table-inputs",
@@ -139,6 +154,14 @@ def _load_json_dict(path: str) -> dict[str, Any]:
     return loaded
 
 
+def _load_json_list(path: str) -> list[dict[str, Any]]:
+    with Path(path).expanduser().open("r", encoding="utf-8") as handle:
+        loaded = json.load(handle)
+    if not isinstance(loaded, list):
+        raise RuntimeError("component file must be a JSON array")
+    return [item for item in loaded if isinstance(item, dict)]
+
+
 def main() -> None:
     parser = _build_parser()
     args = parser.parse_args()
@@ -172,6 +195,19 @@ def main() -> None:
                 ]
             ),
         )
+    elif args.command == "export-component-analysis-raw":
+        payload = export_component_analysis_raw(
+            client,
+            diagnostics_dir=args.diagnostics_dir,
+            biz_system_id=args.biz_system_id,
+            end_time=args.end_time,
+            period_minutes=args.period_minutes,
+            source_mode=args.source_mode or settings.default_source_mode,
+            include_sql=args.include_sql,
+            include_nosql=args.include_nosql,
+            database_components=_load_json_list(args.database_components_file) if args.database_components_file else None,
+            nosql_components=_load_json_list(args.nosql_components_file) if args.nosql_components_file else None,
+        )
     elif args.command == "prepare-master-table-inputs":
         payload = prepare_master_table_inputs(
             args.diagnostics_dir,
@@ -196,6 +232,7 @@ def main() -> None:
                 "meta",
                 "build-pack",
                 "build-report-pack",
+                "export-component-analysis-raw",
                 "prepare-master-table-inputs",
                 "materialize-master-tables",
             ],

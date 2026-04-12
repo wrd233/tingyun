@@ -1,0 +1,9 @@
+{
+  "biz_system_id": 1065,
+  "end_time": "2026-04-12 22:15",
+  "period_minutes": 2880,
+  "source_mode": "live",
+  "sql_export_count": 1,
+  "nosql_export_count": 1,
+  "warnings": []
+}

@@ -434,11 +434,19 @@
 
 - `source_export_key`
 - `source_component_key`
+- `source_component_name`
+- `source_component_subtype`
 - `source_db_key`
 - `source_db_name`
 - `source_file`
 - `sha1`
 - `collected_at`
+
+当前仓库里的 client 入口已经按这个语义补了一个最小实现：
+
+- 优先通过 `database_component_pack` 自动发现一个主数据库组件；
+- 或者通过 `--database-components-file` 显式传入多个数据库组件；
+- 然后调用现有 `data_export_pack` 的 `component_analysis_export`，把每个数据库实例的导出落到各自目录。
 
 ### 6.3 准备表层的整合方式
 
@@ -506,6 +514,31 @@ SQL 的首轮筛选不要只做全局排序，否则一个流量很大的数据�
 这样既保持统一阅读，又不丢失数据库来源。
 
 如果后续报告确实需要按数据库分章，还可以再从这张全局主表派生出“按数据库过滤视图”，而不是在最早阶段就把主线拆散。
+
+### 6.6 NoSQL 的对应做法
+
+NoSQL 现在也按与 SQL 类似的方式组织原始导出，只是目录名换成：
+
+```text
+00_raw_exports/
+└── nosql/
+    ├── nosql_redis_10_190_22_20_6379_1/
+    │   ├── component_analysis_export_nosql__SQL_.xls
+    │   └── summary.json
+    └── ...
+```
+
+每一行准备表至少保留：
+
+- `source_component_key`
+- `source_component_name`
+- `source_component_subtype`
+- `source_file`
+
+当前 client 同样支持两种来源：
+
+- 通过 `nosql_component_pack` 自动发现一个主 NoSQL 组件；
+- 或者通过 `--nosql-components-file` 显式传入多个 NoSQL 组件。
 
 ## 7. 我建议的主表字段设计（修订版）
 

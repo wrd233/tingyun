@@ -1,0 +1,25 @@
+{
+  "system_key": "bizsystem_1065",
+  "batch_key": "2026-04-12-live-export-test-2210",
+  "diagnostics_dir": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics",
+  "registry_count": 5,
+  "prepared_tables": [
+    "application_prepared.csv",
+    "request_prepared.csv",
+    "interface_cluster_prepared.csv",
+    "sql_prepared_full.csv",
+    "sql_prepared__db_mysql_10_190_22_21_3306.csv",
+    "nosql_prepared.csv"
+  ],
+  "row_counts": {
+    "application": 3,
+    "request": 136,
+    "interface_cluster": 0,
+    "sql": 679,
+    "nosql": 6
+  },
+  "warnings": [
+    "component_analysis_export_database__SQL_.xls was parsed with strings fallback; avg_rt_ms may be partial and total_time/exec_count fields are not yet materialized.",
+    "component_analysis_export_nosql__SQL_.xls was parsed with strings fallback; avg_rt_ms may be partial and total_time/exec_count fields are not yet materialized."
+  ]
+}

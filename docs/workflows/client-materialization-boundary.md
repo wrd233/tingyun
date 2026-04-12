@@ -39,4 +39,16 @@ diagnostics/
 └── 03_evidence_indexes/
 ```
 
+如果需要把数据库 SQL / NoSQL 操作导出真正落盘到 `00_raw_exports/`，当前 client 已补了一个专门入口：
+
+- `export-component-analysis-raw`
+
+它会把 SQL 导出写到：
+
+- `00_raw_exports/sql_database/<db_key>/component_analysis_export_database__SQL_.xls`
+
+把 NoSQL 导出写到：
+
+- `00_raw_exports/nosql/<component_key>/component_analysis_export_nosql__SQL_.xls`
+
 如果某次结果要转为长期示例，应从批次目录挑选稳定子集，再迁到 `samples/`。

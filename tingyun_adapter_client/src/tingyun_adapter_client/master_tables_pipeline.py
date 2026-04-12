@@ -123,6 +123,8 @@ SQL_PREPARED_COLUMNS = [
     "source_case_key",
     "source_export_key",
     "source_component_key",
+    "source_component_name",
+    "source_component_subtype",
     "source_row_rank_in_db",
     "source_total_rows_in_db",
     "sql_group_key",
@@ -148,6 +150,9 @@ NOSQL_PREPARED_COLUMNS = [
     "object_type",
     "system_key",
     "batch_key",
+    "source_component_key",
+    "source_component_name",
+    "source_component_subtype",
     "source_file",
     "source_summary_file",
     "source_case_key",
@@ -281,6 +286,9 @@ MASTER_COLUMNS = {
         "object_id",
         "system_key",
         "batch_key",
+        "source_component_key",
+        "source_component_name",
+        "source_component_subtype",
         "command_name",
         "representative_command",
         "avg_rt_ms",
@@ -366,6 +374,8 @@ class ExportEntry:
     source_case_key: str
     source_export_key: str
     source_component_key: str
+    source_component_name: str
+    source_component_subtype: str
     source_db_key: str
     source_db_name: str
     source_file: str
@@ -383,6 +393,8 @@ class ExportEntry:
             "source_case_key": self.source_case_key,
             "source_export_key": self.source_export_key,
             "source_component_key": self.source_component_key,
+            "source_component_name": self.source_component_name,
+            "source_component_subtype": self.source_component_subtype,
             "source_db_key": self.source_db_key,
             "source_db_name": self.source_db_name,
             "source_file": self.source_file,
@@ -578,6 +590,8 @@ def build_export_registry(
                     source_case_key=str(summary.get("case_key") or family),
                     source_export_key=str(summary.get("selected_export", {}).get("export_key") or family),
                     source_component_key="",
+                    source_component_name="",
+                    source_component_subtype="",
                     source_db_key="",
                     source_db_name="",
                     source_file=str(path),
@@ -615,6 +629,8 @@ def _discover_sql_entries(discovery_root: Path, collected_at: str) -> list[Expor
                         source_case_key=str(summary.get("case_key") or "component_analysis_export_database"),
                         source_export_key=str(summary.get("selected_export", {}).get("export_key") or "component_analysis_export"),
                         source_component_key=str(summary.get("source_component_key") or source_db_key),
+                        source_component_name=str(summary.get("source_component_name") or source_db_name),
+                        source_component_subtype=str(summary.get("source_component_subtype") or ""),
                         source_db_key=source_db_key,
                         source_db_name=source_db_name,
                         source_file=str(path),
@@ -638,6 +654,8 @@ def _discover_sql_entries(discovery_root: Path, collected_at: str) -> list[Expor
                 source_case_key=str(summary.get("case_key") or "component_analysis_export_database"),
                 source_export_key=str(summary.get("selected_export", {}).get("export_key") or "component_analysis_export"),
                 source_component_key=str(summary.get("source_component_key") or db_key),
+                source_component_name=str(summary.get("source_component_name") or db_key),
+                source_component_subtype=str(summary.get("source_component_subtype") or ""),
                 source_db_key=db_key,
                 source_db_name=str(summary.get("source_db_name") or db_key),
                 source_file=str(path),
@@ -652,10 +670,42 @@ def _discover_sql_entries(discovery_root: Path, collected_at: str) -> list[Expor
 
 
 def _discover_nosql_entries(discovery_root: Path, collected_at: str) -> list[ExportEntry]:
+    structured_root = discovery_root / "nosql"
+    entries: list[ExportEntry] = []
+    if structured_root.exists():
+        for component_dir in sorted(path for path in structured_root.iterdir() if path.is_dir()):
+            files = sorted(component_dir.glob("*.xls")) + sorted(component_dir.glob("*.csv"))
+            if not files:
+                continue
+            summary_path = component_dir / "summary.json"
+            summary = _load_json(summary_path) if summary_path.exists() else {}
+            source_component_key = component_dir.name
+            source_component_name = str(summary.get("source_component_name") or component_dir.name)
+            source_component_subtype = str(summary.get("source_component_subtype") or "")
+            for path in files:
+                entries.append(
+                    ExportEntry(
+                        object_family="nosql",
+                        source_case_key=str(summary.get("case_key") or "component_analysis_export_nosql"),
+                        source_export_key=str(summary.get("selected_export", {}).get("export_key") or "component_analysis_export"),
+                        source_component_key=source_component_key,
+                        source_component_name=source_component_name,
+                        source_component_subtype=source_component_subtype,
+                        source_db_key="",
+                        source_db_name="",
+                        source_file=str(path),
+                        source_summary_file=str(summary_path) if summary_path.exists() else "",
+                        sha1=_sha1_file(path),
+                        byte_size=path.stat().st_size,
+                        collected_at=collected_at,
+                        mime_type=str(summary.get("execution", {}).get("mime_type") or _guess_mime_type(path)),
+                    )
+                )
+        return entries
+
     legacy_files = sorted(discovery_root.glob("component_analysis_export_nosql__*.xls")) + sorted(discovery_root.glob("component_analysis_export_nosql__*.csv"))
     summary_path = discovery_root / SUMMARY_PATTERNS["nosql"]
     summary = _load_json(summary_path) if summary_path.exists() else {}
-    entries: list[ExportEntry] = []
     for path in legacy_files:
         entries.append(
             ExportEntry(
@@ -663,6 +713,8 @@ def _discover_nosql_entries(discovery_root: Path, collected_at: str) -> list[Exp
                 source_case_key=str(summary.get("case_key") or "component_analysis_export_nosql"),
                 source_export_key=str(summary.get("selected_export", {}).get("export_key") or "component_analysis_export"),
                 source_component_key=str(summary.get("source_component_key") or "nosql_default"),
+                source_component_name=str(summary.get("source_component_name") or ""),
+                source_component_subtype=str(summary.get("source_component_subtype") or ""),
                 source_db_key="",
                 source_db_name="",
                 source_file=str(path),
@@ -906,6 +958,8 @@ def _prepare_sql_rows(
                 "source_case_key": entry["source_case_key"],
                 "source_export_key": entry["source_export_key"],
                 "source_component_key": entry["source_component_key"],
+                "source_component_name": entry["source_component_name"],
+                "source_component_subtype": entry["source_component_subtype"],
                 "source_row_rank_in_db": "0",
                 "source_total_rows_in_db": "0",
                 "sql_group_key": sql_group_key,
@@ -988,10 +1042,13 @@ def _prepare_nosql_rows(
                 buckets.append("high_avg_rt")
             rows.append(
                 {
-                    "object_id": _hash_id(f"nosql:{command}"),
+                    "object_id": _hash_id(f"nosql:{entry['source_component_key']}:{command}"),
                     "object_type": "nosql",
                     "system_key": system_key,
                     "batch_key": batch_key,
+                    "source_component_key": entry["source_component_key"],
+                    "source_component_name": entry["source_component_name"],
+                    "source_component_subtype": entry["source_component_subtype"],
                     "source_file": entry["source_file"],
                     "source_summary_file": entry["source_summary_file"],
                     "source_case_key": entry["source_case_key"],

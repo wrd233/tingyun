@@ -103,13 +103,19 @@ class MasterTablesPipelineTests(unittest.TestCase):
                 {"case_key": "component_analysis_export_database", "selected_export": {"export_key": "component_analysis_export"}, "source_db_name": "main-db"},
             )
             self._write_csv(
-                raw / "sql_nosql" / "component_analysis_export_nosql__SQL_.csv",
+                raw / "nosql" / "redis_primary" / "component_analysis_export_nosql__SQL_.csv",
                 ["SQL文本", "平均响应时间(ms)", "响应总时间", "执行次数", "错误次数", "慢次数"],
                 [["GET cache:orders", "900", "18000", "20", "0", "3"]],
             )
             self._write_json(
-                raw / "sql_nosql" / "component_analysis_export_nosql__summary.json",
-                {"case_key": "component_analysis_export_nosql", "selected_export": {"export_key": "component_analysis_export"}},
+                raw / "nosql" / "redis_primary" / "summary.json",
+                {
+                    "case_key": "component_analysis_export_nosql",
+                    "selected_export": {"export_key": "component_analysis_export"},
+                    "source_component_key": "redis_primary",
+                    "source_component_name": "10.190.22.20:6379/1",
+                    "source_component_subtype": "Redis",
+                },
             )
 
             prepare_summary = prepare_master_table_inputs(
@@ -133,6 +139,8 @@ class MasterTablesPipelineTests(unittest.TestCase):
             self.assertIn("待确认", content)
             sql_evidence = diagnostics / "03_evidence_indexes" / "sql_evidence_index.csv"
             self.assertTrue(sql_evidence.exists())
+            nosql_prepared = diagnostics / "01_prepared_tables" / "nosql_prepared.csv"
+            self.assertIn("source_component_key", nosql_prepared.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
