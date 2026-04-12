@@ -306,6 +306,18 @@ def purpose_from_metric(metric: str) -> str:
     return f"Likely used to query {text} related data"
 
 
+def is_truthy_flag(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value != 0
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes", "y", "on"}
+    if isinstance(value, list):
+        return any(is_truthy_flag(item) for item in value)
+    return False
+
+
 def infer_purpose(relative_path: str, query_obj: Dict[str, Any], body: Any) -> Tuple[str, List[str]]:
     basis: List[str] = []
     if isinstance(body, dict) and isinstance(body.get("metric"), str):
@@ -326,6 +338,9 @@ def infer_purpose(relative_path: str, query_obj: Dict[str, Any], body: Any) -> T
     basis.append(f"path={relative_path}")
     if query_obj:
         basis.append("query params present")
+    if is_truthy_flag(query_obj.get("downloadFile")):
+        basis.append("query.downloadFile=true")
+        purpose = f"Likely used to export/download data from {relative_path}"
     return purpose, basis
 
 
@@ -795,6 +810,9 @@ class RawLogCatalog:
 
     @staticmethod
     def infer_variant_label(observation: Dict[str, Any]) -> str:
+        query_example = observation.get("query_example", {}) or {}
+        if is_truthy_flag(query_example.get("downloadFile")):
+            return "download_file"
         if observation.get("metric"):
             return sanitize_path_fragment(str(observation["metric"]))
         query_keys = observation.get("query_metadata", {}).get("keys", [])

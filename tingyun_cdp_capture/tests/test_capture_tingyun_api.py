@@ -1,6 +1,11 @@
 import unittest
 
-from tingyun_cdp_capture.capture_tingyun_api import PageContextCandidate, PageContextSummary, RawLogCatalog
+from tingyun_cdp_capture.capture_tingyun_api import (
+    PageContextCandidate,
+    PageContextSummary,
+    RawLogCatalog,
+    infer_purpose,
+)
 
 
 class PageContextTests(unittest.TestCase):
@@ -62,6 +67,30 @@ class PageContextTests(unittest.TestCase):
             [item["captured_page_url"] for item in summary["candidates"]],
             ["http://console/new", "http://console/old"],
         )
+
+
+class DownloadVariantTests(unittest.TestCase):
+    def test_infer_variant_label_marks_download_file_query(self) -> None:
+        label = RawLogCatalog.infer_variant_label(
+            {
+                "query_example": {"downloadFile": "true", "bizSystemId": "1065"},
+                "query_metadata": {"keys": ["bizSystemId", "downloadFile"]},
+                "metric": None,
+                "body_metadata": {},
+            }
+        )
+
+        self.assertEqual(label, "download_file")
+
+    def test_infer_purpose_marks_download_file_query_as_export(self) -> None:
+        purpose, basis = infer_purpose(
+            "webaction/list/actionList",
+            {"downloadFile": "true", "bizSystemId": "1065"},
+            None,
+        )
+
+        self.assertIn("export/download", purpose)
+        self.assertIn("query.downloadFile=true", basis)
 
 
 if __name__ == "__main__":
