@@ -1,0 +1,21 @@
+{
+  "case_key": "component_analysis_export_database",
+  "ok": true,
+  "selected_export": {
+    "export_key": "component_analysis_export",
+    "label": "组件操作分析导出",
+    "suggested_filename": "SQL_.xls"
+  },
+  "execution": {
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/vnd.ms-excel",
+    "byte_size": 614912,
+    "content_included": true,
+    "content_omitted_reason": null,
+    "sha1": "c29c0890cd72ea8797f2674d1cffdd7e27de2e90"
+  },
+  "written_files": [
+    "/Users/wangrundong/work/mywork/component_analysis_export_database__SQL_.xls"
+  ]
+}

@@ -1,0 +1,5 @@
+﻿"名称","应用","总耗时(ms)","平均响应时间(ms)","请求数","吞吐率(tps)","错误率(%)","错误数"
+"SpringController/onlinePreview","fawucn.keking.ServerMain","1776270","1786.992","994","0.005752315","0.0","0"
+"SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}","fawuorg.springframework.boot.loader.WarLauncher","18732","77.08642","243","0.00140625","6.584362","16"
+"SpringController/serverapi/v1/flow-mobile/task-form-process/download-attachments-kfv/{code}","org.springframework.boot.loader.WarLauncher","55555","67.75","820","0.0047453702","10.243902","84"
+"SpringController/cleanOfficeCacheByKey","fawucn.keking.ServerMain","225","0.23388773","962","0.0055671297","0.0","0"

@@ -1,0 +1,63 @@
+{
+  "code": 200,
+  "data": {
+    "totalElements": 3,
+    "content": [
+      {
+        "id": "pNUVSyV0CJoNlDbAjU6T7A",
+        "cuser": 2,
+        "agreementId": 2033,
+        "title": "序号,开始出现时间,最后发生时间,持续时长,错误类型,错误名称,影响用户数,次数,发生频率,占比,应用",
+        "filterConditions": "[{\"count\":0,\"key\":\"应用\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":0,\"value\":\"全部\"},{\"count\":0,\"key\":\"实例\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":3,\"value\":\"全部\"}]",
+        "fileFormat": "CSV",
+        "columnFormat": "1,2,3,4,5,13,6,7,8,10",
+        "name": "错误分析",
+        "excelName": "错误分析",
+        "bizSystemId": 1065,
+        "bizSystemName": "集团法务",
+        "ctime": 1775971001000,
+        "mtime": 1775971001000,
+        "startTime": 1775796660000,
+        "endTime": 1775969460000,
+        "status": 2
+      },
+      {
+        "id": "8aIkU_ANtaklal2kj-iwbA",
+        "cuser": 2,
+        "agreementId": 2033,
+        "title": "序号,开始出现时间,最后发生时间,持续时长,错误类型,错误名称,影响用户数,次数,发生频率,占比,应用",
+        "filterConditions": "[{\"count\":0,\"key\":\"应用\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":0,\"value\":\"全部\"},{\"count\":0,\"key\":\"实例\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":3,\"value\":\"全部\"}]",
+        "fileFormat": "CSV",
+        "columnFormat": "1,2,3,4,5,13,6,7,8,10",
+        "name": "错误分析",
+        "excelName": "错误分析",
+        "bizSystemId": 1065,
+        "bizSystemName": "集团法务",
+        "ctime": 1775969464000,
+        "mtime": 1775969464000,
+        "startTime": 1775796660000,
+        "endTime": 1775969460000,
+        "status": 2
+      },
+      {
+        "id": "F9uJ8cl4yBLTMv1S15eInA",
+        "cuser": 2,
+        "agreementId": 2033,
+        "title": "序号,开始出现时间,最后发生时间,持续时长,错误类型,错误名称,影响用户数,次数,发生频率,占比,应用",
+        "filterConditions": "[{\"count\":0,\"key\":\"应用\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":0,\"value\":\"全部\"},{\"count\":0,\"key\":\"实例\",\"percent\":0.0,\"requestCount\":0,\"tracePercent\":0.0,\"type\":3,\"value\":\"全部\"}]",
+        "fileFormat": "CSV",
+        "columnFormat": "1,2,3,4,5,13,6,7,8,10",
+        "name": "错误分析",
+        "excelName": "错误分析",
+        "bizSystemId": 1065,
+        "bizSystemName": "集团法务",
+        "ctime": 1775698107000,
+        "mtime": 1775698107000,
+        "startTime": 1766211060000,
+        "endTime": 1774937460000,
+        "status": 2
+      }
+    ],
+    "fastQuery": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "case_key": "error_export_create_task",
+  "ok": true,
+  "selected_export": {
+    "export_key": "error_export_create_task",
+    "label": "创建错误导出任务",
+    "suggested_filename": "error_export_task_create_2026_04_12_12_50.json"
+  },
+  "execution": {
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/json",
+    "byte_size": 43,
+    "content_included": false,
+    "content_omitted_reason": null,
+    "sha1": "3d42bef7922396c040463374edb27234ba8bba5c"
+  },
+  "written_files": [
+    "/Users/wangrundong/work/mywork/error_export_create_task__response.json"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "service_base_url": "https://oregon-lance-weblogs-gpl.trycloudflare.com",
+  "pack_type": "data_export_pack",
+  "tested_at": "2026-04-12",
+  "case_count": 8,
+  "success_count": 8,
+  "failure_count": 0,
+  "results": [
+    {
+      "case_key": "action_list_export",
+      "ok": true,
+      "selected_export": {
+        "export_key": "action_list_export",
+        "label": "事务列表导出",
+        "suggested_filename": "actionList-1775973018817.csv"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/octet-stream",
+        "byte_size": 197951,
+        "content_included": true,
+        "content_omitted_reason": null,
+        "sha1": "9d4f455c1eda042de849e232c680681ac00709fe"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/action_list_export__actionList-1775973018817.csv"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/action_list_export__summary.json"
+    },
+    {
+      "case_key": "interface_list_export",
+      "ok": true,
+      "selected_export": {
+        "export_key": "interface_list_export",
+        "label": "服务接口列表导出",
+        "suggested_filename": "interfaceList-1775973026366.csv"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/octet-stream",
+        "byte_size": 739,
+        "content_included": true,
+        "content_omitted_reason": null,
+        "sha1": "b059a795c8b54664184ef433d8bc5e75d66e5aed"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/interface_list_export__interfaceList-1775973026366.csv"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/interface_list_export__summary.json"
+    },
+    {
+      "case_key": "component_analysis_export_database",
+      "ok": true,
+      "selected_export": {
+        "export_key": "component_analysis_export",
+        "label": "组件操作分析导出",
+        "suggested_filename": "SQL_.xls"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/vnd.ms-excel",
+        "byte_size": 614912,
+        "content_included": true,
+        "content_omitted_reason": null,
+        "sha1": "c29c0890cd72ea8797f2674d1cffdd7e27de2e90"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/component_analysis_export_database__SQL_.xls"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/component_analysis_export_database__summary.json"
+    },
+    {
+      "case_key": "component_analysis_export_nosql",
+      "ok": true,
+      "selected_export": {
+        "export_key": "component_analysis_export",
+        "label": "组件操作分析导出",
+        "suggested_filename": "SQL_.xls"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/vnd.ms-excel",
+        "byte_size": 4608,
+        "content_included": true,
+        "content_omitted_reason": null,
+        "sha1": "767128a2e8cea2090b5a78bbc8e1496020532a6e"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/component_analysis_export_nosql__SQL_.xls"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/component_analysis_export_nosql__summary.json"
+    },
+    {
+      "case_key": "graph_overview_export_request",
+      "ok": true,
+      "selected_export": {
+        "export_key": "graph_overview_export",
+        "label": "概览图表导出",
+        "suggested_filename": "request_overview-1775973033398.csv"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/octet-stream",
+        "byte_size": 192896,
+        "content_included": true,
+        "content_omitted_reason": null,
+        "sha1": "3f0d6f86b510041105562680daafed5c3b3bcef4"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/graph_overview_export_request__request_overview-1775973033398.csv"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/graph_overview_export_request__summary.json"
+    },
+    {
+      "case_key": "graph_overview_export_application",
+      "ok": true,
+      "selected_export": {
+        "export_key": "graph_overview_export",
+        "label": "概览图表导出",
+        "suggested_filename": "application_overview-1775973036732.csv"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/octet-stream",
+        "byte_size": 517,
+        "content_included": true,
+        "content_omitted_reason": null,
+        "sha1": "5099386c497b683a81d490707a9d2e63a01d71f3"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/graph_overview_export_application__application_overview-1775973036732.csv"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/graph_overview_export_application__summary.json"
+    },
+    {
+      "case_key": "error_export_task_list",
+      "ok": true,
+      "selected_export": {
+        "export_key": "error_export_task_list",
+        "label": "错误导出任务列表",
+        "suggested_filename": "error_export_task_list_2026_04_12_12_50.json"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/json",
+        "byte_size": 2265,
+        "content_included": false,
+        "content_omitted_reason": null,
+        "sha1": "dec6abe4f6a36321a6945439500da18e552cdff1"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/error_export_task_list__response.json"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/error_export_task_list__summary.json"
+    },
+    {
+      "case_key": "error_export_create_task",
+      "ok": true,
+      "selected_export": {
+        "export_key": "error_export_create_task",
+        "label": "创建错误导出任务",
+        "suggested_filename": "error_export_task_create_2026_04_12_12_50.json"
+      },
+      "execution": {
+        "status": "executed",
+        "status_code": 200,
+        "mime_type": "application/json",
+        "byte_size": 43,
+        "content_included": false,
+        "content_omitted_reason": null,
+        "sha1": "3d42bef7922396c040463374edb27234ba8bba5c"
+      },
+      "written_files": [
+        "/Users/wangrundong/work/mywork/error_export_create_task__response.json"
+      ],
+      "summary_file": "/Users/wangrundong/work/mywork/error_export_create_task__summary.json"
+    }
+  ]
+}

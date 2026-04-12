@@ -1,0 +1,21 @@
+{
+  "case_key": "interface_list_export",
+  "ok": true,
+  "selected_export": {
+    "export_key": "interface_list_export",
+    "label": "服务接口列表导出",
+    "suggested_filename": "interfaceList-1775973026366.csv"
+  },
+  "execution": {
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/octet-stream",
+    "byte_size": 739,
+    "content_included": true,
+    "content_omitted_reason": null,
+    "sha1": "b059a795c8b54664184ef433d8bc5e75d66e5aed"
+  },
+  "written_files": [
+    "/Users/wangrundong/work/mywork/interface_list_export__interfaceList-1775973026366.csv"
+  ]
+}

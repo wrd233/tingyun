@@ -1,0 +1,21 @@
+{
+  "case_key": "component_analysis_export_nosql",
+  "ok": true,
+  "selected_export": {
+    "export_key": "component_analysis_export",
+    "label": "组件操作分析导出",
+    "suggested_filename": "SQL_.xls"
+  },
+  "execution": {
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/vnd.ms-excel",
+    "byte_size": 4608,
+    "content_included": true,
+    "content_omitted_reason": null,
+    "sha1": "767128a2e8cea2090b5a78bbc8e1496020532a6e"
+  },
+  "written_files": [
+    "/Users/wangrundong/work/mywork/component_analysis_export_nosql__SQL_.xls"
+  ]
+}

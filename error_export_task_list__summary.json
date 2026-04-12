@@ -1,0 +1,21 @@
+{
+  "case_key": "error_export_task_list",
+  "ok": true,
+  "selected_export": {
+    "export_key": "error_export_task_list",
+    "label": "错误导出任务列表",
+    "suggested_filename": "error_export_task_list_2026_04_12_12_50.json"
+  },
+  "execution": {
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/json",
+    "byte_size": 2265,
+    "content_included": false,
+    "content_omitted_reason": null,
+    "sha1": "dec6abe4f6a36321a6945439500da18e552cdff1"
+  },
+  "written_files": [
+    "/Users/wangrundong/work/mywork/error_export_task_list__response.json"
+  ]
+}

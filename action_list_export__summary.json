@@ -1,0 +1,21 @@
+{
+  "case_key": "action_list_export",
+  "ok": true,
+  "selected_export": {
+    "export_key": "action_list_export",
+    "label": "事务列表导出",
+    "suggested_filename": "actionList-1775973018817.csv"
+  },
+  "execution": {
+    "status": "executed",
+    "status_code": 200,
+    "mime_type": "application/octet-stream",
+    "byte_size": 197951,
+    "content_included": true,
+    "content_omitted_reason": null,
+    "sha1": "9d4f455c1eda042de849e232c680681ac00709fe"
+  },
+  "written_files": [
+    "/Users/wangrundong/work/mywork/action_list_export__actionList-1775973018817.csv"
+  ]
+}
