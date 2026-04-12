@@ -1,75 +1,103 @@
-# MyWork 工作区
+# Tingyun Multi-System Workspace
 
-这个仓库现在按项目拆成了 4 个部分：
+这个仓库现在按“3 个主工程 + 5 类支撑目录”的目标状态整理，服务于多个待监测系统、同一系统多个监测批次，以及机器 A / 机器 B 协作下的诊断与报告材料生成。
 
-- `reference/`
-  - 存放参考资料与外部文档
+## 顶层结构
+
 - `tingyun_cdp_capture/`
-  - 听云平台接口抓取、样本沉淀、链路回放项目
+  - 平台行为抓取、接口样本沉淀、关键链路回放工程
 - `tingyun_adapter/`
-  - 面向分析与报告场景的 adapter 项目
+  - 诊断中间层，负责候选对象筛选、证据组织、知识增强、报告素材导出
 - `tingyun_adapter_client/`
-  - 机器 B 上调用机器 A adapter 服务的远程 client 项目
+  - 机器 B 上的远程调用器与本地物化器
+- `docs/`
+  - 架构、流程、报告语义、关键历史决策
+- `reference/`
+  - 平台手册、模板、长期外部参考资料
+- `samples/`
+  - 允许入库、供回归和阅读的稳定样例
+- `knowledge/`
+  - 系统级长期知识，按系统组织
+- `artifacts/`
+  - 本地运行产物工作区，按系统 / 批次组织，默认不入库
 
-## 目录说明
+## 三大主工程如何协作
 
-### `reference/`
+1. `tingyun_cdp_capture/` 负责确认平台真实可用的接口、页面链路和取证入口。
+2. `tingyun_adapter/` 把原始平台能力重组为更适合诊断和报告消费的中间对象与导出视图。
+3. `tingyun_adapter_client/` 在机器 B 上远程调用 adapter，并把结果物化为本地材料目录。
 
-- `基调听云应用与微服务用户使用手册.pdf`
+可以把它理解为：
 
-### `tingyun_cdp_capture/`
+- capture 保证来源可信
+- adapter 保证结构清晰
+- client 保证远程可消费、本地可落地
 
-负责：
+## 多系统 / 多批次路径语义
 
-- 通过 CDP 抓取听云页面触发的 `/server-api/` 请求
-- 归档 `captured_api/` 和 `raw_logs/`
-- 用真实 HTTP 请求回放关键诊断链路
-- 沉淀接口分析文档和系统骨架文档
+### 系统级长期知识
 
-### `tingyun_adapter/`
+放在：
 
-负责：
+`knowledge/monitored_systems/<system_key>/`
 
-- 把听云原始接口整理成稳定的对象、关系、证据和 pack
-- 为后续 skill / 大模型分析提供更适合消费的结构化输入
-- 逐步建设：
-  - `system_snapshot`
-  - `action_hotspot_pack`
-  - `trace_case_pack`
-  - `report_fact_pack`
-  - `database_component_pack`
-  - `nosql_component_pack`
-  - `connection_pool_pack`
+典型内容：
 
-### `tingyun_adapter_client/`
+- 系统画像
+- 命名映射
+- 手工上下文
+- review queue
 
-负责：
+### 批次级运行结果
 
-- 在机器 B 上通过 HTTP 调用机器 A 的 `tingyun_adapter` 服务
-- 把服务地址、API key 和默认 source mode 收敛到本地配置
-- 让本机大模型、agent 或 Codex 通过 CLI 稳定调用 adapter pack
+放在：
+
+`artifacts/monitored_systems/<system_key>/<batch_key>/`
+
+典型内容：
+
+- capture 结果
+- pack 导出
+- diagnostics
+- evidence
+- report materials
+- final reports
+
+### 入库样例
+
+放在：
+
+`samples/monitored_systems/<system_key>/<sample_batch_key>/`
+
+这里保存的是整理后的稳定样例，而不是完整真实运行目录。
+
+## 样例、知识、运行产物的边界
+
+- `samples/`：可长期保留、可入库、用于说明结构和回归比对
+- `knowledge/`：跨批次复用的系统级长期知识
+- `artifacts/`：当前或历史批次的本地运行产物，默认忽略
+- 主工程目录：只保留代码、最小运行入口、工程自身 README
+
+## 入口文档
+
+- 仓库目标状态：[repo-target-state.md](/Users/wangrundong/work/mywork/docs/architecture/repo-target-state.md)
+- 三大主工程协作：[three-main-projects.md](/Users/wangrundong/work/mywork/docs/architecture/three-main-projects.md)
+- 系统 / 批次语义：[system-and-batch-semantics.md](/Users/wangrundong/work/mywork/docs/architecture/system-and-batch-semantics.md)
+- 输出术语统一：[report-output-terms.md](/Users/wangrundong/work/mywork/docs/reporting/report-output-terms.md)
+
+## 最小阅读顺序
+
+1. 先读本文件了解顶层边界。
+2. 再读 [docs/architecture/three-main-projects.md](/Users/wangrundong/work/mywork/docs/architecture/three-main-projects.md) 看 capture / adapter / client 主链路。
+3. 如果要接手具体系统，读 `knowledge/monitored_systems/<system_key>/`。
+4. 如果要接手某次诊断，读 `artifacts/monitored_systems/<system_key>/<batch_key>/` 或对应 `samples/`。
 
 ## 配置文件
 
-两个项目都改成了优先读取本地配置文件：
+本地配置文件默认不入库：
 
 - `tingyun_cdp_capture/config.local.json`
 - `tingyun_adapter/config.local.json`
 - `tingyun_adapter_client/config.local.json`
 
-这两个文件都已经加入 `.gitignore`，不会提交到 git。
-
-可以先复制示例文件：
-
-```bash
-cp /Users/wangrundong/work/mywork/tingyun_cdp_capture/config.local.json.example /Users/wangrundong/work/mywork/tingyun_cdp_capture/config.local.json
-cp /Users/wangrundong/work/mywork/tingyun_adapter/config.local.json.example /Users/wangrundong/work/mywork/tingyun_adapter/config.local.json
-cp /Users/wangrundong/work/mywork/tingyun_adapter_client/config.local.json.example /Users/wangrundong/work/mywork/tingyun_adapter_client/config.local.json
-```
-
-## 建议使用顺序
-
-1. 先在 `tingyun_cdp_capture/` 里抓样本与回放链路
-2. 再在 `tingyun_adapter/` 里基于样本或真实调用构建 pack，并把它跑成机器 A 上的服务
-3. 在 `tingyun_adapter_client/` 里让机器 B 稳定调用机器 A 的服务
-4. 最后再让上层 skill / 大模型消费这些 pack 做分析与报告
+初始化可参考各主工程 README。

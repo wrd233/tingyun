@@ -3,4 +3,8 @@
 /tingyun_cdp_capture/config.local.json
 /tingyun_adapter/config.local.json
 /tingyun_adapter_client/config.local.json
+/artifacts/
 /report_pack/
+*.egg-info/
+*.zip
+.tmp_*

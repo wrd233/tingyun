@@ -19,7 +19,7 @@ class AdapterSdkTests(unittest.TestCase):
         self.assertEqual(context.time_window.period_minutes, 30)
 
     def test_adapter_initializes_knowledge_repository_when_configured(self) -> None:
-        adapter = Adapter(AdapterSettings(knowledge_dir=str(ROOT / "knowledge")))
+        adapter = Adapter(AdapterSettings(knowledge_dir=str(ROOT.parent / "knowledge" / "monitored_systems")))
         self.assertIsNotNone(adapter.knowledge_repository)
 
     def test_adapter_exposes_data_export_pack_builder(self) -> None:

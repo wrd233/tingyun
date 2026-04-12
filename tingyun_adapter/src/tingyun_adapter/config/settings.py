@@ -14,6 +14,10 @@ def _project_root() -> Path:
     return Path(__file__).resolve().parents[3]
 
 
+def _default_shared_knowledge_dir() -> Path:
+    return _project_root().parent / "knowledge" / "monitored_systems"
+
+
 def _load_config_file(config_path: Path) -> dict[str, Any]:
     if not config_path.exists():
         return {}
@@ -81,7 +85,7 @@ class AdapterSettings:
             captured_api_dir=_resolve_optional_path(resolved_config_path.parent, captured_api_dir),
             knowledge_dir=_resolve_optional_path(
                 resolved_config_path.parent,
-                knowledge_dir or str(cls.default_config_path().parent / "knowledge"),
+                knowledge_dir or str(_default_shared_knowledge_dir()),
             ),
             console_public_base_url=os.environ.get("TINGYUN_CONSOLE_PUBLIC_BASE_URL", raw.get("console_public_base_url")),
             service_host=os.environ.get("TINGYUN_SERVICE_HOST", raw.get("service_host", "127.0.0.1")),

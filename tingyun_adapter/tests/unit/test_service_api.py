@@ -19,7 +19,7 @@ class ServiceApiTests(unittest.TestCase):
                     {
                         "base_url": "http://169.169.173.25:8080",
                         "captured_api_dir": str(CAPTURED_API_DIR),
-                        "knowledge_dir": "./knowledge",
+                        "knowledge_dir": "../knowledge/monitored_systems",
                         "console_public_base_url": "https://console.example.com",
                         "service_public_base_url": "https://adapter.example.com",
                     }
@@ -31,7 +31,7 @@ class ServiceApiTests(unittest.TestCase):
 
             healthz = endpoints["/healthz"]()
             self.assertEqual(healthz["config"]["console_public_base_url"], "https://console.example.com")
-            self.assertTrue(healthz["config"]["knowledge_dir"].endswith("knowledge"))
+            self.assertTrue(healthz["config"]["knowledge_dir"].endswith("knowledge/monitored_systems"))
 
             meta = endpoints["/v1/meta"]()
             self.assertEqual(meta["console_public_base_url"], "https://console.example.com")
