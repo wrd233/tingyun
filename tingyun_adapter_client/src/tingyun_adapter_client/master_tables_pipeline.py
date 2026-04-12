@@ -11,6 +11,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .xls_parsing import parse_component_operation_xls
+
 
 CSV_EXPORT_PATTERNS = {
     "application": "graph_overview_export_application__*.csv",
@@ -358,11 +360,15 @@ DEFAULT_RULES = {
     },
     "sql": {
         "high_avg_rt_ms": 800.0,
+        "high_total_time_ms": 100000.0,
+        "high_exec_count": 100.0,
         "global_top_n": 20,
         "per_db_top_n": 3,
     },
     "nosql": {
         "high_avg_rt_ms": 800.0,
+        "high_total_time_ms": 10000.0,
+        "high_exec_count": 1000.0,
         "top_n": 10,
     },
 }
@@ -980,22 +986,28 @@ def _prepare_sql_rows(
                 "parse_mode": str(raw.get("parse_mode") or "csv"),
             }
             current = dedup.get(row["object_id"])
-            if current is None or _to_float(row["avg_rt_ms"]) or 0 > (_to_float(current["avg_rt_ms"]) or 0):
+            if current is None or _sql_row_rank_key(row) > _sql_row_rank_key(current):
                 dedup[row["object_id"]] = row
         db_rows = list(dedup.values())
-        db_rows.sort(key=lambda item: (_to_float(item["avg_rt_ms"]) or 0), reverse=True)
+        db_rows.sort(key=_sql_row_rank_key, reverse=True)
         total = len(db_rows)
         for index, row in enumerate(db_rows, start=1):
             row["source_row_rank_in_db"] = str(index)
             row["source_total_rows_in_db"] = str(total)
         rows.extend(db_rows)
 
-    rows.sort(key=lambda item: (_to_float(item["avg_rt_ms"]) or 0), reverse=True)
+    rows.sort(key=_sql_row_rank_key, reverse=True)
     for index, row in enumerate(rows, start=1):
         buckets: list[str] = []
         avg_rt = _to_float(row.get("avg_rt_ms"))
+        total_time = _to_float(row.get("total_time_ms"))
+        exec_count = _to_float(row.get("exec_count"))
         if avg_rt is not None and avg_rt >= rules["high_avg_rt_ms"]:
             buckets.append("high_avg_rt")
+        if total_time is not None and total_time >= rules["high_total_time_ms"]:
+            buckets.append("high_total_time")
+        if exec_count is not None and exec_count >= rules["high_exec_count"]:
+            buckets.append("high_exec_count")
         row["selected_by_global_rank"] = "true" if index <= rules["global_top_n"] else "false"
         if row["selected_by_global_rank"] == "true":
             buckets.append("selected_by_global_rank")
@@ -1005,7 +1017,7 @@ def _prepare_sql_rows(
 
     grouped_by_db = _group_rows_by(rows, "source_db_key")
     for db_rows in grouped_by_db.values():
-        db_rows.sort(key=lambda item: (_to_float(item["avg_rt_ms"]) or 0), reverse=True)
+        db_rows.sort(key=_sql_row_rank_key, reverse=True)
         for index, row in enumerate(db_rows, start=1):
             if index <= rules["per_db_top_n"]:
                 row["selected_by_db_rank"] = "true"
@@ -1037,9 +1049,15 @@ def _prepare_nosql_rows(
             if not command:
                 continue
             avg_rt = _to_float(raw.get("avg_rt_ms"))
+            total_time = _to_float(raw.get("total_time_ms"))
+            exec_count = _to_float(raw.get("exec_count"))
             buckets: list[str] = []
             if avg_rt is not None and avg_rt >= rules["high_avg_rt_ms"]:
                 buckets.append("high_avg_rt")
+            if total_time is not None and total_time >= rules["high_total_time_ms"]:
+                buckets.append("high_total_time")
+            if exec_count is not None and exec_count >= rules["high_exec_count"]:
+                buckets.append("high_exec_count")
             rows.append(
                 {
                     "object_id": _hash_id(f"nosql:{entry['source_component_key']}:{command}"),
@@ -1056,9 +1074,9 @@ def _prepare_nosql_rows(
                     "command_name": command[:80],
                     "representative_command": command,
                     "avg_rt_ms": _stringify_number(avg_rt),
-                    "total_time_ms": _stringify_number(raw.get("total_time_ms")),
+                    "total_time_ms": _stringify_number(total_time),
                     "qps": _stringify_number(raw.get("qps")),
-                    "exec_count": _stringify_number(raw.get("exec_count")),
+                    "exec_count": _stringify_number(exec_count),
                     "error_count": _stringify_number(raw.get("error_count")),
                     "slow_count": _stringify_number(raw.get("slow_count")),
                     "bucket_hits": ";".join(buckets),
@@ -1076,7 +1094,20 @@ def _load_component_operation_rows(path: Path, *, kind: str) -> tuple[list[dict[
     if path.suffix.lower() == ".csv":
         return _load_component_operation_csv(path, kind=kind), None
     if path.suffix.lower() == ".xls":
-        return _load_component_operation_xls_strings(path, kind=kind)
+        xlrd_warning: str | None = None
+        try:
+            parsed = parse_component_operation_xls(path, kind=kind)
+        except Exception as exc:
+            parsed = None
+            xlrd_warning = f"{path.name} xlrd parsing failed: {exc}"
+        else:
+            if parsed.warnings:
+                xlrd_warning = "; ".join(parsed.warnings)
+        if parsed and parsed.rows:
+            return parsed.rows, xlrd_warning
+        fallback_rows, fallback_warning = _load_component_operation_xls_strings(path, kind=kind)
+        combined = "; ".join(part for part in [xlrd_warning, fallback_warning] if part)
+        return fallback_rows, combined
     return [], f"Unsupported component operation file format: {path}"
 
 
@@ -1251,6 +1282,7 @@ def _reason_text(buckets: list[str]) -> list[str]:
         "high_slow_count": "慢次数命中筛选阈值",
         "high_avg_rt": "平均响应时间命中筛选阈值",
         "high_total_time": "总耗时命中筛选阈值",
+        "high_exec_count": "执行次数命中筛选阈值",
         "high_error_count": "错误数命中筛选阈值",
         "low_freq_outlier": "低频但明显离群",
         "selected_by_global_rank": "进入全局 SQL 候选排名",
@@ -1304,6 +1336,15 @@ def _query_object_hint(sql_text: str) -> str:
     if match:
         return match.group(1).strip("`")
     return ""
+
+
+def _sql_row_rank_key(row: dict[str, Any]) -> tuple[float, float, float, float]:
+    return (
+        _to_float(row.get("total_time_ms")) or 0,
+        _to_float(row.get("avg_rt_ms")) or 0,
+        _to_float(row.get("slow_count")) or 0,
+        _to_float(row.get("exec_count")) or 0,
+    )
 
 
 def _looks_like_sql(text: str, *, kind: str) -> bool:

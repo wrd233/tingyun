@@ -16,7 +16,7 @@
     "request_master": 11,
     "interface_cluster_master": 0,
     "sql_master": 20,
-    "nosql_master": 2,
+    "nosql_master": 4,
     "request_evidence_index": 11,
     "sql_evidence_index": 20
   }

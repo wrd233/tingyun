@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Remote client for calling a Tingyun adapter service from machine B."
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = []
+dependencies = ["xlrd>=2.0,<3"]
 
 [project.scripts]
 tingyun-adapter-client = "tingyun_adapter_client.cli:main"

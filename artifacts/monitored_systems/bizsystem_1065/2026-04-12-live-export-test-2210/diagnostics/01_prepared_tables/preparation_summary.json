@@ -15,11 +15,8 @@
     "application": 3,
     "request": 136,
     "interface_cluster": 0,
-    "sql": 679,
-    "nosql": 6
+    "sql": 681,
+    "nosql": 10
   },
-  "warnings": [
-    "component_analysis_export_database__SQL_.xls was parsed with strings fallback; avg_rt_ms may be partial and total_time/exec_count fields are not yet materialized.",
-    "component_analysis_export_nosql__SQL_.xls was parsed with strings fallback; avg_rt_ms may be partial and total_time/exec_count fields are not yet materialized."
-  ]
+  "warnings": []
 }
