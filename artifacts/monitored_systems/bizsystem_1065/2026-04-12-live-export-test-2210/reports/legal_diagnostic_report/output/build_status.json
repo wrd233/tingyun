@@ -1,0 +1,10 @@
+{
+  "compiled": true,
+  "compiler": "xelatex (docker: texlive/texlive:latest)",
+  "output_file": "legal_diagnostic_report.pdf",
+  "pages": 12,
+  "notes": [
+    "PDF was compiled in a containerized TeX Live environment to avoid adding a heavy local report_input layer or relying on host-level xelatex.",
+    "The current output still contains some overfull hbox warnings caused by long interface and SQL identifiers in generated tables."
+  ]
+}

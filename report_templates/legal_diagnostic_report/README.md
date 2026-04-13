@@ -9,6 +9,7 @@
 - 面向单个诊断批次的正式巡检/排查报告
 - 直接读取同批次 `diagnostics/` 下的主表、证据索引、deep-dive、原始导出摘要等资产
 - 允许人工补充截图、图表、备注，但不要求先把 diagnostics 全量复制为新的中间输入包
+- 不负责保存某次报告实例的数据或输出结果
 
 ## 目录说明
 
@@ -25,6 +26,12 @@
 - `notes.md`
   - 模板继承来源、当前稳定部分与待泛化部分
 
+## 与报告实例的关系
+
+- 这里保存的是“报告类型定义”
+- 具体某一次批次的实例目录应落在 `artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/`
+- 模板目录本身不保存实例级 diagnostics 副本、截图或生成结果
+
 ## 使用方式
 
 未来 agent 或 renderer 应优先：
@@ -34,5 +41,9 @@
 3. 直接从同级 `diagnostics/` 读取资产。
 4. 生成中间 tex/md/json 到实例目录的 `generated/`。
 5. 输出最终 `.tex/.pdf/.docx` 到实例目录的 `output/`。
+
+当前最小 renderer 入口：
+
+- `python3 report_templates/renderers/render_report_instance.py --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml`
 
 当前这份模板先服务于 `bizsystem_1065 / 2026-04-12-live-export-test-2210` 这个真实批次实例。

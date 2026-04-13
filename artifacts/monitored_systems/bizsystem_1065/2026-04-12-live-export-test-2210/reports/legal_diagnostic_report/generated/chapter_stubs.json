@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-04-13T11:41:24.819499+00:00",
+  "report_type_id": "legal_diagnostic_report",
+  "chapters": [
+    {
+      "chapter_id": "1",
+      "title": "概述",
+      "status": "template_stub"
+    },
+    {
+      "chapter_id": "2",
+      "title": "系统运行现状与性能问题分析",
+      "status": "template_stub"
+    },
+    {
+      "chapter_id": "3",
+      "title": "结论",
+      "status": "template_stub"
+    }
+  ]
+}

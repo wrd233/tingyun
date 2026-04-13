@@ -53,6 +53,25 @@
 
 它不复制 diagnostics 中的主表、证据索引和 deep-dive 资产。
 
+## 当前最小执行入口
+
+当前第三阶段已经有一个最小 renderer：
+
+- `report_templates/renderers/render_report_instance.py`
+
+它会：
+
+- 读取实例级 `report_config.yaml`
+- 解析模板目录下的 `spec.yaml`
+- 直接检查同批次 `diagnostics/` 下的 required / optional assets
+- 在实例目录的 `generated/` 下生成最小骨架：
+  - `report_context.json`
+  - `chapter_stubs.json`
+  - `assembled_main.tex`
+  - `asset_index_stub.json`
+
+它当前还不会自动产出完整高质量正文，但已经能证明第三阶段“开始可执行”。
+
 ## 当前原则
 
 - 保持 stage1 / stage2 与最终报告模板解耦

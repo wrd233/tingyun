@@ -1,10 +1,18 @@
 \hypersetup{hidelinks}
 \pagestyle{empty}
 
-\setmainfont{Liberation Serif}
-\setsansfont{Noto Sans CJK SC}
-\setCJKmainfont{Noto Serif CJK SC}
-\setCJKsansfont{Noto Sans CJK SC}
+\IfFontExistsTF{Liberation Serif}{\setmainfont{Liberation Serif}}{%
+  \IfFontExistsTF{Times New Roman}{\setmainfont{Times New Roman}}{\setmainfont{Latin Modern Roman}}%
+}
+\IfFontExistsTF{Noto Sans CJK SC}{\setsansfont{Noto Sans CJK SC}}{%
+  \IfFontExistsTF{TeX Gyre Heros}{\setsansfont{TeX Gyre Heros}}{\setsansfont{Latin Modern Sans}}%
+}
+\IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont{Noto Serif CJK SC}}{%
+  \IfFontExistsTF{Songti SC}{\setCJKmainfont{Songti SC}}{\setCJKmainfont{FandolSong-Regular}}%
+}
+\IfFontExistsTF{Noto Sans CJK SC}{\setCJKsansfont{Noto Sans CJK SC}}{%
+  \IfFontExistsTF{Heiti SC}{\setCJKsansfont{Heiti SC}}{\setCJKsansfont{FandolHei-Regular}}%
+}
 
 \definecolor{HeaderBlue}{HTML}{0070C0}
 \definecolor{RuleBlue}{HTML}{5B9BD5}

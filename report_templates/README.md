@@ -17,6 +17,11 @@
 - `notes.md`
   - 当前模板的继承来源、稳定度和后续泛化说明
 
+配套的最小执行入口放在：
+
+- `renderers/`
+  - 读取实例级 `report_config.yaml`，直接从同批次 `diagnostics/` 生成 `generated/` 骨架
+
 ## 当前模板
 
 - `legal_diagnostic_report/`
@@ -28,3 +33,10 @@
 - 报告实例：落在具体诊断批次目录下的 `artifacts/monitored_systems/<system_key>/<batch_key>/reports/<report_type_id>/`
 
 第三阶段默认直接读取同批次下的 `diagnostics/` 资产，不要求先构造一层新的重型 `report_input_bundle/`。
+
+当前可执行入口：
+
+```bash
+python3 report_templates/renderers/render_report_instance.py \
+  --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml
+```

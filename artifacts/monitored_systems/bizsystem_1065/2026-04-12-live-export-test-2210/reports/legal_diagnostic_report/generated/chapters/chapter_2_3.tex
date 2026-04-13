@@ -1,0 +1,103 @@
+\SubsectionTitle{2.3 系统SQL检查}
+
+本章节优先读取 sql\_master.csv、sql\_evidence\_index.csv 与 04\_deep\_dive/sql/，原始导出只作为补充。\par
+
+\SubsubsectionTitle{2.3.1 系统数据库整体检查}
+
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\Centering\arraybackslash}p{0.26\textwidth}>{\Centering\arraybackslash}p{0.56\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 核心数据库实例 & \cellcolor{HeaderBlue}\color{white}\bfseries 10.190.22.21:3306 \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 已入主表 SQL 数 & 20 \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 已挂接 deep-dive 的 SQL 数 & 1 \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 连接池明细 & 【当前批次未直接沉淀到 diagnostics 中，待补充】 \\
+\hline
+\end{tabular}
+\end{center}
+
+\SubsubsectionTitle{2.3.2 慢SQL检查}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.36\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endhead
+bpm\_todo\_logo & SELECT * FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND ACTIVITY\_ID IN ( SELECT s.STEP\_ID FROM LAS\_FLOW\_STEP s ) AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND  & 2791 & 456 & 255 & 0 \\
+\hline
+bpm\_todo\_logo & SELECT ? FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND ACTIVITY\_FINISH\_DATE IS NOT NUll & 2214 & 366 & 254 & 0 \\
+\hline
+LAS\_CONTRACT\_UPDATE & select count(*) as countNum from (SELECT a.ID as ID ,( CASE WHEN a.CONTRACT\_SELF\_CODE IS NOT NULL AND a.CREATE\_UNIT\_ID=? AND a.SELF\_CODE IS NOT NULL THEN CONCAT & 2888 & 262 & 262 & 0 \\
+\hline
+HD\_TODOLIST & select ? from HD\_TODOLIST t where t.RECEIVERCODE in (?) & 125 & 4215 & 9 & 0 \\
+\hline
+LAS\_CONTRACT\_UPDATE & SELECT a.ID as ID ,( CASE WHEN a.CONTRACT\_SELF\_CODE IS NOT NULL AND a.CREATE\_UNIT\_ID=? AND a.SELF\_CODE IS NOT NULL THEN CONCAT(a.CONTRACT\_SELF\_CODE,?,a.SELF\_COD & 2363 & 208 & 208 & 0 \\
+\hline
+LAS\_CONTRACT\_INFO & select count(*) as countNum from (SELECT c.ID,c.CONTRACT\_SELF\_CODE docCategoryId,c.CONTRACT\_PERIOD contractPeriod,c.START\_TIME startTime,c.END\_TIME endTime,c.CO & 63 & 5371 & 0 & 0 \\
+\hline
+HD\_COMP\_ATAH\_GROUP\_REL & select ? from HD\_COMP\_ATAH\_GROUP\_REL attachment0\_ where attachment0\_.ATAH\_CODE=? & 520 & 581 & 2 & 0 \\
+\hline
+LAS\_CONTRACT\_INFO\_CE1 & select ? from LAS\_CONTRACT\_INFO\_CE1 zstzdmc1x0\_ where zstzdmc1x0\_.LAS\_CONTRACT\_INFO\_CE1ID=? order by zstzdmc1x0\_.ID asc & 118 & 2348 & 6 & 0 \\
+\hline
+hd\_todo\_seen\_log & SELECT ? from hd\_todo\_seen\_log where TODO\_ID=? & 767 & 309 & 2 & 0 \\
+\hline
+HD\_FORM\_OPINION & select ? from HD\_FORM\_OPINION opinionent0\_ where opinionent0\_.BEANID=? and opinionent0\_.FORMID=? order by opinionent0\_.SIGNDATE asc & 1098 & 183 & 8 & 0 \\
+\hline
+\end{longtable}
+
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont bpm\_todo\_logo}\par
+
+\noindent\textbf{关键数据：}平均 2791ms，响应总时间 1272842ms，调用次数 456，错误 0。\par
+
+\noindent\textbf{SQL 片段：} SELECT * FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND ACTIVITY\_ID IN ( SELECT s.STEP\_ID FROM LAS\_FLOW\_STEP s ) AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND ACTIVITY\_FINISH\_DATE IS NOT NUll\par
+
+\noindent\textbf{【现状】} 已存在 SQL deep-dive：`dd\_20260412T162340Z\_24fdde55`，摘要 `manual\_sql\_fact\_sheet\_validation`，证据数 4，页面链接 2。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont bpm\_todo\_logo}\par
+
+\noindent\textbf{关键数据：}平均 2214ms，响应总时间 810361ms，调用次数 366，错误 0。\par
+
+\noindent\textbf{SQL 片段：} SELECT ? FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND ACTIVITY\_FINISH\_DATE IS NOT NUll\par
+
+\noindent\textbf{【现状】} 当前证据状态为 `待补证据`，页面链接 0；如需进一步定位调用者，应继续补 deep-dive。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont LAS\_CONTRACT\_UPDATE}\par
+
+\noindent\textbf{关键数据：}平均 2888ms，响应总时间 756773ms，调用次数 262，错误 0。\par
+
+\noindent\textbf{SQL 片段：} select count(*) as countNum from (SELECT a.ID as ID ,( CASE WHEN a.CONTRACT\_SELF\_CODE IS NOT NULL AND a.CREATE\_UNIT\_ID=? AND a.SELF\_CODE IS NOT NULL THEN CONCAT(a.CONTRACT\_SELF\_CODE,?,a.SELF\_CODE) ELSE a.CONTRACT\_SELF\_CO\par
+
+\noindent\textbf{【现状】} 当前证据状态为 `待补证据`，页面链接 0；如需进一步定位调用者，应继续补 deep-dive。\par
+
+\SubsubsectionTitle{2.3.3 异常SQL检查}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.2pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.36\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endhead
+\multicolumn{6}{l}{【当前批次未获取到异常SQL主表数据】}\\
+\hline
+\end{longtable}
+

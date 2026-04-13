@@ -1,12 +1,16 @@
 report_type_id: legal_diagnostic_report
 system_key: bizsystem_1065
 batch_key: 2026-04-12-live-export-test-2210
-diagnostics_root: /Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics
-output_root: /Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/output
-template_root: /Users/wangrundong/work/mywork/report_templates/legal_diagnostic_report
+path_mode: repo_relative
+diagnostics_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics
+template_root: report_templates/legal_diagnostic_report
+reports_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report
+generated_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/generated
+output_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/output
+assets_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/assets
 report_title: 集团法务应用性能巡检报告
 report_date: 2026-04-13
 language: zh-CN
 notes:
-  - 当前实例按第三阶段轻量方案建立，直接读取同级 diagnostics。
+  - 当前实例按第三阶段轻量方案建立，使用 repo-relative 路径并直接读取同批次 diagnostics。
   - generated/output/assets 仅作为本批次报告工作区，不承载新的重型输入层。

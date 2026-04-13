@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-04-13T11:41:24.819499+00:00",
+  "report_type_id": "legal_diagnostic_report",
+  "report_type_name": "法务系统巡检与排查报告",
+  "report_title": "集团法务应用性能巡检报告",
+  "report_date": "2026-04-13",
+  "language": "zh-CN",
+  "path_mode": "repo_relative",
+  "direct_read_mode": true,
+  "resolved_paths": {
+    "repo_root": "/Users/wangrundong/work/mywork",
+    "config_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/report_config.yaml",
+    "diagnostics_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics",
+    "template_root": "/Users/wangrundong/work/mywork/report_templates/legal_diagnostic_report",
+    "reports_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report",
+    "generated_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/generated",
+    "chapters_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/generated/chapters",
+    "output_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/output",
+    "assets_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/assets"
+  },
+  "diagnostics_reads": [
+    "00_raw_exports/export_registry.json",
+    "01_prepared_tables/preparation_summary.json",
+    "02_master_tables/request_master.csv",
+    "02_master_tables/sql_master.csv",
+    "02_master_tables/interface_cluster_master.csv",
+    "02_master_tables/materialization_summary.json",
+    "03_evidence_indexes/request_evidence_index.csv",
+    "03_evidence_indexes/sql_evidence_index.csv",
+    "03_evidence_indexes/interface_cluster_evidence_index.csv",
+    "04_deep_dive/deep_dive_registry.csv"
+  ],
+  "diagnostics_assets": {
+    "required": [
+      {
+        "relative_path": "02_master_tables/request_master.csv",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/02_master_tables/request_master.csv",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "relative_path": "02_master_tables/sql_master.csv",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/02_master_tables/sql_master.csv",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "relative_path": "03_evidence_indexes/request_evidence_index.csv",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/03_evidence_indexes/request_evidence_index.csv",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "relative_path": "03_evidence_indexes/sql_evidence_index.csv",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/03_evidence_indexes/sql_evidence_index.csv",
+        "exists": true,
+        "kind": "file"
+      }
+    ],
+    "optional": [
+      {
+        "relative_path": "01_prepared_tables/",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/01_prepared_tables",
+        "exists": true,
+        "kind": "directory"
+      },
+      {
+        "relative_path": "04_deep_dive/",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/04_deep_dive",
+        "exists": true,
+        "kind": "directory"
+      },
+      {
+        "relative_path": "../report_materials/",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/../report_materials",
+        "exists": true,
+        "kind": "directory"
+      },
+      {
+        "relative_path": "../../../knowledge/monitored_systems/<system_key>/",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/../../../knowledge/monitored_systems/<system_key>",
+        "exists": false,
+        "kind": "file"
+      }
+    ],
+    "missing_required_count": 0
+  },
+  "chapter_outline": [
+    {
+      "chapter_id": "1",
+      "title": "概述",
+      "sections": {
+        "1.1": "巡检对象与时间范围",
+        "1.2": "证据来源与分析口径"
+      }
+    },
+    {
+      "chapter_id": "2",
+      "title": "系统运行现状与性能问题分析",
+      "sections": {
+        "2.1": {
+          "title": "部署架构与运行环境概况",
+          "children": {
+            "2.1.1": "系统规模总览",
+            "2.1.2": "服务器资源与主机分布",
+            "2.1.3": "服务与端口部署情况"
+          }
+        },
+        "2.2": {
+          "title": "系统接口检查",
+          "children": {
+            "2.2.1": "平均响应时间高的慢接口",
+            "2.2.2": "访问量高且响应时间差的重点接口",
+            "2.2.3": "平均错误率高的异常接口",
+            "2.2.4": "访问量高且错误率高的重点接口"
+          }
+        },
+        "2.3": {
+          "title": "系统SQL检查",
+          "children": {
+            "2.3.1": "系统数据库整体检查",
+            "2.3.2": "慢SQL检查",
+            "2.3.3": "异常SQL检查"
+          }
+        }
+      }
+    },
+    {
+      "chapter_id": "3",
+      "title": "结论",
+      "sections": {}
+    }
+  ],
+  "chapter_inputs": {
+    "chapter_1": {
+      "assets": [
+        "00_raw_exports/export_registry.json",
+        "01_prepared_tables/preparation_summary.json",
+        "02_master_tables/materialization_summary.json"
+      ],
+      "status": "filled"
+    },
+    "chapter_2_1": {
+      "assets": [
+        "01_prepared_tables/preparation_summary.json",
+        "02_master_tables/materialization_summary.json"
+      ],
+      "status": "partial"
+    },
+    "chapter_2_2": {
+      "assets": [
+        "02_master_tables/request_master.csv",
+        "03_evidence_indexes/request_evidence_index.csv",
+        "04_deep_dive/deep_dive_registry.csv"
+      ],
+      "status": "filled",
+      "summary": {
+        "request_master_rows": 11,
+        "request_evidence_rows": 11,
+        "deep_dive_hits": 1
+      }
+    },
+    "chapter_2_3": {
+      "assets": [
+        "02_master_tables/sql_master.csv",
+        "03_evidence_indexes/sql_evidence_index.csv",
+        "04_deep_dive/deep_dive_registry.csv"
+      ],
+      "status": "filled",
+      "summary": {
+        "sql_master_rows": 20,
+        "sql_evidence_rows": 20,
+        "sql_deep_dive_hits": 1
+      }
+    },
+    "chapter_3": {
+      "assets": [
+        "02_master_tables/request_master.csv",
+        "02_master_tables/sql_master.csv",
+        "04_deep_dive/deep_dive_registry.csv"
+      ],
+      "status": "partial"
+    }
+  },
+  "missing_items": [
+    "2.1 缺少主机级部署与端口明细，当前仅能说明 prepared/master 摘要和批次 warning。",
+    "2.3.3 当前 sql_master 中没有 error_count > 0 的条目，异常 SQL 章节只能占位。",
+    "2.3.1 连接池详细指标尚未直接注入第三阶段上下文。"
+  ],
+  "rendering_rules": {
+    "direct_read_from_diagnostics": true,
+    "forbid_report_input_bundle": true,
+    "keep_template_layout_stable": true,
+    "config_path_mode": "repo_relative",
+    "prefer_master_tables_for_ranked_objects": true,
+    "prefer_evidence_indexes_for_status_and_screenshot_plans": true,
+    "allow_deep_dive_as_supporting_detail": true,
+    "preserve_manual_editability": true,
+    "produce_minimal_generated_skeleton": true,
+    "default_generated_outputs": [
+      "report_context.json",
+      "chapter_stubs.json",
+      "assembled_main.tex",
+      "asset_index_stub.json"
+    ],
+    "latex_strategy": {
+      "keep_main_template": true,
+      "use_light_fragments": true,
+      "fragment_policy": "cover_toc_and_major_chapters"
+    }
+  },
+  "missing_data_policy": {
+    "required_asset_missing": "emit_explicit_placeholder",
+    "optional_asset_missing": "skip_with_note",
+    "forbid_model_guessing": true,
+    "screenshot_missing": "keep_placeholder_caption_only",
+    "sql_or_trace_url_missing": "record_recoverable_gap_with_selector"
+  },
+  "notes": [
+    "当前实例按第三阶段轻量方案建立，使用 repo-relative 路径并直接读取同批次 diagnostics。",
+    "generated/output/assets 仅作为本批次报告工作区，不承载新的重型输入层。"
+  ]
+}

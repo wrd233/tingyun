@@ -1,0 +1,29 @@
+\SectionTitle{1概述}
+
+本次测试基于批次 `2026-04-12-live-export-test-2210` 的现有 diagnostics 资产进行第三阶段单模板渲染验证，未重新复制 diagnostics，也未引入新的重型输入层。\par
+
+\SubsectionTitle{1.1巡检对象与时间范围}
+
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\RaggedRight\arraybackslash}p{0.25\textwidth}>{\RaggedRight\arraybackslash}p{0.58\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 项目 & \cellcolor{HeaderBlue}\color{white}\bfseries 内容 \\
+\hline
+巡检对象 & bizsystem\_1065 \\
+\hline
+统计时间范围 & 2026-01-01 00:00 至 2026-03-31 23:59 \\
+\hline
+报告标题 & 集团法务应用性能巡检报告 \\
+\hline
+主要分析对象 & 接口主表、SQL主表、证据索引、deep-dive bundles \\
+\hline
+\end{tabular}
+\end{center}
+
+\SubsectionTitle{1.2证据来源与分析口径}
+
+本次生成直接读取同批次 `diagnostics/`：原始导出登记 5 项，prepared 行数包括 request=136、interface\_cluster=136、sql=681；当前主表行数包括 request\_master=11、interface\_cluster\_master=11、sql\_master=20。\par
+
+如果某章节所需资产不存在，本轮测试会输出固定占位而不是臆造判断。\par

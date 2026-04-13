@@ -18,4 +18,10 @@
 - 报告实例落在 `artifacts/monitored_systems/<system_key>/<batch_key>/reports/`
 - 直接读取同批次 `diagnostics/`，不引入新的重型 `report_input_bundle/`
 
+当前最小执行入口：
+
+- `python3 report_templates/renderers/render_report_instance.py --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml`
+
+当前 renderer 会先在实例目录的 `generated/` 下生成骨架文件，再由后续 agent 继续补章节内容与最终排版。
+
 `docs/decisions/` 中的报告相关文档只作为历史经验与阶段记录，不作为当前设计说明。

@@ -1,6 +1,7 @@
 report_type_id: legal_diagnostic_report
 report_type_name: 法务系统巡检与排查报告
 version: 0.1.0
+renderer_entry: report_templates/renderers/render_report_instance.py
 output_format:
   primary: latex
   optional:
@@ -14,15 +15,15 @@ diagnostics_source_root: artifacts/monitored_systems/<system_key>/<batch_key>/di
 direct_read_mode: true
 report_instance_root: artifacts/monitored_systems/<system_key>/<batch_key>/reports/<report_type_id>
 required_assets:
-  - diagnostics/02_master_tables/request_master.csv
-  - diagnostics/02_master_tables/sql_master.csv
-  - diagnostics/03_evidence_indexes/request_evidence_index.csv
-  - diagnostics/03_evidence_indexes/sql_evidence_index.csv
+  - 02_master_tables/request_master.csv
+  - 02_master_tables/sql_master.csv
+  - 03_evidence_indexes/request_evidence_index.csv
+  - 03_evidence_indexes/sql_evidence_index.csv
 optional_assets:
-  - diagnostics/01_prepared_tables/
-  - diagnostics/04_deep_dive/
-  - report_materials/
-  - knowledge/monitored_systems/<system_key>/
+  - 01_prepared_tables/
+  - 04_deep_dive/
+  - ../report_materials/
+  - ../../../knowledge/monitored_systems/<system_key>/
 chapter_tree:
   "1":
     title: 概述
@@ -70,10 +71,17 @@ rendering_rules:
   direct_read_from_diagnostics: true
   forbid_report_input_bundle: true
   keep_template_layout_stable: true
+  config_path_mode: repo_relative
   prefer_master_tables_for_ranked_objects: true
   prefer_evidence_indexes_for_status_and_screenshot_plans: true
   allow_deep_dive_as_supporting_detail: true
   preserve_manual_editability: true
+  produce_minimal_generated_skeleton: true
+  default_generated_outputs:
+    - report_context.json
+    - chapter_stubs.json
+    - assembled_main.tex
+    - asset_index_stub.json
   latex_strategy:
     keep_main_template: true
     use_light_fragments: true

@@ -1,0 +1,133 @@
+\SubsectionTitle{2.2 系统接口检查}
+
+本章节优先读取 request\_master.csv 与 request\_evidence\_index.csv，并在存在 deep-dive 时补充其摘要，不绕过主表主线。\par
+
+\SubsubsectionTitle{2.2.1 平均响应时间高的慢接口}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.34\textwidth}>{\RaggedRight\arraybackslash}p{0.12\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 \\
+\hline
+\endhead
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/user-tasks/processed (POST) & 2421.00 & 1 & 0.00 & 0 & 1 \\
+\hline
+URI/grcv5/wp/contractView/viewContract.htm & 2283.50 & 2 & 0.00 & 0 & 1 \\
+\hline
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/done-pages/\{instId\} & 1774.00 & 1 & 0.00 & 0 & 0 \\
+\hline
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/user-tasks/processed (POST) & 1562.00 & 1 & 0.00 & 0 & 0 \\
+\hline
+SpringController/\$\{url.workflow.view\} & 1548.86 & 7 & 0.00 & 0 & 2 \\
+\hline
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/done-pages/\{instId\} & 1482.00 & 1 & 0.00 & 0 & 0 \\
+\hline
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/todo-pages/\{id\} & 386.00 & 2 & 50.00 & 1 & 0 \\
+\hline
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/todo-pages/\{id\} & 136.33 & 3 & 66.67 & 2 & 0 \\
+\hline
+\end{longtable}
+
+\SubsubsectionTitle{2.2.2 访问量高\&响应时间差的重点接口(重点)}
+
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\$\{url.workflow.view\}}\par
+
+\noindent\textbf{关键数据：}请求 7，平均 1548.86ms，错误 0，错误率 0.00\%，慢次数 2\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 当前已挂接证据状态 `待补证据`，页面链接 0，trace 线索 0，截图提示状态 `待补充`。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont URI/grcv5/wp/contractView/viewContract.htm}\par
+
+\noindent\textbf{关键数据：}请求 2，平均 2283.50ms，错误 0，错误率 0.00\%，慢次数 1\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 当前已挂接证据状态 `待补证据`，页面链接 0，trace 线索 0，截图提示状态 `待补充`。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/user-tasks/processed (POST)}\par
+
+\noindent\textbf{关键数据：}请求 1，平均 2421.00ms，错误 0，错误率 0.00\%，慢次数 1\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 已存在 deep-dive 结果：`dd\_20260412T164534Z\_6ecd3c15`，类型为 `request\_context`，摘要为 `manual\_request\_action\_fact\_sheet\_validation`；证据数 8，页面链接 2。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/done-pages/\{instId\}}\par
+
+\noindent\textbf{关键数据：}请求 1，平均 1774.00ms，错误 0，错误率 0.00\%，慢次数 0\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 当前已挂接证据状态 `待补证据`，页面链接 0，trace 线索 0，截图提示状态 `待补充`。\par
+
+\SubsubsectionTitle{2.2.3 平均错误率高的异常接口}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.35}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.34\textwidth}>{\RaggedRight\arraybackslash}p{0.12\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 \\
+\hline
+\endhead
+URI/grcv5/api/flow-mobile/v1/task-form-process/done-pages/undefined & 5.00 & 2 & 100.00 & 2 & 0 \\
+\hline
+URI/grcv5/api/flow-mobile/v1/task-form-process/done-pages/undefined & 5.00 & 1 & 100.00 & 1 & 0 \\
+\hline
+URI/favicon.ico & 0.00 & 2 & 100.00 & 2 & 0 \\
+\hline
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/todo-pages/\{id\} & 136.33 & 3 & 66.67 & 2 & 0 \\
+\hline
+SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/todo-pages/\{id\} & 386.00 & 2 & 50.00 & 1 & 0 \\
+\hline
+\end{longtable}
+
+\SubsubsectionTitle{2.2.4 访问量高\&错误率高的重点接口(重点)}
+
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/todo-pages/\{id\}}\par
+
+\noindent\textbf{关键数据：}请求 3，平均 136.33ms，错误 2，错误率 66.67\%，慢次数 0\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 当前已挂接证据状态 `待补证据`，页面链接 0，trace 线索 0，截图提示状态 `待补充`。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont URI/grcv5/api/flow-mobile/v1/task-form-process/done-pages/undefined}\par
+
+\noindent\textbf{关键数据：}请求 2，平均 5.00ms，错误 2，错误率 100.00\%，慢次数 0\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 当前已挂接证据状态 `待补证据`，页面链接 0，trace 线索 0，截图提示状态 `待补充`。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont URI/favicon.ico}\par
+
+\noindent\textbf{关键数据：}请求 2，平均 0.00ms，错误 2，错误率 100.00\%，慢次数 0\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 当前已挂接证据状态 `待补证据`，页面链接 0，trace 线索 0，截图提示状态 `待补充`。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\$\{url.rest.prefix.flowmobileapi.v1\}/task-form-process/todo-pages/\{id\}}\par
+
+\noindent\textbf{关键数据：}请求 2，平均 386.00ms，错误 1，错误率 50.00\%，慢次数 0\par
+
+\noindent\textbf{判断：}当前条目来自 request\_master 主表，已进入主线对象；后续结论应继续以主表和证据索引为准。\par
+
+\noindent\textbf{【现状】} 当前已挂接证据状态 `待补证据`，页面链接 0，trace 线索 0，截图提示状态 `待补充`。\par

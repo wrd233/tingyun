@@ -15,11 +15,25 @@
 - `report_config.yaml`
   - 当前实例的轻量配置
 - `generated/`
-  - 后续 agent 生成的中间 tex/json/md 文件
+  - renderer 或 agent 生成的中间 tex/json/md 文件
 - `output/`
   - 最终 tex/pdf/docx 等产物
 - `assets/`
   - 截图、插图、表格附件等实例级补充素材
+
+## 当前最小执行入口
+
+```bash
+python3 report_templates/renderers/render_report_instance.py \
+  --config artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/report_config.yaml
+```
+
+当前这一步会直接读取同批次 `diagnostics/`，并在 `generated/` 下生成：
+
+- `report_context.json`
+- `chapter_stubs.json`
+- `assembled_main.tex`
+- `asset_index_stub.json`
 
 ## 重要约束
 

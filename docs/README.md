@@ -48,3 +48,7 @@
 `decisions/` 保留历史阶段上下文、legacy 设计和阶段判断，不作为当前事实来源。当前仓库以三份主设计文档及其补充文档为准。
 
 第三阶段的模板定义目录在仓库根 `report_templates/`，而某次批次的报告实例目录在 `artifacts/monitored_systems/<system_key>/<batch_key>/reports/`。
+
+当前第三阶段最小执行入口：
+
+- `python3 report_templates/renderers/render_report_instance.py --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml`
