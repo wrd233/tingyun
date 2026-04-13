@@ -47,3 +47,7 @@ python3 report_templates/renderers/render_report_instance.py \
 - direct read from diagnostics
 - 不引入 `report_input_bundle/`
 - 模板定义与实例输出分离
+
+与第三阶段最相关的项目级 skill 在 [skills/report-generation-skill/](/Users/wangrundong/work/mywork/skills/report-generation-skill)。
+
+`report_templates/` 负责“报告类型怎么定义”，对应 skill 负责“围绕当前模板和实例目录怎么稳定执行”。

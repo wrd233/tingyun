@@ -13,7 +13,10 @@
 
 - [adapter-internal-boundaries.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-internal-boundaries.md)
 - [deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
+- [skill-system-and-project-skills.md](/Users/wangrundong/work/mywork/docs/architecture/skill-system-and-project-skills.md)
 - [system-and-batch-semantics.md](/Users/wangrundong/work/mywork/docs/architecture/system-and-batch-semantics.md)
 - [directory-responsibilities.md](/Users/wangrundong/work/mywork/docs/architecture/directory-responsibilities.md)
+
+其中 `skill-system-and-project-skills.md` 对应仓库根 `skills/` 目录，用于说明项目级 skill 如何与 adapter / client / report_templates 协作。
 
 已降级或历史设计请查看 `docs/decisions/`，不要把它们当成当前主设计。

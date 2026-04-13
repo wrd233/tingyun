@@ -34,6 +34,7 @@
 - `workflows/apm-export-tables-to-master-tables.md`
 - `architecture/deep-dive-stage-and-adapter-bridge.md`
 - `reporting/stage3-report-generation-and-template-layout.md`
+- `architecture/skill-system-and-project-skills.md`
 
 如果要接手 deep-dive 的落盘与回写，建议再读：
 
@@ -54,3 +55,5 @@
 - `python3 report_templates/renderers/render_report_instance.py --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml`
 
 当前这条入口会直接读取同批次 `diagnostics/`，在实例目录的 `generated/` 下生成骨架文件，并在 `output/` 下刷新 `build_status.json`、编译日志和最终 tex/pdf。
+
+当前项目级 skill 统一放在仓库根 `skills/`，它们用于沉淀 request / SQL / 主表流水线 / 第三阶段报告生成的工作单元，不替代三大主工程或 `report_templates/`。

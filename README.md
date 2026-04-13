@@ -12,6 +12,8 @@
   - 机器 B 上的远程调用器与本地物化器
 - `docs/`
   - 架构、流程、报告语义、关键历史决策
+- `skills/`
+  - 项目级 skill 定义目录，集中放围绕诊断、主表、deep-dive 和报告生成的可复用工作单元
 - `report_templates/`
   - 第三阶段报告模板定义目录，集中放长期稳定的模板规格、渲染脚手架与 LaTeX 母版
 - `reference/`
@@ -80,6 +82,7 @@
 - `artifacts/`：当前或历史批次的本地运行产物，默认忽略
 - 主工程目录：只保留代码、最小运行入口、工程自身 README
 - `report_templates/`：报告类型定义；具体某次报告实例仍落在对应批次的 `artifacts/.../<batch_key>/reports/`
+- `skills/`：项目级 skill 定义；回答“围绕这些目录和资产该怎么做”，不替代 adapter/client/report_templates 本身
 
 ## 当前主设计入口
 
@@ -95,6 +98,7 @@
 - APM 导出到主表流水线：[apm-export-tables-to-master-tables.md](/Users/wangrundong/work/mywork/docs/workflows/apm-export-tables-to-master-tables.md)
 - Deep-dive 阶段与主表衔接：[deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
 - 第三阶段报告结构：[stage3-report-generation-and-template-layout.md](/Users/wangrundong/work/mywork/docs/reporting/stage3-report-generation-and-template-layout.md)
+- Skill 体系入口：[skill-system-and-project-skills.md](/Users/wangrundong/work/mywork/docs/architecture/skill-system-and-project-skills.md)
 
 历史设计与阶段文档统一放在 [docs/decisions/](/Users/wangrundong/work/mywork/docs/decisions/)，不作为当前事实来源。
 
@@ -106,7 +110,8 @@
 4. 如果要接手报告交付，读 [final-deliverable-and-report-expression.md](/Users/wangrundong/work/mywork/docs/reporting/final-deliverable-and-report-expression.md)。
 5. 如果要接手具体系统，读 `knowledge/monitored_systems/<system_key>/`。
 6. 如果要接手某次诊断，读 `artifacts/monitored_systems/<system_key>/<batch_key>/` 或对应 `samples/`。
-7. 如果要接手第三阶段报告模板，读 `report_templates/` 和 `docs/reporting/stage3-report-generation-and-template-layout.md`。
+7. 如果要接手项目级 skill，先读 `skills/` 和 `docs/architecture/skill-system-and-project-skills.md`。
+8. 如果要接手第三阶段报告模板，读 `report_templates/` 和 `docs/reporting/stage3-report-generation-and-template-layout.md`。
 
 ## 配置文件
 

@@ -90,3 +90,9 @@
 - 不引入 `report_input_bundle/`
 - 模板定义与报告实例分离
 - 报告实例与诊断批次强绑定
+
+与第三阶段最相关的项目级 skill 位于：
+
+- `skills/report-generation-skill/`
+
+它用于沉淀“如何围绕现有模板、实例目录和 diagnostics 资产稳定生成报告”的执行规则。

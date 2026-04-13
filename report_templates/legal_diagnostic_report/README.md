@@ -63,6 +63,12 @@
 
 如果宿主机没有 `xelatex`，renderer 会在不改变 direct-read 结构的前提下，优先尝试 Docker 中的 `texlive/texlive` 完成编译。
 
+与这套模板最直接对应的项目级 skill 位于：
+
+- [skills/report-generation-skill/](/Users/wangrundong/work/mywork/skills/report-generation-skill)
+
+模板目录回答“这种报告怎么定义”，对应 skill 回答“围绕当前模板、实例目录和 diagnostics 怎么稳定执行”。
+
 当前最小 renderer 入口：
 
 - `python3 report_templates/renderers/render_report_instance.py --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml`

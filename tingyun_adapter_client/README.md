@@ -207,6 +207,19 @@ PYTHONPATH=./src python3 -m tingyun_adapter_client.materialize_deep_dive \
 - `python3 -m tingyun_adapter_client.materialize_master_tables`
 - `python3 -m tingyun_adapter_client.materialize_deep_dive --source-json <deep_dive_source.json>`
 
+## 与项目级 skill 的关系
+
+仓库根的 [skills/](/Users/wangrundong/work/mywork/skills) 用来沉淀围绕 client 物化流程形成的项目级工作单元。
+
+当前最相关的是：
+
+- `skills/master-table-materialization-skill/`
+- `skills/request-diagnosis-skill/`
+- `skills/sql-diagnosis-skill/`
+- `skills/report-generation-skill/`
+
+它们回答的是“围绕当前 diagnostics / reports 应该怎么做”，而不是替代 client 自身的命令入口。
+
 ## 相关文档
 
 - [machine-a-machine-b-collaboration.md](/Users/wangrundong/work/mywork/docs/workflows/machine-a-machine-b-collaboration.md)

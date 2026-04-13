@@ -40,6 +40,17 @@
 - report support
 - knowledge enhancement
 
+## 与项目级 skill 的关系
+
+仓库根的 [skills/](/Users/wangrundong/work/mywork/skills) 用来沉淀围绕 adapter 能力形成的可复用工作单元。
+
+当前最相关的是：
+
+- `skills/request-diagnosis-skill/`
+- `skills/sql-diagnosis-skill/`
+
+这些 skill 不替代 adapter 的代码能力，而是说明 agent 应如何围绕 adapter 输出的主表、证据和 deep-dive 工作。
+
 ## 输入输出边界
 
 输入：
