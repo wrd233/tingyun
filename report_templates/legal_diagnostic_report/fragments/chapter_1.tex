@@ -1,0 +1,29 @@
+\SectionTitle{1概述}
+
+聚焦集团法务业务系统在 2026-1-1 至 2026-03-31 长时间窗内的性能稳定性、错误风险、数据库压力与接口调用异常。\par
+
+\SubsectionTitle{1.1巡检对象与时间范围}
+
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\RaggedRight\arraybackslash}p{0.25\textwidth}>{\RaggedRight\arraybackslash}p{0.58\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 项目 & \cellcolor{HeaderBlue}\color{white}\bfseries 内容 \\
+\hline
+巡检对象 & 集团法务业务系统 \\
+\hline
+统计时间范围 & 2026-\hspace{0pt}1-\hspace{0pt}1 00:\hspace{0pt}00 至 2026-\hspace{0pt}03-\hspace{0pt}31 23:\hspace{0pt}59 \\
+\hline
+主要分析对象 & 业务入口接口及关联调用链；（慢/\hspace{0pt}异常）SQL \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4em}
+
+\SubsectionTitle{1.2证据来源与分析口径}
+
+本模板在第三阶段直接读取同批次 `diagnostics/` 资产，优先使用 `02_master_tables/`、`03_evidence_indexes/` 与 `04_deep_dive/` 组织报告内容，不额外要求先转成新的重型中间输入包。\par
+
+\vspace{0.4em}

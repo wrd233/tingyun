@@ -33,6 +33,7 @@
 
 - `workflows/apm-export-tables-to-master-tables.md`
 - `architecture/deep-dive-stage-and-adapter-bridge.md`
+- `reporting/stage3-report-generation-and-template-layout.md`
 
 如果要接手 deep-dive 的落盘与回写，建议再读：
 
@@ -45,3 +46,5 @@
 - `python3 -m tingyun_adapter_client.cli materialize-deep-dive`
 
 `decisions/` 保留历史阶段上下文、legacy 设计和阶段判断，不作为当前事实来源。当前仓库以三份主设计文档及其补充文档为准。
+
+第三阶段的模板定义目录在仓库根 `report_templates/`，而某次批次的报告实例目录在 `artifacts/monitored_systems/<system_key>/<batch_key>/reports/`。

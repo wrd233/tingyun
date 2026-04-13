@@ -1,0 +1,189 @@
+\SubsectionTitle{2.2 系统接口检查}
+
+在2026-1-1 00:00 至 2026-03-31 23:59时间段内，分析平均响应时间超过1s的慢接口、高调用下的慢接口 以及 错误率超过1\%的接口\par
+
+\SubsubsectionTitle{2.2.1 平均响应时间高的慢接口}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.45}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.33\textwidth}>{\RaggedRight\arraybackslash}p{0.15\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 \\
+\hline
+\endhead
+SpringController/\hspace{0pt}ProductIndexController.\hspace{0pt}afterPropertiesSet & 734371.\hspace{0pt}43 & 23 & 0 & 0 & 23 \\
+\hline
+URI/\hspace{0pt}grcv5/\hspace{0pt}user/\hspace{0pt}component/\hspace{0pt}AttachmentController/\hspace{0pt}upload & 93255.\hspace{0pt}92 & 12 & 100 & 12 & 12 \\
+\hline
+SpringController/\hspace{0pt}serverapi/\hspace{0pt}restapi/\hspace{0pt}other/\hspace{0pt}v1 & 44803.\hspace{0pt}13 & 24 & 4.\hspace{0pt}17 & 1 & 1 \\
+\hline
+SpringController/\hspace{0pt}\$\{url.\hspace{0pt}attachment\}/\hspace{0pt}\$\{url.\hspace{0pt}attachment.\hspace{0pt}upload\} (POST) & 6425.\hspace{0pt}53 & 21373 & 0.\hspace{0pt}29 & 62 & 6759 \\
+\hline
+SpringController/\hspace{0pt}\$\{url.\hspace{0pt}attachment\}/\hspace{0pt}\$\{url.\hspace{0pt}attachment.\hspace{0pt}upload\} (POST) & 6085.\hspace{0pt}69 & 21905 & 0.\hspace{0pt}18 & 40 & 6447 \\
+\hline
+SpringController/\hspace{0pt}onlinePreview & 4022.\hspace{0pt}49 & 153526 & < 0.\hspace{0pt}01 & 6 & 36160 \\
+\hline
+URI/\hspace{0pt}grcv5/\hspace{0pt}*.\hspace{0pt}pdf（合并） & 2275.\hspace{0pt}14 & 98 & 7.\hspace{0pt}14 & 7 & 18 \\
+\hline
+URI/\hspace{0pt}grcv5/\hspace{0pt}serverapi/\hspace{0pt}cj/\hspace{0pt}rest/\hspace{0pt}dataCenter/\hspace{0pt}collectContract & 1255.\hspace{0pt}58 & 50 & 2 & 1 & 2 \\
+\hline
+\end{longtable}
+
+\vspace{0.4em}
+
+\SubsubsectionTitle{2.2.2 访问量高\&响应时间差的重点接口(重点)}
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\hspace{0pt}onlinePreview}\par
+
+\noindent\textbf{关键数据：}请求 155,697，平均 3.73s，错误 5，错误率 0.01\%，慢次数 35,240\par
+
+\noindent\textbf{判断：}这是当前最值得优先看的高访问慢接口之一。请求量极大、平均耗时高、慢次数非常多，而且和上传链路能互相印证，优先排查预览服务本身、文件转换、缓存和存储读取。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口当前仍是高访问高慢次数，代表性慢样本里，主要时间几乎都落在 cn.keking.web.controller.OnlinePreviewController.onlinePreview，其独占时间约 2494ms；其次才是 AttachmentPreConversionController.downLoadAttachementKfv。数据库只有 2 类 SQL，总 SQL 时间约 3ms，不是主要瓶颈。当前证据很集中，核心慢点在预览控制器自身及其前置转换/读取链路，不在数据库。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\hspace{0pt}\$\{url.\hspace{0pt}attachment\}/\hspace{0pt}\$\{url.\hspace{0pt}attachment.\hspace{0pt}upload\} (POST)}\par
+
+\noindent\textbf{关键数据：}请求 45,464，平均 6.09s，错误 100，错误率 0.28\%，慢次数 13,622\par
+
+\noindent\textbf{判断：}上传接口不是单点问题，更适合作为“上传/预览异常簇”的入口。它同时具备高访问、偏慢和错误，不宜只当作普通慢接口处理。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口的代表性慢样本里，最主要的耗时仍然落在 OnlinePreviewController.onlinePreview，独占时间约 16,837ms；AttachmentController.upload 本身约1,890ms。数据库侧只有少量附件元数据和主键生成相关 SQL，总 SQL 时间约 11ms，明显不是主因。当前更像上传请求同步触发了预览/预转换链路，导致上传被整体拖慢。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont URI/\hspace{0pt}grcv5/\hspace{0pt}wp/\hspace{0pt}contractView/\hspace{0pt}viewContract.\hspace{0pt}htm}\par
+
+\noindent\textbf{关键数据：}请求 117,755，平均 1.35s，错误 1,019，错误率 1.65\%，慢次数 5,138\par
+
+\noindent\textbf{判断：}合同查看是典型高流量页面入口。它的平均耗时不算最极端，但量大、总耗时高、错误也不低，优先看页面装配、合同明细查询和关联附件/流程信息的聚合逻辑。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口的代表性样本里，数据库独占时间约 1,892ms，已经占了绝大部分耗时。最重的 SQL 集中在 HD\_FORM\_GROUP\_MEMBER 和多张合同扩展信息表，单条查询可到 351ms、196ms、129ms、111ms。这里的核心问题已经比较明确，是合同查看页装配时数据库聚合过重。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\hspace{0pt}\$\{url.\hspace{0pt}workflow.\hspace{0pt}edit\}}\par
+
+\noindent\textbf{关键数据：}请求 164,768，平均 599ms，错误 1,128，错误率 1.13\%，慢次数 1,030\par
+
+\noindent\textbf{判断：}这类流程页面入口访问量很高，即使单次耗时没有达到“超慢”级别，也会在长窗内持续放大总体性能成本。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口的本身不算特别慢，耗时约 155ms，但存在不少慢执行的次数。。从 trace 结构看，慢执行的主要来源是javax.servlet.http.HttpServlet.service\par
+
+部分代码片段执行缓慢，达到了3,130ms。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\hspace{0pt}\$\{url.\hspace{0pt}workflow.\hspace{0pt}view\}}\par
+
+\noindent\textbf{关键数据：}请求 58,017，平均 663ms，错误 460，错误率 1.22\%，慢次数 299\par
+
+\noindent\textbf{判断：}这类流程页面入口访问量很高，即使单次耗时没有达到“超慢”级别，也会在长窗内持续放大总体性能成本。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 结构和 workflow.edit 很接近：executeQuery 76 次，数据库独占约 430ms，也存在重复的流程历史、附件、已读状态和合规信息查询。当前证据指向的仍然是页面查看链路上的中度数据库 fan-out，而不是单一 SQL 或连接池问题。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont URI/\hspace{0pt}grcv5/\hspace{0pt}dwr/\hspace{0pt}call/\hspace{0pt}plaincall/\hspace{0pt}dwrTodolistService.\hspace{0pt}setSeenFlag.\hspace{0pt}dwr}\par
+
+\noindent\textbf{关键数据：}请求 183,300，平均 991ms，错误 0，错误率 0.00\%，慢次数 24,953\par
+
+\noindent\textbf{判断：}这类 DWR 接口调用量高、慢次数多，更像业务写入/状态更新链路偏慢。优先结合 SQL、缓存和事务提交路径排查。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口的代表性样本里，主要时间直接落在数据库：executeQuery 11 次，数据库独占约 373ms。最重的 SQL 是SELECT * FROM BPM\_TODO\_LOGO WHERE 1=1 AND ACTIVITY\_ID = null AND ENTRY\_ID = null ORDER BY ID DESC LIMIT 1，单条约2,557ms，其次是 SELECT ID from hd\_todo\_seen\_log where TODO\_ID=...，单条约 367ms。这里的核心问题不是广义的“写接口慢”，而是已读标记链路被读前校验和状态更新这组数据库操作卡住了。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont URI/\hspace{0pt}grcv5/\hspace{0pt}dwr/\hspace{0pt}call/\hspace{0pt}plaincall/\hspace{0pt}dwrHdWorkflowService.\hspace{0pt}save.\hspace{0pt}dwr}\par
+
+\noindent\textbf{关键数据：}请求 128,794，平均 791ms，错误 0，错误率 0.00\%，慢次数 8,172\par
+
+\noindent\textbf{判断：}这类 DWR 接口调用量高、慢次数多，更像业务写入/状态更新链路偏慢。优先结合 SQL、缓存和事务提交路径排查。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口的代表性慢样本耗时约 2863ms，但数据库总 SQL 时间只有约 1.3ms，数据库不是主要瓶颈。调用树里最突出的热点是 javax.servlet.http.HttpServlet.service，独占约 2863ms，下游只看到很轻的 Redis 和少量查询。这说明当前慢点主要在应用代码或事务处理本身，而不是数据库。\par
+
+\vspace{0.4em}
+
+\SubsubsectionTitle{2.2.3 平均错误率高的异常接口}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.45}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.40\textwidth}>{\RaggedRight\arraybackslash}p{0.12\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endhead
+SpringController/\hspace{0pt}\$\{url.\hspace{0pt}rest.\hspace{0pt}prefix.\hspace{0pt}flowmobileapi.\hspace{0pt}v1\}/\hspace{0pt}task-\hspace{0pt}form-\hspace{0pt}process/\hspace{0pt}todo-\hspace{0pt}pages/\hspace{0pt}\{id\} & 692.\hspace{0pt}44 & 35283 & 18.\hspace{0pt}92 & 6674 \\
+\hline
+SpringController/\hspace{0pt}\$\{url.\hspace{0pt}rest.\hspace{0pt}prefix.\hspace{0pt}flowmobileapi.\hspace{0pt}v1\}/\hspace{0pt}task-\hspace{0pt}form-\hspace{0pt}process/\hspace{0pt}todo-\hspace{0pt}pages/\hspace{0pt}\{id\} & 752.\hspace{0pt}51 & 36080 & 18.\hspace{0pt}42 & 6645 \\
+\hline
+URI/\hspace{0pt}Others/\hspace{0pt}* & 313.\hspace{0pt}26 & 20494 & 13.\hspace{0pt}48 & 2763 \\
+\hline
+URI/\hspace{0pt}grcv5/\hspace{0pt}*.\hspace{0pt}pdf（合并） & 2141.\hspace{0pt}64 & 70 & 10.\hspace{0pt}00 & 7 \\
+\hline
+URI/\hspace{0pt}grcv5/\hspace{0pt}bpm/\hspace{0pt}edit.\hspace{0pt}htm & 580.\hspace{0pt}60 & 492 & 2.\hspace{0pt}24 & 11 \\
+\hline
+URI/\hspace{0pt}grcv5/\hspace{0pt}serverapi/\hspace{0pt}cj/\hspace{0pt}rest/\hspace{0pt}dataCenter/\hspace{0pt}collectContract & 1255.\hspace{0pt}58 & 50 & 2.\hspace{0pt}00 & 1 \\
+\hline
+\end{longtable}
+
+\vspace{0.4em}
+
+\SubsubsectionTitle{2.2.4 访问量高\&错误率高的重点接口(重点)}
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\hspace{0pt}\$\{url.\hspace{0pt}rest.\hspace{0pt}prefix.\hspace{0pt}flowmobileapi.\hspace{0pt}v1\}/\hspace{0pt}task-\hspace{0pt}form-\hspace{0pt}process/\hspace{0pt}todo-\hspace{0pt}pages/\hspace{0pt}\{id\}}\par
+
+\noindent\textbf{关键数据：}请求 72,455，平均 722ms，错误 13,625，错误率 19.06\%，慢次数 887\par
+
+\noindent\textbf{判断：}错误率非常高，而且请求量也不低，是当前最需要优先止血的接口之一。建议先确认是否为特定页面、特定身份、特定流程实例触发。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口当前最需要优先处理的是高比例快速失败，而不是慢查询。代表性错误样本在 10ms 内结束，状态直接是 404，异常里明确出现 HTTP ERROR CODE: 404 和 NotFoundResourceException。调用链主要停留在移动端过滤器和鉴权链路，数据库访问很轻，SQL 只有一次简单查询且耗时不到 1ms。现有证据说明，这个入口的主问题是请求在进入核心业务处理前就失败了。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\hspace{0pt}\$\{url.\hspace{0pt}rest.\hspace{0pt}prefix.\hspace{0pt}flowmobileapi.\hspace{0pt}v1\}/\hspace{0pt}task-\hspace{0pt}form-\hspace{0pt}process/\hspace{0pt}done-\hspace{0pt}pages/\hspace{0pt}\{instId\}}\par
+
+\noindent\textbf{关键数据：}请求 13,942，平均 1.63s，错误 1,578，错误率 11.46\%，慢次数 2,796\par
+
+\noindent\textbf{判断：}这不是少量噪音错误，而是会持续影响已办页访问的高错接口，建议与 todo-pages 一起排查。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口的核心问题比较集中，主因就是数据库重装配。代表性慢样本接近 2.6s，调用树里数据库节点超过两千，executeQuery 调用两千六百多次，数据库独占时间超过 1.6s。最重的一条 SQL 落在 HD\_FORM\_OPINION，单条就接近 1s，同时还伴随大量重复的 HD\_WF\_HIS\_USER、HD\_WF\_HIS\_OPER、HD\_WF\_HIS\_PRE 查询。异常里虽然能看到 ClientAbortException，但发生在响应写出阶段，更像慢请求下的伴生结果，不是主瓶颈。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont SpringController/\hspace{0pt}serverapi/\hspace{0pt}v1/\hspace{0pt}flow-\hspace{0pt}mobile/\hspace{0pt}task-\hspace{0pt}form-\hspace{0pt}process/\hspace{0pt}download-\hspace{0pt}attachments-\hspace{0pt}kfv/\hspace{0pt}\{code\}}\par
+
+\noindent\textbf{关键数据：}请求 125,007，平均 127ms，错误 10,311，错误率 8.34\%，慢次数 54\par
+
+\noindent\textbf{判断：}附件下载接口请求量大、错误率高，问题很可能直接暴露给终端用户。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口请求量和错误量都不低。代表性样本本身不是失败请求，但能看出主耗时集中在 AttachmentPreConversionController.downLoadAttachementKfv，总耗时约 472ms，其中数据库只有一次轻量查询，耗时不到 1ms。现有证据更支持应用侧附件获取/预处理链路是主要耗时点，而不是数据库。\par
+
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont URI/\hspace{0pt}grcv5/\hspace{0pt}rest/\hspace{0pt}mobile/\hspace{0pt}thirdpartylogin.\hspace{0pt}json}\par
+
+\noindent\textbf{关键数据：}请求 50,192，平均 122ms，错误 2,694，错误率 5.43\%，慢次数 197\par
+
+\noindent\textbf{判断：}移动端第三方登录失败会直接影响用户进入系统，优先级应靠前。\par
+
+\vspace{0.25em}
+
+\noindent\textbf{【现状】} 这个入口当前是稳定的高错误接口。代表性样本耗时约 369ms，主耗时不在过滤器，而是数据库查询，executeQuery 独占约 321ms；同时存在 HTTPS 外部调用，但耗时约 32ms，明显不是这一条样本里的主导部分。当前 trace 里最重的 SQL 是按 APPID 查 HD\_USER\_YZJ 的账号映射。\par
+
+\vspace{0.25em}

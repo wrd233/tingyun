@@ -1,0 +1,75 @@
+\SectionTitle{2系统运行现状与性能问题分析}
+
+\SubsectionTitle{2.1 部署架构与运行环境概况}
+
+\SubsubsectionTitle{2.1.1 系统规模总览}
+
+为便于整体把握本次测试对接系统的部署范围，先对服务器总规模及主要组件构成进行汇总。当前“宁波移动-集团法务系统”共涉及 6 台服务器，包含应用、移动应用、缓存及数据库等关键节点，能够支撑系统基本业务处理、缓存服务及数据存储能力。\par
+
+\vspace{0.25em}
+
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\Centering\arraybackslash}p{0.20\textwidth}>{\Centering\arraybackslash}p{0.16\textwidth}>{\Centering\arraybackslash}p{0.48\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 系统名 & \cellcolor{HeaderBlue}\color{white}\bfseries 服务器规模 & \cellcolor{HeaderBlue}\color{white}\bfseries 主要组件 \\
+\hline
+宁波移动-\hspace{0pt}集团法务系统 & 6台服务器 & 应用服务器(2)、移动应用服务器(1)、缓存服务器(1)、数据库服务器(2) \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.25em}
+
+\SubsubsectionTitle{2.1.2 服务器资源与主机分布}
+
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\Centering\arraybackslash}p{0.16\textwidth}>{\Centering\arraybackslash}p{0.08\textwidth}>{\Centering\arraybackslash}p{0.29\textwidth}>{\Centering\arraybackslash}p{0.20\textwidth}>{\Centering\arraybackslash}p{0.17\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 服务器名 & \cellcolor{HeaderBlue}\color{white}\bfseries 数量 & \cellcolor{HeaderBlue}\color{white}\bfseries 配置 & \cellcolor{HeaderBlue}\color{white}\bfseries 操作系统 & \cellcolor{HeaderBlue}\color{white}\bfseries IP \\
+\hline
+应用服务器 & 2 & 8核 x86\_\hspace{0pt}64 | 15.\hspace{0pt}6G内存 | 97G存储 & Ubuntu 22.\hspace{0pt}04.\hspace{0pt}4 LTS & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}18-\hspace{0pt}19 \\
+\hline
+移动应用服务器 & 1 & 8核 x86\_\hspace{0pt}64 | 15.\hspace{0pt}6G内存 | 97G存储 & Ubuntu 22.\hspace{0pt}04.\hspace{0pt}4 LTS & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}23 \\
+\hline
+缓存服务器 & 1 & 8核 x86\_\hspace{0pt}64 | 15.\hspace{0pt}6G内存 | 97G存储 & Ubuntu 22.\hspace{0pt}04.\hspace{0pt}4 LTS & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}20 \\
+\hline
+数据库服务器 & 2 & 8核 x86\_\hspace{0pt}64 | 15.\hspace{0pt}6G内存 | 147G存储 & Ubuntu 22.\hspace{0pt}04.\hspace{0pt}4 LTS & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}21-\hspace{0pt}22 \\
+\hline
+\end{tabular}
+\end{center}
+
+\SubsubsectionTitle{2.1.3服务与端口部署情况}
+
+根据当前主机采集结果，已识别出的关键服务、技术栈类型及端口分布情况如下表所示。\par
+
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\Centering\arraybackslash}p{0.27\textwidth}>{\Centering\arraybackslash}p{0.18\textwidth}>{\Centering\arraybackslash}p{0.16\textwidth}>{\Centering\arraybackslash}p{0.14\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 服务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 技术栈 /\hspace{0pt} 类型 & \cellcolor{HeaderBlue}\color{white}\bfseries 主机IP & \cellcolor{HeaderBlue}\color{white}\bfseries 端口 \\
+\hline
+app-\hspace{0pt}boot-\hspace{0pt}node01.\hspace{0pt}service & Java 1.\hspace{0pt}8.\hspace{0pt}0\_\hspace{0pt}422 & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}18 & 8888 \\
+\hline
+app-\hspace{0pt}boot-\hspace{0pt}node01.\hspace{0pt}service & Java 1.\hspace{0pt}8.\hspace{0pt}0\_\hspace{0pt}422 & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}19 & 8888 \\
+\hline
+redis-\hspace{0pt}server & Redis & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}18 & 6379 \\
+\hline
+redis-\hspace{0pt}server & Redis & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}19 & 6379 \\
+\hline
+redis-\hspace{0pt}server & Redis & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}20 & 6379 \\
+\hline
+nginx & Nginx & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}23 & 80 \\
+\hline
+mysqld & MySQL 8 & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}21 & 3306、33060 \\
+\hline
+mysqld & MySQL 8 & 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}22 & 3306、33060 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.6em}

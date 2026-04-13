@@ -1,0 +1,85 @@
+\SubsectionTitle{2.3 系统SQL检查}
+
+在2026-1-1 00:00 至 2026-03-31 23:59时间段内，对数据库的性能监测、以及慢/异常的sql进行抓取和展示分析。\par
+
+\SubsubsectionTitle{2.3.1 系统数据库整体检查}
+
+本轮重点 SQL 基本集中在 MySQL 10.190.22.21:3306。\par
+
+\begin{center}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{>{\Centering\arraybackslash}p{0.26\textwidth}>{\Centering\arraybackslash}p{0.56\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 核心数据库实例 & \cellcolor{HeaderBlue}\color{white}\bfseries MySQL 10.\hspace{0pt}190.\hspace{0pt}22.\hspace{0pt}21:\hspace{0pt}3306 \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 监测到的 SQL 操作数 & 2,\hspace{0pt}836 \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 数据库平均响应时间 & 9 ms \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 连接池框架 & HikariCP（3 个池） \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 连接池当前已用 /\hspace{0pt} 空闲 & 35 /\hspace{0pt} 48 \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 连接池平均连接时间 & 1.\hspace{0pt}34 ms \\
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 等待连接峰值 & 92 \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4em}
+
+\SubsubsectionTitle{2.3.2 慢SQL检查}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.45}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.18\textwidth}>{\RaggedRight\arraybackslash}p{0.38\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 表名 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 表名 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endhead
+\cellcolor{SoftBlue} LAS\_\hspace{0pt}CONTRACT\_\hspace{0pt}INFO、LAS\_\hspace{0pt}CONTRACT\_\hspace{0pt}OPPOSITE\_\hspace{0pt}RELATED & \cellcolor{SoftBlue} select count(*) as countNum fr .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} from (SELECT a.\hspace{0pt}ID as ID,\hspace{0pt}a.\hspace{0pt}CONTRACT\_\hspace{0pt}NAME as CONTRACT\_\hspace{0pt}NAME,\hspace{0pt}a.\hspace{0pt}CONTRACT\_\hspace{0pt}AMOUNT\_\hspace{0pt}FORSHOW as CONTRACT\_\hspace{0pt}AMOUNT\_\hspace{0pt}FORSHOW,\hspace{0pt}a.\hspace{0pt}CONTRACT\_\hspace{0pt}STATUS a.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 1502484 & \cellcolor{SoftBlue} 127 & \cellcolor{SoftBlue} 81 & \cellcolor{SoftBlue} 50 \\
+\hline
+\cellcolor{SoftBlue} BPM\_\hspace{0pt}TODO\_\hspace{0pt}LOGO & \cellcolor{SoftBlue} SELECT * FROM bpm\_\hspace{0pt}todo\_\hspace{0pt}logo WH .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} FROM bpm\_\hspace{0pt}todo\_\hspace{0pt}logo WHERE RECEIVERCODE =\hspace{0pt} ?\hspace{0pt} AND ACTIVITY\_\hspace{0pt}ID IN ( SELECT s.\hspace{0pt}STEP\_\hspace{0pt}ID FROM LAS\_\hspace{0pt}FLOW\_\hspace{0pt}STEP s ) AND seen =\hspace{0pt} ?\hspace{0pt} AND FIRST\_\hspace{0pt}SEE.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 2581 & \cellcolor{SoftBlue} 17739 & \cellcolor{SoftBlue} 10320 & \cellcolor{SoftBlue} 0 \\
+\hline
+\cellcolor{SoftBlue} HD\_\hspace{0pt}TODOLIST & \cellcolor{SoftBlue} update HD\_\hspace{0pt}TODOLIST set ALARMDA .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} update HD\_\hspace{0pt}TODOLIST set ALARMDATE=\hspace{0pt}null,\hspace{0pt} APPCAT=\hspace{0pt}?\hspace{0pt},\hspace{0pt} APPID=\hspace{0pt}?\hspace{0pt},\hspace{0pt} BSID=\hspace{0pt}?\hspace{0pt},\hspace{0pt} CONTENT=\hspace{0pt}null,\hspace{0pt} DIGEST=\hspace{0pt}null,\hspace{0pt} DUEDATE=\hspace{0pt}null,\hspace{0pt} IS\_\hspace{0pt}TOP=\hspace{0pt}?\hspace{0pt},\hspace{0pt} `LINK`=\hspace{0pt}?\hspace{0pt},\hspace{0pt} MO.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 1703 & \cellcolor{SoftBlue} 23705 & \cellcolor{SoftBlue} 9611 & \cellcolor{SoftBlue} 85 \\
+\hline
+\cellcolor{SoftBlue} HD\_\hspace{0pt}TODOLIST & \cellcolor{SoftBlue} update HD\_\hspace{0pt}TODOLIST set ALARMDA .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} update HD\_\hspace{0pt}TODOLIST set ALARMDATE=\hspace{0pt}null,\hspace{0pt} APPCAT=\hspace{0pt}?\hspace{0pt},\hspace{0pt} APPID=\hspace{0pt}null,\hspace{0pt} BSID=\hspace{0pt}?\hspace{0pt},\hspace{0pt} CONTENT=\hspace{0pt}null,\hspace{0pt} DIGEST=\hspace{0pt}null,\hspace{0pt} DUEDATE=\hspace{0pt}null,\hspace{0pt} IS\_\hspace{0pt}TOP=\hspace{0pt}?\hspace{0pt},\hspace{0pt} `LINK`=\hspace{0pt}?\hspace{0pt},\hspace{0pt}.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 118 & \cellcolor{SoftBlue} 85990 & \cellcolor{SoftBlue} 200 & \cellcolor{SoftBlue} 41 \\
+\hline
+\end{longtable}
+
+\vspace{0.4em}
+
+\SubsubsectionTitle{2.3.3 异常SQL检查}
+
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\setlength{\tabcolsep}{3.6pt}
+\renewcommand{\arraystretch}{1.45}
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.32\textwidth}>{\RaggedRight\arraybackslash}p{0.09\textwidth}>{\RaggedRight\arraybackslash}p{0.11\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}}
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 表名 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 响应总时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endfirsthead
+\hline
+\cellcolor{HeaderBlue}\color{white}\bfseries 表名 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 响应总时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
+\hline
+\endhead
+\cellcolor{SoftBlue} LAS\_\hspace{0pt}CONTRACT\_\hspace{0pt}INFO、LAS\_\hspace{0pt}CONTRACT\_\hspace{0pt}OPPOSITE\_\hspace{0pt}RELATED & \cellcolor{SoftBlue} select count(*) as countNum fr .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} from (SELECT a.\hspace{0pt}ID as ID,\hspace{0pt}a.\hspace{0pt}CONTRACT\_\hspace{0pt}NAME as CONTRACT\_\hspace{0pt}NAME,\hspace{0pt}a.\hspace{0pt}CONTRACT\_\hspace{0pt}AMOUNT\_\hspace{0pt}FORSHOW as CONTRACT\_\hspace{0pt}AMOUNT\_\hspace{0pt}FORSHOW,\hspace{0pt}a.\hspace{0pt}CONTRACT\_\hspace{0pt}STATUS a.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 1502484 & \cellcolor{SoftBlue} 190815486 & \cellcolor{SoftBlue} 127 & \cellcolor{SoftBlue} 81 & \cellcolor{SoftBlue} 50 \\
+\hline
+\cellcolor{SoftBlue} BPM\_\hspace{0pt}TODO\_\hspace{0pt}LOGO & \cellcolor{SoftBlue} update BPM\_\hspace{0pt}TODO\_\hspace{0pt}LOGO set ACTIV .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} update BPM\_\hspace{0pt}TODO\_\hspace{0pt}LOGO set ACTIVITY\_\hspace{0pt}ACTION\_\hspace{0pt}NAME=\hspace{0pt}?\hspace{0pt},\hspace{0pt} ACTIVITY\_\hspace{0pt}FINISH\_\hspace{0pt}DATE=\hspace{0pt}null,\hspace{0pt} ACTIVITY\_\hspace{0pt}ID=\hspace{0pt}?\hspace{0pt},\hspace{0pt} ACTIVITY\_\hspace{0pt}START\_\hspace{0pt}DATE=\hspace{0pt}null,\hspace{0pt} ACTIVITY\_\hspace{0pt}STE.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 264 & \cellcolor{SoftBlue} 1247963 & \cellcolor{SoftBlue} 4720 & \cellcolor{SoftBlue} 33 & \cellcolor{SoftBlue} 19 \\
+\hline
+\cellcolor{SoftBlue} HD\_\hspace{0pt}TODOLIST & \cellcolor{SoftBlue} update HD\_\hspace{0pt}TODOLIST set ALARMDA .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} update HD\_\hspace{0pt}TODOLIST set ALARMDATE=\hspace{0pt}null,\hspace{0pt} APPCAT=\hspace{0pt}?\hspace{0pt},\hspace{0pt} APPID=\hspace{0pt}?\hspace{0pt},\hspace{0pt} BSID=\hspace{0pt}?\hspace{0pt},\hspace{0pt} CONTENT=\hspace{0pt}null,\hspace{0pt} DIGEST=\hspace{0pt}null,\hspace{0pt} DUEDATE=\hspace{0pt}null,\hspace{0pt} IS\_\hspace{0pt}TOP=\hspace{0pt}?\hspace{0pt},\hspace{0pt} `LINK`=\hspace{0pt}?\hspace{0pt},\hspace{0pt} MO.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 1703 & \cellcolor{SoftBlue} 40372503 & \cellcolor{SoftBlue} 23705 & \cellcolor{SoftBlue} 9611 & \cellcolor{SoftBlue} 85 \\
+\hline
+\cellcolor{SoftBlue} HD\_\hspace{0pt}TODOLIST & \cellcolor{SoftBlue} update HD\_\hspace{0pt}TODOLIST set ALARMDA .\hspace{0pt}.\hspace{0pt}.\hspace{0pt} update HD\_\hspace{0pt}TODOLIST set ALARMDATE=\hspace{0pt}null,\hspace{0pt} APPCAT=\hspace{0pt}?\hspace{0pt},\hspace{0pt} APPID=\hspace{0pt}null,\hspace{0pt} BSID=\hspace{0pt}?\hspace{0pt},\hspace{0pt} CONTENT=\hspace{0pt}null,\hspace{0pt} DIGEST=\hspace{0pt}null,\hspace{0pt} DUEDATE=\hspace{0pt}null,\hspace{0pt} IS\_\hspace{0pt}TOP=\hspace{0pt}?\hspace{0pt},\hspace{0pt} `LINK`=\hspace{0pt}?\hspace{0pt},\hspace{0pt}.\hspace{0pt}.\hspace{0pt}.\hspace{0pt} & \cellcolor{SoftBlue} 118 & \cellcolor{SoftBlue} 10172658 & \cellcolor{SoftBlue} 85990 & \cellcolor{SoftBlue} 200 & \cellcolor{SoftBlue} 41 \\
+\hline
+\end{longtable}
+
+\vspace{0.25em}
