@@ -1,21 +1,41 @@
 {
-  "generated_at": "2026-04-13T11:41:24.819499+00:00",
+  "generated_at": "2026-04-13T12:46:10.824890+00:00",
   "report_type_id": "legal_diagnostic_report",
   "chapters": [
     {
-      "chapter_id": "1",
+      "chapter_id": "chapter_1",
       "title": "概述",
-      "status": "template_stub"
+      "status": "filled",
+      "note": "概述与证据来源已按当前 diagnostics 摘要填充。",
+      "generated_file": "chapters/chapter_1.tex"
     },
     {
-      "chapter_id": "2",
-      "title": "系统运行现状与性能问题分析",
-      "status": "template_stub"
+      "chapter_id": "chapter_2_1",
+      "title": "部署架构与运行环境概况",
+      "status": "partial",
+      "note": "仅基于 preparation/materialization 摘要填充，主机级部署信息仍占位。",
+      "generated_file": "chapters/chapter_2_1.tex"
     },
     {
-      "chapter_id": "3",
+      "chapter_id": "chapter_2_2",
+      "title": "系统接口检查",
+      "status": "filled",
+      "note": "接口主表、证据索引和 request deep-dive 已接入。",
+      "generated_file": "chapters/chapter_2_2.tex"
+    },
+    {
+      "chapter_id": "chapter_2_3",
+      "title": "系统SQL检查",
+      "status": "filled",
+      "note": "SQL 主表、证据索引和 sql deep-dive 已接入。",
+      "generated_file": "chapters/chapter_2_3.tex"
+    },
+    {
+      "chapter_id": "chapter_3",
       "title": "结论",
-      "status": "template_stub"
+      "status": "partial",
+      "note": "结论已生成，但仍是测试轮次的收敛摘要。",
+      "generated_file": "chapters/chapter_3.tex"
     }
   ]
 }

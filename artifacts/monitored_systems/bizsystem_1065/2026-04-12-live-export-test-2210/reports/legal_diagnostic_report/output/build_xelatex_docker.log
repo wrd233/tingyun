@@ -1,0 +1,364 @@
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./legal_diagnostic_report.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y) (/usr/local/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/colortbl/colortbl.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/makecell/makecell.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ragged2e/ragged2e.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)))
+(../../../../../../../report_templates/legal_diagnostic_report/style/report_mac
+ros.tex) (./legal_diagnostic_report.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(./legal_diagnostic_report.out) (./legal_diagnostic_report.out)
+(../../../../../../../report_templates/legal_diagnostic_report/fragments/cover.
+tex
+
+LaTeX Font Warning: Font shape `TU/LatinModernRoman(0)/b/n' undefined
+(Font)              using `TU/LatinModernRoman(0)/m/n' instead on input line 3.
+
+
+
+LaTeX Font Warning: Font shape `TU/TeXGyreHeros(0)/b/n' undefined
+(Font)              using `TU/TeXGyreHeros(0)/m/n' instead on input line 3.
+
+)
+(../../../../../../../report_templates/legal_diagnostic_report/fragments/toc.te
+x [1] [2] [3]) (../generated/chapters/chapter_1.tex)
+(../generated/chapters/chapter_2_1.tex [4])
+(../generated/chapters/chapter_2_2.tex
+Underfull \hbox (badness 10000) in alignment at lines 12--16
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 16--20
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 20--37
+[] [] [] [] [] []
+[5]
+Overfull \hbox (2.92255pt too wide) in paragraph at lines 59--59
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/user-tasks/processed (POST)
+
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[<...>]{<...>}' to define
+(xeCJK)                it.
+
+
+Overfull \hbox (12.43756pt too wide) in paragraph at lines 67--67
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/task-form-process/done-pages/
+
+Underfull \hbox (badness 10000) in alignment at lines 82--86
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 86--90
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 90--101
+[] [] [] [] [] []
+ [6]
+Overfull \hbox (11.27156pt too wide) in paragraph at lines 107--107
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/task-form-process/todo-pages/
+
+Overfull \hbox (11.27156pt too wide) in paragraph at lines 131--131
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/task-form-process/todo-pages/
+) (../generated/chapters/chapter_2_3.tex [7]
+Overfull \hbox (16.15356pt too wide) in paragraph at lines 3--3
+[]\TU/FandolSong-Regular(0)/m/n/12 本 章 节 优 先 读 取 \TU/LatinModernRoman(0)/b/n/12
+ sql_master.csv\TU/FandolSong-Regular(0)/m/n/12 、| \TU/LatinModernRoman(0)/b/n/
+12 sql_evidence_index.csv \TU/FandolSong-Regular(0)/m/n/12 与 \TU/LatinModernRom
+an(0)/b/n/12 04_deep_dive/sql/\TU/FandolSong-Regular(0)/m/n/12 ，|
+
+Underfull \hbox (badness 2781) in paragraph at lines 12--13
+ []|\TU/LatinModernRoman(0)/b/n/12 10.190.22.21:3306| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+ []|\TU/LatinModernRoman(0)/b/n/12 20| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+ []|\TU/LatinModernRoman(0)/b/n/12 1| 
+
+Underfull \hbox (badness 1082) in paragraph at lines 18--19
+ []| |\TU/FandolSong-Regular(0)/m/n/12 【当 前 批 次 未 直 接 沉 淀 
+
+Underfull \hbox (badness 10000) in alignment at lines 30--34
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 34--38
+[] [] [] [] [] []
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 43--43
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Overfull \hbox (0.69264pt too wide) in paragraph at lines 45--45
+\TU/LatinModernRoman(0)/b/n/10 TODOLIST|  
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 47--47
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 49--49
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 53--53
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Underfull \hbox (badness 10000) in alignment at lines 38--59
+[] [] [] [] [] []
+ [8] [9]
+Underfull \hbox (badness 10000) in alignment at lines 94--98
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 98--102
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 102--105
+[] [] [] [] [] []
+) (../generated/chapters/chapter_3.tex) [10] (./legal_diagnostic_report.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)
+Output written on legal_diagnostic_report.pdf (10 pages).
+Transcript written on legal_diagnostic_report.log.
+
+
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex)
+ restricted \write18 enabled.
+entering extended mode
+(./legal_diagnostic_report.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/size12.clo))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/iftex/iftex.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/base/fontenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ctex/ctexhook.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y) (/usr/local/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics-def/xetex.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/array.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/colortbl/colortbl.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/makecell/makecell.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/setspace/setspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/needspace/needspace.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ragged2e/ragged2e.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty (/usr/local/texlive/2026/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/stringenc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/url/url.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/local/texlive/2026/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/hyperref/hxetex.def
+(/usr/local/texlive/2026/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+)))
+(../../../../../../../report_templates/legal_diagnostic_report/style/report_mac
+ros.tex) (./legal_diagnostic_report.aux)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(./legal_diagnostic_report.out) (./legal_diagnostic_report.out)
+(../../../../../../../report_templates/legal_diagnostic_report/fragments/cover.
+tex
+
+LaTeX Font Warning: Font shape `TU/LatinModernRoman(0)/b/n' undefined
+(Font)              using `TU/LatinModernRoman(0)/m/n' instead on input line 3.
+
+
+
+LaTeX Font Warning: Font shape `TU/TeXGyreHeros(0)/b/n' undefined
+(Font)              using `TU/TeXGyreHeros(0)/m/n' instead on input line 3.
+
+)
+(../../../../../../../report_templates/legal_diagnostic_report/fragments/toc.te
+x [1] [2] [3]) (../generated/chapters/chapter_1.tex)
+(../generated/chapters/chapter_2_1.tex [4])
+(../generated/chapters/chapter_2_2.tex
+Underfull \hbox (badness 10000) in alignment at lines 12--16
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 16--20
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 20--37
+[] [] [] [] [] []
+[5]
+Overfull \hbox (2.92255pt too wide) in paragraph at lines 59--59
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/user-tasks/processed (POST)
+
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[<...>]{<...>}' to define
+(xeCJK)                it.
+
+
+Overfull \hbox (12.43756pt too wide) in paragraph at lines 67--67
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/task-form-process/done-pages/
+
+Underfull \hbox (badness 10000) in alignment at lines 82--86
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 86--90
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 90--101
+[] [] [] [] [] []
+ [6]
+Overfull \hbox (11.27156pt too wide) in paragraph at lines 107--107
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/task-form-process/todo-pages/
+
+Overfull \hbox (11.27156pt too wide) in paragraph at lines 131--131
+[]\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
+pi.v1}/task-form-process/todo-pages/
+) (../generated/chapters/chapter_2_3.tex [7]
+Overfull \hbox (16.15356pt too wide) in paragraph at lines 3--3
+[]\TU/FandolSong-Regular(0)/m/n/12 本 章 节 优 先 读 取 \TU/LatinModernRoman(0)/b/n/12
+ sql_master.csv\TU/FandolSong-Regular(0)/m/n/12 、| \TU/LatinModernRoman(0)/b/n/
+12 sql_evidence_index.csv \TU/FandolSong-Regular(0)/m/n/12 与 \TU/LatinModernRom
+an(0)/b/n/12 04_deep_dive/sql/\TU/FandolSong-Regular(0)/m/n/12 ，|
+
+Underfull \hbox (badness 2781) in paragraph at lines 12--13
+ []|\TU/LatinModernRoman(0)/b/n/12 10.190.22.21:3306| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+ []|\TU/LatinModernRoman(0)/b/n/12 20| 
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+ []|\TU/LatinModernRoman(0)/b/n/12 1| 
+
+Underfull \hbox (badness 1082) in paragraph at lines 18--19
+ []| |\TU/FandolSong-Regular(0)/m/n/12 【当 前 批 次 未 直 接 沉 淀 
+
+Underfull \hbox (badness 10000) in alignment at lines 30--34
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 34--38
+[] [] [] [] [] []
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 43--43
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Overfull \hbox (0.69264pt too wide) in paragraph at lines 45--45
+\TU/LatinModernRoman(0)/b/n/10 TODOLIST|  
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 47--47
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 49--49
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 53--53
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
+
+Underfull \hbox (badness 10000) in alignment at lines 38--59
+[] [] [] [] [] []
+ [8] [9]
+Underfull \hbox (badness 10000) in alignment at lines 94--98
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 98--102
+[] [] [] [] [] []
+
+Underfull \hbox (badness 10000) in alignment at lines 102--105
+[] [] [] [] [] []
+) (../generated/chapters/chapter_3.tex) [10] (./legal_diagnostic_report.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)
+Output written on legal_diagnostic_report.pdf (10 pages).
+Transcript written on legal_diagnostic_report.log.

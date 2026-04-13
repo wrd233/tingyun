@@ -21,5 +21,10 @@
 
 ## 编译状态
 
-- compiled: `False`
-- reason: xelatex not available in current environment
+- compiled: `True`
+- compiler: `xelatex (docker: texlive/texlive:latest)`
+- reason: ok
+- build_log: `build_xelatex_docker.log`
+- overfull_hbox: `20`
+- underfull_hbox: `32`
+- max_overfull_pt: `16`

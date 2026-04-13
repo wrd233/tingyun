@@ -2,15 +2,19 @@ report_type_id: legal_diagnostic_report
 system_key: bizsystem_1065
 batch_key: 2026-04-12-live-export-test-2210
 path_mode: repo_relative
+direct_read_mode: true
 diagnostics_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics
 template_root: report_templates/legal_diagnostic_report
+report_instance_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report
 reports_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report
 generated_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/generated
 output_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/output
 assets_root: artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/assets
+diagnostics_relation: sibling_diagnostics_directory
 report_title: 集团法务应用性能巡检报告
 report_date: 2026-04-13
 language: zh-CN
 notes:
   - 当前实例按第三阶段轻量方案建立，使用 repo-relative 路径并直接读取同批次 diagnostics。
+  - diagnostics_root 与 report_instance_root 分别指向同批次的 sibling diagnostics / reports 目录。
   - generated/output/assets 仅作为本批次报告工作区，不承载新的重型输入层。

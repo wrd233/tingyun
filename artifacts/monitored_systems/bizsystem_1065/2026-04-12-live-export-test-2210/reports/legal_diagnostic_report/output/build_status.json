@@ -1,10 +1,16 @@
 {
   "compiled": true,
+  "reason": "ok",
   "compiler": "xelatex (docker: texlive/texlive:latest)",
+  "build_log": "build_xelatex_docker.log",
   "output_file": "legal_diagnostic_report.pdf",
-  "pages": 12,
-  "notes": [
-    "PDF was compiled in a containerized TeX Live environment to avoid adding a heavy local report_input layer or relying on host-level xelatex.",
-    "The current output still contains some overfull hbox warnings caused by long interface and SQL identifiers in generated tables."
-  ]
+  "warnings": {
+    "overfull_hbox": 20,
+    "underfull_hbox": 32,
+    "font_warnings": 6,
+    "max_overfull_pt": 16,
+    "max_underfull_badness": 10000
+  },
+  "log_excerpt": "TU/FandolSong-Regular(0)/m/n/12 、| \\TU/LatinModernRoman(0)/b/n/\n12 sql_evidence_index.csv \\TU/FandolSong-Regular(0)/m/n/12 与 \\TU/LatinModernRom\nan(0)/b/n/12 04_deep_dive/sql/\\TU/FandolSong-Regular(0)/m/n/12 ，|\n\nUnderfull \\hbox (badness 2781) in paragraph at lines 12--13\n []|\\TU/LatinModernRoman(0)/b/n/12 10.190.22.21:3306| \n\nUnderfull \\hbox (badness 10000) in paragraph at lines 14--15\n []|\\TU/LatinModernRoman(0)/b/n/12 20| \n\nUnderfull \\hbox (badness 10000) in paragraph at lines 16--17\n []|\\TU/LatinModernRoman(0)/b/n/12 1| \n\nUnderfull \\hbox (badness 1082) in paragraph at lines 18--19\n []| |\\TU/FandolSong-Regular(0)/m/n/12 【当 前 批 次 未 直 接 沉 淀 \n\nUnderfull \\hbox (badness 10000) in alignment at lines 30--34\n[] [] [] [] [] []\n\nUnderfull \\hbox (badness 10000) in alignment at lines 34--38\n[] [] [] [] [] []\n\nOverfull \\hbox (8.06265pt too wide) in paragraph at lines 43--43\n\\TU/LatinModernRoman(0)/b/n/10 CONTRACT \n\nOverfull \\hbox (0.69264pt too wide) in paragraph at lines 45--45\n\\TU/LatinModernRoman(0)/b/n/10 TODOLIST|  \n\nOverfull \\hbox (8.06265pt too wide) in paragraph at lines 47--47\n\\TU/LatinModernRoman(0)/b/n/10 CONTRACT \n\nOverfull \\hbox (8.06265pt too wide) in paragraph at lines 49--49\n\\TU/LatinModernRoman(0)/b/n/10 CONTRACT \n\nOverfull \\hbox (8.06265pt too wide) in paragraph at lines 53--53\n\\TU/LatinModernRoman(0)/b/n/10 CONTRACT \n\nUnderfull \\hbox (badness 10000) in alignment at lines 38--59\n[] [] [] [] [] []\n [8] [9]\nUnderfull \\hbox (badness 10000) in alignment at lines 94--98\n[] [] [] [] [] []\n\nUnderfull \\hbox (badness 10000) in alignment at lines 98--102\n[] [] [] [] [] []\n\nUnderfull \\hbox (badness 10000) in alignment at lines 102--105\n[] [] [] [] [] []\n) (../generated/chapters/chapter_3.tex) [10] (./legal_diagnostic_report.aux)\n\nLaTeX Font Warning: Some font shapes were not available, defaults substituted.\n\n )\n(see the transcript file for additional information)\nOutput written on legal_diagnostic_report.pdf (10 pages).\nTranscript written on legal_diagnostic_report.log.\n",
+  "pages": 10
 }

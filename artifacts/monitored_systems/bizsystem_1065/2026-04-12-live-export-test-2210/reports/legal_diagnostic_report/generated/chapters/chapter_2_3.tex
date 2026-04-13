@@ -24,9 +24,10 @@
 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
-\setlength{\tabcolsep}{3.2pt}
+\setlength{\tabcolsep}{2.8pt}
 \renewcommand{\arraystretch}{1.35}
-\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.36\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}}
+\footnotesize
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.13\textwidth}>{\RaggedRight\arraybackslash}p{0.42\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}}
 \hline
 \cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
 \hline
@@ -35,50 +36,51 @@
 \cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
 \hline
 \endhead
-bpm\_todo\_logo & SELECT * FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND ACTIVITY\_ID IN ( SELECT s.STEP\_ID FROM LAS\_FLOW\_STEP s ) AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND  & 2791 & 456 & 255 & 0 \\
+bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo & SELECT * FROM bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo WHERE RECEIVERCODE =\allowbreak{} ?\allowbreak{} AND ACTIVITY\allowbreak{}\_\allowbreak{}ID IN (\allowbreak{} SELECT s.\allowbreak{}STEP\allowbreak{}\_\allowbreak{}ID FROM LAS\allowbreak{}\_\allowbreak{}FLOW\allowbreak{}\_\allowbreak{}STEP s )\allowbreak{} AND seen =\allowbreak{} ?\allowbreak{} AND FIRST\allowbreak{}\_\allowbreak{}SEEND & 2791 & 456 & 255 & 0 \\
 \hline
-bpm\_todo\_logo & SELECT ? FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND ACTIVITY\_FINISH\_DATE IS NOT NUll & 2214 & 366 & 254 & 0 \\
+bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo & SELECT ?\allowbreak{} FROM bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo WHERE RECEIVERCODE =\allowbreak{} ?\allowbreak{} AND seen =\allowbreak{} ?\allowbreak{} AND FIRST\allowbreak{}\_\allowbreak{}SEENDATE IS NOT NULL AND ACTIVITY\allowbreak{}\_\allowbreak{}FINISH\allowbreak{}\_\allowbreak{}DATE IS NOT NUll & 2214 & 366 & 254 & 0 \\
 \hline
-LAS\_CONTRACT\_UPDATE & select count(*) as countNum from (SELECT a.ID as ID ,( CASE WHEN a.CONTRACT\_SELF\_CODE IS NOT NULL AND a.CREATE\_UNIT\_ID=? AND a.SELF\_CODE IS NOT NULL THEN CONCAT & 2888 & 262 & 262 & 0 \\
+LAS\allowbreak{}\_\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}UPDATE & select count(\allowbreak{}*)\allowbreak{} as countNum from (\allowbreak{}SELECT a.\allowbreak{}ID as ID ,\allowbreak{}(\allowbreak{} CASE WHEN a.\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}SELF\allowbreak{}\_\allowbreak{}CODE IS NOT NULL AND a.\allowbreak{}CREATE\allowbreak{}\_\allowbreak{}UNIT\allowbreak{}\_\allowbreak{}ID=\allowbreak{}?\allowbreak{} AND a.\allowbreak{}SELF\allowbreak{}\_\allowbreak{}CODE IS  & 2888 & 262 & 262 & 0 \\
 \hline
-HD\_TODOLIST & select ? from HD\_TODOLIST t where t.RECEIVERCODE in (?) & 125 & 4215 & 9 & 0 \\
+HD\allowbreak{}\_\allowbreak{}TODOLIST & select ?\allowbreak{} from HD\allowbreak{}\_\allowbreak{}TODOLIST t where t.\allowbreak{}RECEIVERCODE in (\allowbreak{}?\allowbreak{})\allowbreak{} & 125 & 4215 & 9 & 0 \\
 \hline
-LAS\_CONTRACT\_UPDATE & SELECT a.ID as ID ,( CASE WHEN a.CONTRACT\_SELF\_CODE IS NOT NULL AND a.CREATE\_UNIT\_ID=? AND a.SELF\_CODE IS NOT NULL THEN CONCAT(a.CONTRACT\_SELF\_CODE,?,a.SELF\_COD & 2363 & 208 & 208 & 0 \\
+LAS\allowbreak{}\_\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}UPDATE & SELECT a.\allowbreak{}ID as ID ,\allowbreak{}(\allowbreak{} CASE WHEN a.\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}SELF\allowbreak{}\_\allowbreak{}CODE IS NOT NULL AND a.\allowbreak{}CREATE\allowbreak{}\_\allowbreak{}UNIT\allowbreak{}\_\allowbreak{}ID=\allowbreak{}?\allowbreak{} AND a.\allowbreak{}SELF\allowbreak{}\_\allowbreak{}CODE IS NOT NULL THEN CONCAT(\allowbreak{}a.\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}SE & 2363 & 208 & 208 & 0 \\
 \hline
-LAS\_CONTRACT\_INFO & select count(*) as countNum from (SELECT c.ID,c.CONTRACT\_SELF\_CODE docCategoryId,c.CONTRACT\_PERIOD contractPeriod,c.START\_TIME startTime,c.END\_TIME endTime,c.CO & 63 & 5371 & 0 & 0 \\
+LAS\allowbreak{}\_\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}INFO & select count(\allowbreak{}*)\allowbreak{} as countNum from (\allowbreak{}SELECT c.\allowbreak{}ID,\allowbreak{}c.\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}SELF\allowbreak{}\_\allowbreak{}CODE docCategoryId,\allowbreak{}c.\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}PERIOD contractPeriod,\allowbreak{}c.\allowbreak{}START\allowbreak{}\_\allowbreak{}TIME startTime,\allowbreak{}c.\allowbreak{}E & 63 & 5371 & 0 & 0 \\
 \hline
-HD\_COMP\_ATAH\_GROUP\_REL & select ? from HD\_COMP\_ATAH\_GROUP\_REL attachment0\_ where attachment0\_.ATAH\_CODE=? & 520 & 581 & 2 & 0 \\
+HD\allowbreak{}\_\allowbreak{}COMP\allowbreak{}\_\allowbreak{}ATAH\allowbreak{}\_\allowbreak{}GROUP\allowbreak{}\_\allowbreak{}REL & select ?\allowbreak{} from HD\allowbreak{}\_\allowbreak{}COMP\allowbreak{}\_\allowbreak{}ATAH\allowbreak{}\_\allowbreak{}GROUP\allowbreak{}\_\allowbreak{}REL attachment0\allowbreak{}\_\allowbreak{} where attachment0\allowbreak{}\_\allowbreak{}.\allowbreak{}ATAH\allowbreak{}\_\allowbreak{}CODE=\allowbreak{}?\allowbreak{} & 520 & 581 & 2 & 0 \\
 \hline
-LAS\_CONTRACT\_INFO\_CE1 & select ? from LAS\_CONTRACT\_INFO\_CE1 zstzdmc1x0\_ where zstzdmc1x0\_.LAS\_CONTRACT\_INFO\_CE1ID=? order by zstzdmc1x0\_.ID asc & 118 & 2348 & 6 & 0 \\
+LAS\allowbreak{}\_\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}INFO\allowbreak{}\_\allowbreak{}CE1 & select ?\allowbreak{} from LAS\allowbreak{}\_\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}INFO\allowbreak{}\_\allowbreak{}CE1 zstzdmc1x0\allowbreak{}\_\allowbreak{} where zstzdmc1x0\allowbreak{}\_\allowbreak{}.\allowbreak{}LAS\allowbreak{}\_\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}INFO\allowbreak{}\_\allowbreak{}CE1ID=\allowbreak{}?\allowbreak{} order by zstzdmc1x0\allowbreak{}\_\allowbreak{}.\allowbreak{}ID asc & 118 & 2348 & 6 & 0 \\
 \hline
-hd\_todo\_seen\_log & SELECT ? from hd\_todo\_seen\_log where TODO\_ID=? & 767 & 309 & 2 & 0 \\
+hd\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}seen\allowbreak{}\_\allowbreak{}log & SELECT ?\allowbreak{} from hd\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}seen\allowbreak{}\_\allowbreak{}log where TODO\allowbreak{}\_\allowbreak{}ID=\allowbreak{}?\allowbreak{} & 767 & 309 & 2 & 0 \\
 \hline
-HD\_FORM\_OPINION & select ? from HD\_FORM\_OPINION opinionent0\_ where opinionent0\_.BEANID=? and opinionent0\_.FORMID=? order by opinionent0\_.SIGNDATE asc & 1098 & 183 & 8 & 0 \\
+HD\allowbreak{}\_\allowbreak{}FORM\allowbreak{}\_\allowbreak{}OPINION & select ?\allowbreak{} from HD\allowbreak{}\_\allowbreak{}FORM\allowbreak{}\_\allowbreak{}OPINION opinionent0\allowbreak{}\_\allowbreak{} where opinionent0\allowbreak{}\_\allowbreak{}.\allowbreak{}BEANID=\allowbreak{}?\allowbreak{} and opinionent0\allowbreak{}\_\allowbreak{}.\allowbreak{}FORMID=\allowbreak{}?\allowbreak{} order by opinionent0\allowbreak{}\_\allowbreak{}.\allowbreak{}SIGNDATE asc & 1098 & 183 & 8 & 0 \\
 \hline
 \end{longtable}
+\normalsize
 
 
-\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont bpm\_todo\_logo}\par
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo}\par
 
 \noindent\textbf{关键数据：}平均 2791ms，响应总时间 1272842ms，调用次数 456，错误 0。\par
 
-\noindent\textbf{SQL 片段：} SELECT * FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND ACTIVITY\_ID IN ( SELECT s.STEP\_ID FROM LAS\_FLOW\_STEP s ) AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND ACTIVITY\_FINISH\_DATE IS NOT NUll\par
+\noindent\textbf{SQL 片段：} SELECT * FROM bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo WHERE RECEIVERCODE =\allowbreak{} ?\allowbreak{} AND ACTIVITY\allowbreak{}\_\allowbreak{}ID IN (\allowbreak{} SELECT s.\allowbreak{}STEP\allowbreak{}\_\allowbreak{}ID FROM LAS\allowbreak{}\_\allowbreak{}FLOW\allowbreak{}\_\allowbreak{}STEP s )\allowbreak{} AND seen =\allowbreak{} ?\allowbreak{} AND FIRST\allowbreak{}\_\allowbreak{}SEENDATE IS NOT NULL AND ACTIVITY\allowbreak{}\_\allowbreak{}FINISH\allowbreak{}\_\allowbreak{}DATE\par
 
-\noindent\textbf{【现状】} 已存在 SQL deep-dive：`dd\_20260412T162340Z\_24fdde55`，摘要 `manual\_sql\_fact\_sheet\_validation`，证据数 4，页面链接 2。\par
+\noindent\textbf{【现状】} 已存在 SQL deep-dive：\texttt{dd\allowbreak{}\_\allowbreak{}20260412T162340Z\allowbreak{}\_\allowbreak{}24fdde55}，摘要 manual\_sql\_fact\_sheet\_validation，证据数 4，页面链接 2。\par
 
-\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont bpm\_todo\_logo}\par
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo}\par
 
 \noindent\textbf{关键数据：}平均 2214ms，响应总时间 810361ms，调用次数 366，错误 0。\par
 
-\noindent\textbf{SQL 片段：} SELECT ? FROM bpm\_todo\_logo WHERE RECEIVERCODE = ? AND seen = ? AND FIRST\_SEENDATE IS NOT NULL AND ACTIVITY\_FINISH\_DATE IS NOT NUll\par
+\noindent\textbf{SQL 片段：} SELECT ?\allowbreak{} FROM bpm\allowbreak{}\_\allowbreak{}todo\allowbreak{}\_\allowbreak{}logo WHERE RECEIVERCODE =\allowbreak{} ?\allowbreak{} AND seen =\allowbreak{} ?\allowbreak{} AND FIRST\allowbreak{}\_\allowbreak{}SEENDATE IS NOT NULL AND ACTIVITY\allowbreak{}\_\allowbreak{}FINISH\allowbreak{}\_\allowbreak{}DATE IS NOT NUll\par
 
 \noindent\textbf{【现状】} 当前证据状态为 `待补证据`，页面链接 0；如需进一步定位调用者，应继续补 deep-dive。\par
 
-\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont LAS\_CONTRACT\_UPDATE}\par
+\vspace{0.35em}\noindent{\color{InterfaceBlue}\bfseries\fontsize{11pt}{13.2pt}\selectfont LAS\allowbreak{}\_\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}UPDATE}\par
 
 \noindent\textbf{关键数据：}平均 2888ms，响应总时间 756773ms，调用次数 262，错误 0。\par
 
-\noindent\textbf{SQL 片段：} select count(*) as countNum from (SELECT a.ID as ID ,( CASE WHEN a.CONTRACT\_SELF\_CODE IS NOT NULL AND a.CREATE\_UNIT\_ID=? AND a.SELF\_CODE IS NOT NULL THEN CONCAT(a.CONTRACT\_SELF\_CODE,?,a.SELF\_CODE) ELSE a.CONTRACT\_SELF\_CO\par
+\noindent\textbf{SQL 片段：} select count(\allowbreak{}*)\allowbreak{} as countNum from (\allowbreak{}SELECT a.\allowbreak{}ID as ID ,\allowbreak{}(\allowbreak{} CASE WHEN a.\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}SELF\allowbreak{}\_\allowbreak{}CODE IS NOT NULL AND a.\allowbreak{}CREATE\allowbreak{}\_\allowbreak{}UNIT\allowbreak{}\_\allowbreak{}ID=\allowbreak{}?\allowbreak{} AND a.\allowbreak{}SELF\allowbreak{}\_\allowbreak{}CODE IS NOT NULL THEN CONCAT(\allowbreak{}a.\allowbreak{}CONTRACT\allowbreak{}\_\allowbreak{}SELF\allowbreak{}\_\allowbreak{}COD\par
 
 \noindent\textbf{【现状】} 当前证据状态为 `待补证据`，页面链接 0；如需进一步定位调用者，应继续补 deep-dive。\par
 
@@ -86,9 +88,10 @@ HD\_FORM\_OPINION & select ? from HD\_FORM\_OPINION opinionent0\_ where opinione
 
 \setlength{\LTleft}{0pt}
 \setlength{\LTright}{0pt}
-\setlength{\tabcolsep}{3.2pt}
+\setlength{\tabcolsep}{2.8pt}
 \renewcommand{\arraystretch}{1.35}
-\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.36\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}}
+\footnotesize
+\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.13\textwidth}>{\RaggedRight\arraybackslash}p{0.42\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}}
 \hline
 \cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\
 \hline
@@ -100,4 +103,5 @@ HD\_FORM\_OPINION & select ? from HD\_FORM\_OPINION opinionent0\_ where opinione
 \multicolumn{6}{l}{【当前批次未获取到异常SQL主表数据】}\\
 \hline
 \end{longtable}
+\normalsize
 

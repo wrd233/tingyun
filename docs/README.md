@@ -52,3 +52,5 @@
 当前第三阶段最小执行入口：
 
 - `python3 report_templates/renderers/render_report_instance.py --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml`
+
+当前这条入口会直接读取同批次 `diagnostics/`，在实例目录的 `generated/` 下生成骨架文件，并在 `output/` 下刷新 `build_status.json`、编译日志和最终 tex/pdf。

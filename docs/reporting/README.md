@@ -24,4 +24,6 @@
 
 当前 renderer 会先在实例目录的 `generated/` 下生成骨架文件，再由后续 agent 继续补章节内容与最终排版。
 
+它当前还会把构建状态、编译日志和最终 tex/pdf 落到实例目录的 `output/`，并在 diagnostics 缺失时稳定写入占位与 `missing_data_report.md`。
+
 `docs/decisions/` 中的报告相关文档只作为历史经验与阶段记录，不作为当前设计说明。

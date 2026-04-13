@@ -8,11 +8,13 @@
 - 解析对应模板目录下的 `spec.yaml`
 - 直接读取同批次 `diagnostics/` 资产
 - 在实例目录的 `generated/` 下落最小可运行骨架
+- 在实例目录的 `output/` 下落构建状态、编译日志和最终 tex/pdf
 
 当前入口：
 
 - `render_report_instance.py`
   - 通用的最小实例渲染脚手架
+  - 优先直接读取 diagnostics，再按需要尝试本机或 Docker XeLaTeX 编译
 
 示例：
 

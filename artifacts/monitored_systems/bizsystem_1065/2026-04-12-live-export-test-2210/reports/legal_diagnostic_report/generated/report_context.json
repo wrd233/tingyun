@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T11:41:24.819499+00:00",
+  "generated_at": "2026-04-13T12:46:10.824890+00:00",
   "report_type_id": "legal_diagnostic_report",
   "report_type_name": "法务系统巡检与排查报告",
   "report_title": "集团法务应用性能巡检报告",
@@ -12,6 +12,7 @@
     "config_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/report_config.yaml",
     "diagnostics_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics",
     "template_root": "/Users/wangrundong/work/mywork/report_templates/legal_diagnostic_report",
+    "report_instance_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report",
     "reports_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report",
     "generated_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/generated",
     "chapters_root": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/reports/legal_diagnostic_report/generated/chapters",
@@ -34,53 +35,69 @@
     "required": [
       {
         "relative_path": "02_master_tables/request_master.csv",
+        "source_template": "02_master_tables/request_master.csv",
         "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/02_master_tables/request_master.csv",
         "exists": true,
-        "kind": "file"
+        "kind": "file",
+        "expected_kind": "file"
       },
       {
         "relative_path": "02_master_tables/sql_master.csv",
+        "source_template": "02_master_tables/sql_master.csv",
         "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/02_master_tables/sql_master.csv",
         "exists": true,
-        "kind": "file"
+        "kind": "file",
+        "expected_kind": "file"
       },
       {
         "relative_path": "03_evidence_indexes/request_evidence_index.csv",
+        "source_template": "03_evidence_indexes/request_evidence_index.csv",
         "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/03_evidence_indexes/request_evidence_index.csv",
         "exists": true,
-        "kind": "file"
+        "kind": "file",
+        "expected_kind": "file"
       },
       {
         "relative_path": "03_evidence_indexes/sql_evidence_index.csv",
+        "source_template": "03_evidence_indexes/sql_evidence_index.csv",
         "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/03_evidence_indexes/sql_evidence_index.csv",
         "exists": true,
-        "kind": "file"
+        "kind": "file",
+        "expected_kind": "file"
       }
     ],
     "optional": [
       {
         "relative_path": "01_prepared_tables/",
+        "source_template": "01_prepared_tables/",
         "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/01_prepared_tables",
         "exists": true,
-        "kind": "directory"
+        "kind": "directory",
+        "expected_kind": "directory"
       },
       {
         "relative_path": "04_deep_dive/",
+        "source_template": "04_deep_dive/",
         "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/04_deep_dive",
         "exists": true,
-        "kind": "directory"
+        "kind": "directory",
+        "expected_kind": "directory"
       },
       {
         "relative_path": "../report_materials/",
+        "source_template": "../report_materials/",
         "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/../report_materials",
         "exists": true,
-        "kind": "directory"
+        "kind": "directory",
+        "expected_kind": "directory"
       },
       {
-        "relative_path": "../../../knowledge/monitored_systems/<system_key>/",
-        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/../../../knowledge/monitored_systems/<system_key>",
-        "exists": false,
-        "kind": "file"
+        "relative_path": "../../../../../knowledge/monitored_systems/bizsystem_1065/",
+        "source_template": "../../../../../knowledge/monitored_systems/<system_key>/",
+        "resolved_path": "/Users/wangrundong/work/mywork/artifacts/monitored_systems/bizsystem_1065/2026-04-12-live-export-test-2210/diagnostics/../../../../../knowledge/monitored_systems/bizsystem_1065",
+        "exists": true,
+        "kind": "directory",
+        "expected_kind": "directory"
       }
     ],
     "missing_required_count": 0
@@ -201,12 +218,19 @@
       "report_context.json",
       "chapter_stubs.json",
       "assembled_main.tex",
-      "asset_index_stub.json"
+      "asset_index_stub.json",
+      "missing_data_report.md"
+    ],
+    "default_output_outputs": [
+      "legal_diagnostic_report.tex",
+      "build_status.json",
+      "legal_diagnostic_report.pdf"
     ],
     "latex_strategy": {
       "keep_main_template": true,
       "use_light_fragments": true,
-      "fragment_policy": "cover_toc_and_major_chapters"
+      "fragment_policy": "cover_toc_and_major_chapters",
+      "compile_fallback": "docker_texlive_if_host_xelatex_missing"
     }
   },
   "missing_data_policy": {
@@ -218,6 +242,7 @@
   },
   "notes": [
     "当前实例按第三阶段轻量方案建立，使用 repo-relative 路径并直接读取同批次 diagnostics。",
+    "diagnostics_root 与 report_instance_root 分别指向同批次的 sibling diagnostics / reports 目录。",
     "generated/output/assets 仅作为本批次报告工作区，不承载新的重型输入层。"
   ]
 }

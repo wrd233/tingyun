@@ -1,6 +1,6 @@
 report_type_id: legal_diagnostic_report
 report_type_name: 法务系统巡检与排查报告
-version: 0.1.0
+version: 0.2.0
 renderer_entry: report_templates/renderers/render_report_instance.py
 output_format:
   primary: latex
@@ -14,6 +14,7 @@ target_audience:
 diagnostics_source_root: artifacts/monitored_systems/<system_key>/<batch_key>/diagnostics
 direct_read_mode: true
 report_instance_root: artifacts/monitored_systems/<system_key>/<batch_key>/reports/<report_type_id>
+report_config_path: artifacts/monitored_systems/<system_key>/<batch_key>/reports/<report_type_id>/report_config.yaml
 required_assets:
   - 02_master_tables/request_master.csv
   - 02_master_tables/sql_master.csv
@@ -23,7 +24,7 @@ optional_assets:
   - 01_prepared_tables/
   - 04_deep_dive/
   - ../report_materials/
-  - ../../../knowledge/monitored_systems/<system_key>/
+  - ../../../../../knowledge/monitored_systems/<system_key>/
 chapter_tree:
   "1":
     title: 概述
@@ -82,10 +83,16 @@ rendering_rules:
     - chapter_stubs.json
     - assembled_main.tex
     - asset_index_stub.json
+    - missing_data_report.md
+  default_output_outputs:
+    - legal_diagnostic_report.tex
+    - build_status.json
+    - legal_diagnostic_report.pdf
   latex_strategy:
     keep_main_template: true
     use_light_fragments: true
     fragment_policy: cover_toc_and_major_chapters
+    compile_fallback: docker_texlive_if_host_xelatex_missing
 missing_data_policy:
   required_asset_missing: emit_explicit_placeholder
   optional_asset_missing: skip_with_note

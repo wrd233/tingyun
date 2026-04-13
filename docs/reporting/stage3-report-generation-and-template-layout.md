@@ -69,8 +69,19 @@
   - `chapter_stubs.json`
   - `assembled_main.tex`
   - `asset_index_stub.json`
+  - `missing_data_report.md`
+- 在实例目录的 `output/` 下生成或刷新：
+  - `legal_diagnostic_report.tex`
+  - `build_status.json`
+  - `build_xelatex*.log`
+  - `legal_diagnostic_report.pdf`（当本机或 Docker XeLaTeX 可用时）
 
-它当前还不会自动产出完整高质量正文，但已经能证明第三阶段“开始可执行”。
+它当前还不会自动产出完整高质量正文，但已经能稳定完成：
+
+- direct read from diagnostics
+- 章节骨架与缺失项汇总
+- 最终 tex 组装
+- 容器化 XeLaTeX 编译回退
 
 ## 当前原则
 

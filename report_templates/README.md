@@ -21,6 +21,7 @@
 
 - `renderers/`
   - 读取实例级 `report_config.yaml`，直接从同批次 `diagnostics/` 生成 `generated/` 骨架
+  - 并把构建状态、编译日志和最终 tex/pdf 写回实例目录的 `output/`
 
 ## 当前模板
 
@@ -40,3 +41,9 @@
 python3 report_templates/renderers/render_report_instance.py \
   --config artifacts/monitored_systems/<system_key>/<batch_key>/reports/legal_diagnostic_report/report_config.yaml
 ```
+
+当前这条入口仍然坚持：
+
+- direct read from diagnostics
+- 不引入 `report_input_bundle/`
+- 模板定义与实例输出分离

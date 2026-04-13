@@ -132,6 +132,13 @@ def resolve_repo_path(repo_root: Path, value: str) -> Path:
     return path if path.is_absolute() else repo_root / path
 
 
+def expand_template_tokens(value: str, mapping: dict[str, Any]) -> str:
+    text = str(value)
+    for key, mapped_value in mapping.items():
+        text = text.replace(f"<{key}>", str(mapped_value))
+    return text
+
+
 def ensure_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
 
@@ -181,6 +188,37 @@ def latex_escape(value: Any) -> str:
     return text
 
 
+def latex_escape_breakable(value: Any) -> str:
+    text = str(value or "")
+    pieces: list[str] = []
+    for char in text:
+        if char == "\\":
+            pieces.append(r"\textbackslash{}")
+        elif char == "&":
+            pieces.append(r"\&\allowbreak{}")
+        elif char == "%":
+            pieces.append(r"\%")
+        elif char == "$":
+            pieces.append(r"\$")
+        elif char == "#":
+            pieces.append(r"\#")
+        elif char == "_":
+            pieces.append(r"\allowbreak{}\_\allowbreak{}")
+        elif char == "{":
+            pieces.append(r"\{")
+        elif char == "}":
+            pieces.append(r"\}")
+        elif char == "~":
+            pieces.append(r"\textasciitilde{}")
+        elif char == "^":
+            pieces.append(r"\textasciicircum{}")
+        elif char in {"/", ".", "-", ":", "?", "=", "(", ")", ",", ";"}:
+            pieces.append(char + r"\allowbreak{}")
+        else:
+            pieces.append(char)
+    return "".join(pieces)
+
+
 def top_rows(rows: list[dict[str, str]], key: str, *, limit: int = 5, positive_only: bool = False) -> list[dict[str, str]]:
     filtered = rows
     if positive_only:
@@ -188,16 +226,19 @@ def top_rows(rows: list[dict[str, str]], key: str, *, limit: int = 5, positive_o
     return sorted(filtered, key=lambda row: parse_float(row.get(key)), reverse=True)[:limit]
 
 
-def collect_asset_status(root: Path, asset_paths: list[str]) -> list[dict[str, Any]]:
+def collect_asset_status(root: Path, asset_paths: list[str], mapping: dict[str, Any]) -> list[dict[str, Any]]:
     results: list[dict[str, Any]] = []
     for relative in asset_paths:
-        full = root / relative
+        rendered_relative = expand_template_tokens(relative, mapping)
+        full = root / rendered_relative
         results.append(
             {
-                "relative_path": relative,
+                "relative_path": rendered_relative,
+                "source_template": relative,
                 "resolved_path": str(full),
                 "exists": full.exists(),
                 "kind": "directory" if full.is_dir() else "file",
+                "expected_kind": "directory" if str(rendered_relative).endswith("/") else "file",
             }
         )
     return results
@@ -240,6 +281,34 @@ def assemble_main_tex(template_root: Path, chapters_root: Path, target_dir: Path
     return "\n".join(header) + text
 
 
+def count_latex_warnings(log_text: str) -> dict[str, int]:
+    overfull_matches = [float(item) for item in re.findall(r"Overfull \\hbox \(([\d.]+)pt too wide\)", log_text)]
+    underfull_matches = [int(item) for item in re.findall(r"Underfull \\hbox \(badness (\d+)\)", log_text)]
+    return {
+        "overfull_hbox": len(overfull_matches),
+        "underfull_hbox": len(underfull_matches),
+        "font_warnings": len(re.findall(r"LaTeX Font Warning", log_text)),
+        "max_overfull_pt": int(max(overfull_matches)) if overfull_matches else 0,
+        "max_underfull_badness": max(underfull_matches) if underfull_matches else 0,
+    }
+
+
+def parse_pdf_page_count(log_text: str) -> int | None:
+    match = re.search(r"Output written on .*? \((\d+) pages?\)", log_text)
+    if match is None:
+        return None
+    try:
+        return int(match.group(1))
+    except ValueError:
+        return None
+
+
+def write_build_log(output_root: Path, filename: str, content: str) -> str:
+    path = output_root / filename
+    path.write_text(content, encoding="utf-8")
+    return path.name
+
+
 def build_object_map(rows: list[dict[str, str]], key: str = "object_id") -> dict[str, dict[str, str]]:
     return {str(row.get(key, "")): row for row in rows if row.get(key)}
 
@@ -260,9 +329,10 @@ def render_request_table(rows: list[dict[str, str]], title: str, *, include_erro
     lines = [
         r"\setlength{\LTleft}{0pt}",
         r"\setlength{\LTright}{0pt}",
-        r"\setlength{\tabcolsep}{3.6pt}",
+        r"\setlength{\tabcolsep}{3pt}",
         r"\renewcommand{\arraystretch}{1.35}",
-        r"\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.34\textwidth}>{\RaggedRight\arraybackslash}p{0.12\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}}",
+        r"\scriptsize",
+        r"\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.33\textwidth}>{\RaggedRight\arraybackslash}p{0.11\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}}",
         r"\hline",
         r"\cellcolor{HeaderBlue}\color{white}\bfseries 事务名称 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均请求时间(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 请求数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误率(\%) & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 \\",
         r"\hline",
@@ -274,7 +344,7 @@ def render_request_table(rows: list[dict[str, str]], title: str, *, include_erro
     ]
     for row in rows:
         lines.append(
-            f"{latex_escape(row.get('display_name') or row.get('canonical_name'))} & "
+            f"{latex_escape_breakable(row.get('display_name') or row.get('canonical_name'))} & "
             f"{latex_escape(format_number(row.get('avg_rt_ms'), digits=2))} & "
             f"{latex_escape(format_number(row.get('request_count')))} & "
             f"{latex_escape(format_number(row.get('error_rate_pct'), digits=2))} & "
@@ -286,6 +356,7 @@ def render_request_table(rows: list[dict[str, str]], title: str, *, include_erro
         lines.append(r"\multicolumn{6}{l}{【当前批次未获取到该项数据】}\\")
         lines.append(r"\hline")
     lines.append(r"\end{longtable}")
+    lines.append(r"\normalsize")
     return "\n".join(lines)
 
 
@@ -293,9 +364,10 @@ def render_sql_table(rows: list[dict[str, str]], *, abnormal: bool = False) -> s
     lines = [
         r"\setlength{\LTleft}{0pt}",
         r"\setlength{\LTright}{0pt}",
-        r"\setlength{\tabcolsep}{3.2pt}",
+        r"\setlength{\tabcolsep}{2.8pt}",
         r"\renewcommand{\arraystretch}{1.35}",
-        r"\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.36\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.10\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}}",
+        r"\footnotesize",
+        r"\begin{longtable}{>{\RaggedRight\arraybackslash}p{0.13\textwidth}>{\RaggedRight\arraybackslash}p{0.42\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.08\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}>{\RaggedRight\arraybackslash}p{0.07\textwidth}}",
         r"\hline",
         r"\cellcolor{HeaderBlue}\color{white}\bfseries 对象提示 & \cellcolor{HeaderBlue}\color{white}\bfseries SQL 片段 & \cellcolor{HeaderBlue}\color{white}\bfseries 平均响应(ms) & \cellcolor{HeaderBlue}\color{white}\bfseries 调用次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 慢次数 & \cellcolor{HeaderBlue}\color{white}\bfseries 错误次数 \\",
         r"\hline",
@@ -306,10 +378,10 @@ def render_sql_table(rows: list[dict[str, str]], *, abnormal: bool = False) -> s
         r"\endhead",
     ]
     for row in rows:
-        sql_text = str(row.get("representative_sql") or "")[:160]
+        sql_text = str(row.get("representative_sql") or "")[:140]
         lines.append(
-            f"{latex_escape(row.get('query_object_hint') or row.get('source_db_name'))} & "
-            f"{latex_escape(sql_text)} & "
+            f"{latex_escape_breakable(row.get('query_object_hint') or row.get('source_db_name'))} & "
+            f"{latex_escape_breakable(sql_text)} & "
             f"{latex_escape(format_number(row.get('avg_rt_ms')))} & "
             f"{latex_escape(format_number(row.get('exec_count')))} & "
             f"{latex_escape(format_number(row.get('slow_count')))} & "
@@ -321,11 +393,12 @@ def render_sql_table(rows: list[dict[str, str]], *, abnormal: bool = False) -> s
         lines.append(rf"\multicolumn{{6}}{{l}}{{{placeholder}}}\\")
         lines.append(r"\hline")
     lines.append(r"\end{longtable}")
+    lines.append(r"\normalsize")
     return "\n".join(lines)
 
 
 def render_focus_request(row: dict[str, str], evidence: dict[str, str] | None, deep_dive: dict[str, str] | None) -> str:
-    name = latex_escape(row.get("display_name") or row.get("canonical_name"))
+    name = latex_escape_breakable(row.get("display_name") or row.get("canonical_name"))
     lines = [
         rf"\vspace{{0.35em}}\noindent{{\color{{InterfaceBlue}}\bfseries\fontsize{{11pt}}{{13.2pt}}\selectfont {name}}}\par",
         "",
@@ -336,7 +409,7 @@ def render_focus_request(row: dict[str, str], evidence: dict[str, str] | None, d
     ]
     if deep_dive:
         lines.append(
-            rf"\noindent\textbf{{【现状】}} 已存在 deep-dive 结果：`{latex_escape(deep_dive.get('deep_dive_id'))}`，类型为 `{latex_escape(deep_dive.get('deep_dive_kind'))}`，摘要为 `{latex_escape(deep_dive.get('summary'))}`；证据数 {latex_escape(format_number(deep_dive.get('evidence_count')))}，页面链接 {latex_escape(format_number(deep_dive.get('page_link_count')))}。\par"
+            rf"\noindent\textbf{{【现状】}} 已存在 deep-dive 结果：\texttt{{{latex_escape_breakable(deep_dive.get('deep_dive_id'))}}}，类型为 \texttt{{{latex_escape_breakable(deep_dive.get('deep_dive_kind'))}}}，摘要为 {latex_escape(deep_dive.get('summary'))}；证据数 {latex_escape(format_number(deep_dive.get('evidence_count')))}，页面链接 {latex_escape(format_number(deep_dive.get('page_link_count')))}。\par"
         )
     elif evidence:
         lines.append(
@@ -348,8 +421,8 @@ def render_focus_request(row: dict[str, str], evidence: dict[str, str] | None, d
 
 
 def render_focus_sql(row: dict[str, str], evidence: dict[str, str] | None, deep_dive: dict[str, str] | None) -> str:
-    title = latex_escape(row.get("query_object_hint") or row.get("source_db_name") or row.get("object_id"))
-    sql_text = latex_escape(str(row.get("representative_sql") or "")[:220])
+    title = latex_escape_breakable(row.get("query_object_hint") or row.get("source_db_name") or row.get("object_id"))
+    sql_text = latex_escape_breakable(str(row.get("representative_sql") or "")[:180])
     lines = [
         rf"\vspace{{0.35em}}\noindent{{\color{{InterfaceBlue}}\bfseries\fontsize{{11pt}}{{13.2pt}}\selectfont {title}}}\par",
         "",
@@ -360,7 +433,7 @@ def render_focus_sql(row: dict[str, str], evidence: dict[str, str] | None, deep_
     ]
     if deep_dive:
         lines.append(
-            rf"\noindent\textbf{{【现状】}} 已存在 SQL deep-dive：`{latex_escape(deep_dive.get('deep_dive_id'))}`，摘要 `{latex_escape(deep_dive.get('summary'))}`，证据数 {latex_escape(format_number(deep_dive.get('evidence_count')))}，页面链接 {latex_escape(format_number(deep_dive.get('page_link_count')))}。\par"
+            rf"\noindent\textbf{{【现状】}} 已存在 SQL deep-dive：\texttt{{{latex_escape_breakable(deep_dive.get('deep_dive_id'))}}}，摘要 {latex_escape(deep_dive.get('summary'))}，证据数 {latex_escape(format_number(deep_dive.get('evidence_count')))}，页面链接 {latex_escape(format_number(deep_dive.get('page_link_count')))}。\par"
         )
     elif evidence:
         lines.append(
@@ -584,26 +657,140 @@ def write_missing_data_report(path: Path, chapter_statuses: list[dict[str, Any]]
     lines.append("## 编译状态")
     lines.append("")
     lines.append(f"- compiled: `{compile_status.get('compiled')}`")
+    if compile_status.get("compiler"):
+        lines.append(f"- compiler: `{compile_status.get('compiler')}`")
     lines.append(f"- reason: {compile_status.get('reason')}")
+    if compile_status.get("build_log"):
+        lines.append(f"- build_log: `{compile_status.get('build_log')}`")
+    warnings = compile_status.get("warnings") or {}
+    if warnings:
+        lines.append(f"- overfull_hbox: `{warnings.get('overfull_hbox', 0)}`")
+        lines.append(f"- underfull_hbox: `{warnings.get('underfull_hbox', 0)}`")
+        lines.append(f"- max_overfull_pt: `{warnings.get('max_overfull_pt', 0)}`")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def try_compile_xelatex(output_root: Path, tex_path: Path) -> dict[str, Any]:
-    xelatex = shutil.which("xelatex")
-    if not xelatex:
-        return {"compiled": False, "reason": "xelatex not available in current environment"}
-    proc = subprocess.run(
-        [xelatex, "-interaction=nonstopmode", tex_path.name],
-        cwd=output_root,
+def run_command(command: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        command,
+        cwd=cwd,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
     )
-    return {
-        "compiled": proc.returncode == 0,
-        "reason": "ok" if proc.returncode == 0 else f"xelatex exited with code {proc.returncode}",
-        "log_excerpt": proc.stdout[-2000:],
+
+
+def build_compile_status(
+    *,
+    compiled: bool,
+    reason: str,
+    compiler: str,
+    log_text: str,
+    build_log: str,
+    output_file: str,
+) -> dict[str, Any]:
+    status: dict[str, Any] = {
+        "compiled": compiled,
+        "reason": reason,
+        "compiler": compiler,
+        "build_log": build_log,
+        "output_file": output_file,
+        "warnings": count_latex_warnings(log_text),
+        "log_excerpt": log_text[-2000:],
     }
+    pages = parse_pdf_page_count(log_text)
+    if pages is not None:
+        status["pages"] = pages
+    return status
+
+
+def try_compile_xelatex(output_root: Path, tex_path: Path, repo_root: Path) -> dict[str, Any]:
+    output_file = tex_path.with_suffix(".pdf").name
+    xelatex = shutil.which("xelatex")
+    if xelatex:
+        local_logs: list[str] = []
+        local_success = True
+        for _ in range(2):
+            proc = run_command([xelatex, "-interaction=nonstopmode", "-halt-on-error", tex_path.name], output_root)
+            local_logs.append(proc.stdout)
+            if proc.returncode != 0:
+                local_success = False
+                break
+        local_log_text = "\n\n".join(local_logs)
+        local_log_name = write_build_log(output_root, "build_xelatex.log", local_log_text)
+        if local_success:
+            return build_compile_status(
+                compiled=True,
+                reason="ok",
+                compiler="xelatex (host)",
+                log_text=local_log_text,
+                build_log=local_log_name,
+                output_file=output_file,
+            )
+        local_failure = build_compile_status(
+            compiled=False,
+            reason=f"xelatex exited with code {proc.returncode}",
+            compiler="xelatex (host)",
+            log_text=local_log_text,
+            build_log=local_log_name,
+            output_file=output_file,
+        )
+    else:
+        local_failure = {
+            "compiled": False,
+            "reason": "xelatex not available in current environment",
+            "compiler": "xelatex (host)",
+        }
+
+    docker = shutil.which("docker")
+    if not docker:
+        return local_failure
+
+    repo_root_resolved = repo_root.resolve()
+    output_root_rel = Path(os.path.relpath(output_root, repo_root_resolved)).as_posix()
+    docker_command = [
+        docker,
+        "run",
+        "--rm",
+        "-v",
+        f"{repo_root_resolved}:/work",
+        "-w",
+        f"/work/{output_root_rel}",
+        "texlive/texlive:latest",
+        "xelatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        tex_path.name,
+    ]
+    docker_logs: list[str] = []
+    docker_success = True
+    docker_returncode = 0
+    for _ in range(2):
+        proc = run_command(docker_command, repo_root_resolved)
+        docker_logs.append(proc.stdout)
+        docker_returncode = proc.returncode
+        if proc.returncode != 0:
+            docker_success = False
+            break
+    docker_log_text = "\n\n".join(docker_logs)
+    docker_log_name = write_build_log(output_root, "build_xelatex_docker.log", docker_log_text)
+    if docker_success:
+        return build_compile_status(
+            compiled=True,
+            reason="ok",
+            compiler="xelatex (docker: texlive/texlive:latest)",
+            log_text=docker_log_text,
+            build_log=docker_log_name,
+            output_file=output_file,
+        )
+    return build_compile_status(
+        compiled=False,
+        reason=f"docker xelatex exited with code {docker_returncode}",
+        compiler="xelatex (docker: texlive/texlive:latest)",
+        log_text=docker_log_text,
+        build_log=docker_log_name,
+        output_file=output_file,
+    )
 
 
 def render_instance(config_path: Path) -> dict[str, Any]:
@@ -613,9 +800,15 @@ def render_instance(config_path: Path) -> dict[str, Any]:
     if not report_type_id:
         raise ValueError("report_type_id is required")
 
+    token_mapping = {
+        "system_key": config.get("system_key", ""),
+        "batch_key": config.get("batch_key", ""),
+        "report_type_id": report_type_id,
+    }
     diagnostics_root = resolve_repo_path(repo_root, str(config.get("diagnostics_root", "")))
     template_root = resolve_repo_path(repo_root, str(config.get("template_root", "")))
-    reports_root = resolve_repo_path(repo_root, str(config.get("reports_root", "")))
+    reports_root_value = str(config.get("report_instance_root") or config.get("reports_root", ""))
+    reports_root = resolve_repo_path(repo_root, reports_root_value)
     generated_root = resolve_repo_path(repo_root, str(config.get("generated_root", "")))
     output_root = resolve_repo_path(repo_root, str(config.get("output_root", "")))
     assets_root = resolve_repo_path(repo_root, str(config.get("assets_root", "")))
@@ -628,8 +821,8 @@ def render_instance(config_path: Path) -> dict[str, Any]:
     if not spec.get("direct_read_mode", False):
         raise ValueError(f"{template_root / 'spec.yaml'} does not enable direct_read_mode")
 
-    required_assets = collect_asset_status(diagnostics_root, list(spec.get("required_assets") or []))
-    optional_assets = collect_asset_status(diagnostics_root, list(spec.get("optional_assets") or []))
+    required_assets = collect_asset_status(diagnostics_root, list(spec.get("required_assets") or []), token_mapping)
+    optional_assets = collect_asset_status(diagnostics_root, list(spec.get("optional_assets") or []), token_mapping)
     missing_required = [item for item in required_assets if not item["exists"]]
     missing_required_notes = [f"required asset missing: {item['relative_path']}" for item in missing_required]
 
@@ -679,6 +872,7 @@ def render_instance(config_path: Path) -> dict[str, Any]:
             "config_path": str(config_path),
             "diagnostics_root": str(diagnostics_root),
             "template_root": str(template_root),
+            "report_instance_root": str(reports_root),
             "reports_root": str(reports_root),
             "generated_root": str(generated_root),
             "chapters_root": str(chapters_root),
@@ -751,6 +945,13 @@ def render_instance(config_path: Path) -> dict[str, Any]:
         + "\n",
         encoding="utf-8",
     )
+    chapter_statuses = [
+        {"chapter": "chapter_1", "title": "概述", "status": "filled", "note": "概述与证据来源已按当前 diagnostics 摘要填充。"},
+        {"chapter": "chapter_2_1", "title": "部署架构与运行环境概况", "status": "partial", "note": "仅基于 preparation/materialization 摘要填充，主机级部署信息仍占位。"},
+        {"chapter": "chapter_2_2", "title": "系统接口检查", "status": "filled", "note": "接口主表、证据索引和 request deep-dive 已接入。"},
+        {"chapter": "chapter_2_3", "title": "系统SQL检查", "status": "filled", "note": "SQL 主表、证据索引和 sql deep-dive 已接入。"},
+        {"chapter": "chapter_3", "title": "结论", "status": "partial", "note": "结论已生成，但仍是测试轮次的收敛摘要。"},
+    ]
     (generated_root / "chapter_stubs.json").write_text(
         json.dumps(
             {
@@ -758,11 +959,13 @@ def render_instance(config_path: Path) -> dict[str, Any]:
                 "report_type_id": report_type_id,
                 "chapters": [
                     {
-                        "chapter_id": item["chapter_id"],
+                        "chapter_id": item["chapter"],
                         "title": item["title"],
-                        "status": "template_stub",
+                        "status": item["status"],
+                        "note": item["note"],
+                        "generated_file": f"chapters/{item['chapter']}.tex",
                     }
-                    for item in context["chapter_outline"]
+                    for item in chapter_statuses
                 ],
             },
             ensure_ascii=False,
@@ -781,15 +984,8 @@ def render_instance(config_path: Path) -> dict[str, Any]:
         assemble_main_tex(template_root, chapters_root, output_root),
         encoding="utf-8",
     )
-    compile_status = try_compile_xelatex(output_root, output_tex_path)
+    compile_status = try_compile_xelatex(output_root, output_tex_path, repo_root)
     (output_root / "build_status.json").write_text(json.dumps(compile_status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    chapter_statuses = [
-        {"chapter": "chapter_1", "status": "filled", "note": "概述与证据来源已按当前 diagnostics 摘要填充。"},
-        {"chapter": "chapter_2_1", "status": "partial", "note": "仅基于 preparation/materialization 摘要填充，主机级部署信息仍占位。"},
-        {"chapter": "chapter_2_2", "status": "filled", "note": "接口主表、证据索引和 request deep-dive 已接入。"},
-        {"chapter": "chapter_2_3", "status": "filled", "note": "SQL 主表、证据索引和 sql deep-dive 已接入。"},
-        {"chapter": "chapter_3", "status": "partial", "note": "结论已生成，但仍是测试轮次的收敛摘要。"},
-    ]
     write_missing_data_report(generated_root / "missing_data_report.md", chapter_statuses, context["missing_items"], compile_status)
     return context
 
@@ -809,6 +1005,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"report_type_id={context['report_type_id']}")
     print(f"diagnostics_root={context['resolved_paths']['diagnostics_root']}")
     print(f"generated_root={context['resolved_paths']['generated_root']}")
+    print(f"output_root={context['resolved_paths']['output_root']}")
     print(f"missing_required_assets={context['diagnostics_assets']['missing_required_count']}")
     return 0
 

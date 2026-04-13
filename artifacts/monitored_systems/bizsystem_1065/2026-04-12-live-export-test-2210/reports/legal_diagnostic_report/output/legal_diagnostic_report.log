@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.12)  13 APR 2026 12:04
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.12)  13 APR 2026 12:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,129 +657,67 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 )
 (../generated/chapters/chapter_2_1.tex [4])
 (../generated/chapters/chapter_2_2.tex
-Underfull \hbox (badness 10000) in alignment at lines 11--15
+Underfull \hbox (badness 10000) in alignment at lines 12--16
 [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 15--19
+Underfull \hbox (badness 10000) in alignment at lines 16--20
 [] [] [] [] [] []
  []
 
 
-Overfull \hbox (193.53696pt too wide) in paragraph at lines 20--20
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/user- 
- []
-
-
-Overfull \hbox (135.87694pt too wide) in paragraph at lines 22--22
-[]|\TU/LatinModernRoman(0)/b/n/12 URI/grcv5/wp/contractView/viewContract.htm|  
-
- []
-
-
-Overfull \hbox (193.30896pt too wide) in paragraph at lines 24--24
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/task- 
- []
-
-
-Overfull \hbox (193.53696pt too wide) in paragraph at lines 26--26
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/user- 
- []
-
-
-Overfull \hbox (78.90097pt too wide) in paragraph at lines 28--28
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.workflow.view}|  
- []
-
-
-Overfull \hbox (193.30896pt too wide) in paragraph at lines 30--30
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/task- 
- []
-
-
-Overfull \hbox (193.30896pt too wide) in paragraph at lines 32--32
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/task- 
- []
-
-
-Overfull \hbox (193.30896pt too wide) in paragraph at lines 34--34
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/task- 
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 19--36
+Underfull \hbox (badness 10000) in alignment at lines 20--37
 [] [] [] [] [] []
  []
 
 [5]
-Overfull \hbox (2.92255pt too wide) in paragraph at lines 57--57
+Overfull \hbox (2.92255pt too wide) in paragraph at lines 59--59
 []\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
-pi.v1}/user-tasks/processed (POST)[] 
+pi.v1}/user-tasks/processed (POST)
  []
 
 
-Overfull \hbox (56.59152pt too wide) in paragraph at lines 65--65
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[<...>]{<...>}' to define
+(xeCJK)                it.
+
+
+Overfull \hbox (12.43756pt too wide) in paragraph at lines 67--67
 []\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
-pi.v1}/task-form-process/done-pages/{instId}[] 
+pi.v1}/task-form-process/done-pages/
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 79--83
+Underfull \hbox (badness 10000) in alignment at lines 82--86
 [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 83--87
+Underfull \hbox (badness 10000) in alignment at lines 86--90
 [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 88--88
-\TU/LatinModernRoman(0)/b/n/12 mobile/v1/task- 
- []
-
-
-Underfull \hbox (badness 1231) in paragraph at lines 90--90
-\TU/LatinModernRoman(0)/b/n/12 mobile/v1/task- 
- []
-
-
-Overfull \hbox (193.30896pt too wide) in paragraph at lines 94--94
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/task- 
- []
-
-
-Overfull \hbox (193.30896pt too wide) in paragraph at lines 96--96
-[]|\TU/LatinModernRoman(0)/b/n/12 SpringController/${url.rest.prefix.flowmobile
-api.v1}/task- 
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 87--98
+Underfull \hbox (badness 10000) in alignment at lines 90--101
 [] [] [] [] [] []
  []
 
-[6]
-Overfull \hbox (34.23953pt too wide) in paragraph at lines 103--103
+
+ignored: Infinite glue shrinkage found in box being split [6]
+Overfull \hbox (11.27156pt too wide) in paragraph at lines 107--107
 []\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
-pi.v1}/task-form-process/todo-pages/{id}[] 
+pi.v1}/task-form-process/todo-pages/
  []
 
-[7]
-Overfull \hbox (34.23953pt too wide) in paragraph at lines 127--127
+
+Overfull \hbox (11.27156pt too wide) in paragraph at lines 131--131
 []\TU/LatinModernRoman(0)/b/n/11 SpringController/${url.rest.prefix.flowmobilea
-pi.v1}/task-form-process/todo-pages/{id}[] 
+pi.v1}/task-form-process/todo-pages/
  []
 
-) (../generated/chapters/chapter_2_3.tex
+) (../generated/chapters/chapter_2_3.tex [7]
 Overfull \hbox (16.15356pt too wide) in paragraph at lines 3--3
 []\TU/FandolSong-Regular(0)/m/n/12 本 章 节 优 先 读 取 \TU/LatinModernRoman(0)/b/n/12
  sql_master.csv\TU/FandolSong-Regular(0)/m/n/12 、| \TU/LatinModernRoman(0)/b/n/
@@ -808,207 +746,62 @@ Underfull \hbox (badness 1082) in paragraph at lines 18--19
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 29--33
+Underfull \hbox (badness 10000) in alignment at lines 30--34
 [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 33--37
+Underfull \hbox (badness 10000) in alignment at lines 34--38
 [] [] [] [] [] []
  []
 
 
-Overfull \hbox (26.34583pt too wide) in paragraph at lines 38--38
-[]|\TU/LatinModernRoman(0)/b/n/12 bpm_todo_logo|  
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 43--43
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
  []
 
 
-Overfull \hbox (26.34583pt too wide) in paragraph at lines 40--40
-[]|\TU/LatinModernRoman(0)/b/n/12 bpm_todo_logo|  
+Overfull \hbox (0.69264pt too wide) in paragraph at lines 45--45
+\TU/LatinModernRoman(0)/b/n/10 TODOLIST|  
  []
 
 
-Overfull \hbox (111.00584pt too wide) in paragraph at lines 42--42
-[]|\TU/LatinModernRoman(0)/b/n/12 LAS_CONTRACT_UPDATE|  
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 47--47
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
  []
 
 
-Overfull \hbox (21.9555pt too wide) in paragraph at lines 42--42
-\TU/LatinModernRoman(0)/b/n/12 a.CONTRACT_SELF_CODE 
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 49--49
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
  []
 
 
-Overfull \hbox (30.16185pt too wide) in paragraph at lines 44--44
-[]|\TU/LatinModernRoman(0)/b/n/12 HD_TODOLIST|  
+Overfull \hbox (8.06265pt too wide) in paragraph at lines 53--53
+\TU/LatinModernRoman(0)/b/n/10 CONTRACT 
  []
 
 
-Underfull \hbox (badness 4048) in paragraph at lines 44--44
-[]|\TU/LatinModernRoman(0)/b/n/12 select ? from 
- []
-
-
-Overfull \hbox (111.00584pt too wide) in paragraph at lines 46--46
-[]|\TU/LatinModernRoman(0)/b/n/12 LAS_CONTRACT_UPDATE|  
- []
-
-
-Underfull \hbox (badness 1609) in paragraph at lines 46--46
-[]|\TU/LatinModernRoman(0)/b/n/12 SELECT a.ID as 
- []
-
-
-Overfull \hbox (21.9555pt too wide) in paragraph at lines 46--46
-\TU/LatinModernRoman(0)/b/n/12 a.CONTRACT_SELF_CODE 
- []
-
-
-Overfull \hbox (153.01952pt too wide) in paragraph at lines 46--46
-\TU/LatinModernRoman(0)/b/n/12 CAT(a.CONTRACT_SELF_CODE,?,a.SELF_COD|  
- []
-
-
-Overfull \hbox (87.95384pt too wide) in paragraph at lines 48--48
-[]|\TU/LatinModernRoman(0)/b/n/12 LAS_CONTRACT_INFO|  
- []
-
-
-Underfull \hbox (badness 1281) in paragraph at lines 48--48
-[]|\TU/LatinModernRoman(0)/b/n/12 select count(*) as 
- []
-
-
-Overfull \hbox (50.27551pt too wide) in paragraph at lines 48--48
-\TU/LatinModernRoman(0)/b/n/12 c.ID,c.CONTRACT_SELF_CODE 
- []
-
-
-Underfull \hbox (badness 5862) in paragraph at lines 48--48
-\TU/LatinModernRoman(0)/b/n/12 docCatego- 
- []
-
-
-Overfull \hbox (21.7395pt too wide) in paragraph at lines 48--48
-\TU/LatinModernRoman(0)/b/n/12 ryId,c.CONTRACT_PERIOD 
- []
-
-
-Underfull \hbox (badness 5563) in paragraph at lines 48--48
-\TU/LatinModernRoman(0)/b/n/12 contractPe- 
- []
-
-
-Overfull \hbox (147.83385pt too wide) in paragraph at lines 50--50
-[]|\TU/LatinModernRoman(0)/b/n/12 HD_COMP_ATAH_GROUP_REL|  
- []
-
-
-Underfull \hbox (badness 4048) in paragraph at lines 50--50
-[]|\TU/LatinModernRoman(0)/b/n/12 select ? from 
- []
-
-
-Overfull \hbox (59.1195pt too wide) in paragraph at lines 50--50
-\TU/LatinModernRoman(0)/b/n/12 HD_COMP_ATAH_GROUP_REL 
- []
-
-
-Underfull \hbox (badness 3189) in paragraph at lines 50--50
-\TU/LatinModernRoman(0)/b/n/12 attachment0_ 
- []
-
-
-Underfull \hbox (badness 3536) in paragraph at lines 50--50
-\TU/LatinModernRoman(0)/b/n/12 where attach- 
- []
-
-
-Overfull \hbox (123.52185pt too wide) in paragraph at lines 52--52
-[]|\TU/LatinModernRoman(0)/b/n/12 LAS_CONTRACT_INFO_CE1|  
- []
-
-
-Underfull \hbox (badness 4048) in paragraph at lines 52--52
-[]|\TU/LatinModernRoman(0)/b/n/12 select ? from 
- []
-
-
-Overfull \hbox (34.80751pt too wide) in paragraph at lines 52--52
-\TU/LatinModernRoman(0)/b/n/12 LAS_CONTRACT_INFO_CE1 
- []
-
-
-Overfull \hbox (148.98752pt too wide) in paragraph at lines 52--52
-\TU/LatinModernRoman(0)/b/n/12 zstzdmc1x0_.LAS_CONTRACT_INFO_CE1ID=? 
- []
-
-
-Overfull \hbox (43.67383pt too wide) in paragraph at lines 54--54
-[]|\TU/LatinModernRoman(0)/b/n/12 hd_todo_seen_log|  
- []
-
-
-Underfull \hbox (badness 1910) in paragraph at lines 54--54
-[]|\TU/LatinModernRoman(0)/b/n/12 SELECT ? from 
- []
-
-
-Overfull \hbox (72.13785pt too wide) in paragraph at lines 56--56
-[]|\TU/LatinModernRoman(0)/b/n/12 HD_FORM_OPINION|  
- []
-
-
-Underfull \hbox (badness 4048) in paragraph at lines 56--56
-[]|\TU/LatinModernRoman(0)/b/n/12 select ? from 
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 56--56
-\TU/LatinModernRoman(0)/b/n/12 order by opinio- 
- []
-
-
-Underfull \hbox (badness 10000) in alignment at lines 37--58
-[] [] [] [] [] []
- []
-
-[8]
-ignored: Infinite glue shrinkage found in box being split [9]
-ignored: Infinite glue shrinkage 
-found in box being split [10]
-Overfull \hbox (33.81256pt too wide) in paragraph at lines 65--65
-\TU/LatinModernRoman(0)/b/n/12 = ? AND ACTIVITY_ID IN ( SELECT s.STEP_ID FROM L
-AS_FLOW_STEP
- []
-
-
-Overfull \hbox (65.16457pt too wide) in paragraph at lines 81--81
-\TU/LatinModernRoman(0)/b/n/12 WHEN a.CONTRACT_SELF_CODE IS NOT NULL AND a.CREA
-TE_UNIT_ID=?
- []
-
-
-Overfull \hbox (174.49658pt too wide) in paragraph at lines 81--81
-\TU/LatinModernRoman(0)/b/n/12 AND a.SELF_CODE IS NOT NULL THEN CONCAT(a.CONTRA
-CT_SELF_CODE,?,a.SELF_CODE)
- []
-
-[11]
-Underfull \hbox (badness 10000) in alignment at lines 91--95
+Underfull \hbox (badness 10000) in alignment at lines 38--59
 [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 95--99
+ignored: Infinite glue shrinkage found in box being split [8] [9]
+Underfull \hbox (badness 10000) in alignment at lines 94--98
 [] [] [] [] [] []
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 99--102
+Underfull \hbox (badness 10000) in alignment at lines 98--102
 [] [] [] [] [] []
  []
 
-) (../generated/chapters/chapter_3.tex) [12] (./legal_diagnostic_report.aux)
+
+Underfull \hbox (badness 10000) in alignment at lines 102--105
+[] [] [] [] [] []
+ []
+
+) (../generated/chapters/chapter_3.tex) [10] (./legal_diagnostic_report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
@@ -1022,12 +815,12 @@ Package rerunfilecheck Info: File `legal_diagnostic_report.out' has not changed
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13788 strings out of 467992
- 297127 string characters out of 5429468
- 771339 words of memory out of 5000000
- 42468 multiletter control sequences out of 15000+600000
- 631759 words of font info for 100 fonts, out of 8000000 for 9000
+ 13828 strings out of 467992
+ 299399 string characters out of 5429468
+ 772337 words of memory out of 5000000
+ 42502 multiletter control sequences out of 15000+600000
+ 631799 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,9n,96p,441b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,9n,96p,718b,467s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on legal_diagnostic_report.pdf (12 pages).
+Output written on legal_diagnostic_report.pdf (10 pages).
