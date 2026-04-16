@@ -13,10 +13,16 @@
 
 - [adapter-internal-boundaries.md](/Users/wangrundong/work/mywork/docs/architecture/adapter-internal-boundaries.md)
 - [deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
+- [skill-design-and-evolution-for-tingyun-project.md](/Users/wangrundong/work/mywork/docs/architecture/skill-design-and-evolution-for-tingyun-project.md)
 - [skill-system-and-project-skills.md](/Users/wangrundong/work/mywork/docs/architecture/skill-system-and-project-skills.md)
 - [system-and-batch-semantics.md](/Users/wangrundong/work/mywork/docs/architecture/system-and-batch-semantics.md)
 - [directory-responsibilities.md](/Users/wangrundong/work/mywork/docs/architecture/directory-responsibilities.md)
 
-其中 `skill-system-and-project-skills.md` 对应仓库根 `skills/` 目录，用于说明项目级 skill 如何与 adapter / client / report_templates 协作。
+其中：
+
+- `skill-system-and-project-skills.md`
+  - 对应仓库根 `skills/` 目录，用于说明项目级 skill 如何与 adapter / client / report_templates 协作
+- `skill-design-and-evolution-for-tingyun-project.md`
+  - 用于解释为什么需要 skill、当前 skill 处于什么阶段，以及经验应如何在 skill / notes / chapter guidelines 之间分层沉淀
 
 已降级或历史设计请查看 `docs/decisions/`，不要把它们当成当前主设计。

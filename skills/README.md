@@ -2,6 +2,11 @@
 
 `skills/` 是当前仓库的项目级 skill 目录，用来沉淀围绕听云诊断链路形成的可复用工作单元。
 
+如果要理解为什么仓库采用这种 skill 组织方式、经验应如何在 skill / notes / chapter guidelines 之间分层沉淀，以及 skill 后续如何从文档型定义继续演进，请配合阅读：
+
+- [skill-system-and-project-skills.md](/Users/wangrundong/work/mywork/docs/architecture/skill-system-and-project-skills.md)
+- [skill-design-and-evolution-for-tingyun-project.md](/Users/wangrundong/work/mywork/docs/architecture/skill-design-and-evolution-for-tingyun-project.md)
+
 这里的 skill 不是新的平台层，也不替代现有代码目录。它们主要承担三件事：
 
 - 把已经稳定下来的诊断流程、判断经验和缺失处理方式沉淀成可复用定义

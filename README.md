@@ -99,6 +99,7 @@
 - Deep-dive 阶段与主表衔接：[deep-dive-stage-and-adapter-bridge.md](/Users/wangrundong/work/mywork/docs/architecture/deep-dive-stage-and-adapter-bridge.md)
 - 第三阶段报告结构：[stage3-report-generation-and-template-layout.md](/Users/wangrundong/work/mywork/docs/reporting/stage3-report-generation-and-template-layout.md)
 - Skill 体系入口：[skill-system-and-project-skills.md](/Users/wangrundong/work/mywork/docs/architecture/skill-system-and-project-skills.md)
+- Skill 设计与演进：[skill-design-and-evolution-for-tingyun-project.md](/Users/wangrundong/work/mywork/docs/architecture/skill-design-and-evolution-for-tingyun-project.md)
 
 历史设计与阶段文档统一放在 [docs/decisions/](/Users/wangrundong/work/mywork/docs/decisions/)，不作为当前事实来源。
 
@@ -111,6 +112,7 @@
 5. 如果要接手具体系统，读 `knowledge/monitored_systems/<system_key>/`。
 6. 如果要接手某次诊断，读 `artifacts/monitored_systems/<system_key>/<batch_key>/` 或对应 `samples/`。
 7. 如果要接手项目级 skill，先读 `skills/` 和 `docs/architecture/skill-system-and-project-skills.md`。
+   再读 `docs/architecture/skill-design-and-evolution-for-tingyun-project.md`，理解为什么 skill 这样组织、经验应该沉淀到哪里。
 8. 如果要接手第三阶段报告模板，读 `report_templates/` 和 `docs/reporting/stage3-report-generation-and-template-layout.md`。
 
 ## 配置文件

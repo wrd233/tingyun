@@ -1,6 +1,10 @@
 # Skill 体系与项目级 Skills
 
-这份文档用于说明当前仓库内 skill 体系的落地方式，以及 skill 与现有 adapter/client/report_templates 的关系。
+这份文档用于说明当前仓库内 skill 体系的当前落地方式，以及 skill 与现有 adapter/client/report_templates 的关系。
+
+如果要看更完整的设计动机、经验沉淀方式和演进路线，请继续阅读：
+
+- [skill-design-and-evolution-for-tingyun-project.md](/Users/wangrundong/work/mywork/docs/architecture/skill-design-and-evolution-for-tingyun-project.md)
 
 ## 定位
 
